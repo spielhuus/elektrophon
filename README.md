@@ -8,5 +8,6 @@ Modular analog electro acoustic noise machine.
 
 # links
 
+* [Scott Stites](http://birthofasynth.com/index.html)
 * [Synthesizer DIY pages of René Schmitz](https://www.schmitzbits.de/index.html)
 * [Music from outer space](http://musicfromouterspace.com/)
