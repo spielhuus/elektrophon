@@ -6,7 +6,7 @@ the midi 2 vco module requires midi serial support on the controller. for this s
 
 ### windows
 
-* [The Hairless MIDI to serial bridge](http://projectgus.github.io/hairless-midiserial/) connect serial devices (like Arduinos) to send and receive MIDI signals.
+* [The Hairless MIDI to serial bridge.](http://projectgus.github.io/hairless-midiserial/) connect serial devices (like Arduinos) to send and receive MIDI signals.
 * 
 
 ### linux
