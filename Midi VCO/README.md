@@ -1,16 +1,19 @@
-# VCO 4069
+# Atmel MIDI 2 VCO
 
-## about
+## midi drivers
 
-## building
+the midi 2 vco module requires midi serial support on the controller. for this some extra drivers have to be installed. 
+
+### windows
+
+* [The Hairless MIDI to serial bridge.](http://projectgus.github.io/hairless-midiserial/) connect serial devices (like Arduinos) to send and receive MIDI signals.
+* 
+
+### linux
 
 ## samples
 
 ## links
-
-1) [simplified version, Elliot Williams](https://hackaday.com/2015/09/11/logic-noise-playing-in-tune-with-an-exponential-vco/)
-1) [the original, René Schmitz](https://www.schmitzbits.de/vco4069.html)
-2) [midification to accept a linear control voltage, and waveshaper add-ons, Scott Gravenhorsts](http://scott.joviansynth.com/fatman/VCO_pwm_tri_suboctave.html)
 
 ## license
 
