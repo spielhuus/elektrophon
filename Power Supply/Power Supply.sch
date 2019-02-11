@@ -1,0 +1,515 @@
+EESchema Schematic File Version 4
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Diode:1N4004 D1
+U 1 1 5C605131
+P 1850 2200
+F 0 "D1" H 1850 1984 50  0000 C CNN
+F 1 "1N4004" H 1850 2075 50  0000 C CNN
+F 2 "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal" H 1850 2025 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/88503/1n4001.pdf" H 1850 2200 50  0001 C CNN
+	1    1850 2200
+	-1   0    0    1   
+$EndComp
+$Comp
+L Diode:1N4004 D2
+U 1 1 5C605216
+P 1850 4100
+F 0 "D2" H 1850 4316 50  0000 C CNN
+F 1 "1N4004" H 1850 4225 50  0000 C CNN
+F 2 "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal" H 1850 3925 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/88503/1n4001.pdf" H 1850 4100 50  0001 C CNN
+	1    1850 4100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:CP1 C1
+U 1 1 5C605282
+P 2350 2600
+F 0 "C1" H 2465 2646 50  0000 L CNN
+F 1 "3300uF" H 2465 2555 50  0000 L CNN
+F 2 "Capacitor_THT:CP_Radial_D10.0mm_P2.50mm_P5.00mm" H 2350 2600 50  0001 C CNN
+F 3 "~" H 2350 2600 50  0001 C CNN
+	1    2350 2600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:CP1 C3
+U 1 1 5C6052C4
+P 3050 2600
+F 0 "C3" H 3165 2646 50  0000 L CNN
+F 1 "3300uF" H 3165 2555 50  0000 L CNN
+F 2 "Capacitor_THT:CP_Radial_D18.0mm_P7.50mm" H 3050 2600 50  0001 C CNN
+F 3 "~" H 3050 2600 50  0001 C CNN
+	1    3050 2600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:CP1 C5
+U 1 1 5C6052FE
+P 3750 2600
+F 0 "C5" H 3865 2646 50  0000 L CNN
+F 1 "3300uF" H 3865 2555 50  0000 L CNN
+F 2 "Capacitor_THT:CP_Radial_D18.0mm_P7.50mm" H 3750 2600 50  0001 C CNN
+F 3 "~" H 3750 2600 50  0001 C CNN
+	1    3750 2600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:CP1 C7
+U 1 1 5C605355
+P 4450 2600
+F 0 "C7" H 4565 2646 50  0000 L CNN
+F 1 "3300uF" H 4565 2555 50  0000 L CNN
+F 2 "Capacitor_THT:CP_Radial_D18.0mm_P7.50mm" H 4450 2600 50  0001 C CNN
+F 3 "~" H 4450 2600 50  0001 C CNN
+	1    4450 2600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:CP1 C2
+U 1 1 5C606170
+P 2350 4600
+F 0 "C2" H 2235 4554 50  0000 R CNN
+F 1 "3300uF" H 2235 4645 50  0000 R CNN
+F 2 "Capacitor_THT:CP_Radial_D18.0mm_P7.50mm" H 2350 4600 50  0001 C CNN
+F 3 "~" H 2350 4600 50  0001 C CNN
+	1    2350 4600
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:CP1 C4
+U 1 1 5C6061C2
+P 3050 4600
+F 0 "C4" H 2935 4554 50  0000 R CNN
+F 1 "3300uF" H 2935 4645 50  0000 R CNN
+F 2 "Capacitor_THT:CP_Radial_D18.0mm_P7.50mm" H 3050 4600 50  0001 C CNN
+F 3 "~" H 3050 4600 50  0001 C CNN
+	1    3050 4600
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:CP1 C6
+U 1 1 5C6061FA
+P 3750 4600
+F 0 "C6" H 3635 4554 50  0000 R CNN
+F 1 "3300uF" H 3635 4645 50  0000 R CNN
+F 2 "Capacitor_THT:CP_Radial_D18.0mm_P7.50mm" H 3750 4600 50  0001 C CNN
+F 3 "~" H 3750 4600 50  0001 C CNN
+	1    3750 4600
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:CP1 C8
+U 1 1 5C60623E
+P 4450 4600
+F 0 "C8" H 4335 4554 50  0000 R CNN
+F 1 "3300uF" H 4335 4645 50  0000 R CNN
+F 2 "Capacitor_THT:CP_Radial_D18.0mm_P7.50mm" H 4450 4600 50  0001 C CNN
+F 3 "~" H 4450 4600 50  0001 C CNN
+	1    4450 4600
+	-1   0    0    1   
+$EndComp
+$Comp
+L Regulator_Linear:LM7812_TO220 U1
+U 1 1 5C606403
+P 5300 2200
+F 0 "U1" H 5300 2442 50  0000 C CNN
+F 1 "LM7812_TO220" H 5300 2351 50  0000 C CNN
+F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 5300 2425 50  0001 C CIN
+F 3 "http://www.fairchildsemi.com/ds/LM/LM7805.pdf" H 5300 2150 50  0001 C CNN
+	1    5300 2200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Regulator_Linear:LM7912_TO220 U2
+U 1 1 5C606507
+P 5300 4100
+F 0 "U2" H 5300 3858 50  0000 C CNN
+F 1 "LM7912_TO220" H 5300 3949 50  0000 C CNN
+F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 5300 3900 50  0001 C CIN
+F 3 "http://www.fairchildsemi.com/ds/LM/LM7905.pdf" H 5300 4100 50  0001 C CNN
+	1    5300 4100
+	1    0    0    1   
+$EndComp
+$Comp
+L Diode:1N4004 D5
+U 1 1 5C6066FA
+P 6600 2600
+F 0 "D5" V 6554 2679 50  0000 L CNN
+F 1 "1N4004" V 6645 2679 50  0000 L CNN
+F 2 "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal" H 6600 2425 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/88503/1n4001.pdf" H 6600 2600 50  0001 C CNN
+	1    6600 2600
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:CP1 C9
+U 1 1 5C6067C2
+P 6100 2600
+F 0 "C9" H 6215 2646 50  0000 L CNN
+F 1 "1uF" H 6215 2555 50  0000 L CNN
+F 2 "Capacitor_THT:CP_Radial_D5.0mm_P2.50mm" H 6100 2600 50  0001 C CNN
+F 3 "~" H 6100 2600 50  0001 C CNN
+	1    6100 2600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Diode:1N4004 D3
+U 1 1 5C6068A3
+P 5300 1650
+F 0 "D3" H 5300 1866 50  0000 C CNN
+F 1 "1N4004" H 5300 1775 50  0000 C CNN
+F 2 "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal" H 5300 1475 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/88503/1n4001.pdf" H 5300 1650 50  0001 C CNN
+	1    5300 1650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2000 2200 2350 2200
+Wire Wire Line
+	2350 2450 2350 2200
+Connection ~ 2350 2200
+Wire Wire Line
+	2350 2200 3050 2200
+Wire Wire Line
+	3050 2450 3050 2200
+Connection ~ 3050 2200
+Wire Wire Line
+	3050 2200 3750 2200
+Wire Wire Line
+	3750 2450 3750 2200
+Connection ~ 3750 2200
+Wire Wire Line
+	3750 2200 4450 2200
+Wire Wire Line
+	4450 2450 4450 2200
+Wire Wire Line
+	2350 2750 2350 3050
+Wire Wire Line
+	2350 3050 3050 3050
+Wire Wire Line
+	3050 2750 3050 3050
+Connection ~ 3050 3050
+Wire Wire Line
+	3750 2750 3750 3050
+Wire Wire Line
+	3050 3050 3750 3050
+Connection ~ 3750 3050
+Wire Wire Line
+	3750 3050 4450 3050
+Wire Wire Line
+	4450 2750 4450 3050
+Connection ~ 4450 3050
+Wire Wire Line
+	4450 3050 5300 3050
+Wire Wire Line
+	6600 3050 6600 2750
+Wire Wire Line
+	6600 2450 6600 2200
+Wire Wire Line
+	6100 2450 6100 2200
+Wire Wire Line
+	6100 2750 6100 3050
+Connection ~ 6100 3050
+Wire Wire Line
+	6100 3050 6600 3050
+Wire Wire Line
+	5000 2200 4800 2200
+Connection ~ 4450 2200
+$Comp
+L power:PWR_FLAG #FLG01
+U 1 1 5C6084C1
+P 2000 1050
+F 0 "#FLG01" H 2000 1125 50  0001 C CNN
+F 1 "PWR_FLAG" H 2000 1224 50  0000 C CNN
+F 2 "" H 2000 1050 50  0001 C CNN
+F 3 "~" H 2000 1050 50  0001 C CNN
+	1    2000 1050
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:PWR_FLAG #FLG02
+U 1 1 5C60851F
+P 2500 1050
+F 0 "#FLG02" H 2500 1125 50  0001 C CNN
+F 1 "PWR_FLAG" H 2500 1224 50  0000 C CNN
+F 2 "" H 2500 1050 50  0001 C CNN
+F 3 "~" H 2500 1050 50  0001 C CNN
+	1    2500 1050
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VSSA #PWR03
+U 1 1 5C60858A
+P 2000 1050
+F 0 "#PWR03" H 2000 900 50  0001 C CNN
+F 1 "VSSA" H 2018 1223 50  0000 C CNN
+F 2 "" H 2000 1050 50  0001 C CNN
+F 3 "" H 2000 1050 50  0001 C CNN
+	1    2000 1050
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:VDD #PWR04
+U 1 1 5C608901
+P 2500 1050
+F 0 "#PWR04" H 2500 900 50  0001 C CNN
+F 1 "VDD" H 2518 1223 50  0000 C CNN
+F 2 "" H 2500 1050 50  0001 C CNN
+F 3 "" H 2500 1050 50  0001 C CNN
+	1    2500 1050
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:VDD #PWR01
+U 1 1 5C6089A5
+P 1400 2200
+F 0 "#PWR01" H 1400 2050 50  0001 C CNN
+F 1 "VDD" V 1418 2327 50  0000 L CNN
+F 2 "" H 1400 2200 50  0001 C CNN
+F 3 "" H 1400 2200 50  0001 C CNN
+	1    1400 2200
+	0    -1   -1   0   
+$EndComp
+Text GLabel 7150 2200 2    50   Input ~ 0
++12V
+Wire Wire Line
+	7150 2200 6600 2200
+Connection ~ 6100 2200
+Wire Wire Line
+	6100 2200 5800 2200
+Connection ~ 6600 2200
+Wire Wire Line
+	6600 2200 6100 2200
+Wire Wire Line
+	4800 2200 4800 1650
+Wire Wire Line
+	4800 1650 5150 1650
+Connection ~ 4800 2200
+Wire Wire Line
+	4800 2200 4450 2200
+Wire Wire Line
+	5450 1650 5800 1650
+Wire Wire Line
+	5800 1650 5800 2200
+Connection ~ 5800 2200
+Wire Wire Line
+	5800 2200 5600 2200
+Wire Wire Line
+	5300 2500 5300 3050
+Connection ~ 5300 3050
+Wire Wire Line
+	5300 3050 6100 3050
+Wire Wire Line
+	1700 4100 1550 4100
+Text GLabel 7150 4100 2    50   Input ~ 0
+-12V
+Wire Wire Line
+	5600 4100 5800 4100
+Wire Wire Line
+	2000 4100 2350 4100
+$Comp
+L Device:CP1 C10
+U 1 1 5C60E44D
+P 6100 4600
+F 0 "C10" H 5985 4554 50  0000 R CNN
+F 1 "1uF" H 5985 4645 50  0000 R CNN
+F 2 "Capacitor_THT:CP_Radial_D5.0mm_P2.50mm" H 6100 4600 50  0001 C CNN
+F 3 "~" H 6100 4600 50  0001 C CNN
+	1    6100 4600
+	-1   0    0    1   
+$EndComp
+$Comp
+L Diode:1N4004 D6
+U 1 1 5C60E4E9
+P 6600 4600
+F 0 "D6" V 6646 4521 50  0000 R CNN
+F 1 "1N4004" V 6555 4521 50  0000 R CNN
+F 2 "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal" H 6600 4425 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/88503/1n4001.pdf" H 6600 4600 50  0001 C CNN
+	1    6600 4600
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Diode:1N4004 D4
+U 1 1 5C60E5C2
+P 5300 3650
+F 0 "D4" H 5300 3434 50  0000 C CNN
+F 1 "1N4004" H 5300 3525 50  0000 C CNN
+F 2 "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal" H 5300 3475 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/88503/1n4001.pdf" H 5300 3650 50  0001 C CNN
+	1    5300 3650
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	1400 2200 1550 2200
+Wire Wire Line
+	1550 4100 1550 2200
+Connection ~ 1550 2200
+Wire Wire Line
+	1550 2200 1700 2200
+Wire Wire Line
+	2350 4450 2350 4100
+Connection ~ 2350 4100
+Wire Wire Line
+	2350 4100 3050 4100
+Wire Wire Line
+	3050 4450 3050 4100
+Connection ~ 3050 4100
+Wire Wire Line
+	3050 4100 3750 4100
+Wire Wire Line
+	3750 4450 3750 4100
+Connection ~ 3750 4100
+Wire Wire Line
+	3750 4100 4450 4100
+Wire Wire Line
+	4450 4450 4450 4100
+Connection ~ 4450 4100
+Wire Wire Line
+	4450 4100 4850 4100
+$Comp
+L power:VSSA #PWR02
+U 1 1 5C611BC6
+P 1450 5050
+F 0 "#PWR02" H 1450 4900 50  0001 C CNN
+F 1 "VSSA" V 1468 5177 50  0000 L CNN
+F 2 "" H 1450 5050 50  0001 C CNN
+F 3 "" H 1450 5050 50  0001 C CNN
+	1    1450 5050
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	6600 3050 6950 3050
+Wire Wire Line
+	8100 3050 8100 5050
+Wire Wire Line
+	8100 5050 6600 5050
+Connection ~ 6600 3050
+Text GLabel 7150 3350 2    50   Input ~ 0
+GND
+Wire Wire Line
+	7150 3350 6950 3350
+Wire Wire Line
+	6950 3350 6950 3050
+Connection ~ 6950 3050
+Wire Wire Line
+	6950 3050 8100 3050
+Wire Wire Line
+	6100 4450 6100 4100
+Connection ~ 6100 4100
+Wire Wire Line
+	6100 4100 6600 4100
+Wire Wire Line
+	6600 4450 6600 4100
+Connection ~ 6600 4100
+Wire Wire Line
+	6600 4100 7150 4100
+Wire Wire Line
+	2350 4750 2350 5050
+Connection ~ 2350 5050
+Wire Wire Line
+	2350 5050 1450 5050
+Wire Wire Line
+	3050 4750 3050 5050
+Connection ~ 3050 5050
+Wire Wire Line
+	3050 5050 2350 5050
+Wire Wire Line
+	3750 4750 3750 5050
+Connection ~ 3750 5050
+Wire Wire Line
+	3750 5050 3050 5050
+Wire Wire Line
+	4450 4750 4450 5050
+Connection ~ 4450 5050
+Wire Wire Line
+	4450 5050 3750 5050
+Wire Wire Line
+	5300 4400 5300 5050
+Connection ~ 5300 5050
+Wire Wire Line
+	5300 5050 4450 5050
+Wire Wire Line
+	6100 4750 6100 5050
+Connection ~ 6100 5050
+Wire Wire Line
+	6100 5050 5300 5050
+Wire Wire Line
+	6600 4750 6600 5050
+Connection ~ 6600 5050
+Wire Wire Line
+	6600 5050 6100 5050
+Wire Wire Line
+	5150 3650 4850 3650
+Wire Wire Line
+	4850 3650 4850 4100
+Connection ~ 4850 4100
+Wire Wire Line
+	4850 4100 5000 4100
+Wire Wire Line
+	5450 3650 5800 3650
+Wire Wire Line
+	5800 3650 5800 4100
+Connection ~ 5800 4100
+Wire Wire Line
+	5800 4100 6100 4100
+Text GLabel 2200 6000 0    50   Input ~ 0
+GND
+Text GLabel 2200 6150 0    50   Input ~ 0
+-12V
+Text GLabel 2200 5850 0    50   Input ~ 0
++12V
+$Comp
+L Connector_Generic:Conn_02x05_Odd_Even J1
+U 1 1 5C6231E0
+P 2950 6600
+F 0 "J1" V 2954 6880 50  0000 L CNN
+F 1 "Conn_02x05_Odd_Even" V 3045 6880 50  0000 L CNN
+F 2 "Connector_IDC:IDC-Header_2x03_P2.54mm_Vertical" H 2950 6600 50  0001 C CNN
+F 3 "~" H 2950 6600 50  0001 C CNN
+	1    2950 6600
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2200 5850 3150 5850
+Wire Wire Line
+	3150 5850 3150 6400
+Wire Wire Line
+	2200 6000 2850 6000
+Wire Wire Line
+	3050 6000 3050 6400
+Wire Wire Line
+	2950 6400 2950 6000
+Connection ~ 2950 6000
+Wire Wire Line
+	2950 6000 3050 6000
+Wire Wire Line
+	2850 6400 2850 6000
+Connection ~ 2850 6000
+Wire Wire Line
+	2850 6000 2950 6000
+Wire Wire Line
+	2200 6150 2750 6150
+Wire Wire Line
+	2750 6150 2750 6400
+NoConn ~ 2750 6900
+NoConn ~ 2850 6900
+NoConn ~ 2950 6900
+NoConn ~ 3050 6900
+NoConn ~ 3150 6900
+$EndSCHEMATC

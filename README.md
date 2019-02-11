@@ -22,7 +22,9 @@ Voltage Controlled Oscillator, a continuous voltage source, which will output a 
 
 ## Voltage Controlled Amplifier
 
-## 
+## Mixer
+
+* 
 
 
 # getting started pages
@@ -34,3 +36,4 @@ Voltage Controlled Oscillator, a continuous voltage source, which will output a 
 * [Scott Stites](http://birthofasynth.com/index.html)
 * [Synthesizer DIY pages of René Schmitz](https://www.schmitzbits.de/index.html)
 * [Music from outer space](http://musicfromouterspace.com/)
+* [yusynth: modular synth project](http://www.yusynth.net/Modular/index_en.html)

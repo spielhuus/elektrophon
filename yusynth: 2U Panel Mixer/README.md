@@ -9,6 +9,7 @@
 ## links
 
 1) [yusynth: 2U panel mixer](http://www.yusynth.net/Modular/index_en.html)
+2) [MFOS Quad 3 Input Audio Mixer](http://musicfromouterspace.com/analogsynth_new/QUAD_AUDSUBMIX/QUAD_AUDSUBMIX.php)
 
 ## license
 
