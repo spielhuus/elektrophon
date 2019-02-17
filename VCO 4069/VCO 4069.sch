@@ -1,5 +1,4 @@
 EESchema Schematic File Version 4
-LIBS:VCO 4069-cache
 EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
@@ -804,23 +803,23 @@ $EndComp
 $Comp
 L 4xxx:4069 U?
 U 2 1 5C67984E
-P 1250 4550
-F 0 "U?" H 1250 4233 50  0000 C CNN
-F 1 "4069" H 1250 4324 50  0000 C CNN
-F 2 "" H 1250 4550 50  0001 C CNN
-F 3 "http://www.intersil.com/content/dam/Intersil/documents/cd40/cd4069ubms.pdf" H 1250 4550 50  0001 C CNN
-	2    1250 4550
-	-1   0    0    1   
-$EndComp
-$Comp
-L 4xxx:4069 U?
-U 3 1 5C67997B
 P 2350 4550
 F 0 "U?" H 2350 4233 50  0000 C CNN
 F 1 "4069" H 2350 4324 50  0000 C CNN
 F 2 "" H 2350 4550 50  0001 C CNN
 F 3 "http://www.intersil.com/content/dam/Intersil/documents/cd40/cd4069ubms.pdf" H 2350 4550 50  0001 C CNN
-	3    2350 4550
+	2    2350 4550
+	-1   0    0    1   
+$EndComp
+$Comp
+L 4xxx:4069 U?
+U 3 1 5C67997B
+P 1250 4550
+F 0 "U?" H 1250 4233 50  0000 C CNN
+F 1 "4069" H 1250 4324 50  0000 C CNN
+F 2 "" H 1250 4550 50  0001 C CNN
+F 3 "http://www.intersil.com/content/dam/Intersil/documents/cd40/cd4069ubms.pdf" H 1250 4550 50  0001 C CNN
+	3    1250 4550
 	-1   0    0    1   
 $EndComp
 $Comp
@@ -835,13 +834,13 @@ F 3 "~" H 1800 4050 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	2950 5400 2150 5400
+	2950 5400 2500 5400
 Wire Wire Line
 	2650 4550 2950 4550
 Wire Wire Line
 	2050 4550 1550 4550
 Wire Wire Line
-	750  5400 1550 5400
+	750  5400 1200 5400
 Wire Wire Line
 	950  4550 750  4550
 Wire Wire Line
@@ -857,7 +856,7 @@ L Device:R R?
 U 1 1 5C68BE65
 P 2950 5150
 F 0 "R?" H 2880 5104 50  0000 R CNN
-F 1 "R" H 2880 5195 50  0000 R CNN
+F 1 "100k" H 2880 5195 50  0000 R CNN
 F 2 "" V 2880 5150 50  0001 C CNN
 F 3 "~" H 2950 5150 50  0001 C CNN
 	1    2950 5150
@@ -870,7 +869,7 @@ L Device:R R?
 U 1 1 5C6905DA
 P 750 5150
 F 0 "R?" H 680 5104 50  0000 R CNN
-F 1 "R" H 680 5195 50  0000 R CNN
+F 1 "1k" H 680 5195 50  0000 R CNN
 F 2 "" V 680 5150 50  0001 C CNN
 F 3 "~" H 750 5150 50  0001 C CNN
 	1    750  5150
@@ -883,7 +882,7 @@ L Device:R_POT RV?
 U 1 1 5C692C19
 P 750 4850
 F 0 "RV?" H 680 4896 50  0000 R CNN
-F 1 "R_POT" H 680 4805 50  0000 R CNN
+F 1 "1M" H 680 4805 50  0000 R CNN
 F 2 "" H 750 4850 50  0001 C CNN
 F 3 "~" H 750 4850 50  0001 C CNN
 	1    750  4850
@@ -910,7 +909,7 @@ L Device:R_POT RV?
 U 1 1 5C69A522
 P 3450 4950
 F 0 "RV?" H 3380 4996 50  0000 R CNN
-F 1 "R_POT" H 3380 4905 50  0000 R CNN
+F 1 "100k" H 3380 4905 50  0000 R CNN
 F 2 "" H 3450 4950 50  0001 C CNN
 F 3 "~" H 3450 4950 50  0001 C CNN
 	1    3450 4950
@@ -940,4 +939,29 @@ Wire Wire Line
 	3600 4950 3750 4950
 Wire Wire Line
 	4050 1900 4850 1900
+$Comp
+L Device:C C?
+U 1 1 5C685CD7
+P 1850 4900
+F 0 "C?" V 1598 4900 50  0000 C CNN
+F 1 "1.33u" V 1689 4900 50  0000 C CNN
+F 2 "" H 1888 4750 50  0001 C CNN
+F 3 "~" H 1850 4900 50  0001 C CNN
+	1    1850 4900
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2000 4900 2500 4900
+Wire Wire Line
+	2500 4900 2500 5400
+Connection ~ 2500 5400
+Wire Wire Line
+	2500 5400 2150 5400
+Wire Wire Line
+	1700 4900 1200 4900
+Wire Wire Line
+	1200 4900 1200 5400
+Connection ~ 1200 5400
+Wire Wire Line
+	1200 5400 1550 5400
 $EndSCHEMATC
