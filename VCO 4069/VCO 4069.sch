@@ -1,4 +1,5 @@
 EESchema Schematic File Version 4
+LIBS:VCO 4069-cache
 EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
@@ -18,10 +19,10 @@ exponential current sync
 Text Notes 4900 1100 0    50   ~ 0
 oscilator\n
 $Comp
-L 4xxx:4069 U?
+L 4xxx:4069 U2
 U 1 1 5C574B8F
 P 5150 2700
-F 0 "U?" H 5150 3017 50  0000 C CNN
+F 0 "U2" H 5150 3017 50  0000 C CNN
 F 1 "4069" H 5150 2926 50  0000 C CNN
 F 2 "" H 5150 2700 50  0001 C CNN
 F 3 "http://www.intersil.com/content/dam/Intersil/documents/cd40/cd4069ubms.pdf" H 5150 2700 50  0001 C CNN
@@ -29,10 +30,10 @@ F 3 "http://www.intersil.com/content/dam/Intersil/documents/cd40/cd4069ubms.pdf"
 	1    0    0    -1  
 $EndComp
 $Comp
-L 4xxx:4069 U?
+L 4xxx:4069 U1
 U 6 1 5C574BEF
 P 7450 4850
-F 0 "U?" H 7450 5167 50  0000 C CNN
+F 0 "U1" H 7450 5167 50  0000 C CNN
 F 1 "4069" H 7450 5076 50  0000 C CNN
 F 2 "" H 7450 4850 50  0001 C CNN
 F 3 "http://www.intersil.com/content/dam/Intersil/documents/cd40/cd4069ubms.pdf" H 7450 4850 50  0001 C CNN
@@ -40,10 +41,10 @@ F 3 "http://www.intersil.com/content/dam/Intersil/documents/cd40/cd4069ubms.pdf"
 	1    0    0    -1  
 $EndComp
 $Comp
-L 4xxx:4069 U?
+L 4xxx:4069 U1
 U 5 1 5C574C50
 P 8400 4850
-F 0 "U?" H 8400 5167 50  0000 C CNN
+F 0 "U1" H 8400 5167 50  0000 C CNN
 F 1 "4069" H 8400 5076 50  0000 C CNN
 F 2 "" H 8400 4850 50  0001 C CNN
 F 3 "http://www.intersil.com/content/dam/Intersil/documents/cd40/cd4069ubms.pdf" H 8400 4850 50  0001 C CNN
@@ -51,10 +52,10 @@ F 3 "http://www.intersil.com/content/dam/Intersil/documents/cd40/cd4069ubms.pdf"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R R?
+L Device:R R12
 U 1 1 5C574CEE
 P 5800 2700
-F 0 "R?" V 5593 2700 50  0000 C CNN
+F 0 "R12" V 5593 2700 50  0000 C CNN
 F 1 "10k" V 5684 2700 50  0000 C CNN
 F 2 "" V 5730 2700 50  0001 C CNN
 F 3 "~" H 5800 2700 50  0001 C CNN
@@ -64,10 +65,10 @@ $EndComp
 Wire Wire Line
 	6700 2700 6950 2700
 $Comp
-L Diode:1N4148 D?
+L Diode:1N4148 D2
 U 1 1 5C576916
 P 6200 1350
-F 0 "D?" H 6200 1566 50  0000 C CNN
+F 0 "D2" H 6200 1566 50  0000 C CNN
 F 1 "1N4148" H 6200 1475 50  0000 C CNN
 F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 6200 1175 50  0001 C CNN
 F 3 "http://www.nxp.com/documents/data_sheet/1N4148_1N4448.pdf" H 6200 1350 50  0001 C CNN
@@ -75,10 +76,10 @@ F 3 "http://www.nxp.com/documents/data_sheet/1N4148_1N4448.pdf" H 6200 1350 50  
 	1    0    0    -1  
 $EndComp
 $Comp
-L Diode:1N4148 D?
+L Diode:1N4148 D1
 U 1 1 5C576B49
 P 5300 1750
-F 0 "D?" H 5300 1534 50  0000 C CNN
+F 0 "D1" H 5300 1534 50  0000 C CNN
 F 1 "1N4148" H 5300 1625 50  0000 C CNN
 F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 5300 1575 50  0001 C CNN
 F 3 "http://www.nxp.com/documents/data_sheet/1N4148_1N4448.pdf" H 5300 1750 50  0001 C CNN
@@ -86,10 +87,10 @@ F 3 "http://www.nxp.com/documents/data_sheet/1N4148_1N4448.pdf" H 5300 1750 50  
 	-1   0    0    1   
 $EndComp
 $Comp
-L Device:R R?
+L Device:R R10
 U 1 1 5C576BD1
 P 5300 2100
-F 0 "R?" V 5093 2100 50  0000 C CNN
+F 0 "R10" V 5093 2100 50  0000 C CNN
 F 1 "R" V 5184 2100 50  0000 C CNN
 F 2 "" V 5230 2100 50  0001 C CNN
 F 3 "~" H 5300 2100 50  0001 C CNN
@@ -97,11 +98,11 @@ F 3 "~" H 5300 2100 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:C C?
+L Device:C C2
 U 1 1 5C577D10
 P 5000 1900
-F 0 "C?" V 4748 1900 50  0000 C CNN
-F 1 "C" V 4839 1900 50  0000 C CNN
+F 0 "C2" V 4748 1900 50  0000 C CNN
+F 1 "2.2n" V 4839 1900 50  0000 C CNN
 F 2 "" H 5038 1750 50  0001 C CNN
 F 3 "~" H 5000 1900 50  0001 C CNN
 	1    5000 1900
@@ -117,11 +118,11 @@ Wire Wire Line
 Wire Wire Line
 	4850 2700 4850 1900
 $Comp
-L Device:R R?
+L Device:R R15
 U 1 1 5C574EAF
 P 6750 1950
-F 0 "R?" V 6543 1950 50  0000 C CNN
-F 1 "R" V 6634 1950 50  0000 C CNN
+F 0 "R15" V 6543 1950 50  0000 C CNN
+F 1 "22k" V 6634 1950 50  0000 C CNN
 F 2 "" V 6680 1950 50  0001 C CNN
 F 3 "~" H 6750 1950 50  0001 C CNN
 	1    6750 1950
@@ -160,10 +161,10 @@ Connection ~ 6000 2700
 Wire Wire Line
 	6000 2700 6100 2700
 $Comp
-L Device:R R?
+L Device:R R5
 U 1 1 5C5C9DDB
 P 1950 2700
-F 0 "R?" V 1743 2700 50  0000 C CNN
+F 0 "R5" V 1743 2700 50  0000 C CNN
 F 1 "100k" V 1834 2700 50  0000 C CNN
 F 2 "" V 1880 2700 50  0001 C CNN
 F 3 "~" H 1950 2700 50  0001 C CNN
@@ -171,10 +172,10 @@ F 3 "~" H 1950 2700 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:R R?
+L Device:R R3
 U 1 1 5C5C9E59
 P 1950 1300
-F 0 "R?" V 1743 1300 50  0000 C CNN
+F 0 "R3" V 1743 1300 50  0000 C CNN
 F 1 "100k" V 1834 1300 50  0000 C CNN
 F 2 "" V 1880 1300 50  0001 C CNN
 F 3 "~" H 1950 1300 50  0001 C CNN
@@ -182,21 +183,21 @@ F 3 "~" H 1950 1300 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:R_POT RV?
+L Device:R_POT RV2
 U 1 1 5C5C9EF5
 P 1250 1300
-F 0 "RV?" H 1180 1346 50  0000 R CNN
-F 1 "R_POT" H 1180 1255 50  0000 R CNN
+F 0 "RV2" H 1180 1346 50  0000 R CNN
+F 1 "22k" H 1180 1255 50  0000 R CNN
 F 2 "" H 1250 1300 50  0001 C CNN
 F 3 "~" H 1250 1300 50  0001 C CNN
 	1    1250 1300
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR?
+L power:GND #PWR02
 U 1 1 5C5C9F82
 P 1250 1450
-F 0 "#PWR?" H 1250 1200 50  0001 C CNN
+F 0 "#PWR02" H 1250 1200 50  0001 C CNN
 F 1 "GND" H 1255 1277 50  0000 C CNN
 F 2 "" H 1250 1450 50  0001 C CNN
 F 3 "" H 1250 1450 50  0001 C CNN
@@ -204,10 +205,10 @@ F 3 "" H 1250 1450 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:VCC #PWR?
+L power:VCC #PWR01
 U 1 1 5C5CA007
 P 1250 1150
-F 0 "#PWR?" H 1250 1000 50  0001 C CNN
+F 0 "#PWR01" H 1250 1000 50  0001 C CNN
 F 1 "VCC" H 1267 1323 50  0000 C CNN
 F 2 "" H 1250 1150 50  0001 C CNN
 F 3 "" H 1250 1150 50  0001 C CNN
@@ -215,21 +216,21 @@ F 3 "" H 1250 1150 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R_POT RV?
+L Device:R_POT RV3
 U 1 1 5C5CA08C
 P 2800 2950
-F 0 "RV?" H 2730 2996 50  0000 R CNN
-F 1 "R_POT" H 2730 2905 50  0000 R CNN
+F 0 "RV3" H 2730 2996 50  0000 R CNN
+F 1 "1k" H 2730 2905 50  0000 R CNN
 F 2 "" H 2800 2950 50  0001 C CNN
 F 3 "~" H 2800 2950 50  0001 C CNN
 	1    2800 2950
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR?
+L power:GND #PWR03
 U 1 1 5C5CA1CF
 P 2800 3400
-F 0 "#PWR?" H 2800 3150 50  0001 C CNN
+F 0 "#PWR03" H 2800 3150 50  0001 C CNN
 F 1 "GND" H 2805 3227 50  0000 C CNN
 F 2 "" H 2800 3400 50  0001 C CNN
 F 3 "" H 2800 3400 50  0001 C CNN
@@ -239,10 +240,10 @@ $EndComp
 Text GLabel 1300 2700 0    50   Input ~ 0
 CV2-In
 $Comp
-L Device:Thermistor_NTC TH?
+L Device:Thermistor_NTC TH1
 U 1 1 5C61F7E9
 P 2500 1300
-F 0 "TH?" V 2210 1300 50  0000 C CNN
+F 0 "TH1" V 2210 1300 50  0000 C CNN
 F 1 "10k NTC" V 2301 1300 50  0000 C CNN
 F 2 "" H 2500 1350 50  0001 C CNN
 F 3 "~" H 2500 1350 50  0001 C CNN
@@ -250,10 +251,10 @@ F 3 "~" H 2500 1350 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:R R?
+L Device:R R4
 U 1 1 5C620677
 P 1950 2000
-F 0 "R?" V 1743 2000 50  0000 C CNN
+F 0 "R4" V 1743 2000 50  0000 C CNN
 F 1 "100k" V 1834 2000 50  0000 C CNN
 F 2 "" V 1880 2000 50  0001 C CNN
 F 3 "~" H 1950 2000 50  0001 C CNN
@@ -271,10 +272,10 @@ Wire Wire Line
 Wire Wire Line
 	2100 1300 2350 1300
 $Comp
-L Device:Thermistor_NTC TH?
+L Device:Thermistor_NTC TH2
 U 1 1 5C621793
 P 2500 2000
-F 0 "TH?" V 2210 2000 50  0000 C CNN
+F 0 "TH2" V 2210 2000 50  0000 C CNN
 F 1 "10k NTC" V 2301 2000 50  0000 C CNN
 F 2 "" H 2500 2050 50  0001 C CNN
 F 3 "~" H 2500 2050 50  0001 C CNN
@@ -284,10 +285,10 @@ $EndComp
 Wire Wire Line
 	2100 2000 2350 2000
 $Comp
-L Device:Thermistor_NTC TH?
+L Device:Thermistor_NTC TH3
 U 1 1 5C621AE3
 P 2500 2700
-F 0 "TH?" V 2210 2700 50  0000 C CNN
+F 0 "TH3" V 2210 2700 50  0000 C CNN
 F 1 "10k NTC" V 2301 2700 50  0000 C CNN
 F 2 "" H 2500 2750 50  0001 C CNN
 F 3 "~" H 2500 2750 50  0001 C CNN
@@ -297,10 +298,10 @@ $EndComp
 Wire Wire Line
 	2100 2700 2350 2700
 $Comp
-L Transistor_BJT:BC558 Q?
+L Transistor_BJT:BC558 Q1
 U 1 1 5C622CEB
 P 3400 2700
-F 0 "Q?" H 3591 2746 50  0000 L CNN
+F 0 "Q1" H 3591 2746 50  0000 L CNN
 F 1 "BC558" H 3591 2655 50  0000 L CNN
 F 2 "Package_TO_SOT_THT:TO-92_Inline" H 3600 2625 50  0001 L CIN
 F 3 "http://www.fairchildsemi.com/ds/BC/BC557.pdf" H 3400 2700 50  0001 L CNN
@@ -308,10 +309,10 @@ F 3 "http://www.fairchildsemi.com/ds/BC/BC557.pdf" H 3400 2700 50  0001 L CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Transistor_BJT:BC548 Q?
+L Transistor_BJT:BC548 Q2
 U 1 1 5C6231B3
 P 3950 2300
-F 0 "Q?" H 4141 2346 50  0000 L CNN
+F 0 "Q2" H 4141 2346 50  0000 L CNN
 F 1 "BC548" H 4141 2255 50  0000 L CNN
 F 2 "Package_TO_SOT_THT:TO-92_Inline" H 4150 2225 50  0001 L CIN
 F 3 "http://www.fairchildsemi.com/ds/BC/BC547.pdf" H 3950 2300 50  0001 L CNN
@@ -319,10 +320,10 @@ F 3 "http://www.fairchildsemi.com/ds/BC/BC547.pdf" H 3950 2300 50  0001 L CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR?
+L power:GND #PWR05
 U 1 1 5C62327C
 P 3500 1700
-F 0 "#PWR?" H 3500 1450 50  0001 C CNN
+F 0 "#PWR05" H 3500 1450 50  0001 C CNN
 F 1 "GND" H 3505 1527 50  0000 C CNN
 F 2 "" H 3500 1700 50  0001 C CNN
 F 3 "" H 3500 1700 50  0001 C CNN
@@ -330,21 +331,21 @@ F 3 "" H 3500 1700 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L Device:R R?
+L Device:R R8
 U 1 1 5C623315
 P 3500 1950
-F 0 "R?" H 3570 1996 50  0000 L CNN
-F 1 "R" H 3570 1905 50  0000 L CNN
+F 0 "R8" H 3570 1996 50  0000 L CNN
+F 1 "1M" H 3570 1905 50  0000 L CNN
 F 2 "" V 3430 1950 50  0001 C CNN
 F 3 "~" H 3500 1950 50  0001 C CNN
 	1    3500 1950
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:-VSW #PWR?
+L power:-VSW #PWR06
 U 1 1 5C6239F6
 P 3500 3100
-F 0 "#PWR?" H 3500 3200 50  0001 C CNN
+F 0 "#PWR06" H 3500 3200 50  0001 C CNN
 F 1 "-VSW" H 3515 3273 50  0000 C CNN
 F 2 "" H 3500 3100 50  0001 C CNN
 F 3 "" H 3500 3100 50  0001 C CNN
@@ -352,10 +353,10 @@ F 3 "" H 3500 3100 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L power:GND #PWR?
+L power:GND #PWR07
 U 1 1 5C623A60
 P 4050 3100
-F 0 "#PWR?" H 4050 2850 50  0001 C CNN
+F 0 "#PWR07" H 4050 2850 50  0001 C CNN
 F 1 "GND" H 4055 2927 50  0000 C CNN
 F 2 "" H 4050 3100 50  0001 C CNN
 F 3 "" H 4050 3100 50  0001 C CNN
@@ -386,10 +387,10 @@ Wire Wire Line
 Wire Wire Line
 	3500 2900 3500 3100
 $Comp
-L Device:R R?
+L Device:R R6
 U 1 1 5C62D7B7
 P 2800 3250
-F 0 "R?" V 2593 3250 50  0000 C CNN
+F 0 "R6" V 2593 3250 50  0000 C CNN
 F 1 "100k" V 2684 3250 50  0000 C CNN
 F 2 "" V 2730 3250 50  0001 C CNN
 F 3 "~" H 2800 3250 50  0001 C CNN
@@ -415,10 +416,10 @@ Wire Wire Line
 Text Notes 4150 2950 0    39   ~ 0
 coupled
 $Comp
-L 4xxx:4069 U?
+L 4xxx:4069 U2
 U 2 1 5C636728
 P 6400 2700
-F 0 "U?" H 6400 3017 50  0000 C CNN
+F 0 "U2" H 6400 3017 50  0000 C CNN
 F 1 "4069" H 6400 2926 50  0000 C CNN
 F 2 "" H 6400 2700 50  0001 C CNN
 F 3 "http://www.intersil.com/content/dam/Intersil/documents/cd40/cd4069ubms.pdf" H 6400 2700 50  0001 C CNN
@@ -426,10 +427,10 @@ F 3 "http://www.intersil.com/content/dam/Intersil/documents/cd40/cd4069ubms.pdf"
 	1    0    0    -1  
 $EndComp
 $Comp
-L 4xxx:4069 U?
+L 4xxx:4069 U2
 U 3 1 5C6367C5
 P 7250 2700
-F 0 "U?" H 7250 3017 50  0000 C CNN
+F 0 "U2" H 7250 3017 50  0000 C CNN
 F 1 "4069" H 7250 2926 50  0000 C CNN
 F 2 "" H 7250 2700 50  0001 C CNN
 F 3 "http://www.intersil.com/content/dam/Intersil/documents/cd40/cd4069ubms.pdf" H 7250 2700 50  0001 C CNN
@@ -437,10 +438,10 @@ F 3 "http://www.intersil.com/content/dam/Intersil/documents/cd40/cd4069ubms.pdf"
 	1    0    0    -1  
 $EndComp
 $Comp
-L 4xxx:4069 U?
+L 4xxx:4069 U1
 U 4 1 5C636891
 P 9250 4850
-F 0 "U?" H 9250 5167 50  0000 C CNN
+F 0 "U1" H 9250 5167 50  0000 C CNN
 F 1 "4069" H 9250 5076 50  0000 C CNN
 F 2 "" H 9250 4850 50  0001 C CNN
 F 3 "http://www.intersil.com/content/dam/Intersil/documents/cd40/cd4069ubms.pdf" H 9250 4850 50  0001 C CNN
@@ -448,10 +449,10 @@ F 3 "http://www.intersil.com/content/dam/Intersil/documents/cd40/cd4069ubms.pdf"
 	1    0    0    -1  
 $EndComp
 $Comp
-L 4xxx:4069 U?
+L 4xxx:4069 U1
 U 7 1 5C63691C
 P 1900 7050
-F 0 "U?" H 2130 7096 50  0000 L CNN
+F 0 "U1" H 2130 7096 50  0000 L CNN
 F 1 "4069" H 2130 7005 50  0000 L CNN
 F 2 "" H 1900 7050 50  0001 C CNN
 F 3 "http://www.intersil.com/content/dam/Intersil/documents/cd40/cd4069ubms.pdf" H 1900 7050 50  0001 C CNN
@@ -462,10 +463,10 @@ Wire Wire Line
 	7550 2700 7550 1950
 Connection ~ 7550 1950
 $Comp
-L Device:C C?
+L Device:C C4
 U 1 1 5C63902D
 P 9850 4850
-F 0 "C?" V 9598 4850 50  0000 C CNN
+F 0 "C4" V 9598 4850 50  0000 C CNN
 F 1 "220n" V 9689 4850 50  0000 C CNN
 F 2 "" H 9888 4700 50  0001 C CNN
 F 3 "~" H 9850 4850 50  0001 C CNN
@@ -475,10 +476,10 @@ $EndComp
 Text GLabel 10300 4850 2    50   Input ~ 0
 PhaseOut
 $Comp
-L Device:R R?
+L Device:R R21
 U 1 1 5C6397CB
 P 10150 5150
-F 0 "R?" V 9943 5150 50  0000 C CNN
+F 0 "R21" V 9943 5150 50  0000 C CNN
 F 1 "100k" V 10034 5150 50  0000 C CNN
 F 2 "" V 10080 5150 50  0001 C CNN
 F 3 "~" H 10150 5150 50  0001 C CNN
@@ -486,10 +487,10 @@ F 3 "~" H 10150 5150 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L power:GND #PWR?
+L power:GND #PWR014
 U 1 1 5C639896
 P 10150 5500
-F 0 "#PWR?" H 10150 5250 50  0001 C CNN
+F 0 "#PWR014" H 10150 5250 50  0001 C CNN
 F 1 "GND" H 10155 5327 50  0000 C CNN
 F 2 "" H 10150 5500 50  0001 C CNN
 F 3 "" H 10150 5500 50  0001 C CNN
@@ -499,10 +500,10 @@ $EndComp
 Text GLabel 4850 5250 0    50   Input ~ 0
 PWM
 $Comp
-L Device:R R?
+L Device:R R9
 U 1 1 5C63990E
 P 5250 5250
-F 0 "R?" V 5043 5250 50  0000 C CNN
+F 0 "R9" V 5043 5250 50  0000 C CNN
 F 1 "100k" V 5134 5250 50  0000 C CNN
 F 2 "" V 5180 5250 50  0001 C CNN
 F 3 "~" H 5250 5250 50  0001 C CNN
@@ -510,10 +511,10 @@ F 3 "~" H 5250 5250 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:R R?
+L Device:R R11
 U 1 1 5C639A1A
 P 5700 5700
-F 0 "R?" V 5493 5700 50  0000 C CNN
+F 0 "R11" V 5493 5700 50  0000 C CNN
 F 1 "1M" V 5584 5700 50  0000 C CNN
 F 2 "" V 5630 5700 50  0001 C CNN
 F 3 "~" H 5700 5700 50  0001 C CNN
@@ -521,10 +522,10 @@ F 3 "~" H 5700 5700 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L power:GND #PWR?
+L power:GND #PWR08
 U 1 1 5C63A151
 P 5700 6000
-F 0 "#PWR?" H 5700 5750 50  0001 C CNN
+F 0 "#PWR08" H 5700 5750 50  0001 C CNN
 F 1 "GND" H 5705 5827 50  0000 C CNN
 F 2 "" H 5700 6000 50  0001 C CNN
 F 3 "" H 5700 6000 50  0001 C CNN
@@ -536,10 +537,10 @@ Wire Wire Line
 Wire Wire Line
 	10150 5300 10150 5500
 $Comp
-L Device:R R?
+L Device:R R19
 U 1 1 5C641BFE
 P 7450 4200
-F 0 "R?" V 7243 4200 50  0000 C CNN
+F 0 "R19" V 7243 4200 50  0000 C CNN
 F 1 "100k" V 7334 4200 50  0000 C CNN
 F 2 "" V 7380 4200 50  0001 C CNN
 F 3 "~" H 7450 4200 50  0001 C CNN
@@ -547,10 +548,10 @@ F 3 "~" H 7450 4200 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:R R?
+L Device:R R13
 U 1 1 5C641D2A
 P 6400 4200
-F 0 "R?" V 6193 4200 50  0000 C CNN
+F 0 "R13" V 6193 4200 50  0000 C CNN
 F 1 "100k" V 6284 4200 50  0000 C CNN
 F 2 "" V 6330 4200 50  0001 C CNN
 F 3 "~" H 6400 4200 50  0001 C CNN
@@ -562,10 +563,10 @@ Wire Wire Line
 Wire Wire Line
 	7900 4850 7900 4200
 $Comp
-L Device:R_POT RV?
+L Device:R_POT RV5
 U 1 1 5C645706
 P 5750 4200
-F 0 "RV?" H 5680 4246 50  0000 R CNN
+F 0 "RV5" H 5680 4246 50  0000 R CNN
 F 1 "22k" H 5680 4155 50  0000 R CNN
 F 2 "" H 5750 4200 50  0001 C CNN
 F 3 "~" H 5750 4200 50  0001 C CNN
@@ -573,10 +574,10 @@ F 3 "~" H 5750 4200 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR?
+L power:GND #PWR010
 U 1 1 5C6459FB
 P 5750 4550
-F 0 "#PWR?" H 5750 4300 50  0001 C CNN
+F 0 "#PWR010" H 5750 4300 50  0001 C CNN
 F 1 "GND" H 5755 4377 50  0000 C CNN
 F 2 "" H 5750 4550 50  0001 C CNN
 F 3 "" H 5750 4550 50  0001 C CNN
@@ -588,10 +589,10 @@ Wire Wire Line
 Wire Wire Line
 	5100 5250 4850 5250
 $Comp
-L power:-VSW #PWR?
+L power:-VSW #PWR012
 U 1 1 5C653D1D
 P 6400 6000
-F 0 "#PWR?" H 6400 6100 50  0001 C CNN
+F 0 "#PWR012" H 6400 6100 50  0001 C CNN
 F 1 "-VSW" H 6415 6173 50  0000 C CNN
 F 2 "" H 6400 6000 50  0001 C CNN
 F 3 "" H 6400 6000 50  0001 C CNN
@@ -599,10 +600,10 @@ F 3 "" H 6400 6000 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L Transistor_BJT:BC548 Q?
+L Transistor_BJT:BC548 Q3
 U 1 1 5C653D6A
 P 6300 5250
-F 0 "Q?" H 6491 5296 50  0000 L CNN
+F 0 "Q3" H 6491 5296 50  0000 L CNN
 F 1 "BC548" H 6491 5205 50  0000 L CNN
 F 2 "Package_TO_SOT_THT:TO-92_Inline" H 6500 5175 50  0001 L CIN
 F 3 "http://www.fairchildsemi.com/ds/BC/BC547.pdf" H 6300 5250 50  0001 L CNN
@@ -617,10 +618,10 @@ Connection ~ 5700 5250
 Wire Wire Line
 	5700 5250 6100 5250
 $Comp
-L Device:R R?
+L Device:R R14
 U 1 1 5C655BAB
 P 6400 5850
-F 0 "R?" V 6193 5850 50  0000 C CNN
+F 0 "R14" V 6193 5850 50  0000 C CNN
 F 1 "10k" V 6284 5850 50  0000 C CNN
 F 2 "" V 6330 5850 50  0001 C CNN
 F 3 "~" H 6400 5850 50  0001 C CNN
@@ -635,10 +636,10 @@ Connection ~ 7050 4200
 Wire Wire Line
 	7050 4200 7050 4850
 $Comp
-L Device:R R?
+L Device:R R16
 U 1 1 5C661496
 P 6750 4850
-F 0 "R?" V 6543 4850 50  0000 C CNN
+F 0 "R16" V 6543 4850 50  0000 C CNN
 F 1 "68k" V 6634 4850 50  0000 C CNN
 F 2 "" V 6680 4850 50  0001 C CNN
 F 3 "~" H 6750 4850 50  0001 C CNN
@@ -646,10 +647,10 @@ F 3 "~" H 6750 4850 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:R R?
+L Device:R R17
 U 1 1 5C6615A5
 P 6750 5600
-F 0 "R?" V 6543 5600 50  0000 C CNN
+F 0 "R17" V 6543 5600 50  0000 C CNN
 F 1 "100k" V 6634 5600 50  0000 C CNN
 F 2 "" V 6680 5600 50  0001 C CNN
 F 3 "~" H 6750 5600 50  0001 C CNN
@@ -673,10 +674,10 @@ Connection ~ 6400 5600
 Wire Wire Line
 	6400 5600 6400 5450
 $Comp
-L power:VCC #PWR?
+L power:VCC #PWR09
 U 1 1 5C66BC30
 P 5750 3850
-F 0 "#PWR?" H 5750 3700 50  0001 C CNN
+F 0 "#PWR09" H 5750 3700 50  0001 C CNN
 F 1 "VCC" H 5767 4023 50  0000 C CNN
 F 2 "" H 5750 3850 50  0001 C CNN
 F 3 "" H 5750 3850 50  0001 C CNN
@@ -684,10 +685,10 @@ F 3 "" H 5750 3850 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:VCC #PWR?
+L power:VCC #PWR011
 U 1 1 5C66C93D
 P 6400 4700
-F 0 "#PWR?" H 6400 4550 50  0001 C CNN
+F 0 "#PWR011" H 6400 4550 50  0001 C CNN
 F 1 "VCC" H 6417 4873 50  0000 C CNN
 F 2 "" H 6400 4700 50  0001 C CNN
 F 3 "" H 6400 4700 50  0001 C CNN
@@ -724,11 +725,11 @@ Wire Wire Line
 Wire Wire Line
 	8700 4850 8950 4850
 $Comp
-L Device:R R?
+L Device:R R18
 U 1 1 5C694711
 P 7050 3750
-F 0 "R?" V 6843 3750 50  0000 C CNN
-F 1 "100k" V 6934 3750 50  0000 C CNN
+F 0 "R18" V 6843 3750 50  0000 C CNN
+F 1 "47k" V 6934 3750 50  0000 C CNN
 F 2 "" V 6980 3750 50  0001 C CNN
 F 3 "~" H 7050 3750 50  0001 C CNN
 	1    7050 3750
@@ -741,11 +742,11 @@ SAW
 Text GLabel 8900 3050 0    50   Input ~ 0
 SAW
 $Comp
-L Device:C C?
+L Device:C C3
 U 1 1 5C694A7A
 P 9050 3050
-F 0 "C?" V 8798 3050 50  0000 C CNN
-F 1 "C" V 8889 3050 50  0000 C CNN
+F 0 "C3" V 8798 3050 50  0000 C CNN
+F 1 "220n" V 8889 3050 50  0000 C CNN
 F 2 "" H 9088 2900 50  0001 C CNN
 F 3 "~" H 9050 3050 50  0001 C CNN
 	1    9050 3050
@@ -754,21 +755,21 @@ $EndComp
 Text GLabel 9650 3050 2    50   Input ~ 0
 SAW_OUT
 $Comp
-L Device:R R?
+L Device:R R20
 U 1 1 5C694C53
 P 9450 3300
-F 0 "R?" H 9520 3346 50  0000 L CNN
-F 1 "R" H 9520 3255 50  0000 L CNN
+F 0 "R20" H 9520 3346 50  0000 L CNN
+F 1 "100k" H 9520 3255 50  0000 L CNN
 F 2 "" V 9380 3300 50  0001 C CNN
 F 3 "~" H 9450 3300 50  0001 C CNN
 	1    9450 3300
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR?
+L power:GND #PWR013
 U 1 1 5C694CDB
 P 9450 3450
-F 0 "#PWR?" H 9450 3200 50  0001 C CNN
+F 0 "#PWR013" H 9450 3200 50  0001 C CNN
 F 1 "GND" H 9455 3277 50  0000 C CNN
 F 2 "" H 9450 3450 50  0001 C CNN
 F 3 "" H 9450 3450 50  0001 C CNN
@@ -790,10 +791,10 @@ Wire Wire Line
 	5450 2850 5450 2700
 Connection ~ 5450 2700
 $Comp
-L 4xxx:4069 U?
+L 4xxx:4069 U1
 U 1 1 5C679782
 P 1850 5400
-F 0 "U?" H 1850 5717 50  0000 C CNN
+F 0 "U1" H 1850 5717 50  0000 C CNN
 F 1 "4069" H 1850 5626 50  0000 C CNN
 F 2 "" H 1850 5400 50  0001 C CNN
 F 3 "http://www.intersil.com/content/dam/Intersil/documents/cd40/cd4069ubms.pdf" H 1850 5400 50  0001 C CNN
@@ -801,10 +802,10 @@ F 3 "http://www.intersil.com/content/dam/Intersil/documents/cd40/cd4069ubms.pdf"
 	1    0    0    -1  
 $EndComp
 $Comp
-L 4xxx:4069 U?
+L 4xxx:4069 U1
 U 2 1 5C67984E
 P 2350 4550
-F 0 "U?" H 2350 4233 50  0000 C CNN
+F 0 "U1" H 2350 4233 50  0000 C CNN
 F 1 "4069" H 2350 4324 50  0000 C CNN
 F 2 "" H 2350 4550 50  0001 C CNN
 F 3 "http://www.intersil.com/content/dam/Intersil/documents/cd40/cd4069ubms.pdf" H 2350 4550 50  0001 C CNN
@@ -812,10 +813,10 @@ F 3 "http://www.intersil.com/content/dam/Intersil/documents/cd40/cd4069ubms.pdf"
 	-1   0    0    1   
 $EndComp
 $Comp
-L 4xxx:4069 U?
+L 4xxx:4069 U1
 U 3 1 5C67997B
 P 1250 4550
-F 0 "U?" H 1250 4233 50  0000 C CNN
+F 0 "U1" H 1250 4233 50  0000 C CNN
 F 1 "4069" H 1250 4324 50  0000 C CNN
 F 2 "" H 1250 4550 50  0001 C CNN
 F 3 "http://www.intersil.com/content/dam/Intersil/documents/cd40/cd4069ubms.pdf" H 1250 4550 50  0001 C CNN
@@ -823,11 +824,11 @@ F 3 "http://www.intersil.com/content/dam/Intersil/documents/cd40/cd4069ubms.pdf"
 	-1   0    0    1   
 $EndComp
 $Comp
-L Device:R R?
+L Device:R R2
 U 1 1 5C679C5C
 P 1800 4050
-F 0 "R?" V 1593 4050 50  0000 C CNN
-F 1 "R" V 1684 4050 50  0000 C CNN
+F 0 "R2" V 1593 4050 50  0000 C CNN
+F 1 "100k" V 1684 4050 50  0000 C CNN
 F 2 "" V 1730 4050 50  0001 C CNN
 F 3 "~" H 1800 4050 50  0001 C CNN
 	1    1800 4050
@@ -852,10 +853,10 @@ Wire Wire Line
 Wire Wire Line
 	750  4050 750  4550
 $Comp
-L Device:R R?
+L Device:R R7
 U 1 1 5C68BE65
 P 2950 5150
-F 0 "R?" H 2880 5104 50  0000 R CNN
+F 0 "R7" H 2880 5104 50  0000 R CNN
 F 1 "100k" H 2880 5195 50  0000 R CNN
 F 2 "" V 2880 5150 50  0001 C CNN
 F 3 "~" H 2950 5150 50  0001 C CNN
@@ -865,10 +866,10 @@ $EndComp
 Wire Wire Line
 	2950 5400 2950 5300
 $Comp
-L Device:R R?
+L Device:R R1
 U 1 1 5C6905DA
 P 750 5150
-F 0 "R?" H 680 5104 50  0000 R CNN
+F 0 "R1" H 680 5104 50  0000 R CNN
 F 1 "1k" H 680 5195 50  0000 R CNN
 F 2 "" V 680 5150 50  0001 C CNN
 F 3 "~" H 750 5150 50  0001 C CNN
@@ -878,10 +879,10 @@ $EndComp
 Wire Wire Line
 	750  5300 750  5400
 $Comp
-L Device:R_POT RV?
+L Device:R_POT RV1
 U 1 1 5C692C19
 P 750 4850
-F 0 "RV?" H 680 4896 50  0000 R CNN
+F 0 "RV1" H 680 4896 50  0000 R CNN
 F 1 "1M" H 680 4805 50  0000 R CNN
 F 2 "" H 750 4850 50  0001 C CNN
 F 3 "~" H 750 4850 50  0001 C CNN
@@ -905,10 +906,10 @@ Connection ~ 2950 4550
 Text GLabel 3750 4950 2    50   Input ~ 0
 LFO
 $Comp
-L Device:R_POT RV?
+L Device:R_POT RV4
 U 1 1 5C69A522
 P 3450 4950
-F 0 "RV?" H 3380 4996 50  0000 R CNN
+F 0 "RV4" H 3380 4996 50  0000 R CNN
 F 1 "100k" H 3380 4905 50  0000 R CNN
 F 2 "" H 3450 4950 50  0001 C CNN
 F 3 "~" H 3450 4950 50  0001 C CNN
@@ -916,10 +917,10 @@ F 3 "~" H 3450 4950 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR?
+L power:GND #PWR04
 U 1 1 5C69A76B
 P 3450 5200
-F 0 "#PWR?" H 3450 4950 50  0001 C CNN
+F 0 "#PWR04" H 3450 4950 50  0001 C CNN
 F 1 "GND" H 3455 5027 50  0000 C CNN
 F 2 "" H 3450 5200 50  0001 C CNN
 F 3 "" H 3450 5200 50  0001 C CNN
@@ -940,10 +941,10 @@ Wire Wire Line
 Wire Wire Line
 	4050 1900 4850 1900
 $Comp
-L Device:C C?
+L Device:C C1
 U 1 1 5C685CD7
 P 1850 4900
-F 0 "C?" V 1598 4900 50  0000 C CNN
+F 0 "C1" V 1598 4900 50  0000 C CNN
 F 1 "1.33u" V 1689 4900 50  0000 C CNN
 F 2 "" H 1888 4750 50  0001 C CNN
 F 3 "~" H 1850 4900 50  0001 C CNN
