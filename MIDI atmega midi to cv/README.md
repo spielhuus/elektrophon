@@ -15,6 +15,7 @@ the midi 2 vco module requires midi serial support on the controller. for this s
 
 ## links
 
+* [MIDI Module](http://www.experimentalistsanonymous.com/ve3wwg/doku.php?id=analog_synth_midi)
 * [midi2cv](https://github.com/elkayem/midi2cv) - Simple midi to CV converter.
 * [Little-Scale](http://little-scale.blogspot.com/2017/11/usb-midi-to-eight-gates-and-sixteen-cv.html) - Midi2CV converter based on the Teensy.
 
