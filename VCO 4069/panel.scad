@@ -2,7 +2,7 @@
 
 HP = 5.07;
 LENGTH=128.5;
-THICKNESS=2;
+THICKNESS=5;
 SCREEN=0.5;
 
 use <../openscad/reflector.scad>
@@ -69,6 +69,6 @@ difference() {
     translate([8*HP/4*2,110,0]) jack_hole();
     translate([8*HP/4*3,110,0]) jack_hole();
 }
-translate([8*HP/2,13,2]) reflector(radius=8, length=8*HP, led=3, led_holder=4 );
-translate([8*HP/2,119,2]) reflector(radius=4, length=8*HP, led=3, led_holder=4 );
+translate([8*HP/2,13,2]) reflector(radius=8, length=8*HP, led=1.5, led_holder=4 );
+translate([8*HP/2,119,2]) reflector(radius=4, length=8*HP, led=1.5, led_holder=4 );
 
