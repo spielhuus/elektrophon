@@ -11,15 +11,15 @@ use <../openscad/plate.scad>
 
 module pot_hole() {
 	translate([0,0,-1])
-	cylinder(r=3.75, h=10, $fn=20);
+	cylinder(r=4, h=10, $fn=20);
 }
 
 module jack_hole() {
 	translate([0,0,-1])
-	cylinder(r=3.25, h=10, $fn=20);
+	cylinder(r=6, h=10, $fn=20);
 
-	translate([0,0,THICKNESS-1-2])
-	cylinder(r=5, h=2, $fn=20);
+//	translate([0,0,THICKNESS-1-2])
+//	cylinder(r=5, h=2, $fn=20);
 }
 
 module switch_hole() {
@@ -62,12 +62,12 @@ difference() {
     translate([8*HP/2,50,0]) pot_hole();
     translate([8*HP/2,80,0]) pot_hole();
     
-    translate([8*HP/3,100,0]) jack_hole();
-    translate([8*HP/3*2,100,0]) jack_hole();
+    translate([8*HP/4,100,0]) jack_hole();
+    translate([8*HP/4*3,100,0]) jack_hole();
     
-    translate([8*HP/4,110,0]) jack_hole();
+/*    translate([8*HP/4,110,0]) jack_hole();
     translate([8*HP/4*2,110,0]) jack_hole();
-    translate([8*HP/4*3,110,0]) jack_hole();
+    translate([8*HP/4*3,110,0]) jack_hole(); */
 }
 translate([8*HP/2,13,2]) reflector(radius=8, length=8*HP, led=1.5, led_holder=4 );
 translate([8*HP/2,119,2]) reflector(radius=4, length=8*HP, led=1.5, led_holder=4 );

@@ -3,7 +3,7 @@ module reflector( radius=10,length=20,led_holder=2, thickness=2, led=1 ) {
 echo("This is a reflector radius h=", radius, " and l=", length);
     
 $fn=100;
-led_holder_height=radius;
+led_holder_height=radius + 1;
     
 rotate([0,90,0]) {
     difference() {
