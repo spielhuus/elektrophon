@@ -4,14 +4,24 @@
 
 the midi 2 vco module requires midi serial support on the controller. for this some extra drivers have to be installed. 
 
+
+MIDI_CHANNEL_OMNI
+
+https://github.com/FortySevenEffects/arduino_midi_library/wiki
+
 ### windows
 
-* [The Hairless MIDI to serial bridge.](http://projectgus.github.io/hairless-midiserial/) connect serial devices (like Arduinos) to send and receive MIDI signals.
-* 
+* [The Hairless MIDI to serial bridge.](http://projectgus.github.io/hairless-midiserial/) connects serial devices (like Arduinos) to send and receive MIDI signals.
+* [ttymidi](http://www.varal.org/ttymidi/) is a GPL-licensed program that allows external serial devices to interface with ALSA MIDI applications. 
 
 ### linux
 
 ## samples
+
+## software
+
+* [SuperLooper](http://www.essej.net/sooperlooper/index.html) Live looping sampler capable of immediate loop recording, overdubbing, multiplying, reversing and more.
+
 
 ## links
 
