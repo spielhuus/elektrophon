@@ -1,7 +1,7 @@
 /** VCO X-4096 **/
 
 HP = 5.07;
-LENGTH=128.5;
+HEIGHT = 133.4;
 THICKNESS=5;
 SCREEN=0.5;
 
@@ -40,35 +40,38 @@ module triangle() {
 
 //translate([-10,0,10])  led();
 
-difference() {
-    plate(HP=8);
-    translate( [8*HP/2, 15, SCREEN])
-    linear_extrude(height = THICKNESS-SCREEN) {
-        rotate([180,0,0])
-            text(text = "X4069", font = "Liberation Sans", size = 5, halign = "center");
+module panel_4069() {
+    difference() {
+        plate(HP=8,HU=5 );
+        translate( [8*HP/2, 15, SCREEN])
+        linear_extrude(height = THICKNESS-SCREEN) {
+            rotate([180,0,0])
+                text(text = "X4069", font = "Liberation Sans", size = 5, halign = "center");
+        }
+        translate( [8*HP/2, 118, SCREEN])
+        linear_extrude(height = THICKNESS-SCREEN) {
+            rotate([180,0,0])
+                text(text = "LFO", font = "Liberation Sans", size = 2, halign = "center");
+        }
+        translate( [8*HP/4, 118, SCREEN])
+        linear_extrude(height = THICKNESS-SCREEN) {
+            rotate([180,0,0])
+                text(text = "PULSE", font = "Liberation Sans", size = 2, halign = "center");
+        }
+        translate([8*HP/4*3,116,2]) triangle();
+        
+        translate([8*HP/2,50,0]) pot_hole();
+        translate([8*HP/2,80,0]) pot_hole();
+        
+        translate([8*HP/4,100,0]) jack_hole();
+        translate([8*HP/4*3,100,0]) jack_hole();
+        
+    /*    translate([8*HP/4,110,0]) jack_hole();
+        translate([8*HP/4*2,110,0]) jack_hole();
+        translate([8*HP/4*3,110,0]) jack_hole(); */
     }
-    translate( [8*HP/2, 118, SCREEN])
-    linear_extrude(height = THICKNESS-SCREEN) {
-        rotate([180,0,0])
-            text(text = "LFO", font = "Liberation Sans", size = 2, halign = "center");
-    }
-    translate( [8*HP/4, 118, SCREEN])
-    linear_extrude(height = THICKNESS-SCREEN) {
-        rotate([180,0,0])
-            text(text = "PULSE", font = "Liberation Sans", size = 2, halign = "center");
-    }
-    translate([8*HP/4*3,116,2]) triangle();
-    
-    translate([8*HP/2,50,0]) pot_hole();
-    translate([8*HP/2,80,0]) pot_hole();
-    
-    translate([8*HP/4,100,0]) jack_hole();
-    translate([8*HP/4*3,100,0]) jack_hole();
-    
-/*    translate([8*HP/4,110,0]) jack_hole();
-    translate([8*HP/4*2,110,0]) jack_hole();
-    translate([8*HP/4*3,110,0]) jack_hole(); */
+    translate([8*HP/2,13,2]) reflector(radius=8, length=8*HP, led=1.5, led_holder=4 );
+    translate([8*HP/2,119,2]) reflector(radius=4, length=8*HP, led=1.5, led_holder=4 );
 }
-translate([8*HP/2,13,2]) reflector(radius=8, length=8*HP, led=1.5, led_holder=4 );
-translate([8*HP/2,119,2]) reflector(radius=4, length=8*HP, led=1.5, led_holder=4 );
 
+panel_4069();
