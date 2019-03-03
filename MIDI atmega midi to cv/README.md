@@ -21,7 +21,10 @@ https://github.com/FortySevenEffects/arduino_midi_library/wiki
 ## software
 
 * [SuperLooper](http://www.essej.net/sooperlooper/index.html) Live looping sampler capable of immediate loop recording, overdubbing, multiplying, reversing and more.
+* [OpenMPT] https://openmpt.org/) is a popular tracker software for Windows.
+* [MusE](http://www.muse-sequencer.org/index.html) is a MIDI/Audio sequencer with recording and editing capabilities.
 
+https://de.wikipedia.org/wiki/Tracker_(Musik)
 
 ## links
 
