@@ -11,7 +11,7 @@ use <../openscad/plate.scad>
 
 module pot_hole() {
 	translate([0,0,-1])
-	cylinder(r=4, h=10, $fn=20);
+	cylinder(r=5, h=10, $fn=20);
 }
 
 module jack_hole() {
