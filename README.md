@@ -4,6 +4,9 @@ collection of modules for a modular analog electro acoustic noise machine. all m
 # before you start
 i recommend building the breadboard syntesizers on hackaday by elliot williams. this is a very good introduction to the lunetta spririt of building synthesizers. ---
 
+# rack size
+
+the rack size is measured in HP and HU. The desktop rack has two rows of 5U with a liength of xx HP.
 
 # modules 
 
@@ -34,9 +37,15 @@ Here are some links do documents on how to build synthesizers and electronic. th
 * [LOGIC NOISE: SWEET, SWEET OSCILLATOR SOUNDS by: Elliot Williams](https://hackaday.com/2015/02/04/logic-noise-sweet-sweet-oscillator-sounds/) hackaday article series for building the basic synthesizer parts with cmos chips.
 * [UNDERSTANDING DIGITAL BUFFER, GATE, AND LOGIC IC CIRCUITS]() NUTS & VOLTS article series that describes the concept and application of logic ic citcuits.
 
+# general modular information
+
+* [doepfer A100 rack size](http://www.doepfer.de/a100_man/a100m_e.htm)
+
 # links
 
 * [Scott Stites](http://birthofasynth.com/index.html)
 * [Synthesizer DIY pages of René Schmitz](https://www.schmitzbits.de/index.html)
 * [Music from outer space](http://musicfromouterspace.com/)
 * [yusynth: modular synth project](http://www.yusynth.net/Modular/index_en.html)
+* [Ken Stones - CGS (Cat Girl Synth)](http://www.elby-designs.com/webtek/cgs/cgs.htm)
+
