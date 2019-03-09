@@ -1,8 +1,8 @@
-/** VCO X-4096 **/
+/** VCO 4046 **/
 
 ARMATURES = 1;
 
-HP=12;
+HP=8;
 
 CV_SILK_Y=32;
 CV_POT_Y=50;
@@ -34,24 +34,28 @@ module triangle() {
     rotate([0,0,90]) {
         translate([0,0,0])
         rotate([0,90,45])
-        cube([1,1,5], $fn=20);
+        cube([1,1,5], $fn=10);
         
         rotate([0,90,320])
-        cube([1,1,5], $fn=20);
+        cube([1,1,5], $fn=10);
     }
 }
 
 //translate([-10,0,10])  led();
 
-module panel_4069() {
+module panel_4046() {
     color("white") difference() {
 
         plate(HP=HP,HU=5 );
-        translate( [HP*HP_SIZE/2, 25, 0]) silkscreen( text="VCO4069" );
-        translate( [HP*HP_SIZE/4, CV_SILK_Y, 0]) silkscreen( text="CV" );
-        translate( [HP*HP_SIZE/4, LFO_SILK_Y, 0]) silkscreen( text="LFO" );
-        translate( [HP*HP_SIZE/4, 150, 0]) silkscreen( text="PULSE" );
-        translate([HP*HP/4*3,116,2]) triangle();
+        translate( [HP*HP_SIZE/2, 25, 0]) silkscreen( text="VCO4046" );
+        translate( [HP*HP_SIZE/4, CV_SILK_Y, 0]) silkscreen( text="1V/OCT" );
+        translate( [HP*HP_SIZE/4, LFO_SILK_Y, 0]) silkscreen( text="EXP FM" );
+        translate( [HP*HP_SIZE/4, 150, 0]) silkscreen( text="COARSE" );
+        translate( [HP*HP_SIZE/4, 150, 0]) silkscreen( text="FINE" );
+
+        translate( [HP*HP_SIZE/4, 180, 0]) silkscreen( text="LINEAR FM" );
+        translate( [HP*HP_SIZE/4, 180, 0]) silkscreen( text="SYNC" );
+
 
         //draw the banana plugs        
         translate([HP*HP_SIZE/4,CV_PLUG_Y,0]) banana_plug_hole();
@@ -81,11 +85,15 @@ module panel_4069() {
             translate([HP*HP_SIZE/4*3,OUT_PLUG_Y,0]) banana_plug();
         }
 
-        translate( [HP*HP_SIZE/2, 25, 0]) silkscreen_text( text="VCO4069" );
-        translate( [HP*HP_SIZE/4, CV_SILK_Y, 0]) silkscreen_text( text="CV" );
-        translate( [HP*HP_SIZE/4, LFO_SILK_Y, 0]) silkscreen_text( text="LFO" );
-        translate( [HP*HP_SIZE/4, 150, 0]) silkscreen_text( text="PU" );
+        translate( [HP*HP_SIZE/2, 25, 0]) silkscreen_text( text="VCO4046" );
+        translate( [HP*HP_SIZE/4, CV_SILK_Y, 0]) silkscreen_text( text="1V/OCT" );
+        translate( [HP*HP_SIZE/4, LFO_SILK_Y, 0]) silkscreen_text( text="EXP FM" );
+        translate( [HP*HP_SIZE/4, 150, 0]) silkscreen_text( text="COARSE" );
+        translate( [HP*HP_SIZE/4, 150, 0]) silkscreen_text( text="FINE" );
+
+        translate( [HP*HP_SIZE/4, 180, 0]) silkscreen_text( text="LINEAR FM" );
+        translate( [HP*HP_SIZE/4, 180, 0]) silkscreen_text( text="SYNC" );
     }
 }
 
-panel_4069();
+panel_4046();

@@ -5,14 +5,14 @@ EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
-Title ""
-Date ""
-Rev ""
-Comp ""
+Title "VCO 4069"
+Date "2019-03-02"
+Rev "1"
+Comp "spielhuus"
 Comment1 ""
 Comment2 ""
 Comment3 ""
-Comment4 ""
+Comment4 "License CC BY 4.0 - Attribution 4.0 International"
 $EndDescr
 Text Notes 950  700  0    50   ~ 0
 exponential current sync
@@ -451,12 +451,12 @@ $EndComp
 $Comp
 L 4xxx:4069 U1
 U 7 1 5C63691C
-P 1900 7050
-F 0 "U1" H 2130 7096 50  0000 L CNN
-F 1 "4069" H 2130 7005 50  0000 L CNN
-F 2 "" H 1900 7050 50  0001 C CNN
-F 3 "http://www.intersil.com/content/dam/Intersil/documents/cd40/cd4069ubms.pdf" H 1900 7050 50  0001 C CNN
-	7    1900 7050
+P 5650 7000
+F 0 "U1" H 5880 7046 50  0000 L CNN
+F 1 "4069" H 5880 6955 50  0000 L CNN
+F 2 "" H 5650 7000 50  0001 C CNN
+F 3 "http://www.intersil.com/content/dam/Intersil/documents/cd40/cd4069ubms.pdf" H 5650 7000 50  0001 C CNN
+	7    5650 7000
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -793,176 +793,173 @@ Connection ~ 5450 2700
 $Comp
 L 4xxx:4069 U1
 U 1 1 5C679782
-P 1850 5400
-F 0 "U1" H 1850 5717 50  0000 C CNN
-F 1 "4069" H 1850 5626 50  0000 C CNN
-F 2 "" H 1850 5400 50  0001 C CNN
-F 3 "http://www.intersil.com/content/dam/Intersil/documents/cd40/cd4069ubms.pdf" H 1850 5400 50  0001 C CNN
-	1    1850 5400
+P 1450 5600
+F 0 "U1" H 1450 5917 50  0000 C CNN
+F 1 "4069" H 1450 5826 50  0000 C CNN
+F 2 "" H 1450 5600 50  0001 C CNN
+F 3 "http://www.intersil.com/content/dam/Intersil/documents/cd40/cd4069ubms.pdf" H 1450 5600 50  0001 C CNN
+	1    1450 5600
 	1    0    0    -1  
 $EndComp
 $Comp
 L 4xxx:4069 U1
 U 2 1 5C67984E
-P 2350 4550
-F 0 "U1" H 2350 4233 50  0000 C CNN
-F 1 "4069" H 2350 4324 50  0000 C CNN
-F 2 "" H 2350 4550 50  0001 C CNN
-F 3 "http://www.intersil.com/content/dam/Intersil/documents/cd40/cd4069ubms.pdf" H 2350 4550 50  0001 C CNN
-	2    2350 4550
-	-1   0    0    1   
+P 2500 5600
+F 0 "U1" H 2500 5283 50  0000 C CNN
+F 1 "4069" H 2500 5374 50  0000 C CNN
+F 2 "" H 2500 5600 50  0001 C CNN
+F 3 "http://www.intersil.com/content/dam/Intersil/documents/cd40/cd4069ubms.pdf" H 2500 5600 50  0001 C CNN
+	2    2500 5600
+	1    0    0    -1  
 $EndComp
 $Comp
 L 4xxx:4069 U1
 U 3 1 5C67997B
-P 1250 4550
-F 0 "U1" H 1250 4233 50  0000 C CNN
-F 1 "4069" H 1250 4324 50  0000 C CNN
-F 2 "" H 1250 4550 50  0001 C CNN
-F 3 "http://www.intersil.com/content/dam/Intersil/documents/cd40/cd4069ubms.pdf" H 1250 4550 50  0001 C CNN
-	3    1250 4550
-	-1   0    0    1   
+P 3500 5600
+F 0 "U1" H 3500 5283 50  0000 C CNN
+F 1 "4069" H 3500 5374 50  0000 C CNN
+F 2 "" H 3500 5600 50  0001 C CNN
+F 3 "http://www.intersil.com/content/dam/Intersil/documents/cd40/cd4069ubms.pdf" H 3500 5600 50  0001 C CNN
+	3    3500 5600
+	1    0    0    -1  
 $EndComp
 $Comp
 L Device:R R2
 U 1 1 5C679C5C
-P 1800 4050
-F 0 "R2" V 1593 4050 50  0000 C CNN
-F 1 "100k" V 1684 4050 50  0000 C CNN
-F 2 "" V 1730 4050 50  0001 C CNN
-F 3 "~" H 1800 4050 50  0001 C CNN
-	1    1800 4050
+P 3000 5100
+F 0 "R2" V 2793 5100 50  0000 C CNN
+F 1 "100k" V 2884 5100 50  0000 C CNN
+F 2 "" V 2930 5100 50  0001 C CNN
+F 3 "~" H 3000 5100 50  0001 C CNN
+	1    3000 5100
 	0    1    1    0   
 $EndComp
-Wire Wire Line
-	2950 5400 2500 5400
-Wire Wire Line
-	2650 4550 2950 4550
-Wire Wire Line
-	2050 4550 1550 4550
-Wire Wire Line
-	750  5400 1200 5400
-Wire Wire Line
-	950  4550 750  4550
-Wire Wire Line
-	2950 4550 2950 4050
-Wire Wire Line
-	2950 4050 1950 4050
-Wire Wire Line
-	1650 4050 750  4050
-Wire Wire Line
-	750  4050 750  4550
 $Comp
 L Device:R R7
 U 1 1 5C68BE65
-P 2950 5150
-F 0 "R7" H 2880 5104 50  0000 R CNN
-F 1 "100k" H 2880 5195 50  0000 R CNN
-F 2 "" V 2880 5150 50  0001 C CNN
-F 3 "~" H 2950 5150 50  0001 C CNN
-	1    2950 5150
-	-1   0    0    1   
+P 2050 5600
+F 0 "R7" H 1980 5554 50  0000 R CNN
+F 1 "100k" H 1980 5645 50  0000 R CNN
+F 2 "" V 1980 5600 50  0001 C CNN
+F 3 "~" H 2050 5600 50  0001 C CNN
+	1    2050 5600
+	0    -1   -1   0   
 $EndComp
-Wire Wire Line
-	2950 5400 2950 5300
 $Comp
 L Device:R R1
 U 1 1 5C6905DA
-P 750 5150
-F 0 "R1" H 680 5104 50  0000 R CNN
-F 1 "1k" H 680 5195 50  0000 R CNN
-F 2 "" V 680 5150 50  0001 C CNN
-F 3 "~" H 750 5150 50  0001 C CNN
-	1    750  5150
-	-1   0    0    1   
+P 2100 4600
+F 0 "R1" H 2030 4554 50  0000 R CNN
+F 1 "1k" H 2030 4645 50  0000 R CNN
+F 2 "" V 2030 4600 50  0001 C CNN
+F 3 "~" H 2100 4600 50  0001 C CNN
+	1    2100 4600
+	0    1    1    0   
 $EndComp
-Wire Wire Line
-	750  5300 750  5400
 $Comp
 L Device:R_POT RV1
 U 1 1 5C692C19
-P 750 4850
-F 0 "RV1" H 680 4896 50  0000 R CNN
-F 1 "1M" H 680 4805 50  0000 R CNN
-F 2 "" H 750 4850 50  0001 C CNN
-F 3 "~" H 750 4850 50  0001 C CNN
-	1    750  4850
-	1    0    0    -1  
+P 2600 4600
+F 0 "RV1" H 2530 4646 50  0000 R CNN
+F 1 "1M" H 2530 4555 50  0000 R CNN
+F 2 "" H 2600 4600 50  0001 C CNN
+F 3 "~" H 2600 4600 50  0001 C CNN
+	1    2600 4600
+	0    -1   -1   0   
 $EndComp
-Wire Wire Line
-	750  4700 750  4750
-Wire Wire Line
-	750  5000 900  5000
-Wire Wire Line
-	900  5000 900  4850
-Connection ~ 750  5000
-Wire Wire Line
-	750  4700 750  4550
-Connection ~ 750  4700
-Connection ~ 750  4550
-Wire Wire Line
-	2950 5000 2950 4700
-Connection ~ 2950 4550
-Text GLabel 3750 4950 2    50   Input ~ 0
+Text GLabel 2150 6200 2    50   Input ~ 0
 LFO
 $Comp
 L Device:R_POT RV4
 U 1 1 5C69A522
-P 3450 4950
-F 0 "RV4" H 3380 4996 50  0000 R CNN
-F 1 "100k" H 3380 4905 50  0000 R CNN
-F 2 "" H 3450 4950 50  0001 C CNN
-F 3 "~" H 3450 4950 50  0001 C CNN
-	1    3450 4950
+P 1850 6200
+F 0 "RV4" H 1780 6246 50  0000 R CNN
+F 1 "100k" H 1780 6155 50  0000 R CNN
+F 2 "" H 1850 6200 50  0001 C CNN
+F 3 "~" H 1850 6200 50  0001 C CNN
+	1    1850 6200
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:GND #PWR04
 U 1 1 5C69A76B
-P 3450 5200
-F 0 "#PWR04" H 3450 4950 50  0001 C CNN
-F 1 "GND" H 3455 5027 50  0000 C CNN
-F 2 "" H 3450 5200 50  0001 C CNN
-F 3 "" H 3450 5200 50  0001 C CNN
-	1    3450 5200
+P 1850 6450
+F 0 "#PWR04" H 1850 6200 50  0001 C CNN
+F 1 "GND" H 1855 6277 50  0000 C CNN
+F 2 "" H 1850 6450 50  0001 C CNN
+F 3 "" H 1850 6450 50  0001 C CNN
+	1    1850 6450
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	3450 5200 3450 5100
+	1850 6450 1850 6350
 Wire Wire Line
-	3450 4800 3450 4700
-Wire Wire Line
-	3450 4700 2950 4700
-Connection ~ 2950 4700
-Wire Wire Line
-	2950 4700 2950 4550
-Wire Wire Line
-	3600 4950 3750 4950
+	2000 6200 2150 6200
 Wire Wire Line
 	4050 1900 4850 1900
 $Comp
 L Device:C C1
 U 1 1 5C685CD7
-P 1850 4900
-F 0 "C1" V 1598 4900 50  0000 C CNN
-F 1 "1.33u" V 1689 4900 50  0000 C CNN
-F 2 "" H 1888 4750 50  0001 C CNN
-F 3 "~" H 1850 4900 50  0001 C CNN
-	1    1850 4900
+P 1450 5100
+F 0 "C1" V 1198 5100 50  0000 C CNN
+F 1 "1.33u" V 1289 5100 50  0000 C CNN
+F 2 "" H 1488 4950 50  0001 C CNN
+F 3 "~" H 1450 5100 50  0001 C CNN
+	1    1450 5100
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	2000 4900 2500 4900
+	1750 5600 1750 5100
 Wire Wire Line
-	2500 4900 2500 5400
-Connection ~ 2500 5400
+	1150 5600 1150 5100
 Wire Wire Line
-	2500 5400 2150 5400
+	1150 5100 1300 5100
 Wire Wire Line
-	1700 4900 1200 4900
+	1600 5100 1750 5100
 Wire Wire Line
-	1200 4900 1200 5400
-Connection ~ 1200 5400
+	1900 5600 1850 5600
+Connection ~ 1750 5600
 Wire Wire Line
-	1200 5400 1550 5400
+	1850 6050 1850 5600
+Connection ~ 1850 5600
+Wire Wire Line
+	1850 5600 1750 5600
+Wire Wire Line
+	2800 5600 3200 5600
+Wire Wire Line
+	2850 5100 2200 5100
+Wire Wire Line
+	2200 5100 2200 5600
+Connection ~ 2200 5600
+Wire Wire Line
+	3150 5100 3800 5100
+Wire Wire Line
+	3800 5100 3800 5600
+Wire Wire Line
+	1150 5100 1150 4600
+Wire Wire Line
+	1150 4600 1950 4600
+Connection ~ 1150 5100
+Wire Wire Line
+	2450 4600 2400 4600
+Wire Wire Line
+	3800 5100 3800 4600
+Wire Wire Line
+	3800 4600 2750 4600
+Connection ~ 3800 5100
+Wire Wire Line
+	2600 4450 2600 4350
+Wire Wire Line
+	2600 4350 2400 4350
+Wire Wire Line
+	2400 4350 2400 4600
+Connection ~ 2400 4600
+Wire Wire Line
+	2400 4600 2250 4600
+Text Notes 1150 4400 0    50   ~ 0
+Triangle LFO
+Text Notes 6100 2150 0    50   ~ 0
+Schmitt Trigger\n
+Text Notes 2300 5300 0    50   ~ 0
+Schmitt Trigger\n
 $EndSCHEMATC
