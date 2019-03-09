@@ -4,7 +4,18 @@ use<Mixer 2U Panel/panel.scad>
 use<Power Supply/panel.scad>
 
 HU=5;
-HP=17;
+HP=84;
+
+HP_SIZE = 5.08;
+HU_SIZE = 44.45;
+
+TOP_DEGREE=160;
+TOP_X=371;
+TOP_Z=134;
+BOTTOM_DEGREE=130;
+BOTTOM_X=161;
+BOTTOM_Z=55;
+
 
 module rail() {
     rotate([0,90,0]) {
@@ -12,9 +23,9 @@ module rail() {
             translate([13.375,20,0]) 
                 color("silver") import("lib/stange.stl", convexity = 10);
 
-            translate([0,0,426.4+10])
+            translate([0,0,HP*HP_SIZE+10])
             color("green") 
-                cube([20,20,1000-426.4-10], center=false);
+                cube([20,20,1000-HP*HP_SIZE-10], center=false);
         }
     }
 }
@@ -32,25 +43,19 @@ module side() {
 
 module rails() {
     translate([0,0,20]) rail();
-    translate([0,0,133.4]) rail();
+    translate([0,0,HU*HU_SIZE]) rail();
 }
 
 translate([0,-150,20] ) rail();
 translate([0,-90,20] ) rail();
 
-translate([0,100,0  ]) rotate([50,00,00]) rails();
-translate([0,-10,100  ]) rotate([30,00,00]) rails();
-translate([0,-80,230]) rotate([5,00,00])  rails();
+translate([0,100,0  ]) rotate([180-BOTTOM_DEGREE,00,00]) rails();
+translate([0,-78,155  ]) rotate([180-TOP_DEGREE,00,00]) rails();
+//translate([0,-80,230]) rotate([5,00,00])  rails();
 
-side();
-translate([426.4,0,0]) side();
+translate([0,-20,10]) side();
+translate([HP*HP_SIZE,-20,10]) side();
 
-TOP_DEGREE=160;
-TOP_X=375;
-TOP_Z=80;
-BOTTOM_DEGREE=130;
-BOTTOM_X=160;
-BOTTOM_z=55;
 
 //Top Row
 rotate([90,0,0])

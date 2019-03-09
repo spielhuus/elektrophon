@@ -34,8 +34,11 @@ Voltage Controlled Oscillator, a continuous voltage source, which will output a 
 
 Here are some links do documents on how to build synthesizers and electronic. the logic noise serie on hackaday are a very good start and does not require in depth electronic knowledge. read the other documents when you think you should know more about a specific topic. 
 
+* [Rod Elliott (ESP) - The Audio Pages](http://sound.whsites.net/articles.htm#feat)
 * [LOGIC NOISE: SWEET, SWEET OSCILLATOR SOUNDS by: Elliot Williams](https://hackaday.com/2015/02/04/logic-noise-sweet-sweet-oscillator-sounds/) hackaday article series for building the basic synthesizer parts with cmos chips.
+
 * [UNDERSTANDING DIGITAL BUFFER, GATE, AND LOGIC IC CIRCUITS]() NUTS & VOLTS article series that describes the concept and application of logic ic citcuits.
+
 
 # general modular information
 
