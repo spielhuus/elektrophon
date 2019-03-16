@@ -1,5 +1,4 @@
 EESchema Schematic File Version 4
-LIBS:Power Supply-cache
 EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
@@ -152,7 +151,7 @@ U 1 1 5C6068A3
 P 5300 1650
 F 0 "D3" H 5300 1866 50  0000 C CNN
 F 1 "1N4004" H 5300 1775 50  0000 C CNN
-F 2 "Diode_THT:D_DO-41_SOD81_P3.81mm_Vertical_AnodeUp" H 5300 1475 50  0001 C CNN
+F 2 "Diode_THT:D_DO-41_SOD81_P5.08mm_Vertical_AnodeUp" H 5300 1475 50  0001 C CNN
 F 3 "http://www.vishay.com/docs/88503/1n4001.pdf" H 5300 1650 50  0001 C CNN
 	1    5300 1650
 	1    0    0    -1  
@@ -246,7 +245,7 @@ U 1 1 5C60E44D
 P 6100 4600
 F 0 "C10" H 5985 4554 50  0000 R CNN
 F 1 "1uF" H 5985 4645 50  0000 R CNN
-F 2 "Capacitor_THT:CP_Radial_Tantal_D5.0mm_P5.00mm" H 6100 4600 50  0001 C CNN
+F 2 "Capacitor_THT:CP_Radial_D5.0mm_P2.50mm" H 6100 4600 50  0001 C CNN
 F 3 "~" H 6100 4600 50  0001 C CNN
 	1    6100 4600
 	-1   0    0    1   
@@ -257,7 +256,7 @@ U 1 1 5C60E4E9
 P 6600 4600
 F 0 "D6" V 6646 4521 50  0000 R CNN
 F 1 "1N4004" V 6555 4521 50  0000 R CNN
-F 2 "Diode_THT:D_DO-41_SOD81_P5.08mm_Vertical_AnodeUp" H 6600 4425 50  0001 C CNN
+F 2 "Diode_THT:D_DO-41_SOD81_P2.54mm_Vertical_AnodeUp" H 6600 4425 50  0001 C CNN
 F 3 "http://www.vishay.com/docs/88503/1n4001.pdf" H 6600 4600 50  0001 C CNN
 	1    6600 4600
 	0    -1   -1   0   
@@ -490,13 +489,11 @@ U 1 1 5C8D6557
 P 3600 7150
 F 0 "J3" H 3706 7428 50  0000 C CNN
 F 1 "Conn_01x04_Male" H 3706 7337 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical_SMD_Pin1Right" H 3600 7150 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 3600 7150 50  0001 C CNN
 F 3 "~" H 3600 7150 50  0001 C CNN
 	1    3600 7150
 	1    0    0    -1  
 $EndComp
-Text GLabel 3800 7250 2    50   Input ~ 0
-GND
 Text GLabel 3800 7050 2    50   Input ~ 0
 +15V
 Text GLabel 3800 7150 2    50   Input ~ 0
@@ -646,13 +643,11 @@ U 1 1 5C91A126
 P 3650 6450
 F 0 "J5" H 3756 6728 50  0000 C CNN
 F 1 "Conn_01x04_Male" H 3756 6637 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical_SMD_Pin1Right" H 3650 6450 50  0001 C CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x04_P2.54mm_Vertical" H 3650 6450 50  0001 C CNN
 F 3 "~" H 3650 6450 50  0001 C CNN
 	1    3650 6450
 	1    0    0    -1  
 $EndComp
-Text GLabel 3850 6550 2    50   Input ~ 0
-GND
 Text GLabel 3850 6350 2    50   Input ~ 0
 +15V
 Text GLabel 3850 6450 2    50   Input ~ 0
@@ -832,4 +827,30 @@ Wire Wire Line
 	2250 6350 2250 6100
 Wire Wire Line
 	2250 6100 1600 6100
+$Comp
+L power:GND #PWR0103
+U 1 1 5C8D04EA
+P 4100 7250
+F 0 "#PWR0103" H 4100 7000 50  0001 C CNN
+F 1 "GND" H 4105 7077 50  0000 C CNN
+F 2 "" H 4100 7250 50  0001 C CNN
+F 3 "" H 4100 7250 50  0001 C CNN
+	1    4100 7250
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	4100 7250 3800 7250
+$Comp
+L power:GND #PWR0104
+U 1 1 5C8D399C
+P 4100 6550
+F 0 "#PWR0104" H 4100 6300 50  0001 C CNN
+F 1 "GND" H 4105 6377 50  0000 C CNN
+F 2 "" H 4100 6550 50  0001 C CNN
+F 3 "" H 4100 6550 50  0001 C CNN
+	1    4100 6550
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	4100 6550 3850 6550
 $EndSCHEMATC
