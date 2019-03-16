@@ -1,6 +1,6 @@
 # atmega midi controller
 
-
+module to convert midi signals to control volates. the modules is based on the atmega microprocessor and mcp dac. 
 
 ## midi drivers
 

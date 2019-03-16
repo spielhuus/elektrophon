@@ -1,4 +1,8 @@
-# Wall Wart Power Supply (+/-9V to +/-15V)
+# Wall Wart Power Supply
+
+The power supply is one of the first thing to choose. It is important to have a stable power when building modules. I have choosen +/-15V and 5V. 
+The 15V is used to power the modules. There are chips that require 15V. The 5V is for the microprocessors and the LED's. I plan to place a lot of
+LED's on my modules. 
 
 # getting started pages
 
@@ -27,8 +31,8 @@
 |U2| LM7912_TO220| Package_TO_SOT_THT:TO-220-3_Vertical| http://www.fairchildsemi.com/ds/LM/LM7905.pdf|
 
 
-
 # links
 
 * [Wall Wart Power Supply (+/-9V to +/-15V)](http://musicfromouterspace.com/analogsynth_new/WALLWARTSUPPLY/WALLWARTSUPPLY.php)
 * [The A-100 system bus](http://www.doepfer.de/a100_man/a100t_e.htm)
+* [MFOS Power supply stripboard  on electro-music.com](http://electro-music.com/forum/topic-35373.html)

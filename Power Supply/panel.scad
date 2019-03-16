@@ -23,7 +23,7 @@ ROW_8=(ROW_5+3*17);
 ARMATURES = 1;
 
 HU=5;
-HP=17;
+HP=8;
 
 CV_SILK_Y=32;
 CV_POT_Y=40;
@@ -75,6 +75,18 @@ module panel_power() {
     }
 
     if( ARMATURES ) {
+
+
+        translate( [HP*HP_SIZE/2, 20+6+2.5, 0]) silkscreen_text ( text="POWER" );
+        translate( [HP*HP_SIZE/3-2, HU*HU_SIZE-90+2, 0]) silkscreen_text( text="+5V" );
+        translate( [HP*HP_SIZE/3-2, HU*HU_SIZE-70+2, 0]) silkscreen_text( text="+15V" );
+        translate( [HP*HP_SIZE/3-2, HU*HU_SIZE-50+2, 0]) silkscreen_text( text="GND" );
+        translate( [HP*HP_SIZE/3-2, HU*HU_SIZE-30+2, 0]) silkscreen_text( text="-15V" );
+
+        translate([HP*HP_SIZE/3*2+2, HU*HU_SIZE-90, 0]) banana_plug();
+        translate([HP*HP_SIZE/3*2+2, HU*HU_SIZE-70, 0]) banana_plug();
+        translate([HP*HP_SIZE/3*2+2, HU*HU_SIZE-50, 0]) banana_plug();
+        translate([HP*HP_SIZE/3*2+2, HU*HU_SIZE-30, 0]) banana_plug();
 /*        
         rotate([0,90,0]) translate([-10,10,HP*HP_SIZE/2]) cube(size = [20,20,HP*HP_SIZE], center = true);
         rotate([0,90,0]) translate([-10,HU*HU_SIZE-10,HP*HP_SIZE/2]) cube(size = [20,20,HP*HP_SIZE], center = true);
