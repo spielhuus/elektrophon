@@ -1,4 +1,4 @@
-(kicad_pcb (version 20171130) (host pcbnew 5.0.1)
+(kicad_pcb (version 20171130) (host pcbnew "(5.0.1)-4")
 
   (general
     (thickness 1.6)
@@ -3621,7 +3621,7 @@
   (segment (start 48.26 134.62) (end 177.8 134.62) (width 2) (layer B.Cu) (net 5))
   (segment (start 144.78 134.62) (end 48.26 134.62) (width 2) (layer B.Cu) (net 5))
   (segment (start 201.93 157.48) (end 48.26 157.48) (width 2) (layer B.Cu) (net 5))
-  (segment (start 205.74 132.08) (end 180.34 132.08) (width 2) (layer B.Cu) (net 5))
+  (segment (start 205.74 132.08) (end 72.39 132.08) (width 2) (layer B.Cu) (net 5))
   (segment (start 205.74 129.54) (end 180.34 129.54) (width 2) (layer B.Cu) (net 6))
   (segment (start 180.34 149.86) (end 180.34 129.54) (width 2) (layer F.Cu) (net 6))
   (segment (start 180.34 129.54) (end 180.34 129.54) (width 2) (layer B.Cu) (net 6) (tstamp 5C8E4F72))
@@ -3651,6 +3651,6 @@
   (segment (start 58.42 162.56) (end 48.26 162.56) (width 2) (layer B.Cu) (net 10) (tstamp 5C9BF8BB))
   (via (at 58.42 162.56) (size 2) (drill 0.4) (layers F.Cu B.Cu) (net 10))
   (segment (start 58.42 132.08) (end 58.42 162.56) (width 2) (layer F.Cu) (net 10))
-  (segment (start 66.548 132.08) (end 177.8 132.08) (width 2) (layer B.Cu) (net 10))
+  (segment (start 66.548 132.08) (end 69.85 132.08) (width 2) (layer B.Cu) (net 10))
 
 )
