@@ -2,7 +2,7 @@
  * draw silkscreen text
  */
 
-FONT="Liberation Sans:style=Bold";
+FONT="Bitstream Vera Sans Mono:style=Bold";
 
 /**
  * draw the silkscreen text

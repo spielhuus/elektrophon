@@ -20,5 +20,5 @@ module banana_plug() {
                 import( "../lib/Banana_Plug.stl", convexity = 10 );
 }
 
-translate([-10,50,0]) banana_plug();
-translate([-10,50,0]) banana_plug_hole();
+banana_plug();
+banana_plug_hole();

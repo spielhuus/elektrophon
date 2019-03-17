@@ -1,54 +1,46 @@
 /** 
- * LED Holder for backlickt.
- *
- * command: 
- * 
- * 
- * 
+ * LED Holder for backlight.
  */
 
-module _led( radius=10,length=20,led_holder=2, thickness=2, led=1 ) {
-    cylinder(h = thickness/4, r = led_holder, center = false, $fn=10);
-    cylinder(h = thickness+2, r = led, center = false, $fn=10);
-    cube(size = [10,200], center = true);
-    translate([-radius/2-led_holder/2,-1,0])
-        cube(size = [radius/2,1,thickness/4], center = false);
-    translate([-radius/2-led_holder/2,0,0])
-        cube(size = [radius/2,1,thickness/4], center = false);
+module _led( radius=10,length=20,led=2, thickness=2, led=1 ) {
+    cylinder(h = thickness/2, r = led, center = false, $fn=10);
+    cylinder(h = thickness*4, r = led, center = false, $fn=10);
 }
 
-module reflector( radius=10,length=20,led_holder=2, thickness=2, led=1 ) {
-
-    led_holder_height=radius + 1;
-
-    rotate([0,90,0]) {
-        difference() {
-            union() {
-                cylinder(h = length, r = radius, center = true);
+module _reflector(l=20,thickness=2,h=15,r1=10,r2=2) {
+    translate([0,0,-thickness]) hull() {
+        translate([l/2,0,-thickness]) hull() {
+            minkowski($fn=50) {
+                cylinder(h=h, r1=r1, r2=r2, center=true);
+                translate([0,0,r1]) sphere(r=r1/2);
             }
-
-            cylinder(h = length-thickness, r = radius-thickness/2, center = true);
-            translate([radius/2,0,0])
-            cube(size = [radius,radius*2,length], center = true);
-            //            rotate([0,270,0]) {
-            //                translate([0, 0, (radius-3)])
-            //                    cylinder(h = led_holder_height, r = led, center = false);
-            //                }
-
-
-            //holes for the LED
-            rotate([0,0,0]) {
-                translate([-(radius-led_holder)+0.5, 0, -length/2]) {
-                    _led( radius, length, led_holder, thickness, led );
-                }
-            }
-            rotate([0,0,0]) {
-                translate([-(radius-led_holder)+0.5, 0, (length/2)]) {
-                    _led( radius, length, led_holder, thickness, led );
-                }
+        }
+        translate([-l/2,0,-thickness]) hull() {
+            minkowski($fn=50) {
+                cylinder(h=h, r1=r1, r2=r2, center=true);
+                translate([0,0,r1]) sphere(r=r1/2);
             }
         }
     }
 }
 
-reflector(length=10, radius=5, led=1.5, led_holder=2, thickness=2);
+module reflector( h=15,r1=10,r2=2,l=50,thickness=2,led=1.5,span=10) {
+
+    difference() {
+        _reflector(l=l,h=h,r1=r1,r2=r2,h=h,thickness=0);
+        _reflector(l=l,h=h,r1=r1,r2=r2,h=h,thickness=thickness);
+
+        if(l>=(2*span)) {
+            _diff=floor((l)/span);
+            _start = (l/2)+((l)-((_diff)*span));
+            echo("diff:", _diff, ", start:", _start );
+            translate([-_start,0,h])
+                for(i=[0 : _diff ] ) 
+                    translate([i*span,0,0]) _led( r1, l, led, thickness, led );
+        } else {
+            translate([0,0,h]) _led( r1, l, led, thickness, led );
+        }
+    }
+}
+
+reflector(h=15,l=10,r1=10,r2=2,thickness=2,led=1.5,span=20);

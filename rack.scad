@@ -2,6 +2,9 @@ use<VCO 4069/panel.scad>
 use<VCO X-4046/panel.scad>
 use<Mixer 2U Panel/panel.scad>
 use<Power Supply/panel.scad>
+use<Power Supply/case.scad>
+
+ARMATURES=true;
 
 HU=5;
 HP=84;
@@ -47,7 +50,8 @@ module rails() {
 }
 
 translate([0,-150,20] ) rail();
-translate([0,-90,20] ) rail();
+translate([0,-70,20] ) rail();
+translate([80,-70-50+20,50] ) rotate([180,0,90]) case_power();
 
 translate([0,100,0  ]) rotate([180-BOTTOM_DEGREE,00,00]) rails();
 translate([0,-78,155  ]) rotate([180-TOP_DEGREE,00,00]) rails();
@@ -77,7 +81,7 @@ rotate([90,0,0])
 rotate([90,0,0])
     translate([20+61+(34*HU),BOTTOM_X,BOTTOM_Z]) 
 //        color("white")
-            rotate([BOTTOM_DEGREE,180,0]) panel_power();  
+            rotate([BOTTOM_DEGREE,180,0]) panel_power(armatures=ARMATURES);  
 
 rotate([90,0,0])
     translate([20+61+(42*HU),BOTTOM_X,BOTTOM_Z]) 

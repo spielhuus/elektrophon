@@ -207,7 +207,7 @@ Connection ~ 6100 3050
 Wire Wire Line
 	6100 3050 6600 3050
 Wire Wire Line
-	5000 2200 4800 2200
+	5000 2200 4950 2200
 Connection ~ 4450 2200
 Connection ~ 6100 2200
 Wire Wire Line
@@ -359,7 +359,7 @@ Wire Wire Line
 	4850 3650 4850 4100
 Connection ~ 4850 4100
 Wire Wire Line
-	4850 4100 5000 4100
+	4850 4100 4950 4100
 Wire Wire Line
 	5450 3650 5800 3650
 Wire Wire Line
@@ -391,11 +391,6 @@ Wire Wire Line
 	9750 4000 9850 4000
 Wire Wire Line
 	9000 4300 9550 4300
-NoConn ~ 9550 4900
-NoConn ~ 9650 4900
-NoConn ~ 9750 4900
-NoConn ~ 9850 4900
-NoConn ~ 9950 4900
 $Comp
 L Connector:Barrel_Jack J2
 U 1 1 5C6A7FC7
@@ -591,28 +586,6 @@ Text Notes 4100 7500 0    50   ~ 0
 Text Notes 4650 5950 0    50   ~ 0
 Panel Wiring
 $Comp
-L power:+15V #PWR01
-U 1 1 5C8C088B
-P 7150 2200
-F 0 "#PWR01" H 7150 2050 50  0001 C CNN
-F 1 "+15V" V 7165 2328 50  0000 L CNN
-F 2 "" H 7150 2200 50  0001 C CNN
-F 3 "" H 7150 2200 50  0001 C CNN
-	1    7150 2200
-	0    1    1    0   
-$EndComp
-$Comp
-L power:-15V #PWR02
-U 1 1 5C8C095A
-P 7150 4100
-F 0 "#PWR02" H 7150 4200 50  0001 C CNN
-F 1 "-15V" V 7165 4228 50  0000 L CNN
-F 2 "" H 7150 4100 50  0001 C CNN
-F 3 "" H 7150 4100 50  0001 C CNN
-	1    7150 4100
-	0    1    1    0   
-$EndComp
-$Comp
 L Regulator_Linear:L7815 U1
 U 1 1 5C8C0BDB
 P 5300 2200
@@ -682,11 +655,6 @@ Wire Wire Line
 	9700 2550 9800 2550
 Wire Wire Line
 	8950 2850 9500 2850
-NoConn ~ 9500 3450
-NoConn ~ 9600 3450
-NoConn ~ 9700 3450
-NoConn ~ 9800 3450
-NoConn ~ 9900 3450
 Wire Wire Line
 	8950 2550 9700 2550
 Wire Wire Line
@@ -746,17 +714,6 @@ F 3 "" H 1400 2200 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L power:VSSA #PWR0110
-U 1 1 5C8F8A1B
-P 1450 5050
-F 0 "#PWR0110" H 1450 4900 50  0001 C CNN
-F 1 "VSSA" V 1468 5177 50  0000 L CNN
-F 2 "" H 1450 5050 50  0001 C CNN
-F 3 "" H 1450 5050 50  0001 C CNN
-	1    1450 5050
-	0    -1   -1   0   
-$EndComp
-$Comp
 L power:PWR_FLAG #FLG0102
 U 1 1 5C8F8B29
 P 1400 2200
@@ -777,9 +734,8 @@ F 1 "PWR_FLAG" H 1450 5224 50  0000 C CNN
 F 2 "" H 1450 5050 50  0001 C CNN
 F 3 "~" H 1450 5050 50  0001 C CNN
 	1    1450 5050
-	1    0    0    -1  
+	-1   0    0    1   
 $EndComp
-Connection ~ 1450 5050
 $Comp
 L power:+5V #PWR0111
 U 1 1 5C8FCEE1
@@ -848,28 +804,6 @@ F 3 "" H 9050 5650 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L power:+15V #PWR0114
-U 1 1 5C904A94
-P 8950 2400
-F 0 "#PWR0114" H 8950 2250 50  0001 C CNN
-F 1 "+15V" V 8965 2528 50  0000 L CNN
-F 2 "" H 8950 2400 50  0001 C CNN
-F 3 "" H 8950 2400 50  0001 C CNN
-	1    8950 2400
-	0    -1   -1   0   
-$EndComp
-$Comp
-L power:+15V #PWR0115
-U 1 1 5C904B13
-P 9000 3850
-F 0 "#PWR0115" H 9000 3700 50  0001 C CNN
-F 1 "+15V" V 9015 3978 50  0000 L CNN
-F 2 "" H 9000 3850 50  0001 C CNN
-F 3 "" H 9000 3850 50  0001 C CNN
-	1    9000 3850
-	0    -1   -1   0   
-$EndComp
-$Comp
 L power:+15V #PWR0116
 U 1 1 5C904B58
 P 10250 5550
@@ -879,28 +813,6 @@ F 2 "" H 10250 5550 50  0001 C CNN
 F 3 "" H 10250 5550 50  0001 C CNN
 	1    10250 5550
 	0    1    1    0   
-$EndComp
-$Comp
-L power:-15V #PWR0117
-U 1 1 5C904BD7
-P 8950 2850
-F 0 "#PWR0117" H 8950 2950 50  0001 C CNN
-F 1 "-15V" V 8965 2978 50  0000 L CNN
-F 2 "" H 8950 2850 50  0001 C CNN
-F 3 "" H 8950 2850 50  0001 C CNN
-	1    8950 2850
-	0    -1   -1   0   
-$EndComp
-$Comp
-L power:-15V #PWR0118
-U 1 1 5C904C56
-P 9000 4300
-F 0 "#PWR0118" H 9000 4400 50  0001 C CNN
-F 1 "-15V" V 9015 4428 50  0000 L CNN
-F 2 "" H 9000 4300 50  0001 C CNN
-F 3 "" H 9000 4300 50  0001 C CNN
-	1    9000 4300
-	0    -1   -1   0   
 $EndComp
 $Comp
 L power:-15V #PWR0119
@@ -968,4 +880,86 @@ F 3 "" H 4300 6500 50  0001 C CNN
 	1    4300 6500
 	0    1    1    0   
 $EndComp
+$Comp
+L power:VSSA #PWR0110
+U 1 1 5C8DE7A4
+P 1450 5050
+F 0 "#PWR0110" H 1450 4900 50  0001 C CNN
+F 1 "VSSA" V 1467 5178 50  0000 L CNN
+F 2 "" H 1450 5050 50  0001 C CNN
+F 3 "" H 1450 5050 50  0001 C CNN
+	1    1450 5050
+	0    -1   -1   0   
+$EndComp
+Text Label 7150 2200 0    50   ~ 0
++15V
+Text Label 7150 4100 0    50   ~ 0
+-15V
+Text Label 8950 2400 2    50   ~ 0
++15V
+Text Label 9000 3850 2    50   ~ 0
++15V
+Text Label 8950 2850 2    50   ~ 0
+-15V
+Text Label 9000 4300 2    50   ~ 0
+-15V
+$Comp
+L power:PWR_FLAG #FLG0104
+U 1 1 5C8E3AF5
+P 4950 4100
+F 0 "#FLG0104" H 4950 4175 50  0001 C CNN
+F 1 "PWR_FLAG" H 4950 4274 50  0000 C CNN
+F 2 "" H 4950 4100 50  0001 C CNN
+F 3 "~" H 4950 4100 50  0001 C CNN
+	1    4950 4100
+	-1   0    0    1   
+$EndComp
+Connection ~ 4950 4100
+Wire Wire Line
+	4950 4100 5000 4100
+$Comp
+L power:PWR_FLAG #FLG0105
+U 1 1 5C8E3C2B
+P 4950 2200
+F 0 "#FLG0105" H 4950 2275 50  0001 C CNN
+F 1 "PWR_FLAG" H 4950 2374 50  0000 C CNN
+F 2 "" H 4950 2200 50  0001 C CNN
+F 3 "~" H 4950 2200 50  0001 C CNN
+	1    4950 2200
+	-1   0    0    1   
+$EndComp
+Connection ~ 4950 2200
+Wire Wire Line
+	4950 2200 4800 2200
+Connection ~ 1450 5050
+Wire Wire Line
+	9500 2950 9500 3450
+Connection ~ 9500 2950
+Wire Wire Line
+	9600 2950 9600 3450
+Connection ~ 9600 2950
+Wire Wire Line
+	9700 2950 9700 3450
+Connection ~ 9700 2950
+Wire Wire Line
+	9800 2950 9800 3450
+Connection ~ 9800 2950
+Wire Wire Line
+	9900 2950 9900 3450
+Connection ~ 9900 2950
+Wire Wire Line
+	9550 4400 9550 4900
+Connection ~ 9550 4400
+Wire Wire Line
+	9650 4400 9650 4900
+Connection ~ 9650 4400
+Wire Wire Line
+	9750 4400 9750 4900
+Connection ~ 9750 4400
+Wire Wire Line
+	9850 4400 9850 4900
+Connection ~ 9850 4400
+Wire Wire Line
+	9950 4400 9950 4900
+Connection ~ 9950 4400
 $EndSCHEMATC
