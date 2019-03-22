@@ -21,10 +21,10 @@ Output:
 |1|W1| 15VAC| Wall Wart Power Supply 15VAC/1A|
 |1|W1| 12VDC| Wall Wart Power Supply 12VDC/1.5A|
 |6|C1-C6| 3300uF| Electrolytic Capacitors (D10.0mm_P2.50mm_P5.00mm|
-|C7-C10| 1uF| Electrolytic Capacitors|
-|C11| 0.33uF| Ceramic Capacitor|
-|C12| 0.1uF| Ceramic Capacitor|
-|D1-D6| 1N4004| Rectifiers|
+|4|C7-C10| 1uF| Electrolytic Capacitors|
+|1|C11| 0.33uF| Ceramic Capacitor|
+|1|C12| 0.1uF| Ceramic Capacitor|
+|6|D1-D6| 1N4004| Rectifiers|
 |1|U1| [LM7815](https://www.st.com/resource/en/datasheet/l78.pdf)| Positive voltage regulator +15V (TO220) |
 |1|U2| [LM7815](https://www.st.com/resource/en/datasheet/cd00000450.pdf)| Negative voltage regulator -12V (TO220) |
 |1|U3| [L7805](https://www.st.com/resource/en/datasheet/l78.pdf)| Positive voltage regulator +5V (TO220)|
