@@ -1,38 +1,43 @@
 # Wall Wart Power Supply
 
-The power supply is one of the first thing to choose. It is important to have a stable power when building modules. I have choosen +/-15V and 5V. 
-The 15V is used to power the modules. There are chips that require 15V. The 5V is for the microprocessors and the LED's. I plan to place a lot of
-LED's on my modules. 
+<img src="https://raw.github.io/elektrophon/Power%20Supply/schema.jpg" width="20%"></img>
+<img src="https://raw.github.io/elektrophon/Power%20Supply/pcb.png" width="20%"></img>
 
-# getting started pages
+The power supply is one of the first thing to build. It is important to have a stable power and voltage when building modules. To fidlle with high 
+voltage right at the beginning is not a good thing. The encloure and wiring would also have to be built with high volage in mind. The base of this
+power supply is the MFOS[1] design, but added a 5V output. One wall wart is needed for each power. 
+
+Input:
+* 15VAC 
+* 12VDC
+
+Output:
+* +-12V, +5V, Common Groumd 
 
 # BOM
 
-|Ref| Value| Footprint| Datasheet| Manufacturer| Vendor|
-|---|------|----------|----------|-------------|-------|
-|C1| 3300uF| Capacitor_THT:CP_Radial_D10.0mm_P2.50mm_P5.00mm|
-|C2| 3300uF| Capacitor_THT:CP_Radial_D18.0mm_P7.50mm|
-|C3| 3300uF| Capacitor_THT:CP_Radial_D18.0mm_P7.50mm|
-|C4| 3300uF| Capacitor_THT:CP_Radial_D18.0mm_P7.50mm|
-|C5| 3300uF| Capacitor_THT:CP_Radial_D18.0mm_P7.50mm|
-|C6| 3300uF| Capacitor_THT:CP_Radial_D18.0mm_P7.50mm|
-|C7| 3300uF| Capacitor_THT:CP_Radial_D18.0mm_P7.50mm|
-|C8| 3300uF| Capacitor_THT:CP_Radial_D18.0mm_P7.50mm|
-|C9| 1uF| Capacitor_THT:CP_Radial_D5.0mm_P2.50mm|
-|C10| 1uF| Capacitor_THT:CP_Radial_D5.0mm_P2.50mm|
-|D1| 1N4004| Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal| http://www.vishay.com/docs/88503/1n4001.pdf|
-|D2| 1N4004| Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal| http://www.vishay.com/docs/88503/1n4001.pdf|
-|D3| 1N4004| Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal| http://www.vishay.com/docs/88503/1n4001.pdf|
-|D4| 1N4004| Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal| http://www.vishay.com/docs/88503/1n4001.pdf|
-|D5| 1N4004| Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal| http://www.vishay.com/docs/88503/1n4001.pdf|
-|D6| 1N4004| Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal| http://www.vishay.com/docs/88503/1n4001.pdf|
-|J1| Conn_02x05_Odd_Even| Connector_IDC:IDC-Header_2x03_P2.54mm_Vertical|
-|U1| LM7812_TO220| Package_TO_SOT_THT:TO-220-3_Vertical| http://www.fairchildsemi.com/ds/LM/LM7805.pdf|
-|U2| LM7912_TO220| Package_TO_SOT_THT:TO-220-3_Vertical| http://www.fairchildsemi.com/ds/LM/LM7905.pdf|
-
+|#|Ref| Value| Description|
+|---|------|----------|----------|
+|1|W1| 15VAC| Wall Wart Power Supply 15VAC/1A|
+|1|W1| 12VDC| Wall Wart Power Supply 12VDC/1.5A|
+|6|C1-C6| 3300uF| Electrolytic Capacitors (D10.0mm_P2.50mm_P5.00mm|
+|C7-C10| 1uF| Electrolytic Capacitors|
+|C11| 0.33uF| Ceramic Capacitor|
+|C12| 0.1uF| Ceramic Capacitor|
+|D1-D6| 1N4004| Rectifiers|
+|1|U1| [LM7815](https://www.st.com/resource/en/datasheet/l78.pdf)| Positive voltage regulator +15V (TO220) |
+|1|U2| [LM7815](https://www.st.com/resource/en/datasheet/cd00000450.pdf)| Negative voltage regulator -12V (TO220) |
+|1|U3| [L7805](https://www.st.com/resource/en/datasheet/l78.pdf) Positive voltage regulator +5V (TO220)|
+|5| 100| Resistor |
+|4| | [LM7812]()| Heat Sinks for the Regulators (TO220) |
+|1|U1| 200x160mm| Stripboard |
+| | | Wire, Sockets, Plugs, LEDs and Resistors |
 
 # links
 
 * [Wall Wart Power Supply (+/-9V to +/-15V)](http://musicfromouterspace.com/analogsynth_new/WALLWARTSUPPLY/WALLWARTSUPPLY.php)
 * [The A-100 system bus](http://www.doepfer.de/a100_man/a100t_e.htm)
 * [MFOS Power supply stripboard  on electro-music.com](http://electro-music.com/forum/topic-35373.html)
+
+---
+[![CC BY-SA](https://licensebuttons.net/l/by-sa/3.0/88x31.png)](https://creativecommons.org/licenses/by-sa/4.0/)
