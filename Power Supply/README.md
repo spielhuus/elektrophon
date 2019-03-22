@@ -1,7 +1,7 @@
 # Wall Wart Power Supply
 
-<img src="https://raw.github.io/elektrophon/Power%20Supply/schema.jpg" width="20%"></img>
-<img src="https://raw.github.io/elektrophon/Power%20Supply/pcb.png" width="20%"></img>
+<img src="https://raw.githubusercontent.com/spielhuus/elektrophon/master/Power%20Supply/schema.jpg" width="20%"></img>
+<img src="https://raw.githubusercontent.com/spielhuus/elektrophon/master/Power%20Supply/pcb.png" width="20%"></img>
 
 The power supply is one of the first thing to build. It is important to have a stable power and voltage when building modules. To fidlle with high 
 voltage right at the beginning is not a good thing. The encloure and wiring would also have to be built with high volage in mind. The base of this
@@ -16,7 +16,7 @@ Output:
 
 # BOM
 
-|#|Ref| Value| Description|
+|Qty.|Ref| Value| Description|
 |---|------|----------|----------|
 |1|W1| 15VAC| Wall Wart Power Supply 15VAC/1A|
 |1|W1| 12VDC| Wall Wart Power Supply 12VDC/1.5A|
@@ -27,10 +27,10 @@ Output:
 |D1-D6| 1N4004| Rectifiers|
 |1|U1| [LM7815](https://www.st.com/resource/en/datasheet/l78.pdf)| Positive voltage regulator +15V (TO220) |
 |1|U2| [LM7815](https://www.st.com/resource/en/datasheet/cd00000450.pdf)| Negative voltage regulator -12V (TO220) |
-|1|U3| [L7805](https://www.st.com/resource/en/datasheet/l78.pdf) Positive voltage regulator +5V (TO220)|
+|1|U3| [L7805](https://www.st.com/resource/en/datasheet/l78.pdf)| Positive voltage regulator +5V (TO220)|
 |5| 100| Resistor |
-|4| | [LM7812]()| Heat Sinks for the Regulators (TO220) |
-|1|U1| 200x160mm| Stripboard |
+|4| | | Heat Sinks for the Regulators (TO220) |
+|1| | 200x160mm| Stripboard |
 | | | Wire, Sockets, Plugs, LEDs and Resistors |
 
 # links
