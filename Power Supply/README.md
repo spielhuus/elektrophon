@@ -28,7 +28,7 @@ Output:
 |1|U1| [LM7815](https://www.st.com/resource/en/datasheet/l78.pdf)| Positive voltage regulator +15V (TO220) |
 |1|U2| [LM7815](https://www.st.com/resource/en/datasheet/cd00000450.pdf)| Negative voltage regulator -12V (TO220) |
 |1|U3| [L7805](https://www.st.com/resource/en/datasheet/l78.pdf)| Positive voltage regulator +5V (TO220)|
-|5| | 100| Resistors |
+|5|R1-R5| 100| Resistors |
 |5|D7-11| red| LED's 3mm |
 |3| U1-U3| | Heat Sinks for the Regulators (TO220) |
 |1| | 200x160mm| Stripboard |
