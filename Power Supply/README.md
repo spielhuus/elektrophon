@@ -31,7 +31,7 @@ Output:
 |5| 100| Resistor |
 |4| | | Heat Sinks for the Regulators (TO220) |
 |1| | 200x160mm| Stripboard |
-| | | Wire, Sockets, Plugs, LEDs and Resistors |
+| | <td colspan=2> Wire, Sockets, Plugs, LEDs and Resistors |
 
 # links
 
