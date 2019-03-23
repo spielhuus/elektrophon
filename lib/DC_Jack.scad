@@ -5,9 +5,8 @@
 /**
  * draw the hole 
  */
-module DC_jack_hole( radius=6,height=10 ) {
-	translate([0,0,0])
-    	cylinder(r=radius, h=height, $fn=10);
+module DC_jack_hole( radius=6,height=20 ) {
+   	cylinder(r=radius, h=height, $fn=10);
 }
 
 /** 

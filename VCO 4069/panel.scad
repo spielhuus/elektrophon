@@ -85,6 +85,9 @@ module panel_4069() {
         translate( [HP*HP_SIZE/4, CV_SILK_Y, 0]) silkscreen_text( text="CV" );
         translate( [HP*HP_SIZE/4, LFO_SILK_Y, 0]) silkscreen_text( text="LFO" );
         translate( [HP*HP_SIZE/4, 150, 0]) silkscreen_text( text="PU" );
+
+        //translate() 
+        rotate([0,270,0]) cube([75,100,2]);
     }
 }
 

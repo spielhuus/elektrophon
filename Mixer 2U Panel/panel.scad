@@ -128,6 +128,10 @@ module panel_mixer() {
         color("grey") translate([COL_4,ROW_5,10]) rotate([0,180,0]) potentiometer();
         color("grey") translate([COL_4,ROW_6,10]) rotate([0,180,0]) potentiometer();
         color("grey") translate([COL_4,ROW_7,10]) rotate([0,180,0]) potentiometer();
+
+
+        //rotate([0,90,0]) 
+        translate([HP*HP_SIZE/2,HU*HU_SIZE/2,30]) cube([75,100,2], center=true);
     }
 }
 

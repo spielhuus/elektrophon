@@ -3,16 +3,17 @@
 <img src="https://raw.githubusercontent.com/spielhuus/elektrophon/master/Power%20Supply/schema.jpg" width="20%"></img>
 <img src="https://raw.githubusercontent.com/spielhuus/elektrophon/master/Power%20Supply/pcb.png" width="20%"></img>
 
-The power supply is one of the first thing to build. It is important to have a stable power and voltage when building modules. To fidlle with high 
-voltage right at the beginning is not a good thing. The encloure and wiring would also have to be built with high volage in mind. The base of this
-power supply is the MFOS[1] design, but added a 5V output. One wall wart is needed for each power. 
+The power supply is one of the first thing to build. It is important to have a stable power and voltage when building modules. 5V and +-12V
+are creatued from two wall wart power supplies as power sources. The circuit for the split AC voltage is the MFOS[1] wall
+wart supply. For the 5V a simple voltage regulator circuit. The 3 voltages and ground connected with IDC connectors and are 
+wired with banana plugs on the panel.
 
 Input:
-* 15VAC 
+* 15VAC
 * 12VDC
 
 Output:
-* +-12V, +5V, Common Groumd 
+* +-12V/1A, +5V/1.5A, Common Ground 
 
 # BOM
 
