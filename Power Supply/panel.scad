@@ -1,6 +1,6 @@
 /** Power Supply **/
 
-ARMATURES=false;
+ARMATURES=true;
 
 HU=5;
 HP=8;
