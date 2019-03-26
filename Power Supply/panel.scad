@@ -2,59 +2,61 @@
 
 ARMATURES=true;
 
-HU=5;
+HU=3;
 HP=8;
 
 THICKNESS=5;
 REFLECTOR_THICKNESS=2;
-SCREEN=0.3;
+SCREEN=0.1;
 FONT_SIZE=3.5;
 
 HP_SIZE = 5.07;
 HU_SIZE = 44.45;
 
+TOP_REFLECTOR_Y=30;
+TOP_REFLECTOR_X=10;
+
+RASTER_Y_TOP=28;
+RASTER_X=20;
+RASTER_Y=20;
+
 use <../lib/reflector.scad>
 use <../lib/plate.scad>
-use <../lib/banana_plug.scad>
+use <../lib/Pomona 1581 Banana Jack.scad>
 use <../lib/silk.scad>
 
 
-module panel_power(armatures=false) {
+use <../lib/Designer Block.ttf>
+
+module panel_power(thickness=THICKNESS, screen=SCREEN, font_size=FONT_SIZE,armatures=ARMATURES) {
     difference() {
-        group() {
-            plate(HP=HP,HU=5,armatures=ARMATURES,thickness=THICKNESS);
-        }
-        translate( [HP*HP_SIZE/2, 20+6+2.5, 0]) silkscreen( text="POWER",thickness=THICKNESS );
-        translate( [HP*HP_SIZE/3-2, HU*HU_SIZE-90+2, 0]) silkscreen(text="+5V",thickness=THICKNESS);
-        translate( [HP*HP_SIZE/3-2, HU*HU_SIZE-70+2, 0]) silkscreen(text="+15V",thickness=THICKNESS);
-        translate( [HP*HP_SIZE/3-2, HU*HU_SIZE-50+2, 0]) silkscreen(text="GND",thickness=THICKNESS);
-        translate( [HP*HP_SIZE/3-2, HU*HU_SIZE-30+2, 0]) silkscreen(text="-15V",thickness=THICKNESS);
+        plate(HP=HP,HU=HU,armatures=armatures,thickness=thickness);
 
-        translate([HP*HP_SIZE/3*2+2, HU*HU_SIZE-90, 0]) banana_plug_hole();
-        translate([HP*HP_SIZE/3*2+2, HU*HU_SIZE-70, 0]) banana_plug_hole();
-        translate([HP*HP_SIZE/3*2+2, HU*HU_SIZE-50, 0]) banana_plug_hole();
-        translate([HP*HP_SIZE/3*2+2, HU*HU_SIZE-30, 0]) banana_plug_hole();
+        translate( [TOP_REFLECTOR_X, TOP_REFLECTOR_Y, 0]) rotate([0,0,270]) silkscreen(text="POWER",thickness=thickness, screen=screen, font_size=font_size, font="Designer Block");
+        translate( [HP*HP_SIZE/3-2, 2*RASTER_Y+RASTER_Y_TOP, 0]) silkscreen(text="+5", thickness=thickness, screen=screen, font_size=font_size, font="Designer Block", valign="right");
+        translate( [HP*HP_SIZE/3-2, 3*RASTER_Y+RASTER_Y_TOP, 0]) silkscreen(text="+15",thickness=thickness, screen=screen, font_size=font_size, font="Designer Block", valign="right");
+        translate( [HP*HP_SIZE/3-2, 4*RASTER_Y+RASTER_Y_TOP, 0]) silkscreen(text="GND",thickness=thickness, screen=screen, font_size=font_size, font="Designer Block", valign="right");
+        translate( [HP*HP_SIZE/3-2, 5*RASTER_Y+RASTER_Y_TOP, 0]) silkscreen(text="-15",thickness=thickness, screen=screen, font_size=font_size, font="Designer Block", valign="right");
+
+        translate([HP*HP_SIZE/3*2+2, 2*RASTER_Y+RASTER_Y_TOP, 0]) banana_hole();
+        translate([HP*HP_SIZE/3*2+2, 3*RASTER_Y+RASTER_Y_TOP, 0]) banana_hole();
+        translate([HP*HP_SIZE/3*2+2, 4*RASTER_Y+RASTER_Y_TOP, 0]) banana_hole();
+        translate([HP*HP_SIZE/3*2+2, 5*RASTER_Y+RASTER_Y_TOP, 0]) banana_hole();
     }
 
-    if( armatures ) {
+    if(armatures) {
 
-        translate( [HP*HP_SIZE/2, 20+6+2.5, 0]) silkscreen_text ( text="POWER",thickness=THICKNESS );
-        translate( [HP*HP_SIZE/3-2, HU*HU_SIZE-90+2, 0]) silkscreen_text( text="+5V",font_size=FONT_SIZE,thickness=THICKNESS);
-        translate( [HP*HP_SIZE/3-2, HU*HU_SIZE-70+2, 0]) silkscreen_text( text="+15V",font_size=FONT_SIZE,thickness=THICKNESS);
-        translate( [HP*HP_SIZE/3-2, HU*HU_SIZE-50+2, 0]) silkscreen_text( text="GND",font_size=FONT_SIZE,thickness=THICKNESS);
-        translate( [HP*HP_SIZE/3-2, HU*HU_SIZE-30+2, 0]) silkscreen_text( text="-15V",font_size=FONT_SIZE,thickness=THICKNESS);
+        translate( [TOP_REFLECTOR_X, TOP_REFLECTOR_Y, 0]) rotate([0,0,270]) silkscreen_text (text="POWER",thickness=thickness, screen=screen, font_size=font_size, font="Designer Block");
+        translate( [HP*HP_SIZE/2-5, 2*RASTER_Y+RASTER_Y_TOP, 0]) silkscreen_text( text="+5",thickness=thickness, screen=screen, font_size=font_size, font="Designer Block", valign="right");
+        translate( [HP*HP_SIZE/2-5, 3*RASTER_Y+RASTER_Y_TOP, 0]) silkscreen_text( text="+15",thickness=thickness, screen=screen, font_size=font_size, font="Designer Block", valign="right");
+        translate( [HP*HP_SIZE/2-5, 4*RASTER_Y+RASTER_Y_TOP, 0]) silkscreen_text( text="GND",thickness=thickness, screen=screen, font_size=font_size, font="Designer Block", valign="right");
+        translate( [HP*HP_SIZE/2-5, 5*RASTER_Y+RASTER_Y_TOP, 0]) silkscreen_text( text="-15",thickness=thickness, screen=screen, font_size=font_size, font="Designer Block", valign="right");
 
-        translate([HP*HP_SIZE/3*2+2, HU*HU_SIZE-90, 0]) banana_plug();
-        translate([HP*HP_SIZE/3*2+2, HU*HU_SIZE-70, 0]) banana_plug();
-        translate([HP*HP_SIZE/3*2+2, HU*HU_SIZE-50, 0]) banana_plug();
-        translate([HP*HP_SIZE/3*2+2, HU*HU_SIZE-30, 0]) banana_plug();
+        translate([HP*HP_SIZE/3*2+2, 2*RASTER_Y+RASTER_Y_TOP, 0]) banana();
+        translate([HP*HP_SIZE/3*2+2, 3*RASTER_Y+RASTER_Y_TOP, 0]) banana();
+        translate([HP*HP_SIZE/3*2+2, 4*RASTER_Y+RASTER_Y_TOP, 0]) banana();
+        translate([HP*HP_SIZE/3*2+2, 5*RASTER_Y+RASTER_Y_TOP, 0]) banana();
     }
-
-    translate([HP*HP_SIZE/2,20+6,THICKNESS-1]) reflector(r1=4,r2=2,l=20,thickness=2,led=1.5,h=5,span=10);
-    translate([HP*HP_SIZE/3-2,HU*HU_SIZE-90,THICKNESS-1]) reflector(h=5,l=5,r1=5,r2=2,thickness=REFLECTOR_THICKNESS,led=1.5,span=14);
-    translate([HP*HP_SIZE/3-2,HU*HU_SIZE-70,THICKNESS-1]) reflector(h=5,l=5,r1=5,r2=2,thickness=REFLECTOR_THICKNESS,led=1.5,span=14);
-    translate([HP*HP_SIZE/3-2,HU*HU_SIZE-50,THICKNESS-1]) reflector(h=5,l=5,r1=5,r2=2,thickness=REFLECTOR_THICKNESS,led=1.5,span=14);
-    translate([HP*HP_SIZE/3-2,HU*HU_SIZE-30,THICKNESS-1]) reflector(h=5,l=5,r1=5,r2=2,thickness=REFLECTOR_THICKNESS,led=1.5,span=14);
 }
 
-panel_power(armatures=ARMATURES); 
+panel_power(); 

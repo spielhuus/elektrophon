@@ -7,21 +7,21 @@ FONT="Bitstream Vera Sans Mono:style=Bold";
 /**
  * draw the silkscreen text
  */
-module silkscreen( text="lorem", thickness=10, screen=1, font_size=5 ) {
+module silkscreen( text="lorem", thickness=5, screen=0.1, font_size=5, font=FONT, halign="center") {
     translate( [0, 0, screen])
         linear_extrude(height = thickness-screen)
             rotate([180,0,0])
-                text(text = text, font = FONT, size = font_size, halign = "center");
+                text(text = text, font=font, size=font_size, halign=halign);
 }
 
 /** 
  * draw preview text
  */
-module silkscreen_text( text="lorem", thickness=6, screen=1, font_size=5 ) {
-    color("blue") translate( [0, 0, 0])
-        linear_extrude(height = screen)
+module silkscreen_text( text="lorem", thickness=5, screen=0.1, font_size=5, font=FONT, halign="center") {
+    color("blue") translate([0,font_size/2,0])
+        linear_extrude(height=screen)
             rotate([180,0,0])
-                text(text = text, font = FONT, size = font_size, halign = "center");
+                text(text=text, font=font, size=font_size, halign=halign);
 }
 
 translate([0,0,0]) silkscreen();

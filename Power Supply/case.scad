@@ -2,12 +2,18 @@
 
 use <../lib/DC_Jack.scad>
 
-ARMATURES=false;
+ARMATURES=true;
+
+PCB_LENGTH=75;
+PCB_WIDTH=160;
+PCB_HEIGHT=45;
+
+SPACING=2;
+THICKNESS=2;
 
 BOX_LENGTH=105;
 BOX_WIDTH=165;
 BOX_HEIGHT=40;
-THICKNESS=2;
 
 VENT_SIZE=4;
 VENT_MARGIN=2;
@@ -17,14 +23,13 @@ VENT_COLS=11;
 SCREW_HOLDER_R=8;
 SCREW_HOLE_R=3.5;
 
-module case_power(l=105,w=165,h=50,thickness=2,armatures=ARMATURES,r=8) {
-
+module case_power(l=PCB_LENGTH,w=PCB_WIDTH,h=PCB_HEIGHT,thickness=THICKNESS,spacing=SPACING, armatures=ARMATURES,r=SCREW_HOLDER_R) {
 
     difference() {
-            cube([l+2*thickness,w+2*thickness,h+2*thickness], center=true);
+        translate([0,0,spacing/2+thickness/2]) cube([l+(2*spacing)+(2*thickness),w+(2*spacing)+(2*thickness),h+spacing+thickness], center=true);
         
         //cut out inside
-        translate([0,0,-thickness]) cube([l,w,h+2*thickness], center=true);
+        translate([0,0,-thickness-spacing]) cube([l+(2*spacing),w+(2*spacing),h+2*spacing+thickness], center=true);
 
         //cut out the cilynder for the screws
         translate([l/2+thickness-r,w/2+thickness-r,2*thickness+1]) cylinder(h=h-thickness, r=r, center=true); 
@@ -54,6 +59,8 @@ module case_power(l=105,w=165,h=50,thickness=2,armatures=ARMATURES,r=8) {
     _screw_holes(l=l,w=w,h=h,thickness=thickness); 
 
     if( armatures ) {
+        //place for pcb 
+        translate([0,0,0]) color("red") cube([PCB_LENGTH,PCB_WIDTH,PCB_HEIGHT], center=true);
         //DC Jacks
         rotate([0,90,0]) translate([h/2-15,w/2-25,-l/2]) DC_jack();
         rotate([0,90,0]) translate([h/2-30,w/2-25,-l/2]) DC_jack();
@@ -85,8 +92,8 @@ module case_power_plate(l=100,w=160,h=50,r=8,rh=SCREW_HOLE_R,thickness=2) {
    }
 }
 
-color("white") case_power(l=BOX_LENGTH,w=BOX_WIDTH,h=BOX_HEIGHT,thickness=THICKNESS,armatures=ARMATURES); 
-color("red") translate([0,0,-BOX_HEIGHT/2-24]) case_power_plate(l=BOX_LENGTH,w=BOX_WIDTH,h=BOX_HEIGHT,r=SCREW_HOLDER_R,thickness=THICKNESS);
+case_power(); 
+//color("red") translate([0,0,-BOX_HEIGHT/2-24]) case_power_plate(l=BOX_LENGTH,w=BOX_WIDTH,h=BOX_HEIGHT,r=SCREW_HOLDER_R,thickness=THICKNESS);
 //projection(cut = true) translate([140,140,25]) rotate([0,0,0]) case_power(l=BOX_LENGTH,w=BOX_WIDTH,h=BOX_HEIGHT,thickness=THICKNESS,border=1);
 
 module _vent(rows=20,cols=10,size=5,margin=2,thickness=2) {

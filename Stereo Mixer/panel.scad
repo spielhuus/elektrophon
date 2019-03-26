@@ -1,9 +1,9 @@
-/** Mixer **/
+/** Stereo Mixer **/
 
 ARMATURES=true;
 
 HU=3;
-HP=16;
+HP=22;
 
 THICKNESS=5;
 REFLECTOR_THICKNESS=2;
@@ -25,12 +25,14 @@ use <../lib/plate.scad>
 use <../lib/Pomona 1581 Banana Jack.scad>
 use <../lib/silk.scad>
 use <../lib/Potentiometer_small.scad>
+use <../lib/Potentiometer WH118v3.scad>
 use <../lib/toggle_switch.scad>
 
 use <../lib/Designer Block.ttf>
 
-module panel_mixer(thickness=THICKNESS, screen=SCREEN, font_size=FONT_SIZE,armatures=ARMATURES) {
+module panel_stereo_mixer(thickness=THICKNESS, screen=SCREEN, font_size=FONT_SIZE,armatures=ARMATURES) {
     difference() {
+
 
         group() {
         plate(HP=HP,HU=HU,armatures=armatures,thickness=thickness);
@@ -56,30 +58,33 @@ module panel_mixer(thickness=THICKNESS, screen=SCREEN, font_size=FONT_SIZE,armat
         rotate([0,90,0]) translate([-10,HU*HU_SIZE-10,HP*HP_SIZE/2]) cube(size = [20,20,HP*HP_SIZE], center = true);
 
         translate( [5, 25]) rotate([0,0,270]) silkscreen_text(text="MIXER", thickness=thickness, screen=screen, font_size=font_size, font="Designer Block");
-        translate( [HP*HP_SIZE/2, 0*RASTER_Y+RASTER_Y_TOP, 0]) silkscreen_text(text="GAIN", thickness=thickness, screen=screen, font_size=font_size, font="Designer Block");
-
-
 
         //Banana Plugs and Potentiometer
-        translate([-10,0,0]) {
-            for( i=[1:3]) {
-                translate([1*RASTER_Y, i*RASTER_Y+RASTER_Y_TOP, 0]) banana();
-                translate([2*RASTER_Y, i*RASTER_Y+RASTER_Y_TOP, 0]) rotate([0,180,0]) potentiometer();
-                translate([3*RASTER_Y, i*RASTER_Y+RASTER_Y_TOP, 0]) rotate([0,180,0]) potentiometer();
-                translate([4*RASTER_Y, i*RASTER_Y+RASTER_Y_TOP, 0]) banana();
-
+        translate([-5,0,0]) {
+            for( i=[0:2]) {
+                for(j=[1:3]) {
+                    translate([j*RASTER_Y, i*RASTER_Y+RASTER_Y_TOP, 0]) rotate([0,180,0]) potentiometer();
+                }
             }
-            translate([1*RASTER_X, 4*RASTER_Y+RASTER_Y_TOP, 0]) banana(); //OUT
-            translate([4*RASTER_X, 4*RASTER_Y+RASTER_Y_TOP, 0]) banana(); //OUT
+            for( i=[3:4]) {
+                for(j=[1:3]) {
+                    translate([j*RASTER_Y, i*RASTER_Y+RASTER_Y_TOP, 0]) banana();
+                }
+            }
 
 
-            translate([1*RASTER_X+RASTER_X/2, 0*RASTER_Y+RASTER_Y_TOP, 0]) switch(); //SWITCH GAIN 1
-            translate([3*RASTER_X++RASTER_X/2, 0*RASTER_Y+RASTER_Y_TOP, 0]) switch(); //SWITCH GAIN 1
-            translate([2*RASTER_X, 4*RASTER_Y+RASTER_Y_TOP, 0]) switch(); //SWITCH COMB
-
+            //master volume 
+            translate([5*RASTER_Y, 0*RASTER_Y+RASTER_Y_TOP, +10]) rotate([0,180,0]) WH118();
+            //bass, trebble, headphone pot
+            for( i=[1:2]) {
+                for(j=[5:5]) {
+                    translate([j*RASTER_Y, i*RASTER_Y+RASTER_Y_TOP, 0]) rotate([0,180,0]) potentiometer();
+                }
+            }
+            translate([5*RASTER_Y, 4*RASTER_Y+RASTER_Y_TOP, 0]) banana();
             translate( [3*RASTER_X, 4*RASTER_Y+RASTER_Y_TOP, 0]) silkscreen_text(text="-->", thickness=thickness, screen=screen, font_size=font_size, font="Designer Block");
         }
     }
 }
 
-panel_mixer();
+panel_stereo_mixer();
