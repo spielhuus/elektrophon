@@ -1,8 +1,8 @@
-use<VCO 4069/panel.scad>
-use<VCO X-4046/panel.scad>
-use<Mixer 2U Panel/panel.scad>
-use<Stereo/panel.scad>
-use<midi/panel.scad>
+use<4069/panel.scad>
+use<X-4046/panel.scad>
+use<Mixer/panel.scad>
+use<Stereo Mixer/panel.scad>
+use<Midi/panel.scad>
 use<Power Supply/panel.scad>
 use<Power Supply/case.scad>
 
