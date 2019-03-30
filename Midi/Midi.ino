@@ -1,4 +1,5 @@
 #include <MIDI.h>
+#include <SPI.h>
 
 #define MIDI_LOW 0
 
@@ -19,86 +20,68 @@ MIDI_CREATE_DEFAULT_INSTANCE();
 #define CHANNELS 8
 #define NOTES 88
 
-void change_note(byte inChannel, byte inNumber, byte inVelocity ) {
-    for(int i=0; i<CHANNELS; i++) {
+#define CLOCK 4
+#define DAC1 8
+#define DAC2 9
 
-    }
-}
-// --
-
-int cvPin1 = 8;      // LED connected to digital pin 9
-int cvPin2 = 9;      // LED connected to digital pin 9
-int cvPin3 = 10;      // LED connected to digital pin 9
-int cvPin4 = 11;      // LED connected to digital pin 9
-
-unsigned long trigTimer = 0;
-bool notes[8][NOTES] = {0};
+unsigned long trigTimers[CHANNELS] = {0};
+unsigned long clock_timer=0;
+bool notes[8][NOTES] = {{0,0,0}};
 
 void handleNoteOn(byte inChannel, byte inNumber, byte inVelocity) {
 
-    if(inChannel>CHANNELS) return; //check if number of channels is supported
-    if(inNumber<0 || inNumber>NOTES) return //check if number of notes is supported
-    if(inVelocity>0) {
-        notes[inChannel][inNumber] = false; 
-    } else {
-        notes[inChannel][inNumber] = true; 
-        setVoltage(DAC1, 1, 1, inVelocity<<5);  // DAC1, channel 1, gain = 2X
-        commandNote(inNumber);
-    }
+  if(inChannel>CHANNELS) return; //check if number of channels is supported
+  if(inNumber<0 || inNumber>NOTES) return; //check if number of notes is supported
+
+//  digitalWrite(GATE,HIGH);
+
+//  notes[inChannel][inNumber] = true; 
+  setVoltage(DAC1, 1, 1, inVelocity<<5);  // DAC1, channel 1, gain = 2X
+  digitalWrite(inChannel+1,HIGH); //set trigger
+  trigTimers[inChannel] = millis();
+  commandNote(inNumber);
 }
 
 void handleNoteOff(byte inChannel, byte inNumber, byte inVelocity) {
     if(inChannel>CHANNELS) return; //check if number of channels is supported
-    if(inNumber<0 || inNumber>NOTES) return //check if number of notes is supported
-    if(inVelocity>0) {
-        notes[inChannel][inNumber] = false; 
-        digitalWrite(GATE,LOW); 
-    } else {
-        notes[inChannel][inNumber] = true; 
-        setVoltage(DAC1, 1, 1, inVelocity<<5);  // DAC1, channel 1, gain = 2X
-        commandNote(inNumber);
-    }
+    if(inNumber<0 || inNumber>NOTES) return; //check if number of notes is supported
+
+    notes[inChannel][inNumber] = false; 
+    digitalWrite(inChannel+1,LOW); 
 }
 
 void setup() {
-
-  pinMode(cvPin1, OUTPUT);   // sets the pin as output
-  pinMode(cvPin2, OUTPUT);   // sets the pin as output
-  pinMode(cvPin3, OUTPUT);   // sets the pin as output
-  pinMode(cvPin4, OUTPUT);   // sets the pin as output
-
-
-        // Set Frequency to 61.5 kHz.
-//TCCR2A = _BV(COM2A1) | _BV(COM2B1) | _BV(WGM21) | _BV(WGM20);
-//TCCR2B = _BV(CS20); 
-
-//duty cycle defined at the top of code
-//OCR2A = pwm;
-
-
-#if defined(USBCON)
-       analogWrite( cvPin4, 255 );
-        delay(200);
-#endif
-       analogWrite( cvPin4, 255 );
-        delay(200);
-        analogWrite( cvPin4, 0 );
-        delay(200);
-
-    while (!Serial);
-
-    MIDI.begin(MIDI_CHANNEL_OMNI);
-    MIDI.setHandleNoteOn(handleNoteOn);
-    MIDI.setHandleNoteOff(handleNoteOff);
-    Serial.begin(115200);
+  pinMode(2, OUTPUT);
+  pinMode(3, OUTPUT);
+//  pinMode(GATE, OUTPUT);
+//  pinMode(TRIG, OUTPUT);
+  pinMode(CLOCK, OUTPUT);
+  pinMode(DAC1, OUTPUT);
+  pinMode(DAC2, OUTPUT);
+  digitalWrite(2,LOW);
+  digitalWrite(3,LOW);
+  digitalWrite(CLOCK,LOW);
+  digitalWrite(DAC1,HIGH);
+  digitalWrite(DAC2,HIGH);
+  
+  SPI.begin();
+  
+  MIDI.begin(MIDI_CHANNEL_OMNI);
+  MIDI.setHandleNoteOn(handleNoteOn);
+  MIDI.setHandleNoteOff(handleNoteOff);
+    
+  // Set initial pitch bend voltage to 0.5V (mid point).  With Gain = 1X, this is 1023
+  // Other DAC outputs will come up as 0V, so don't need to be initialized
+  setVoltage(DAC1, 0, 0, 1023);  
 }
 
 void loop() {
-    //  OCR2A = pwm;
-    if ((trigTimer > 0) && (millis() - trigTimer > 20)) { 
-        digitalWrite(TRIG,LOW); // Set trigger low after 20 msec 
-        trigTimer = 0;  
+  for(int i=0; i<CHANNELS; i++ ) {
+    if ((trigTimers[i] > 0) && (millis() - trigTimers[i] > 20)) { 
+        digitalWrite(i+2,LOW); // Set trigger low after 20 msec 
+        trigTimers[i] = 0;  
     }
+  }
 
     if ((clock_timer > 0) && (millis() - clock_timer > 20)) { 
         digitalWrite(CLOCK,LOW); // Set clock pulse low after 20 msec 
@@ -115,16 +98,11 @@ void loop() {
 #define NOTE_SF 47.069f // This value can be tuned if CV output isn't exactly 1V/octave
 
 void commandNote(int noteMsg) {
-  digitalWrite(GATE,HIGH);
-  digitalWrite(TRIG,HIGH);
-  trigTimer = millis();
-  
   unsigned int mV = (unsigned int) ((float) noteMsg * NOTE_SF + 0.5); 
   setVoltage(DAC1, 0, 1, mV);  // DAC1, channel 0, gain = 2X
 }
 
-void setVoltage(int dacpin, bool channel, bool gain, unsigned int mV)
-{
+void setVoltage(int dacpin, bool channel, bool gain, unsigned int mV) {
   unsigned int command = channel ? 0x9000 : 0x1000;
 
   command |= gain ? 0x0000 : 0x2000;
@@ -137,4 +115,3 @@ void setVoltage(int dacpin, bool channel, bool gain, unsigned int mV)
   digitalWrite(dacpin,HIGH);
   SPI.endTransaction();
 }
-
