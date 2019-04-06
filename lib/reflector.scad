@@ -2,45 +2,31 @@
  * LED Holder for backlight.
  */
 
-module _led( radius=10,length=20,led=2, thickness=2, led=1 ) {
-    cylinder(h = thickness/2, r = led, center = false, $fn=10);
-    cylinder(h = thickness*4, r = led, center = false, $fn=10);
-}
+CELL_HEIGHT = 15;
+CELL_WALL_SIZE = 1;
+CELL_WIDTH = 4;
+LED_FLY = 0.75;
+LED_SPACING = 3.5;
 
-module _reflector(l=20,thickness=2,h=15,r1=10,r2=2) {
-    translate([0,0,-thickness]) hull() {
-        translate([l/2,0,-thickness]) hull() {
-            minkowski($fn=50) {
-                cylinder(h=h, r1=r1, r2=r2, center=true);
-                translate([0,0,r1]) sphere(r=r1/2);
-            }
-        }
-        translate([-l/2,0,-thickness]) hull() {
-            minkowski($fn=50) {
-                cylinder(h=h, r1=r1, r2=r2, center=true);
-                translate([0,0,r1]) sphere(r=r1/2);
-            }
-        }
-    }
-}
+module reflector(h=CELL_HEIGHT,l=15,w=5,cell=CELL_WIDTH, thickness=CELL_WALL_SIZE,fly=LED_FLY,spacing=LED_SPACING) {
 
-module reflector( h=15,r1=10,r2=2,l=50,thickness=2,led=1.5,span=10) {
+    translate([-w/2,0,h/2]) cube([thickness,l,h],true);
 
     difference() {
-        _reflector(l=l,h=h,r1=r1,r2=r2,h=h,thickness=0);
-        _reflector(l=l,h=h,r1=r1,r2=r2,h=h,thickness=thickness);
+        translate([w/2,0,h/2]) cube([thickness,l,h],true);
 
-        if(l>=(2*span)) {
-            _diff=floor((l)/span);
-            _start = (l/2)+((l)-((_diff)*span));
-            echo("diff:", _diff, ", start:", _start );
-            translate([-_start,0,h])
-                for(i=[0 : _diff ] ) 
-                    translate([i*span,0,0]) _led( r1, l, led, thickness, led );
-        } else {
-            translate([0,0,h]) _led( r1, l, led, thickness, led );
+        _count = floor(l/spacing)-1;
+        _spacing = l/(_count+1);
+        _border = l - (_spacing*_count);
+        translate([_spacing/2,-l/2,h]) {
+            for(i=[0:_count-1]) {
+                translate([0,(i*_spacing)+_border-0.75,0]) cube([CELL_WIDTH,fly,h/2], center=true);
+                translate([0,(i*_spacing)+_border+0.75,0]) cube([CELL_WIDTH,fly,h/2], center=true);
+            }
         }
     }
+    translate([-cell/2+2*thickness,l/2,h/2]) rotate([0,0,90]) cube([thickness,cell+2*thickness,h],true);
+    translate([cell/2-2*thickness,-l/2,h/2]) rotate([0,0,90]) cube([thickness,cell+2*thickness,h],true);
 }
 
-reflector(h=15,l=10,r1=10,r2=2,thickness=2,led=1.5,span=20);
+reflector();

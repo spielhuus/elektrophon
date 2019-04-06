@@ -14,10 +14,9 @@ module potentiometer_hole( radius=6,height=10 ) {
  * draw the plug 
  */
 module potentiometer() {
-    import( "../lib/Potentiometer_small.stl", convexity = 10 );
-	translate([0,0,11]) import( "../lib/Turn_Knob_small.stl", convexity = 10 );
+	translate([0,0,-12]) import( "../lib/Potentiometer_small.stl", convexity = 10 );
+	translate([0,0,2]) import( "../lib/Turn_Knob_small.stl", convexity = 10 );
 }
 
 translate([0,0,0]) potentiometer();
 translate([0,0,0]) potentiometer_hole();
- 

@@ -2,6 +2,11 @@
 
 module to convert midi signals to control volates. the modules is based on the atmega microprocessor and mcp dac. 
 
+
+## burn bootloader to chip
+
+1) 
+
 ## midi drivers
 
 the midi 2 vco module requires midi serial support on the controller. for this some extra drivers have to be installed. 

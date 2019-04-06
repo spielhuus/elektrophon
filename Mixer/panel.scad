@@ -16,9 +16,9 @@ HU_SIZE = 44.45;
 TOP_REFLECTOR_Y=30;
 TOP_REFLECTOR_X=10;
 
-RASTER_Y_TOP=28;
-RASTER_X=20;
-RASTER_Y=20;
+RASTER_Y_TOP=28.675;
+RASTER_X=19;
+RASTER_Y=19;
 
 use <../lib/reflector.scad>
 use <../lib/plate.scad>
@@ -51,22 +51,19 @@ module panel_mixer(thickness=THICKNESS, screen=SCREEN, font_size=FONT_SIZE,armat
     }
 
     if( ARMATURES ) {
-        
-        rotate([0,90,0]) translate([-10,10,HP*HP_SIZE/2]) cube(size = [20,20,HP*HP_SIZE], center = true);
-        rotate([0,90,0]) translate([-10,HU*HU_SIZE-10,HP*HP_SIZE/2]) cube(size = [20,20,HP*HP_SIZE], center = true);
 
         translate( [5, 25]) rotate([0,0,270]) silkscreen_text(text="MIXER", thickness=thickness, screen=screen, font_size=font_size, font="Designer Block");
         translate( [HP*HP_SIZE/2, 0*RASTER_Y+RASTER_Y_TOP, 0]) silkscreen_text(text="GAIN", thickness=thickness, screen=screen, font_size=font_size, font="Designer Block");
 
-
+        translate([-10,0,0]) translate([1*RASTER_Y, 0*RASTER_Y+RASTER_Y_TOP, 0]) banana();
 
         //Banana Plugs and Potentiometer
         translate([-10,0,0]) {
             for( i=[1:3]) {
-                translate([1*RASTER_Y, i*RASTER_Y+RASTER_Y_TOP, 0]) banana();
-                translate([2*RASTER_Y, i*RASTER_Y+RASTER_Y_TOP, 0]) rotate([0,180,0]) potentiometer();
-                translate([3*RASTER_Y, i*RASTER_Y+RASTER_Y_TOP, 0]) rotate([0,180,0]) potentiometer();
-                translate([4*RASTER_Y, i*RASTER_Y+RASTER_Y_TOP, 0]) banana();
+                translate([1*RASTER_X, i*RASTER_Y+RASTER_Y_TOP, 0]) banana();
+                translate([2*RASTER_X, i*RASTER_Y+RASTER_Y_TOP, 0]) rotate([0,180,0]) potentiometer();
+                translate([3*RASTER_X, i*RASTER_Y+RASTER_Y_TOP, 0]) rotate([0,180,0]) potentiometer();
+                translate([4*RASTER_X, i*RASTER_Y+RASTER_Y_TOP, 0]) banana();
 
             }
             translate([1*RASTER_X, 4*RASTER_Y+RASTER_Y_TOP, 0]) banana(); //OUT
