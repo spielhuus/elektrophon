@@ -17,6 +17,13 @@ MIDI_CREATE_INSTANCE(UsbTransport, sUsbTransport, MIDI);
 MIDI_CREATE_DEFAULT_INSTANCE();
 #endif
 
+// Rescale 88 notes to 4096 mV:
+//    noteMsg = 0 -> 0 mV 
+//    noteMsg = 87 -> 4096 mV
+// DAC output will be (4095/87) = 47.069 mV per note, and 564.9655 mV per octive
+// Note that DAC output will need to be amplified by 1.77X for the standard 1V/octave 
+#define NOTE_SF 47.069f // This value can be tuned if CV output isn't exactly 1V/octave
+
 #define CHANNELS 8
 #define NOTES 88
 
@@ -33,21 +40,28 @@ void handleNoteOn(byte inChannel, byte inNumber, byte inVelocity) {
   if(inChannel>CHANNELS) return; //check if number of channels is supported
   if(inNumber<0 || inNumber>NOTES) return; //check if number of notes is supported
 
-//  digitalWrite(GATE,HIGH);
+  if( inChannel==1 ) {
+    //set the velocity
+    setVoltage(DAC1, 1, 1, inVelocity<<5);  // DAC1, channel 1, gain = 2X
+  
+    //set the note
+    unsigned int mV = (unsigned int) ((float) inNumber * NOTE_SF + 0.5); 
+    setVoltage(DAC1, 0, 1, mV);  // DAC1, channel 0, gain = 2X
+  }
 
-//  notes[inChannel][inNumber] = true; 
-  setVoltage(DAC1, 1, 1, inVelocity<<5);  // DAC1, channel 1, gain = 2X
   digitalWrite(inChannel+1,HIGH); //set trigger
   trigTimers[inChannel] = millis();
   commandNote(inNumber);
 }
 
 void handleNoteOff(byte inChannel, byte inNumber, byte inVelocity) {
-    if(inChannel>CHANNELS) return; //check if number of channels is supported
-    if(inNumber<0 || inNumber>NOTES) return; //check if number of notes is supported
+  if(inChannel>CHANNELS) return; //check if number of channels is supported
+  if(inNumber<0 || inNumber>NOTES) return; //check if number of notes is supported
 
-    notes[inChannel][inNumber] = false; 
-    digitalWrite(inChannel+1,LOW); 
+  //set the velocity
+  setVoltage(DAC1, 1, 1, inVelocity<<5);  // DAC1, channel 1, gain = 2X
+
+  digitalWrite(inChannel+1,LOW); //set trigger
 }
 
 void setup() {
@@ -90,12 +104,6 @@ void loop() {
     MIDI.read();
 }
 
-// Rescale 88 notes to 4096 mV:
-//    noteMsg = 0 -> 0 mV 
-//    noteMsg = 87 -> 4096 mV
-// DAC output will be (4095/87) = 47.069 mV per note, and 564.9655 mV per octive
-// Note that DAC output will need to be amplified by 1.77X for the standard 1V/octave 
-#define NOTE_SF 47.069f // This value can be tuned if CV output isn't exactly 1V/octave
 
 void commandNote(int noteMsg) {
   unsigned int mV = (unsigned int) ((float) noteMsg * NOTE_SF + 0.5); 
