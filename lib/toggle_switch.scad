@@ -5,9 +5,8 @@
 /**
  * draw the hole 
  */
-module switch_hole( radius=6,height=10 ) {
-	translate([0,0,-1])
-    	cylinder(r=radius, h=height, $fn=10);
+module switch_hole(radius=3,thickness=10) {
+  	cylinder(r=radius, h=thickness, $fn=30);
 }
 
 /** 
@@ -19,5 +18,3 @@ module switch() {
 
 translate([0,0,0]) switch();
 translate([0,0,0]) switch_hole();
- 
- 

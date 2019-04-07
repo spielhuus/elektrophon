@@ -1,13 +1,15 @@
 /** 
- * draw potentiometer wWH118 and hole
+ * draw potentiometer and hole
  */
 
 /**
  * draw the hole 
  */
-module potentiometer_hole( radius=6,height=10 ) {
-	translate([0,0,-1])
-    	cylinder(r=radius, h=height, $fn=10);
+module potentiometer_hole(radius=3.5,thickness=10) {
+	group() {
+		translate([0,0,-thickness]) cylinder(r=radius, h=thickness, $fn=50);
+		translate([6,0,-thickness]) cylinder(r=2.5/2, h=3, $fn=50);
+	}
 }
 
 /** 

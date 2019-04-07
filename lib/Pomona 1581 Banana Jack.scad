@@ -5,7 +5,7 @@
 /**
  * draw the hole 
  */
-module banana_hole( radius=4,height=10 ) {
+module banana_hole(radius=4.5,height=10) {
     cylinder(r=4, h=5, $fn=50);
 }
 

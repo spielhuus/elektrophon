@@ -1,6 +1,6 @@
 /** Mixer **/
 
-ARMATURES=true;
+ARMATURES=false;
 
 HU=3;
 HP=16;
@@ -31,50 +31,52 @@ use <../lib/Designer Block.ttf>
 
 module panel_mixer(thickness=THICKNESS, screen=SCREEN, font_size=FONT_SIZE,armatures=ARMATURES) {
     difference() {
+        translate([-3,0,0]) plate(HP=HP,HU=HU,armatures=armatures,thickness=thickness);
 
-        group() {
-        plate(HP=HP,HU=HU,armatures=armatures,thickness=thickness);
-//            translate([HP*HP_SIZE/2,20+6,0]) reflector(radius=6,length=30,led_holder=2, thickness=1, led=1); //reflector
+        translate([TOP_REFLECTOR_X, TOP_REFLECTOR_Y,0]) rotate([0,0,270]) silkscreen(text="MIXER", thickness=thickness, screen=screen, font_size=font_size, font="Designer Block");
+        translate([1*RASTER_X, 0*RASTER_Y+RASTER_Y_TOP, 0]) silkscreen(text="#1", thickness=thickness, screen=screen, font_size=font_size, font="Designer Block");
+        translate([3*RASTER_X, 0*RASTER_Y+RASTER_Y_TOP, 0]) silkscreen(text="#2", thickness=thickness, screen=screen, font_size=font_size, font="Designer Block");
+
+        //Banana Plugs and Potentiometer
+        translate([-10,0,0]) {
+            for( i=[1:3]) {
+                translate([1*RASTER_X, i*RASTER_Y+RASTER_Y_TOP, 0]) banana_hole();
+                translate([2*RASTER_Y, i*RASTER_Y+RASTER_Y_TOP, 0]) rotate([0,180,0]) potentiometer_hole(thickness=thickness);
+                translate([3*RASTER_Y, i*RASTER_Y+RASTER_Y_TOP]) rotate([0,180,0]) potentiometer_hole(thickness=thickness);
+                translate([4*RASTER_Y, i*RASTER_Y+RASTER_Y_TOP, 0]) banana_hole();
+
+            }
+            translate([1*RASTER_X, 4*RASTER_Y+RASTER_Y_TOP, 0]) banana_hole(); //OUT
+            translate([4*RASTER_X, 4*RASTER_Y+RASTER_Y_TOP, 0]) banana_hole(); //OUT
+            translate([2*RASTER_X, 4*RASTER_Y+RASTER_Y_TOP, 0]) switch_hole(thickness=thickness); //SWITCH COMB
+            translate([3*RASTER_X, 4*RASTER_Y+RASTER_Y_TOP, 0]) silkscreen(text="-->", thickness=thickness, screen=screen, font_size=font_size, font="Designer Block");
         }
-
-        translate( [HP*HP_SIZE/2, 20+6+2.5, 0]) silkscreen(text="MIXER", thickness=thickness, screen=screen, font_size=font_size, font="Designer Block");
-        translate( [HP*HP_SIZE/2, 20+6+10, 0]) silkscreen(text="#1", thickness=thickness, screen=screen, font_size=font_size, font="Designer Block");
-
-        //draw the banana plugs        
-/*        translate([HP*HP_SIZE/4,CV_PLUG_Y,0]) banana_plug_hole();
-        translate([HP*HP_SIZE/4*3,CV_PLUG_Y,0]) banana_plug_hole();
-
-        translate([HP*HP_SIZE/2,165,0]) banana_plug_hole();
-        translate([HP*HP_SIZE/4,190,0]) banana_plug_hole();
-        translate([HP*HP_SIZE/4*3,190,0]) banana_plug_hole();
-        */
     }
 
-    if( ARMATURES ) {
+    //draw the refrectors
+    translate([TOP_REFLECTOR_X-1.6, TOP_REFLECTOR_Y, 0]) rotate([0,0,0]) reflector(l=15);
+    translate([1*RASTER_X, 0*RASTER_Y+RASTER_Y_TOP-1.6,0]) rotate([0,0,90]) reflector(l=10);
+    translate([3*RASTER_X, 0*RASTER_Y+RASTER_Y_TOP-1.6,0]) rotate([0,0,90]) reflector(l=10);
 
-        translate( [5, 25]) rotate([0,0,270]) silkscreen_text(text="MIXER", thickness=thickness, screen=screen, font_size=font_size, font="Designer Block");
-        translate( [HP*HP_SIZE/2, 0*RASTER_Y+RASTER_Y_TOP, 0]) silkscreen_text(text="GAIN", thickness=thickness, screen=screen, font_size=font_size, font="Designer Block");
 
-        translate([-10,0,0]) translate([1*RASTER_Y, 0*RASTER_Y+RASTER_Y_TOP, 0]) banana();
+    if(ARMATURES) {
+        translate([5, 25]) rotate([0,0,270]) silkscreen_text(text="MIXER", thickness=thickness, screen=screen, font_size=font_size, font="Designer Block");
+        translate([1*RASTER_X, 0*RASTER_Y+RASTER_Y_TOP,0]) silkscreen_text(text="#1", thickness=thickness, screen=screen, font_size=font_size, font="Designer Block");
+        translate([3*RASTER_X, 0*RASTER_Y+RASTER_Y_TOP,0]) silkscreen_text(text="#2", thickness=thickness, screen=screen, font_size=font_size, font="Designer Block");
 
         //Banana Plugs and Potentiometer
         translate([-10,0,0]) {
             for( i=[1:3]) {
                 translate([1*RASTER_X, i*RASTER_Y+RASTER_Y_TOP, 0]) banana();
-                translate([2*RASTER_X, i*RASTER_Y+RASTER_Y_TOP, 0]) rotate([0,180,0]) potentiometer();
-                translate([3*RASTER_X, i*RASTER_Y+RASTER_Y_TOP, 0]) rotate([0,180,0]) potentiometer();
-                translate([4*RASTER_X, i*RASTER_Y+RASTER_Y_TOP, 0]) banana();
+                translate([2*RASTER_Y, i*RASTER_Y+RASTER_Y_TOP, 0]) rotate([0,180,0]) potentiometer();
+                translate([3*RASTER_Y, i*RASTER_Y+RASTER_Y_TOP]) rotate([0,180,0]) potentiometer();
+                translate([4*RASTER_Y, i*RASTER_Y+RASTER_Y_TOP, 0]) banana();
 
             }
             translate([1*RASTER_X, 4*RASTER_Y+RASTER_Y_TOP, 0]) banana(); //OUT
             translate([4*RASTER_X, 4*RASTER_Y+RASTER_Y_TOP, 0]) banana(); //OUT
-
-
-            translate([1*RASTER_X+RASTER_X/2, 0*RASTER_Y+RASTER_Y_TOP, 0]) switch(); //SWITCH GAIN 1
-            translate([3*RASTER_X++RASTER_X/2, 0*RASTER_Y+RASTER_Y_TOP, 0]) switch(); //SWITCH GAIN 1
             translate([2*RASTER_X, 4*RASTER_Y+RASTER_Y_TOP, 0]) switch(); //SWITCH COMB
-
-            translate( [3*RASTER_X, 4*RASTER_Y+RASTER_Y_TOP, 0]) silkscreen_text(text="-->", thickness=thickness, screen=screen, font_size=font_size, font="Designer Block");
+            translate([3*RASTER_X, 4*RASTER_Y+RASTER_Y_TOP, 0]) silkscreen_text(text="-->", thickness=thickness, screen=screen, font_size=font_size, font="Designer Block");
         }
     }
 }

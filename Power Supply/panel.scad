@@ -32,11 +32,11 @@ module panel_power(thickness=THICKNESS, screen=SCREEN, font_size=FONT_SIZE,armat
     difference() {
         plate(HP=HP,HU=HU,armatures=armatures,thickness=thickness);
 
-        translate( [TOP_REFLECTOR_X, TOP_REFLECTOR_Y, 0]) rotate([0,0,270]) silkscreen(text="POWER",thickness=thickness, screen=screen, font_size=font_size, font="Designer Block");
-        translate( [HP*HP_SIZE/3-2, 1*RASTER_Y+RASTER_Y_TOP, 0]) silkscreen(text="+5", thickness=thickness, screen=screen, font_size=font_size, font="Designer Block", valign="right");
-        translate( [HP*HP_SIZE/3-2, 2*RASTER_Y+RASTER_Y_TOP, 0]) silkscreen(text="+15",thickness=thickness, screen=screen, font_size=font_size, font="Designer Block", valign="right");
-        translate( [HP*HP_SIZE/3-2, 3*RASTER_Y+RASTER_Y_TOP, 0]) silkscreen(text="GND",thickness=thickness, screen=screen, font_size=font_size, font="Designer Block", valign="right");
-        translate( [HP*HP_SIZE/3-2, 4*RASTER_Y+RASTER_Y_TOP, 0]) silkscreen(text="-15",thickness=thickness, screen=screen, font_size=font_size, font="Designer Block", valign="right");
+        translate([TOP_REFLECTOR_X, TOP_REFLECTOR_Y, 0]) rotate([0,0,270]) silkscreen(text="POWER",thickness=thickness, screen=screen, font_size=font_size, font="Designer Block");
+        translate([HP*HP_SIZE/3-2, 1*RASTER_Y+RASTER_Y_TOP, 0]) silkscreen(text="+5", thickness=thickness, screen=screen, font_size=font_size, font="Designer Block", valign="right");
+        translate([HP*HP_SIZE/3-2, 2*RASTER_Y+RASTER_Y_TOP, 0]) silkscreen(text="+15",thickness=thickness, screen=screen, font_size=font_size, font="Designer Block", valign="right");
+        translate([HP*HP_SIZE/3-2, 3*RASTER_Y+RASTER_Y_TOP, 0]) silkscreen(text="GND",thickness=thickness, screen=screen, font_size=font_size, font="Designer Block", valign="right");
+        translate([HP*HP_SIZE/3-2, 4*RASTER_Y+RASTER_Y_TOP, 0]) silkscreen(text="-15",thickness=thickness, screen=screen, font_size=font_size, font="Designer Block", valign="right");
 
         translate([HP*HP_SIZE/3*2+2, 1*RASTER_Y+RASTER_Y_TOP, 0]) banana_hole();
         translate([HP*HP_SIZE/3*2+2, 2*RASTER_Y+RASTER_Y_TOP, 0]) banana_hole();
