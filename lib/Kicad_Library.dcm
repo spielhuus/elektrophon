@@ -1,3 +1,15 @@
 EESchema-DOCLIB  Version 2.0
 #
+$CMP CA3080
+D 2MHz, Operational Transconductance Amplifier (OTA), gM spread 2:1, DIP-8/SOIC-8
+K operational transconductance amplifier ota
+F http://www.intersil.com/content/dam/Intersil/documents/ca30/ca3080-a.pdf
+$ENDCMP
+#
+$CMP CA3080A
+D 2MHz, Operational Transconductance Amplifier (OTA), gM spread 1.6:1, DIP-8/SOIC-8
+K operational transconductance amplifier ota
+F http://www.intersil.com/content/dam/Intersil/documents/ca30/ca3080-a.pdf
+$ENDCMP
+#
 #End Doc Library
