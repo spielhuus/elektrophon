@@ -1,5 +1,4 @@
 EESchema Schematic File Version 4
-LIBS:2U Panel Mixer-cache
 EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
@@ -56,7 +55,7 @@ F 1 "TL072" H 3100 2326 50  0000 C CNN
 F 2 "" H 3100 2050 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 3100 2050 50  0001 C CNN
 	1    3100 2050
-	1    0    0    -1  
+	1    0    0    1   
 $EndComp
 $Comp
 L power:GND #PWR?
@@ -203,7 +202,7 @@ F 1 "TL072" H 5000 2426 50  0000 C CNN
 F 2 "" H 5000 2150 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 5000 2150 50  0001 C CNN
 	2    5000 2150
-	1    0    0    -1  
+	1    0    0    1   
 $EndComp
 $Comp
 L Amplifier_Operational:TL072 U?
