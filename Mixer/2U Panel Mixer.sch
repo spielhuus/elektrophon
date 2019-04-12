@@ -1,5 +1,6 @@
 EESchema Schematic File Version 4
-EELAYER 26 0
+LIBS:2U Panel Mixer-cache
+EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -478,5 +479,27 @@ F 2 "" H 1050 7400 50  0001 C CNN
 F 3 "" H 1050 7400 50  0001 C CNN
 	1    1050 7400
 	-1   0    0    1   
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 5CB0C56C
+P 3050 1100
+F 0 "C?" V 2798 1100 50  0000 C CNN
+F 1 "47p" V 2889 1100 50  0000 C CNN
+F 2 "" H 3088 950 50  0001 C CNN
+F 3 "~" H 3050 1100 50  0001 C CNN
+	1    3050 1100
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 5CB0C8D0
+P 5000 1100
+F 0 "C?" V 4748 1100 50  0000 C CNN
+F 1 "47p" V 4839 1100 50  0000 C CNN
+F 2 "" H 5038 950 50  0001 C CNN
+F 3 "~" H 5000 1100 50  0001 C CNN
+	1    5000 1100
+	0    1    1    0   
 $EndComp
 $EndSCHEMATC
