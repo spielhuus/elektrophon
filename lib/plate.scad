@@ -7,7 +7,7 @@ HU_SIZE = 44.45;
 
 HOLE_R = 1.7;
 HOLE_FROM_SIDE = 7.5;
-HOLE_FROM_TOP = 10;
+HOLE_FROM_TOP = 5;
 
 module plate(HP=1,HU=5,thickness=2,armatures=false) {
 
@@ -33,8 +33,8 @@ difference() {
 	}
 
 	if( armatures ) {
-		translate([0,0,thickness]) color("red") cube([width, 20, 0.1]);
-		translate([0,height-20,thickness]) color("red")  cube([width, 20, 0.1]);
+		translate([0,0,thickness]) color("red") cube([width, 10, 0.1]);
+		translate([0,height-10,thickness]) color("red")  cube([width, 10, 0.1]);
 
 	}
 }

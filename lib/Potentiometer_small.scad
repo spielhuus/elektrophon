@@ -2,13 +2,16 @@
  * draw potentiometer and hole
  */
 
+
 /**
  * draw the hole 
  */
-module potentiometer_hole(radius=3.5,thickness=10) {
+module potentiometer_hole(radius=4,thickness=5) {
 	group() {
-		translate([0,0,-thickness]) cylinder(r=radius, h=thickness, $fn=50);
-		translate([6,0,-thickness]) cylinder(r=2.5/2, h=3, $fn=50);
+		translate([0,0,-thickness]) {
+			cylinder(r=radius, h=thickness*2, $fn=50);
+			translate([8,0,0]) cylinder(r=1.5, h=2, $fn=50);
+		}
 	}
 }
 
@@ -20,5 +23,8 @@ module potentiometer() {
 	translate([0,0,2]) import( "../lib/Turn_Knob_small.stl", convexity = 10 );
 }
 
-translate([0,0,0]) potentiometer();
-translate([0,0,0]) potentiometer_hole();
+//translate([0,0,0]) potentiometer();
+difference() {
+	translate([0,0,0]) potentiometer_holder();
+	translate([0,0,0]) potentiometer_hole();
+}

@@ -5,8 +5,12 @@
 /**
  * draw the hole 
  */
+module banana_holder(radius=4.5,height=10) {
+    cylinder(r=5.5, h=3, $fn=50);
+}
+
 module banana_hole(radius=4.5,height=10) {
-    cylinder(r=4, h=5, $fn=50);
+    translate(0,0,3) cylinder(r=4, h=5+3, $fn=50);
 }
 
 /** 
