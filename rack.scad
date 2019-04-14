@@ -75,15 +75,14 @@ rotate([90,0,0])
 //        color("white")
             rotate([BOTTOM_DEGREE,180,0]) panel_power(armatures=ARMATURES);  
 
-rotate([90,0,0])
-    translate([20+41+(22*HU),BOTTOM_X,BOTTOM_Z]) 
+//rotate([90,0,0])
+//    translate([20+41+(22*HU),BOTTOM_X,BOTTOM_Z]) 
 //        color("white")
-            rotate([BOTTOM_DEGREE,180,0]) panel_stereo_mixer(armatures=ARMATURES);  
+//            rotate([BOTTOM_DEGREE,180,0]) panel_stereo_mixer(armatures=ARMATURES);  
 
 rotate([90,0,0])
-    translate([20+41+(38*HU),BOTTOM_X,BOTTOM_Z]) 
-//        color("white")
-            rotate([BOTTOM_DEGREE,180,0]) panel_mixer();  
+    translate([20+41+(10*HU),BOTTOM_X,BOTTOM_Z]) 
+        rotate([BOTTOM_DEGREE,180,0]) panel_mixer();  
 
 rotate([90,0,0])
     translate([20+41+(82*HU),BOTTOM_X,BOTTOM_Z]) 

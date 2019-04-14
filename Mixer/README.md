@@ -1,13 +1,14 @@
 # Mixer
 
 When you start building your modular synthesizer you could mix the audio signals with some resistors 
-as a passive mixer. but soon you will need a mixer for your modules. This is a very simple double mixer
-with 3 inputs each and a inverted and non-inverted output. each mixer is build with TL072 OPAMP. Ther first
-half of the opamp is a 
+as a passive mixer. but soon you will need a mixer for your modules. This is a very simple mixer with 4 channels.
+The mixer is build with TL072 OPAMP. Both stages of the opamp are setup as an inverting amplifier. There is 
+also a LED driver for disaplying the activity on the fromt panel.
 
-## building
 
-## sample
+## BOM
+
+
 
 ## links
 
