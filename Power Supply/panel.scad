@@ -32,7 +32,15 @@ use <../lib/Designer Block.ttf>
 
 module panel_power(thickness=THICKNESS, screen=SCREEN, font_size=FONT_SIZE,armatures=ARMATURES) {
     difference() {
-        plate(HP=HP,HU=HU,armatures=armatures,thickness=thickness);
+        group() {
+            plate(HP=HP,HU=HU,armatures=armatures,thickness=thickness);
+            translate([0,0,thickness]) {
+                translate([1*RASTER_X+RASTER_X_TOP, 1*RASTER_Y+RASTER_Y_TOP, 0]) banana_holder();
+                translate([1*RASTER_X+RASTER_X_TOP, 2*RASTER_Y+RASTER_Y_TOP, 0]) banana_holder();
+                translate([1*RASTER_X+RASTER_X_TOP, 3*RASTER_Y+RASTER_Y_TOP, 0]) banana_holder();
+                translate([1*RASTER_X+RASTER_X_TOP, 4*RASTER_Y+RASTER_Y_TOP, 0]) banana_holder();
+            }
+        }
 
         translate([TOP_REFLECTOR_X, TOP_REFLECTOR_Y, 0]) rotate([0,0,270]) silkscreen(text="POWER",thickness=thickness, screen=screen, font_size=font_size, font="Designer Block");
         translate([0*RASTER_X+RASTER_X_TOP+5, 1*RASTER_Y+RASTER_Y_TOP]) silkscreen(text="+5", thickness=thickness, screen=screen, font_size=font_size, font="Designer Block", valign="right");
@@ -54,7 +62,7 @@ module panel_power(thickness=THICKNESS, screen=SCREEN, font_size=FONT_SIZE,armat
 
 
     //draw the stand
-    stand(x=15, y=30, count_x=0, count_y=27, r=3, h=18, hole=1.15,thickness=thickness);
+    stand(x=15, y=30, count_x=0, count_y=27, r=3, h=18, hole=1.25,thickness=thickness);
 
     if(armatures) {
 
