@@ -1,5 +1,4 @@
 EESchema Schematic File Version 4
-LIBS:midi-cache
 EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
@@ -650,4 +649,15 @@ Text Label 2450 3650 0    50   ~ 0
 CS_7
 Text Label 2450 3750 0    50   ~ 0
 CS_8
+$Comp
+L power:GND #PWR?
+U 1 1 5CB44ED2
+P 8400 2550
+F 0 "#PWR?" H 8400 2300 50  0001 C CNN
+F 1 "GND" H 8405 2377 50  0000 C CNN
+F 2 "" H 8400 2550 50  0001 C CNN
+F 3 "" H 8400 2550 50  0001 C CNN
+	1    8400 2550
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
