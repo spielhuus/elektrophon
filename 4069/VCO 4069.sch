@@ -1,4 +1,5 @@
 EESchema Schematic File Version 4
+LIBS:VCO 4069-cache
 EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
@@ -272,7 +273,7 @@ F 1 "BC558" H 3591 2655 50  0000 L CNN
 F 2 "Package_TO_SOT_THT:TO-92_Inline" H 3600 2625 50  0001 L CIN
 F 3 "http://www.fairchildsemi.com/ds/BC/BC557.pdf" H 3400 2700 50  0001 L CNN
 	1    3400 2700
-	1    0    0    -1  
+	1    0    0    1   
 $EndComp
 $Comp
 L Transistor_BJT:BC548 Q2
