@@ -317,12 +317,12 @@ Wire Wire Line
 $Comp
 L Transistor_BJT:2N3906 Q?
 U 1 1 5CA96F79
-P 4550 4100
-F 0 "Q?" V 4878 4100 50  0000 C CNN
-F 1 "2N3906" V 4787 4100 50  0000 C CNN
-F 2 "Package_TO_SOT_THT:TO-92_Inline" H 4750 4025 50  0001 L CIN
-F 3 "https://www.fairchildsemi.com/datasheets/2N/2N3906.pdf" H 4550 4100 50  0001 L CNN
-	1    4550 4100
+P 4550 4550
+F 0 "Q?" V 4878 4550 50  0000 C CNN
+F 1 "2N3906" V 4787 4550 50  0000 C CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 4750 4475 50  0001 L CIN
+F 3 "https://www.fairchildsemi.com/datasheets/2N/2N3906.pdf" H 4550 4550 50  0001 L CNN
+	1    4550 4550
 	0    1    -1   0   
 $EndComp
 Text GLabel 1050 5750 0    50   Input ~ 0
@@ -439,12 +439,12 @@ $EndComp
 $Comp
 L Device:D D?
 U 1 1 5CA9BE25
-P 4250 5050
-F 0 "D?" H 4250 5266 50  0000 C CNN
-F 1 "D" H 4250 5175 50  0000 C CNN
-F 2 "" H 4250 5050 50  0001 C CNN
-F 3 "~" H 4250 5050 50  0001 C CNN
-	1    4250 5050
+P 4250 5250
+F 0 "D?" H 4250 5466 50  0000 C CNN
+F 1 "D" H 4250 5375 50  0000 C CNN
+F 2 "" H 4250 5250 50  0001 C CNN
+F 3 "~" H 4250 5250 50  0001 C CNN
+	1    4250 5250
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -461,10 +461,6 @@ $EndComp
 Wire Wire Line
 	1950 5750 2250 5750
 Connection ~ 2250 5750
-Wire Wire Line
-	4100 5050 3900 5050
-Wire Wire Line
-	4400 5050 4550 5050
 $Comp
 L Device:R R?
 U 1 1 5CA9F4B7
@@ -479,38 +475,29 @@ $EndComp
 $Comp
 L Device:R R?
 U 1 1 5CA9F5B9
-P 3900 3700
-F 0 "R?" H 3830 3654 50  0000 R CNN
-F 1 "100k" H 3830 3745 50  0000 R CNN
-F 2 "" V 3830 3700 50  0001 C CNN
-F 3 "~" H 3900 3700 50  0001 C CNN
-	1    3900 3700
+P 3900 4050
+F 0 "R?" H 3830 4004 50  0000 R CNN
+F 1 "100k" H 3830 4095 50  0000 R CNN
+F 2 "" V 3830 4050 50  0001 C CNN
+F 3 "~" H 3900 4050 50  0001 C CNN
+	1    3900 4050
 	-1   0    0    1   
 $EndComp
 $Comp
 L power:GND #PWR?
 U 1 1 5CA9F611
-P 3900 3550
-F 0 "#PWR?" H 3900 3300 50  0001 C CNN
-F 1 "GND" H 3905 3377 50  0000 C CNN
-F 2 "" H 3900 3550 50  0001 C CNN
-F 3 "" H 3900 3550 50  0001 C CNN
-	1    3900 3550
+P 3900 3900
+F 0 "#PWR?" H 3900 3650 50  0001 C CNN
+F 1 "GND" H 3905 3727 50  0000 C CNN
+F 2 "" H 3900 3900 50  0001 C CNN
+F 3 "" H 3900 3900 50  0001 C CNN
+	1    3900 3900
 	-1   0    0    1   
 $EndComp
-Wire Wire Line
-	4350 4000 3900 4000
-Wire Wire Line
-	3900 3850 3900 4000
 Wire Wire Line
 	3750 5950 3750 6050
 Wire Wire Line
 	3750 5950 3950 5950
-Connection ~ 3900 4000
-Wire Wire Line
-	4750 4000 5400 4000
-Wire Wire Line
-	5400 4000 5400 2350
 $Comp
 L Device:R_POT_TRIM RV?
 U 1 1 5CB6EED5
@@ -747,10 +734,6 @@ Connection ~ 1700 3750
 Wire Wire Line
 	3100 3050 3100 4250
 Connection ~ 3100 3050
-Wire Wire Line
-	4550 4300 4550 5050
-Wire Wire Line
-	3900 4000 3900 4750
 $Comp
 L Amplifier_Operational:TL072 U?
 U 1 1 5CBF5504
@@ -908,10 +891,7 @@ Connection ~ 1950 7500
 Wire Wire Line
 	1950 7500 2500 7500
 Wire Wire Line
-	4550 5050 4550 5850
-Connection ~ 4550 5050
-Wire Wire Line
-	2250 5750 3950 5750
+	2250 5750 3900 5750
 Wire Wire Line
 	7250 2150 7600 2150
 Wire Notes Line
@@ -1048,4 +1028,32 @@ Wire Wire Line
 	950  7500 1450 7500
 Wire Wire Line
 	950  6900 1450 6900
+Connection ~ 3900 5750
+Wire Wire Line
+	3900 5750 3950 5750
+Wire Wire Line
+	4100 5250 3900 5250
+Connection ~ 3900 5250
+Wire Wire Line
+	3900 5250 3900 5750
+Wire Wire Line
+	4400 5250 4550 5250
+Connection ~ 4550 5250
+Wire Wire Line
+	4550 5250 4550 5850
+Wire Wire Line
+	4550 4750 4550 5250
+Wire Wire Line
+	5400 4450 4750 4450
+Wire Wire Line
+	5400 2350 5400 4450
+Wire Wire Line
+	3900 5050 3900 5250
+Wire Wire Line
+	3900 4200 3900 4450
+Wire Wire Line
+	4350 4450 3900 4450
+Connection ~ 3900 4450
+Wire Wire Line
+	3900 4450 3900 4750
 $EndSCHEMATC
