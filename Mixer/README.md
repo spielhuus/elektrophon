@@ -5,6 +5,11 @@ as a passive mixer. but soon you will need a mixer for your modules. This is a v
 The mixer is build with TL072 OPAMP. Both stages of the opamp are setup as an inverting amplifier. There is 
 also a LED driver for disaplying the activity on the fromt panel.
 
+A mixer can be AC or DC coupled. AC coupled means that the incput signal is leveled around zero. This is done
+with a capacitaor at the input signal. AC coupling has the drawback of canceling low frequency signals 
+such as a LFO or drum signal. This mixer is DC coupled. This means that the signals are mixed the way 
+they are. If you combine AC and DC signals with this mixer you will get clipping and distortion. 
+
 
 ## BOM
 
