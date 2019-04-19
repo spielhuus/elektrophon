@@ -10,6 +10,7 @@ The VCA1 is a basic VCA designed by Thomas Henry
 ## BOM
 
 |Ref|Value|Footprint|Datasheet|Manufacturer|Vendor|
+|:---|:---|:---|:---|:---|:---|
 |C1|CP||~|||
 |C2|CP||~|||
 |C3|0.22u||~|||
