@@ -40,6 +40,7 @@ module panel_vca(thickness=THICKNESS, screen=SCREEN, font_size=FONT_SIZE,armatur
                 translate([0*RASTER_X+RASTER_X_TOP, 0*RASTER_Y+RASTER_Y_TOP, 0]) banana_holder();
                 translate([0*RASTER_X+RASTER_X_TOP, 1*RASTER_Y+RASTER_Y_TOP, 0]) banana_holder();
                 translate([0*RASTER_X+RASTER_X_TOP, 2*RASTER_Y+RASTER_Y_TOP, 0]) banana_holder();
+                translate([0*RASTER_X+RASTER_X_TOP, 3*RASTER_Y+RASTER_Y_TOP]) banana_holder();
                 translate([0*RASTER_X+RASTER_X_TOP, 4*RASTER_Y+RASTER_Y_TOP]) banana_holder();
                 translate([2*RASTER_X+RASTER_X_TOP, 4*RASTER_Y+RASTER_Y_TOP]) banana_holder();
             }
@@ -57,6 +58,9 @@ module panel_vca(thickness=THICKNESS, screen=SCREEN, font_size=FONT_SIZE,armatur
         translate([1*RASTER_X+RASTER_X_TOP, 2*RASTER_Y+RASTER_Y_TOP, 0]) switch_hole(thickness=thickness);
         translate([2*RASTER_X+RASTER_X_TOP, 2*RASTER_Y+RASTER_Y_TOP, 0]) rotate([0,180,45]) potentiometer_hole(thickness=thickness);
 
+        translate([0*RASTER_X+RASTER_X_TOP, 3*RASTER_Y+RASTER_Y_TOP, 0]) banana_hole();
+        translate([2*RASTER_X+RASTER_X_TOP, 3*RASTER_Y+RASTER_Y_TOP, 0]) rotate([0,180,45]) potentiometer_hole(thickness=thickness);
+
         translate([0*RASTER_X+RASTER_X_TOP, 4*RASTER_Y+RASTER_Y_TOP]) banana_hole();
         translate([2*RASTER_X+RASTER_X_TOP, 4*RASTER_Y+RASTER_Y_TOP]) banana_hole();
     }
@@ -65,7 +69,7 @@ module panel_vca(thickness=THICKNESS, screen=SCREEN, font_size=FONT_SIZE,armatur
 
 
     //draw the stand
-    stand(x=0, y=31, count_x=22, count_y=26, r=3, h=18, hole=1.25,thickness=thickness,third=false);
+    stand(x=0, y=31, count_x=22, count_y=28 , r=3, h=30, hole=1.25,thickness=thickness,third=false);
 
     if(armatures) {
 
@@ -81,13 +85,17 @@ module panel_vca(thickness=THICKNESS, screen=SCREEN, font_size=FONT_SIZE,armatur
         translate([0*RASTER_X+RASTER_X_TOP, 2*RASTER_Y+RASTER_Y_TOP]) banana();
         translate([1*RASTER_Y+RASTER_X_TOP, 2*RASTER_Y+RASTER_Y_TOP, 0]) switch();
         translate([2*RASTER_Y+RASTER_X_TOP, 2*RASTER_Y+RASTER_Y_TOP, 0]) rotate([0,180,45]) potentiometer();
+
+        translate([0*RASTER_X+RASTER_X_TOP, 3*RASTER_Y+RASTER_Y_TOP]) banana();
+        translate([2*RASTER_Y+RASTER_X_TOP, 3*RASTER_Y+RASTER_Y_TOP, 0]) rotate([0,180,45]) potentiometer();
+
         translate([0*RASTER_X+RASTER_X_TOP, 4*RASTER_Y+RASTER_Y_TOP]) banana();
         translate([2*RASTER_X+RASTER_X_TOP, 4*RASTER_Y+RASTER_Y_TOP]) banana();
     }
 }
 
 module perfboard(x=0,y=0,width=1,length=1) {
-    translate([x,y,18+THICKNESS]) {
+    translate([x,y,30+THICKNESS]) {
         cube([width*2.54, length*2.54, 0.3]);        
     }
 }

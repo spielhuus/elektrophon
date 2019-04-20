@@ -1,4 +1,5 @@
 EESchema Schematic File Version 4
+LIBS:ADSR-cache
 EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
@@ -33,7 +34,7 @@ F 1 "BC547" H 1941 3705 50  0000 L CNN
 F 2 "Package_TO_SOT_THT:TO-92_Inline" H 1950 3675 50  0001 L CIN
 F 3 "http://www.fairchildsemi.com/ds/BC/BC547.pdf" H 1750 3750 50  0001 L CNN
 	1    1750 3750
-	1    0    0    -1  
+	1    0    0    1   
 $EndComp
 $Comp
 L Transistor_BJT:BC547 Q?
@@ -44,7 +45,7 @@ F 1 "BC547" H 2791 3705 50  0000 L CNN
 F 2 "Package_TO_SOT_THT:TO-92_Inline" H 2800 3675 50  0001 L CIN
 F 3 "http://www.fairchildsemi.com/ds/BC/BC547.pdf" H 2600 3750 50  0001 L CNN
 	1    2600 3750
-	1    0    0    -1  
+	1    0    0    1   
 $EndComp
 $Comp
 L Transistor_BJT:BC547 Q?
@@ -55,7 +56,7 @@ F 1 "BC547" H 3841 3705 50  0000 L CNN
 F 2 "Package_TO_SOT_THT:TO-92_Inline" H 3850 3675 50  0001 L CIN
 F 3 "http://www.fairchildsemi.com/ds/BC/BC547.pdf" H 3650 3750 50  0001 L CNN
 	1    3650 3750
-	1    0    0    -1  
+	1    0    0    1   
 $EndComp
 $Comp
 L Device:R R?
