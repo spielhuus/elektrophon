@@ -82,7 +82,7 @@ void handleNoteOn(byte inChannel, byte inNumber, byte inVelocity) {
     //set the note
     unsigned int mV = (unsigned int) ((float) inNumber * NOTE_SF + 0.5); 
     setVoltage(DAC1, 0, 1, mV);  // DAC1, channel 0, gain = 2X
-    act_note = inNumber;
+    act_note[inChannel-1] = inNumber;
   }
   digitalWrite(LED_PIN, LOW);
 }
