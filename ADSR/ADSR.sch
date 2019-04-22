@@ -34,7 +34,7 @@ F 1 "BC547" H 1941 3705 50  0000 L CNN
 F 2 "Package_TO_SOT_THT:TO-92_Inline" H 1950 3675 50  0001 L CIN
 F 3 "http://www.fairchildsemi.com/ds/BC/BC547.pdf" H 1750 3750 50  0001 L CNN
 	1    1750 3750
-	1    0    0    1   
+	1    0    0    -1  
 $EndComp
 $Comp
 L Transistor_BJT:BC547 Q?
@@ -45,7 +45,7 @@ F 1 "BC547" H 2791 3705 50  0000 L CNN
 F 2 "Package_TO_SOT_THT:TO-92_Inline" H 2800 3675 50  0001 L CIN
 F 3 "http://www.fairchildsemi.com/ds/BC/BC547.pdf" H 2600 3750 50  0001 L CNN
 	1    2600 3750
-	1    0    0    1   
+	1    0    0    -1  
 $EndComp
 $Comp
 L Transistor_BJT:BC547 Q?
@@ -56,7 +56,7 @@ F 1 "BC547" H 3841 3705 50  0000 L CNN
 F 2 "Package_TO_SOT_THT:TO-92_Inline" H 3850 3675 50  0001 L CIN
 F 3 "http://www.fairchildsemi.com/ds/BC/BC547.pdf" H 3650 3750 50  0001 L CNN
 	1    3650 3750
-	1    0    0    1   
+	1    0    0    -1  
 $EndComp
 $Comp
 L Device:R R?
@@ -208,7 +208,7 @@ L Device:C C?
 U 1 1 5CB6CE2B
 P 2900 3450
 F 0 "C?" V 2648 3450 50  0000 C CNN
-F 1 "C" V 2739 3450 50  0000 C CNN
+F 1 "0.01u" V 2739 3450 50  0000 C CNN
 F 2 "" H 2938 3300 50  0001 C CNN
 F 3 "~" H 2900 3450 50  0001 C CNN
 	1    2900 3450
@@ -565,10 +565,6 @@ $EndComp
 Wire Wire Line
 	6650 4650 6650 4900
 Wire Wire Line
-	6650 4900 7250 4900
-Wire Wire Line
-	7250 4350 7350 4350
-Wire Wire Line
 	7200 3350 7350 3350
 Connection ~ 7350 3350
 Wire Wire Line
@@ -588,9 +584,6 @@ Wire Wire Line
 Wire Wire Line
 	7100 3450 7350 3450
 Connection ~ 7350 3450
-Connection ~ 7250 4550
-Wire Wire Line
-	7250 4550 7250 4350
 $Comp
 L power:+15V #PWR?
 U 1 1 5CBBED64
@@ -604,8 +597,6 @@ F 3 "" H 6050 4000 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	6050 4600 6050 4700
-Wire Wire Line
-	7250 4550 7250 4900
 Wire Wire Line
 	7200 3900 7200 4050
 Wire Wire Line
@@ -667,7 +658,7 @@ Wire Wire Line
 Text GLabel 6100 4300 2    50   Input ~ 0
 Sustain_1
 Text GLabel 6100 4600 2    50   Input ~ 0
-Sustain_2
+Sustain_3
 Wire Wire Line
 	6100 4300 6050 4300
 Connection ~ 6050 4300
@@ -699,4 +690,15 @@ F 3 "~" H 4650 6800 50  0001 C CNN
 	1    4650 6800
 	1    0    0    -1  
 $EndComp
+Text GLabel 6600 4450 1    50   Input ~ 0
+Sustain_2
+Wire Wire Line
+	7350 4900 7350 4550
+Wire Wire Line
+	6650 4900 7350 4900
+Wire Wire Line
+	7250 4550 7350 4550
+Connection ~ 7350 4550
+Wire Wire Line
+	7350 4550 7350 4350
 $EndSCHEMATC
