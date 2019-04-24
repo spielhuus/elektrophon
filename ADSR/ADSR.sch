@@ -295,8 +295,6 @@ Wire Wire Line
 	3750 2600 3750 2700
 Wire Wire Line
 	4600 3350 3750 3350
-Wire Wire Line
-	3750 3000 3750 3350
 Connection ~ 3750 3350
 Wire Wire Line
 	3750 3350 3750 3550
@@ -428,7 +426,7 @@ L Device:C C?
 U 1 1 5CB7D114
 P 4150 3950
 F 0 "C?" H 4035 3904 50  0000 R CNN
-F 1 "C" H 4035 3995 50  0000 R CNN
+F 1 "10n" H 4035 3995 50  0000 R CNN
 F 2 "" H 4188 3800 50  0001 C CNN
 F 3 "~" H 4150 3950 50  0001 C CNN
 	1    4150 3950
@@ -445,7 +443,7 @@ L Device:R R?
 U 1 1 5CB80795
 P 6050 4150
 F 0 "R?" H 5980 4104 50  0000 R CNN
-F 1 "220" H 5980 4195 50  0000 R CNN
+F 1 "4k7" H 5980 4195 50  0000 R CNN
 F 2 "" V 5980 4150 50  0001 C CNN
 F 3 "~" H 6050 4150 50  0001 C CNN
 	1    6050 4150
@@ -456,7 +454,7 @@ L Device:R_POT RV?
 U 1 1 5CB80D85
 P 6050 4450
 F 0 "RV?" H 5980 4496 50  0000 R CNN
-F 1 "1M" H 5980 4405 50  0000 R CNN
+F 1 "10k" H 5980 4405 50  0000 R CNN
 F 2 "" H 6050 4450 50  0001 C CNN
 F 3 "~" H 6050 4450 50  0001 C CNN
 	1    6050 4450
@@ -508,7 +506,7 @@ L Device:C C?
 U 1 1 5CB907ED
 P 7950 3600
 F 0 "C?" H 7835 3554 50  0000 R CNN
-F 1 "2n2" H 7835 3645 50  0000 R CNN
+F 1 "2.2u" H 7835 3645 50  0000 R CNN
 F 2 "" H 7988 3450 50  0001 C CNN
 F 3 "~" H 7950 3600 50  0001 C CNN
 	1    7950 3600
@@ -572,7 +570,7 @@ Wire Wire Line
 Wire Wire Line
 	4600 3750 4450 3750
 Wire Wire Line
-	4450 3750 4450 2850
+	4450 3750 4450 3150
 Wire Wire Line
 	4450 2850 5900 2850
 Wire Wire Line
@@ -622,8 +620,6 @@ $EndComp
 Wire Wire Line
 	2400 3100 2700 3100
 Connection ~ 2700 3100
-Wire Wire Line
-	2700 3100 2700 3450
 Wire Wire Line
 	2100 3100 1500 3100
 Wire Wire Line
@@ -701,4 +697,34 @@ Wire Wire Line
 Connection ~ 7350 4550
 Wire Wire Line
 	7350 4550 7350 4350
+Text Notes 3150 3200 0    50   ~ 10
+change
+Text Notes 4000 3350 0    50   ~ 0
+trigger
+Wire Wire Line
+	2700 3100 2700 3150
+Wire Wire Line
+	3750 3000 3750 3350
+Wire Wire Line
+	2700 3150 4450 3150
+Connection ~ 2700 3150
+Wire Wire Line
+	2700 3150 2700 3450
+Connection ~ 4450 3150
+Wire Wire Line
+	4450 3150 4450 2850
+Text Notes 4450 3850 0    50   ~ 0
+reset
+Text Notes 6150 4150 0    50   ~ 10
+Change
+Text Notes 6450 3750 0    50   ~ 0
+treshold
+Text Notes 5800 2750 0    50   ~ 0
+100
+Text Notes 5750 3250 0    50   ~ 0
+100
+Text Notes 8050 3750 0    50   ~ 0
+4.7u
+Text Notes 4200 4150 0    50   ~ 10
+Change
 $EndSCHEMATC

@@ -18,7 +18,7 @@ module silkscreen( text="lorem", thickness=5, screen=0.1, font_size=5, font=FONT
  * draw preview text
  */
 module silkscreen_text( text="lorem", thickness=5, screen=0.1, font_size=5, font=FONT, halign="center") {
-    color("blue") translate([0,font_size/2,0])
+    color("blue") translate([0,0,0])
         linear_extrude(height=screen)
             rotate([180,0,0])
                 text(text=text, font=font, size=font_size, halign=halign);
