@@ -1,6 +1,5 @@
 EESchema Schematic File Version 4
-LIBS:ADSR-cache
-EELAYER 29 0
+EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -208,7 +207,7 @@ L Device:C C?
 U 1 1 5CB6CE2B
 P 2900 3450
 F 0 "C?" V 2648 3450 50  0000 C CNN
-F 1 "0.01u" V 2739 3450 50  0000 C CNN
+F 1 "10n" V 2739 3450 50  0000 C CNN
 F 2 "" H 2938 3300 50  0001 C CNN
 F 3 "~" H 2900 3450 50  0001 C CNN
 	1    2900 3450
@@ -624,13 +623,13 @@ Wire Wire Line
 	2100 3100 1500 3100
 Wire Wire Line
 	1500 3100 1500 3750
-Wire Notes Line rgb(0, 0, 111)
+Wire Notes Line rgb(0, 0, 0)
 	2100 3200 2100 2850
-Wire Notes Line rgb(0, 0, 111)
+Wire Notes Line rgb(0, 0, 0)
 	2100 2850 2400 2850
-Wire Notes Line rgb(0, 0, 111)
+Wire Notes Line rgb(0, 0, 0)
 	2400 2850 2400 3200
-Wire Notes Line rgb(0, 0, 111)
+Wire Notes Line rgb(0, 0, 0)
 	2400 3200 2100 3200
 Wire Wire Line
 	950  3750 1100 3750
