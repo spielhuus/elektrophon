@@ -697,8 +697,6 @@ Wire Wire Line
 Connection ~ 7350 4550
 Wire Wire Line
 	7350 4550 7350 4350
-Text Notes 3150 3200 0    50   ~ 10
-change
 Text Notes 4000 3350 0    50   ~ 0
 trigger
 Wire Wire Line
@@ -725,6 +723,8 @@ Text Notes 5750 3250 0    50   ~ 0
 100
 Text Notes 8050 3750 0    50   ~ 0
 4.7u
-Text Notes 4200 4150 0    50   ~ 10
-Change
+Text Notes 8050 3850 0    50   ~ 0
+10u
+Text Notes 7400 4400 0    50   ~ 0
+100
 $EndSCHEMATC
