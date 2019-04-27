@@ -22,7 +22,7 @@ needed for that. The proper solution is a virtual ground mixer. Briefly this wil
 
 # links
 
-* [Wall Wart Power Supply (+/-9V to +/-15V)](http://musicfromouterspace.com/analogsynth_new/WALLWARTSUPPLY/WALLWARTSUPPLY.php)
+* [ESP:	Audio Signal Mixing)](http://sound.whsites.net/articles/audio-mixing.htm)
 
 ---
 [![CC BY-SA](https://licensebuttons.net/l/by-sa/3.0/88x31.png)](https://creativecommons.org/licenses/by-sa/4.0/)
