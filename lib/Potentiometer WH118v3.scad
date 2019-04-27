@@ -14,7 +14,7 @@ module WH118_hole( radius=6,height=10 ) {
  * draw the plug 
  */
 module WH118() {
-    import( "../lib/Potentiometer_WH118v3.stl", convexity = 10 );
+    import( "../lib/potentiometer-wh118.stl", convexity = 10 );
 }
 
 translate([0,0,0]) WH118();
