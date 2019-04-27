@@ -1,5 +1,5 @@
 EESchema Schematic File Version 4
-EELAYER 29 0
+EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -611,4 +611,6 @@ F 3 "~" H 9350 1600 50  0001 C CNN
 	1    9350 1600
 	0    1    1    0   
 $EndComp
+Text Notes 2200 1550 0    50   ~ 0
+120k
 $EndSCHEMATC
