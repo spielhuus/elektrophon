@@ -95,7 +95,7 @@ void handleNoteOff(byte inChannel, byte inNumber, byte inVelocity) {
 
   if(inChannel==1 && act_note[inChannel-1] == inNumber ) {
     //set the velocity
-    setVoltage(DAC1, 1, 1, inVelocity<<5);  // DAC1, channel 1, gain = 2X
+    setVoltage(DAC1, 1, 1, 0 /*inVelocity<<5*/);  // DAC1, channel 1, gain = 2X
   }
 //  digitalWrite(inChannel+1,LOW); //set trigger
 }
