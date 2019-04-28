@@ -230,28 +230,6 @@ F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 7450 2350 50  0001 C CNN
 $EndComp
 $Comp
 L Amplifier_Operational:TL074 U1
-U 3 1 5CBE4200
-P 8700 4150
-F 0 "U1" H 8700 4400 50  0000 C CNN
-F 1 "TL074" H 8700 4500 50  0000 C CNN
-F 2 "" H 8650 4250 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 8750 4350 50  0001 C CNN
-	3    8700 4150
-	-1   0    0    1   
-$EndComp
-$Comp
-L Amplifier_Operational:TL074 U1
-U 4 1 5CBE5C53
-P 9700 2150
-F 0 "U1" H 9700 1783 50  0000 C CNN
-F 1 "TL074" H 9700 1874 50  0000 C CNN
-F 2 "" H 9650 2250 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 9750 2350 50  0001 C CNN
-	4    9700 2150
-	1    0    0    1   
-$EndComp
-$Comp
-L Amplifier_Operational:TL074 U1
 U 5 1 5CBE755F
 P 2150 7350
 F 0 "U1" H 2108 7396 50  0000 L CNN
@@ -296,8 +274,6 @@ F 3 "" H 2250 3900 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	2800 2750 2800 2700
-Wire Wire Line
 	3600 2600 3600 2750
 $Comp
 L Device:R R8
@@ -335,12 +311,7 @@ Wire Wire Line
 Wire Wire Line
 	4900 2200 4900 2250
 Wire Wire Line
-	2800 2700 3900 2700
-Wire Wire Line
 	4700 2700 4700 2400
-Connection ~ 2800 2700
-Wire Wire Line
-	2800 2700 2800 2600
 $Comp
 L Device:C C9
 U 1 1 5CBF6EAA
@@ -361,9 +332,6 @@ Wire Wire Line
 	3900 2300 3650 2300
 Wire Wire Line
 	3900 2650 3900 2700
-Connection ~ 3900 2700
-Wire Wire Line
-	3900 2700 4700 2700
 $Comp
 L Amplifier_Operational:CA3080 U2
 U 1 1 5CBF9C06
@@ -462,23 +430,23 @@ Wire Wire Line
 $Comp
 L Device:R R7
 U 1 1 5CC09AC4
-P 2800 3300
-F 0 "R7" H 2730 3254 50  0000 R CNN
-F 1 "470k" H 2730 3345 50  0000 R CNN
-F 2 "" V 2730 3300 50  0001 C CNN
-F 3 "~" H 2800 3300 50  0001 C CNN
-	1    2800 3300
+P 2800 3500
+F 0 "R7" H 2730 3454 50  0000 R CNN
+F 1 "470k" H 2730 3545 50  0000 R CNN
+F 2 "" V 2730 3500 50  0001 C CNN
+F 3 "~" H 2800 3500 50  0001 C CNN
+	1    2800 3500
 	-1   0    0    1   
 $EndComp
 $Comp
 L power:-15V #PWR010
 U 1 1 5CC0A122
-P 2800 3450
-F 0 "#PWR010" H 2800 3550 50  0001 C CNN
-F 1 "-15V" H 2815 3623 50  0000 C CNN
-F 2 "" H 2800 3450 50  0001 C CNN
-F 3 "" H 2800 3450 50  0001 C CNN
-	1    2800 3450
+P 2800 3650
+F 0 "#PWR010" H 2800 3750 50  0001 C CNN
+F 1 "-15V" H 2815 3823 50  0000 C CNN
+F 2 "" H 2800 3650 50  0001 C CNN
+F 3 "" H 2800 3650 50  0001 C CNN
+	1    2800 3650
 	-1   0    0    1   
 $EndComp
 $Comp
@@ -559,8 +527,6 @@ Wire Wire Line
 Wire Wire Line
 	9400 1700 10000 1700
 Connection ~ 10000 1700
-Wire Wire Line
-	10000 1700 10000 2150
 $Comp
 L Device:R R16
 U 1 1 5CC324EC
@@ -694,9 +660,6 @@ F 3 "" H 9100 2750 50  0001 C CNN
 	1    9100 2750
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	10000 2400 10000 2150
-Connection ~ 10000 2150
 $Comp
 L Device:LED D2
 U 1 1 5CC5CDF2
@@ -1064,17 +1027,6 @@ Wire Wire Line
 	1850 7050 2050 7050
 Wire Wire Line
 	1850 7650 2050 7650
-$Comp
-L Device:R R17
-U 1 1 5CC58972
-P 8700 3750
-F 0 "R17" V 8493 3750 50  0000 C CNN
-F 1 "10k" V 8584 3750 50  0000 C CNN
-F 2 "" V 8630 3750 50  0001 C CNN
-F 3 "~" H 8700 3750 50  0001 C CNN
-	1    8700 3750
-	0    -1   -1   0   
-$EndComp
 Wire Wire Line
 	8550 3750 8400 3750
 Connection ~ 8400 3750
@@ -1105,7 +1057,6 @@ Wire Wire Line
 	8400 3400 8400 3750
 Wire Wire Line
 	8400 4150 6850 4150
-Connection ~ 8400 4150
 Wire Wire Line
 	9850 4250 9000 4250
 Text Label 2050 4400 0    50   ~ 0
@@ -1157,4 +1108,59 @@ Text Notes 2450 6950 0    50   ~ 0
 U2
 Text Notes 2950 6950 0    50   ~ 0
 U3
+Wire Wire Line
+	2800 2600 2800 2750
+Wire Wire Line
+	3850 2700 3850 3200
+Wire Wire Line
+	3850 3200 2800 3200
+Wire Wire Line
+	2800 3150 2800 3200
+Connection ~ 2800 3200
+Wire Wire Line
+	2800 3200 2800 3350
+Wire Wire Line
+	3850 2700 3900 2700
+Connection ~ 3900 2700
+Wire Wire Line
+	3900 2700 4700 2700
+$Comp
+L Amplifier_Operational:TL074 U?
+U 3 1 5CC69F2F
+P 9700 2150
+F 0 "U?" H 9700 2400 50  0000 C CNN
+F 1 "TL074" H 9700 2500 50  0000 C CNN
+F 2 "" H 9650 2250 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 9750 2350 50  0001 C CNN
+	3    9700 2150
+	1    0    0    1   
+$EndComp
+$Comp
+L Amplifier_Operational:TL074 U?
+U 4 1 5CC6AD62
+P 8700 4150
+F 0 "U?" H 8700 4450 50  0000 C CNN
+F 1 "TL074" H 8700 4550 50  0000 C CNN
+F 2 "" H 8650 4250 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 8750 4350 50  0001 C CNN
+	4    8700 4150
+	-1   0    0    1   
+$EndComp
+Connection ~ 8400 4150
+Wire Wire Line
+	10000 1700 10000 2150
+Connection ~ 10000 2150
+Wire Wire Line
+	10000 2150 10000 2400
+$Comp
+L Device:R R17
+U 1 1 5CC58972
+P 8700 3750
+F 0 "R17" V 8493 3750 50  0000 C CNN
+F 1 "10k" V 8584 3750 50  0000 C CNN
+F 2 "" V 8630 3750 50  0001 C CNN
+F 3 "~" H 8700 3750 50  0001 C CNN
+	1    8700 3750
+	0    -1   -1   0   
+$EndComp
 $EndSCHEMATC
