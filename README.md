@@ -4,9 +4,13 @@ collection of modules for a modular analog electro acoustic noise machine. all m
 # before you start
 i recommend building the breadboard syntesizers on hackaday by elliot williams. this is a very good introduction to the lunetta spririt of building synthesizers. ---
 
-# rack size
+# modules and racks
 
-the rack size is measured in HP and HU. The desktop rack has two rows of 5U with a liength of xx HP.
+
+
+the sizes for modular synths are mostly equal to the standard size for electronic and computer racks. the rails and racks for synthesizers are very expensive, but the parts can also be ordered from electronic vendors. The horizontal Rails from the electronic vendor are a bit cheaper (i.e. [farnel](https://de.farnell.com/schroff/34560-484/horizontal-rail-enclosure/dp/2816357). 
+
+
 
 # modules 
 
