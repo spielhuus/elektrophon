@@ -1,6 +1,6 @@
 /** ADSR **/
 
-ARMATURES=true;
+ARMATURES=false;
 
 HU=3;
 HP=10;
@@ -62,11 +62,11 @@ module panel_adsr(thickness=THICKNESS, screen=SCREEN, font_size=FONT_SIZE,armatu
 
 
     //draw the stand
-    stand(x=0, y=31, count_x=16, count_y=28 , r=3, h=30, hole=1.25,thickness=thickness,third=false);
+    stand(x=0, y=31, count_x=17, count_y=28 , r=3, h=30, hole=1.25,thickness=thickness,third=false);
 
     if(armatures) {
 
-        color("green") perfboard(x=-4,y=10,width=18,length=39);
+        color("green") perfboard(x=-4,y=10,width=19,length=39);
         translate([0*RASTER_X+RASTER_X_TOP, 0*RASTER_Y+RASTER_Y_TOP, 0]) silkscreen_text(text="A", thickness=thickness, screen=screen, font_size=font_size, font="Designer Block", valign="right");
         translate([0*RASTER_X+RASTER_X_TOP, 1*RASTER_Y+RASTER_Y_TOP, 0]) silkscreen_text(text="D", thickness=thickness, screen=screen, font_size=font_size, font="Designer Block", valign="right");
         translate([0*RASTER_X+RASTER_X_TOP, 2*RASTER_Y+RASTER_Y_TOP, 0]) silkscreen_text(text="S", thickness=thickness, screen=screen, font_size=font_size, font="Designer Block", valign="right");

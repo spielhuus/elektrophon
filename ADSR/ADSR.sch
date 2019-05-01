@@ -1,6 +1,6 @@
 EESchema Schematic File Version 4
 LIBS:ADSR-cache
-EELAYER 29 0
+EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -506,7 +506,7 @@ L Device:C C3
 U 1 1 5CB907ED
 P 7950 3600
 F 0 "C3" H 7835 3554 50  0000 R CNN
-F 1 "2.2u" H 7835 3645 50  0000 R CNN
+F 1 "4.7u" H 7835 3645 50  0000 R CNN
 F 2 "" H 7988 3450 50  0001 C CNN
 F 3 "~" H 7950 3600 50  0001 C CNN
 	1    7950 3600
@@ -704,10 +704,6 @@ Text Notes 4450 3850 0    50   ~ 0
 reset
 Text Notes 6450 3750 0    50   ~ 0
 treshold
-Text Notes 8050 3750 0    50   ~ 0
-4.7u
-Text Notes 8050 3850 0    50   ~ 0
-10u
 $Comp
 L Device:C C?
 U 1 1 5CC9709D
