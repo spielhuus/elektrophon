@@ -31,7 +31,7 @@ use <../lib/toggle_switch.scad>
 
 use <../lib/Designer Block.ttf>
 
-module panel_vca(thickness=THICKNESS, screen=SCREEN, font_size=FONT_SIZE,armatures=ARMATURES) {
+module panel_adsr(thickness=THICKNESS, screen=SCREEN, font_size=FONT_SIZE,armatures=ARMATURES) {
     difference() {
         group() {
             translate([-6,0,0]) plate(HP=HP,HU=HU,armatures=armatures,thickness=thickness);
@@ -66,7 +66,7 @@ module panel_vca(thickness=THICKNESS, screen=SCREEN, font_size=FONT_SIZE,armatur
 
     if(armatures) {
 
-//        color("green") perfboard(x=-4,y=10,width=19,length=39);
+        color("green") perfboard(x=-4,y=10,width=18,length=39);
         translate([0*RASTER_X+RASTER_X_TOP, 0*RASTER_Y+RASTER_Y_TOP, 0]) silkscreen_text(text="A", thickness=thickness, screen=screen, font_size=font_size, font="Designer Block", valign="right");
         translate([0*RASTER_X+RASTER_X_TOP, 1*RASTER_Y+RASTER_Y_TOP, 0]) silkscreen_text(text="D", thickness=thickness, screen=screen, font_size=font_size, font="Designer Block", valign="right");
         translate([0*RASTER_X+RASTER_X_TOP, 2*RASTER_Y+RASTER_Y_TOP, 0]) silkscreen_text(text="S", thickness=thickness, screen=screen, font_size=font_size, font="Designer Block", valign="right");
@@ -88,4 +88,4 @@ module perfboard(x=0,y=0,width=1,length=1) {
     }
 }
 
-panel_vca(); 
+panel_adsr(); 
