@@ -3,14 +3,17 @@
  */
 
 /**
- * draw the hole 
+ * draw the holder 
  */
 module banana_holder(radius=4.5,height=10) {
     cylinder(r=5.5, h=3, $fn=50);
 }
 
-module banana_hole(radius=4.5,height=10) {
-    translate(0,0,3) cylinder(r=4, h=5+3, $fn=50);
+/**
+ * draw the hole 
+ */
+module banana_hole(radius=4,height=10,thickness=1,holder=10) {
+    translate([0,0,-thickness-1]) cylinder(r=radius, h=thickness*2+holder, $fn=100);
 }
 
 /** 

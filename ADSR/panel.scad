@@ -21,6 +21,8 @@ RASTER_X_TOP=9;
 RASTER_X=21;
 RASTER_Y=21;
 
+font="Source Code Pro:style=Bold";
+
 use <../lib/reflector.scad>
 use <../lib/plate.scad>
 use <../lib/Pomona 1581 Banana Jack.scad>
@@ -28,8 +30,6 @@ use <../lib/silk.scad>
 use <../lib/stand.scad>
 use <../lib/Potentiometer_small.scad>
 use <../lib/toggle_switch.scad>
-
-use <../lib/Designer Block.ttf>
 
 module panel_adsr(thickness=THICKNESS, screen=SCREEN, font_size=FONT_SIZE,armatures=ARMATURES) {
     difference() {
@@ -41,25 +41,24 @@ module panel_adsr(thickness=THICKNESS, screen=SCREEN, font_size=FONT_SIZE,armatu
             }
         }
 
-        translate([0*RASTER_X+RASTER_X_TOP, 0*RASTER_Y+RASTER_Y_TOP, 0]) silkscreen(text="A", thickness=thickness, screen=screen, font_size=font_size, font="Designer Block", valign="right");
-        translate([0*RASTER_X+RASTER_X_TOP, 1*RASTER_Y+RASTER_Y_TOP, 0]) silkscreen(text="D", thickness=thickness, screen=screen, font_size=font_size, font="Designer Block", valign="right");
-        translate([0*RASTER_X+RASTER_X_TOP, 2*RASTER_Y+RASTER_Y_TOP, 0]) silkscreen(text="S", thickness=thickness, screen=screen, font_size=font_size, font="Designer Block", valign="right");
-        translate([0*RASTER_X+RASTER_X_TOP, 3*RASTER_Y+RASTER_Y_TOP, 0]) silkscreen(text="R", thickness=thickness, screen=screen, font_size=font_size, font="Designer Block", valign="right");
+        translate([0*RASTER_X+RASTER_X_TOP, 0*RASTER_Y+RASTER_Y_TOP, 0]) silkscreen(text="A", thickness=thickness, screen=screen, font_size=font_size, font=font, valign="right");
+        translate([0*RASTER_X+RASTER_X_TOP, 1*RASTER_Y+RASTER_Y_TOP, 0]) silkscreen(text="D", thickness=thickness, screen=screen, font_size=font_size, font=font, valign="right");
+        translate([0*RASTER_X+RASTER_X_TOP, 2*RASTER_Y+RASTER_Y_TOP, 0]) silkscreen(text="S", thickness=thickness, screen=screen, font_size=font_size, font=font, valign="right");
+        translate([0*RASTER_X+RASTER_X_TOP, 3*RASTER_Y+RASTER_Y_TOP, 0]) silkscreen(text="R", thickness=thickness, screen=screen, font_size=font_size, font=font, valign="right");
 
         translate([1*RASTER_X+RASTER_X_TOP, 0*RASTER_Y+RASTER_Y_TOP, 0]) rotate([0,180,45]) potentiometer_hole(thickness=thickness);
         translate([1*RASTER_X+RASTER_X_TOP, 1*RASTER_Y+RASTER_Y_TOP, 0]) rotate([0,180,45]) potentiometer_hole(thickness=thickness);
         translate([1*RASTER_X+RASTER_X_TOP, 2*RASTER_Y+RASTER_Y_TOP, 0]) rotate([0,180,45]) potentiometer_hole(thickness=thickness);
         translate([1*RASTER_X+RASTER_X_TOP, 3*RASTER_Y+RASTER_Y_TOP, 0]) rotate([0,180,45]) potentiometer_hole(thickness=thickness);
 
-        translate([0*RASTER_X+RASTER_X_TOP, 4*RASTER_Y+RASTER_Y_TOP]) banana_hole();
-        translate([1*RASTER_X+RASTER_X_TOP, 4*RASTER_Y+RASTER_Y_TOP]) banana_hole();
+        translate([0*RASTER_X+RASTER_X_TOP, 4*RASTER_Y+RASTER_Y_TOP]) banana_hole(thickness=thickness);
+        translate([1*RASTER_X+RASTER_X_TOP, 4*RASTER_Y+RASTER_Y_TOP]) banana_hole(thickness=thickness);
     }
 
     translate([0*RASTER_X+RASTER_X_TOP, 0*RASTER_Y+RASTER_Y_TOP-1.8, thickness]) rotate([0,0,90]) reflector(l=10);
     translate([0*RASTER_X+RASTER_X_TOP, 1*RASTER_Y+RASTER_Y_TOP-1.8, thickness]) rotate([0,0,90]) reflector(l=10);
     translate([0*RASTER_X+RASTER_X_TOP, 2*RASTER_Y+RASTER_Y_TOP-1.8, thickness]) rotate([0,0,90]) reflector(l=10);
     translate([0*RASTER_X+RASTER_X_TOP, 3*RASTER_Y+RASTER_Y_TOP-1.8, thickness]) rotate([0,0,90]) reflector(l=10);
-
 
     //draw the stand
     stand(x=0, y=31, count_x=17, count_y=28 , r=3, h=30, hole=1.25,thickness=thickness,third=false);

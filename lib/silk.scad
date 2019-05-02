@@ -10,7 +10,7 @@ FONT="Source Code Pro";
  */
 module silkscreen( text="lorem", thickness=5, screen=0.1, font_size=5, font=FONT, halign="center") {
     translate( [0, 0, screen])
-        linear_extrude(height = thickness-screen)
+        linear_extrude(height=thickness+1)
             rotate([180,0,0])
                 text(text = text, font=font, size=font_size, halign=halign);
 }
