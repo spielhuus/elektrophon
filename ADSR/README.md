@@ -5,7 +5,7 @@ frequencies or pitch. The output of the ADSR module can for example be patched t
 used by René Schmitz and Yves Usson. 
 
 <a href="https://spielhuus.github.io/elektrophon/adsr_schema.svg"><img src="https://spielhuus.github.io/elektrophon/adsr_schema._tmb.jpg" width="100%"></img></a>
-<a href="https://spielhuus.github.io/elektrophon/adsr_stripboard_tmb.png"><img src="https://spielhuus.github.io/elektrophon/adsr_stripboard.png" width="100%"></img></a>
+<a href="https://spielhuus.github.io/elektrophon/adsr_stripboard.png"><img src="https://spielhuus.github.io/elektrophon/adsr_stripboard_tmb.png" width="100%"></img></a>
 
 ## BOM
 
