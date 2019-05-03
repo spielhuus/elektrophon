@@ -32,13 +32,13 @@ module side() {
 }
 
 module screw_holes() {
-    translate([4,3,0]) cylinder(h=30,r=1.6,center=true,$fn=100);
-    translate([4,3,-27]) cylinder(h=40,r=3.5,center=true,$fn=100);
-    translate([HU*HU_SIZE-8+4,3,0]) cylinder(h=30,r=1.7,center=true,$fn=100);
-    translate([HU*HU_SIZE-8+4,3,-27]) cylinder(h=40,r=3.5,center=true,$fn=100);
+    translate([4,3,0]) cylinder(h=30,r=1.8,center=true,$fn=100);
+//    translate([4,3,-27]) cylinder(h=40,r=3.5,center=true,$fn=100);
+    translate([HU*HU_SIZE-8+4,3,0]) cylinder(h=30,r=1.8,center=true,$fn=100);
+//    translate([HU*HU_SIZE-8+4,3,-27]) cylinder(h=40,r=3.5,center=true,$fn=100);
 
-    translate([4,3,431.80]) cylinder(h=30,r=1.6,center=true,$fn=100);
-    translate([HU*HU_SIZE-8+4,3,431.80]) cylinder(h=30,r=1.6,center=true,$fn=100);
+//    translate([4,3,431.80]) cylinder(h=30,r=1.6,center=true,$fn=100);
+//    translate([HU*HU_SIZE-8+4,3,431.80]) cylinder(h=30,r=1.6,center=true,$fn=100);
 }
 
 module rails() {
@@ -63,4 +63,5 @@ module draw() {
     }
 }
 
-draw();
+//draw();
+side();
