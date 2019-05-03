@@ -27,7 +27,7 @@ used by René Schmitz and Yves Usson.
 |Q1|BC547|[NPN Epitaxial Silicon Transistor](https://www.onsemi.com/pub/Collateral/BC550-D.pdf)|
 |Q2|BC547|[NPN Epitaxial Silicon Transistor](https://www.onsemi.com/pub/Collateral/BC550-D.pdf)|
 |Q3|BC547|[NPN Epitaxial Silicon Transistor](https://www.onsemi.com/pub/Collateral/BC550-D.pdf)|
-|R1|10k|Resistor"|
+|R1|10k|Resistor|
 |R2|4k7||
 |R3|22k||
 |R4|4k7||
