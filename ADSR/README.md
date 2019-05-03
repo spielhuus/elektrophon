@@ -4,8 +4,8 @@ The ADSR creates an envelope for describing the change of the sound over time. T
 frequencies or pitch. The output of the ADSR module can for example be patched to a VCA or VCF. The original schematic is
 used by René Schmitz and Yves Usson. 
 
-<a href="https://spielhuus.github.io/elektrophon/adsr_schema.svg"><img src="https://spielhuus.github.io/elektrophon/adsr_schema._tmb.jpg" width="100%"></img></a>
-<a href="https://spielhuus.github.io/elektrophon/adsr_stripboard.png"><img src="https://spielhuus.github.io/elektrophon/adsr_stripboard_tmb.jpg" width="100%"></img></a>
+<a href="https://spielhuus.github.io/elektrophon/adsr_schema.svg"><img src="https://spielhuus.github.io/elektrophon/adsr_schema._tmb.jpg" width="75px"></img></a>
+<a href="https://spielhuus.github.io/elektrophon/adsr_stripboard.png"><img src="https://spielhuus.github.io/elektrophon/adsr_stripboard_tmb.jpg" width="75px"></img></a>
 
 ## BOM
 
