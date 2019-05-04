@@ -4,8 +4,8 @@ The ADSR creates an envelope for describing the change of the sound over time. T
 frequencies or pitch. The output of the ADSR module can for example be patched to a VCA or VCF. The original schematic is
 used by René Schmitz and Yves Usson. 
 
-<a href="https://spielhuus.github.io/elektrophon/adsr_schema.svg"><img src="https://spielhuus.github.io/elektrophon/adsr_schema._tmb.jpg" width="100%"></img></a>
-<a href="https://spielhuus.github.io/elektrophon/adsr_stripboard.png"><img src="https://spielhuus.github.io/elektrophon/adsr_stripboard_tmb.png" width="100%"></img></a>
+<a href="https://spielhuus.github.io/elektrophon/adsr_schema.svg"><img src="https://spielhuus.github.io/elektrophon/adsr_schema._tmb.jpg" width="125px"></img></a>
+<a href="https://spielhuus.github.io/elektrophon/adsr_stripboard.png"><img src="https://spielhuus.github.io/elektrophon/adsr_stripboard_tmb.jpg" width="125px"></img></a>
 
 ## BOM
 
@@ -27,7 +27,7 @@ used by René Schmitz and Yves Usson.
 |Q1|BC547|[NPN Epitaxial Silicon Transistor](https://www.onsemi.com/pub/Collateral/BC550-D.pdf)|
 |Q2|BC547|[NPN Epitaxial Silicon Transistor](https://www.onsemi.com/pub/Collateral/BC550-D.pdf)|
 |Q3|BC547|[NPN Epitaxial Silicon Transistor](https://www.onsemi.com/pub/Collateral/BC550-D.pdf)|
-|R1|10k|Resistor"|
+|R1|10k|Resistor|
 |R2|4k7||
 |R3|22k||
 |R4|4k7||
