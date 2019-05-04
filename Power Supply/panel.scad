@@ -55,11 +55,11 @@ module panel_power(thickness=THICKNESS, screen=SCREEN, font_size=FONT_SIZE,armat
         translate([1*RASTER_X+RASTER_X_TOP, 4*RASTER_Y+RASTER_Y_TOP, 0]) banana_hole();
     }
 
-    translate([TOP_REFLECTOR_X-1.6, TOP_REFLECTOR_Y, thickness]) rotate([0,0,0]) reflector(l=15);
-    translate([TOP_REFLECTOR_X+8,1*RASTER_Y+RASTER_Y_TOP-1.6, thickness]) rotate([0,0,90]) reflector(l=10);
-    translate([TOP_REFLECTOR_X+8,2*RASTER_Y+RASTER_Y_TOP-1.6, thickness]) rotate([0,0,90]) reflector(l=10);
-    translate([TOP_REFLECTOR_X+8,3*RASTER_Y+RASTER_Y_TOP-1.6, thickness]) rotate([0,0,90]) reflector(l=10);
-    translate([TOP_REFLECTOR_X+8,4*RASTER_Y+RASTER_Y_TOP-1.6, thickness]) rotate([0,0,90]) reflector(l=10);
+    translate([TOP_REFLECTOR_X-1.6, TOP_REFLECTOR_Y, thickness]) rotate([0,0,0]) reflector(l=20);
+    translate([TOP_REFLECTOR_X+8,1*RASTER_Y+RASTER_Y_TOP-1.6, thickness]) rotate([0,0,90]) reflector(l=12);
+    translate([TOP_REFLECTOR_X+8,2*RASTER_Y+RASTER_Y_TOP-1.6, thickness]) rotate([0,0,90]) reflector(l=12);
+    translate([TOP_REFLECTOR_X+8,3*RASTER_Y+RASTER_Y_TOP-1.6, thickness]) rotate([0,0,90]) reflector(l=12);
+    translate([TOP_REFLECTOR_X+8,4*RASTER_Y+RASTER_Y_TOP-1.6, thickness]) rotate([0,0,90]) reflector(l=12);
 
 
     //draw the stand
