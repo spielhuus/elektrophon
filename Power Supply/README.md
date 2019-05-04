@@ -1,6 +1,6 @@
 # Wall Wart Power Supply
 
-<a href="https://spielhuus.github.io/elektrophon/Power_Supply_schema.svg"><img src="https://spielhuus.github.io/elektrophon/Power_Supply_schema._tmb.jpg" width="125px"></img></a>
+<a href="https://spielhuus.github.io/elektrophon/Power_Supply_schema.svg"><img src="https://spielhuus.github.io/elektrophon/Power_Supply_schema_tmb.jpg" width="125px"></img></a>
 <a href="https://spielhuus.github.io/elektrophon/power_supply_stripboard.png"><img src="https://spielhuus.github.io/elektrophon/power_supply_stripboard_tmb.jpg" width="125px"></img></a>
 
 The power supply is one of the first thing to build. It is important to have a stable power and voltage when building modules. 5V and +-15V are creatued from two wall wart power supplies as power sources. The circuit for the split AC voltage is the MFOS[1] wall wart supply. For the 5V a simple voltage regulator circuit. The 3 voltages and ground are connected with IDC connectors and are wired with banana plugs on the panel.
