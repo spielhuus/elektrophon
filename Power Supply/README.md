@@ -1,19 +1,18 @@
 # Wall Wart Power Supply
 
-<img src="https://raw.githubusercontent.com/spielhuus/elektrophon/master/Power%20Supply/schema.jpg" width="20%"></img>
-<img src="https://raw.githubusercontent.com/spielhuus/elektrophon/master/Power%20Supply/pcb.png" width="20%"></img>
+<a href="https://spielhuus.github.io/elektrophon/Power_Supply_schema.svg"><img src="https://spielhuus.github.io/elektrophon/Power_Supply_schema._tmb.jpg" width="125px"></img></a>
+<a href="https://spielhuus.github.io/elektrophon/power_supply_stripboard.png"><img src="https://spielhuus.github.io/elektrophon/power_supply_stripboard_tmb.jpg" width="125px"></img></a>
 
-The power supply is one of the first thing to build. It is important to have a stable power and voltage when building modules. 5V and +-12V
-are creatued from two wall wart power supplies as power sources. The circuit for the split AC voltage is the MFOS[1] wall
-wart supply. For the 5V a simple voltage regulator circuit. The 3 voltages and ground connected with IDC connectors and are 
-wired with banana plugs on the panel.
+The power supply is one of the first thing to build. It is important to have a stable power and voltage when building modules. 5V and +-15V are creatued from two wall wart power supplies as power sources. The circuit for the split AC voltage is the MFOS[1] wall wart supply. For the 5V a simple voltage regulator circuit. The 3 voltages and ground are connected with IDC connectors and are wired with banana plugs on the panel.
 
 Input:
 * 15VAC
 * 12VDC
 
 Output:
-* +-12V/1A, +5V/1.5A, Common Ground 
+* +-12V/1A 
+* +5V/1.5A
+* Common Ground 
 
 # BOM
 
@@ -21,7 +20,7 @@ Output:
 |---|------|----------|----------|
 |1|W1| 15VAC| Wall Wart Power Supply 15VAC/1A|
 |1|W2| 12VDC| Wall Wart Power Supply 12VDC/1.5A|
-|6|C1-C6| 3300uF| Electrolytic Capacitors (D10.0mm_P2.50mm_P5.00mm|
+|6|C1-C6| 3300uF| Electrolytic Capacitors (D10.0mm_P2.50mm_P5.00mm)|
 |4|C7-C10| 1uF| Electrolytic Capacitors|
 |1|C11| 0.33uF| Ceramic Capacitor|
 |1|C12| 0.1uF| Ceramic Capacitor|
