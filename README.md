@@ -27,7 +27,13 @@ Voltage Controlled Oscillator, a continuous voltage source, which will output a 
 
 ## Voltage Controlled Filters
 
+
 ## Voltage Controlled Amplifier
+
+|ADSR|+|+|+|+|+|
+|+|+|+|+|+|+|
+|+|+|+|+|+|+|
+|+|+|+|+|+|+|
 
 ## Mixer
 
