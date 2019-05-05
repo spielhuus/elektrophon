@@ -6,10 +6,7 @@ i recommend building the breadboard syntesizers on hackaday by elliot williams. 
 
 # modules and racks
 
-
-
-the sizes for modular synths are mostly equal to the standard size for electronic and computer racks. the rails and racks for synthesizers are very expensive, but the parts can also be ordered from electronic vendors. The horizontal Rails from the electronic vendor are a bit cheaper (i.e. [farnel](https://de.farnell.com/schroff/34560-484/horizontal-rail-enclosure/dp/2816357). 
-
+the sizes for modular synths are mostly equal to the standard size for electronic and computer racks. the rails and racks for synthesizers are very expensive, but the parts can also be ordered from electronic vendors. The horizontal Rails from the electronic vendor are a bit cheaper (i.e. [farnel](https://de.farnell.com/schroff/34560-484/horizontal-rail-enclosure/dp/2816357). <a href="https://spielhuus.github.io/elektrophon/fly_rack.jpg"><img align="right" src="https://spielhuus.github.io/elektrophon/fly_rack_tmb.jpg"></a> The first rack i built was a small testing rack, the fly rack.
 
 
 # modules 
