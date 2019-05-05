@@ -1,13 +1,5 @@
 # elektrophon
-collection of modules for a modular analog electro acoustic noise machine. all modules are built on protoboards and with 3d printed front plates.
-
-# before you start
-i recommend building the breadboard syntesizers on hackaday by elliot williams. this is a very good introduction to the lunetta spririt of building synthesizers. ---
-
-# modules and racks
-
-the sizes for modular synths are mostly equal to the standard size for electronic and computer racks. the rails and racks for synthesizers are very expensive, but the parts can also be ordered from electronic vendors. The horizontal Rails from the electronic vendor are a bit cheaper (i.e. [farnel](https://de.farnell.com/schroff/34560-484/horizontal-rail-enclosure/dp/2816357). <a href="https://spielhuus.github.io/elektrophon/fly_rack.jpg"><img align="right" src="https://spielhuus.github.io/elektrophon/fly_rack_tmb.jpg"></a> The first rack i built was a small testing rack, the fly rack.
-
+collection of modules for a modular analog electro acoustic noise machine. all modules are built on stripboards or pcb's and with 3d printed front plates.The goal is it to build the modules quickly. The 3d printed front panels comes complete with holes and stands. This makes it easy to mount the module. The modules can be mount to a rack. <a href="https://spielhuus.github.io/elektrophon/fly_rack.jpg"><img align="right" src="https://spielhuus.github.io/elektrophon/fly_rack_tmb.jpg"></a>  The first rack i built was a small testing rack, the fly rack.There are only two side panels to print. For the rails i used the standard euro panel rails from the electronic vendors (i.e. [farnel](https://de.farnell.com/schroff/34560-484/horizontal-rail-enclosure/dp/2816357)). Every thing from the music stores is very expensive. it is a little bit cheaper to buy those rails. The sizes for modular synths are mostly equal to the standard size for electronic and computer racks.
 
 # modules 
 
