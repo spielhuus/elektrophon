@@ -32,7 +32,7 @@ Voltage Controlled Oscillator, a continuous voltage source, which will output a 
 
 | Tables        | Are           | Cool  |
 | ------------- |:-------------:| -----:|
-|<a href="https://github.com/spielhuus/elektrophon/tree/master/ADSR"><img src="https://spielhuus.github.io/elektrophon/adsr_schema._panel._tmb.jpg" width="128px"></img></a><br/>ADSR|ADSR|ADSR|
+|<a href="https://github.com/spielhuus/elektrophon/tree/master/ADSR"><img src="https://spielhuus.github.io/elektrophon/adsr_schema._panel._tmb.jpg" width="128px"></img></a><br/>The Fastest Envelope in the West|ADSR|ADSR|
 
 ## Mixer
 
