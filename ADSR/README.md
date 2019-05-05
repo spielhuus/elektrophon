@@ -1,4 +1,4 @@
-# ADSR
+# The Fastest Envelope in the West
 
 The ADSR creates an envelope for describing the change of the sound over time. The envelope can be used for amplitude, 
 frequencies or pitch. The output of the ADSR module can for example be patched to a VCA or VCF. The original schematic is
