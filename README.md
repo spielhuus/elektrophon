@@ -30,10 +30,10 @@ Voltage Controlled Oscillator, a continuous voltage source, which will output a 
 
 ## Voltage Controlled Amplifier
 
-|ADSR|+|+|+|+|+|
-|+|+|+|+|+|+|
-|+|+|+|+|+|+|
-|+|+|+|+|+|+|
+| ------------- |:-------------:| -----:|
+|ADSR|ADSR|ADSR|
+
+
 
 ## Mixer
 
