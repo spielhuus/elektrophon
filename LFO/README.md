@@ -1,6 +1,17 @@
 # LFO
 
+<a href="https://spielhuus.github.io/elektrophon/lfo_schema._panel.jpg"><img src="https://spielhuus.github.io/elektrophon/lfo_schema._panel._tmb.jpg" width="35px"></img></a>
+<a href="https://spielhuus.github.io/elektrophon/lfo_panel_back.jpg"><img src="https://spielhuus.github.io/elektrophon/lfo_panel_back_tmb.jpg" width="75px"></img></a>
+<a href="https://spielhuus.github.io/elektrophon/lfo_schema.svg"><img src="https://spielhuus.github.io/elektrophon/lfo_schema._tmb.jpg" width="125px"></img></a>
+<a href="https://spielhuus.github.io/elektrophon/lfo_stripboard.png"><img src="https://spielhuus.github.io/elektrophon/lfo_stripboard_tmb.jpg" width="125px"></img></a>
+
+Simple but fancy LFO from Ken Stone. It is a dual LFO with pulse, square, triangle/saw and vari output. the vari output is a mixture of the square and triangle output. the two vari output can be combined with the switch. 
+
 ## BOM
+
+|Ref|Value|Name|
+|:---|:---|:---|
+|C1|22u|Ceramic Capacitor|
 
 ## links
 
