@@ -35,7 +35,7 @@ use <../lib/toggle_switch.scad>
 use <../lib/led_holder.scad>
 use <../lib/waveform.scad>
 
-module panel_vca(thickness=THICKNESS, screen=SCREEN, font_size=FONT_SIZE,armatures=ARMATURES) {
+module panel_lfo(thickness=THICKNESS, screen=SCREEN, font_size=FONT_SIZE,armatures=ARMATURES) {
     difference() {
         group() {
             translate([-6,0,0]) plate(HP=HP,HU=HU,armatures=armatures,thickness=thickness);
@@ -145,4 +145,4 @@ module perfboard(x=0,y=0,width=1,length=1) {
     }
 }
 
-panel_vca(); 
+panel_lfo(); 
