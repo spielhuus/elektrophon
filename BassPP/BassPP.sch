@@ -1,0 +1,252 @@
+EESchema Schematic File Version 4
+EELAYER 29 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Device:R_POT RV?
+U 1 1 5CD09063
+P 1100 1150
+F 0 "RV?" H 1031 1196 50  0000 R CNN
+F 1 "Sensitivity" H 1031 1105 50  0000 R CNN
+F 2 "" H 1100 1150 50  0001 C CNN
+F 3 "~" H 1100 1150 50  0001 C CNN
+	1    1100 1150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x01_Female J?
+U 1 1 5CD0AB06
+P 1000 1950
+F 0 "J?" H 892 1725 50  0000 C CNN
+F 1 "Trigger" H 892 1816 50  0000 C CNN
+F 2 "" H 1000 1950 50  0001 C CNN
+F 3 "~" H 1000 1950 50  0001 C CNN
+	1    1000 1950
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R_POT RV?
+U 1 1 5CD0C492
+P 1100 2350
+F 0 "RV?" H 1031 2396 50  0000 R CNN
+F 1 "Decay" H 1031 2305 50  0000 R CNN
+F 2 "" H 1100 2350 50  0001 C CNN
+F 3 "~" H 1100 2350 50  0001 C CNN
+	1    1100 2350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_POT RV?
+U 1 1 5CD0C945
+P 1100 2900
+F 0 "RV?" H 1031 2946 50  0000 R CNN
+F 1 "Sweep" H 1031 2855 50  0000 R CNN
+F 2 "" H 1100 2900 50  0001 C CNN
+F 3 "~" H 1100 2900 50  0001 C CNN
+	1    1100 2900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_POT RV?
+U 1 1 5CD0CE86
+P 1100 3400
+F 0 "RV?" H 1031 3446 50  0000 R CNN
+F 1 "Range" H 1031 3355 50  0000 R CNN
+F 2 "" H 1100 3400 50  0001 C CNN
+F 3 "~" H 1100 3400 50  0001 C CNN
+	1    1100 3400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_POT RV?
+U 1 1 5CD0D21D
+P 1100 3950
+F 0 "RV?" H 1030 3996 50  0000 R CNN
+F 1 "Pitch" H 1030 3905 50  0000 R CNN
+F 2 "" H 1100 3950 50  0001 C CNN
+F 3 "~" H 1100 3950 50  0001 C CNN
+	1    1100 3950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_POT RV?
+U 1 1 5CD0D5AC
+P 1100 4550
+F 0 "RV?" H 1030 4596 50  0000 R CNN
+F 1 "Impact Tone" H 1030 4505 50  0000 R CNN
+F 2 "" H 1100 4550 50  0001 C CNN
+F 3 "~" H 1100 4550 50  0001 C CNN
+	1    1100 4550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_POT RV?
+U 1 1 5CD0DEE3
+P 1100 5150
+F 0 "RV?" H 1030 5196 50  0000 R CNN
+F 1 "Impact Volume" H 1030 5105 50  0000 R CNN
+F 2 "" H 1100 5150 50  0001 C CNN
+F 3 "~" H 1100 5150 50  0001 C CNN
+	1    1100 5150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_POT RV?
+U 1 1 5CD0E407
+P 1100 5750
+F 0 "RV?" H 1031 5796 50  0000 R CNN
+F 1 "Shell Volume" H 1031 5705 50  0000 R CNN
+F 2 "" H 1100 5750 50  0001 C CNN
+F 3 "~" H 1100 5750 50  0001 C CNN
+	1    1100 5750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x01_Female J?
+U 1 1 5CD0E8AD
+P 600 3750
+F 0 "J?" H 492 3525 50  0000 C CNN
+F 1 "CV" H 492 3616 50  0000 C CNN
+F 2 "" H 600 3750 50  0001 C CNN
+F 3 "~" H 600 3750 50  0001 C CNN
+	1    600  3750
+	-1   0    0    1   
+$EndComp
+$Comp
+L Connector:Conn_01x01_Female J?
+U 1 1 5CD0F379
+P 10450 2650
+F 0 "J?" H 10342 2425 50  0000 C CNN
+F 1 "OUT" H 10342 2516 50  0000 C CNN
+F 2 "" H 10450 2650 50  0001 C CNN
+F 3 "~" H 10450 2650 50  0001 C CNN
+	1    10450 2650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5CD0FE9A
+P 1500 900
+F 0 "R?" V 1293 900 50  0000 C CNN
+F 1 "100" V 1384 900 50  0000 C CNN
+F 2 "" V 1430 900 50  0001 C CNN
+F 3 "~" H 1500 900 50  0001 C CNN
+	1    1500 900 
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1100 1000 1100 900 
+Wire Wire Line
+	1100 900  1350 900 
+$Comp
+L Device:R R?
+U 1 1 5CD1108F
+P 1500 1450
+F 0 "R?" V 1293 1450 50  0000 C CNN
+F 1 "20k" V 1384 1450 50  0000 C CNN
+F 2 "" V 1430 1450 50  0001 C CNN
+F 3 "~" H 1500 1450 50  0001 C CNN
+	1    1500 1450
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1350 1450 1100 1450
+Wire Wire Line
+	1100 1450 1100 1300
+$Comp
+L power:GND #PWR?
+U 1 1 5CD1171E
+P 1750 900
+F 0 "#PWR?" H 1750 650 50  0001 C CNN
+F 1 "GND" V 1755 772 50  0000 R CNN
+F 2 "" H 1750 900 50  0001 C CNN
+F 3 "" H 1750 900 50  0001 C CNN
+	1    1750 900 
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	1750 900  1650 900 
+$Comp
+L power:+15V #PWR?
+U 1 1 5CD121CB
+P 1750 1450
+F 0 "#PWR?" H 1750 1300 50  0001 C CNN
+F 1 "+15V" V 1765 1578 50  0000 L CNN
+F 2 "" H 1750 1450 50  0001 C CNN
+F 3 "" H 1750 1450 50  0001 C CNN
+	1    1750 1450
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1750 1450 1650 1450
+$Comp
+L Device:C C?
+U 1 1 5CD12B65
+P 1500 1950
+F 0 "C?" V 1248 1950 50  0000 C CNN
+F 1 "0.001" V 1339 1950 50  0000 C CNN
+F 2 "" H 1538 1800 50  0001 C CNN
+F 3 "~" H 1500 1950 50  0001 C CNN
+	1    1500 1950
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1350 1950 1200 1950
+$Comp
+L Device:R R?
+U 1 1 5CD13189
+P 2700 1550
+F 0 "R?" H 2630 1504 50  0000 R CNN
+F 1 "1M" H 2630 1595 50  0000 R CNN
+F 2 "" V 2630 1550 50  0001 C CNN
+F 3 "~" H 2700 1550 50  0001 C CNN
+	1    2700 1550
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5CD13A29
+P 2700 1700
+F 0 "#PWR?" H 2700 1450 50  0001 C CNN
+F 1 "GND" H 2705 1527 50  0000 C CNN
+F 2 "" H 2700 1700 50  0001 C CNN
+F 3 "" H 2700 1700 50  0001 C CNN
+	1    2700 1700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Amplifier_Operational:TL072 U?
+U 1 1 5CD145EE
+P 3150 1250
+F 0 "U?" H 3150 883 50  0000 C CNN
+F 1 "TL072" H 3150 974 50  0000 C CNN
+F 2 "" H 3150 1250 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 3150 1250 50  0001 C CNN
+	1    3150 1250
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	1250 1150 2850 1150
+Wire Wire Line
+	2850 1350 2700 1350
+Wire Wire Line
+	2350 1350 2350 1950
+Wire Wire Line
+	1650 1950 2350 1950
+Wire Wire Line
+	2700 1400 2700 1350
+Connection ~ 2700 1350
+Wire Wire Line
+	2700 1350 2350 1350
+$EndSCHEMATC
