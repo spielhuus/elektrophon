@@ -5,14 +5,14 @@ EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
-Title ""
-Date ""
-Rev ""
-Comp ""
+Title "LFO"
+Date "2019-05-11"
+Rev "1"
+Comp "spielhuus"
 Comment1 ""
 Comment2 ""
 Comment3 ""
-Comment4 ""
+Comment4 "License CC BY 4.0 - Attribution 4.0 International"
 $EndDescr
 $Comp
 L Amplifier_Operational:TL074 U1
@@ -828,23 +828,17 @@ Wire Wire Line
 Wire Wire Line
 	3600 900  5200 900 
 Connection ~ 5200 900 
-Connection ~ 8450 1400
 Wire Wire Line
 	8450 900  8450 1150
 Wire Wire Line
 	5200 900  8450 900 
 Wire Wire Line
-	8450 1400 9100 1400
-Wire Wire Line
 	9100 1350 9100 1400
-Connection ~ 9100 1400
 Wire Wire Line
 	9100 1400 10100 1400
 Wire Wire Line
 	8800 1150 8450 1150
 Connection ~ 8450 1150
-Wire Wire Line
-	8450 1150 8450 1400
 Wire Notes Line
 	10000 550  1050 550 
 Wire Notes Line
@@ -864,8 +858,6 @@ Wire Wire Line
 	8300 2950 8300 1950
 Wire Wire Line
 	9750 3050 9750 2050
-Wire Wire Line
-	8450 1400 8450 3100
 $Comp
 L Amplifier_Operational:TL074 U3
 U 1 1 5CE98510
@@ -1482,23 +1474,17 @@ Wire Wire Line
 Wire Wire Line
 	3600 3850 5200 3850
 Connection ~ 5200 3850
-Connection ~ 8450 4350
 Wire Wire Line
 	8450 3850 8450 4100
 Wire Wire Line
 	5200 3850 8450 3850
 Wire Wire Line
-	8450 4350 9100 4350
-Wire Wire Line
 	9100 4300 9100 4350
-Connection ~ 9100 4350
 Wire Wire Line
 	9100 4350 10100 4350
 Wire Wire Line
 	8800 4100 8450 4100
 Connection ~ 8450 4100
-Wire Wire Line
-	8450 4100 8450 4350
 Wire Notes Line
 	10000 3500 1050 3500
 Wire Notes Line
@@ -1518,8 +1504,10 @@ Wire Wire Line
 	8300 5900 8300 4900
 Wire Wire Line
 	9750 6000 9750 5000
-Wire Wire Line
-	8450 4350 8450 6050
 Wire Notes Line
 	10000 2900 1050 2900
+Wire Wire Line
+	8450 1150 8450 3100
+Wire Wire Line
+	8450 4100 8450 6050
 $EndSCHEMATC
