@@ -1,3 +1,0 @@
-# 40106 Oscillator
-
-
