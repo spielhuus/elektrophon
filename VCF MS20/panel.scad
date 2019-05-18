@@ -1,4 +1,4 @@
-/** Power Supply **/
+/** VCF - MS 20 **/
 
 ARMATURES=false;
     
