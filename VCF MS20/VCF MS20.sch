@@ -208,25 +208,14 @@ F 3 "http://www.fairchildsemi.com/ds/BC/BC557.pdf" H 3700 2950 50  0001 L CNN
 $EndComp
 $Comp
 L Amplifier_Operational:TL074 U1
-U 1 1 5CBDFD18
+U 2 1 5CBE1404
 P 4400 2300
-F 0 "U1" H 4400 2667 50  0000 C CNN
-F 1 "TL074" H 4400 2576 50  0000 C CNN
+F 0 "U1" H 4400 1933 50  0000 C CNN
+F 1 "TL074" H 4400 2024 50  0000 C CNN
 F 2 "" H 4350 2400 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 4450 2500 50  0001 C CNN
-	1    4400 2300
+	2    4400 2300
 	-1   0    0    -1  
-$EndComp
-$Comp
-L Amplifier_Operational:TL074 U1
-U 2 1 5CBE1404
-P 7400 2150
-F 0 "U1" H 7400 1783 50  0000 C CNN
-F 1 "TL074" H 7400 1874 50  0000 C CNN
-F 2 "" H 7350 2250 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 7450 2350 50  0001 C CNN
-	2    7400 2150
-	1    0    0    1   
 $EndComp
 $Comp
 L Amplifier_Operational:TL074 U1
@@ -323,8 +312,6 @@ F 3 "~" H 3900 2500 50  0001 C CNN
 	1    3900 2500
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	4100 2300 3900 2300
 Wire Wire Line
 	3900 2350 3900 2300
 Connection ~ 3900 2300
@@ -1125,10 +1112,10 @@ Connection ~ 3900 2700
 Wire Wire Line
 	3900 2700 4700 2700
 $Comp
-L Amplifier_Operational:TL074 U?
+L Amplifier_Operational:TL074 U1
 U 3 1 5CC69F2F
 P 9700 2150
-F 0 "U?" H 9700 2400 50  0000 C CNN
+F 0 "U1" H 9700 2400 50  0000 C CNN
 F 1 "TL074" H 9700 2500 50  0000 C CNN
 F 2 "" H 9650 2250 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 9750 2350 50  0001 C CNN
@@ -1136,10 +1123,10 @@ F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 9750 2350 50  0001 C CNN
 	1    0    0    1   
 $EndComp
 $Comp
-L Amplifier_Operational:TL074 U?
+L Amplifier_Operational:TL074 U1
 U 4 1 5CC6AD62
 P 8700 4150
-F 0 "U?" H 8700 4450 50  0000 C CNN
+F 0 "U1" H 8700 4450 50  0000 C CNN
 F 1 "TL074" H 8700 4550 50  0000 C CNN
 F 2 "" H 8650 4250 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 8750 4350 50  0001 C CNN
@@ -1162,5 +1149,20 @@ F 2 "" V 8630 3750 50  0001 C CNN
 F 3 "~" H 8700 3750 50  0001 C CNN
 	1    8700 3750
 	0    -1   -1   0   
+$EndComp
+Text Notes 1200 3700 1    50   ~ 0
+Frequency
+Wire Wire Line
+	4100 2300 3900 2300
+$Comp
+L Amplifier_Operational:TL074 U1
+U 1 1 5CBDFD18
+P 7400 2150
+F 0 "U1" H 7400 2517 50  0000 C CNN
+F 1 "TL074" H 7400 2426 50  0000 C CNN
+F 2 "" H 7350 2250 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 7450 2350 50  0001 C CNN
+	1    7400 2150
+	1    0    0    1   
 $EndComp
 $EndSCHEMATC

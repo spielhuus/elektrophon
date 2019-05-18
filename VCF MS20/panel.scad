@@ -1,9 +1,9 @@
 /** Power Supply **/
 
-ARMATURES=true;
-
+ARMATURES=false;
+    
 HU=3;
-HP=10;
+HP=12;
 
 THICKNESS=3;
 REFLECTOR_THICKNESS=2;
@@ -15,7 +15,7 @@ HU_SIZE = 44.45;
 
 X_SHIFT=-6;
 TOP_REFLECTOR_Y=20;
-TOP_REFLECTOR_X=0;
+TOP_REFLECTOR_X=-5;
 
 RASTER_Y_TOP=25;
 RASTER_X_TOP=9;
@@ -30,12 +30,12 @@ use <../lib/stand.scad>
 use <../lib/Potentiometer_small.scad>
 use <../lib/toggle_switch.scad>
 
-use <../lib/Designer Block.ttf>
+font="Source Code Pro:style=Bold";
 
 module panel_ms20(thickness=THICKNESS, screen=SCREEN, font_size=FONT_SIZE,armatures=ARMATURES) {
     difference() {
         group() {
-            translate([-6,0,0]) plate(HP=HP,HU=HU,armatures=armatures,thickness=thickness);
+            translate([-12,0,0]) plate(HP=HP,HU=HU,armatures=armatures,thickness=thickness);
             translate([0,0,thickness]) {
                 translate([0*RASTER_X+RASTER_X_TOP, 0*RASTER_Y+RASTER_Y_TOP]) banana_holder();
                 translate([0*RASTER_X+RASTER_X_TOP, 1*RASTER_Y+RASTER_Y_TOP, 0]) banana_holder();
@@ -45,40 +45,42 @@ module panel_ms20(thickness=THICKNESS, screen=SCREEN, font_size=FONT_SIZE,armatu
             }
         }
 
-        translate([TOP_REFLECTOR_X, TOP_REFLECTOR_Y, 0]) rotate([0,0,270]) silkscreen(text="MS20",thickness=thickness, screen=screen, font_size=font_size, font="Designer Block");
+        translate([TOP_REFLECTOR_X, TOP_REFLECTOR_Y, 0]) rotate([0,0,270]) silkscreen(text="MS2O",thickness=thickness, screen=screen, font_size=font_size, font=font);
 
         translate([0*RASTER_X+RASTER_X_TOP, 0*RASTER_Y+RASTER_Y_TOP]) banana_hole();
-        translate([1*RASTER_Y+RASTER_X_TOP, 0*RASTER_Y+RASTER_Y_TOP, 0]) rotate([0,180,45]) potentiometer_hole();
+        translate([1*RASTER_Y+RASTER_X_TOP, 0*RASTER_Y+RASTER_Y_TOP, 0]) rotate([0,180,215]) potentiometer_hole();
         translate([0*RASTER_X+RASTER_X_TOP, 1*RASTER_Y+RASTER_Y_TOP, 0]) banana_hole();
-        translate([1*RASTER_Y+RASTER_X_TOP, 1*RASTER_Y+RASTER_Y_TOP, 0]) rotate([0,180,45]) potentiometer_hole();
+        translate([1*RASTER_Y+RASTER_X_TOP, 1*RASTER_Y+RASTER_Y_TOP, 0]) rotate([0,180,215]) potentiometer_hole();
         translate([0*RASTER_X+RASTER_X_TOP, 2*RASTER_Y+RASTER_Y_TOP]) banana_hole();
-        translate([1*RASTER_Y+RASTER_X_TOP, 2*RASTER_Y+RASTER_Y_TOP, 0]) rotate([0,180,45]) potentiometer_hole();
+        translate([0*RASTER_Y+RASTER_X_TOP, 3*RASTER_Y+RASTER_Y_TOP, 0]) rotate([0,180,215]) potentiometer_hole();
 
-        translate([1*RASTER_Y+RASTER_X_TOP, 3*RASTER_Y+RASTER_Y_TOP, 0]) rotate([0,180,45]) potentiometer_hole();
+        translate([1*RASTER_Y+RASTER_X_TOP, 3*RASTER_Y+RASTER_Y_TOP, 0]) rotate([0,180,215]) potentiometer_hole();
 
         translate([0*RASTER_X+RASTER_X_TOP, 4*RASTER_Y+RASTER_Y_TOP]) banana_hole();
         translate([1*RASTER_X+RASTER_X_TOP, 4*RASTER_Y+RASTER_Y_TOP]) banana_hole();
     }
 
-    translate([TOP_REFLECTOR_X-1.6, TOP_REFLECTOR_Y, thickness]) rotate([0,0,0]) reflector(l=15);
+    translate([TOP_REFLECTOR_X-1.6, TOP_REFLECTOR_Y, thickness ]) rotate([0,0,0]) reflector(l=15);
 
 
     //draw the stand
-    stand(x=0, y=31, count_x=16, count_y=28 , r=3, h=30, hole=1.25,thickness=thickness,third=false);
+    stand(x=TOP_REFLECTOR_X, y=31, count_x=20, count_y=28 , r=3, h=35, hole=1.25,thickness=thickness,third=false);
+
+    color("green") translate([-12,0,0]) plate_first_layer(HP=HP,HU=HU,layer=screen);
 
     if(armatures) {
 
-        color("green") perfboard(x=-4,y=10,width=18,length=39);
-        translate([TOP_REFLECTOR_X, TOP_REFLECTOR_Y, 0]) rotate([0,0,270]) silkscreen_text (text="MS20",thickness=thickness, screen=screen, font_size=font_size, font="Designer Block");
+        translate([TOP_REFLECTOR_X,0,0]) color("green") perfboard(x=-4,y=10,width=22,length=39);
+        translate([TOP_REFLECTOR_X, TOP_REFLECTOR_Y, 0]) rotate([0,0,270]) silkscreen_text (text="MS2O",thickness=thickness, screen=screen, font_size=font_size, font=font);
 
         translate([0*RASTER_X+RASTER_X_TOP, 0*RASTER_Y+RASTER_Y_TOP]) banana();
-        translate([1*RASTER_Y+RASTER_X_TOP, 0*RASTER_Y+RASTER_Y_TOP, 0]) rotate([0,180,45]) potentiometer();
+        translate([1*RASTER_Y+RASTER_X_TOP, 0*RASTER_Y+RASTER_Y_TOP, 0]) rotate([0,180,215]) potentiometer();
         translate([0*RASTER_X+RASTER_X_TOP, 1*RASTER_Y+RASTER_Y_TOP, 0]) banana();
-        translate([1*RASTER_Y+RASTER_X_TOP, 1*RASTER_Y+RASTER_Y_TOP, 0]) rotate([0,180,45]) potentiometer();
+        translate([1*RASTER_Y+RASTER_X_TOP, 1*RASTER_Y+RASTER_Y_TOP, 0]) rotate([0,180,215]) potentiometer();
         translate([0*RASTER_X+RASTER_X_TOP, 2*RASTER_Y+RASTER_Y_TOP]) banana();
-        translate([1*RASTER_Y+RASTER_X_TOP, 2*RASTER_Y+RASTER_Y_TOP, 0]) rotate([0,180,45]) potentiometer();
+        translate([0*RASTER_Y+RASTER_X_TOP, 3*RASTER_Y+RASTER_Y_TOP, 0]) rotate([0,180,215]) potentiometer();
 
-        translate([1*RASTER_Y+RASTER_X_TOP, 3*RASTER_Y+RASTER_Y_TOP, 0]) rotate([0,180,45]) potentiometer();
+        translate([1*RASTER_Y+RASTER_X_TOP, 3*RASTER_Y+RASTER_Y_TOP, 0]) rotate([0,180,215]) potentiometer();
 
         translate([0*RASTER_X+RASTER_X_TOP, 4*RASTER_Y+RASTER_Y_TOP]) banana();
         translate([1*RASTER_X+RASTER_X_TOP, 4*RASTER_Y+RASTER_Y_TOP]) banana();

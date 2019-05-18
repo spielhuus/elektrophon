@@ -10,7 +10,7 @@ module potentiometer_hole(radius=4,thickness=5) {
 	group() {
 		translate([0,0,-thickness-1]) {
 			cylinder(r=radius, h=thickness*2, $fn=100);
-			translate([8,0,0]) cylinder(r=1.5, h=3, $fn=100);
+			translate([-8,0,0]) cylinder(r=1.5, h=thickness*2, $fn=100);
 		}
 	}
 }

@@ -10,6 +10,12 @@ SCREEW_R = 3;
 HOLE_FROM_SIDE = 7.5;
 HOLE_FROM_TOP = 5;
 
+module plate_first_layer(HP=1,HU=5,thickness=2,layer=0.3) {
+	height=HU*HU_SIZE;
+	width=HP*HP_SIZE;
+	cube([width, height, layer]);
+}
+
 module plate(HP=1,HU=5,thickness=2,armatures=false,screew=SCREEW_R) {
 
 	height=HU*HU_SIZE;
@@ -20,24 +26,20 @@ module plate(HP=1,HU=5,thickness=2,armatures=false,screew=SCREEW_R) {
 
 		translate([HOLE_FROM_SIDE, HOLE_FROM_TOP, -1]) {
 			cylinder(r=HOLE_R, h=10, $fn=100);
-			cylinder(r2=HOLE_R, r1=screew, h=2, $fn=100);
 		}
 			
 
 		translate([HOLE_FROM_SIDE, height-HOLE_FROM_TOP, -1]) {
 			cylinder(r=HOLE_R, h=10, $fn=10);
-			cylinder(r2=HOLE_R, r1=screew, h=2, $fn=100);
 		}
 
 		if (width > 50) {
 			translate([width-HOLE_FROM_SIDE, HOLE_FROM_TOP, -1]) {
 				cylinder(r=HOLE_R, h=10, $fn=10);
-				cylinder(r2=HOLE_R, r1=screew, h=2, $fn=100);
 			}
 
 			translate([width-HOLE_FROM_SIDE, height-HOLE_FROM_TOP, -1]) {
 				cylinder(r=HOLE_R, h=10, $fn=10);
-				cylinder(r2=HOLE_R, r1=screew, h=2, $fn=100);
 			}
 		}
 	}
