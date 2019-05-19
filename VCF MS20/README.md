@@ -1,5 +1,11 @@
 # Korg Late MS20 Filter
 
+<!-- a href="https://spielhuus.github.io/elektrophon/lfo_schema._panel.jpg"><img src="https://spielhuus.github.io/elektrophon/lfo_schema._panel._tmb.jpg" height="128px"></img></a -->
+<!-- a href="https://spielhuus.github.io/elektrophon/lfo_panel_back.jpg"><img src="https://spielhuus.github.io/elektrophon/lfo_panel_back_tmb.jpg" height="128px"></img></a -->
+<a href="https://spielhuus.github.io/elektrophon/vcf_ms20_schema.svg"><img src="https://spielhuus.github.io/elektrophon/vcf_ms20_schema_tmb.jpg" height="128px"></img></a>
+<a href="https://spielhuus.github.io/elektrophon/vcf_ms20_stripboard.png"><img src="https://spielhuus.github.io/elektrophon/vcf_ms20_stripboard_tmb.jpg" height="128px"></img></a>
+
+
 This is rené Schmitz remake of the late korg ms20 filter.
 
 ## BOM
