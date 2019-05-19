@@ -1003,7 +1003,7 @@
     </diylc.connectivity.CopperTrace>
     <diylc.misc.Label>
       <name>L15</name>
-      <point x="1.7" y="2.2"/>
+      <point x="1.7" y="2.7"/>
       <text>GND</text>
       <font name="Square721 BT Roman" size="14" style="2"/>
       <color hex="000000"/>
@@ -1027,9 +1027,9 @@
       <length value="7.0" unit="mm"/>
       <width value="2.5" unit="mm"/>
       <points>
-        <point x="2.3" y="1.9"/>
-        <point x="2.6" y="1.9"/>
-        <point x="2.15" y="1.9"/>
+        <point x="2.3" y="1.8"/>
+        <point x="2.6" y="1.8"/>
+        <point x="2.15" y="1.8"/>
       </points>
       <bodyColor hex="82cffd"/>
       <borderColor hex="5b90b1"/>
@@ -1345,9 +1345,9 @@
       <length value="0.25" unit="in"/>
       <width value="0.125" unit="in"/>
       <points>
-        <point x="1.6" y="1.9"/>
-        <point x="1.7" y="1.9"/>
-        <point x="1.65" y="1.9"/>
+        <point x="1.6" y="2.1"/>
+        <point x="1.7" y="2.1"/>
+        <point x="1.65" y="2.1"/>
       </points>
       <bodyColor hex="f0e68c"/>
       <borderColor hex="a8a162"/>
@@ -1507,9 +1507,9 @@
       <name>Trace18</name>
       <alpha>127</alpha>
       <points>
-        <point x="1.7" y="2.0"/>
-        <point x="2.2" y="2.0"/>
-        <point x="2.1" y="2.0"/>
+        <point x="1.7" y="1.9"/>
+        <point x="2.2" y="1.9"/>
+        <point x="2.1" y="1.9"/>
       </points>
       <bodyColor hex="ffffff"/>
       <borderColor hex="000000"/>
@@ -1589,8 +1589,8 @@
       <width value="2.5" unit="mm"/>
       <points>
         <point x="1.9" y="2.2"/>
-        <point x="3.3" y="2.2"/>
-        <point x="1.9" y="2.2"/>
+        <point x="3.2" y="2.2"/>
+        <point x="1.85" y="2.2"/>
       </points>
       <bodyColor hex="82cffd"/>
       <borderColor hex="5b90b1"/>
@@ -1610,9 +1610,9 @@
       <length value="0.25" unit="in"/>
       <width value="0.125" unit="in"/>
       <points>
-        <point x="1.9" y="1.9"/>
-        <point x="2.0" y="1.9"/>
-        <point x="1.95" y="1.9"/>
+        <point x="1.9" y="2.0"/>
+        <point x="2.0" y="2.0"/>
+        <point x="1.95" y="2.0"/>
       </points>
       <bodyColor hex="f0e68c"/>
       <borderColor hex="a8a162"/>
@@ -1839,9 +1839,9 @@
       <length value="7.0" unit="mm"/>
       <width value="2.5" unit="mm"/>
       <points>
-        <point x="2.5" y="1.8"/>
-        <point x="2.9" y="1.8"/>
-        <point x="2.3" y="1.8"/>
+        <point x="2.5" y="1.9"/>
+        <point x="2.9" y="1.9"/>
+        <point x="2.3" y="1.9"/>
       </points>
       <bodyColor hex="82cffd"/>
       <borderColor hex="5b90b1"/>
@@ -1883,8 +1883,8 @@
       <width value="0.125" unit="in"/>
       <points>
         <point x="3.4" y="1.5"/>
-        <point x="3.8" y="1.5"/>
         <point x="3.5" y="1.5"/>
+        <point x="3.35" y="1.5"/>
       </points>
       <bodyColor hex="f0e68c"/>
       <borderColor hex="a8a162"/>
@@ -1904,8 +1904,8 @@
       <width value="0.125" unit="in"/>
       <points>
         <point x="3.2" y="1.0"/>
-        <point x="3.7" y="1.0"/>
-        <point x="3.35" y="1.0"/>
+        <point x="3.5" y="1.0"/>
+        <point x="3.25" y="1.0"/>
       </points>
       <bodyColor hex="f0e68c"/>
       <borderColor hex="a8a162"/>
@@ -2006,6 +2006,35 @@
       <holeSize value="0.8" unit="mm"/>
       <layer>_1</layer>
     </diylc.connectivity.SolderPad>
+    <diylc.connectivity.CopperTrace>
+      <name>Trace23</name>
+      <alpha>127</alpha>
+      <points>
+        <point x="1.8" y="2.1"/>
+        <point x="1.9" y="2.1"/>
+        <point x="1.9" y="2.1"/>
+      </points>
+      <bodyColor hex="ffffff"/>
+      <borderColor hex="000000"/>
+      <labelColor hex="000000"/>
+      <leadColor hex="ffff00"/>
+      <display>NAME</display>
+      <flipStanding>false</flipStanding>
+      <labelOriantation>Directional</labelOriantation>
+      <moveLabel>false</moveLabel>
+      <thickness value="1.0" unit="mm"/>
+      <layer>_1</layer>
+    </diylc.connectivity.CopperTrace>
+    <diylc.connectivity.TraceCut>
+      <name>Cut20</name>
+      <size value="0.08" unit="in"/>
+      <fillColor hex="ffffff"/>
+      <borderColor hex="ff0000"/>
+      <boardColor hex="f8ebb3"/>
+      <cutBetweenHoles>false</cutBetweenHoles>
+      <holeSpacing value="0.1" unit="in"/>
+      <point x="1.7" y="2.0"/>
+    </diylc.connectivity.TraceCut>
   </components>
   <groups/>
   <lockedLayers/>

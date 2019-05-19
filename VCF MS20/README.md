@@ -1,14 +1,14 @@
 # Korg Late MS20 Filter
 
-## BOM
+This is rené Schmitz remake of the late korg ms20 filter.
 
-The only parts that are hard to get are the OpAmps and the CA3080 OTA. At the time of writing both are available for very little money at the big chinese market. 
+## BOM
 
 |Ref|Value|Name|
 |:---|:---|:---|
-|C1|CP||
-|C2|CP||
-|C3|1n||
+|C1|22u|Electrolytic capacitor|
+|C2|22u||
+|C3|1n|Ceramic capacitor|
 |C4|1n||
 |C5|1n||
 |C6|1n||
@@ -18,16 +18,16 @@ The only parts that are hard to get are the OpAmps and the CA3080 OTA. At the ti
 |C10|1n||
 |C11|1n||
 |C12|0.47u||
-|D1|LED||
+|D1|LED|LED Red|
 |D2|LED||
-|J1|CV2||
+|J1|CV2|Banana Plug|
 |J2|CV1||
 |J3|Pitch||
 |J4|IN||
 |J5|OUT||
-|Q1|BC558|Package_TO_SOT_THT:TO-92_Inline|http://www.fairchildsemi.com/ds/BC/BC557.pdf|
-|Q2|BC558|Package_TO_SOT_THT:TO-92_Inline|http://www.fairchildsemi.com/ds/BC/BC557.pdf|
-|R1|100k||
+|Q1|BC558|[Transistor PNP](https://www.onsemi.com/pub/Collateral/BC556B-D.PDF)|
+|Q2|BC558||
+|R1|100k|Resistor|
 |R2|100k||
 |R3|100k||
 |R4|100k||
@@ -46,19 +46,18 @@ The only parts that are hard to get are the OpAmps and the CA3080 OTA. At the ti
 |R17|10k||
 |R18|1k8||
 |R19|10k||
-|RV1|47k||
+|RV1|47k|Potentiometer|
 |RV2|47k||
 |RV3|47k||
 |RV4|100k||
-|U1|TL074||http://www.ti.com/lit/ds/symlink/tl071.pdf|
-|U2|CA3080||http://www.intersil.com/content/dam/Intersil/documents/ca30/ca3080-a.pdf|
-|U3|CA3080||http://www.intersil.com/content/dam/Intersil/documents/ca30/ca3080-a.pdf|
-|-|39x24||Stripboard|
-|-||Wire and Bolts....|
+|U1|TL074|[Low-Noise JFET-Input Operational Amplifiers](https://github.com/spielhuus/elektrophon/blob/master/docs/TL07xx.pdf)|
+|U2|CA3080|[Operational Transconductance Amplifier (OTA)](https://github.com/spielhuus/elektrophon/blob/master/docs/ca3080.pdf)|
+|U3|CA3080||http://www.intersil.com/content/dam/Intersil/documents/ca30/ca3080-a.pdf||"
 
 ## links
 
 1) [René Schmitz: Korg Late MS20 Filter](https://www.schmitzbits.de/ms20.html)
+1) [Timothy E. Stinchcombe: A Study of the Korg MS10 & MS20 Filters](http://www.timstinchcombe.co.uk/synth/MS20_study.pdf)
 
 ---
 [![CC BY-SA](https://licensebuttons.net/l/by-sa/3.0/88x31.png)](https://creativecommons.org/licenses/by-sa/4.0/)
