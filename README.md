@@ -1,23 +1,23 @@
 # elektrophon
 collection of modules for a modular analog electro acoustic noise machine. all modules are built on stripboards or pcb's and with 3d printed front plates.The goal is it to build the modules quickly. The 3d printed front panels comes complete with holes and stands. This makes it easy to mount the module. The modules can be mount to a rack. <a href="https://spielhuus.github.io/elektrophon/fly_rack.jpg"><img align="right" src="https://spielhuus.github.io/elektrophon/fly_rack_tmb.jpg"></a>  The first rack i built was a small testing rack, the fly rack.There are only two side panels to print. For the rails i used the standard euro panel rails from the electronic vendors (i.e. [farnel](https://de.farnell.com/schroff/34560-484/horizontal-rail-enclosure/dp/2816357)). Every thing from the music stores is very expensive. it is a little bit cheaper to buy those rails. The sizes for modular synths are mostly equal to the standard size for electronic and computer racks.
 
+
+# module size
+
+The armatures, plugs and knobs, are placed in a fix raster. for the columns used for the module the resulting panel sizes are:
+
+| columns       | HP            | width  |
+| ------------- |:-------------:| ------:|
+| 1             | x             | x      |
+| 2             | 12            | x      |
+| 3             | 14            | x      |
+| 4             | 18            | x      |
+| 5             | x             | x      |
+| 6             | x             | x      |
+
+
+
 # modules 
-
-## Voltage Controller Oszilators 
-Voltage Controlled Oscillator, a continuous voltage source, which will output a signal whose frequency is a function of the settings. In its basic form these may be simple waveforms (most usually a square wave or a sawtooth wave, but also includes pulse, triangle and sine waves), however these can be dynamically changed through such controls as sync, frequency modulation, and self-modulation. []()
- 
-* 
-*
-* 
-
-## Low Frequency Oszilators 
-
-## Active and Passive Filters
-
-## Voltage Controlled Filters
-
-
-## Voltage Controlled Amplifier
 
 | Tables        | Are           | Cool  |
 | ------------- |:-------------:| -----:|
