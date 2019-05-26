@@ -1,6 +1,5 @@
 EESchema Schematic File Version 4
-LIBS:VCF MS20-cache
-EELAYER 29 0
+EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -23,7 +22,7 @@ F 1 "47k" H 1430 1405 50  0000 R CNN
 F 2 "" H 1500 1450 50  0001 C CNN
 F 3 "~" H 1500 1450 50  0001 C CNN
 	1    1500 1450
-	1    0    0    -1  
+	1    0    0    1   
 $EndComp
 $Comp
 L Device:R_POT RV2
@@ -34,7 +33,7 @@ F 1 "47k" H 1430 2305 50  0000 R CNN
 F 2 "" H 1500 2350 50  0001 C CNN
 F 3 "~" H 1500 2350 50  0001 C CNN
 	1    1500 2350
-	1    0    0    -1  
+	1    0    0    1   
 $EndComp
 $Comp
 L Device:R_POT RV3
