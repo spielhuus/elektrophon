@@ -1877,7 +1877,7 @@
       <voltage>_63V</voltage>
     </diylc.passive.RadialCeramicDiskCapacitor>
     <diylc.passive.RadialCeramicDiskCapacitor>
-      <name>C7</name>
+      <name>C8</name>
       <alpha>127</alpha>
       <length value="0.25" unit="in"/>
       <width value="0.125" unit="in"/>
@@ -1898,7 +1898,7 @@
       <voltage>_63V</voltage>
     </diylc.passive.RadialCeramicDiskCapacitor>
     <diylc.passive.RadialCeramicDiskCapacitor>
-      <name>C8</name>
+      <name>C7</name>
       <alpha>127</alpha>
       <length value="0.25" unit="in"/>
       <width value="0.125" unit="in"/>
