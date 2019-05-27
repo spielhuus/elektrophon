@@ -1,6 +1,6 @@
-# atmega midi controller
+# cv function gerator
 
-module to convert midi signals to control volates. the modules is based on the atmega microprocessor and mcp dac. 
+a buncg of modules dont necessarily make music. the modules have to be conrolled with control voltages of different kind. the CV Function Generator creates control voltages of different types. it can act as a standalone oscillator or create envelopes for controlling the pitch. but the channels are freely programmable and can also be used as a simple sequenver with variable cv output. this module should create sexteen individual controllable slopes or waveforms.instead of creating different dac and trigger channels, all channels slopes are created with a dac. every dac is freely assignable to a controll channel. the control channels are serial midi, envelope gerator, slope generator, cv sequenver. 
 
 
 ## burn bootloader to chip
