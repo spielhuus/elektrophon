@@ -1263,7 +1263,7 @@
       <shape>Standard</shape>
     </diylc.passive.Resistor>
     <diylc.passive.RadialCeramicDiskCapacitor>
-      <name>C5</name>
+      <name>C9</name>
       <alpha>127</alpha>
       <length value="0.25" unit="in"/>
       <width value="0.125" unit="in"/>
@@ -1874,7 +1874,7 @@
       <layer>_1</layer>
     </diylc.connectivity.SolderPad>
     <diylc.passive.Resistor>
-      <name>R4</name>
+      <name>R29</name>
       <alpha>127</alpha>
       <length value="0.5" unit="in"/>
       <width value="0.125" unit="in"/>
@@ -2006,7 +2006,7 @@
       <orientation>_270</orientation>
     </diylc.misc.Label>
     <diylc.passive.RadialCeramicDiskCapacitor>
-      <name>C4</name>
+      <name>C5</name>
       <alpha>127</alpha>
       <length value="0.25" unit="in"/>
       <width value="0.125" unit="in"/>
@@ -2048,7 +2048,7 @@
       <voltage>_63V</voltage>
     </diylc.passive.RadialCeramicDiskCapacitor>
     <diylc.passive.RadialCeramicDiskCapacitor>
-      <name>C9</name>
+      <name>C4</name>
       <alpha>127</alpha>
       <length value="0.25" unit="in"/>
       <width value="0.125" unit="in"/>
