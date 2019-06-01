@@ -24,3 +24,9 @@ _autosave-*
 # Exported BOM files
 *.xml
 *.csv
+
+*.kicad_pcb
+fp-info-cache
+sym-lib-table
+*-rescue.dcm
+sym-lib-table
