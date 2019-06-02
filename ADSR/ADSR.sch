@@ -1,6 +1,6 @@
 EESchema Schematic File Version 4
 LIBS:ADSR-cache
-EELAYER 29 0
+EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -500,17 +500,6 @@ Wire Wire Line
 Wire Wire Line
 	8250 3550 8250 3800
 $Comp
-L Device:C C6
-U 1 1 5CB907ED
-P 7950 3600
-F 0 "C6" H 7835 3554 50  0000 R CNN
-F 1 "4.7u" H 7835 3645 50  0000 R CNN
-F 2 "Capacitor_THT:C_Radial_D6.3mm_H5.0mm_P2.50mm" H 7988 3450 50  0001 C CNN
-F 3 "~" H 7950 3600 50  0001 C CNN
-	1    7950 3600
-	-1   0    0    1   
-$EndComp
-$Comp
 L Amplifier_Operational:LM358 U1
 U 1 1 5CB81C4B
 P 8550 3450
@@ -746,7 +735,7 @@ U 1 1 5CCA767C
 P 1500 7100
 F 0 "C1" H 1618 7146 50  0000 L CNN
 F 1 "22u" H 1618 7055 50  0000 L CNN
-F 2 "Capacitor_THT:CP_Radial_D6.3mm_P2.50mm" H 1538 6950 50  0001 C CNN
+F 2 "Capacitor_THT:CP_Radial_D5.0mm_P2.00mm" H 1538 6950 50  0001 C CNN
 F 3 "~" H 1500 7100 50  0001 C CNN
 	1    1500 7100
 	1    0    0    -1  
@@ -1204,5 +1193,16 @@ F 2 "" H 6950 6000 50  0001 C CNN
 F 3 "" H 6950 6000 50  0001 C CNN
 	1    6950 6000
 	-1   0    0    1   
+$EndComp
+$Comp
+L Device:CP C6
+U 1 1 5CF3D2BD
+P 7950 3600
+F 0 "C6" H 8068 3646 50  0000 L CNN
+F 1 "4u7" H 8068 3555 50  0000 L CNN
+F 2 "" H 7988 3450 50  0001 C CNN
+F 3 "~" H 7950 3600 50  0001 C CNN
+	1    7950 3600
+	1    0    0    -1  
 $EndComp
 $EndSCHEMATC
