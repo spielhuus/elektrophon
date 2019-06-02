@@ -16,6 +16,8 @@
 #define LED_PIN 9
 
 #define DAC1 8
+#define DAC2 7
+#define DAC3 6
 
 unsigned int shift_bits = 0;
 
@@ -57,6 +59,13 @@ unsigned int act_note[MIDI_CHANNELS] = {0};
 // Note that DAC output will need to be amplified by 1.77X for the standard 1V/octave 
 #define NOTE_SF 47.069f // This value can be tuned if CV output isn't exactly 1V/octave
 
+
+void channel_on(int latchPin, int channel ) {
+  digitalWrite(latchPin, LOW);      
+  shift_bits |= 1 << channel;
+  SPI.transfer( shift_bits ); 
+  digitalWrite(latchPin, HIGH);
+}
 
 /* midi note on */
 void handleNoteOn(byte inChannel, byte inNumber, byte inVelocity) {
@@ -119,6 +128,8 @@ void setVoltage(int dacpin, bool channel, bool gain, unsigned int mV) {
 void setup() {
   pinMode(LED_PIN, OUTPUT);
   pinMode(DAC1, OUTPUT);
+  pinMode(DAC2, OUTPUT);
+  pinMode(DAC3, OUTPUT);
   digitalWrite(LED_PIN, HIGH);
   digitalWrite(DAC1,HIGH);
   
@@ -129,6 +140,21 @@ void setup() {
   
   delay(1000);
   digitalWrite(LED_PIN, LOW);
+}
+
+float wave1 = 0;
+long waveTimer = 0;
+
+int sine_x = 0;
+float Fs = 8000;                  
+float   dt = 1/Fs;                
+float   StopTime = 0.25;          
+float pi=3.14;
+
+float   Fc = 60;  
+
+float calc_sine(int t) {
+  return cos(2*pi*Fc*t);
 }
 
 // the loop function runs over and over again forever
@@ -144,5 +170,23 @@ void loop() {
       trigTimers[i] = 0;
     }
   }
+  
+  //test with channel DAC2 channel 0
+//     setVoltage(DAC2, 0, 1, 4096);  // DAC1, channel 1, gain = 1X
+     
+   if( waveTimer == 0 || waveTimer < millis() ) {
+    
+    trigTimers[3] = millis()+MIDI_TRIGGER_TIME;
+    channel_on(latchPin, 4);
+    
+  sine_x+=1;
+     if(sine_x > 360 ) sine_x = 0;
+  
+     setVoltage(DAC2, 0, 1, 4096 * calc_sine(sine_x) );  // DAC1, channel 1, gain = 1X
+//     waveTimer=millis()+1;
+     wave1=wave1+128;
+     if(wave1 > 4096 ) wave1 = 0;
+   }
+  
   MIDI.read();
 }
