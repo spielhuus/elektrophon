@@ -57,9 +57,6 @@ module panel_adsr(thickness=THICKNESS, screen=SCREEN, font_size=FONT_SIZE,armatu
         translate([1*RASTER_X+RASTER_X_TOP, 4*RASTER_Y+RASTER_Y_TOP]) banana_hole(thickness=thickness);
     }
 
-    //draw the stand
-    //stand(x=0, y=20, count_x=17, count_y=40 , r=3, h=18, hole=1.25,thickness=thickness,third=false);
-
     if(armatures) {
 
         //color("green") perfboard(x=RASTER_SHIFT_X+2,y=13,height=21, width=18,length=43);
@@ -77,6 +74,8 @@ module panel_adsr(thickness=THICKNESS, screen=SCREEN, font_size=FONT_SIZE,armatu
 
         translate([0*RASTER_X+RASTER_X_TOP, 4*RASTER_Y+RASTER_Y_TOP]) color("yellow") banana();
         translate([1*RASTER_X+RASTER_X_TOP, 4*RASTER_Y+RASTER_Y_TOP]) color("blue") banana();
+
+        rotate([270,0,0]) translate([0,-8,0]) color("green") import( "export/ADSR.stl", convexity = 10 );
     }
 }
 
