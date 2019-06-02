@@ -25,7 +25,6 @@ _autosave-*
 *.xml
 *.csv
 
-*.kicad_pcb
 fp-info-cache
 sym-lib-table
 *-rescue.dcm
