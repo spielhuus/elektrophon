@@ -6,16 +6,16 @@ collection of modules for a modular analog electro acoustic noise machine. all m
 
 The armatures, plugs and knobs, are placed in a fix raster. for the columns used for the module the resulting panel sizes are:
 
-| columns       | HP            | width  |
-| ------------- |:-------------:| ------:|
-| 1             | x             | x      |
-| 2             | 12            | x      |
-| 3             | 14            | x      |
-| 4             | 18            | x      |
-| 5             | x             | x      |
-| 6             | x             | x      |
-
-
+|HU|Armature Rows|HU|HP|Total Height [mm]|Total Width [mm]|Axis x|Axis Y|PCB Width|
+|--|-------------|--|--|-----------------|----------------|------|------|---------|
+|10|2|5.07|45.45|454.5|50.7|44.7|
+|12|2 1/2|5.07|45.45|545.4|60.84|54.84|
+|14|3|5.07|45.45|636.3|70.98|64.98|
+|18|4|5.07|45.45|818.1|91.26|85.26|
+|22|5|5.07|45.45|999.9|111.54|105.54|
+|26|6|5.07|45.45|1181.7|131.82|125.82|
+|30|7|5.07|45.45|1363.5|152.1|146.1|
+|34|8|5.07|45.45|1545.3|172.38|166.38|
 
 # modules 
 
