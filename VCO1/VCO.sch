@@ -15,7 +15,7 @@ Comment3 "VCO-1 designed by Thomas Henry"
 Comment4 "Voltage Controlled Oszillator"
 $EndDescr
 $Sheet
-S 9750 4650 900  450 
+S 9550 4850 900  450 
 U 5CF42726
 F0 "Panel Wiring" 50
 F1 "Panel Wiring.sch" 50
@@ -649,7 +649,7 @@ AR Path="/5CEF6890" Ref="RV5"  Part="1"
 AR Path="/5CFCA4E3/5CEF6890" Ref="RV?"  Part="1" 
 F 0 "RV5" H 3230 2346 50  0000 R CNN
 F 1 "100 (TRIM)" H 3230 2255 50  0000 R CNN
-F 2 "Potentiometer_THT:Potentiometer_Vishay_43_Horizontal" H 3300 2300 50  0001 C CNN
+F 2 "Potentiometer_THT:Potentiometer_Bourns_3296Z_Horizontal" H 3300 2300 50  0001 C CNN
 F 3 "~" H 3300 2300 50  0001 C CNN
 	1    3300 2300
 	1    0    0    -1  
@@ -778,7 +778,7 @@ AR Path="/5CEF68CE" Ref="RV6"  Part="1"
 AR Path="/5CFCA4E3/5CEF68CE" Ref="RV?"  Part="1" 
 F 0 "RV6" V 4300 4850 50  0000 R CNN
 F 1 "100k (TRIM)" V 4200 5050 50  0000 R CNN
-F 2 "Potentiometer_THT:Potentiometer_Vishay_43_Horizontal" H 4400 4800 50  0001 C CNN
+F 2 "Potentiometer_THT:Potentiometer_Bourns_3296Z_Horizontal" H 4400 4800 50  0001 C CNN
 F 3 "~" H 4400 4800 50  0001 C CNN
 	1    4400 4800
 	0    -1   -1   0   
@@ -1358,7 +1358,7 @@ AR Path="/5CEF69E7" Ref="RV7"  Part="1"
 AR Path="/5CFCA4E3/5CEF69E7" Ref="RV?"  Part="1" 
 F 0 "RV7" V 5400 4250 50  0000 R CNN
 F 1 "100k (TRIM)" V 5300 4400 50  0000 R CNN
-F 2 "Potentiometer_THT:Potentiometer_Vishay_43_Horizontal" H 5500 4200 50  0001 C CNN
+F 2 "Potentiometer_THT:Potentiometer_Bourns_3296Z_Horizontal" H 5500 4200 50  0001 C CNN
 F 3 "~" H 5500 4200 50  0001 C CNN
 	1    5500 4200
 	1    0    0    -1  
@@ -1399,7 +1399,7 @@ AR Path="/5CEF69FA" Ref="RV8"  Part="1"
 AR Path="/5CFCA4E3/5CEF69FA" Ref="RV?"  Part="1" 
 F 0 "RV8" V 6500 4950 50  0000 R CNN
 F 1 "50k (TRIM)" V 6400 5100 50  0000 R CNN
-F 2 "Potentiometer_THT:Potentiometer_Vishay_43_Horizontal" H 6600 4900 50  0001 C CNN
+F 2 "Potentiometer_THT:Potentiometer_Bourns_3296Z_Horizontal" H 6600 4900 50  0001 C CNN
 F 3 "~" H 6600 4900 50  0001 C CNN
 	1    6600 4900
 	0    1    1    0   
@@ -1944,4 +1944,266 @@ F 3 "" H 10350 6300 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	5100 2200 5100 3550
+$Comp
+L Device:LED D6
+U 1 1 5CFD824C
+P 9850 3150
+F 0 "D6" H 9843 3366 50  0000 C CNN
+F 1 "LED" H 9843 3275 50  0000 C CNN
+F 2 "LED_THT:LED_D5.0mm_FlatTop" H 9850 3150 50  0001 C CNN
+F 3 "~" H 9850 3150 50  0001 C CNN
+	1    9850 3150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:LED D7
+U 1 1 5CFD83AC
+P 9850 3450
+F 0 "D7" H 9843 3666 50  0000 C CNN
+F 1 "LED" H 9843 3575 50  0000 C CNN
+F 2 "LED_THT:LED_D5.0mm_FlatTop" H 9850 3450 50  0001 C CNN
+F 3 "~" H 9850 3450 50  0001 C CNN
+	1    9850 3450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:LED D8
+U 1 1 5CFD85AE
+P 9850 3750
+F 0 "D8" H 9843 3966 50  0000 C CNN
+F 1 "LED" H 9843 3875 50  0000 C CNN
+F 2 "LED_THT:LED_D5.0mm_FlatTop" H 9850 3750 50  0001 C CNN
+F 3 "~" H 9850 3750 50  0001 C CNN
+	1    9850 3750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:LED D9
+U 1 1 5CFD8785
+P 9850 4100
+F 0 "D9" H 9843 4316 50  0000 C CNN
+F 1 "LED" H 9843 4225 50  0000 C CNN
+F 2 "LED_THT:LED_D5.0mm_FlatTop" H 9850 4100 50  0001 C CNN
+F 3 "~" H 9850 4100 50  0001 C CNN
+	1    9850 4100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:LED D5
+U 1 1 5CFD8C93
+P 9850 2800
+F 0 "D5" H 9843 3016 50  0000 C CNN
+F 1 "LED" H 9843 2925 50  0000 C CNN
+F 2 "LED_THT:LED_D5.0mm_FlatTop" H 9850 2800 50  0001 C CNN
+F 3 "~" H 9850 2800 50  0001 C CNN
+	1    9850 2800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:LED D4
+U 1 1 5CFD9C34
+P 9850 2450
+F 0 "D4" H 9843 2666 50  0000 C CNN
+F 1 "LED" H 9843 2575 50  0000 C CNN
+F 2 "LED_THT:LED_D5.0mm_FlatTop" H 9850 2450 50  0001 C CNN
+F 3 "~" H 9850 2450 50  0001 C CNN
+	1    9850 2450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:LED D3
+U 1 1 5CFDA11F
+P 9850 2100
+F 0 "D3" H 9843 2316 50  0000 C CNN
+F 1 "LED" H 9843 2225 50  0000 C CNN
+F 2 "LED_THT:LED_D5.0mm_FlatTop" H 9850 2100 50  0001 C CNN
+F 3 "~" H 9850 2100 50  0001 C CNN
+	1    9850 2100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:LED D2
+U 1 1 5CFDA561
+P 9850 1800
+F 0 "D2" H 9843 2016 50  0000 C CNN
+F 1 "LED" H 9843 1925 50  0000 C CNN
+F 2 "LED_THT:LED_D5.0mm_FlatTop" H 9850 1800 50  0001 C CNN
+F 3 "~" H 9850 1800 50  0001 C CNN
+	1    9850 1800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9700 1800 9700 2100
+Connection ~ 9700 2100
+Wire Wire Line
+	9700 2100 9700 2450
+Connection ~ 9700 2450
+Wire Wire Line
+	9700 2450 9700 2800
+Connection ~ 9700 2800
+Wire Wire Line
+	9700 2800 9700 3150
+Connection ~ 9700 3150
+Wire Wire Line
+	9700 3150 9700 3450
+Connection ~ 9700 3450
+Wire Wire Line
+	9700 3450 9700 3750
+Connection ~ 9700 3750
+Wire Wire Line
+	9700 3750 9700 4100
+Connection ~ 9700 4100
+Wire Wire Line
+	9700 4100 9700 4350
+$Comp
+L Device:R R37
+U 1 1 5CFE3DA8
+P 10150 1800
+AR Path="/5CFE3DA8" Ref="R37"  Part="1" 
+AR Path="/5CFCA4E3/5CFE3DA8" Ref="R?"  Part="1" 
+F 0 "R37" H 10080 1754 50  0000 R CNN
+F 1 "1k" H 10080 1845 50  0000 R CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 10080 1800 50  0001 C CNN
+F 3 "~" H 10150 1800 50  0001 C CNN
+	1    10150 1800
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R38
+U 1 1 5CFE4276
+P 10150 2100
+AR Path="/5CFE4276" Ref="R38"  Part="1" 
+AR Path="/5CFCA4E3/5CFE4276" Ref="R?"  Part="1" 
+F 0 "R38" H 10080 2054 50  0000 R CNN
+F 1 "1k" H 10080 2145 50  0000 R CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 10080 2100 50  0001 C CNN
+F 3 "~" H 10150 2100 50  0001 C CNN
+	1    10150 2100
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R39
+U 1 1 5CFE44E4
+P 10150 2450
+AR Path="/5CFE44E4" Ref="R39"  Part="1" 
+AR Path="/5CFCA4E3/5CFE44E4" Ref="R?"  Part="1" 
+F 0 "R39" H 10080 2404 50  0000 R CNN
+F 1 "1k" H 10080 2495 50  0000 R CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 10080 2450 50  0001 C CNN
+F 3 "~" H 10150 2450 50  0001 C CNN
+	1    10150 2450
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R40
+U 1 1 5CFE4872
+P 10150 2800
+AR Path="/5CFE4872" Ref="R40"  Part="1" 
+AR Path="/5CFCA4E3/5CFE4872" Ref="R?"  Part="1" 
+F 0 "R40" H 10080 2754 50  0000 R CNN
+F 1 "1k" H 10080 2845 50  0000 R CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 10080 2800 50  0001 C CNN
+F 3 "~" H 10150 2800 50  0001 C CNN
+	1    10150 2800
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R41
+U 1 1 5CFE4B8D
+P 10150 3150
+AR Path="/5CFE4B8D" Ref="R41"  Part="1" 
+AR Path="/5CFCA4E3/5CFE4B8D" Ref="R?"  Part="1" 
+F 0 "R41" H 10080 3104 50  0000 R CNN
+F 1 "1k" H 10080 3195 50  0000 R CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 10080 3150 50  0001 C CNN
+F 3 "~" H 10150 3150 50  0001 C CNN
+	1    10150 3150
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R42
+U 1 1 5CFE4DA3
+P 10150 3450
+AR Path="/5CFE4DA3" Ref="R42"  Part="1" 
+AR Path="/5CFCA4E3/5CFE4DA3" Ref="R?"  Part="1" 
+F 0 "R42" H 10080 3404 50  0000 R CNN
+F 1 "1k" H 10080 3495 50  0000 R CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 10080 3450 50  0001 C CNN
+F 3 "~" H 10150 3450 50  0001 C CNN
+	1    10150 3450
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R43
+U 1 1 5CFE5198
+P 10150 3750
+AR Path="/5CFE5198" Ref="R43"  Part="1" 
+AR Path="/5CFCA4E3/5CFE5198" Ref="R?"  Part="1" 
+F 0 "R43" H 10080 3704 50  0000 R CNN
+F 1 "1k" H 10080 3795 50  0000 R CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 10080 3750 50  0001 C CNN
+F 3 "~" H 10150 3750 50  0001 C CNN
+	1    10150 3750
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R44
+U 1 1 5CFE59D7
+P 10150 4100
+AR Path="/5CFE59D7" Ref="R44"  Part="1" 
+AR Path="/5CFCA4E3/5CFE59D7" Ref="R?"  Part="1" 
+F 0 "R44" H 10080 4054 50  0000 R CNN
+F 1 "1k" H 10080 4145 50  0000 R CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 10080 4100 50  0001 C CNN
+F 3 "~" H 10150 4100 50  0001 C CNN
+	1    10150 4100
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR0101
+U 1 1 5CFE5CC9
+P 10300 4200
+AR Path="/5CFE5CC9" Ref="#PWR0101"  Part="1" 
+AR Path="/5CFCA4E3/5CFE5CC9" Ref="#PWR?"  Part="1" 
+F 0 "#PWR0101" H 10300 3950 50  0001 C CNN
+F 1 "GND" V 10305 4072 50  0000 R CNN
+F 2 "" H 10300 4200 50  0001 C CNN
+F 3 "" H 10300 4200 50  0001 C CNN
+	1    10300 4200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0102
+U 1 1 5CFE64F6
+P 9700 4350
+F 0 "#PWR0102" H 9700 4200 50  0001 C CNN
+F 1 "+5V" V 9715 4478 50  0000 L CNN
+F 2 "" H 9700 4350 50  0001 C CNN
+F 3 "" H 9700 4350 50  0001 C CNN
+	1    9700 4350
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	10300 1800 10300 2100
+Connection ~ 10300 2100
+Wire Wire Line
+	10300 2100 10300 2450
+Connection ~ 10300 2450
+Wire Wire Line
+	10300 2450 10300 2800
+Connection ~ 10300 2800
+Wire Wire Line
+	10300 2800 10300 3150
+Connection ~ 10300 3150
+Wire Wire Line
+	10300 3150 10300 3450
+Connection ~ 10300 3450
+Wire Wire Line
+	10300 3450 10300 3750
+Connection ~ 10300 3750
+Wire Wire Line
+	10300 3750 10300 4100
+Connection ~ 10300 4100
+Wire Wire Line
+	10300 4100 10300 4200
 $EndSCHEMATC

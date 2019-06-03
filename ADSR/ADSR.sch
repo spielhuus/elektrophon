@@ -130,7 +130,7 @@ U 1 1 5CB6846C
 P 2150 3450
 F 0 "R3" V 1943 3450 50  0000 C CNN
 F 1 "22k" V 2034 3450 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 2080 3450 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 2080 3450 50  0001 C CNN
 F 3 "~" H 2150 3450 50  0001 C CNN
 	1    2150 3450
 	0    1    1    0   
@@ -676,25 +676,25 @@ F 3 "~" H 2750 7100 50  0001 C CNN
 $EndComp
 Text Notes 1950 6700 0    50   ~ 0
 U2
-Text GLabel 4050 7100 0    50   Input ~ 0
+Text GLabel 4050 7200 0    50   Input ~ 0
 Attack_1
-Text GLabel 4050 7000 0    50   Input ~ 0
+Text GLabel 4050 7100 0    50   Input ~ 0
 Release_1
-Text GLabel 4050 6900 0    50   Input ~ 0
-Sustain_3
 Text GLabel 4050 6600 0    50   Input ~ 0
-Release_2
+Sustain_3
 Text GLabel 4050 6700 0    50   Input ~ 0
-Attack_2
-Text GLabel 8800 5000 2    50   Input ~ 0
-Sustain_2
-Text GLabel 8800 4900 2    50   Input ~ 0
-Sustain_1
-Text GLabel 8800 5200 2    50   Input ~ 0
-Decay_2
+Release_2
 Text GLabel 4050 6800 0    50   Input ~ 0
+Attack_2
+Text GLabel 4050 7500 0    50   Input ~ 0
+Sustain_2
+Text GLabel 4050 7000 0    50   Input ~ 0
+Sustain_1
+Text GLabel 4050 7600 0    50   Input ~ 0
+Decay_2
+Text GLabel 4050 6900 0    50   Input ~ 0
 Decay_1
-Text GLabel 8800 5100 2    50   Input ~ 0
+Text GLabel 4050 7400 0    50   Input ~ 0
 OUT
 $Comp
 L power:+15V #PWR01
@@ -768,7 +768,7 @@ F 3 "~" H 2850 7400 50  0001 C CNN
 	1    2850 7400
 	0    1    1    0   
 $EndComp
-Text GLabel 4050 7200 0    50   Input ~ 0
+Text GLabel 4050 7300 0    50   Input ~ 0
 IN
 Wire Wire Line
 	2850 7400 2750 7400
@@ -1205,19 +1205,4 @@ F 3 "~" H 7950 3600 50  0001 C CNN
 	1    7950 3600
 	1    0    0    -1  
 $EndComp
-NoConn ~ 4050 7500
-NoConn ~ 4050 7600
-NoConn ~ 4050 7400
-$Comp
-L Connector:Conn_01x04_Male J3
-U 1 1 5D0E75F0
-P 8600 5000
-F 0 "J3" H 8708 5281 50  0000 C CNN
-F 1 "Conn_01x04_Male" H 8708 5190 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 8600 5000 50  0001 C CNN
-F 3 "~" H 8600 5000 50  0001 C CNN
-	1    8600 5000
-	1    0    0    -1  
-$EndComp
-NoConn ~ 4050 7300
 $EndSCHEMATC
