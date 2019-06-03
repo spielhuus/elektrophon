@@ -157,6 +157,9 @@ float calc_sine(int t) {
   return cos(2*pi*Fc*t);
 }
 
+bool raising = true;
+int slope_step = 128;
+
 // the loop function runs over and over again forever
 void loop() {
 
@@ -178,14 +181,23 @@ void loop() {
     
     trigTimers[3] = millis()+MIDI_TRIGGER_TIME;
     channel_on(latchPin, 4);
-    
-  sine_x+=1;
-     if(sine_x > 360 ) sine_x = 0;
-  
-     setVoltage(DAC2, 0, 1, 4096 * calc_sine(sine_x) );  // DAC1, channel 1, gain = 1X
-//     waveTimer=millis()+1;
-     wave1=wave1+128;
-     if(wave1 > 4096 ) wave1 = 0;
+
+     if( raising ) {
+       sine_x+=1;
+       if(sine_x > 4096 ) {
+         raising = false;
+         sine_x = 4096 - slope_step;
+       }
+     } else {
+       sine_x-=1;
+       if(sine_x < 0 ) {
+        raising = true;
+        sine_x = slope_step;
+       }
+     }
+     
+     setVoltage(DAC2, 0, 1, sine_x /* 4096 * calc_sine(sine_x) */ );  // DAC1, channel 1, gain = 1X
+     waveTimer=millis();
    }
   
   MIDI.read();
