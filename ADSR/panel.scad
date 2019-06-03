@@ -18,7 +18,7 @@ TOP_REFLECTOR_X=0;
 
 RASTER_SHIFT_X=-6;
 RASTER_Y_TOP=25;
-RASTER_X_TOP=9;
+RASTER_X_TOP=15;
 RASTER_X=21;
 RASTER_Y=21;
 
@@ -34,7 +34,7 @@ use <../lib/toggle_switch.scad>
 module panel_adsr(thickness=THICKNESS, screen=SCREEN, font_size=FONT_SIZE,armatures=ARMATURES) {
     difference() {
         group() {
-            translate([RASTER_SHIFT_X,0,0]) plate(HP=HP,HU=HU,thickness=thickness,    wall_height=1,stand_h=5);
+            /*translate([RASTER_SHIFT_X,0,0])*/ plate(HP=HP,HU=HU,thickness=thickness,    wall_height=1,stand_h=5);
             translate([0,0,thickness]) {
                 translate([0*RASTER_X+RASTER_X_TOP, 4*RASTER_Y+RASTER_Y_TOP]) banana_holder();
                 translate([1*RASTER_X+RASTER_X_TOP, 4*RASTER_Y+RASTER_Y_TOP]) banana_holder();

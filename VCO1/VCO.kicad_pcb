@@ -2,7 +2,7 @@
 
   (general
     (thickness 1.6)
-    (drawings 0)
+    (drawings 4)
     (tracks 0)
     (zones 0)
     (modules 63)
@@ -2882,5 +2882,10 @@
       (rotate (xyz 0 0 0))
     )
   )
+
+  (gr_line (start 50 50) (end 157.35 50) (layer F.SilkS) (width 0.12) (tstamp 5CF4B130))
+  (gr_line (start 157.35 50) (end 157.35 114.98) (layer F.SilkS) (width 0.12))
+  (gr_line (start 50 114.98) (end 157.35 114.98) (layer F.SilkS) (width 0.12))
+  (gr_line (start 50 50) (end 50 114.98) (layer F.SilkS) (width 0.12))
 
 )

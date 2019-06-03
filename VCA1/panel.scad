@@ -30,7 +30,7 @@ use <../lib/stand.scad>
 use <../lib/Potentiometer_small.scad>
 use <../lib/toggle_switch.scad>
 
-use <../lib/Designer Block.ttf>
+//use <../lib/Designer Block.ttf>
 
 module panel_vca(thickness=THICKNESS, screen=SCREEN, font_size=FONT_SIZE,armatures=ARMATURES) {
     difference() {
