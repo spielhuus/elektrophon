@@ -1,4 +1,4 @@
-(kicad_pcb (version 20171130) (host pcbnew 5.1.2)
+(kicad_pcb (version 20171130) (host pcbnew "(5.0.1)-4")
 
   (general
     (thickness 1.6)
@@ -10,6 +10,14 @@
   )
 
   (page A4)
+  (title_block
+    (title "The Fastest Envelope in the West")
+    (date 2019-06-10)
+    (rev 1)
+    (company spielhuus)
+    (comment 4 "License CC BY 4.0 - Attribution 4.0 International")
+  )
+
   (layers
     (0 F.Cu signal)
     (31 B.Cu signal)
@@ -25,7 +33,7 @@
     (41 Cmts.User user hide)
     (42 Eco1.User user hide)
     (43 Eco2.User user hide)
-    (44 Edge.Cuts user hide)
+    (44 Edge.Cuts user)
     (45 Margin user hide)
     (46 B.CrtYd user hide)
     (47 F.CrtYd user hide)
@@ -34,12 +42,14 @@
   )
 
   (setup
-    (last_trace_width 0.762)
+    (last_trace_width 0.25)
     (user_trace_width 0.762)
     (trace_clearance 0.2)
     (zone_clearance 0.508)
     (zone_45_only no)
     (trace_min 0.2)
+    (segment_width 0.2)
+    (edge_width 0.2)
     (via_size 0.8)
     (via_drill 0.4)
     (via_min_size 0.4)
@@ -49,8 +59,6 @@
     (uvias_allowed no)
     (uvia_min_size 0.2)
     (uvia_min_drill 0.1)
-    (edge_width 0.1)
-    (segment_width 0.2)
     (pcb_text_width 0.3)
     (pcb_text_size 1.5 1.5)
     (mod_edge_width 0.15)
@@ -201,7 +209,7 @@
     )
   )
 
-  (module MountingHole:MountingHole_2.2mm_M2 (layer F.Cu) (tedit 56D1B4CB) (tstamp 5CF5FC25)
+  (module MountingHole:MountingHole_2.2mm_M2 (layer F.Cu) (tedit 5CFE5EFF) (tstamp 5CF5FC25)
     (at 142.24 53.34)
     (descr "Mounting Hole 2.2mm, no annular, M2")
     (tags "mounting hole 2.2mm no annular m2")
@@ -2043,10 +2051,10 @@
     )
   )
 
-  (gr_line (start 100 50) (end 100 154.35) (layer F.SilkS) (width 0.15) (tstamp 5CF2AAF4))
-  (gr_line (start 100 154.35) (end 144.7 154.35) (layer F.SilkS) (width 0.15))
-  (gr_line (start 144.7 50) (end 144.7 154.35) (layer F.SilkS) (width 0.15))
-  (gr_line (start 100 50) (end 144.7 50) (layer F.SilkS) (width 0.15))
+  (gr_line (start 100 50) (end 100 154.35) (layer Edge.Cuts) (width 0.15) (tstamp 5CF2AAF4))
+  (gr_line (start 100 154.35) (end 144.7 154.35) (layer Edge.Cuts) (width 0.15))
+  (gr_line (start 144.7 50) (end 144.7 154.35) (layer Edge.Cuts) (width 0.15))
+  (gr_line (start 100 50) (end 144.7 50) (layer Edge.Cuts) (width 0.15))
 
   (segment (start 118.11 97.79) (end 119.38 96.52) (width 0.762) (layer B.Cu) (net 2))
   (segment (start 118.11 101.6) (end 118.11 97.79) (width 0.762) (layer B.Cu) (net 2))

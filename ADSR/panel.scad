@@ -1,6 +1,6 @@
 /** ADSR **/
 
-ARMATURES=true;
+ARMATURES=false;
 
 HU=3;
 HP=10;
@@ -34,7 +34,7 @@ use <../lib/toggle_switch.scad>
 module panel_adsr(thickness=THICKNESS, screen=SCREEN, font_size=FONT_SIZE,armatures=ARMATURES) {
     difference() {
         group() {
-            /*translate([RASTER_SHIFT_X,0,0])*/ plate(HP=HP,HU=HU,thickness=thickness,    wall_height=1,stand_h=5);
+            /*translate([RASTER_SHIFT_X,0,0])*/ plate(HP=HP,HU=HU,thickness=thickness);
             translate([0,0,thickness]) {
                 translate([0*RASTER_X+RASTER_X_TOP, 4*RASTER_Y+RASTER_Y_TOP]) banana_holder();
                 translate([1*RASTER_X+RASTER_X_TOP, 4*RASTER_Y+RASTER_Y_TOP]) banana_holder();
@@ -59,7 +59,7 @@ module panel_adsr(thickness=THICKNESS, screen=SCREEN, font_size=FONT_SIZE,armatu
 
     if(armatures) {
 
-        color("green") perfboard(x=RASTER_SHIFT_X+2,y=13,height=21, width=18,length=43);
+        //color("green") perfboard(x=RASTER_SHIFT_X+2,y=13,height=21, width=18,length=43);
         translate([0*RASTER_X+RASTER_X_TOP, 0*RASTER_Y+RASTER_Y_TOP, 0]) silkscreen_text(text="A", thickness=thickness, screen=screen, font_size=font_size, font=font, color="yellow");
         translate([0*RASTER_X+RASTER_X_TOP, 1*RASTER_Y+RASTER_Y_TOP, 0]) silkscreen_text(text="D", thickness=thickness, screen=screen, font_size=font_size, font=font, color="yellow");
         translate([0*RASTER_X+RASTER_X_TOP, 2*RASTER_Y+RASTER_Y_TOP, 0]) silkscreen_text(text="S", thickness=thickness, screen=screen, font_size=font_size, font=font, color="yellow");
@@ -79,4 +79,4 @@ module panel_adsr(thickness=THICKNESS, screen=SCREEN, font_size=FONT_SIZE,armatu
     }
 }
 
-panel_adsr(); 
+translate([0,0,0]) projection(cut = true) translate([0,0,-4]) panel_adsr(); 
