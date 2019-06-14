@@ -1,6 +1,6 @@
 EESchema Schematic File Version 4
 LIBS:ADSR-cache
-EELAYER 26 0
+EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -927,7 +927,7 @@ F 1 "LED" H 5993 5775 50  0000 C CNN
 F 2 "LED_THT:LED_D5.0mm_FlatTop" H 6000 5650 50  0001 C CNN
 F 3 "~" H 6000 5650 50  0001 C CNN
 	1    6000 5650
-	1    0    0    -1  
+	-1   0    0    1   
 $EndComp
 $Comp
 L Device:LED D7
@@ -938,7 +938,7 @@ F 1 "LED" H 5993 6125 50  0000 C CNN
 F 2 "LED_THT:LED_D5.0mm_FlatTop" H 6000 6000 50  0001 C CNN
 F 3 "~" H 6000 6000 50  0001 C CNN
 	1    6000 6000
-	1    0    0    -1  
+	-1   0    0    1   
 $EndComp
 $Comp
 L Device:LED D8
@@ -949,7 +949,7 @@ F 1 "LED" H 6493 5775 50  0000 C CNN
 F 2 "LED_THT:LED_D5.0mm_FlatTop" H 6500 5650 50  0001 C CNN
 F 3 "~" H 6500 5650 50  0001 C CNN
 	1    6500 5650
-	1    0    0    -1  
+	-1   0    0    1   
 $EndComp
 $Comp
 L Device:LED D9
@@ -960,7 +960,7 @@ F 1 "LED" H 6493 6125 50  0000 C CNN
 F 2 "LED_THT:LED_D5.0mm_FlatTop" H 6500 6000 50  0001 C CNN
 F 3 "~" H 6500 6000 50  0001 C CNN
 	1    6500 6000
-	1    0    0    -1  
+	-1   0    0    1   
 $EndComp
 $Comp
 L Device:LED D10
@@ -971,7 +971,7 @@ F 1 "LED" H 6943 5775 50  0000 C CNN
 F 2 "LED_THT:LED_D5.0mm_FlatTop" H 6950 5650 50  0001 C CNN
 F 3 "~" H 6950 5650 50  0001 C CNN
 	1    6950 5650
-	1    0    0    -1  
+	-1   0    0    1   
 $EndComp
 $Comp
 L Device:R R11
@@ -1159,7 +1159,7 @@ F 1 "LED" H 7093 6125 50  0000 C CNN
 F 2 "LED_THT:LED_D5.0mm_FlatTop" H 7100 6000 50  0001 C CNN
 F 3 "~" H 7100 6000 50  0001 C CNN
 	1    7100 6000
-	1    0    0    -1  
+	-1   0    0    1   
 $EndComp
 $Comp
 L Device:R R16

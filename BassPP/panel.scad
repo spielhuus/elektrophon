@@ -70,7 +70,7 @@ module panel_basspp(thickness=THICKNESS, screen=SCREEN, font_size=FONT_SIZE,arma
 
     if(armatures) {
 
-        translate([TOP_REFLECTOR_X,0,0]) color("green") perfboard(x=-4,y=10,width=22,length=39);
+        //translate([TOP_REFLECTOR_X,0,0]) color("green") perfboard(x=-4,y=10,width=22,length=39);
         translate([TOP_REFLECTOR_X, TOP_REFLECTOR_Y, 0]) rotate([0,0,270]) silkscreen_text (text="MS2O",thickness=thickness, screen=screen, font_size=font_size, font=font);
 
         translate([2*RASTER_Y+RASTER_X_TOP, 0*RASTER_Y+RASTER_Y_TOP, 0]) rotate([0,180,45]) potentiometer();
