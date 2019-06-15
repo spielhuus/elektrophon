@@ -1709,7 +1709,7 @@ F 1 "LED" H 9843 3275 50  0000 C CNN
 F 2 "LED_THT:LED_D5.0mm_FlatTop" H 9850 3150 50  0001 C CNN
 F 3 "~" H 9850 3150 50  0001 C CNN
 	1    9850 3150
-	1    0    0    -1  
+	-1   0    0    1   
 $EndComp
 $Comp
 L Device:LED D7
@@ -1720,7 +1720,7 @@ F 1 "LED" H 9843 3575 50  0000 C CNN
 F 2 "LED_THT:LED_D5.0mm_FlatTop" H 9850 3450 50  0001 C CNN
 F 3 "~" H 9850 3450 50  0001 C CNN
 	1    9850 3450
-	1    0    0    -1  
+	-1   0    0    1   
 $EndComp
 $Comp
 L Device:LED D8
@@ -1731,7 +1731,7 @@ F 1 "LED" H 9843 3875 50  0000 C CNN
 F 2 "LED_THT:LED_D5.0mm_FlatTop" H 9850 3750 50  0001 C CNN
 F 3 "~" H 9850 3750 50  0001 C CNN
 	1    9850 3750
-	1    0    0    -1  
+	-1   0    0    1   
 $EndComp
 $Comp
 L Device:LED D9
@@ -1742,7 +1742,7 @@ F 1 "LED" H 9843 4225 50  0000 C CNN
 F 2 "LED_THT:LED_D5.0mm_FlatTop" H 9850 4100 50  0001 C CNN
 F 3 "~" H 9850 4100 50  0001 C CNN
 	1    9850 4100
-	1    0    0    -1  
+	-1   0    0    1   
 $EndComp
 $Comp
 L Device:LED D5
@@ -1753,7 +1753,7 @@ F 1 "LED" H 9843 2925 50  0000 C CNN
 F 2 "LED_THT:LED_D5.0mm_FlatTop" H 9850 2800 50  0001 C CNN
 F 3 "~" H 9850 2800 50  0001 C CNN
 	1    9850 2800
-	1    0    0    -1  
+	-1   0    0    1   
 $EndComp
 $Comp
 L Device:LED D4
@@ -1764,7 +1764,7 @@ F 1 "LED" H 9843 2575 50  0000 C CNN
 F 2 "LED_THT:LED_D5.0mm_FlatTop" H 9850 2450 50  0001 C CNN
 F 3 "~" H 9850 2450 50  0001 C CNN
 	1    9850 2450
-	1    0    0    -1  
+	-1   0    0    1   
 $EndComp
 $Comp
 L Device:LED D3
@@ -1775,7 +1775,7 @@ F 1 "LED" H 9843 2225 50  0000 C CNN
 F 2 "LED_THT:LED_D5.0mm_FlatTop" H 9850 2100 50  0001 C CNN
 F 3 "~" H 9850 2100 50  0001 C CNN
 	1    9850 2100
-	1    0    0    -1  
+	-1   0    0    1   
 $EndComp
 $Comp
 L Device:LED D2
@@ -1786,31 +1786,8 @@ F 1 "LED" H 9843 1925 50  0000 C CNN
 F 2 "LED_THT:LED_D5.0mm_FlatTop" H 9850 1800 50  0001 C CNN
 F 3 "~" H 9850 1800 50  0001 C CNN
 	1    9850 1800
-	1    0    0    -1  
+	-1   0    0    1   
 $EndComp
-Wire Wire Line
-	9700 1800 9700 2100
-Connection ~ 9700 2100
-Wire Wire Line
-	9700 2100 9700 2450
-Connection ~ 9700 2450
-Wire Wire Line
-	9700 2450 9700 2800
-Connection ~ 9700 2800
-Wire Wire Line
-	9700 2800 9700 3150
-Connection ~ 9700 3150
-Wire Wire Line
-	9700 3150 9700 3450
-Connection ~ 9700 3450
-Wire Wire Line
-	9700 3450 9700 3750
-Connection ~ 9700 3750
-Wire Wire Line
-	9700 3750 9700 4100
-Connection ~ 9700 4100
-Wire Wire Line
-	9700 4100 9700 4350
 $Comp
 L Device:R R37
 U 1 1 5CFE3DA8
@@ -2260,7 +2237,6 @@ F 3 "~" H 9050 3900 50  0001 C CNN
 	1    9050 3900
 	1    0    0    -1  
 $EndComp
-NoConn ~ 9800 3450
 Text Label 8750 3900 1    50   ~ 0
 Sine
 Wire Wire Line
@@ -2458,4 +2434,27 @@ F 3 "" H 6500 7200 50  0001 C CNN
 	1    6500 7200
 	0    1    1    0   
 $EndComp
+Wire Wire Line
+	9700 1800 9700 2100
+Connection ~ 9700 2100
+Wire Wire Line
+	9700 2100 9700 2450
+Connection ~ 9700 2450
+Wire Wire Line
+	9700 2450 9700 2800
+Connection ~ 9700 2800
+Wire Wire Line
+	9700 2800 9700 3150
+Connection ~ 9700 3150
+Wire Wire Line
+	9700 3150 9700 3450
+Connection ~ 9700 3450
+Wire Wire Line
+	9700 3450 9700 3750
+Connection ~ 9700 3750
+Wire Wire Line
+	9700 3750 9700 4100
+Connection ~ 9700 4100
+Wire Wire Line
+	9700 4100 9700 4350
 $EndSCHEMATC

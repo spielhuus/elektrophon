@@ -1663,7 +1663,7 @@ F 1 "LED" H 10143 2625 50  0000 C CNN
 F 2 "LED_THT:LED_D5.0mm_FlatTop" H 10150 2500 50  0001 C CNN
 F 3 "~" H 10150 2500 50  0001 C CNN
 	1    10150 2500
-	1    0    0    -1  
+	-1   0    0    1   
 $EndComp
 $Comp
 L Device:LED D11
@@ -1674,7 +1674,7 @@ F 1 "LED" H 10693 2625 50  0000 C CNN
 F 2 "LED_THT:LED_D5.0mm_FlatTop" H 10700 2500 50  0001 C CNN
 F 3 "~" H 10700 2500 50  0001 C CNN
 	1    10700 2500
-	1    0    0    -1  
+	-1   0    0    1   
 $EndComp
 $Comp
 L Device:R R23
@@ -1751,7 +1751,7 @@ F 1 "LED" H 10143 3325 50  0000 C CNN
 F 2 "LED_THT:LED_D5.0mm_FlatTop" H 10150 3200 50  0001 C CNN
 F 3 "~" H 10150 3200 50  0001 C CNN
 	1    10150 3200
-	1    0    0    -1  
+	-1   0    0    1   
 $EndComp
 $Comp
 L Device:LED D12
@@ -1762,7 +1762,7 @@ F 1 "LED" H 10693 3325 50  0000 C CNN
 F 2 "LED_THT:LED_D5.0mm_FlatTop" H 10700 3200 50  0001 C CNN
 F 3 "~" H 10700 3200 50  0001 C CNN
 	1    10700 3200
-	1    0    0    -1  
+	-1   0    0    1   
 $EndComp
 $Comp
 L Device:R R24
@@ -1839,7 +1839,7 @@ F 1 "LED" H 10143 4025 50  0000 C CNN
 F 2 "LED_THT:LED_D5.0mm_FlatTop" H 10150 3900 50  0001 C CNN
 F 3 "~" H 10150 3900 50  0001 C CNN
 	1    10150 3900
-	1    0    0    -1  
+	-1   0    0    1   
 $EndComp
 $Comp
 L Device:LED D13
@@ -1850,7 +1850,7 @@ F 1 "LED" H 10693 4025 50  0000 C CNN
 F 2 "LED_THT:LED_D5.0mm_FlatTop" H 10700 3900 50  0001 C CNN
 F 3 "~" H 10700 3900 50  0001 C CNN
 	1    10700 3900
-	1    0    0    -1  
+	-1   0    0    1   
 $EndComp
 $Comp
 L Device:R R25
@@ -1927,7 +1927,7 @@ F 1 "LED" H 10143 4725 50  0000 C CNN
 F 2 "LED_THT:LED_D5.0mm_FlatTop" H 10150 4600 50  0001 C CNN
 F 3 "~" H 10150 4600 50  0001 C CNN
 	1    10150 4600
-	1    0    0    -1  
+	-1   0    0    1   
 $EndComp
 $Comp
 L Device:LED D14
@@ -1938,7 +1938,7 @@ F 1 "LED" H 10693 4725 50  0000 C CNN
 F 2 "LED_THT:LED_D5.0mm_FlatTop" H 10700 4600 50  0001 C CNN
 F 3 "~" H 10700 4600 50  0001 C CNN
 	1    10700 4600
-	1    0    0    -1  
+	-1   0    0    1   
 $EndComp
 $Comp
 L Device:R R26
