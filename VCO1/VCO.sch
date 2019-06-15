@@ -2082,7 +2082,7 @@ AR Path="/5CFB1AD8" Ref="C3"  Part="1"
 AR Path="/5CF42726/5CFB1AD8" Ref="C?"  Part="1" 
 F 0 "C3" V 2048 4850 50  0000 C CNN
 F 1 "0.22u" V 2139 4850 50  0000 C CNN
-F 2 "Capacitor_THT:C_Disc_D3.4mm_W2.1mm_P2.50mm" H 2338 4700 50  0001 C CNN
+F 2 "Capacitor_THT:C_Rect_L7.0mm_W3.5mm_P5.00mm" H 2338 4700 50  0001 C CNN
 F 3 "~" H 2300 4850 50  0001 C CNN
 	1    2300 4850
 	1    0    0    -1  
