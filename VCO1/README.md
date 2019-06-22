@@ -4,6 +4,7 @@ This is a basic VCO designed by Thomas Henry. There are no special features, but
 
 <a href="https://spielhuus.github.io/elektrophon/images/VCO.png"><img align="right" src="https://spielhuus.github.io/elektrophon/images/VCO_tmb.png"></a> 
 
+[BOM](BOM.csv)
 
 ## building
 
