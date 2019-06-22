@@ -5,7 +5,7 @@ This is a basic VCO designed by Thomas Henry. There are no special features, but
 <div style="border: 1px solid"><div><a href="https://spielhuus.github.io/elektrophon/images/VCO.png"><img align="right" src="https://spielhuus.github.io/elektrophon/images/VCO_tmb.png"></a></div><div>VCO Schema</div></div>
 
 
-| ![https://spielhuus.github.io/elektrophon/images/VCO_tmb.png](https://spielhuus.github.io/elektrophon/images/VCO.png) | 
+| ![https://spielhuus.github.io/elektrophon/images/VCO.png](https://spielhuus.github.io/elektrophon/images/VCO_tmb.png) | 
 |:--:| 
 | *VCO1 PCB* |
 
