@@ -2,7 +2,7 @@
 
 This is a basic VCO designed by Thomas Henry. There are no special features, but it is a solid mixer. <a href="https://spielhuus.github.io/elektrophon/images/VCO.svg"><img align="right" src="https://spielhuus.github.io/elektrophon/images/VCO_tmb_schema.png"></a> 
 
-<div style="border: 1px solid;"><div><a href="https://spielhuus.github.io/elektrophon/images/VCO.png"><img align="right" src="https://spielhuus.github.io/elektrophon/images/VCO_tmb.png"></a></div><div>VCO Schema</div></div>
+<div style="border: 1px solid"><div><a href="https://spielhuus.github.io/elektrophon/images/VCO.png"><img align="right" src="https://spielhuus.github.io/elektrophon/images/VCO_tmb.png"></a></div><div>VCO Schema</div></div>
 
 [BOM](BOM.csv)
 
