@@ -8,7 +8,6 @@ used by René Schmitz and Yves Usson.
 
 <a href="https://spielhuus.github.io/elektrophon/images/ADSR.png"><img src="https://spielhuus.github.io/elektrophon/images/ADSR_tmb.png" width="125px"></img></a>
 
-<a href="https://spielhuus.github.io/elektrophon/adsr_panel_back.jpg"><img src="https://spielhuus.github.io/elektrophon/adsr_panel_back_tmb.jpg" width="75px"></img></a>
 
 ## links
 
