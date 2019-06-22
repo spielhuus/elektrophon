@@ -22,8 +22,8 @@ _autosave-*
 *.ses
 
 # Exported BOM files
-*.xml
-*.csv
+#*.xml
+#*.csv
 
 fp-info-cache
 sym-lib-table
