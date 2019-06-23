@@ -1,7 +1,7 @@
 # The Fastest Envelope in the West
 
 The ADSR creates an envelope for describing the change of the sound over time. The envelope can be used for amplitude, 
-<a href="https://spielhuus.github.io/elektrophon/images/ADSR_panel.png"><img src="https://spielhuus.github.io/elektrophon/ADSR_panel_tmb.png" width="35px"></img></a>
+<a href="https://spielhuus.github.io/elektrophon/images/ADSR_panel.png"><img src="https://spielhuus.github.io/elektrophon/images/ADSR_panel_tmb.png" width="35px"></img></a>
 frequencies or pitch. The output of the ADSR module can for example be patched to a VCA or VCF. The original schematic is
 used by René Schmitz and Yves Usson. 
 <a href="https://spielhuus.github.io/elektrophon/images/ADSR.svg"><img src="https://spielhuus.github.io/elektrophon/images/ADSR_tmb.jpg" width="125px"></img></a>
