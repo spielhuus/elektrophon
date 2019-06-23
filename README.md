@@ -21,12 +21,7 @@ The armatures, plugs and knobs, are placed in a fix raster. for the columns used
 
 | Tables        | Are           | Cool  |
 | ------------- |:-------------:| -----:|
-|<a href="https://github.com/spielhuus/elektrophon/blob/master/ADSR/README.md"><img src="https://spielhuus.github.io/elektrophon/images/ADSR_panel_tmb.png" width="128px"></img></a><br/>The Fastest Envelope in the West|
-|<a href="https://github.com/spielhuus/elektrophon/blob/master/BassPP/README.md"><img src="https://spielhuus.github.io/elektrophon/images/BassPPpanel_tmb.png" width="128px"></img></a><br/>Bass++|XXX|
-
-## Mixer
-
-* 
+|<a href="https://github.com/spielhuus/elektrophon/blob/master/ADSR/README.md"><img src="https://spielhuus.github.io/elektrophon/images/ADSR_panel_tmb.png" height="200px"></img></a><br/>The Fastest Envelope in the West|<a href="https://github.com/spielhuus/elektrophon/blob/master/BassPP/README.md"><img src="https://spielhuus.github.io/elektrophon/images/BassPPpanel_tmb.png" height="200px"></img></a><br/>Bass++|XXX|
 
 
 # general electronic and synthesizer information 
