@@ -13,9 +13,6 @@ FONT_SIZE=3.0;
 HP_SIZE = 5.07;
 HU_SIZE = 44.45;
 
-TOP_REFLECTOR_Y=20;
-TOP_REFLECTOR_X=0;
-
 RASTER_SHIFT_X=-6;
 RASTER_Y_TOP=25;
 RASTER_X_TOP=15;
@@ -27,7 +24,6 @@ font="Source Code Pro:style=Bold";
 use <../lib/pcb_plate.scad>
 use <../lib/Pomona 1581 Banana Jack.scad>
 use <../lib/silk.scad>
-use <../lib/stand.scad>
 use <../lib/Potentiometer_small.scad>
 use <../lib/toggle_switch.scad>
 
@@ -62,7 +58,7 @@ module panel_adsr(thickness=THICKNESS, screen=SCREEN, font_size=FONT_SIZE,armatu
 
     if(armatures) {
 
-        color("green") pcb(x=3,y=13,height=33, width=44.7,length=107.35);
+        color("green") pcb(x=3,y=13,height=33, width=64.98,length=107.35);
         translate([0*RASTER_X+RASTER_X_TOP, 0*RASTER_Y+RASTER_Y_TOP, 0]) silkscreen_text(text="A", thickness=thickness, screen=screen, font_size=font_size, font=font, color="yellow");
         translate([0*RASTER_X+RASTER_X_TOP, 1*RASTER_Y+RASTER_Y_TOP, 0]) silkscreen_text(text="D", thickness=thickness, screen=screen, font_size=font_size, font=font, color="yellow");
         translate([0*RASTER_X+RASTER_X_TOP, 2*RASTER_Y+RASTER_Y_TOP, 0]) silkscreen_text(text="S", thickness=thickness, screen=screen, font_size=font_size, font=font, color="yellow");
