@@ -21,7 +21,7 @@ The armatures, plugs and knobs, are placed in a fix raster. for the columns used
 
 | Tables        | Are           | Cool  |
 | ------------- |:-------------:| -----:|
-|<a href="https://github.com/spielhuus/elektrophon/tree/master/ADSR"><img src="https://spielhuus.github.io/elektrophon/adsr_schema._panel._tmb.jpg" width="128px"></img></a><br/>The Fastest Envelope in the West|ADSR|ADSR|
+|<a href="https://github.com/spielhuus/elektrophon/blob/master/ADSR/README.md"><img src="https://spielhuus.github.io/elektrophon/images/ADSR_panel_tmb.png" width="128px"></img></a><br/>The Fastest Envelope in the West|ADSR|ADSR|
 
 ## Mixer
 

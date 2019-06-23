@@ -10,11 +10,11 @@ HOLE_FROM_TOP = 5;
 SCREEW_R = 1.7;
 
 BORDER=10;
-WALL_HEIGHT=20;
+WALL_HEIGHT=32;
 WALL_THICKNESS=1;
 STAND_R=3;
-STAND_H=18;
-STAND_HOLE=2;
+STAND_H=30;
+STAND_HOLE=1.25;
 
 PCB_SPACING=2;
 
@@ -62,17 +62,16 @@ module plate(HP=1,HU=5, //size of the panel
 		}
 	}
 
-    //draw the wall    
-    translate([0,border,thickness]) cube([width, wall_thickness, wall_height]);
+    //draw the walls
     translate([0,height-border,thickness]) cube([width, wall_thickness, wall_height]);
     translate([wall_thickness,border,thickness]) rotate([0,0,90]) cube([height-2*border, wall_thickness, wall_height]);
     translate([width,border,thickness]) rotate([0,0,90]) cube([height-2*border, wall_thickness, wall_height]);
 
     //draw the stand
-    _stand_x1 = wall_thickness+stand_r+pcb_spacing;
-    _stand_x2 = width-wall_thickness-stand_r-pcb_spacing;
-    _stand_y1 = border+wall_thickness+stand_r++pcb_spacing;
-    _stand_y2 = height-border-wall_thickness-stand_r-pcb_spacing;
+    _stand_x1 = wall_thickness+2.54+pcb_spacing;
+    _stand_x2 = width-wall_thickness-2.54-pcb_spacing;
+    _stand_y1 = border+wall_thickness+2.54+pcb_spacing;
+    _stand_y2 = height-border-wall_thickness-2.54-pcb_spacing;
 
     difference() {
         group() {
@@ -85,6 +84,18 @@ module plate(HP=1,HU=5, //size of the panel
         translate([_stand_x1,_stand_y2,thickness+5]) cylinder(r=stand_hole, h=stand_h, $fn=50);
         translate([_stand_x2,_stand_y1,thickness+5]) cylinder(r=stand_hole, h=stand_h, $fn=50);
         translate([_stand_x2,_stand_y2,thickness+5]) cylinder(r=stand_hole, h=stand_h, $fn=50);
+    }
+}
+
+module pcb(x=0,y=0,height=50,length=1,width=10) {
+    translate([x,y,height]) {
+        difference() {
+            cube([width, length, 0.3]);        
+            translate([2.54,2.54,-5]) cylinder(r=2.2, h=100, $fn=50);        
+            translate([width-2.54,2.54,-5]) cylinder(r=2.2, h=100, $fn=50);        
+            translate([2.54,length-2.54,-5]) cylinder(r=2.2, h=100, $fn=50);        
+            translate([width-2.54,length-2.54,-5]) cylinder(r=2.2, h=100, $fn=50);        
+        }
     }
 }
 
