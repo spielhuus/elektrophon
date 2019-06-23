@@ -4,7 +4,7 @@ module sine(h=10,spacing=5,count=4,thickness=2,w=4) {
     translate([spacing*(count-1)/2-1,thickness,-h/2]) {
         for(i=[0:360]) {
             translate([-i/30,0,(thickness+2)*sin(-i)])
-                rotate([90,0,0]) cylinder(r=thickness/2,h=thickness);
+                rotate([90,0,0]) cylinder(r=thickness/2,h=w);
         }
     }
 }

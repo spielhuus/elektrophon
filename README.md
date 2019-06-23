@@ -17,12 +17,24 @@ The armatures, plugs and knobs, are placed in a fix raster. for the columns used
 |30|7            |133.35           |152.1|146.1|107.35|
 |34|8            |133.35           |172.38|166.38|107.35|
 
+# plug color codes
+
+The banana plugs colors follows this rule:
+
+|Color|Description|
+|--|-------------|
+|Red|Audio Output|
+|Green|Audio Input|
+|Yellow|CV Input|
+|Blue|Trigger/Gate|
+
 # modules 
 
 <table>
  <tr>
   <td><a href="https://github.com/spielhuus/elektrophon/blob/master/ADSR/README.md"><img src="https://spielhuus.github.io/elektrophon/images/ADSR_panel_tmb.png" height="200px"></img></a><br/>ADSR</td>
   <td><a href="https://github.com/spielhuus/elektrophon/blob/master/BassPP/README.md"><img src="https://spielhuus.github.io/elektrophon/images/BassPPpanel_tmb.png" height="200px"></img></a><br/>Bass++</td>
+  <td><a href="https://github.com/spielhuus/elektrophon/blob/master/VCO1/README.md"><img src="https://spielhuus.github.io/elektrophon/images/VCO1panel_tmb.png" height="200px"></img></a><br/>VCO-1</td>
  </tr>
 </table>
 
