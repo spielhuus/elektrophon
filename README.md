@@ -20,8 +20,8 @@ The armatures, plugs and knobs, are placed in a fix raster. for the columns used
 # modules 
 
 <div>
-<div><a href="https://github.com/spielhuus/elektrophon/blob/master/ADSR/README.md"><img src="https://spielhuus.github.io/elektrophon/images/ADSR_panel_tmb.png" height="200px"></img></a><br/>ADSR</div>
-<div><a href="https://github.com/spielhuus/elektrophon/blob/master/BassPP/README.md"><img src="https://spielhuus.github.io/elektrophon/images/BassPPpanel_tmb.png" height="200px"></img></a><br/>Bass++</div>
+<div><a href="https://github.com/spielhuus/elektrophon/blob/master/ADSR/README.md"><img src="https://spielhuus.github.io/elektrophon/images/ADSR_panel_tmb.png" height="200px"></img></a><br/>ADSR
+     <a href="https://github.com/spielhuus/elektrophon/blob/master/BassPP/README.md"><img src="https://spielhuus.github.io/elektrophon/images/BassPPpanel_tmb.png" height="200px"></img></a><br/>Bass++</div>
 </div>
 
 # general electronic and synthesizer information 
