@@ -59,4 +59,5 @@ Here are some links do documents on how to build synthesizers and electronic. th
 * [Music from outer space](http://musicfromouterspace.com/)
 * [yusynth: modular synth project](http://www.yusynth.net/Modular/index_en.html)
 * [Ken Stones - CGS (Cat Girl Synth)](http://www.elby-designs.com/webtek/cgs/cgs.htm)
+* [Osamu Hoshuyama - Unusual Synthesizer Circuits)](http://www5b.biglobe.ne.jp/~houshu/synth/)
 
