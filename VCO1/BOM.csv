@@ -1,11 +1,3 @@
-"Source:","C:\Users\etien\Documents\GitHub\elektrophon\VCO1\VCO.sch"
-"Date:","30.06.2019 09:58:58"
-"Tool:","Eeschema (5.0.1)-4"
-"Generator:","C:\Program Files\KiCad\bin\scripting\plugins/bom_csv_grouped_by_value.py"
-"Component Count:","89"
-
-"Individual Components:"
-
 "Item","Qty","Reference(s)","Value","LibPart","Footprint","Datasheet"
 "","","C1","10u","Device:C","Capacitor_THT:C_Radial_D5.0mm_H11.0mm_P2.00mm","~"
 "","","C2","10u","Device:C","Capacitor_THT:C_Radial_D5.0mm_H11.0mm_P2.00mm","~"
