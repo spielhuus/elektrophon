@@ -1,7 +1,3 @@
-"Source:","/home/etienne/Projects/elektrophon/BassPP/BassPP.sch"
-"Date:","Sun 23 Jun 2019 12:08:02 PM CEST"
-"Tool:","Eeschema 5.1.2"
-"Component Count:","81"
 "Ref","Value","Footprint","Datasheet","Manufacturer","Vendor"
 "C1","10u","Capacitor_THT:CP_Radial_D5.0mm_P2.50mm","~","",""
 "C2","10u","Capacitor_THT:CP_Radial_D5.0mm_P2.50mm","~","",""
