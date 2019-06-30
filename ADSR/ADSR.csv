@@ -1,7 +1,3 @@
-"Source:","/home/etienne/Projects/elektrophon/ADSR/ADSR.sch"
-"Date:","Sun 23 Jun 2019 10:06:17 AM CEST"
-"Tool:","Eeschema 5.1.2"
-"Component Count:","44"
 "Ref","Value","Footprint","Datasheet","Manufacturer","Vendor"
 "C1","22u","Capacitor_THT:CP_Radial_D5.0mm_P2.00mm","~","",""
 "C2","0.1u","Capacitor_THT:C_Disc_D5.1mm_W3.2mm_P5.00mm","~","",""

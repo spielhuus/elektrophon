@@ -1,6 +1,5 @@
 EESchema Schematic File Version 4
-LIBS:VCO-cache
-EELAYER 29 0
+EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -1416,8 +1415,6 @@ Wire Notes Line
 	1800 6400 8750 6400
 Wire Notes Line
 	8750 550  8750 6400
-Text Notes 900  2850 1    50   ~ 0
-FINE
 Wire Wire Line
 	3150 5750 7350 5750
 Wire Wire Line
@@ -2126,9 +2123,9 @@ F 3 "" H 1050 6050 50  0001 C CNN
 	1    1050 6050
 	-1   0    0    1   
 $EndComp
-Text Notes 550  2150 1    50   ~ 0
+Text Notes 650  2150 1    50   ~ 0
 Coarse
-Text Notes 550  2850 1    50   ~ 0
+Text Notes 650  2850 1    50   ~ 0
 FINE
 Text Notes 550  4750 1    50   ~ 0
 FM
