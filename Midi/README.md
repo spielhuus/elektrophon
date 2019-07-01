@@ -35,7 +35,7 @@ https://de.wikipedia.org/wiki/Tracker_(Musik)
 
 ## links
 
-
+* [HC-05-Bluetooth to Serial Port Module](http://www.electronicaestudio.com/docs/istd016A.pdf)
 * [ATmega168/328P-Arduino Pin Mapping](https://www.arduino.cc/en/Hacking/PinMapping168)
 * [MIDI Module](http://www.experimentalistsanonymous.com/ve3wwg/doku.php?id=analog_synth_midi)
 * [midi2cv](https://github.com/elkayem/midi2cv) - Simple midi to CV converter.
