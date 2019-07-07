@@ -5,14 +5,14 @@ EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
-Title ""
-Date ""
-Rev ""
+Title "Bass++"
+Date "2019-07-06"
+Rev "1"
 Comp ""
-Comment1 ""
+Comment1 "The Bass++ drum voice project by Thomas Henry"
 Comment2 ""
 Comment3 ""
-Comment4 ""
+Comment4 "License CC BY 4.0 - Attribution 4.0 International"
 $EndDescr
 $Comp
 L Device:R_POT RV1
@@ -85,7 +85,7 @@ L Device:R_POT RV8
 U 1 1 5CD0D5AC
 P 1900 6050
 F 0 "RV8" H 1830 6096 50  0000 R CNN
-F 1 "Impact Tone" H 1830 6005 50  0000 R CNN
+F 1 "10k" H 1830 6005 50  0000 R CNN
 F 2 "Potentiometer_SMD:Potentiometer_Bourns_TC33X_Vertical" H 1900 6050 50  0001 C CNN
 F 3 "~" H 1900 6050 50  0001 C CNN
 	1    1900 6050
@@ -96,7 +96,7 @@ L Device:R_POT RV7
 U 1 1 5CD0DEE3
 P 1900 5650
 F 0 "RV7" H 1830 5696 50  0000 R CNN
-F 1 "Impact Volume" H 1830 5605 50  0000 R CNN
+F 1 "100k" H 1830 5605 50  0000 R CNN
 F 2 "Potentiometer_SMD:Potentiometer_Bourns_TC33X_Vertical" H 1900 5650 50  0001 C CNN
 F 3 "~" H 1900 5650 50  0001 C CNN
 	1    1900 5650
@@ -107,7 +107,7 @@ L Device:R_POT RV6
 U 1 1 5CD0E407
 P 1900 5000
 F 0 "RV6" H 1831 5046 50  0000 R CNN
-F 1 "Shell Volume" H 1831 4955 50  0000 R CNN
+F 1 "100k" H 1831 4955 50  0000 R CNN
 F 2 "Potentiometer_SMD:Potentiometer_Bourns_TC33X_Vertical" H 1900 5000 50  0001 C CNN
 F 3 "~" H 1900 5000 50  0001 C CNN
 	1    1900 5000
@@ -2006,8 +2006,8 @@ F 3 "" H 10550 4300 50  0001 C CNN
 	1    10550 4300
 	1    0    0    -1  
 $EndComp
-Text Notes 10600 5000 2    50   ~ 0
-Panel Light
+Text Notes 9800 5200 0    50   ~ 0
+Panel Light\nI used yellow LED's. For different \ncolor adjust the resistors.
 $Comp
 L Connector:Conn_01x03_Male J6
 U 1 1 5CFE918E
@@ -2065,4 +2065,12 @@ F 3 "~" H 5000 7150 50  0001 C CNN
 $EndComp
 Text Label 5200 7250 0    50   ~ 0
 Shell
+Text Notes 1550 5300 1    50   ~ 0
+Shell Volume
+Text Notes 1450 5900 1    50   ~ 0
+Impact Volume
+Text Notes 1550 6300 1    50   ~ 0
+Impact Tone
+Text Notes 4550 4800 0    50   ~ 0
+For lower shell voice C11 can \nbe replaced. for example 0.01u.
 $EndSCHEMATC
