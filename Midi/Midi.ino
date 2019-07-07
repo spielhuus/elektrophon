@@ -5,6 +5,32 @@
 
 */
 
+const int pinout = PA0; // declare pinout with int data type and pin value
+char inputdata = 0;  //Variable for storing received data
+
+void setup() {
+    Serial1.begin(9600);                      //Sets the baud rate for bluetooth pins 
+    Serial1.print("CIRCUIT DIGEST\n");
+    Serial1.print("BLUETOOTH WITH STM32\n");                     
+    pinMode(pinout, OUTPUT);                  //Sets digital pin PA0 as output pin for led
+}
+
+void loop() {
+   if(Serial1.available() > 0) { // Send data only when you receive data: 
+      inputdata = Serial1.read(); //Read the incoming data & store into data
+           
+      if(inputdata == '1') {
+         digitalWrite(pinout, HIGH); 
+         Serial1.print("LED ON\n");
+      } else if(inputdata == '0') {      
+         digitalWrite(pinout, LOW);  
+         Serial1.print("LED OFF\n");  
+      }
+   }
+}
+
+
+/* 
 #include <SPI.h>
 #include <MIDI.h>
 
@@ -67,7 +93,7 @@ void channel_on(int latchPin, int channel ) {
   digitalWrite(latchPin, HIGH);
 }
 
-/* midi note on */
+// midi note on 
 void handleNoteOn(byte inChannel, byte inNumber, byte inVelocity) {
 
 
@@ -104,7 +130,7 @@ void handleNoteOff(byte inChannel, byte inNumber, byte inVelocity) {
 
   if(inChannel==1 && act_note[inChannel-1] == inNumber ) {
     //set the velocity
-    setVoltage(DAC1, 1, 1, 0 /*inVelocity<<5*/);  // DAC1, channel 1, gain = 2X
+    setVoltage(DAC1, 1, 1, 0 /*inVelocity<<5*//* );  // DAC1, channel 1, gain = 2X
   }
 //  digitalWrite(inChannel+1,LOW); //set trigger
 }
@@ -168,7 +194,7 @@ void loop() {
     if( trigTimers[i] > 0 && trigTimers[i] < millis() ) {
       digitalWrite(latchPin, LOW);      
       shift_bits &= 0 << i;
-      SPI.transfer( 0 /*shift_bits*/ ); //TODO only disable the right PIN
+      SPI.transfer( 0 /*shift_bits*/ /* ); //TODO only disable the right PIN
       digitalWrite(latchPin, HIGH);
       trigTimers[i] = 0;
     }
@@ -196,9 +222,10 @@ void loop() {
        }
      }
      
-     setVoltage(DAC2, 0, 1, sine_x /* 4096 * calc_sine(sine_x) */ );  // DAC1, channel 1, gain = 1X
+     setVoltage(DAC2, 0, 1, sine_x /* 4096 * calc_sine(sine_x) */ /* );  // DAC1, channel 1, gain = 1X
      waveTimer=millis();
    }
   
   MIDI.read();
 }
+*/

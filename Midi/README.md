@@ -1,11 +1,21 @@
-# kontour
+# MIDI
 
-a buncg of modules dont necessarily make music. the modules have to be conrolled with control voltages of different kind. the CV Function Generator creates control voltages of different types. it can act as a standalone oscillator or create envelopes for controlling the pitch. but the channels are freely programmable and can also be used as a simple sequenver with variable cv output. this module should create sexteen individual controllable slopes or waveforms.instead of creating different dac and trigger channels, all channels slopes are created with a dac. every dac is freely assignable to a controll channel. the control channels are serial midi, envelope gerator, slope generator, cv sequenver. 
+When building modules for the synthesizer they also needs to be controller. For example the pitch of a VCO. In the modular world modules are controller with control volages (CV). There are various sources for a CV. For example a sequencer, ADSR but also an LFO or the DUSG. But when creating music the CV's might get complex for a sequencer and the series of voltages must be reproducable. For this purpose a [DAW](https://en.wikipedia.org/wiki/Digital_audio_workstation) on a computer can be used. The standard interface controlling audio is [MIDI](https://en.wikipedia.org/wiki/MIDI). This is a digital protocol, including note's notation, pitch, velocity. This digital information needs to be converted to CV's. The default connector for MIDI is a [180° five-pin DIN](https://en.wikipedia.org/wiki/DIN_connector) connector. Unless you kept your [Atari ST](https://en.wikipedia.org/wiki/Atari_ST) you most likely dont own a device with such an interface. for isolating the circuits from the computer and the synth a wireless protocol is preferend. It also seems the most practical way to connect the two. This module is build with a [blue pill]() [STM32]() module and connects with [bluetooth]() to the computer.
+
+the CV Function Generator creates control voltages of different types. it can act as a standalone oscillator or create envelopes for controlling the pitch. but the channels are freely programmable and can also be used as a simple sequenver with variable cv output. this module should create sexteen individual controllable slopes or waveforms.instead of creating different dac and trigger channels, all channels slopes are created with a dac. every dac is freely assignable to a controll channel. the control channels are serial midi, envelope gerator, slope generator, cv sequenver. 
 
 
-## burn bootloader to chip
 
-1) 
+## develop with the STM32
+
+the software is developed with the arduino IDE. before starting you must have installed the arduino software for you OS.
+
+### prepare the arduino IDE
+
+#### install the STM32 board manager
+
+1) add the [STM32 for Arduino](http://dan.drown.org/stm32duino/package_STM32duino_index.json) url to the Additional Boards Manager list in the arduino IDE.
+2) 
 
 ## midi drivers
 
@@ -34,6 +44,9 @@ https://github.com/FortySevenEffects/arduino_midi_library/wiki
 https://de.wikipedia.org/wiki/Tracker_(Musik)
 
 ## links
+
+https://circuitdigest.com/microcontroller-projects/hc-05-bluetooth-module-interfacing-with-STM32F103C8-blue-pill
+https://circuitdigest.com/microcontroller-projects/programming-stm32f103c8-board-using-usb-port
 
 * [HC-05-Bluetooth to Serial Port Module](http://www.electronicaestudio.com/docs/istd016A.pdf)
 * [ATmega168/328P-Arduino Pin Mapping](https://www.arduino.cc/en/Hacking/PinMapping168)
