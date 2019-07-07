@@ -734,11 +734,8 @@ F 1 "10u" H 1332 7345 50  0000 R CNN
 F 2 "Capacitor_THT:CP_Radial_D5.0mm_P2.50mm" H 1488 7150 50  0001 C CNN
 F 3 "~" H 1450 7300 50  0001 C CNN
 	1    1450 7300
-	-1   0    0    1   
+	1    0    0    -1  
 $EndComp
-Connection ~ 1450 7450
-Wire Wire Line
-	1450 7450 1150 7450
 $Comp
 L Device:C C3
 U 1 1 5D0B0DD1
@@ -765,8 +762,6 @@ F 3 "~" H 2000 7300 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Connection ~ 2000 7450
-Wire Wire Line
-	2000 7450 1450 7450
 $Comp
 L Device:C C6
 U 1 1 5D0B1366
@@ -2073,4 +2068,9 @@ Text Notes 1550 6300 1    50   ~ 0
 Impact Tone
 Text Notes 4550 4800 0    50   ~ 0
 For lower shell voice C11 can \nbe replaced. for example 0.01u.
+Wire Wire Line
+	1150 7450 1450 7450
+Connection ~ 1450 7450
+Wire Wire Line
+	1450 7450 2000 7450
 $EndSCHEMATC
