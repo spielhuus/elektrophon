@@ -8,6 +8,36 @@
 const int pinout = PA0; // declare pinout with int data type and pin value
 char inputdata = 0;  //Variable for storing received data
 
+#include <SPI.h>
+#include <MIDI.h>
+
+#define MIDI_CHANNELS 8
+#define MIDI_TRIGGER_TIME 50
+#define MIDI_TRIGGER_TIME 50
+#define MIDI_NOTES 88
+
+#define LED_PIN 9
+
+#define DAC1 8
+#define DAC2 7
+#define DAC3 6
+
+
+// Rescale 88 notes to 4096 mV:
+//    noteMsg = 0 -> 0 mV 
+//    noteMsg = 87 -> 4096 mV
+// DAC output will be (4095/87) = 47.069 mV per note, and 564.9655 mV per octive
+// Note that DAC output will need to be amplified by 1.77X for the standard 1V/octave 
+#define NOTE_SF 47.069f // This value can be tuned if CV output isn't exactly 1V/octave
+
+
+void channel_on(int latchPin, int channel ) {
+  digitalWrite(latchPin, LOW);      
+  shift_bits |= 1 << channel;
+  SPI.transfer( shift_bits ); 
+  digitalWrite(latchPin, HIGH);
+}
+
 void setup() {
     Serial1.begin(9600);                      //Sets the baud rate for bluetooth pins 
     Serial1.print("CIRCUIT DIGEST\n");
@@ -31,19 +61,7 @@ void loop() {
 
 
 /* 
-#include <SPI.h>
-#include <MIDI.h>
 
-#define MIDI_CHANNELS 8
-#define MIDI_TRIGGER_TIME 50
-#define MIDI_TRIGGER_TIME 50
-#define MIDI_NOTES 88
-
-#define LED_PIN 9
-
-#define DAC1 8
-#define DAC2 7
-#define DAC3 6
 
 unsigned int shift_bits = 0;
 
