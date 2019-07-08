@@ -781,11 +781,11 @@ Wire Wire Line
 Wire Wire Line
 	9750 2050 9650 2050
 Text Label 1700 3000 0    50   ~ 0
-PULSE
+PULSE_A
 Text Label 2450 3000 2    50   ~ 0
-SPEED_1
+SPEED_1_A
 Text Label 3900 2900 0    50   ~ 0
-SPEED_2
+SPEED_2_A
 Wire Wire Line
 	3650 3050 3650 3200
 $Comp
@@ -837,8 +837,6 @@ Wire Wire Line
 Wire Wire Line
 	8800 1150 8450 1150
 Connection ~ 8450 1150
-Wire Notes Line
-	10000 550  1050 550 
 Wire Wire Line
 	1700 2300 1700 3100
 Wire Wire Line
@@ -1416,8 +1414,6 @@ Wire Wire Line
 	8300 4900 8750 4900
 Wire Wire Line
 	9750 5000 9650 5000
-Wire Notes Line
-	10000 5900 1050 5900
 Text Label 1700 6000 0    50   ~ 0
 PULSE
 Text Label 2450 6000 2    50   ~ 0
@@ -1466,8 +1462,6 @@ Wire Wire Line
 Wire Wire Line
 	8800 4100 8450 4100
 Connection ~ 8450 4100
-Wire Notes Line
-	10000 3500 1050 3500
 Wire Wire Line
 	1700 5250 1700 6050
 Wire Wire Line
@@ -1476,8 +1470,6 @@ Wire Wire Line
 	8300 5900 8300 4900
 Wire Wire Line
 	9750 6000 9750 5000
-Wire Notes Line
-	10000 2900 1050 2900
 Wire Wire Line
 	8450 1150 8450 3100
 Wire Wire Line
@@ -1486,12 +1478,8 @@ Wire Notes Line
 	1050 2900 1050 550 
 Wire Notes Line
 	1050 3500 1050 5900
-Wire Notes Line
-	10000 3500 10000 5900
 Text Label 3900 5900 0    50   ~ 0
 SPEED_2
-Wire Notes Line
-	10000 550  10000 3350
 Wire Wire Line
 	2800 6000 2800 6100
 Connection ~ 2800 6100
@@ -1505,4 +1493,57 @@ Wire Wire Line
 	2450 4750 2450 6250
 Wire Wire Line
 	4950 5350 4950 6200
+Wire Notes Line
+	11000 550  11000 2900
+Wire Notes Line
+	1050 550  11000 550 
+Wire Notes Line
+	1050 2900 11000 2900
+Wire Notes Line
+	11000 3500 11000 5900
+Wire Notes Line
+	1050 5900 11000 5900
+Wire Notes Line
+	1050 3500 11000 3500
+Text Label 4300 6800 0    50   ~ 0
+PULSE_A
+Text Label 4300 6900 0    50   ~ 0
+SPEED_1_A
+Text Label 4300 7000 0    50   ~ 0
+SPEED_2_A
+Text Label 4950 2900 2    50   ~ 0
+TRI_SAW_A
+Text Label 4300 7100 0    50   ~ 0
+TRI_SAW_A
+Text Label 7600 2900 2    50   ~ 0
+Square
+Text Label 4300 7200 0    50   ~ 0
+Square
+Text Label 8150 2900 1    50   ~ 0
+Square_1_A
+Text Label 8300 2900 1    50   ~ 0
+Square_2_A
+Text Label 8450 2900 1    50   ~ 0
+Square_3_A
+Text Label 9750 2900 2    50   ~ 0
+VARI
+Text Label 4300 7300 0    50   ~ 0
+Square_1_A
+Text Label 4300 7400 0    50   ~ 0
+Square_2_A
+Text Label 4300 7500 0    50   ~ 0
+Square_3_A
+Text Label 4300 7600 0    50   ~ 0
+VARI
+$Comp
+L Connector:Conn_01x09_Male J9
+U 1 1 5D2462E3
+P 4100 7200
+F 0 "J9" H 4208 7785 50  0000 C CNN
+F 1 "Conn_01x09_Male" H 4208 7692 50  0000 C CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x09_P2.54mm_Vertical" H 4100 7200 50  0001 C CNN
+F 3 "~" H 4100 7200 50  0001 C CNN
+	1    4100 7200
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
