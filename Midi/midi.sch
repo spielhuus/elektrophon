@@ -660,4 +660,33 @@ F 3 "" H 8400 2550 50  0001 C CNN
 	1    8400 2550
 	1    0    0    -1  
 $EndComp
+$Comp
+L Connector:Conn_01x08_Male J?
+U 1 1 5D297A10
+P 1450 6850
+F 0 "J?" H 1556 7328 50  0000 C CNN
+F 1 "Conn_01x08_Male" H 1556 7237 50  0000 C CNN
+F 2 "" H 1450 6850 50  0001 C CNN
+F 3 "~" H 1450 6850 50  0001 C CNN
+	1    1450 6850
+	1    0    0    -1  
+$EndComp
+Text Label 1650 6550 0    50   ~ 0
+RST
+Text Label 1650 6650 0    50   ~ 0
+CE
+Text Label 1650 6750 0    50   ~ 0
+DC
+Text Label 1650 6850 0    50   ~ 0
+DIN
+Text Label 1650 6950 0    50   ~ 0
+CLK
+Text Label 1650 7050 0    50   ~ 0
+VCC
+Text Label 1650 7150 0    50   ~ 0
+BL
+Text Label 1650 7250 0    50   ~ 0
+GND
+Text Notes 1450 7450 0    50   ~ 0
+Display
 $EndSCHEMATC

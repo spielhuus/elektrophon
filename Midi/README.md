@@ -45,11 +45,22 @@ https://de.wikipedia.org/wiki/Tracker_(Musik)
 
 ## links
 
-https://circuitdigest.com/microcontroller-projects/hc-05-bluetooth-module-interfacing-with-STM32F103C8-blue-pill
-https://circuitdigest.com/microcontroller-projects/programming-stm32f103c8-board-using-usb-port
+* [Loop Midi](http://www.tobias-erichsen.de/software/loopmidi.html)
+* [Arduino-BLE-MIDI](https://github.com/lathoub/Arduino-BLE-MIDI)
+* [arduino_midi_library
+](https://github.com/FortySevenEffects/arduino_midi_library)
+* []()
+* []()
+* []()
 
-* [HC-05-Bluetooth to Serial Port Module](http://www.electronicaestudio.com/docs/istd016A.pdf)
-* [ATmega168/328P-Arduino Pin Mapping](https://www.arduino.cc/en/Hacking/PinMapping168)
+
+-
+-
+-
+-
+
+
+
 * [MIDI Module](http://www.experimentalistsanonymous.com/ve3wwg/doku.php?id=analog_synth_midi)
 * [midi2cv](https://github.com/elkayem/midi2cv) - Simple midi to CV converter.
 * [Little-Scale](http://little-scale.blogspot.com/2017/11/usb-midi-to-eight-gates-and-sixteen-cv.html) - Midi2CV converter based on the Teensy.
