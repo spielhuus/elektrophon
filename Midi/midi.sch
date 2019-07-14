@@ -1,4 +1,5 @@
 EESchema Schematic File Version 4
+LIBS:midi-cache
 EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
@@ -13,132 +14,6 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-$Comp
-L power:GND #PWR?
-U 1 1 5C84E0B1
-P 1850 5450
-F 0 "#PWR?" H 1850 5200 50  0001 C CNN
-F 1 "GND" H 1855 5277 50  0000 C CNN
-F 2 "" H 1850 5450 50  0001 C CNN
-F 3 "" H 1850 5450 50  0001 C CNN
-	1    1850 5450
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:+5V #PWR?
-U 1 1 5C84E218
-P 1850 2450
-F 0 "#PWR?" H 1850 2300 50  0001 C CNN
-F 1 "+5V" H 1865 2623 50  0000 C CNN
-F 2 "" H 1850 2450 50  0001 C CNN
-F 3 "" H 1850 2450 50  0001 C CNN
-	1    1850 2450
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:+5V #PWR?
-U 1 1 5CA117D7
-P 1250 2750
-F 0 "#PWR?" H 1250 2600 50  0001 C CNN
-F 1 "+5V" H 1265 2923 50  0000 C CNN
-F 2 "" H 1250 2750 50  0001 C CNN
-F 3 "" H 1250 2750 50  0001 C CNN
-	1    1250 2750
-	0    -1   -1   0   
-$EndComp
-$Comp
-L power:+5V #PWR?
-U 1 1 5CA117EC
-P 1950 2450
-F 0 "#PWR?" H 1950 2300 50  0001 C CNN
-F 1 "+5V" H 1965 2623 50  0000 C CNN
-F 2 "" H 1950 2450 50  0001 C CNN
-F 3 "" H 1950 2450 50  0001 C CNN
-	1    1950 2450
-	1    0    0    -1  
-$EndComp
-$Comp
-L MCU_Microchip_ATmega:ATmega328-PU U?
-U 1 1 5C84166F
-P 1850 3950
-F 0 "U?" H 1209 3996 50  0000 R CNN
-F 1 "ATmega328-PU" H 1209 3905 50  0000 R CNN
-F 2 "Package_DIP:DIP-28_W7.62mm" H 1850 3950 50  0001 C CIN
-F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/ATmega328_P%20AVR%20MCU%20with%20picoPower%20Technology%20Data%20Sheet%2040001984A.pdf" H 1850 3950 50  0001 C CNN
-	1    1850 3950
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:Crystal Y?
-U 1 1 5CA11CB1
-P 1250 900
-F 0 "Y?" H 1250 1168 50  0000 C CNN
-F 1 "16MHZ" H 1250 1077 50  0000 C CNN
-F 2 "" H 1250 900 50  0001 C CNN
-F 3 "~" H 1250 900 50  0001 C CNN
-	1    1250 900 
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:C C?
-U 1 1 5CA11DB8
-P 1100 1050
-F 0 "C?" H 800 1100 50  0000 L CNN
-F 1 "22pF" H 800 1000 50  0000 L CNN
-F 2 "" H 1138 900 50  0001 C CNN
-F 3 "~" H 1100 1050 50  0001 C CNN
-	1    1100 1050
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:C C?
-U 1 1 5CA11E0E
-P 1400 1050
-F 0 "C?" H 1515 1096 50  0000 L CNN
-F 1 "22pF" H 1515 1005 50  0000 L CNN
-F 2 "" H 1438 900 50  0001 C CNN
-F 3 "~" H 1400 1050 50  0001 C CNN
-	1    1400 1050
-	1    0    0    -1  
-$EndComp
-Text Notes 1050 1550 0    50   ~ 0
-AVR Clock
-Text Label 1100 650  2    50   ~ 0
-XTAL1
-Text Label 1400 650  0    50   ~ 0
-XTAL2
-Text Label 2450 3350 0    50   ~ 0
-XTAL1
-Text Label 2450 3450 0    50   ~ 0
-XTAL2
-$Comp
-L power:GND #PWR?
-U 1 1 5CA128F4
-P 1100 1200
-F 0 "#PWR?" H 1100 950 50  0001 C CNN
-F 1 "GND" H 1105 1027 50  0000 C CNN
-F 2 "" H 1100 1200 50  0001 C CNN
-F 3 "" H 1100 1200 50  0001 C CNN
-	1    1100 1200
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR?
-U 1 1 5CA1291D
-P 1400 1200
-F 0 "#PWR?" H 1400 950 50  0001 C CNN
-F 1 "GND" H 1405 1027 50  0000 C CNN
-F 2 "" H 1400 1200 50  0001 C CNN
-F 3 "" H 1400 1200 50  0001 C CNN
-	1    1400 1200
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	1100 900  1100 650 
-Connection ~ 1100 900 
-Wire Wire Line
-	1400 900  1400 650 
-Connection ~ 1400 900 
 $Comp
 L 74xx:74HC595 U?
 U 1 1 5CA1335A
@@ -172,47 +47,6 @@ F 3 "" H 3850 3050 50  0001 C CNN
 	1    3850 3050
 	1    0    0    -1  
 $EndComp
-$Comp
-L 74xx:74HC595 U?
-U 1 1 5CA13931
-P 3850 5600
-F 0 "U?" H 3650 6350 50  0000 C CNN
-F 1 "74HC595" H 3500 6250 50  0000 C CNN
-F 2 "" H 3850 5600 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/sn74hc595.pdf" H 3850 5600 50  0001 C CNN
-	1    3850 5600
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR?
-U 1 1 5CA13938
-P 3850 6300
-F 0 "#PWR?" H 3850 6050 50  0001 C CNN
-F 1 "GND" H 3855 6127 50  0000 C CNN
-F 2 "" H 3850 6300 50  0001 C CNN
-F 3 "" H 3850 6300 50  0001 C CNN
-	1    3850 6300
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:+5V #PWR?
-U 1 1 5CA1393E
-P 3850 5000
-F 0 "#PWR?" H 3850 4850 50  0001 C CNN
-F 1 "+5V" H 3865 5173 50  0000 C CNN
-F 2 "" H 3850 5000 50  0001 C CNN
-F 3 "" H 3850 5000 50  0001 C CNN
-	1    3850 5000
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	4250 4150 4250 4650
-Wire Wire Line
-	4250 4650 3200 4650
-Wire Wire Line
-	3200 4650 3200 5200
-Wire Wire Line
-	3200 5200 3450 5200
 Text GLabel 6300 1200 2    50   Input ~ 0
 Note_1
 Text GLabel 6300 2450 2    50   Input ~ 0
@@ -246,37 +80,21 @@ Velocity_7
 Text GLabel 8050 5500 2    50   Input ~ 0
 Velocity_8
 Text GLabel 4250 3250 2    50   Input ~ 0
-Trigger_1
+Channel1
 Text GLabel 4250 3350 2    50   Input ~ 0
-Trigger_2
+Channel2
 Text GLabel 4250 3450 2    50   Input ~ 0
-Trigger_3
+Channel3
 Text GLabel 4250 3550 2    50   Input ~ 0
-Trigger_4
+Channel4
 Text GLabel 4250 3650 2    50   Input ~ 0
-Trigger_5
+Channel5
 Text GLabel 4250 3750 2    50   Input ~ 0
-Trigger_6
+Channel6
 Text GLabel 4250 3850 2    50   Input ~ 0
-Trigger_7
+Channel7
 Text GLabel 4250 3950 2    50   Input ~ 0
-Trigger_8
-Text GLabel 4250 5200 2    50   Input ~ 0
-Pulse_1
-Text GLabel 4250 5300 2    50   Input ~ 0
-Pulse_2
-Text GLabel 4250 5400 2    50   Input ~ 0
-Pulse_3
-Text GLabel 4250 5500 2    50   Input ~ 0
-Pulse_4
-Text GLabel 4250 5600 2    50   Input ~ 0
-Pulse_5
-Text GLabel 4250 5700 2    50   Input ~ 0
-Pulse_6
-Text GLabel 4250 5800 2    50   Input ~ 0
-Pulse_7
-Text GLabel 4250 5900 2    50   Input ~ 0
-Pulse_8
+Channel8
 $Comp
 L Analog_DAC:MCP4822 U?
 U 1 1 5CA231DD
@@ -447,12 +265,6 @@ Wire Wire Line
 	8250 1650 8250 2450
 Wire Wire Line
 	8250 2450 8050 2450
-Text Label 2450 3150 0    50   ~ 0
-MISO
-Text Label 2450 3050 0    50   ~ 0
-MOSI
-Text Label 2450 3250 0    50   ~ 0
-SCK
 Text Label 5300 2750 2    50   ~ 0
 CS_2
 Text Label 5300 2450 2    50   ~ 0
@@ -494,16 +306,6 @@ F 3 "" H 5800 2200 50  0001 C CNN
 	1    5800 2200
 	1    0    0    -1  
 $EndComp
-Text Label 2450 4650 0    50   ~ 0
-CS_1
-Text Label 2450 4750 0    50   ~ 0
-CS_2
-Text Label 2450 4450 0    50   ~ 0
-RX
-Text Label 2450 4550 0    50   ~ 0
-TX
-Text Label 2450 4250 0    50   ~ 0
-Reset
 Text Label 5300 3800 2    50   ~ 0
 SCK
 Text Label 5300 5200 2    50   ~ 0
@@ -599,14 +401,6 @@ F 3 "" H 6700 5300 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	6700 5300 7050 5300
-Text Label 2450 4850 0    50   ~ 0
-CS_3
-Text Label 2450 4950 0    50   ~ 0
-CS_4
-Text Label 2450 5050 0    50   ~ 0
-CS_5
-Text Label 2450 5150 0    50   ~ 0
-CS_6
 Text Label 5300 1500 2    50   ~ 0
 CS_1
 Text Label 5300 1200 2    50   ~ 0
@@ -645,10 +439,6 @@ F 3 "" H 6700 1300 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	6700 1300 7050 1300
-Text Label 2450 3650 0    50   ~ 0
-CS_7
-Text Label 2450 3750 0    50   ~ 0
-CS_8
 $Comp
 L power:GND #PWR?
 U 1 1 5CB44ED2
@@ -671,22 +461,243 @@ F 3 "~" H 1450 6850 50  0001 C CNN
 	1    1450 6850
 	1    0    0    -1  
 $EndComp
-Text Label 1650 6550 0    50   ~ 0
-RST
-Text Label 1650 6650 0    50   ~ 0
-CE
-Text Label 1650 6750 0    50   ~ 0
-DC
-Text Label 1650 6850 0    50   ~ 0
-DIN
-Text Label 1650 6950 0    50   ~ 0
-CLK
-Text Label 1650 7050 0    50   ~ 0
-VCC
-Text Label 1650 7150 0    50   ~ 0
-BL
-Text Label 1650 7250 0    50   ~ 0
-GND
 Text Notes 1450 7450 0    50   ~ 0
 Display
+$Comp
+L Connector:Conn_01x15_Female J?
+U 1 1 5D2AEF6F
+P 1550 3950
+F 0 "J?" H 1700 3200 50  0000 L CNN
+F 1 "Conn_01x15_Female" H 1400 3100 50  0000 L CNN
+F 2 "" H 1550 3950 50  0001 C CNN
+F 3 "~" H 1550 3950 50  0001 C CNN
+	1    1550 3950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x15_Female J?
+U 1 1 5D2AF1CE
+P 2000 3950
+F 0 "J?" H 1894 3025 50  0000 C CNN
+F 1 "Conn_01x15_Female" H 1894 3116 50  0000 C CNN
+F 2 "" H 2000 3950 50  0001 C CNN
+F 3 "~" H 2000 3950 50  0001 C CNN
+	1    2000 3950
+	-1   0    0    1   
+$EndComp
+Text Label 2200 3250 0    50   ~ 0
+VSPI_MOSI
+Text Label 2200 3650 0    50   ~ 0
+GPIO21
+Text Label 2200 3750 0    50   ~ 0
+VSPI_MISO
+Text Label 2200 3850 0    50   ~ 0
+VSPI_CLK
+Text Label 2200 3950 0    50   ~ 0
+VSPI_CSD
+Text Label 2200 4450 0    50   ~ 0
+HSPI_CS0
+Text Label 1350 4450 2    50   ~ 0
+HSPI_MOSI
+Text Label 1350 4250 2    50   ~ 0
+HSPI_CLK
+Text Label 1350 4350 2    50   ~ 0
+HSPI_MISO
+Text Label 1350 4150 2    50   ~ 0
+GPIO27
+Text Label 1350 4050 2    50   ~ 0
+GPIO26
+Text Notes 1300 6550 0    50   ~ 0
+RST
+Text Notes 1300 6650 0    50   ~ 0
+CE
+Text Notes 1300 6750 0    50   ~ 0
+DC
+Text Notes 1300 6850 0    50   ~ 0
+DIN
+Text Notes 1300 6950 0    50   ~ 0
+CLK
+Text Notes 1300 7050 0    50   ~ 0
+VCC
+Text Notes 1300 7150 0    50   ~ 0
+BL
+Text Notes 1300 7250 0    50   ~ 0
+GND
+Text Label 1650 6650 0    50   ~ 0
+HSPI_CS0
+Text Label 1650 6550 0    50   ~ 0
+GPIO26
+Text Label 1650 6750 0    50   ~ 0
+GPIO27
+Text Label 1650 6850 0    50   ~ 0
+HSPI_MISO
+Text Label 1650 6950 0    50   ~ 0
+HSPI_CLK
+$Comp
+L power:GND #PWR?
+U 1 1 5D2B0B2E
+P 1650 7250
+F 0 "#PWR?" H 1650 7000 50  0001 C CNN
+F 1 "GND" V 1655 7122 50  0000 R CNN
+F 2 "" H 1650 7250 50  0001 C CNN
+F 3 "" H 1650 7250 50  0001 C CNN
+	1    1650 7250
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 5D2B0C0B
+P 1650 7050
+F 0 "#PWR?" H 1650 6900 50  0001 C CNN
+F 1 "+5V" V 1665 7178 50  0000 L CNN
+F 2 "" H 1650 7050 50  0001 C CNN
+F 3 "" H 1650 7050 50  0001 C CNN
+	1    1650 7050
+	0    1    1    0   
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 5D2B0C5F
+P 1650 7150
+F 0 "#PWR?" H 1650 7000 50  0001 C CNN
+F 1 "+5V" V 1665 7278 50  0000 L CNN
+F 2 "" H 1650 7150 50  0001 C CNN
+F 3 "" H 1650 7150 50  0001 C CNN
+	1    1650 7150
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:Rotary_Encoder SW?
+U 1 1 5D2B0FCF
+P 3500 7100
+F 0 "SW?" H 3729 7146 50  0000 L CNN
+F 1 "Rotary_Encoder" H 3729 7055 50  0000 L CNN
+F 2 "" H 3350 7260 50  0001 C CNN
+F 3 "~" H 3500 7360 50  0001 C CNN
+	1    3500 7100
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5D2B1ACF
+P 1350 4550
+F 0 "#PWR?" H 1350 4300 50  0001 C CNN
+F 1 "GND" H 1355 4377 50  0000 C CNN
+F 2 "" H 1350 4550 50  0001 C CNN
+F 3 "" H 1350 4550 50  0001 C CNN
+	1    1350 4550
+	0    1    1    0   
+$EndComp
+$Comp
+L power:VAA #PWR?
+U 1 1 5D2B1DE6
+P 1350 4650
+F 0 "#PWR?" H 1350 4500 50  0001 C CNN
+F 1 "VAA" V 1368 4777 50  0000 L CNN
+F 2 "" H 1350 4650 50  0001 C CNN
+F 3 "" H 1350 4650 50  0001 C CNN
+	1    1350 4650
+	0    -1   -1   0   
+$EndComp
+Text Notes 2550 3650 0    50   ~ 0
+encoder
+Wire Notes Line
+	1050 4000 1050 4150
+Text Notes 700  4100 0    50   ~ 0
+display
+Text Notes 1250 3250 0    50   ~ 0
+en
+Text Label 1350 3350 2    50   ~ 0
+GPIO36
+Text Label 1350 3450 2    50   ~ 0
+GPIO39
+Text Label 1350 3550 2    50   ~ 0
+GPIO34
+Text Label 1350 3650 2    50   ~ 0
+GPIO35
+Text Label 1350 3750 2    50   ~ 0
+GPIO32
+Text Label 1350 3850 2    50   ~ 0
+GPIO33
+Text Label 1350 3950 2    50   ~ 0
+GPIO25
+Wire Notes Line
+	1050 3950 1050 3300
+Text Notes 700  3750 0    50   ~ 0
+channel \n   1-7
+Text Label 2200 3350 0    50   ~ 0
+GPIO22
+Wire Notes Line
+	2500 3300 2500 3350
+Text Notes 2550 3350 0    50   ~ 0
+channel cs
+$Comp
+L power:GND #PWR?
+U 1 1 5D2B3513
+P 2200 4550
+F 0 "#PWR?" H 2200 4300 50  0001 C CNN
+F 1 "GND" H 2205 4377 50  0000 C CNN
+F 2 "" H 2200 4550 50  0001 C CNN
+F 3 "" H 2200 4550 50  0001 C CNN
+	1    2200 4550
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:+3.3V #PWR?
+U 1 1 5D2B35E5
+P 2200 4650
+F 0 "#PWR?" H 2200 4500 50  0001 C CNN
+F 1 "+3.3V" V 2215 4778 50  0000 L CNN
+F 2 "" H 2200 4650 50  0001 C CNN
+F 3 "" H 2200 4650 50  0001 C CNN
+	1    2200 4650
+	0    1    1    0   
+$EndComp
+Text Label 2200 4350 0    50   ~ 0
+GPIO02
+Text Label 2200 4250 0    50   ~ 0
+GPIO04
+Text Notes 2550 4250 0    50   ~ 0
+encoder
+Wire Notes Line
+	2500 4350 2500 4200
+Wire Notes Line
+	2500 3650 2500 3600
+Text Notes 2200 3450 0    50   ~ 0
+UART 0 TX
+Text Notes 2200 3550 0    50   ~ 0
+UART 0 RX
+Text Notes 2200 4050 0    50   ~ 0
+UART 1 TX
+Text Notes 2200 4150 0    50   ~ 0
+UART 1 RX
+Text Label 3450 3250 2    50   ~ 0
+HSPI_MOSI
+Text Label 3450 3450 2    50   ~ 0
+HSPI_CLK
+NoConn ~ 4250 4150
+Text Label 3450 3750 2    50   ~ 0
+GPIO22
+$Comp
+L power:+5V #PWR?
+U 1 1 5D2B5171
+P 3450 3550
+F 0 "#PWR?" H 3450 3400 50  0001 C CNN
+F 1 "+5V" H 3465 3723 50  0000 C CNN
+F 2 "" H 3450 3550 50  0001 C CNN
+F 3 "" H 3450 3550 50  0001 C CNN
+	1    3450 3550
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5D2B51EE
+P 3450 3850
+F 0 "#PWR?" H 3450 3600 50  0001 C CNN
+F 1 "GND" H 3455 3677 50  0000 C CNN
+F 2 "" H 3450 3850 50  0001 C CNN
+F 3 "" H 3450 3850 50  0001 C CNN
+	1    3450 3850
+	0    1    1    0   
+$EndComp
 $EndSCHEMATC
