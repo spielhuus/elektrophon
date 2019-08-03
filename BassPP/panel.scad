@@ -1,6 +1,6 @@
 /** Bass++ **/
 
-ARMATURES=true;
+ARMATURES=false;
     
 HU=3;
 HP=14;
@@ -46,6 +46,7 @@ module panel_basspp(thickness=THICKNESS, screen=SCREEN, font_size=FONT_SIZE,arma
         translate([1*RASTER_X+RASTER_X_TOP, 4.5*RASTER_Y+RASTER_Y_TOP, 0]) silkscreen(text="CV", thickness=thickness, screen=screen, font_size=font_size, font=font, halign="center");
         translate([2*RASTER_X+RASTER_X_TOP, 4.5*RASTER_Y+RASTER_Y_TOP, 0]) silkscreen(text="OUT", thickness=thickness, screen=screen, font_size=font_size, font=font, halign="center");
 
+        translate([1*RASTER_Y+RASTER_X_TOP, 0*RASTER_Y+RASTER_Y_TOP, 0]) rotate([0,180,-45]) color("DarkGrey") potentiometer_hole();
         translate([2*RASTER_Y+RASTER_X_TOP, 0*RASTER_Y+RASTER_Y_TOP, 0]) rotate([0,180,-45]) color("DarkGrey") potentiometer_hole();
 
         translate([0*RASTER_Y+RASTER_X_TOP, 1*RASTER_Y+RASTER_Y_TOP, 0]) rotate([0,180,135]) color("DarkGrey") potentiometer_hole();
@@ -79,6 +80,7 @@ module panel_basspp(thickness=THICKNESS, screen=SCREEN, font_size=FONT_SIZE,arma
         translate([1*RASTER_X+RASTER_X_TOP, 4.5*RASTER_Y+RASTER_Y_TOP, 0]) silkscreen_text(text="CV", thickness=thickness, screen=screen, font_size=font_size, font=font, color="blue", halign="center");
         translate([2*RASTER_X+RASTER_X_TOP, 4.5*RASTER_Y+RASTER_Y_TOP, 0]) silkscreen_text(text="OUT", thickness=thickness, screen=screen, font_size=font_size, font=font, color="blue", halign="center");
 
+        translate([1*RASTER_Y+RASTER_X_TOP, 0*RASTER_Y+RASTER_Y_TOP, 0]) rotate([0,180,-45]) color("DarkGrey") potentiometer();
         translate([2*RASTER_Y+RASTER_X_TOP, 0*RASTER_Y+RASTER_Y_TOP, 0]) rotate([0,180,-45]) color("DarkGrey") potentiometer();
 
         translate([0*RASTER_Y+RASTER_X_TOP, 1*RASTER_Y+RASTER_Y_TOP, 0]) rotate([0,180,135]) color("DarkGrey") potentiometer();
