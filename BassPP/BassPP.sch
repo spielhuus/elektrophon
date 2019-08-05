@@ -1,6 +1,5 @@
 EESchema Schematic File Version 4
-LIBS:BassPP-cache
-EELAYER 29 0
+EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -20,21 +19,10 @@ U 1 1 5CD09063
 P 1900 1200
 F 0 "RV1" H 1831 1246 50  0000 R CNN
 F 1 "10k" H 1831 1155 50  0000 R CNN
-F 2 "Potentiometer_SMD:Potentiometer_Bourns_TC33X_Vertical" H 1900 1200 50  0001 C CNN
+F 2 "Potentiometer_THT:Potentiometer_Bourns_PTV09A-1_Single_Vertical" H 1900 1200 50  0001 C CNN
 F 3 "~" H 1900 1200 50  0001 C CNN
 	1    1900 1200
 	1    0    0    -1  
-$EndComp
-$Comp
-L Connector:Conn_01x01_Female J2
-U 1 1 5CD0AB06
-P 1800 1900
-F 0 "J2" H 1692 1675 50  0000 C CNN
-F 1 "Trigger" H 1692 1766 50  0000 C CNN
-F 2 "Connector:Banana_Jack_1Pin" H 1800 1900 50  0001 C CNN
-F 3 "~" H 1800 1900 50  0001 C CNN
-	1    1800 1900
-	-1   0    0    1   
 $EndComp
 $Comp
 L Device:R_POT RV2
@@ -42,7 +30,7 @@ U 1 1 5CD0C492
 P 1900 2250
 F 0 "RV2" H 1831 2296 50  0000 R CNN
 F 1 "500k" H 1831 2205 50  0000 R CNN
-F 2 "Potentiometer_SMD:Potentiometer_Bourns_TC33X_Vertical" H 1900 2250 50  0001 C CNN
+F 2 "Potentiometer_THT:Potentiometer_Bourns_PTV09A-1_Single_Vertical" H 1900 2250 50  0001 C CNN
 F 3 "~" H 1900 2250 50  0001 C CNN
 	1    1900 2250
 	1    0    0    -1  
@@ -53,7 +41,7 @@ U 1 1 5CD0C945
 P 1900 2800
 F 0 "RV3" H 1831 2846 50  0000 R CNN
 F 1 "10k" H 1831 2755 50  0000 R CNN
-F 2 "Potentiometer_SMD:Potentiometer_Bourns_TC33X_Vertical" H 1900 2800 50  0001 C CNN
+F 2 "Potentiometer_THT:Potentiometer_Bourns_PTV09A-1_Single_Vertical" H 1900 2800 50  0001 C CNN
 F 3 "~" H 1900 2800 50  0001 C CNN
 	1    1900 2800
 	1    0    0    -1  
@@ -64,7 +52,7 @@ U 1 1 5CD0CE86
 P 1900 3500
 F 0 "RV4" H 1831 3546 50  0000 R CNN
 F 1 "100k" H 1831 3455 50  0000 R CNN
-F 2 "Potentiometer_SMD:Potentiometer_Bourns_3314G_Vertical" H 1900 3500 50  0001 C CNN
+F 2 "Potentiometer_THT:Potentiometer_Bourns_PTV09A-1_Single_Vertical" H 1900 3500 50  0001 C CNN
 F 3 "~" H 1900 3500 50  0001 C CNN
 	1    1900 3500
 	1    0    0    -1  
@@ -75,7 +63,7 @@ U 1 1 5CD0D21D
 P 1900 4200
 F 0 "RV5" H 1830 4246 50  0000 R CNN
 F 1 "100k" H 1830 4155 50  0000 R CNN
-F 2 "Potentiometer_SMD:Potentiometer_Bourns_3314G_Vertical" H 1900 4200 50  0001 C CNN
+F 2 "Potentiometer_THT:Potentiometer_Bourns_PTV09A-1_Single_Vertical" H 1900 4200 50  0001 C CNN
 F 3 "~" H 1900 4200 50  0001 C CNN
 	1    1900 4200
 	1    0    0    -1  
@@ -86,7 +74,7 @@ U 1 1 5CD0D5AC
 P 1900 6050
 F 0 "RV8" H 1830 6096 50  0000 R CNN
 F 1 "10k" H 1830 6005 50  0000 R CNN
-F 2 "Potentiometer_SMD:Potentiometer_Bourns_TC33X_Vertical" H 1900 6050 50  0001 C CNN
+F 2 "Potentiometer_THT:Potentiometer_Bourns_PTV09A-1_Single_Vertical" H 1900 6050 50  0001 C CNN
 F 3 "~" H 1900 6050 50  0001 C CNN
 	1    1900 6050
 	1    0    0    -1  
@@ -97,7 +85,7 @@ U 1 1 5CD0DEE3
 P 1900 5650
 F 0 "RV7" H 1830 5696 50  0000 R CNN
 F 1 "100k" H 1830 5605 50  0000 R CNN
-F 2 "Potentiometer_SMD:Potentiometer_Bourns_TC33X_Vertical" H 1900 5650 50  0001 C CNN
+F 2 "Potentiometer_THT:Potentiometer_Bourns_PTV09A-1_Single_Vertical" H 1900 5650 50  0001 C CNN
 F 3 "~" H 1900 5650 50  0001 C CNN
 	1    1900 5650
 	1    0    0    -1  
@@ -108,21 +96,10 @@ U 1 1 5CD0E407
 P 1900 5000
 F 0 "RV6" H 1831 5046 50  0000 R CNN
 F 1 "100k" H 1831 4955 50  0000 R CNN
-F 2 "Potentiometer_SMD:Potentiometer_Bourns_TC33X_Vertical" H 1900 5000 50  0001 C CNN
+F 2 "Potentiometer_THT:Potentiometer_Bourns_PTV09A-1_Single_Vertical" H 1900 5000 50  0001 C CNN
 F 3 "~" H 1900 5000 50  0001 C CNN
 	1    1900 5000
 	1    0    0    -1  
-$EndComp
-$Comp
-L Connector:Conn_01x01_Female J1
-U 1 1 5CD0E8AD
-P 1600 3250
-F 0 "J1" H 1492 3025 50  0000 C CNN
-F 1 "CV" H 1492 3116 50  0000 C CNN
-F 2 "Connector:Banana_Jack_1Pin" H 1600 3250 50  0001 C CNN
-F 3 "~" H 1600 3250 50  0001 C CNN
-	1    1600 3250
-	-1   0    0    1   
 $EndComp
 $Comp
 L Device:R R1
@@ -363,8 +340,6 @@ Wire Wire Line
 	1900 3000 1900 2950
 Wire Wire Line
 	1900 2600 1900 2650
-Wire Wire Line
-	1800 3250 1900 3250
 Wire Wire Line
 	1900 3250 1900 3350
 $Comp
@@ -1295,17 +1270,6 @@ F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 8650 5400 50  0001 C CNN
 	2    8650 5400
 	1    0    0    1   
 $EndComp
-$Comp
-L Connector:Conn_01x01_Female J5
-U 1 1 5CD0F379
-P 9950 5400
-F 0 "J5" H 9842 5175 50  0000 C CNN
-F 1 "OUT" H 9842 5266 50  0000 C CNN
-F 2 "Connector:Banana_Jack_1Pin" H 9950 5400 50  0001 C CNN
-F 3 "~" H 9950 5400 50  0001 C CNN
-	1    9950 5400
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	2750 4200 2750 3500
 Wire Wire Line
@@ -1944,8 +1908,6 @@ Connection ~ 3650 1400
 Wire Wire Line
 	3300 1750 3300 1900
 Wire Wire Line
-	2000 1900 3300 1900
-Wire Wire Line
 	2050 1200 3800 1200
 $Comp
 L Connector:Conn_01x11_Male J4
@@ -1960,10 +1922,10 @@ F 3 "~" H 5050 7150 50  0001 C CNN
 $EndComp
 Connection ~ 4050 6950
 $Comp
-L Device:R R?
+L Device:R R31
 U 1 1 5D2C0F0B
 P 5550 4150
-F 0 "R?" H 5480 4104 50  0000 R CNN
+F 0 "R31" H 5480 4104 50  0000 R CNN
 F 1 "5k1" H 5480 4195 50  0000 R CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 5480 4150 50  0001 C CNN
 F 3 "~" H 5550 4150 50  0001 C CNN
@@ -1973,10 +1935,10 @@ $EndComp
 Wire Wire Line
 	5550 4000 5550 3950
 $Comp
-L power:-15V #PWR?
+L power:-15V #PWR0101
 U 1 1 5D2CE16F
 P 5550 4300
-F 0 "#PWR?" H 5550 4400 50  0001 C CNN
+F 0 "#PWR0101" H 5550 4400 50  0001 C CNN
 F 1 "-15V" H 5450 4500 50  0000 L CNN
 F 2 "" H 5550 4300 50  0001 C CNN
 F 3 "" H 5550 4300 50  0001 C CNN
@@ -2103,10 +2065,10 @@ Wire Wire Line
 Wire Wire Line
 	5600 3950 5550 3950
 $Comp
-L Device:R R?
+L Device:R R32
 U 1 1 5D262485
 P 6050 3950
-F 0 "R?" H 5980 3904 50  0000 R CNN
+F 0 "R32" H 5980 3904 50  0000 R CNN
 F 1 "100k" H 5980 3995 50  0000 R CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 5980 3950 50  0001 C CNN
 F 3 "~" H 6050 3950 50  0001 C CNN
@@ -2122,4 +2084,82 @@ Wire Wire Line
 	6200 3950 6350 3950
 Text Notes 6350 3850 2    50   ~ 10
 R02: added
+$Comp
+L Connector:AudioJack3_Ground J2
+U 1 1 5D489F0A
+P 1200 1800
+F 0 "J2" H 1204 2142 50  0000 C CNN
+F 1 "AudioJack3_Ground" H 1204 2051 50  0000 C CNN
+F 2 "Connector_Audio:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles" H 1200 1800 50  0001 C CNN
+F 3 "~" H 1200 1800 50  0001 C CNN
+	1    1200 1800
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0102
+U 1 1 5D48A340
+P 1400 1700
+F 0 "#PWR0102" H 1400 1450 50  0001 C CNN
+F 1 "GND" H 1405 1527 50  0000 C CNN
+F 2 "" H 1400 1700 50  0001 C CNN
+F 3 "" H 1400 1700 50  0001 C CNN
+	1    1400 1700
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	1400 1900 3300 1900
+NoConn ~ 1400 1800
+$Comp
+L Connector:AudioJack3_Ground J1
+U 1 1 5D49CDB2
+P 1050 3150
+F 0 "J1" H 1054 3492 50  0000 C CNN
+F 1 "AudioJack3_Ground" H 1054 3401 50  0000 C CNN
+F 2 "Connector_Audio:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles" H 1050 3150 50  0001 C CNN
+F 3 "~" H 1050 3150 50  0001 C CNN
+	1    1050 3150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0103
+U 1 1 5D49CDB9
+P 1250 3050
+F 0 "#PWR0103" H 1250 2800 50  0001 C CNN
+F 1 "GND" H 1255 2877 50  0000 C CNN
+F 2 "" H 1250 3050 50  0001 C CNN
+F 3 "" H 1250 3050 50  0001 C CNN
+	1    1250 3050
+	0    -1   -1   0   
+$EndComp
+NoConn ~ 1250 3150
+Wire Wire Line
+	1250 3250 1900 3250
+$Comp
+L Connector:AudioJack3_Ground J5
+U 1 1 5D4AAECD
+P 10200 5800
+F 0 "J5" H 9967 5821 50  0000 R CNN
+F 1 "AudioJack3_Ground" H 9967 5730 50  0000 R CNN
+F 2 "Connector_Audio:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles" H 10200 5800 50  0001 C CNN
+F 3 "~" H 10200 5800 50  0001 C CNN
+	1    10200 5800
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0104
+U 1 1 5D4AAED4
+P 10000 5700
+F 0 "#PWR0104" H 10000 5450 50  0001 C CNN
+F 1 "GND" H 10005 5527 50  0000 C CNN
+F 2 "" H 10000 5700 50  0001 C CNN
+F 3 "" H 10000 5700 50  0001 C CNN
+	1    10000 5700
+	0    1    1    0   
+$EndComp
+NoConn ~ 10400 5800
+NoConn ~ 10000 5800
+Wire Wire Line
+	10000 5900 9750 5900
+Wire Wire Line
+	9750 5900 9750 5400
 $EndSCHEMATC
