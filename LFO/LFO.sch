@@ -1,6 +1,6 @@
 EESchema Schematic File Version 4
 LIBS:LFO-cache
-EELAYER 29 0
+EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -662,17 +662,6 @@ F 3 "~" H 2000 2500 50  0001 C CNN
 	1    2000 2500
 	-1   0    0    1   
 $EndComp
-$Comp
-L Connector:Conn_01x01_Female J1
-U 1 1 5CC9CB84
-P 1700 3300
-F 0 "J1" V 1546 3348 50  0000 L CNN
-F 1 "PULSE" V 1637 3348 50  0000 L CNN
-F 2 "Connector_Pin:Pin_D0.7mm_L6.5mm_W1.8mm_FlatFork" H 1700 3300 50  0001 C CNN
-F 3 "~" H 1700 3300 50  0001 C CNN
-	1    1700 3300
-	0    1    1    0   
-$EndComp
 Wire Wire Line
 	2000 2300 1700 2300
 Connection ~ 2000 2300
@@ -684,7 +673,7 @@ U 1 1 5CC2735A
 P 2800 3200
 F 0 "RV1" H 2731 3246 50  0000 R CNN
 F 1 "100k" H 2731 3155 50  0000 R CNN
-F 2 "Potentiometer_SMD:Potentiometer_Vishay_TS53YJ_Vertical" H 2800 3200 50  0001 C CNN
+F 2 "Potentiometer_THT:Potentiometer_Piher_PT-10-V05_Vertical" H 2800 3200 50  0001 C CNN
 F 3 "~" H 2800 3200 50  0001 C CNN
 	1    2800 3200
 	0    -1   -1   0   
@@ -703,7 +692,7 @@ U 1 1 5CCBAC50
 P 3900 3200
 F 0 "RV2" H 3831 3246 50  0000 R CNN
 F 1 "500k" H 3831 3155 50  0000 R CNN
-F 2 "Potentiometer_SMD:Potentiometer_Vishay_TS53YJ_Vertical" H 3900 3200 50  0001 C CNN
+F 2 "Potentiometer_THT:Potentiometer_Alps_RK09K_Single_Vertical" H 3900 3200 50  0001 C CNN
 F 3 "~" H 3900 3200 50  0001 C CNN
 	1    3900 3200
 	0    -1   -1   0   
@@ -760,7 +749,7 @@ U 1 1 5CCFB91B
 P 8300 3100
 F 0 "RV3" H 8231 3146 50  0000 R CNN
 F 1 "100k" H 8231 3055 50  0000 R CNN
-F 2 "Potentiometer_SMD:Potentiometer_Vishay_TS53YJ_Vertical" H 8300 3100 50  0001 C CNN
+F 2 "Potentiometer_THT:Potentiometer_Alps_RK09K_Single_Vertical" H 8300 3100 50  0001 C CNN
 F 3 "~" H 8300 3100 50  0001 C CNN
 	1    8300 3100
 	0    -1   -1   0   
@@ -1322,7 +1311,7 @@ U 1 1 5CE98611
 P 2800 6250
 F 0 "RV4" H 2731 6296 50  0000 R CNN
 F 1 "100k" H 2731 6205 50  0000 R CNN
-F 2 "Potentiometer_SMD:Potentiometer_Vishay_TS53YJ_Vertical" H 2800 6250 50  0001 C CNN
+F 2 "Potentiometer_THT:Potentiometer_Alps_RK09K_Single_Vertical" H 2800 6250 50  0001 C CNN
 F 3 "~" H 2800 6250 50  0001 C CNN
 	1    2800 6250
 	0    -1   -1   0   
@@ -1341,7 +1330,7 @@ U 1 1 5CE9861B
 P 3900 6250
 F 0 "RV5" H 3831 6296 50  0000 R CNN
 F 1 "500k" H 3831 6205 50  0000 R CNN
-F 2 "Potentiometer_SMD:Potentiometer_Vishay_TS53YJ_Vertical" H 3900 6250 50  0001 C CNN
+F 2 "Potentiometer_THT:Potentiometer_Alps_RK09K_Single_Vertical" H 3900 6250 50  0001 C CNN
 F 3 "~" H 3900 6250 50  0001 C CNN
 	1    3900 6250
 	0    -1   -1   0   
@@ -1394,7 +1383,7 @@ U 1 1 5CE9863C
 P 8300 6050
 F 0 "RV6" H 8231 6096 50  0000 R CNN
 F 1 "100k" H 8231 6005 50  0000 R CNN
-F 2 "Potentiometer_SMD:Potentiometer_Vishay_TS53YJ_Vertical" H 8300 6050 50  0001 C CNN
+F 2 "Potentiometer_THT:Potentiometer_Alps_RK09K_Single_Vertical" H 8300 6050 50  0001 C CNN
 F 3 "~" H 8300 6050 50  0001 C CNN
 	1    8300 6050
 	0    -1   -1   0   
@@ -1544,6 +1533,35 @@ F 1 "Conn_01x09_Male" H 4208 7692 50  0000 C CNN
 F 2 "Connector_PinSocket_2.54mm:PinSocket_1x09_P2.54mm_Vertical" H 4100 7200 50  0001 C CNN
 F 3 "~" H 4100 7200 50  0001 C CNN
 	1    4100 7200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:AudioJack3 J1
+U 1 1 5D479829
+P 1350 3200
+F 0 "J1" H 1330 3525 50  0000 C CNN
+F 1 "AudioJack3" H 1330 3434 50  0000 C CNN
+F 2 "Connector_Audio:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles" H 1350 3200 50  0001 C CNN
+F 3 "~" H 1350 3200 50  0001 C CNN
+	1    1350 3200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1550 3100 1700 3100
+Wire Wire Line
+	1550 3200 1700 3200
+Wire Wire Line
+	1700 3200 1700 3100
+Connection ~ 1700 3100
+$Comp
+L power:GND #PWR0101
+U 1 1 5D489623
+P 1550 3300
+F 0 "#PWR0101" H 1550 3050 50  0001 C CNN
+F 1 "GND" H 1555 3127 50  0000 C CNN
+F 2 "" H 1550 3300 50  0001 C CNN
+F 3 "" H 1550 3300 50  0001 C CNN
+	1    1550 3300
 	1    0    0    -1  
 $EndComp
 $EndSCHEMATC
