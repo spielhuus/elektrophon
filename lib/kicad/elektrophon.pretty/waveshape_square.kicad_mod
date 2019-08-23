@@ -1,0 +1,16 @@
+(module waveshape_square (layer F.Cu) (tedit 5D59AF63)
+  (descr "Imported from ../../lib/kicad/elektrophon.pretty/saw.svg")
+  (tags svg2mod)
+  (attr smd)
+  (fp_text reference svg2mod (at 0 -4.58823) (layer F.SilkS) hide
+    (effects (font (size 1.524 1.524) (thickness 0.3048)))
+  )
+  (fp_text value G*** (at 0 11.176) (layer F.SilkS) hide
+    (effects (font (size 1.524 1.524) (thickness 0.3048)))
+  )
+  (fp_line (start -2.032 8.62667) (end -2.032 7.112) (layer F.SilkS) (width 0.5))
+  (fp_line (start -2.032 7.09577) (end -0.207183 7.09617) (layer F.SilkS) (width 0.5))
+  (fp_line (start 0 7.112) (end 0 9.652) (layer F.SilkS) (width 0.5))
+  (fp_line (start 0 9.652) (end 2.032 9.652) (layer F.SilkS) (width 0.5))
+  (fp_line (start 2.032 9.652) (end 2.032 8.128) (layer F.SilkS) (width 0.5))
+)

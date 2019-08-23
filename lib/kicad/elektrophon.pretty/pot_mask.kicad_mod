@@ -1,0 +1,13 @@
+(module pot_mask (layer F.Cu) (tedit 5D59B6ED)
+  (descr "Imported from pot-mask.svg")
+  (tags svg2mod)
+  (attr smd)
+  (fp_text reference svg2mod (at 0 -10.16) (layer F.SilkS) hide
+    (effects (font (size 1.524 1.524) (thickness 0.3048)))
+  )
+  (fp_text value G*** (at 0 8.636) (layer F.SilkS)
+    (effects (font (size 1.524 1.524) (thickness 0.3048)))
+  )
+  (fp_arc (start 0 0) (end 4.064 7.112) (angle -300) (layer F.Cu) (width 1))
+  (pad "" np_thru_hole circle (at 0 0) (size 12 12) (drill 8.4) (layers *.Cu *.Mask))
+)

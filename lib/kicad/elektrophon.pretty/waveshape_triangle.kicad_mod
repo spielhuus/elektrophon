@@ -1,0 +1,14 @@
+(module waveshape_triangle (layer F.Cu) (tedit 5D59AF8F)
+  (descr "Imported from ../../lib/kicad/elektrophon.pretty/triangle.svg")
+  (tags svg2mod)
+  (attr smd)
+  (fp_text reference svg2mod (at 0 -4.43467) (layer F.SilkS) hide
+    (effects (font (size 1.524 1.524) (thickness 0.3048)))
+  )
+  (fp_text value G*** (at 0 11.176) (layer F.SilkS) hide
+    (effects (font (size 1.524 1.524) (thickness 0.3048)))
+  )
+  (fp_line (start -2.032 8.636) (end -0.508 6.604) (layer F.SilkS) (width 0.5))
+  (fp_line (start -0.508 6.604) (end 1.524 9.51467) (layer F.SilkS) (width 0.5))
+  (fp_line (start 1.524 9.51467) (end 2.54 7.82361) (layer F.SilkS) (width 0.5))
+)

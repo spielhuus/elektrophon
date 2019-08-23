@@ -1,0 +1,13 @@
+(module waveshape_fall (layer F.Cu) (tedit 5D59B5BE)
+  (descr "Imported from ../../lib/kicad/elektrophon.pretty/fall.svg")
+  (tags svg2mod)
+  (attr smd)
+  (fp_text reference svg2mod (at 0 -4.69341) (layer F.SilkS) hide
+    (effects (font (size 1.524 1.524) (thickness 0.3048)))
+  )
+  (fp_text value G*** (at 0 11.684) (layer F.SilkS) hide
+    (effects (font (size 1.524 1.524) (thickness 0.3048)))
+  )
+  (fp_line (start -1.524 9.652) (end -0.508 7.49859) (layer F.SilkS) (width 0.5))
+  (fp_line (start -0.508 7.49859) (end 2.032 9.652) (layer F.SilkS) (width 0.5))
+)
