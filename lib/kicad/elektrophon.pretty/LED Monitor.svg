@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="5.8000112mm"
+   height="5.7981324mm"
+   viewBox="0 0 5.8000111 5.7981324"
+   version="1.1"
+   id="svg8"
+   inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
+   sodipodi:docname="LED Monitor.svg">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="2.8"
+     inkscape:cx="137.81408"
+     inkscape:cy="-39.736896"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:window-width="2560"
+     inkscape:window-height="1363"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Mask"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-49.351409,-132.52148)">
+    <path
+       id="path815"
+       d="m 55.119479,135.42057 -0.05827,0.57777 -0.167109,0.53813 -0.26442,0.48698 -0.350198,0.42428 -0.424442,0.35006 -0.487157,0.26433 -0.538336,0.16704 -0.577985,0.0582 -0.577984,-0.0582 -0.538336,-0.16704 -0.487157,-0.26433 -0.424443,-0.35006 -0.350198,-0.42428 -0.264419,-0.48698 -0.16711,-0.53813 -0.05826,-0.57777 0.05562,-0.5619 0.16269,-0.53519 0.263537,-0.49343 0.358149,-0.43664 0.436801,-0.35802 0.493617,-0.26343 0.535388,-0.16264 0.562115,-0.0556 0.562115,0.0556 0.535389,0.16264 0.493617,0.26343 0.4368,0.35802 0.358149,0.43664 0.263538,0.49343 0.162689,0.53519 0.05562,0.5619 v 0"
+       style="opacity:1;vector-effect:none;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.06417345;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0.37968513;stroke-opacity:1"
+       inkscape:connector-curvature="0" />
+    <path
+       inkscape:connector-curvature="0"
+       style="opacity:1;vector-effect:none;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.06417345;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0.37968513;stroke-opacity:1"
+       d="m 55.119479,135.42057 -0.05827,0.57777 -0.167109,0.53813 -0.26442,0.48698 -0.350198,0.42428 -0.424442,0.35006 -0.487157,0.26433 -0.538336,0.16704 -0.577985,0.0582 -0.577984,-0.0582 -0.538336,-0.16704 -0.487157,-0.26433 -0.424443,-0.35006 -0.350198,-0.42428 -0.264419,-0.48698 -0.16711,-0.53813 -0.05826,-0.57777 0.05562,-0.5619 0.16269,-0.53519 0.263537,-0.49343 0.358149,-0.43664 0.436801,-0.35802 0.493617,-0.26343 0.535388,-0.16264 0.562115,-0.0556 0.562115,0.0556 0.535389,0.16264 0.493617,0.26343 0.4368,0.35802 0.358149,0.43664 0.263538,0.49343 0.162689,0.53519 0.05562,0.5619 v 0"
+       id="path1372" />
+  </g>
+</svg>

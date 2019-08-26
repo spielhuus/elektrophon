@@ -1,0 +1,18 @@
+(module LED_Monitor (layer F.Cu) (tedit 5D62B726)
+  (descr "Imported from LED Monitor.svg")
+  (tags svg2mod)
+  (zone_connect 2)
+  (attr smd)
+  (fp_text reference svg2mod (at 0 -5.054774) (layer F.SilkS) hide
+    (effects (font (size 1.524 1.524) (thickness 0.3048)))
+  )
+  (fp_text value G*** (at 0 5.054774) (layer F.SilkS) hide
+    (effects (font (size 1.524 1.524) (thickness 0.3048)))
+  )
+  (pad 1 connect custom (at 0 0) (size 5 5) (layers *.Mask)
+    (zone_connect 2)
+    (options (clearance outline) (anchor circle))
+    (primitives
+      (gr_circle (center 0 0) (end 2.286 0) (width 0.1))
+    ))
+)
