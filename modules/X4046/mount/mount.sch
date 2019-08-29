@@ -1,5 +1,4 @@
 EESchema Schematic File Version 4
-LIBS:mount-cache
 EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
@@ -567,9 +566,9 @@ Text Label 4100 6350 0    50   ~ 0
 LIN_FM
 Text Label 4100 6450 0    50   ~ 0
 HARD_SYNC
-Text Label 4100 6550 0    50   ~ 0
-SKEW
 Text Label 4100 6650 0    50   ~ 0
+SKEW
+Text Label 4100 6950 0    50   ~ 0
 PWM
 $Comp
 L Device:R R7
@@ -761,15 +760,15 @@ Wire Wire Line
 Connection ~ 9200 3300
 Wire Wire Line
 	9200 3300 9250 3300
-Text Label 4100 6750 0    50   ~ 0
+Text Label 4100 6550 0    50   ~ 0
 SINE
-Text Label 4100 6850 0    50   ~ 0
+Text Label 4100 7150 0    50   ~ 0
 TRIANGLE
-Text Label 4100 6950 0    50   ~ 0
+Text Label 4100 6750 0    50   ~ 0
 RAMPOID
 Text Label 4100 7050 0    50   ~ 0
 SAW
-Text Label 4100 7150 0    50   ~ 0
+Text Label 4100 6850 0    50   ~ 0
 PULSE
 Text Label 5450 4250 0    50   ~ 0
 TRIANGLE
