@@ -44,7 +44,8 @@ For the main panel the two integrated circuits the CD4046 and the THAT300 are no
 | 2   | U2, U3                      | TL074              | [Low-Noise JFET-Input Operational Amplifiers](https://spielhuus.github.io/elektrophon/datasheet/TL07xx.pdf)   | 
 | 1   | U4                            | 4046               | [CMOS Phase Locked Loop](https://spielhuus.github.io/elektrophon/datasheet/cd4046b.pdf)                       | 
 
-### mount panel                                           | 
+### mount panel                                            
+
 | Qty | Reference(s)                              | Value           | Description                                                             | 
 |-----|-------------------------------------------|-----------------|-------------------------------------------------------------------------| 
 | 1   | C1                                        | 0.22u           | Capacitors Polyethylene Terephthalate (PET) (L4.6mm, W3.0mm, P2.50mm) | 
@@ -65,7 +66,7 @@ For the main panel the two integrated circuits the CD4046 and the THAT300 are no
 ### misc material
 
 | Qty | Reference(s)             | Value              | Description | 
-|------|-----|--------------------------|--------------------|---------------------------------------|----------------------------------------------------------------|---------------------------------------------------------------| 
+|-----|--------------------------|--------------------|-------------|
 | 4   |                         | M2/15mm             | hex brass standoff, female to female | 
 | 1   |                        | M2-6mm               | Screws   |
 | 7   |                        | 6.35mm              | Potentiometer Knobs, colors of your choice   |
