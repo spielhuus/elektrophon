@@ -1,4 +1,5 @@
 EESchema Schematic File Version 4
+LIBS:mount-cache
 EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
@@ -19,7 +20,7 @@ U 1 1 5D4AFB8C
 P 1350 3250
 F 0 "RV1" H 1280 3296 50  0000 R CNN
 F 1 "100k" H 1280 3205 50  0000 R CNN
-F 2 "Potentiometer_THT:Potentiometer_Alpha_RD901F-40-00D_Single_Vertical" H 1350 3250 50  0001 C CNN
+F 2 "elektrophon:Potentiometer_Alpha_RD901F-40-00D_Single_Vertical" H 1350 3250 50  0001 C CNN
 F 3 "~" H 1350 3250 50  0001 C CNN
 	1    1350 3250
 	1    0    0    -1  
@@ -32,7 +33,7 @@ U 1 1 5D4C780D
 P 5450 4400
 F 0 "RV6" H 5380 4446 50  0000 R CNN
 F 1 "500k" H 5380 4355 50  0000 R CNN
-F 2 "Potentiometer_THT:Potentiometer_Alpha_RD901F-40-00D_Single_Vertical" H 5450 4400 50  0001 C CNN
+F 2 "elektrophon:Potentiometer_Alpha_RD901F-40-00D_Single_Vertical" H 5450 4400 50  0001 C CNN
 F 3 "~" H 5450 4400 50  0001 C CNN
 	1    5450 4400
 	1    0    0    -1  
@@ -43,7 +44,7 @@ U 1 1 5D4C7851
 P 4200 3250
 F 0 "RV4" H 4130 3296 50  0000 R CNN
 F 1 "100k" H 4130 3205 50  0000 R CNN
-F 2 "Potentiometer_THT:Potentiometer_Alpha_RD901F-40-00D_Single_Vertical" H 4200 3250 50  0001 C CNN
+F 2 "elektrophon:Potentiometer_Alpha_RD901F-40-00D_Single_Vertical" H 4200 3250 50  0001 C CNN
 F 3 "~" H 4200 3250 50  0001 C CNN
 	1    4200 3250
 	1    0    0    -1  
@@ -54,7 +55,7 @@ U 1 1 5D4C78EF
 P 6450 2300
 F 0 "RV5" H 6380 2346 50  0000 R CNN
 F 1 "100k" H 6380 2255 50  0000 R CNN
-F 2 "Potentiometer_THT:Potentiometer_Alpha_RD901F-40-00D_Single_Vertical" H 6450 2300 50  0001 C CNN
+F 2 "elektrophon:Potentiometer_Alpha_RD901F-40-00D_Single_Vertical" H 6450 2300 50  0001 C CNN
 F 3 "~" H 6450 2300 50  0001 C CNN
 	1    6450 2300
 	1    0    0    -1  
@@ -65,7 +66,7 @@ U 1 1 5D4C7957
 P 1350 4850
 F 0 "RV3" H 1280 4896 50  0000 R CNN
 F 1 "100k" H 1280 4805 50  0000 R CNN
-F 2 "Potentiometer_THT:Potentiometer_Alpha_RD901F-40-00D_Single_Vertical" H 1350 4850 50  0001 C CNN
+F 2 "elektrophon:Potentiometer_Alpha_RD901F-40-00D_Single_Vertical" H 1350 4850 50  0001 C CNN
 F 3 "~" H 1350 4850 50  0001 C CNN
 	1    1350 4850
 	1    0    0    -1  
@@ -76,7 +77,7 @@ U 1 1 5D4C79A5
 P 1350 4050
 F 0 "RV2" H 1280 4096 50  0000 R CNN
 F 1 "100k" H 1280 4005 50  0000 R CNN
-F 2 "Potentiometer_THT:Potentiometer_Alpha_RD901F-40-00D_Single_Vertical" H 1350 4050 50  0001 C CNN
+F 2 "elektrophon:Potentiometer_Alpha_RD901F-40-00D_Single_Vertical" H 1350 4050 50  0001 C CNN
 F 3 "~" H 1350 4050 50  0001 C CNN
 	1    1350 4050
 	1    0    0    -1  
@@ -97,7 +98,7 @@ U 1 1 5D4DE229
 P 1350 1700
 F 0 "J1" H 1380 2025 50  0000 C CNN
 F 1 "AudioJack2_SwitchT" H 1380 1934 50  0000 C CNN
-F 2 "Connector_Audio:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles" H 1350 1700 50  0001 C CNN
+F 2 "elektrophon:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles" H 1350 1700 50  0001 C CNN
 F 3 "~" H 1350 1700 50  0001 C CNN
 	1    1350 1700
 	1    0    0    -1  
@@ -108,7 +109,7 @@ U 1 1 5D4DE299
 P 4100 1700
 F 0 "J3" H 4130 2025 50  0000 C CNN
 F 1 "AudioJack2_SwitchT" H 4130 1934 50  0000 C CNN
-F 2 "Connector_Audio:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles" H 4100 1700 50  0001 C CNN
+F 2 "elektrophon:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles" H 4100 1700 50  0001 C CNN
 F 3 "~" H 4100 1700 50  0001 C CNN
 	1    4100 1700
 	1    0    0    -1  
@@ -119,7 +120,7 @@ U 1 1 5D4DE36D
 P 1350 2500
 F 0 "J2" H 1380 2825 50  0000 C CNN
 F 1 "AudioJack2_SwitchT" H 1380 2734 50  0000 C CNN
-F 2 "Connector_Audio:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles" H 1350 2500 50  0001 C CNN
+F 2 "elektrophon:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles" H 1350 2500 50  0001 C CNN
 F 3 "~" H 1350 2500 50  0001 C CNN
 	1    1350 2500
 	1    0    0    -1  
@@ -130,7 +131,7 @@ U 1 1 5D4DE3E3
 P 4100 4450
 F 0 "J4" H 4130 4775 50  0000 C CNN
 F 1 "AudioJack2_SwitchT" H 4130 4684 50  0000 C CNN
-F 2 "Connector_Audio:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles" H 4100 4450 50  0001 C CNN
+F 2 "elektrophon:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles" H 4100 4450 50  0001 C CNN
 F 3 "~" H 4100 4450 50  0001 C CNN
 	1    4100 4450
 	1    0    0    -1  
@@ -141,7 +142,7 @@ U 1 1 5D4DE69B
 P 8450 1600
 F 0 "J6" H 8480 1925 50  0000 C CNN
 F 1 "AudioJack2_SwitchT" H 8480 1834 50  0000 C CNN
-F 2 "Connector_Audio:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles" H 8450 1600 50  0001 C CNN
+F 2 "elektrophon:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles" H 8450 1600 50  0001 C CNN
 F 3 "~" H 8450 1600 50  0001 C CNN
 	1    8450 1600
 	1    0    0    -1  
@@ -152,7 +153,7 @@ U 1 1 5D4DE6A2
 P 8450 2450
 F 0 "J8" H 8480 2775 50  0000 C CNN
 F 1 "AudioJack2_SwitchT" H 8480 2684 50  0000 C CNN
-F 2 "Connector_Audio:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles" H 8450 2450 50  0001 C CNN
+F 2 "elektrophon:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles" H 8450 2450 50  0001 C CNN
 F 3 "~" H 8450 2450 50  0001 C CNN
 	1    8450 2450
 	1    0    0    -1  
@@ -163,7 +164,7 @@ U 1 1 5D4DE6A9
 P 8450 3300
 F 0 "J10" H 8480 3625 50  0000 C CNN
 F 1 "AudioJack2_SwitchT" H 8480 3534 50  0000 C CNN
-F 2 "Connector_Audio:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles" H 8450 3300 50  0001 C CNN
+F 2 "elektrophon:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles" H 8450 3300 50  0001 C CNN
 F 3 "~" H 8450 3300 50  0001 C CNN
 	1    8450 3300
 	1    0    0    -1  
@@ -174,7 +175,7 @@ U 1 1 5D4DE6B0
 P 9600 1600
 F 0 "J7" H 9630 1925 50  0000 C CNN
 F 1 "AudioJack2_SwitchT" H 9630 1834 50  0000 C CNN
-F 2 "Connector_Audio:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles" H 9600 1600 50  0001 C CNN
+F 2 "elektrophon:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles" H 9600 1600 50  0001 C CNN
 F 3 "~" H 9600 1600 50  0001 C CNN
 	1    9600 1600
 	1    0    0    -1  
@@ -185,7 +186,7 @@ U 1 1 5D4DE6B7
 P 9600 2400
 F 0 "J9" H 9630 2725 50  0000 C CNN
 F 1 "AudioJack2_SwitchT" H 9630 2634 50  0000 C CNN
-F 2 "Connector_Audio:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles" H 9600 2400 50  0001 C CNN
+F 2 "elektrophon:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles" H 9600 2400 50  0001 C CNN
 F 3 "~" H 9600 2400 50  0001 C CNN
 	1    9600 2400
 	1    0    0    -1  
@@ -289,7 +290,7 @@ U 1 1 5D50BDE8
 P 2050 1700
 F 0 "R1" V 1843 1700 50  0000 C CNN
 F 1 "100k" V 1934 1700 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 1980 1700 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 1980 1700 50  0001 C CNN
 F 3 "~" H 2050 1700 50  0001 C CNN
 	1    2050 1700
 	0    1    1    0   
@@ -300,7 +301,7 @@ U 1 1 5D50C97B
 P 2050 3250
 F 0 "R2" V 1843 3250 50  0000 C CNN
 F 1 "100k" V 1934 3250 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 1980 3250 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 1980 3250 50  0001 C CNN
 F 3 "~" H 2050 3250 50  0001 C CNN
 	1    2050 3250
 	0    1    1    0   
@@ -311,7 +312,7 @@ U 1 1 5D50D00C
 P 2050 4050
 F 0 "R3" V 1843 4050 50  0000 C CNN
 F 1 "100k" V 1934 4050 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 1980 4050 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 1980 4050 50  0001 C CNN
 F 3 "~" H 2050 4050 50  0001 C CNN
 	1    2050 4050
 	0    1    1    0   
@@ -322,7 +323,7 @@ U 1 1 5D50D366
 P 2050 4850
 F 0 "R4" V 1843 4850 50  0000 C CNN
 F 1 "3M3" V 1934 4850 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 1980 4850 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 1980 4850 50  0001 C CNN
 F 3 "~" H 2050 4850 50  0001 C CNN
 	1    2050 4850
 	0    1    1    0   
@@ -376,28 +377,13 @@ U 1 1 5D536857
 P 4800 2500
 F 0 "C1" H 4915 2546 50  0000 L CNN
 F 1 "0.22u" H 4915 2455 50  0000 L CNN
-F 2 "Capacitor_THT:C_Rect_L7.0mm_W6.0mm_P5.00mm" H 4838 2350 50  0001 C CNN
+F 2 "Capacitor_THT:C_Rect_L4.6mm_W3.0mm_P2.50mm_MKS02_FKP02" H 4838 2350 50  0001 C CNN
 F 3 "~" H 4800 2500 50  0001 C CNN
 	1    4800 2500
 	1    0    0    -1  
 $EndComp
-$Comp
-L Switch:SW_SPST SW1
-U 1 1 5D5451F1
-P 4100 2500
-F 0 "SW1" V 4054 2598 50  0000 L CNN
-F 1 "SW_SPST" V 4145 2598 50  0000 L CNN
-F 2 "digikey-footprints:Switch_Slide_11.6x4mm_EG1218" H 4100 2500 50  0001 C CNN
-F 3 "~" H 4100 2500 50  0001 C CNN
-	1    4100 2500
-	0    1    1    0   
-$EndComp
 Wire Wire Line
 	4800 1700 4800 2100
-Wire Wire Line
-	4100 2300 4100 2100
-Wire Wire Line
-	4100 2100 4800 2100
 Connection ~ 4800 2100
 Wire Wire Line
 	4800 2100 4800 2350
@@ -407,8 +393,6 @@ Wire Wire Line
 	4200 2950 4800 2950
 Wire Wire Line
 	4800 2950 4800 2650
-Wire Wire Line
-	4100 2700 4100 2950
 Wire Wire Line
 	4100 2950 4200 2950
 Connection ~ 4200 2950
@@ -431,7 +415,7 @@ U 1 1 5D54CF1A
 P 4550 3250
 F 0 "R5" V 4343 3250 50  0000 C CNN
 F 1 "100k" V 4434 3250 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 4480 3250 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 4480 3250 50  0001 C CNN
 F 3 "~" H 4550 3250 50  0001 C CNN
 	1    4550 3250
 	0    1    1    0   
@@ -468,7 +452,7 @@ U 1 1 5D4DE2FD
 P 6450 1600
 F 0 "J5" H 6480 1925 50  0000 C CNN
 F 1 "AudioJack2_SwitchT" H 6480 1834 50  0000 C CNN
-F 2 "Connector_Audio:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles" H 6450 1600 50  0001 C CNN
+F 2 "elektrophon:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles" H 6450 1600 50  0001 C CNN
 F 3 "~" H 6450 1600 50  0001 C CNN
 	1    6450 1600
 	1    0    0    -1  
@@ -510,7 +494,7 @@ U 1 1 5D588A7D
 P 6800 2300
 F 0 "R6" V 6593 2300 50  0000 C CNN
 F 1 "100k" V 6684 2300 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 6730 2300 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 6730 2300 50  0001 C CNN
 F 3 "~" H 6800 2300 50  0001 C CNN
 	1    6800 2300
 	0    1    1    0   
@@ -527,7 +511,7 @@ U 1 1 5D58B3F5
 P 6450 3250
 F 0 "RV7" H 6380 3296 50  0000 R CNN
 F 1 "500k" H 6380 3205 50  0000 R CNN
-F 2 "Potentiometer_THT:Potentiometer_Alpha_RD901F-40-00D_Single_Vertical" H 6450 3250 50  0001 C CNN
+F 2 "elektrophon:Potentiometer_Alpha_RD901F-40-00D_Single_Vertical" H 6450 3250 50  0001 C CNN
 F 3 "~" H 6450 3250 50  0001 C CNN
 	1    6450 3250
 	1    0    0    -1  
@@ -576,7 +560,7 @@ U 1 1 5D5DB458
 P 6800 3250
 F 0 "R7" V 6593 3250 50  0000 C CNN
 F 1 "330k" V 6684 3250 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 6730 3250 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 6730 3250 50  0001 C CNN
 F 3 "~" H 6800 3250 50  0001 C CNN
 	1    6800 3250
 	0    1    1    0   
@@ -656,7 +640,7 @@ U 1 1 5D5E800F
 P 8850 1750
 F 0 "R8" H 8780 1704 50  0000 R CNN
 F 1 "1k" H 8780 1795 50  0000 R CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 8780 1750 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 8780 1750 50  0001 C CNN
 F 3 "~" H 8850 1750 50  0001 C CNN
 	1    8850 1750
 	-1   0    0    1   
@@ -686,7 +670,7 @@ U 1 1 5D5EE82A
 P 8850 2600
 F 0 "R9" H 8780 2554 50  0000 R CNN
 F 1 "1k" H 8780 2645 50  0000 R CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 8780 2600 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 8780 2600 50  0001 C CNN
 F 3 "~" H 8850 2600 50  0001 C CNN
 	1    8850 2600
 	-1   0    0    1   
@@ -886,4 +870,22 @@ F 3 "~" H 2300 6700 50  0001 C CNN
 	1    2300 6700
 	-1   0    0    1   
 $EndComp
+Wire Wire Line
+	4100 2700 4100 2950
+$Comp
+L Switch:SW_SPDT SW1
+U 1 1 5D6B7BA6
+P 4000 2500
+F 0 "SW1" V 3954 2648 50  0000 L CNN
+F 1 "SW_SPDT" V 4045 2648 50  0000 L CNN
+F 2 "4ms-footprints:SPDT_KIT" H 4000 2500 50  0001 C CNN
+F 3 "~" H 4000 2500 50  0001 C CNN
+	1    4000 2500
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4000 2300 4000 2100
+Wire Wire Line
+	4000 2100 4800 2100
+NoConn ~ 3900 2700
 $EndSCHEMATC

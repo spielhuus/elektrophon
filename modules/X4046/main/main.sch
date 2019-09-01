@@ -6,11 +6,11 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title "X4046"
-Date "2019-08-17"
+Date "2019-08-31"
 Rev "R01"
 Comp ""
 Comment1 "Original design by Thomas Henry"
-Comment2 "PCB for main circuit"
+Comment2 "Schema for main circuit"
 Comment3 ""
 Comment4 "License CC BY 4.0 - Attribution 4.0 International"
 $EndDescr
@@ -124,17 +124,6 @@ Wire Wire Line
 Wire Wire Line
 	4300 1200 4300 1400
 $Comp
-L Device:R_POT_TRIM RV3
-U 1 1 5D4F05F6
-P 2600 1600
-F 0 "RV3" H 2530 1646 50  0000 R CNN
-F 1 "100" H 2530 1555 50  0000 R CNN
-F 2 "Potentiometer_THT:Potentiometer_Bourns_3296Z_Horizontal" H 2600 1600 50  0001 C CNN
-F 3 "~" H 2600 1600 50  0001 C CNN
-	1    2600 1600
-	1    0    0    -1  
-$EndComp
-$Comp
 L Device:R R6
 U 1 1 5D4F0D45
 P 2600 1950
@@ -193,7 +182,7 @@ U 1 1 5D4F9BE1
 P 2000 2650
 F 0 "C3" V 1748 2650 50  0000 C CNN
 F 1 "100p" V 1839 2650 50  0000 C CNN
-F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 2038 2500 50  0001 C CNN
+F 2 "Capacitor_THT:C_Disc_D3.4mm_W2.1mm_P2.50mm" H 2038 2500 50  0001 C CNN
 F 3 "~" H 2000 2650 50  0001 C CNN
 	1    2000 2650
 	0    1    1    0   
@@ -621,7 +610,7 @@ L Device:R_POT_TRIM RV8
 U 1 1 5CD8A006
 P 9650 4100
 F 0 "RV8" V 9443 4100 50  0000 C CNN
-F 1 "100k (TRIM)" V 9534 4100 50  0000 C CNN
+F 1 "100k" V 9534 4100 50  0000 C CNN
 F 2 "Potentiometer_THT:Potentiometer_Bourns_3296Z_Horizontal" H 9650 4100 50  0001 C CNN
 F 3 "~" H 9650 4100 50  0001 C CNN
 	1    9650 4100
@@ -745,7 +734,7 @@ Wire Wire Line
 	10200 4100 10800 4100
 Wire Wire Line
 	10800 4100 10800 3700
-Text Label 900  4700 2    50   ~ 0
+Text Label 850  4700 2    50   ~ 0
 TRIANGLE
 $Comp
 L power:+15V #PWR011
@@ -847,7 +836,7 @@ L Device:R R14
 U 1 1 5CEDFF0B
 P 4500 4700
 F 0 "R14" H 4430 4654 50  0000 R CNN
-F 1 "2.2k" H 4430 4745 50  0000 R CNN
+F 1 "2k2" H 4430 4745 50  0000 R CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 4430 4700 50  0001 C CNN
 F 3 "~" H 4500 4700 50  0001 C CNN
 	1    4500 4700
@@ -1347,38 +1336,38 @@ Wire Wire Line
 $Comp
 L power:+15V #PWR06
 U 1 1 5D5BF152
-P 1400 6550
-F 0 "#PWR06" H 1400 6400 50  0001 C CNN
-F 1 "+15V" V 1415 6678 50  0000 L CNN
-F 2 "" H 1400 6550 50  0001 C CNN
-F 3 "" H 1400 6550 50  0001 C CNN
-	1    1400 6550
+P 950 6550
+F 0 "#PWR06" H 950 6400 50  0001 C CNN
+F 1 "+15V" V 965 6678 50  0000 L CNN
+F 2 "" H 950 6550 50  0001 C CNN
+F 3 "" H 950 6550 50  0001 C CNN
+	1    950  6550
 	0    -1   -1   0   
 $EndComp
 $Comp
 L Device:CP C2
 U 1 1 5D5C2809
-P 1600 7000
-F 0 "C2" H 1718 7046 50  0000 L CNN
-F 1 "10u" H 1718 6955 50  0000 L CNN
-F 2 "Capacitor_THT:CP_Radial_D5.0mm_P2.50mm" H 1638 6850 50  0001 C CNN
-F 3 "~" H 1600 7000 50  0001 C CNN
-	1    1600 7000
+P 1150 7000
+F 0 "C2" H 1268 7046 50  0000 L CNN
+F 1 "10u" H 1268 6955 50  0000 L CNN
+F 2 "Capacitor_THT:CP_Radial_D5.0mm_P2.50mm" H 1188 6850 50  0001 C CNN
+F 3 "~" H 1150 7000 50  0001 C CNN
+	1    1150 7000
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:GND #PWR07
 U 1 1 5D5C2DBB
-P 1400 6850
-F 0 "#PWR07" H 1400 6600 50  0001 C CNN
-F 1 "GND" H 1405 6677 50  0000 C CNN
-F 2 "" H 1400 6850 50  0001 C CNN
-F 3 "" H 1400 6850 50  0001 C CNN
-	1    1400 6850
+P 950 6850
+F 0 "#PWR07" H 950 6600 50  0001 C CNN
+F 1 "GND" H 955 6677 50  0000 C CNN
+F 2 "" H 950 6850 50  0001 C CNN
+F 3 "" H 950 6850 50  0001 C CNN
+	1    950  6850
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	1600 6850 1400 6850
+	1150 6850 950  6850
 $Comp
 L Device:C C4
 U 1 1 5D5D98EA
@@ -1456,30 +1445,29 @@ F 3 "~" H 1100 7450 50  0001 C CNN
 	1    1100 7450
 	0    -1   -1   0   
 $EndComp
-Connection ~ 1600 6850
+Connection ~ 1150 6850
 $Comp
 L Device:CP C1
 U 1 1 5D5C24D0
-P 1600 6700
-F 0 "C1" H 1718 6746 50  0000 L CNN
-F 1 "10u" H 1718 6655 50  0000 L CNN
-F 2 "Capacitor_THT:CP_Radial_D5.0mm_P2.50mm" H 1638 6550 50  0001 C CNN
-F 3 "~" H 1600 6700 50  0001 C CNN
-	1    1600 6700
+P 1150 6700
+F 0 "C1" H 1268 6746 50  0000 L CNN
+F 1 "10u" H 1268 6655 50  0000 L CNN
+F 2 "Capacitor_THT:CP_Radial_D5.0mm_P2.50mm" H 1188 6550 50  0001 C CNN
+F 3 "~" H 1150 6700 50  0001 C CNN
+	1    1150 6700
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:-15V #PWR05
 U 1 1 5D62273C
-P 1350 7150
-F 0 "#PWR05" H 1350 7250 50  0001 C CNN
-F 1 "-15V" V 1365 7278 50  0000 L CNN
-F 2 "" H 1350 7150 50  0001 C CNN
-F 3 "" H 1350 7150 50  0001 C CNN
-	1    1350 7150
+P 900 7150
+F 0 "#PWR05" H 900 7250 50  0001 C CNN
+F 1 "-15V" V 915 7278 50  0000 L CNN
+F 2 "" H 900 7150 50  0001 C CNN
+F 3 "" H 900 7150 50  0001 C CNN
+	1    900  7150
 	0    -1   -1   0   
 $EndComp
-Connection ~ 2100 7150
 Wire Wire Line
 	2100 7150 2450 7150
 Connection ~ 2450 7150
@@ -1494,12 +1482,8 @@ Wire Wire Line
 Connection ~ 3800 7150
 Wire Wire Line
 	3800 7150 4150 7150
-Connection ~ 1600 6550
 Wire Wire Line
-	1600 6550 1400 6550
-Connection ~ 2100 6550
-Wire Wire Line
-	2100 6550 1600 6550
+	1150 6550 950  6550
 Connection ~ 2450 6550
 Wire Wire Line
 	2450 6550 2100 6550
@@ -1515,8 +1499,6 @@ Wire Wire Line
 Wire Wire Line
 	4150 6550 3800 6550
 Connection ~ 2450 6850
-Wire Wire Line
-	2450 6850 1600 6850
 Connection ~ 3300 6850
 Wire Wire Line
 	3300 6850 2450 6850
@@ -1524,10 +1506,8 @@ Connection ~ 4150 6850
 Wire Wire Line
 	4150 6850 3300 6850
 Wire Wire Line
-	1350 7150 1600 7150
-Connection ~ 1600 7150
-Wire Wire Line
-	1600 7150 2100 7150
+	900  7150 1150 7150
+Connection ~ 1150 7150
 $Comp
 L Connector_Generic:Conn_02x05_Odd_Even J2
 U 1 1 5D6BEBB7
@@ -1725,7 +1705,7 @@ L power:GND #PWR04
 U 1 1 5D816505
 P 1100 7650
 F 0 "#PWR04" H 1100 7400 50  0001 C CNN
-F 1 "GND" H 1105 7477 50  0000 C CNN
+F 1 "GND" V 1100 7450 50  0000 C CNN
 F 2 "" H 1100 7650 50  0001 C CNN
 F 3 "" H 1100 7650 50  0001 C CNN
 	1    1100 7650
@@ -1785,4 +1765,51 @@ Text Label 5100 6300 0    50   ~ 0
 LIN_FM
 Text Label 5100 6200 0    50   ~ 0
 EXP_FM
+Wire Wire Line
+	850  4700 900  4700
+$Comp
+L Device:C C12
+U 1 1 5D6F8EEB
+P 1700 6700
+F 0 "C12" H 1815 6746 50  0000 L CNN
+F 1 "0.1u" H 1815 6655 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D3.4mm_W2.1mm_P2.50mm" H 1738 6550 50  0001 C CNN
+F 3 "~" H 1700 6700 50  0001 C CNN
+	1    1700 6700
+	1    0    0    -1  
+$EndComp
+Connection ~ 2100 6550
+Wire Wire Line
+	1150 7150 2100 7150
+Connection ~ 2100 7150
+Wire Wire Line
+	1700 6550 2100 6550
+Connection ~ 1700 6850
+Wire Wire Line
+	1700 6850 2450 6850
+Wire Wire Line
+	1700 6550 1150 6550
+Wire Wire Line
+	1150 6850 1700 6850
+Connection ~ 1700 6550
+Connection ~ 1150 6550
+Text Notes 1600 7100 1    50   ~ 0
+4046 pin 16
+$Comp
+L Device:R_POT_TRIM RV3
+U 1 1 5D4F05F6
+P 2600 1600
+F 0 "RV3" H 2530 1646 50  0000 R CNN
+F 1 "100" H 2530 1555 50  0000 R CNN
+F 2 "Potentiometer_THT:Potentiometer_Bourns_3296Z_Horizontal" H 2600 1600 50  0001 C CNN
+F 3 "~" H 2600 1600 50  0001 C CNN
+	1    2600 1600
+	1    0    0    -1  
+$EndComp
+Text Notes 2300 1750 0    50   ~ 0
+V/Oct
+Text Notes 2900 2950 0    50   ~ 0
+HF
+Text Notes 9500 3850 0    50   ~ 0
+SawOffset
 $EndSCHEMATC
