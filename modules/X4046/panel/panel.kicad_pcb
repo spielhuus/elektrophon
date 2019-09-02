@@ -2,7 +2,7 @@
 
   (general
     (thickness 1.6)
-    (drawings 11)
+    (drawings 24)
     (tracks 0)
     (zones 0)
     (modules 27)
@@ -11,20 +11,20 @@
 
   (page A4)
   (layers
-    (0 F.Cu signal)
+    (0 F.Cu signal hide)
     (31 B.Cu signal hide)
-    (32 B.Adhes user)
-    (33 F.Adhes user)
-    (34 B.Paste user)
-    (35 F.Paste user)
-    (36 B.SilkS user)
-    (37 F.SilkS user)
+    (32 B.Adhes user hide)
+    (33 F.Adhes user hide)
+    (34 B.Paste user hide)
+    (35 F.Paste user hide)
+    (36 B.SilkS user hide)
+    (37 F.SilkS user hide)
     (38 B.Mask user)
     (39 F.Mask user)
-    (40 Dwgs.User user)
-    (41 Cmts.User user)
-    (42 Eco1.User user)
-    (43 Eco2.User user)
+    (40 Dwgs.User user hide)
+    (41 Cmts.User user hide)
+    (42 Eco1.User user hide)
+    (43 Eco2.User user hide)
     (44 Edge.Cuts user)
     (45 Margin user)
     (46 B.CrtYd user)
@@ -67,8 +67,8 @@
       (usegerberattributes false)
       (usegerberadvancedattributes false)
       (creategerberjobfile false)
-      (excludeedgelayer true)
-      (linewidth 0.100000)
+      (excludeedgelayer false)
+      (linewidth 0.150000)
       (plotframeref false)
       (viasonmask false)
       (mode 1)
@@ -360,7 +360,7 @@
     )
   )
 
-  (module elektrophon:panel_pot (layer F.Cu) (tedit 5D6AF177) (tstamp 5D6B46E0)
+  (module elektrophon:panel_pot (layer F.Cu) (tedit 5D6D32BE) (tstamp 5D6B46E0)
     (at 76.2 132.08)
     (descr "Imported from pot-mask.svg")
     (tags svg2mod)
@@ -369,10 +369,10 @@
     (fp_text reference H13 (at 0 -10.16) (layer F.SilkS) hide
       (effects (font (size 1.524 1.524) (thickness 0.3048)))
     )
-    (fp_text value PW (at 0 8.636) (layer F.Mask)
+    (fp_text value PW (at 0 8.636) (layer F.Mask) hide
       (effects (font (size 2 1.4) (thickness 0.25)))
     )
-    (pad "" np_thru_hole circle (at 0 0) (size 9 9) (drill 8.4) (layers *.Cu))
+    (pad "" np_thru_hole circle (at 0 0) (size 9 9) (drill 8.4) (layers *.Cu *.Mask))
     (model "/home/etienne/Projects/elektrophon/lib/kicad/models/chroma cap.step"
       (offset (xyz 0 0 8))
       (scale (xyz 1 1 1))
@@ -380,7 +380,7 @@
     )
   )
 
-  (module elektrophon:panel_pot (layer F.Cu) (tedit 5D6AF177) (tstamp 5D6B46DB)
+  (module elektrophon:panel_pot (layer F.Cu) (tedit 5D6D32BE) (tstamp 5D6B46DB)
     (at 76.2 111.76)
     (descr "Imported from pot-mask.svg")
     (tags svg2mod)
@@ -389,10 +389,10 @@
     (fp_text reference H12 (at 0 -10.16) (layer F.SilkS) hide
       (effects (font (size 1.524 1.524) (thickness 0.3048)))
     )
-    (fp_text value skew (at 0 8.636) (layer F.Mask)
+    (fp_text value skew (at 0 8.636) (layer F.Mask) hide
       (effects (font (size 2 1.4) (thickness 0.25)))
     )
-    (pad "" np_thru_hole circle (at 0 0) (size 9 9) (drill 8.4) (layers *.Cu))
+    (pad "" np_thru_hole circle (at 0 0) (size 9 9) (drill 8.4) (layers *.Cu *.Mask))
     (model "/home/etienne/Projects/elektrophon/lib/kicad/models/chroma cap.step"
       (offset (xyz 0 0 8))
       (scale (xyz 1 1 1))
@@ -400,7 +400,7 @@
     )
   )
 
-  (module elektrophon:panel_pot (layer F.Cu) (tedit 5D6AF177) (tstamp 5D6B46D6)
+  (module elektrophon:panel_pot (layer F.Cu) (tedit 5D6D32BE) (tstamp 5D6B46D6)
     (at 76.2 91.44)
     (descr "Imported from pot-mask.svg")
     (tags svg2mod)
@@ -409,10 +409,10 @@
     (fp_text reference H11 (at 0 -10.16) (layer F.SilkS) hide
       (effects (font (size 1.524 1.524) (thickness 0.3048)))
     )
-    (fp_text value atten (at 0 8.636) (layer F.Mask)
-      (effects (font (size 2 1.4) (thickness 0.25)))
+    (fp_text value atten (at 0 8.636) (layer F.Mask) hide
+      (effects (font (size 4 1.4) (thickness 0.3)))
     )
-    (pad "" np_thru_hole circle (at 0 0) (size 9 9) (drill 8.4) (layers *.Cu))
+    (pad "" np_thru_hole circle (at 0 0) (size 9 9) (drill 8.4) (layers *.Cu *.Mask))
     (model "/home/etienne/Projects/elektrophon/lib/kicad/models/chroma cap.step"
       (offset (xyz 0 0 8))
       (scale (xyz 1 1 1))
@@ -420,7 +420,7 @@
     )
   )
 
-  (module elektrophon:panel_pot (layer F.Cu) (tedit 5D6AF177) (tstamp 5D6B46D1)
+  (module elektrophon:panel_pot (layer F.Cu) (tedit 5D6D32BE) (tstamp 5D6B46D1)
     (at 76.2 50.8)
     (descr "Imported from pot-mask.svg")
     (tags svg2mod)
@@ -429,10 +429,10 @@
     (fp_text reference H10 (at 0 -10.16) (layer F.SilkS) hide
       (effects (font (size 1.524 1.524) (thickness 0.3048)))
     )
-    (fp_text value fine (at 0 8.636) (layer F.Mask)
+    (fp_text value fine (at 0 8.636) (layer F.Mask) hide
       (effects (font (size 2 1.4) (thickness 0.25)))
     )
-    (pad "" np_thru_hole circle (at 0 0) (size 9 9) (drill 8.4) (layers *.Cu))
+    (pad "" np_thru_hole circle (at 0 0) (size 9 9) (drill 8.4) (layers *.Cu *.Mask))
     (model "/home/etienne/Projects/elektrophon/lib/kicad/models/chroma cap.step"
       (offset (xyz 0 0 8))
       (scale (xyz 1 1 1))
@@ -440,7 +440,7 @@
     )
   )
 
-  (module elektrophon:panel_pot (layer F.Cu) (tedit 5D6AF177) (tstamp 5D6B46CC)
+  (module elektrophon:panel_pot (layer F.Cu) (tedit 5D6D32BE) (tstamp 5D6B46CC)
     (at 55.88 132.08)
     (descr "Imported from pot-mask.svg")
     (tags svg2mod)
@@ -449,10 +449,10 @@
     (fp_text reference H9 (at 0 -10.16) (layer F.SilkS) hide
       (effects (font (size 1.524 1.524) (thickness 0.3048)))
     )
-    (fp_text value atten (at 0 8.636) (layer F.Mask)
+    (fp_text value atten (at 0 8.636) (layer F.Mask) hide
       (effects (font (size 2 1.4) (thickness 0.25)))
     )
-    (pad "" np_thru_hole circle (at 0 0) (size 9 9) (drill 8.4) (layers *.Cu))
+    (pad "" np_thru_hole circle (at 0 0) (size 9 9) (drill 8.4) (layers *.Cu *.Mask))
     (model "/home/etienne/Projects/elektrophon/lib/kicad/models/chroma cap.step"
       (offset (xyz 0 0 8))
       (scale (xyz 1 1 1))
@@ -460,7 +460,7 @@
     )
   )
 
-  (module elektrophon:panel_pot (layer F.Cu) (tedit 5D6AF177) (tstamp 5D6B46C7)
+  (module elektrophon:panel_pot (layer F.Cu) (tedit 5D6D32BE) (tstamp 5D6B46C7)
     (at 55.88 111.76)
     (descr "Imported from pot-mask.svg")
     (tags svg2mod)
@@ -469,10 +469,10 @@
     (fp_text reference H8 (at 0 -10.16) (layer F.SilkS) hide
       (effects (font (size 1.524 1.524) (thickness 0.3048)))
     )
-    (fp_text value atten (at 0 8.636) (layer F.Mask)
+    (fp_text value atten (at 0 8.636) (layer F.Mask) hide
       (effects (font (size 2 1.4) (thickness 0.25)))
     )
-    (pad "" np_thru_hole circle (at 0 0) (size 9 9) (drill 8.4) (layers *.Cu))
+    (pad "" np_thru_hole circle (at 0 0) (size 9 9) (drill 8.4) (layers *.Cu *.Mask))
     (model "/home/etienne/Projects/elektrophon/lib/kicad/models/chroma cap.step"
       (offset (xyz 0 0 8))
       (scale (xyz 1 1 1))
@@ -486,7 +486,7 @@
     (fp_text reference H7 (at 0 -6.604) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value ac/dc (at 0 8.636) (layer F.Mask)
+    (fp_text value ac/dc (at 0 8.636) (layer F.Mask) hide
       (effects (font (size 2 1.4) (thickness 0.25)))
     )
     (pad "" np_thru_hole circle (at 0 0) (size 6.5 6.5) (drill 6.4) (layers *.Cu *.Mask)
@@ -498,7 +498,7 @@
     )
   )
 
-  (module elektrophon:panel_pot (layer F.Cu) (tedit 5D6AF177) (tstamp 5D6B46BD)
+  (module elektrophon:panel_pot (layer F.Cu) (tedit 5D6D32BE) (tstamp 5D6B46BD)
     (at 55.88 50.8)
     (descr "Imported from pot-mask.svg")
     (tags svg2mod)
@@ -507,10 +507,10 @@
     (fp_text reference H6 (at 0 -10.16) (layer F.SilkS) hide
       (effects (font (size 1.524 1.524) (thickness 0.3048)))
     )
-    (fp_text value coarse (at 0 8.636) (layer F.Mask)
+    (fp_text value coarse (at 0 8.636) (layer F.Mask) hide
       (effects (font (size 2 1.4) (thickness 0.25)))
     )
-    (pad "" np_thru_hole circle (at 0 0) (size 9 9) (drill 8.4) (layers *.Cu))
+    (pad "" np_thru_hole circle (at 0 0) (size 9 9) (drill 8.4) (layers *.Cu *.Mask))
     (model "/home/etienne/Projects/elektrophon/lib/kicad/models/chroma cap.step"
       (offset (xyz 0 0 8))
       (scale (xyz 1 1 1))
@@ -524,7 +524,7 @@
     (fp_text reference H5 (at 0 -6.604) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value PWM (at 0 8.636) (layer F.Mask)
+    (fp_text value PWM (at 0 8.636) (layer F.Mask) hide
       (effects (font (size 2 1.4) (thickness 0.25)))
     )
     (pad "" np_thru_hole circle (at 0 0) (size 6.5 6.5) (drill 6.4) (layers *.Cu *.Mask)
@@ -542,7 +542,7 @@
     (fp_text reference H4 (at 0 -6.604) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value expFM (at 0 8.636) (layer F.Mask)
+    (fp_text value expFM (at 0 8.636) (layer F.Mask) hide
       (effects (font (size 2 1.4) (thickness 0.25)))
     )
     (pad "" np_thru_hole circle (at 0 0) (size 6.5 6.5) (drill 6.4) (layers *.Cu *.Mask)
@@ -560,7 +560,7 @@
     (fp_text reference H3 (at 0 -6.604) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value linFM (at 0 8.636) (layer F.Mask)
+    (fp_text value linFM (at 0 8.636) (layer F.Mask) hide
       (effects (font (size 2 1.4) (thickness 0.25)))
     )
     (pad "" np_thru_hole circle (at 0 0) (size 6.5 6.5) (drill 6.4) (layers *.Cu *.Mask)
@@ -578,7 +578,7 @@
     (fp_text reference H2 (at 0 -6.604) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value sync (at 0 8.636) (layer F.Mask)
+    (fp_text value sync (at 0 8.636) (layer F.Mask) hide
       (effects (font (size 2 1.4) (thickness 0.25)))
     )
     (pad "" np_thru_hole circle (at 0 0) (size 6.5 6.5) (drill 6.4) (layers *.Cu *.Mask)
@@ -596,7 +596,7 @@
     (fp_text reference H1 (at 0 -6.604) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value 1v/oct (at 0 8.636) (layer F.Mask)
+    (fp_text value 1v/oct (at 0 8.636) (layer F.Mask) hide
       (effects (font (size 2 1.4) (thickness 0.25)))
     )
     (pad "" np_thru_hole circle (at 0 0) (size 6.5 6.5) (drill 6.4) (layers *.Cu *.Mask)
@@ -608,6 +608,45 @@
     )
   )
 
+  (gr_text pw (at 76.2 140.716) (layer F.Mask) (tstamp 5D6D86AA)
+    (effects (font (size 2 1.4) (thickness 0.25)))
+  )
+  (gr_text atten (at 55.88 140.716) (layer F.Mask) (tstamp 5D6D86AA)
+    (effects (font (size 2 1.4) (thickness 0.25)))
+  )
+  (gr_text pwm (at 35.56 140.716) (layer F.Mask) (tstamp 5D6D86AA)
+    (effects (font (size 2 1.4) (thickness 0.25)))
+  )
+  (gr_text skew (at 76.2 120.396) (layer F.Mask) (tstamp 5D6D86AA)
+    (effects (font (size 2 1.4) (thickness 0.25)))
+  )
+  (gr_text atten (at 55.88 120.396) (layer F.Mask) (tstamp 5D6D86AA)
+    (effects (font (size 2 1.4) (thickness 0.25)))
+  )
+  (gr_text expFM (at 35.56 120.396) (layer F.Mask) (tstamp 5D6D86AA)
+    (effects (font (size 2 1.4) (thickness 0.25)))
+  )
+  (gr_text fine (at 76.2 59.436) (layer F.Mask) (tstamp 5D6D86AA)
+    (effects (font (size 2 1.4) (thickness 0.25)))
+  )
+  (gr_text coarse (at 55.88 59.436) (layer F.Mask) (tstamp 5D6D86AA)
+    (effects (font (size 2 1.4) (thickness 0.25)))
+  )
+  (gr_text 1v/oct (at 35.56 59.436) (layer F.Mask) (tstamp 5D6D86AA)
+    (effects (font (size 2 1.4) (thickness 0.25)))
+  )
+  (gr_text sync (at 35.56 79.756) (layer F.Mask) (tstamp 5D6D86AA)
+    (effects (font (size 2 1.4) (thickness 0.25)))
+  )
+  (gr_text linFM (at 35.56 100.076) (layer F.Mask) (tstamp 5D6D86AA)
+    (effects (font (size 2 1.4) (thickness 0.25)))
+  )
+  (gr_text ac/dc (at 55.88 100.076) (layer F.Mask) (tstamp 5D6D86A0)
+    (effects (font (size 2 1.4) (thickness 0.25)))
+  )
+  (gr_text atten (at 76.2 100.076) (layer F.Mask)
+    (effects (font (size 2 1.4) (thickness 0.25)))
+  )
   (gr_text R01 (at 89.97 155.26) (layer F.Cu)
     (effects (font (size 2 1.4) (thickness 0.25)))
   )
@@ -624,7 +663,7 @@
   (gr_line (start 25.4 25.4) (end 25.4 158.8) (layer Edge.Cuts) (width 0.12))
   (gr_line (start 25.4 25.4) (end 106.3 25.4) (layer Edge.Cuts) (width 0.12))
 
-  (zone (net 0) (net_name "") (layer B.Cu) (tstamp 5D6C30CB) (hatch edge 0.508)
+  (zone (net 0) (net_name "") (layer B.Cu) (tstamp 5D6D39BA) (hatch edge 0.508)
     (connect_pads (clearance 0.508))
     (min_thickness 0.254)
     (fill yes (arc_segments 32) (thermal_gap 0.508) (thermal_bridge_width 0.508))
