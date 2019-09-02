@@ -1,4 +1,4 @@
-(module waveshape_saw (layer F.Cu) (tedit 5D59AF37)
+(module waveshape_saw (layer F.Cu) (tedit 5D6AF863)
   (descr "Imported from ../../lib/kicad/elektrophon.pretty/fall.svg")
   (tags svg2mod)
   (attr smd)
@@ -8,6 +8,6 @@
   (fp_text value G*** (at 0 11.684) (layer F.SilkS) hide
     (effects (font (size 1.524 1.524) (thickness 0.3048)))
   )
-  (fp_line (start -1.016 9.652) (end -1.016 7.62) (layer F.SilkS) (width 0.5))
-  (fp_line (start -1.016 7.49859) (end 2.54 9.652) (layer F.SilkS) (width 0.5))
+  (fp_line (start -1.016 9.652) (end -1.016 7.62) (layer F.Mask) (width 0.5))
+  (fp_line (start -1.016 7.49859) (end 2.54 9.652) (layer F.Mask) (width 0.5))
 )

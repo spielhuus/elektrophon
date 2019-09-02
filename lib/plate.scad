@@ -50,4 +50,4 @@ module plate(HP=1,HU=5,thickness=2,armatures=false,screew=SCREEW_R) {
 	}
 }
 
-plate(HP=8,armatures=true);
+plate(HP=16,armatures=true);

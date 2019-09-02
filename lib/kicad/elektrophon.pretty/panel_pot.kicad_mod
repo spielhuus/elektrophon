@@ -1,0 +1,17 @@
+(module panel_pot (layer F.Cu) (tedit 5D6AF177)
+  (descr "Imported from pot-mask.svg")
+  (tags svg2mod)
+  (attr smd)
+  (fp_text reference svg2mod (at 0 -10.16) (layer F.SilkS) hide
+    (effects (font (size 1.524 1.524) (thickness 0.3048)))
+  )
+  (fp_text value G*** (at 0 8.636) (layer F.Mask)
+    (effects (font (size 2 1.4) (thickness 0.25)))
+  )
+  (pad "" np_thru_hole circle (at 0 0) (size 9 9) (drill 8.4) (layers *.Cu))
+  (model "/home/etienne/Projects/elektrophon/lib/kicad/models/chroma cap.step"
+    (offset (xyz 0 0 8))
+    (scale (xyz 1 1 1))
+    (rotate (xyz -90 0 0))
+  )
+)
