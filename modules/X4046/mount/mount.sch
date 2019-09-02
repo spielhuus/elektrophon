@@ -23,7 +23,7 @@ F 1 "100k" H 1280 3205 50  0000 R CNN
 F 2 "elektrophon:Potentiometer_Alpha_RD901F-40-00D_Single_Vertical" H 1350 3250 50  0001 C CNN
 F 3 "~" H 1350 3250 50  0001 C CNN
 	1    1350 3250
-	1    0    0    -1  
+	1    0    0    1   
 $EndComp
 Text Notes 8900 900  0    50   ~ 0
 Output
@@ -36,7 +36,7 @@ F 1 "500k" H 5380 4355 50  0000 R CNN
 F 2 "elektrophon:Potentiometer_Alpha_RD901F-40-00D_Single_Vertical" H 5450 4400 50  0001 C CNN
 F 3 "~" H 5450 4400 50  0001 C CNN
 	1    5450 4400
-	1    0    0    -1  
+	1    0    0    1   
 $EndComp
 $Comp
 L Device:R_POT RV4
@@ -47,7 +47,7 @@ F 1 "100k" H 4130 3205 50  0000 R CNN
 F 2 "elektrophon:Potentiometer_Alpha_RD901F-40-00D_Single_Vertical" H 4200 3250 50  0001 C CNN
 F 3 "~" H 4200 3250 50  0001 C CNN
 	1    4200 3250
-	1    0    0    -1  
+	1    0    0    1   
 $EndComp
 $Comp
 L Device:R_POT RV5
@@ -58,7 +58,7 @@ F 1 "100k" H 6380 2255 50  0000 R CNN
 F 2 "elektrophon:Potentiometer_Alpha_RD901F-40-00D_Single_Vertical" H 6450 2300 50  0001 C CNN
 F 3 "~" H 6450 2300 50  0001 C CNN
 	1    6450 2300
-	1    0    0    -1  
+	1    0    0    1   
 $EndComp
 $Comp
 L Device:R_POT RV3
@@ -69,7 +69,7 @@ F 1 "100k" H 1280 4805 50  0000 R CNN
 F 2 "elektrophon:Potentiometer_Alpha_RD901F-40-00D_Single_Vertical" H 1350 4850 50  0001 C CNN
 F 3 "~" H 1350 4850 50  0001 C CNN
 	1    1350 4850
-	1    0    0    -1  
+	1    0    0    1   
 $EndComp
 $Comp
 L Device:R_POT RV2
@@ -80,7 +80,7 @@ F 1 "100k" H 1280 4005 50  0000 R CNN
 F 2 "elektrophon:Potentiometer_Alpha_RD901F-40-00D_Single_Vertical" H 1350 4050 50  0001 C CNN
 F 3 "~" H 1350 4050 50  0001 C CNN
 	1    1350 4050
-	1    0    0    -1  
+	1    0    0    1   
 $EndComp
 Text Notes 1000 3400 1    50   ~ 0
 ATTEN
@@ -514,7 +514,7 @@ F 1 "500k" H 6380 3205 50  0000 R CNN
 F 2 "elektrophon:Potentiometer_Alpha_RD901F-40-00D_Single_Vertical" H 6450 3250 50  0001 C CNN
 F 3 "~" H 6450 3250 50  0001 C CNN
 	1    6450 3250
-	1    0    0    -1  
+	1    0    0    1   
 $EndComp
 Text Notes 6050 3500 1    50   ~ 0
 INITIAL WIDTH
@@ -888,4 +888,48 @@ Wire Wire Line
 Wire Wire Line
 	4000 2100 4800 2100
 NoConn ~ 3900 2700
+$Comp
+L Mechanical:MountingHole H1
+U 1 1 5D6C300D
+P 5800 6850
+F 0 "H1" H 5900 6896 50  0000 L CNN
+F 1 "MountingHole" H 5900 6805 50  0000 L CNN
+F 2 "MountingHole:MountingHole_2.2mm_M2" H 5800 6850 50  0001 C CNN
+F 3 "~" H 5800 6850 50  0001 C CNN
+	1    5800 6850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H2
+U 1 1 5D6C3220
+P 5800 7050
+F 0 "H2" H 5900 7096 50  0000 L CNN
+F 1 "MountingHole" H 5900 7005 50  0000 L CNN
+F 2 "MountingHole:MountingHole_2.2mm_M2" H 5800 7050 50  0001 C CNN
+F 3 "~" H 5800 7050 50  0001 C CNN
+	1    5800 7050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H3
+U 1 1 5D6C3412
+P 5800 7250
+F 0 "H3" H 5900 7296 50  0000 L CNN
+F 1 "MountingHole" H 5900 7205 50  0000 L CNN
+F 2 "MountingHole:MountingHole_2.2mm_M2" H 5800 7250 50  0001 C CNN
+F 3 "~" H 5800 7250 50  0001 C CNN
+	1    5800 7250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H4
+U 1 1 5D6C35D6
+P 5800 7450
+F 0 "H4" H 5900 7496 50  0000 L CNN
+F 1 "MountingHole" H 5900 7405 50  0000 L CNN
+F 2 "MountingHole:MountingHole_2.2mm_M2" H 5800 7450 50  0001 C CNN
+F 3 "~" H 5800 7450 50  0001 C CNN
+	1    5800 7450
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
