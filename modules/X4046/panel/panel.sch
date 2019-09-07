@@ -1,4 +1,5 @@
 EESchema Schematic File Version 4
+LIBS:panel-cache
 EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
@@ -19,7 +20,7 @@ U 1 1 5D6AF58E
 P 1400 1850
 F 0 "H1" H 1500 1896 50  0000 L CNN
 F 1 "1v/oct" H 1500 1805 50  0000 L CNN
-F 2 "elektrophon:JACK_HOLE" H 1400 1850 50  0001 C CNN
+F 2 "elektrophon:panel_jack" H 1400 1850 50  0001 C CNN
 F 3 "~" H 1400 1850 50  0001 C CNN
 	1    1400 1850
 	1    0    0    -1  
@@ -30,7 +31,7 @@ U 1 1 5D6AF633
 P 2250 1850
 F 0 "H6" H 2350 1896 50  0000 L CNN
 F 1 "coarse" H 2350 1805 50  0000 L CNN
-F 2 "elektrophon:panel_pot" H 2250 1850 50  0001 C CNN
+F 2 "elektrophon:panel_potentiometer" H 2250 1850 50  0001 C CNN
 F 3 "~" H 2250 1850 50  0001 C CNN
 	1    2250 1850
 	1    0    0    -1  
@@ -41,7 +42,7 @@ U 1 1 5D6AFC16
 P 3150 1850
 F 0 "H10" H 3250 1896 50  0000 L CNN
 F 1 "fine" H 3250 1805 50  0000 L CNN
-F 2 "elektrophon:panel_pot" H 3150 1850 50  0001 C CNN
+F 2 "elektrophon:panel_potentiometer" H 3150 1850 50  0001 C CNN
 F 3 "~" H 3150 1850 50  0001 C CNN
 	1    3150 1850
 	1    0    0    -1  
@@ -52,7 +53,7 @@ U 1 1 5D6B02B8
 P 4000 1850
 F 0 "H14" H 4100 1896 50  0000 L CNN
 F 1 "saw" H 4100 1805 50  0000 L CNN
-F 2 "elektrophon:JACK_HOLE" H 4000 1850 50  0001 C CNN
+F 2 "elektrophon:panel_jack" H 4000 1850 50  0001 C CNN
 F 3 "~" H 4000 1850 50  0001 C CNN
 	1    4000 1850
 	1    0    0    -1  
@@ -63,7 +64,7 @@ U 1 1 5D6B1084
 P 1400 2350
 F 0 "H2" H 1500 2396 50  0000 L CNN
 F 1 "sync" H 1500 2305 50  0000 L CNN
-F 2 "elektrophon:JACK_HOLE" H 1400 2350 50  0001 C CNN
+F 2 "elektrophon:panel_jack" H 1400 2350 50  0001 C CNN
 F 3 "~" H 1400 2350 50  0001 C CNN
 	1    1400 2350
 	1    0    0    -1  
@@ -74,7 +75,7 @@ U 1 1 5D6B1096
 P 4000 2350
 F 0 "H15" H 4100 2396 50  0000 L CNN
 F 1 "triangle" H 4100 2305 50  0000 L CNN
-F 2 "elektrophon:JACK_HOLE" H 4000 2350 50  0001 C CNN
+F 2 "elektrophon:panel_jack" H 4000 2350 50  0001 C CNN
 F 3 "~" H 4000 2350 50  0001 C CNN
 	1    4000 2350
 	1    0    0    -1  
@@ -85,7 +86,7 @@ U 1 1 5D6B18CE
 P 1400 2850
 F 0 "H3" H 1500 2896 50  0000 L CNN
 F 1 "linFM" H 1500 2805 50  0000 L CNN
-F 2 "elektrophon:JACK_HOLE" H 1400 2850 50  0001 C CNN
+F 2 "elektrophon:panel_jack" H 1400 2850 50  0001 C CNN
 F 3 "~" H 1400 2850 50  0001 C CNN
 	1    1400 2850
 	1    0    0    -1  
@@ -96,7 +97,7 @@ U 1 1 5D6B18D4
 P 2250 2850
 F 0 "H7" H 2350 2896 50  0000 L CNN
 F 1 "ac/dc" H 2350 2805 50  0000 L CNN
-F 2 "elektrophon:SWITCH_HOLE" H 2250 2850 50  0001 C CNN
+F 2 "elektrophon:panel_switch" H 2250 2850 50  0001 C CNN
 F 3 "~" H 2250 2850 50  0001 C CNN
 	1    2250 2850
 	1    0    0    -1  
@@ -107,7 +108,7 @@ U 1 1 5D6B18DA
 P 3150 2850
 F 0 "H11" H 3250 2896 50  0000 L CNN
 F 1 "atten" H 3250 2805 50  0000 L CNN
-F 2 "elektrophon:panel_pot" H 3150 2850 50  0001 C CNN
+F 2 "elektrophon:panel_potentiometer" H 3150 2850 50  0001 C CNN
 F 3 "~" H 3150 2850 50  0001 C CNN
 	1    3150 2850
 	1    0    0    -1  
@@ -118,7 +119,7 @@ U 1 1 5D6B18E0
 P 4000 2850
 F 0 "H16" H 4100 2896 50  0000 L CNN
 F 1 "sine" H 4100 2805 50  0000 L CNN
-F 2 "elektrophon:JACK_HOLE" H 4000 2850 50  0001 C CNN
+F 2 "elektrophon:panel_jack" H 4000 2850 50  0001 C CNN
 F 3 "~" H 4000 2850 50  0001 C CNN
 	1    4000 2850
 	1    0    0    -1  
@@ -129,7 +130,7 @@ U 1 1 5D6B1F10
 P 1400 3350
 F 0 "H4" H 1500 3396 50  0000 L CNN
 F 1 "expFM" H 1500 3305 50  0000 L CNN
-F 2 "elektrophon:JACK_HOLE" H 1400 3350 50  0001 C CNN
+F 2 "elektrophon:panel_jack" H 1400 3350 50  0001 C CNN
 F 3 "~" H 1400 3350 50  0001 C CNN
 	1    1400 3350
 	1    0    0    -1  
@@ -140,7 +141,7 @@ U 1 1 5D6B1F16
 P 2250 3350
 F 0 "H8" H 2350 3396 50  0000 L CNN
 F 1 "atten" H 2350 3305 50  0000 L CNN
-F 2 "elektrophon:panel_pot" H 2250 3350 50  0001 C CNN
+F 2 "elektrophon:panel_potentiometer" H 2250 3350 50  0001 C CNN
 F 3 "~" H 2250 3350 50  0001 C CNN
 	1    2250 3350
 	1    0    0    -1  
@@ -151,7 +152,7 @@ U 1 1 5D6B1F1C
 P 3150 3350
 F 0 "H12" H 3250 3396 50  0000 L CNN
 F 1 "skew" H 3250 3305 50  0000 L CNN
-F 2 "elektrophon:panel_pot" H 3150 3350 50  0001 C CNN
+F 2 "elektrophon:panel_potentiometer" H 3150 3350 50  0001 C CNN
 F 3 "~" H 3150 3350 50  0001 C CNN
 	1    3150 3350
 	1    0    0    -1  
@@ -162,7 +163,7 @@ U 1 1 5D6B1F22
 P 4000 3350
 F 0 "H17" H 4100 3396 50  0000 L CNN
 F 1 "fall" H 4100 3305 50  0000 L CNN
-F 2 "elektrophon:JACK_HOLE" H 4000 3350 50  0001 C CNN
+F 2 "elektrophon:panel_jack" H 4000 3350 50  0001 C CNN
 F 3 "~" H 4000 3350 50  0001 C CNN
 	1    4000 3350
 	1    0    0    -1  
@@ -173,7 +174,7 @@ U 1 1 5D6B4FB4
 P 1400 3800
 F 0 "H5" H 1500 3846 50  0000 L CNN
 F 1 "PWM" H 1500 3755 50  0000 L CNN
-F 2 "elektrophon:JACK_HOLE" H 1400 3800 50  0001 C CNN
+F 2 "elektrophon:panel_jack" H 1400 3800 50  0001 C CNN
 F 3 "~" H 1400 3800 50  0001 C CNN
 	1    1400 3800
 	1    0    0    -1  
@@ -184,7 +185,7 @@ U 1 1 5D6B4FBA
 P 2250 3800
 F 0 "H9" H 2350 3846 50  0000 L CNN
 F 1 "atten" H 2350 3755 50  0000 L CNN
-F 2 "elektrophon:panel_pot" H 2250 3800 50  0001 C CNN
+F 2 "elektrophon:panel_potentiometer" H 2250 3800 50  0001 C CNN
 F 3 "~" H 2250 3800 50  0001 C CNN
 	1    2250 3800
 	1    0    0    -1  
@@ -195,7 +196,7 @@ U 1 1 5D6B4FC0
 P 3150 3800
 F 0 "H13" H 3250 3846 50  0000 L CNN
 F 1 "PW" H 3250 3755 50  0000 L CNN
-F 2 "elektrophon:panel_pot" H 3150 3800 50  0001 C CNN
+F 2 "elektrophon:panel_potentiometer" H 3150 3800 50  0001 C CNN
 F 3 "~" H 3150 3800 50  0001 C CNN
 	1    3150 3800
 	1    0    0    -1  
@@ -206,7 +207,7 @@ U 1 1 5D6B4FC6
 P 4000 3800
 F 0 "H18" H 4100 3846 50  0000 L CNN
 F 1 "square" H 4100 3755 50  0000 L CNN
-F 2 "elektrophon:JACK_HOLE" H 4000 3800 50  0001 C CNN
+F 2 "elektrophon:panel_jack" H 4000 3800 50  0001 C CNN
 F 3 "~" H 4000 3800 50  0001 C CNN
 	1    4000 3800
 	1    0    0    -1  

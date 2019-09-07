@@ -1,6 +1,6 @@
 /** Bass++ **/
 
-ARMATURES=false;
+ARMATURES=true;
     
 HU=3;
 HP=14;

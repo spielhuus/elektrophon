@@ -388,12 +388,12 @@ $Comp
 L Connector_Generic:Conn_02x05_Odd_Even J6
 U 1 1 5CC13FAC
 P 9550 5800
-F 0 "J6" H 9600 6217 50  0000 C CNN
-F 1 "POWER" H 9600 6126 50  0000 C CNN
+F 0 "J6" H 9600 5350 50  0000 C CNN
+F 1 "POWER" H 9600 5450 50  0000 C CNN
 F 2 "Connector_IDC:IDC-Header_2x05_P2.54mm_Vertical" H 9550 5800 50  0001 C CNN
 F 3 "~" H 9550 5800 50  0001 C CNN
 	1    9550 5800
-	1    0    0    -1  
+	1    0    0    1   
 $EndComp
 $Comp
 L power:+15V #PWR019
