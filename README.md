@@ -54,7 +54,8 @@ Here are some links do documents on how to build synthesizers and electronic. th
 
 # links
 
-* [Scott Stites](http://birthofasynth.com/index.html)
+* [Thomas Henry](http://birthofasynth.com/Thomas_Henry/TH_main.html) modules archived by [Scott Stites](http://birthofasynth.com/index.html). 
+  * The [Electronic Music Circuits: The Reprints](https://web.archive.org/web/20190907204304/https://static.miraheze.org/sdiywiki/5/5d/The_Reprint_Collection_by_Thomas_Henry_CC_BY_NC.pdf) from Thomas Henry.
 * [Synthesizer DIY pages of René Schmitz](https://www.schmitzbits.de/index.html)
 * [Music from outer space](http://musicfromouterspace.com/)
 * [yusynth: modular synth project](http://www.yusynth.net/Modular/index_en.html)
