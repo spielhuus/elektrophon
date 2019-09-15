@@ -42,28 +42,6 @@ Wire Wire Line
 	4400 2000 4500 2000
 Wire Wire Line
 	4500 1800 4450 1800
-$Comp
-L Device:R R7
-U 1 1 5CA90BFC
-P 4800 1350
-F 0 "R7" V 4593 1350 50  0000 C CNN
-F 1 "100k" V 4684 1350 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 4730 1350 50  0001 C CNN
-F 3 "~" H 4800 1350 50  0001 C CNN
-	1    4800 1350
-	0    1    1    0   
-$EndComp
-$Comp
-L Device:C C12
-U 1 1 5CA90CCF
-P 4800 950
-F 0 "C12" V 4548 950 50  0000 C CNN
-F 1 "10p" V 4639 950 50  0000 C CNN
-F 2 "Capacitor_THT:C_Disc_D3.4mm_W2.1mm_P2.50mm" H 4838 800 50  0001 C CNN
-F 3 "~" H 4800 950 50  0001 C CNN
-	1    4800 950 
-	0    1    1    0   
-$EndComp
 Wire Wire Line
 	4650 950  4450 950 
 Wire Wire Line
@@ -627,9 +605,6 @@ F 3 "~" H 9850 5600 50  0001 C CNN
 	1    9850 5600
 	1    0    0    -1  
 $EndComp
-NoConn ~ 10500 5700
-NoConn ~ 11100 5800
-NoConn ~ 10500 5900
 $Comp
 L power:PWR_FLAG #FLG01
 U 1 1 5CBC07CB
@@ -1256,10 +1231,49 @@ F 3 "~" H 7250 5800 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Connection ~ 7250 5800
-Text Notes 3150 6700 0    50   ~ 0
+Text Notes 2600 7200 1    50   ~ 0
 attenuate
 Text Notes 3650 5350 0    50   ~ 0
 initial
 Text Notes 4750 3150 1    50   ~ 0
 offset
+$Comp
+L Device:C C12
+U 1 1 5CA90CCF
+P 4800 950
+F 0 "C12" V 4548 950 50  0000 C CNN
+F 1 "10p" V 4639 950 50  0000 C CNN
+F 2 "Capacitor_THT:C_Disc_D3.4mm_W2.1mm_P2.50mm" H 4838 800 50  0001 C CNN
+F 3 "~" H 4800 950 50  0001 C CNN
+	1    4800 950 
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R7
+U 1 1 5CA90BFC
+P 4800 1350
+F 0 "R7" V 4593 1350 50  0000 C CNN
+F 1 "100k" V 4684 1350 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 4730 1350 50  0001 C CNN
+F 3 "~" H 4800 1350 50  0001 C CNN
+	1    4800 1350
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	10500 5900 10500 6050
+Wire Wire Line
+	10500 6050 11100 6050
+Wire Wire Line
+	11100 6050 11100 5800
+$Comp
+L power:GND #PWR?
+U 1 1 5D810A07
+P 10500 5700
+F 0 "#PWR?" H 10500 5450 50  0001 C CNN
+F 1 "GND" V 10500 5400 50  0000 L CNN
+F 2 "" H 10500 5700 50  0001 C CNN
+F 3 "" H 10500 5700 50  0001 C CNN
+	1    10500 5700
+	0    1    1    0   
+$EndComp
 $EndSCHEMATC
