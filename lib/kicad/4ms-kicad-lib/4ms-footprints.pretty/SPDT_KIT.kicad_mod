@@ -1,4 +1,4 @@
-(module SPDT_KIT (layer F.Cu) (tedit 59B2ED39)
+(module SPDT_KIT (layer F.Cu) (tedit 5D74BD61)
   (fp_text reference SW6 (at -2.032 -6.985) (layer F.SilkS)
     (effects (font (size 1.2065 1.2065) (thickness 0.1524)) (justify left bottom))
   )
@@ -21,8 +21,13 @@
   (pad 2 thru_hole circle (at 0 0) (size 3.1 3.1) (drill oval 2.2 1.2) (layers *.Cu *.Mask))
   (pad 1 thru_hole circle (at 0 -4.7) (size 3.1 3.1) (drill oval 2.2 1.2) (layers *.Cu *.Mask))
   (model "/Users/design/Google Drive/4ms/kicad/packages3d/spdt-toggle-submini.wrl"
-    (at (xyz 0 0 0.11))
+    (offset (xyz 0 0 2.79399995803833))
     (scale (xyz 0.39 0.39 0.39))
     (rotate (xyz 270 0 90))
+  )
+  (model "/home/etienne/Projects/elektrophon/lib/kicad/models/SPDT Toggle Switch.stp"
+    (offset (xyz 3.5 -12 0))
+    (scale (xyz 1 1 1))
+    (rotate (xyz -90 0 90))
   )
 )
