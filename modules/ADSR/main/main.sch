@@ -207,7 +207,7 @@ U 1 1 5CB6CE2B
 P 3400 2850
 F 0 "C4" V 3148 2850 50  0000 C CNN
 F 1 "10n" V 3239 2850 50  0000 C CNN
-F 2 "Capacitor_THT:C_Disc_D5.1mm_W3.2mm_P5.00mm" H 3438 2700 50  0001 C CNN
+F 2 "Capacitor_THT:C_Disc_D3.4mm_W2.1mm_P2.50mm" H 3438 2700 50  0001 C CNN
 F 3 "~" H 3400 2850 50  0001 C CNN
 	1    3400 2850
 	0    1    1    0   
@@ -311,7 +311,7 @@ U 1 1 5CB73ABA
 P 7050 2250
 F 0 "RV2" V 6843 2250 50  0000 C CNN
 F 1 "1M" V 6934 2250 50  0000 C CNN
-F 2 "Potentiometer_THT:Potentiometer_Bourns_PTV09A-1_Single_Vertical" H 7050 2250 50  0001 C CNN
+F 2 "elektrophon:Potentiometer_Alpha_RD901F-40-00D_Single_Vertical" H 7050 2250 50  0001 C CNN
 F 3 "~" H 7050 2250 50  0001 C CNN
 	1    7050 2250
 	0    1    1    0   
@@ -344,7 +344,7 @@ U 1 1 5CB76DA6
 P 7050 2750
 F 0 "RV3" V 6843 2750 50  0000 C CNN
 F 1 "1M" V 6934 2750 50  0000 C CNN
-F 2 "Potentiometer_THT:Potentiometer_Bourns_PTV09A-1_Single_Vertical" H 7050 2750 50  0001 C CNN
+F 2 "elektrophon:Potentiometer_Alpha_RD901F-40-00D_Single_Vertical" H 7050 2750 50  0001 C CNN
 F 3 "~" H 7050 2750 50  0001 C CNN
 	1    7050 2750
 	0    1    1    0   
@@ -360,8 +360,6 @@ F 3 "~" H 7550 2750 50  0001 C CNN
 	1    7550 2750
 	-1   0    0    1   
 $EndComp
-Wire Wire Line
-	6900 2200 6900 2250
 Wire Wire Line
 	6900 2400 7050 2400
 Connection ~ 6900 2250
@@ -423,7 +421,7 @@ U 1 1 5CB7D114
 P 4650 3350
 F 0 "C5" H 4535 3304 50  0000 R CNN
 F 1 "10n" H 4535 3395 50  0000 R CNN
-F 2 "Capacitor_THT:C_Disc_D5.1mm_W3.2mm_P5.00mm" H 4688 3200 50  0001 C CNN
+F 2 "Capacitor_THT:C_Disc_D3.4mm_W2.1mm_P2.50mm" H 4688 3200 50  0001 C CNN
 F 3 "~" H 4650 3350 50  0001 C CNN
 	1    4650 3350
 	-1   0    0    1   
@@ -451,7 +449,7 @@ U 1 1 5CB80D85
 P 6550 3850
 F 0 "RV1" H 6480 3896 50  0000 R CNN
 F 1 "10k" H 6480 3805 50  0000 R CNN
-F 2 "Potentiometer_THT:Potentiometer_Bourns_PTV09A-1_Single_Vertical" H 6550 3850 50  0001 C CNN
+F 2 "elektrophon:Potentiometer_Alpha_RD901F-40-00D_Single_Vertical" H 6550 3850 50  0001 C CNN
 F 3 "~" H 6550 3850 50  0001 C CNN
 	1    6550 3850
 	1    0    0    -1  
@@ -529,7 +527,7 @@ U 1 1 5CB9FE03
 P 7850 3300
 F 0 "RV4" H 7780 3254 50  0000 R CNN
 F 1 "1M" H 7780 3345 50  0000 R CNN
-F 2 "Potentiometer_THT:Potentiometer_Bourns_PTV09A-1_Single_Vertical" H 7850 3300 50  0001 C CNN
+F 2 "elektrophon:Potentiometer_Alpha_RD901F-40-00D_Single_Vertical" H 7850 3300 50  0001 C CNN
 F 3 "~" H 7850 3300 50  0001 C CNN
 	1    7850 3300
 	-1   0    0    1   
@@ -623,7 +621,7 @@ U 1 1 5CC9709D
 P 2750 7100
 F 0 "C3" H 2865 7146 50  0000 L CNN
 F 1 "0.1u" H 2865 7055 50  0000 L CNN
-F 2 "Capacitor_THT:C_Disc_D5.1mm_W3.2mm_P5.00mm" H 2788 6950 50  0001 C CNN
+F 2 "Capacitor_THT:C_Disc_D3.4mm_W2.1mm_P2.50mm" H 2788 6950 50  0001 C CNN
 F 3 "~" H 2750 7100 50  0001 C CNN
 	1    2750 7100
 	1    0    0    -1  
@@ -658,7 +656,7 @@ U 1 1 5CC9DD67
 P 2100 7100
 F 0 "C2" H 1986 7054 50  0000 R CNN
 F 1 "0.1u" H 1986 7145 50  0000 R CNN
-F 2 "Capacitor_THT:C_Disc_D5.1mm_W3.2mm_P5.00mm" H 2138 6950 50  0001 C CNN
+F 2 "Capacitor_THT:C_Disc_D3.4mm_W2.1mm_P2.50mm" H 2138 6950 50  0001 C CNN
 F 3 "~" H 2100 7100 50  0001 C CNN
 	1    2100 7100
 	1    0    0    1   
@@ -669,7 +667,7 @@ U 1 1 5CCA767C
 P 1500 7100
 F 0 "C1" H 1618 7146 50  0000 L CNN
 F 1 "10u" H 1618 7055 50  0000 L CNN
-F 2 "Capacitor_THT:CP_Radial_D5.0mm_P2.00mm" H 1538 6950 50  0001 C CNN
+F 2 "Capacitor_THT:CP_Radial_D5.0mm_P2.50mm" H 1538 6950 50  0001 C CNN
 F 3 "~" H 1500 7100 50  0001 C CNN
 	1    1500 7100
 	1    0    0    -1  
@@ -821,7 +819,7 @@ U 1 1 5CF3D2BD
 P 8450 3000
 F 0 "C6" H 8568 3046 50  0000 L CNN
 F 1 "4u7" H 8568 2955 50  0000 L CNN
-F 2 "Capacitor_THT:CP_Radial_D5.0mm_P2.00mm" H 8488 2850 50  0001 C CNN
+F 2 "Capacitor_THT:CP_Radial_D5.0mm_P2.50mm" H 8488 2850 50  0001 C CNN
 F 3 "~" H 8450 3000 50  0001 C CNN
 	1    8450 3000
 	1    0    0    -1  
@@ -832,7 +830,7 @@ U 1 1 5D64A5B4
 P 1100 3150
 F 0 "J1" H 1132 3475 50  0000 C CNN
 F 1 "IN" H 1132 3384 50  0000 C CNN
-F 2 "" H 1100 3150 50  0001 C CNN
+F 2 "elektrophon:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles" H 1100 3150 50  0001 C CNN
 F 3 "~" H 1100 3150 50  0001 C CNN
 	1    1100 3150
 	1    0    0    -1  
@@ -843,7 +841,7 @@ U 1 1 5D64B3F0
 P 10350 2850
 F 0 "J3" H 10382 3175 50  0000 C CNN
 F 1 "OUT" H 10382 3084 50  0000 C CNN
-F 2 "" H 10350 2850 50  0001 C CNN
+F 2 "elektrophon:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles" H 10350 2850 50  0001 C CNN
 F 3 "~" H 10350 2850 50  0001 C CNN
 	1    10350 2850
 	-1   0    0    -1  
@@ -896,7 +894,7 @@ U 1 1 5D785FF0
 P 9850 4900
 F 0 "D6" H 9843 4645 50  0000 C CNN
 F 1 "LED" H 9843 4736 50  0000 C CNN
-F 2 "" H 9850 4900 50  0001 C CNN
+F 2 "LED_THT:LED_D5.0mm" H 9850 4900 50  0001 C CNN
 F 3 "~" H 9850 4900 50  0001 C CNN
 	1    9850 4900
 	-1   0    0    1   
@@ -918,7 +916,7 @@ U 1 1 5D787291
 P 9550 4150
 F 0 "C7" H 9435 4104 50  0000 R CNN
 F 1 "100n" H 9435 4195 50  0000 R CNN
-F 2 "Capacitor_THT:C_Disc_D5.1mm_W3.2mm_P5.00mm" H 9588 4000 50  0001 C CNN
+F 2 "Capacitor_THT:C_Disc_D3.4mm_W2.1mm_P2.50mm" H 9588 4000 50  0001 C CNN
 F 3 "~" H 9550 4150 50  0001 C CNN
 	1    9550 4150
 	0    -1   -1   0   
