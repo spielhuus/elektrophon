@@ -13,12 +13,12 @@
 |2  |C14, C15                      |10u       |Electrolytic Capacitors Bi-Polarized (Radial, D:8.0mm, H:7.0mm, P:3.50mm)                                  |
 |1  |C16                           |47p       |Ceramic Capacitors (L:4mm, P:2.50mm)                                                                       |
 |8  |D1, D2, D3, D4, D5, D6, D7, D8|1N4148    |Diode                                                                                                      |
-|1  |J1                            |LP        |Audio Jack 3.5mm (PJ398SM, Vertical)](https://www.thonk.co.uk/shop/3-5mm-jacks/)                                           |
-|1  |J2                            |HP        |Audio Jack 3.5mm (PJ398SM, Vertical)](https://www.thonk.co.uk/shop/3-5mm-jacks/)                                           |
-|1  |J3                            |BP        |Audio Jack 3.5mm (PJ398SM, Vertical)](https://www.thonk.co.uk/shop/3-5mm-jacks/)                                           |
-|1  |J4                            |CV        |Audio Jack 3.5mm (PJ398SM, Vertical)](https://www.thonk.co.uk/shop/3-5mm-jacks/)                                           |
+|1  |J1                            |LP        |[Audio Jack 3.5mm (PJ398SM, Vertical)](https://www.thonk.co.uk/shop/3-5mm-jacks/)                                           |
+|1  |J2                            |HP        |[Audio Jack 3.5mm (PJ398SM, Vertical)](https://www.thonk.co.uk/shop/3-5mm-jacks/)                                           |
+|1  |J3                            |BP        |[Audio Jack 3.5mm (PJ398SM, Vertical)](https://www.thonk.co.uk/shop/3-5mm-jacks/)                                           |
+|1  |J4                            |CV        |[Audio Jack 3.5mm (PJ398SM, Vertical)](https://www.thonk.co.uk/shop/3-5mm-jacks/)                                           |
 |1  |J5                            |IDC Header|Connector_IDC:IDC-Header_2x05_P2.54mm_Vertical                                                             |
-|1  |J6                            |out       |Audio Jack 3.5mm (PJ398SM, Vertical)](https://www.thonk.co.uk/shop/3-5mm-jacks/)                                           |
+|1  |J6                            |out       |[Audio Jack 3.5mm (PJ398SM, Vertical)](https://www.thonk.co.uk/shop/3-5mm-jacks/)                                           |
 |3  |Q1, Q2, Q3                    |2n2222    |Bipolar Transistors – BJT (TO-18-3)                                                                        |
 |1  |Q4                            |2N2907    |Bipolar Transistors – BJT (TO-18-3)                                                                        |
 |4  |R1, R2, R3, R26               |47k       |Resistor (L:6.3mm, D:2.5mm)                                                                                |
