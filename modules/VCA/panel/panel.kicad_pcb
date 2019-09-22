@@ -10,6 +10,15 @@
   )
 
   (page A4)
+  (title_block
+    (title VCA)
+    (date 2019-09-22)
+    (rev R01)
+    (comment 1 "Original design by Thomas Henry")
+    (comment 2 "PCB for panel")
+    (comment 4 "License CC BY 4.0 - Attribution 4.0 International")
+  )
+
   (layers
     (0 F.Cu signal)
     (31 B.Cu signal)
