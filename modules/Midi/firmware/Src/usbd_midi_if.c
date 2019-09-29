@@ -20,7 +20,7 @@
 /* Includes ------------------------------------------------------------------*/
 #include "usbd_midi_if.h"
 #include "stm32f1xx_hal.h"
-
+#include "LED.h"
 
 // basic midi rx/tx functions
 static uint16_t MIDI_DataRx(uint8_t *msg, uint16_t length);
@@ -150,6 +150,9 @@ USBD_MIDI_ItfTypeDef USBD_Interface_fops_FS =
 
 
 static uint16_t MIDI_DataRx(uint8_t *msg, uint16_t length){
+
+	LED_Heartbeat();
+
   uint16_t cnt;
   uint16_t msgs = length / 4;
   uint16_t chk = length % 4;

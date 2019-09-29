@@ -20,10 +20,12 @@
 
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
+#include "cmsis_os.h"
 #include "usb_device.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
+#include "LED.h"
 #include "curemisc.h"
 #include "curebuffer.h"
 #include "usbd_midi_if.h"
@@ -55,6 +57,8 @@ UART_HandleTypeDef huart1;
 DMA_HandleTypeDef hdma_usart1_rx;
 DMA_HandleTypeDef hdma_usart1_tx;
 
+osThreadId defaultTaskHandle;
+osTimerId LED_Control_TimerHandle;
 /* USER CODE BEGIN PV */
 bool isUartReady[2] = {true, true};
 UART_HandleTypeDef* uart_handler[1] = {&huart1};
@@ -70,6 +74,9 @@ static void MX_SPI1_Init(void);
 static void MX_SPI2_Init(void);
 static void MX_TIM2_Init(void);
 static void MX_USART1_UART_Init(void);
+void StartDefaultTask(void const * argument);
+extern void LED_Callback(void const * argument);
+
 /* USER CODE BEGIN PFP */
 
 /* USER CODE END PFP */
@@ -90,7 +97,6 @@ void sendUart(uint8_t ch, uint8_t* dat)
 int main(void)
 {
   /* USER CODE BEGIN 1 */
-
   /* USER CODE END 1 */
 
   /* MCU Configuration--------------------------------------------------------*/
@@ -115,9 +121,9 @@ int main(void)
   MX_SPI1_Init();
   MX_SPI2_Init();
   MX_TIM2_Init();
-  MX_USB_DEVICE_Init();
   MX_USART1_UART_Init();
   /* USER CODE BEGIN 2 */
+  LED_Clock();
 
   if(FUNC_ERROR == midiInit() ){
 	  while(1){
@@ -127,20 +133,43 @@ int main(void)
 		  HAL_Delay(500);
 	  }
   }
-
-  //Wait usb configuration.
-  while(1){
-	  if(USBD_STATE_CONFIGURED == hUsbDeviceFS.dev_state){
-		  HAL_GPIO_WritePin(LED_CONNECT_GPIO_Port, LED_CONNECT_Pin, SET);
-		  break;
-	  }else{
-		  HAL_GPIO_WritePin(LED_CONNECT_GPIO_Port, LED_CONNECT_Pin, RESET);
-	  }
-  }
-
-  HAL_UART_Receive_DMA(&huart1, &uart_rx_dat[0],1);
-
   /* USER CODE END 2 */
+
+  /* USER CODE BEGIN RTOS_MUTEX */
+  /* add mutexes, ... */
+  /* USER CODE END RTOS_MUTEX */
+
+  /* USER CODE BEGIN RTOS_SEMAPHORES */
+  /* add semaphores, ... */
+  /* USER CODE END RTOS_SEMAPHORES */
+
+  /* Create the timer(s) */
+  /* definition and creation of LED_Control_Timer */
+  osTimerDef(LED_Control_Timer, LED_Callback);
+  LED_Control_TimerHandle = osTimerCreate(osTimer(LED_Control_Timer), osTimerPeriodic, NULL);
+
+  /* USER CODE BEGIN RTOS_TIMERS */
+  /* start timers, add new ones, ... */
+  osTimerStart(LED_Control_TimerHandle, 100);
+  /* USER CODE END RTOS_TIMERS */
+
+  /* USER CODE BEGIN RTOS_QUEUES */
+  /* add queues, ... */
+  /* USER CODE END RTOS_QUEUES */
+
+  /* Create the thread(s) */
+  /* definition and creation of defaultTask */
+  osThreadDef(defaultTask, StartDefaultTask, osPriorityNormal, 0, 128);
+  defaultTaskHandle = osThreadCreate(osThread(defaultTask), NULL);
+
+  /* USER CODE BEGIN RTOS_THREADS */
+  /* add threads, ... */
+  /* USER CODE END RTOS_THREADS */
+
+  /* Start scheduler */
+  osKernelStart();
+  
+  /* We should never get here as control is now taken by the scheduler */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
@@ -148,37 +177,6 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-	  //Wait USB configuration when USB connection error has occurred.
-	  while(1){
-
-		  if(USBD_STATE_CONFIGURED == hUsbDeviceFS.dev_state){
-					  HAL_GPIO_WritePin(LED_CONNECT_GPIO_Port, LED_CONNECT_Pin, SET);
-					  break;
-				  }else{
-					  HAL_GPIO_WritePin(LED_CONNECT_GPIO_Port, LED_CONNECT_Pin, SET);
-					  HAL_Delay(200);
-					  HAL_GPIO_WritePin(LED_CONNECT_GPIO_Port, LED_CONNECT_Pin, RESET);
-					  HAL_Delay(200);
-				  }
-			  }
-
-			//[USB-MIDI IN] to [MIDI JACK OUT]
-			for(uint32_t cable_num=0; cable_num<MIDI_OUT_JACK_NUM; cable_num++){
-
-				if(isUartReady[cable_num]){
-					if( FUNC_SUCCESS == midiGetFromUsbRx(cable_num, &uart_tx_dat) ){
-						  HAL_GPIO_WritePin(LED_TX_GPIO_Port, LED_TX_Pin, SET);
-						  HAL_Delay(300);
-						  HAL_GPIO_WritePin(LED_TX_GPIO_Port, LED_TX_Pin, RESET);
-						  HAL_Delay(300);
-
-//						sendUart(cable_num, &uart_tx_dat);
-					}
-				}
-			}
-
-			//[MIDI JACK IN] to [USB-MIDI OUT]
-			midiProcess();
 
 	  }
   /* USER CODE END 3 */
@@ -396,13 +394,13 @@ static void MX_DMA_Init(void)
 
   /* DMA interrupt init */
   /* DMA1_Channel3_IRQn interrupt configuration */
-  HAL_NVIC_SetPriority(DMA1_Channel3_IRQn, 0, 0);
+  HAL_NVIC_SetPriority(DMA1_Channel3_IRQn, 5, 0);
   HAL_NVIC_EnableIRQ(DMA1_Channel3_IRQn);
   /* DMA1_Channel4_IRQn interrupt configuration */
-  HAL_NVIC_SetPriority(DMA1_Channel4_IRQn, 0, 0);
+  HAL_NVIC_SetPriority(DMA1_Channel4_IRQn, 5, 0);
   HAL_NVIC_EnableIRQ(DMA1_Channel4_IRQn);
   /* DMA1_Channel5_IRQn interrupt configuration */
-  HAL_NVIC_SetPriority(DMA1_Channel5_IRQn, 0, 0);
+  HAL_NVIC_SetPriority(DMA1_Channel5_IRQn, 5, 0);
   HAL_NVIC_EnableIRQ(DMA1_Channel5_IRQn);
 
 }
@@ -469,6 +467,89 @@ static void MX_GPIO_Init(void)
 /* USER CODE BEGIN 4 */
 
 /* USER CODE END 4 */
+
+/* USER CODE BEGIN Header_StartDefaultTask */
+/**
+  * @brief  Function implementing the defaultTask thread.
+  * @param  argument: Not used 
+  * @retval None
+  */
+/* USER CODE END Header_StartDefaultTask */
+void StartDefaultTask(void const * argument)
+{
+  /* init code for USB_DEVICE */
+  MX_USB_DEVICE_Init();
+
+  /* USER CODE BEGIN 5 */
+  LED_Clock();
+
+  //Wait usb configuration.
+  while(1){
+	  if(USBD_STATE_CONFIGURED == hUsbDeviceFS.dev_state){
+		  HAL_GPIO_WritePin(LED_CONNECT_GPIO_Port, LED_CONNECT_Pin, SET);
+		  break;
+	  }else{
+		  HAL_GPIO_WritePin(LED_CONNECT_GPIO_Port, LED_CONNECT_Pin, RESET);
+	  }
+	  osDelay(1);
+  }
+
+  HAL_UART_Receive_DMA(&huart1, &uart_rx_dat[0],1);
+
+  //Wait USB configuration when USB connection error has occurred.
+  /* Infinite loop */
+  for(;;) {
+	  while(1){
+
+		  if(USBD_STATE_CONFIGURED == hUsbDeviceFS.dev_state){
+				  HAL_GPIO_WritePin(LED_CONNECT_GPIO_Port, LED_CONNECT_Pin, SET);
+				  break;
+			  }else{
+				  HAL_GPIO_WritePin(LED_CONNECT_GPIO_Port, LED_CONNECT_Pin, SET);
+				  HAL_Delay(200);
+				  HAL_GPIO_WritePin(LED_CONNECT_GPIO_Port, LED_CONNECT_Pin, RESET);
+				  HAL_Delay(200);
+			  }
+		  }
+
+		//[USB-MIDI IN] to [MIDI JACK OUT]
+		for(uint32_t cable_num=0; cable_num<MIDI_OUT_JACK_NUM; cable_num++){
+			if(isUartReady[cable_num]){
+				if( FUNC_SUCCESS == midiGetFromUsbRx(cable_num, &uart_tx_dat) ){
+					LED_Activity();
+					//LED_Clock();
+//						sendUart(cable_num, &uart_tx_dat);
+				}
+			}
+		}
+
+		//[MIDI JACK IN] to [USB-MIDI OUT]
+		midiProcess();
+	    osDelay(1);
+  	  }
+  /* USER CODE END 5 */ 
+}
+
+/**
+  * @brief  Period elapsed callback in non blocking mode
+  * @note   This function is called  when TIM4 interrupt took place, inside
+  * HAL_TIM_IRQHandler(). It makes a direct call to HAL_IncTick() to increment
+  * a global variable "uwTick" used as application time base.
+  * @param  htim : TIM handle
+  * @retval None
+  */
+void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
+{
+  /* USER CODE BEGIN Callback 0 */
+
+  /* USER CODE END Callback 0 */
+  if (htim->Instance == TIM4) {
+    HAL_IncTick();
+  }
+  /* USER CODE BEGIN Callback 1 */
+
+  /* USER CODE END Callback 1 */
+}
 
 /**
   * @brief  This function is executed in case of error occurrence.
