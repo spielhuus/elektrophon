@@ -31,8 +31,8 @@
 
 #define MIDI_IN_FRAME_INTERVAL		1
 
-#define MIDI_OUT_JACK_NUM (2)
-#define MIDI_IN_JACK_NUM (2)
+#define MIDI_OUT_JACK_NUM (1)
+#define MIDI_IN_JACK_NUM (1)
 
 
 typedef struct _USBD_MIDI_ItfTypeDef{
