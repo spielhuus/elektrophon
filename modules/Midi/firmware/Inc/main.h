@@ -52,10 +52,10 @@ extern "C" {
 
 /* Exported functions prototypes ---------------------------------------------*/
 void Error_Handler(void);
-void note_on(uint8_t channel, uint8_t note, uint8_t velocity);
-void note_off(uint8_t channel, uint8_t note, uint8_t velocity);
+
 /* USER CODE BEGIN EFP */
 void note_on(uint8_t channel, uint8_t note, uint8_t velocity);
+void note_off(uint8_t channel, uint8_t note, uint8_t velocity);
 
 /* USER CODE END EFP */
 

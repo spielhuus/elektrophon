@@ -191,7 +191,7 @@ uint8_t USBD_MIDI_RegisterInterface(USBD_HandleTypeDef *pdev, USBD_MIDI_ItfTypeD
   uint8_t ret = USBD_FAIL;
   
   if(fops != NULL){
-    pdev->pUserData= fops;
+    pdev->pUserData=fops;
     ret = USBD_OK;    
   }
   

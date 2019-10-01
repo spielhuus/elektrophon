@@ -153,19 +153,18 @@ USBD_MIDI_ItfTypeDef USBD_Interface_fops_FS =
 
 static uint16_t MIDI_DataRx(uint8_t *msg, uint16_t length){
 
-	LED_Heartbeat();
-
   uint16_t cnt;
   uint16_t msgs = length / 4;
   uint16_t chk = length % 4;
   uint8_t u8b;
-  uint8_t midi_size;
+  uint8_t midi_size = 0;
 
   if(0 != chk)
   {
 	  return 0;
   }
 
+  //read all messages from the buffer
   for(uint32_t cnt_msgs = 0; cnt_msgs < msgs; cnt_msgs++){
 
 	  uint8_t cable_num = (msg[0 + 4*cnt_msgs] & 0xF0) >> 4;
@@ -194,11 +193,19 @@ static uint16_t MIDI_DataRx(uint8_t *msg, uint16_t length){
 			  break;
 
 		  //3byte message
+		  case 0x8:
+			 note_off(msg[1 + 4*cnt_msgs] & 0x0F,
+					  msg[2 + 4*cnt_msgs],
+					  msg[3 + 4*cnt_msgs]);
+			 break;
+		  case 0x9: //note on
+			 note_on(msg[1 + 4*cnt_msgs] & 0x0F,
+					 msg[2 + 4*cnt_msgs],
+					 msg[3 + 4*cnt_msgs]);
+			 break;
 		  case 0x3:
 		  case 0x4:
 		  case 0x7:
-		  case 0x8:
-		  case 0x9:
 		  case 0xA:
 		  case 0xB:
 		  case 0xE:

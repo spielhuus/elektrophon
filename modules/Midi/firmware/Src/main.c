@@ -34,12 +34,18 @@
 
 /* Private typedef -----------------------------------------------------------*/
 /* USER CODE BEGIN PTD */
-
 /* USER CODE END PTD */
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
-
+#define MIDI_CHANNELS 8
+#define MIDI_NOTES 88
+// Rescale 88 notes to 4096 mV:
+//    noteMsg = 0 -> 0 mV
+//    noteMsg = 87 -> 4096 mV
+// DAC output will be (4095/87) = 47.069 mV per note, and 564.9655 mV per octive
+// Note that DAC output will need to be amplified by 1.77X for the standard 1V/octave
+#define NOTE_SF 47.069f // This value can be tuned if CV output isn't exactly 1V/octave
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -76,23 +82,71 @@ extern void LED_Callback(void const * argument);
 
 /* USER CODE BEGIN PFP */
 void note_on(uint8_t channel, uint8_t note, uint8_t velocity) {
+	if(channel>MIDI_CHANNELS) return; //check if number of channels is supported
+	if(note<0 || note>MIDI_NOTES) return; //check if number of notes is supported
 
+	//TODO quick and dirty
+	if( channel == 0 ) {
+		set_voltage(0, 1, velocity<<5);  // TODO DAC0, channel 1, gain = 2X
+
+		unsigned int mV = (unsigned int) ((float) note * NOTE_SF + 0.5);
+		set_voltage(1, 1, mV);  // TODO DAC1, channel 0, gain = 2X
+
+	} else if( channel == 1 ) {
+		set_voltage(2, 1, velocity<<5);  // TODO DAC0, channel 1, gain = 2X
+
+		unsigned int mV = (unsigned int) ((float) note * NOTE_SF + 0.5);
+		set_voltage(3, 1, mV);  // TODO DAC1, channel 0, gain = 2X
+
+	} else if( channel == 2 ) {
+
+		set_voltage(4, 1, velocity<<5);  // TODO DAC1, channel 1, gain = 2X
+
+		unsigned int mV = (unsigned int) ((float) note * NOTE_SF + 0.5);
+		set_voltage(5, 1, mV);  // TODO DAC1, channel 0, gain = 2X
+	}
 }
-void note_off(uint8_t channel, uint8_t note, uint8_t velocity) {
 
+void note_off(uint8_t channel, uint8_t note, uint8_t velocity) {
+	if(channel>MIDI_CHANNELS) return; //check if number of channels is supported
+	if(note<0 || note>MIDI_NOTES) return; //check if number of notes is supported
+
+	//TODO quick and dirty
+	if( channel == 0 ) {
+		set_voltage(0, 1, velocity<<5);  // TODO DAC0, channel 1, gain = 2X
+
+		unsigned int mV = (unsigned int) ((float) note * NOTE_SF + 0.5);
+		set_voltage(1, 1, mV);  // TODO DAC1, channel 0, gain = 2X
+
+	} else if( channel == 1 ) {
+		set_voltage(2, 1, velocity<<5);  // TODO DAC0, channel 1, gain = 2X
+
+		unsigned int mV = (unsigned int) ((float) note * NOTE_SF + 0.5);
+		set_voltage(3, 1, mV);  // TODO DAC1, channel 0, gain = 2X
+
+	} else if( channel == 2 ) {
+
+		set_voltage(4, 1, velocity<<5);  // TODO DAC1, channel 1, gain = 2X
+
+		unsigned int mV = (unsigned int) ((float) note * NOTE_SF + 0.5);
+		set_voltage(5, 1, mV);  // TODO DAC1, channel 0, gain = 2X
+	}
 }
 
 void set_voltage(uint8_t channel, uint8_t gain, uint16_t mV) {
 
+	//calculate value
+	uint16_t command = (channel%2) ? 0x9000 : 0x1000;
+    command |= gain ? 0x0000 : 0x2000;
+    command |= (mV & 0x0FFF);
+    //copy the value to buffer
+	dac_data[channel][0] = command>>8;
+	dac_data[channel][1] = command&0xFF;
+
 	while(pending_dac_channel>0) {} //wait for pending transaction
+	pending_dac_channel = channel;
 
-	uint8_t dac_number = channel / 2;
-	dac_data[channel][0] = (channel%2)<8;
-	dac_data[channel][0] |= gain ? 0x0000 : 0x2000;
-	dac_data[channel][0] |= (mV & 0x0FFF);
-	dac_data[channel][1] |= (mV & 0x0FFF);
-
-	switch(dac_number) {
+	switch(channel/2) {
 		case 0: HAL_GPIO_WritePin(DAC_SELECT_1_GPIO_Port, DAC_SELECT_1_Pin, RESET); break;
 		case 1: HAL_GPIO_WritePin(DAC_SELECT_2_GPIO_Port, DAC_SELECT_2_Pin, RESET); break;
 		case 2: HAL_GPIO_WritePin(DAC_SELECT_3_GPIO_Port, DAC_SELECT_3_Pin, RESET); break;
@@ -265,7 +319,7 @@ static void MX_SPI1_Init(void)
   hspi1.Instance = SPI1;
   hspi1.Init.Mode = SPI_MODE_MASTER;
   hspi1.Init.Direction = SPI_DIRECTION_2LINES;
-  hspi1.Init.DataSize = SPI_DATASIZE_8BIT;
+  hspi1.Init.DataSize = SPI_DATASIZE_16BIT;
   hspi1.Init.CLKPolarity = SPI_POLARITY_LOW;
   hspi1.Init.CLKPhase = SPI_PHASE_1EDGE;
   hspi1.Init.NSS = SPI_NSS_SOFT;
