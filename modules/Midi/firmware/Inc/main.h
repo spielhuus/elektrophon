@@ -54,8 +54,8 @@ extern "C" {
 void Error_Handler(void);
 
 /* USER CODE BEGIN EFP */
-void note_on(uint8_t channel, uint8_t note, uint8_t velocity);
-void note_off(uint8_t channel, uint8_t note, uint8_t velocity);
+//void note_on(uint8_t channel, uint8_t note, uint8_t velocity);
+//void note_off(uint8_t channel, uint8_t note, uint8_t velocity);
 
 /* USER CODE END EFP */
 
@@ -85,7 +85,7 @@ void note_off(uint8_t channel, uint8_t note, uint8_t velocity);
 #define LED_CLOCK_Pin GPIO_PIN_9
 #define LED_CLOCK_GPIO_Port GPIOA
 /* USER CODE BEGIN Private defines */
-void set_voltage(uint8_t channel, uint8_t gain, uint16_t mV);
+//TODO void set_voltage(uint8_t channel, uint8_t gain, uint16_t mV);
 /* USER CODE END Private defines */
 
 #ifdef __cplusplus

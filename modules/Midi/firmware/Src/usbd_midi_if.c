@@ -21,6 +21,7 @@
 #include "usbd_midi_if.h"
 #include "stm32f1xx_hal.h"
 #include "LED.h"
+#include "midi.h"
 
 extern SPI_HandleTypeDef hspi1;
 
