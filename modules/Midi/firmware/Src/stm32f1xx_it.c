@@ -58,7 +58,6 @@ extern uint8_t pending_dac_channel;
 
 /* External variables --------------------------------------------------------*/
 extern PCD_HandleTypeDef hpcd_USB_FS;
-extern DMA_HandleTypeDef hdma_spi1_tx;
 extern DMA_HandleTypeDef hdma_spi2_tx;
 extern TIM_HandleTypeDef htim4;
 
@@ -161,31 +160,6 @@ void DebugMon_Handler(void)
 /* For the available peripheral interrupt handler names,                      */
 /* please refer to the startup file (startup_stm32f1xx.s).                    */
 /******************************************************************************/
-
-/**
-  * @brief This function handles DMA1 channel3 global interrupt.
-  */
-void DMA1_Channel3_IRQHandler(void)
-{
-  /* USER CODE BEGIN DMA1_Channel3_IRQn 0 */
-	switch(pending_dac_channel/2) {
-		case 0: HAL_GPIO_WritePin(DAC_SELECT_1_GPIO_Port, DAC_SELECT_1_Pin, SET); break;
-		case 1: HAL_GPIO_WritePin(DAC_SELECT_2_GPIO_Port, DAC_SELECT_2_Pin, SET); break;
-		case 2: HAL_GPIO_WritePin(DAC_SELECT_3_GPIO_Port, DAC_SELECT_3_Pin, SET); break;
-		case 3: HAL_GPIO_WritePin(DAC_SELECT_4_GPIO_Port, DAC_SELECT_4_Pin, SET); break;
-		case 4: HAL_GPIO_WritePin(DAC_SELECT_5_GPIO_Port, DAC_SELECT_5_Pin, SET); break;
-		case 5: HAL_GPIO_WritePin(DAC_SELECT_6_GPIO_Port, DAC_SELECT_6_Pin, SET); break;
-		case 6: HAL_GPIO_WritePin(DAC_SELECT_7_GPIO_Port, DAC_SELECT_7_Pin, SET); break;
-		case 7: HAL_GPIO_WritePin(DAC_SELECT_8_GPIO_Port, DAC_SELECT_8_Pin, SET); break;
-	}
-  pending_dac_channel = 0;
-
-  /* USER CODE END DMA1_Channel3_IRQn 0 */
-  HAL_DMA_IRQHandler(&hdma_spi1_tx);
-  /* USER CODE BEGIN DMA1_Channel3_IRQn 1 */
-
-  /* USER CODE END DMA1_Channel3_IRQn 1 */
-}
 
 /**
   * @brief This function handles DMA1 channel5 global interrupt.

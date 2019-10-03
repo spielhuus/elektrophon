@@ -12,7 +12,7 @@
 
 struct config_t _config[PORTS];
 
-uint8_t dac_data[16][2];
+uint8_t dac_data[2];
 uint8_t pending_dac_channel = 0;
 
 extern SPI_HandleTypeDef hspi1;
@@ -23,11 +23,15 @@ void set_voltage(uint8_t channel, uint8_t gain, uint16_t mV) {
 	uint16_t command = (channel%2) ? 0x9000 : 0x1000;
     command |= gain ? 0x0000 : 0x2000;
     command |= (mV & 0x0FFF);
-    //copy the value to buffer
-	dac_data[channel][0] = command>>8;
-	dac_data[channel][1] = command&0xFF;
 
-	while(pending_dac_channel>0) {} //wait for pending transaction
+    //copy the value to buffer
+//	while(pending_dac_channel>0) {} //wait for pending transaction
+//    dac_data[0] = command>>8;
+//    dac_data[1] = command&0xFF;
+
+    dac_data[1] = mV & 0xff;
+    dac_data[0] = ((mV >> 8) & 0xff) | 0x10;
+
 	pending_dac_channel = channel;
 
 	switch(channel/2) {
@@ -40,13 +44,37 @@ void set_voltage(uint8_t channel, uint8_t gain, uint16_t mV) {
 		case 6: HAL_GPIO_WritePin(DAC_SELECT_7_GPIO_Port, DAC_SELECT_7_Pin, RESET); break;
 		case 7: HAL_GPIO_WritePin(DAC_SELECT_8_GPIO_Port, DAC_SELECT_8_Pin, RESET); break;
 	}
-	HAL_SPI_Transmit_DMA(&hspi1, dac_data[channel], 2);
+	HAL_SPI_Transmit(&hspi1,(uint8_t*)dac_data,2,1000);
+//	HAL_SPI_Transmit_DMA(&hspi1, (uint8_t*)dac_data, 2);
+	switch(channel/2) {
+		case 0: HAL_GPIO_WritePin(DAC_SELECT_1_GPIO_Port, DAC_SELECT_1_Pin, SET); break;
+		case 1: HAL_GPIO_WritePin(DAC_SELECT_2_GPIO_Port, DAC_SELECT_2_Pin, SET); break;
+		case 2: HAL_GPIO_WritePin(DAC_SELECT_3_GPIO_Port, DAC_SELECT_3_Pin, SET); break;
+		case 3: HAL_GPIO_WritePin(DAC_SELECT_4_GPIO_Port, DAC_SELECT_4_Pin, SET); break;
+		case 4: HAL_GPIO_WritePin(DAC_SELECT_5_GPIO_Port, DAC_SELECT_5_Pin, SET); break;
+		case 5: HAL_GPIO_WritePin(DAC_SELECT_6_GPIO_Port, DAC_SELECT_6_Pin, SET); break;
+		case 6: HAL_GPIO_WritePin(DAC_SELECT_7_GPIO_Port, DAC_SELECT_7_Pin, SET); break;
+		case 7: HAL_GPIO_WritePin(DAC_SELECT_8_GPIO_Port, DAC_SELECT_8_Pin, SET); break;
+	}
+
+
 }
 
 void set_config(unsigned char port, enum PORT_TYPE type, uint8_t midi_channel ) {
 	if( port > PORTS ) return;
 	_config[port].type = type;
 	_config[port].midi_channel = midi_channel;
+
+	switch(type) {
+	case TRIANGLE:
+		_config[port].val = 0;
+		_config[port].old_val = 0;
+		_config[port].state = RAISE;
+		_config[port].last_time = 0;
+		break;
+	default:
+		break;
+	}
 }
 
 struct config_t* get_config(uint8_t port) {
@@ -134,24 +162,22 @@ void start_synth_task(void const * argument) {
 				break;
 
 			case TRIANGLE:
-				if( _config[i].last_time == 0 || _config[i].last_time < HAL_GetTick() ) {
+//				if( _config[i].last_time == 0 || _config[i].last_time < HAL_GetTick() ) {
 					_config[i].last_time = HAL_GetTick() + 100;
-					if(_config[i].old_val == 0 ) {
+					if(_config[i].val < 32 ) {
 						_config[i].state = RAISE;
-					} else if( _config[i].old_val == 4095 ) {
+					} else if( _config[i].val > 4064 ) {
 						_config[i].state = FALL;
-					} else { //if state is unknown
-						_config[i].state = RAISE;
-						_config[i].val = 0;
 					}
 
 					if( _config[i].state == RAISE ) {
-						_config[i].val = _config[i].val + 1;
+						_config[i].val = _config[i].val + 128;
 					} else {
-						_config[i].val = _config[i].val - 1;
+						_config[i].val = _config[i].val - 128;
 					}
-					set_voltage(i, 1, _config[i].val);
-				}
+					set_voltage(i, 0, _config[i].val);
+					 _config[i].last_time = HAL_GetTick() + 100;
+//				}
 				break;
 
 			case GATE: break;
@@ -161,6 +187,6 @@ void start_synth_task(void const * argument) {
 			}
 		}
 
-	    osDelay(100);
+	    osDelay(1);
 	}
 }

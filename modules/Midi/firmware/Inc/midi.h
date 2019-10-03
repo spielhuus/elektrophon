@@ -24,8 +24,8 @@ struct config_t {
 	enum PORT_TYPE type;
 	enum CHANNEL_STATE state;
 	unsigned char midi_channel;
-	uint8_t val;
-	uint8_t old_val;
+	uint16_t val;
+	uint16_t old_val;
 	uint32_t last_time;
 };
 
