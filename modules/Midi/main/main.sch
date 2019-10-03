@@ -1,5 +1,4 @@
 EESchema Schematic File Version 4
-LIBS:main-cache
 EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
@@ -722,4 +721,10 @@ F 3 "~" H 9800 4700 50  0001 C CNN
 	1    9800 4700
 	1    0    0    -1  
 $EndComp
+Text Label 950  3550 2    50   ~ 0
+CS_1
+Text Label 950  3750 2    50   ~ 0
+SCK
+Text Label 950  3950 2    50   ~ 0
+MOSI
 $EndSCHEMATC
