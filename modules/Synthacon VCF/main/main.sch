@@ -1,5 +1,4 @@
 EESchema Schematic File Version 4
-LIBS:main-cache
 EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
@@ -1486,4 +1485,6 @@ Wire Wire Line
 NoConn ~ 10500 1800
 Text Notes 10250 1500 0    50   ~ 0
 level
+Text Notes 1450 7150 1    50   ~ 10
+voltage wrong 
 $EndSCHEMATC
