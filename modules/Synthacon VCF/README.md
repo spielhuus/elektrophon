@@ -1,9 +1,9 @@
  # Synthacon VCF
  
-The Synthacon VCF is a popular VCF design by Steiner-Parker. It is a remake of the Moog lader filter but with diodes instead of transistors. <a href="synthacon-panel-tmb.jpg"><img align="right" src="synthacon-panel-tmb.jpg"></a> This is because Moog had a patent at that time for the lader filter design. This is the adaption of this filter from Ken Stone. Instead of a switch to select the input (HP, BP or LP) multiple inputs can be connected at the same time. This gives some very special effects. The filter has a very percusive sound and can be used to create a chime or symbal. Ken Stone resused the filter for his chime design. 
+The Synthacon VCF is a popular VCF design by Steiner-Parker. It is a remake of the Moog lader filter but with diodes instead of transistors. <a href="https://spielhuus.github.io/elektrophon/images/synthacon-panel-tmb.jpg"><img align="right" src="https://spielhuus.github.io/elektrophon/images/synthacon-panel-tmb.jpg"></a> This is because Moog had a patent at that time for the lader filter design. This is the adaption of this filter from Ken Stone. Instead of a switch to select the input (HP, BP or LP) multiple inputs can be connected at the same time. This gives some very special effects. The filter has a very percusive sound and can be used to create a chime or symbal. Ken Stone resused the filter for his chime design. 
 
 ## building
-<a href="synthacon-back.jpg"><img align="right" src="synthacon-back-tmb.jpg"></a>
+<a href="https://spielhuus.github.io/elektrophon/images/synthacon-back.jpg"><img align="right" src="https://spielhuus.github.io/elektrophon/images/synthacon-back-tmb.jpg"></a>
 
 ## calibration
 
