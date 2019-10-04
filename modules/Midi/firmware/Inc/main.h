@@ -85,7 +85,6 @@ void Error_Handler(void);
 #define LED_CLOCK_Pin GPIO_PIN_9
 #define LED_CLOCK_GPIO_Port GPIOA
 /* USER CODE BEGIN Private defines */
-//TODO void set_voltage(uint8_t channel, uint8_t gain, uint16_t mV);
 /* USER CODE END Private defines */
 
 #ifdef __cplusplus

@@ -6,9 +6,17 @@
  */
 
 #include "stm32f1xx_hal.h"
-#include "cmsis_os.h"
 #include "main.h"
 #include "midi.h"
+
+#define MIDI_CHANNELS 8
+#define MIDI_NOTES 88
+// Rescale 88 notes to 4096 mV:
+//    noteMsg = 0 -> 0 mV
+//    noteMsg = 87 -> 4096 mV
+// DAC output will be (4095/87) = 47.069 mV per note, and 564.9655 mV per octive
+// Note that DAC output will need to be amplified by 1.77X for the standard 1V/octave
+#define NOTE_SF 47.069f // This value can be tuned if CV output isn't exactly 1V/octave
 
 struct config_t _config[PORTS];
 
@@ -26,11 +34,11 @@ void set_voltage(uint8_t channel, uint8_t gain, uint16_t mV) {
 
     //copy the value to buffer
 //	while(pending_dac_channel>0) {} //wait for pending transaction
-//    dac_data[0] = command>>8;
-//    dac_data[1] = command&0xFF;
+    dac_data[0] = command>>8;
+    dac_data[1] = command&0xFF;
 
-    dac_data[1] = mV & 0xff;
-    dac_data[0] = ((mV >> 8) & 0xff) | 0x10;
+//    dac_data[1] = mV & 0xff;
+//    dac_data[0] = ((mV >> 8) & 0xff) | 0x10;
 
 	pending_dac_channel = channel;
 
@@ -137,56 +145,71 @@ void pitch_bend(unsigned char channel, uint8_t bend) {
 	}
 }
 
-void start_synth_task(void const * argument) {
-	for(;;) {
-		for( unsigned char i = 0; i<PORTS; i++ ) {
-			switch(_config[i].type) {
-			case CV:
-				if(_config[i].old_val != _config[i].val ) { //values changed?
-					_config[i].old_val = _config[i].val;
-					set_voltage(i, 0, _config[i].val);
-				}
-				break;
-
-			case PWM:
-				if( _config[i].last_time == 0 || _config[i].last_time < HAL_GetTick() ) {
-					_config[i].last_time = HAL_GetTick() + 100;
-					if(_config[i].old_val == 0 ) {
-						set_voltage(i, 1, 255);
-						_config[i].old_val = 255;
-					} else {
-						set_voltage(i, 1, 0);
-						_config[i].old_val = 0;
-					}
-				}
-				break;
-
-			case TRIANGLE:
-//				if( _config[i].last_time == 0 || _config[i].last_time < HAL_GetTick() ) {
-					_config[i].last_time = HAL_GetTick() + 100;
-					if(_config[i].val < 32 ) {
-						_config[i].state = RAISE;
-					} else if( _config[i].val > 4064 ) {
-						_config[i].state = FALL;
-					}
-
-					if( _config[i].state == RAISE ) {
-						_config[i].val = _config[i].val + 128;
-					} else {
-						_config[i].val = _config[i].val - 128;
-					}
-					set_voltage(i, 0, _config[i].val);
-					 _config[i].last_time = HAL_GetTick() + 100;
-//				}
-				break;
-
-			case GATE: break;
-			case TRIGGER: break;
-			case PITCH_BEND: break;
-			default: break;
+void process() {
+	for( unsigned char i = 0; i<PORTS; i++ ) {
+		switch(_config[i].type) {
+		case CV:
+			if(_config[i].old_val != _config[i].val ) { //values changed?
+				_config[i].old_val = _config[i].val;
+				uint16_t mV = (unsigned int) ((float) _config[i].val * NOTE_SF + 0.5);
+				set_voltage(i, 0, mV);
 			}
-		}
+			break;
 
-	    osDelay(1);
+		case GATE:
+			if(_config[i].old_val != _config[i].val ) { //values changed?
+				_config[i].old_val = _config[i].val;
+				 set_voltage(i, 1, _config[i].val<<5);
+			}
+			break;
+
+		case TRIGGER:
+			if(_config[i].old_val != _config[i].val ) { //values changed?
+				_config[i].old_val = _config[i].val;
+				 set_voltage(i, 1, 4095);
+				_config[i].last_time = HAL_GetTick() + 100;
+
+			} else if(_config[i].last_time > HAL_GetTick() ) {
+				_config[i].old_val = _config[i].val;
+				_config[i].last_time = 0;
+				 set_voltage(i, 1, 0);
+			}
+			break;
+
+		case PWM:
+			if( _config[i].last_time == 0 || _config[i].last_time < HAL_GetTick() ) {
+				_config[i].last_time = HAL_GetTick() + 100;
+				if(_config[i].old_val == 0 ) {
+					set_voltage(i, 1, 255);
+					_config[i].old_val = 255;
+				} else {
+					set_voltage(i, 1, 0);
+					_config[i].old_val = 0;
+				}
+			}
+			break;
+
+		case TRIANGLE:
+//				if( _config[i].last_time == 0 || _config[i].last_time < HAL_GetTick() ) {
+				_config[i].last_time = HAL_GetTick() + 100;
+				if(_config[i].val < 32 ) {
+					_config[i].state = RAISE;
+				} else if( _config[i].val > 4064 ) {
+					_config[i].state = FALL;
+				}
+
+				if( _config[i].state == RAISE ) {
+					_config[i].val = _config[i].val + 64;
+				} else {
+					_config[i].val = _config[i].val - 64;
+				}
+				set_voltage(i, 0, _config[i].val);
+				 _config[i].last_time = HAL_GetTick() + 100;
+//				}
+			break;
+
+		case PITCH_BEND: break;
+		default: break;
+		}
 	}
 }
