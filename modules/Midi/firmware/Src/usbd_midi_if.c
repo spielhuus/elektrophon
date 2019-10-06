@@ -23,7 +23,7 @@
 #include "LED.h"
 #include "midi.h"
 
-extern SPI_HandleTypeDef hspi1;
+//extern SPI_HandleTypeDef hspi1;
 
 // basic midi rx/tx functions
 static uint16_t MIDI_DataRx(uint8_t *msg, uint16_t length);

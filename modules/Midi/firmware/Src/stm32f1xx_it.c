@@ -32,7 +32,6 @@
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
-extern uint8_t pending_dac_channel;
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/

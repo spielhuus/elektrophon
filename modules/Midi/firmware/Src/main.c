@@ -92,6 +92,8 @@ int main(void)
   /* USER CODE BEGIN SysInit */
   set_config(0, CV, 0);
   set_config(1, GATE, 0);
+  set_config(2, CV, 1);
+  set_config(3, GATE, 1);
   /* USER CODE END SysInit */
 
   /* Initialize all configured peripherals */
@@ -317,47 +319,37 @@ static void MX_GPIO_Init(void)
   __HAL_RCC_GPIOB_CLK_ENABLE();
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOA, DAC_SELECT_1_Pin|DAC_SELECT_2_Pin|DAC_SELECT_3_Pin, GPIO_PIN_SET);
+  HAL_GPIO_WritePin(GPIOA, DAC_SELECT_1_Pin|DAC_SELECT_2_Pin|DAC_SELECT_3_Pin|LCD_SELECT_Pin, GPIO_PIN_SET);
 
   /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(GPIOB, DAC_SELECT_4_Pin|DAC_SELECT_5_Pin|DAC_SELECT_6_Pin|DAC_SELECT_7_Pin 
                           |DAC_SELECT_8_Pin, GPIO_PIN_SET);
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOB, LED_CONNECT_Pin|LED_TX_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(GPIOB, LCD_MODE_SELECT_Pin|LCD_RESET_Pin|LED_CONNECT_Pin|LED_ACTIVITY_Pin, GPIO_PIN_RESET);
 
-  /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOA, LED_HEARTBEAT_Pin|LED_CLOCK_Pin, GPIO_PIN_RESET);
-
-  /*Configure GPIO pins : DAC_SELECT_1_Pin DAC_SELECT_2_Pin DAC_SELECT_3_Pin */
-  GPIO_InitStruct.Pin = DAC_SELECT_1_Pin|DAC_SELECT_2_Pin|DAC_SELECT_3_Pin;
+  /*Configure GPIO pins : DAC_SELECT_1_Pin DAC_SELECT_2_Pin DAC_SELECT_3_Pin LCD_SELECT_Pin */
+  GPIO_InitStruct.Pin = DAC_SELECT_1_Pin|DAC_SELECT_2_Pin|DAC_SELECT_3_Pin|LCD_SELECT_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_PULLUP;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 
   /*Configure GPIO pins : DAC_SELECT_4_Pin DAC_SELECT_5_Pin DAC_SELECT_6_Pin DAC_SELECT_7_Pin 
-                           DAC_SELECT_8_Pin */
+                           DAC_SELECT_8_Pin LCD_MODE_SELECT_Pin LCD_RESET_Pin */
   GPIO_InitStruct.Pin = DAC_SELECT_4_Pin|DAC_SELECT_5_Pin|DAC_SELECT_6_Pin|DAC_SELECT_7_Pin 
-                          |DAC_SELECT_8_Pin;
+                          |DAC_SELECT_8_Pin|LCD_MODE_SELECT_Pin|LCD_RESET_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_PULLUP;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
 
-  /*Configure GPIO pins : LED_CONNECT_Pin LED_TX_Pin */
-  GPIO_InitStruct.Pin = LED_CONNECT_Pin|LED_TX_Pin;
+  /*Configure GPIO pins : LED_CONNECT_Pin LED_ACTIVITY_Pin */
+  GPIO_InitStruct.Pin = LED_CONNECT_Pin|LED_ACTIVITY_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_PULLDOWN;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
-
-  /*Configure GPIO pins : LED_HEARTBEAT_Pin LED_CLOCK_Pin */
-  GPIO_InitStruct.Pin = LED_HEARTBEAT_Pin|LED_CLOCK_Pin;
-  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
-  GPIO_InitStruct.Pull = GPIO_PULLDOWN;
-  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
-  HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 
 }
 
