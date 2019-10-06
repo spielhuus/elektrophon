@@ -22,10 +22,14 @@ struct config_t _config[PORTS];
 
 uint8_t dac_data[2];
 uint8_t pending_dac_channel = 0;
+uint32_t activity_led_timer = 0;
 
 extern SPI_HandleTypeDef hspi1;
 
 void set_voltage(uint8_t channel, uint8_t gain, uint16_t mV) {
+
+	HAL_GPIO_WritePin(LED_ACTIVITY_GPIO_Port, LED_ACTIVITY_Pin, SET);
+	activity_led_timer = HAL_GetTick() + 100;
 
 	//calculate value
 	uint16_t command = (channel%2) ? 0x9000 : 0x1000;
@@ -146,6 +150,11 @@ void pitch_bend(unsigned char channel, uint8_t bend) {
 }
 
 void process() {
+	if( activity_led_timer != 0 && activity_led_timer < HAL_GetTick() ) {
+		HAL_GPIO_WritePin(LED_ACTIVITY_GPIO_Port, LED_ACTIVITY_Pin, RESET);
+		activity_led_timer = 0;
+	}
+
 	for( unsigned char i = 0; i<PORTS; i++ ) {
 		switch(_config[i].type) {
 		case CV:

@@ -76,14 +76,16 @@ void Error_Handler(void);
 #define DAC_SELECT_7_GPIO_Port GPIOB
 #define DAC_SELECT_8_Pin GPIO_PIN_11
 #define DAC_SELECT_8_GPIO_Port GPIOB
-#define LED_CONNECT_Pin GPIO_PIN_12
+#define LCD_MODE_SELECT_Pin GPIO_PIN_12
+#define LCD_MODE_SELECT_GPIO_Port GPIOB
+#define LCD_RESET_Pin GPIO_PIN_14
+#define LCD_RESET_GPIO_Port GPIOB
+#define LCD_SELECT_Pin GPIO_PIN_8
+#define LCD_SELECT_GPIO_Port GPIOA
+#define LED_CONNECT_Pin GPIO_PIN_4
 #define LED_CONNECT_GPIO_Port GPIOB
-#define LED_TX_Pin GPIO_PIN_14
-#define LED_TX_GPIO_Port GPIOB
-#define LED_HEARTBEAT_Pin GPIO_PIN_8
-#define LED_HEARTBEAT_GPIO_Port GPIOA
-#define LED_CLOCK_Pin GPIO_PIN_9
-#define LED_CLOCK_GPIO_Port GPIOA
+#define LED_ACTIVITY_Pin GPIO_PIN_5
+#define LED_ACTIVITY_GPIO_Port GPIOB
 /* USER CODE BEGIN Private defines */
 /* USER CODE END Private defines */
 
