@@ -1,5 +1,4 @@
 EESchema Schematic File Version 4
-LIBS:main-cache
 EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
@@ -650,7 +649,7 @@ F 1 "100k" H 2581 1705 50  0000 R CNN
 F 2 "elektrophon:Potentiometer_Alpha_RD901F-40-00D_Single_Vertical" H 2650 1750 50  0001 C CNN
 F 3 "~" H 2650 1750 50  0001 C CNN
 	1    2650 1750
-	1    0    0    -1  
+	1    0    0    1   
 $EndComp
 Wire Wire Line
 	2650 1600 2200 1600
@@ -663,7 +662,7 @@ F 1 "500k" H 3831 1705 50  0000 R CNN
 F 2 "elektrophon:Potentiometer_Alpha_RD901F-40-00D_Single_Vertical" H 3900 1750 50  0001 C CNN
 F 3 "~" H 3900 1750 50  0001 C CNN
 	1    3900 1750
-	1    0    0    -1  
+	1    0    0    1   
 $EndComp
 Wire Wire Line
 	5150 2350 5400 2350
@@ -684,7 +683,7 @@ F 1 "100k" H 8631 1655 50  0000 R CNN
 F 2 "elektrophon:Potentiometer_Alpha_RD901F-40-00D_Single_Vertical" H 8700 1700 50  0001 C CNN
 F 3 "~" H 8700 1700 50  0001 C CNN
 	1    8700 1700
-	1    0    0    -1  
+	1    0    0    1   
 $EndComp
 Wire Wire Line
 	10250 1800 10150 1800
@@ -1172,7 +1171,7 @@ F 1 "100k" H 2581 4655 50  0000 R CNN
 F 2 "elektrophon:Potentiometer_Alpha_RD901F-40-00D_Single_Vertical" H 2650 4700 50  0001 C CNN
 F 3 "~" H 2650 4700 50  0001 C CNN
 	1    2650 4700
-	1    0    0    -1  
+	1    0    0    1   
 $EndComp
 Wire Wire Line
 	2650 4550 2200 4550
@@ -1185,7 +1184,7 @@ F 1 "500k" H 3831 4655 50  0000 R CNN
 F 2 "elektrophon:Potentiometer_Alpha_RD901F-40-00D_Single_Vertical" H 3900 4700 50  0001 C CNN
 F 3 "~" H 3900 4700 50  0001 C CNN
 	1    3900 4700
-	1    0    0    -1  
+	1    0    0    1   
 $EndComp
 Wire Wire Line
 	5150 5300 5400 5300
@@ -1807,7 +1806,7 @@ F 1 "100k" H 8631 4605 50  0000 R CNN
 F 2 "elektrophon:Potentiometer_Alpha_RD901F-40-00D_Single_Vertical" H 8700 4650 50  0001 C CNN
 F 3 "~" H 8700 4650 50  0001 C CNN
 	1    8700 4650
-	1    0    0    -1  
+	1    0    0    1   
 $EndComp
 Wire Wire Line
 	9000 4050 8700 4050
@@ -1831,4 +1830,12 @@ Wire Wire Line
 	5400 3750 8700 3750
 Wire Wire Line
 	10300 4750 10300 6150
+Text Notes 2550 1550 0    50   ~ 0
+speed
+Text Notes 2550 4450 0    50   ~ 0
+speed
+Text Notes 3600 1850 1    50   ~ 0
+shape
+Text Notes 3600 4800 1    50   ~ 0
+shape
 $EndSCHEMATC
