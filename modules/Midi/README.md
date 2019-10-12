@@ -43,6 +43,10 @@ https://github.com/FortySevenEffects/arduino_midi_library/wiki
 
 https://de.wikipedia.org/wiki/Tracker_(Musik)
 
+## STM32 drivers
+* [Nokia-LCD5110-HAL](https://github.com/Zeldax64/Nokia-LCD5110-HAL)
+* [mi:muz midi driver](https://github.com/mimuz/mimuz-tuch/tree/master/STM32)
+
 ## links
 
 * [Loop Midi](http://www.tobias-erichsen.de/software/loopmidi.html)
