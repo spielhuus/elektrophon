@@ -1,5 +1,4 @@
 EESchema Schematic File Version 4
-LIBS:main-cache
 EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
@@ -1759,4 +1758,6 @@ F 3 "~" H 8600 1150 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	2050 6050 8150 6050
+Text Notes 1000 5650 0    50   ~ 0
+redrum
 $EndSCHEMATC
