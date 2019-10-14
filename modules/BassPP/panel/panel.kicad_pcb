@@ -1,4 +1,4 @@
-(kicad_pcb (version 20171130) (host pcbnew 5.1.4-e60b266~84~ubuntu19.04.1)
+(kicad_pcb (version 20171130) (host pcbnew "(5.1.4)-1")
 
   (general
     (thickness 1.6)
@@ -61,7 +61,7 @@
     (pad_to_mask_clearance 0.051)
     (solder_mask_min_width 0.25)
     (aux_axis_origin 0 0)
-    (visible_elements FFFFFF7F)
+    (visible_elements 7FFFFFFF)
     (pcbplotparams
       (layerselection 0x010fc_ffffffff)
       (usegerberextensions false)
@@ -102,7 +102,7 @@
     (uvia_drill 0.1)
   )
 
-  (module elektrophon:panel_jack (layer F.Cu) (tedit 5D6D74CB) (tstamp 5D954750)
+  (module elektrophon:panel_jack (layer F.Cu) (tedit 5DA46DDA) (tstamp 5D954750)
     (at 81.28 132.08)
     (descr "Mounting Hole 8.4mm, no annular, M8")
     (tags "mounting hole 8.4mm no annular m8")
@@ -120,9 +120,14 @@
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (pad "" np_thru_hole circle (at 0 0) (size 6.4 6.4) (drill 6.4) (layers *.Cu *.Mask))
+    (model "${KIPRJMOD}/../../../lib/kicad/models/PJ301M-12 Thonkiconn v0.2.stp"
+      (offset (xyz 0 0.8 -10.5))
+      (scale (xyz 1 1 1))
+      (rotate (xyz 0 0 0))
+    )
   )
 
-  (module elektrophon:panel_potentiometer (layer F.Cu) (tedit 5D6D74E4) (tstamp 5D954748)
+  (module elektrophon:panel_potentiometer (layer F.Cu) (tedit 5DA46CEF) (tstamp 5D954748)
     (at 81.28 106.68)
     (descr "Mounting Hole 8.4mm, no annular, M8")
     (tags "mounting hole 8.4mm no annular m8")
@@ -140,9 +145,14 @@
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (pad "" np_thru_hole circle (at 0 0) (size 7.4 7.4) (drill 7.4) (layers *.Cu *.Mask))
+    (model "${KIPRJMOD}/../../../lib/kicad/models/chroma cap.step"
+      (offset (xyz 0 0 8))
+      (scale (xyz 1 1 1))
+      (rotate (xyz -90 0 0))
+    )
   )
 
-  (module elektrophon:panel_potentiometer (layer F.Cu) (tedit 5D6D74E4) (tstamp 5D954740)
+  (module elektrophon:panel_potentiometer (layer F.Cu) (tedit 5DA46CEF) (tstamp 5D954740)
     (at 81.28 71.12)
     (descr "Mounting Hole 8.4mm, no annular, M8")
     (tags "mounting hole 8.4mm no annular m8")
@@ -160,9 +170,14 @@
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (pad "" np_thru_hole circle (at 0 0) (size 7.4 7.4) (drill 7.4) (layers *.Cu *.Mask))
+    (model "${KIPRJMOD}/../../../lib/kicad/models/chroma cap.step"
+      (offset (xyz 0 0 8))
+      (scale (xyz 1 1 1))
+      (rotate (xyz -90 0 0))
+    )
   )
 
-  (module elektrophon:panel_potentiometer (layer F.Cu) (tedit 5D6D74E4) (tstamp 5D954738)
+  (module elektrophon:panel_potentiometer (layer F.Cu) (tedit 5DA46CEF) (tstamp 5D954738)
     (at 81.28 50.8)
     (descr "Mounting Hole 8.4mm, no annular, M8")
     (tags "mounting hole 8.4mm no annular m8")
@@ -180,6 +195,11 @@
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (pad "" np_thru_hole circle (at 0 0) (size 7.4 7.4) (drill 7.4) (layers *.Cu *.Mask))
+    (model "${KIPRJMOD}/../../../lib/kicad/models/chroma cap.step"
+      (offset (xyz 0 0 8))
+      (scale (xyz 1 1 1))
+      (rotate (xyz -90 0 0))
+    )
   )
 
   (module "elektrophon:LED Monitor" (layer F.Cu) (tedit 5D626FB3) (tstamp 5D954730)
@@ -195,7 +215,7 @@
     (fp_circle (center 0 0) (end 0.75 0) (layer F.Mask) (width 0.75))
   )
 
-  (module elektrophon:panel_potentiometer (layer F.Cu) (tedit 5D6D74E4) (tstamp 5D95472A)
+  (module elektrophon:panel_potentiometer (layer F.Cu) (tedit 5DA46CEF) (tstamp 5D95472A)
     (at 60.96 132.08)
     (descr "Mounting Hole 8.4mm, no annular, M8")
     (tags "mounting hole 8.4mm no annular m8")
@@ -213,9 +233,14 @@
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (pad "" np_thru_hole circle (at 0 0) (size 7.4 7.4) (drill 7.4) (layers *.Cu *.Mask))
+    (model "${KIPRJMOD}/../../../lib/kicad/models/chroma cap.step"
+      (offset (xyz 0 0 8))
+      (scale (xyz 1 1 1))
+      (rotate (xyz -90 0 0))
+    )
   )
 
-  (module elektrophon:panel_potentiometer (layer F.Cu) (tedit 5D6D74E4) (tstamp 5D954722)
+  (module elektrophon:panel_potentiometer (layer F.Cu) (tedit 5DA46CEF) (tstamp 5D954722)
     (at 60.96 106.68)
     (descr "Mounting Hole 8.4mm, no annular, M8")
     (tags "mounting hole 8.4mm no annular m8")
@@ -233,9 +258,14 @@
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (pad "" np_thru_hole circle (at 0 0) (size 7.4 7.4) (drill 7.4) (layers *.Cu *.Mask))
+    (model "${KIPRJMOD}/../../../lib/kicad/models/chroma cap.step"
+      (offset (xyz 0 0 8))
+      (scale (xyz 1 1 1))
+      (rotate (xyz -90 0 0))
+    )
   )
 
-  (module elektrophon:panel_potentiometer (layer F.Cu) (tedit 5D6D74E4) (tstamp 5D95471A)
+  (module elektrophon:panel_potentiometer (layer F.Cu) (tedit 5DA46CEF) (tstamp 5D95471A)
     (at 60.96 71.12)
     (descr "Mounting Hole 8.4mm, no annular, M8")
     (tags "mounting hole 8.4mm no annular m8")
@@ -253,9 +283,14 @@
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (pad "" np_thru_hole circle (at 0 0) (size 7.4 7.4) (drill 7.4) (layers *.Cu *.Mask))
+    (model "${KIPRJMOD}/../../../lib/kicad/models/chroma cap.step"
+      (offset (xyz 0 0 8))
+      (scale (xyz 1 1 1))
+      (rotate (xyz -90 0 0))
+    )
   )
 
-  (module elektrophon:panel_potentiometer (layer F.Cu) (tedit 5D6D74E4) (tstamp 5D954712)
+  (module elektrophon:panel_potentiometer (layer F.Cu) (tedit 5DA46CEF) (tstamp 5D954712)
     (at 60.96 50.8)
     (descr "Mounting Hole 8.4mm, no annular, M8")
     (tags "mounting hole 8.4mm no annular m8")
@@ -273,9 +308,14 @@
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (pad "" np_thru_hole circle (at 0 0) (size 7.4 7.4) (drill 7.4) (layers *.Cu *.Mask))
+    (model "${KIPRJMOD}/../../../lib/kicad/models/chroma cap.step"
+      (offset (xyz 0 0 8))
+      (scale (xyz 1 1 1))
+      (rotate (xyz -90 0 0))
+    )
   )
 
-  (module elektrophon:panel_potentiometer (layer F.Cu) (tedit 5D6D74E4) (tstamp 5D95470A)
+  (module elektrophon:panel_potentiometer (layer F.Cu) (tedit 5DA46CEF) (tstamp 5D95470A)
     (at 40.64 50.8)
     (descr "Mounting Hole 8.4mm, no annular, M8")
     (tags "mounting hole 8.4mm no annular m8")
@@ -293,9 +333,14 @@
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (pad "" np_thru_hole circle (at 0 0) (size 7.4 7.4) (drill 7.4) (layers *.Cu *.Mask))
+    (model "${KIPRJMOD}/../../../lib/kicad/models/chroma cap.step"
+      (offset (xyz 0 0 8))
+      (scale (xyz 1 1 1))
+      (rotate (xyz -90 0 0))
+    )
   )
 
-  (module elektrophon:panel_jack (layer F.Cu) (tedit 5D6D74CB) (tstamp 5D954702)
+  (module elektrophon:panel_jack (layer F.Cu) (tedit 5DA46DDA) (tstamp 5D954702)
     (at 40.64 132.08)
     (descr "Mounting Hole 8.4mm, no annular, M8")
     (tags "mounting hole 8.4mm no annular m8")
@@ -313,9 +358,14 @@
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (pad "" np_thru_hole circle (at 0 0) (size 6.4 6.4) (drill 6.4) (layers *.Cu *.Mask))
+    (model "${KIPRJMOD}/../../../lib/kicad/models/PJ301M-12 Thonkiconn v0.2.stp"
+      (offset (xyz 0 0.8 -10.5))
+      (scale (xyz 1 1 1))
+      (rotate (xyz 0 0 0))
+    )
   )
 
-  (module elektrophon:panel_jack (layer F.Cu) (tedit 5D6D74CB) (tstamp 5D9546FA)
+  (module elektrophon:panel_jack (layer F.Cu) (tedit 5DA46DDA) (tstamp 5D9546FA)
     (at 40.64 71.12)
     (descr "Mounting Hole 8.4mm, no annular, M8")
     (tags "mounting hole 8.4mm no annular m8")
@@ -333,6 +383,11 @@
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (pad "" np_thru_hole circle (at 0 0) (size 6.4 6.4) (drill 6.4) (layers *.Cu *.Mask))
+    (model "${KIPRJMOD}/../../../lib/kicad/models/PJ301M-12 Thonkiconn v0.2.stp"
+      (offset (xyz 0 0.8 -10.5))
+      (scale (xyz 1 1 1))
+      (rotate (xyz 0 0 0))
+    )
   )
 
   (gr_text R01 (at 76.2 152.4) (layer F.Cu)

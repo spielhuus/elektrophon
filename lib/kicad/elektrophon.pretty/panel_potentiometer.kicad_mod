@@ -1,4 +1,4 @@
-(module panel_potentiometer (layer F.Cu) (tedit 5D6D74E4)
+(module panel_potentiometer (layer F.Cu) (tedit 5DA46CEF)
   (descr "Mounting Hole 8.4mm, no annular, M8")
   (tags "mounting hole 8.4mm no annular m8")
   (attr virtual)
@@ -14,4 +14,9 @@
   (fp_circle (center 0 0) (end 6.35 0) (layer Cmts.User) (width 0.15))
   (fp_circle (center 0 0) (end 6.6 0) (layer F.CrtYd) (width 0.05))
   (pad "" np_thru_hole circle (at 0 0) (size 7.4 7.4) (drill 7.4) (layers *.Cu *.Mask))
+  (model "${KIPRJMOD}/../../../lib/kicad/models/chroma cap.step"
+    (offset (xyz 0 0 8))
+    (scale (xyz 1 1 1))
+    (rotate (xyz -90 0 0))
+  )
 )

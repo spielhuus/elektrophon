@@ -1,4 +1,4 @@
-(module Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles (layer F.Cu) (tedit 5D6837C9)
+(module Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles (layer F.Cu) (tedit 5DA46BDA)
   (descr "TRS 3.5mm, vertical, Thonkiconn, PCB mount, (http://www.qingpu-electronics.com/en/products/WQP-PJ398SM-362.html)")
   (tags "WQP-PJ398SM WQP-PJ301M-12 TRS 3.5mm mono vertical jack thonkiconn qingpu")
   (fp_text reference J1 (at -4.13 -5.63) (layer F.SilkS)
@@ -46,7 +46,7 @@
     (scale (xyz 1 1 1))
     (rotate (xyz 0 0 0))
   )
-  (model "/home/etienne/Projects/elektrophon/lib/kicad/models/PJ301M-12 Thonkiconn v0.2.stp"
+  (model "${KIPRJMOD}/../../../lib/kicad/models/PJ301M-12 Thonkiconn v0.2.stp"
     (offset (xyz 0 -1 0))
     (scale (xyz 1 1 1))
     (rotate (xyz 0 0 180))
