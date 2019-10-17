@@ -1,7 +1,7 @@
 Qty,Reference(s),Value,Type
 2,"C1, C2",10u,"Electrolytic Capacitors - Radial (D:5.0mm, P:2.50mm)   "
 6,"C3, C4, C6, C7, C9, C11",0.1u,"Ceramic Capacitors (L:4mm, P:2.50mm)  "
-5,"C5, C12, C13, C16, C17",2u2,Capacitor_THT:C_Rect_L7.2mm_W5.5mm_P5.00mm_FKS2_FKP2_MKS2_MKP2
+5,"C5, C12, C13, C16, C17",2u2,"Film Capacitors (L7.2mm, W5.5mm, P:5.00mm)"
 1,C8,1n,"Ceramic Capacitors (L:4mm, P:2.50mm)  "
 3,"C10, C14, C15",10n,"Ceramic Capacitors (L:4mm, P:2.50mm)  "
 5,"D1, D2, D3, D4, D5",1N4148,Diode
