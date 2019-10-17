@@ -1,4 +1,5 @@
 EESchema Schematic File Version 4
+LIBS:main-cache
 EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
@@ -88,7 +89,7 @@ F 1 "10k" H 1830 5605 50  0000 R CNN
 F 2 "elektrophon:Potentiometer_Alpha_RD901F-40-00D_Single_Vertical" H 1900 5650 50  0001 C CNN
 F 3 "~" H 1900 5650 50  0001 C CNN
 	1    1900 5650
-	1    0    0    -1  
+	1    0    0    1   
 $EndComp
 $Comp
 L Device:R_POT RV6
@@ -838,18 +839,6 @@ F 3 "" H 4050 6950 50  0001 C CNN
 	1    4050 6950
 	0    -1   -1   0   
 $EndComp
-Text Label 2900 1200 0    50   ~ 0
-SENSITIVITY
-Text Label 5250 6950 0    50   ~ 0
-SENSITIVITY
-Text Label 2900 1900 0    50   ~ 0
-TRIGGER
-Text Label 2900 2250 0    50   ~ 0
-DECAY
-Text Label 2900 2800 0    50   ~ 0
-CV2
-Text Label 2900 2600 0    50   ~ 0
-CV1
 Wire Wire Line
 	5250 2250 5250 1650
 Wire Wire Line
@@ -1114,7 +1103,7 @@ L Device:C C10
 U 1 1 5CF14943
 P 4550 4500
 F 0 "C10" V 4298 4500 50  0000 C CNN
-F 1 "4n7" V 4389 4500 50  0000 C CNN
+F 1 "10n" V 4389 4500 50  0000 C CNN
 F 2 "Capacitor_THT:C_Disc_D3.4mm_W2.1mm_P2.50mm" H 4588 4350 50  0001 C CNN
 F 3 "~" H 4550 4500 50  0001 C CNN
 	1    4550 4500
@@ -1327,47 +1316,15 @@ Wire Wire Line
 	1900 4450 2250 4450
 Wire Wire Line
 	8150 1150 8150 1250
-Text Label 5250 7050 0    50   ~ 0
-TRIGGER
-Text Label 5250 6850 0    50   ~ 0
-DECAY
-Text Label 5250 6750 0    50   ~ 0
-CV1
-Text Label 5250 6650 0    50   ~ 0
-CV2
 Wire Wire Line
 	2050 5900 1900 5900
 Wire Wire Line
 	2350 5900 2350 5650
 Wire Wire Line
 	2350 5650 2050 5650
-Wire Notes Line
-	2900 750  2900 6400
-Wire Notes Line
-	2900 6400 9550 6400
-Wire Notes Line
-	9550 6400 9550 750 
-Wire Notes Line
-	9550 750  2900 750 
 Wire Wire Line
 	9150 5400 9050 5400
 Connection ~ 9050 5400
-Text Label 5250 7650 0    50   ~ 0
-ShellVolume
-Text Label 5250 7450 0    50   ~ 0
-ImpactTone
-Text Label 5250 7150 0    50   ~ 0
-ImpactVolume1
-Text Label 5250 7350 0    50   ~ 0
-ImpactVolume2
-Text Label 5250 7550 0    50   ~ 0
-OUT
-Text Label 9550 5400 0    50   ~ 0
-OUT
-Text Label 2900 6050 0    50   ~ 0
-ImpactTone
-Text Label 2900 5800 0    50   ~ 0
-ImpactVolume2
 $Comp
 L power:PWR_FLAG #FLG04
 U 1 1 5DA131F6
@@ -1459,16 +1416,14 @@ F 3 "~" H 9300 5400 50  0001 C CNN
 	1    9300 5400
 	0    -1   -1   0   
 $EndComp
-Text Label 5250 7250 0    50   ~ 0
-Shell
 Text Notes 1550 5300 1    50   ~ 0
 Shell Volume
 Text Notes 1550 6350 1    50   ~ 0
 Impact Volume
 Text Notes 1450 5850 1    50   ~ 0
 Impact Tone
-Text Notes 4550 4800 0    50   ~ 0
-For lower shell voice C11 can \nbe replaced. for example 0.01u.
+Text Notes 4050 4850 0    50   ~ 0
+Original design uses 4n7 for c10, \nFor lower shell voice this is replaced.
 Wire Wire Line
 	1150 7450 1450 7450
 Connection ~ 1450 7450
@@ -1487,17 +1442,6 @@ Wire Wire Line
 	3300 1750 3300 1900
 Wire Wire Line
 	2050 1200 3800 1200
-$Comp
-L Connector:Conn_01x11_Male J4
-U 1 1 5D26B87A
-P 5050 7150
-F 0 "J4" H 5158 7835 50  0000 C CNN
-F 1 "Pin Header" H 5158 7742 50  0000 C CNN
-F 2 "Connector_PinSocket_2.54mm:PinSocket_1x11_P2.54mm_Vertical" H 5050 7150 50  0001 C CNN
-F 3 "~" H 5050 7150 50  0001 C CNN
-	1    5050 7150
-	1    0    0    -1  
-$EndComp
 Connection ~ 4050 6950
 $Comp
 L Device:R R14
@@ -1611,10 +1555,6 @@ F 3 "~" H 3800 6300 50  0001 C CNN
 	1    3800 6300
 	-1   0    0    1   
 $EndComp
-Text Label 2900 5400 0    50   ~ 0
-ImpactVolume1
-Text Label 2900 5000 0    50   ~ 0
-ShellVolume
 Wire Wire Line
 	1900 5400 4100 5400
 Connection ~ 3800 5800
@@ -1622,8 +1562,6 @@ Wire Wire Line
 	3800 5800 4450 5800
 Wire Wire Line
 	1900 5800 3800 5800
-Text Notes 5200 7750 0    50   ~ 0
-Panel
 Text Notes 4200 7750 0    50   ~ 0
 Power
 Wire Wire Line
@@ -1758,6 +1696,4 @@ F 3 "~" H 8600 1150 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	2050 6050 8150 6050
-Text Notes 1000 5650 0    50   ~ 0
-redrum
 $EndSCHEMATC
