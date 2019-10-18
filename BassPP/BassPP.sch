@@ -1,5 +1,5 @@
 EESchema Schematic File Version 4
-EELAYER 26 0
+EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -2162,4 +2162,6 @@ Wire Wire Line
 	10000 5900 9750 5900
 Wire Wire Line
 	9750 5900 9750 5400
+Text Notes 1100 5650 0    50   ~ 0
+redrum
 $EndSCHEMATC
