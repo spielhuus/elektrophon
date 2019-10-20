@@ -1,4 +1,4 @@
-## X4046: BOM
+## BOM: X4046
 
 ### main panel
 
