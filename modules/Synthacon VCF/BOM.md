@@ -1,4 +1,4 @@
-## Synthacon VCF: BOM
+## BOM: Synthacon VCF
 
 ### main panel
 
