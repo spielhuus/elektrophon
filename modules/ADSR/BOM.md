@@ -2,7 +2,7 @@
 
 ### main panel
 
-|Qty|Reference(s)      |Value  |Footprint                                                                        |
+|Qty|Reference(s)      |Value  |Description                                                                        |
 |---|------------------|-------|---------------------------------------------------------------------------------|
 |1  |C1                |10u    |Electrolytic Capacitors - Radial (D:5.0mm, P:2.50mm)                             |
 |2  |C2, C3            |0.1u   |Ceramic Capacitors (L:4mm, P:2.50mm)                                             |
