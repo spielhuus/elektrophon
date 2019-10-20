@@ -1,4 +1,4 @@
-## ADSR: Bass++
+## BOM: Bass++
 
 ### main panel
 
