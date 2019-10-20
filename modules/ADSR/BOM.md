@@ -1,4 +1,4 @@
-## ADSR: BOM
+## BOM: ADSR
 
 ### main panel
 
