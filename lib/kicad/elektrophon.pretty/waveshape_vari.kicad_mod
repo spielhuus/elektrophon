@@ -1,0 +1,18 @@
+(module waveshape_vari (layer F.Cu) (tedit 5DAC121E)
+  (descr "Imported from vari.svg")
+  (tags svg2mod)
+  (attr smd)
+  (fp_text reference vari (at 0 -4.107804) (layer F.SilkS) hide
+    (effects (font (size 1.524 1.524) (thickness 0.3048)))
+  )
+  (fp_text value G*** (at 0 11.25) (layer F.SilkS) hide
+    (effects (font (size 1.524 1.524) (thickness 0.3048)))
+  )
+  (fp_line (start -2.457617 8.75) (end -2.461467 7.87827) (layer F.Mask) (width 0.5))
+  (fp_line (start -2.461467 7.87827) (end -1.25 7.25) (layer F.Mask) (width 0.5))
+  (fp_line (start -1.25 7.25) (end 0 8) (layer F.Mask) (width 0.5))
+  (fp_line (start 0 8) (end 0 9) (layer F.Mask) (width 0.5))
+  (fp_line (start 0 9) (end 1.25 9.75) (layer F.Mask) (width 0.5))
+  (fp_line (start 1.25 9.75) (end 2.5 9.25) (layer F.Mask) (width 0.5))
+  (fp_line (start 2.5 9.25) (end 2.5 8.372841) (layer F.Mask) (width 0.5))
+)

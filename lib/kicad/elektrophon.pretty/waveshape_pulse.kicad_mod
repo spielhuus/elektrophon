@@ -1,0 +1,15 @@
+(module waveshape_pulse (layer F.Cu) (tedit 5DAC0D0E)
+  (descr "Imported from pulse.svg")
+  (tags svg2mod)
+  (attr smd)
+  (fp_text reference pulse (at 0 -4.271702) (layer F.SilkS) hide
+    (effects (font (size 1.524 1.524) (thickness 0.3048)))
+  )
+  (fp_text value G*** (at 0 11.5) (layer F.SilkS) hide
+    (effects (font (size 1.524 1.524) (thickness 0.3048)))
+  )
+  (fp_line (start -2.337957 9.75) (end -2.337957 7.25) (layer F.Mask) (width 0.5))
+  (fp_line (start -2.337957 7.25) (end -1.25 7.25) (layer F.Mask) (width 0.5))
+  (fp_line (start -1.25 7.284628) (end -1.25 9.75) (layer F.Mask) (width 0.5))
+  (fp_line (start -1.25 9.75) (end 2.75 9.75) (layer F.Mask) (width 0.5))
+)

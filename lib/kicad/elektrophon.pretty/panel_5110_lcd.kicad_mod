@@ -1,0 +1,14 @@
+(module panel_5110_lcd (layer F.Cu) (tedit 5DAAFFAB)
+  (fp_text reference REF** (at 0 23) (layer F.SilkS) hide
+    (effects (font (size 1 1) (thickness 0.15)))
+  )
+  (fp_text value panel_5110_lcd (at -0.75 -23) (layer F.Fab) hide
+    (effects (font (size 1 1) (thickness 0.15)))
+  )
+  (fp_line (start -21.625 -21.625) (end 21.625 -21.625) (layer F.SilkS) (width 0.15))
+  (fp_line (start 21.625 -21.625) (end 21.625 21.625) (layer F.SilkS) (width 0.15))
+  (fp_line (start -21.625 21.625) (end 21.625 21.625) (layer F.SilkS) (width 0.15))
+  (fp_line (start -21.625 -21.625) (end -21.625 21.625) (layer F.SilkS) (width 0.15))
+  (fp_poly (pts (xy -21.625 -21.625) (xy 21.625 -21.625) (xy 21.625 21.625) (xy -21.625 21.625)) (layer F.Mask) (width 0.1))
+  (fp_poly (pts (xy -21.625 -21.625) (xy 21.625 -21.625) (xy 21.625 21.625) (xy -21.625 21.625)) (layer B.Mask) (width 0.1))
+)
