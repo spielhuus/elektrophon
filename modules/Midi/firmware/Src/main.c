@@ -91,9 +91,9 @@ int main(void)
 
   /* USER CODE BEGIN SysInit */
   set_config(0, CV, 0);
-  set_config(1, GATE, 0);
+  set_config(1, TRIGGER, 0);
   set_config(2, CV, 1);
-  set_config(3, GATE, 1);
+  set_config(3, TRIGGER, 1);
   /* USER CODE END SysInit */
 
   /* Initialize all configured peripherals */
@@ -198,7 +198,7 @@ static void MX_SPI1_Init(void)
   hspi1.Instance = SPI1;
   hspi1.Init.Mode = SPI_MODE_MASTER;
   hspi1.Init.Direction = SPI_DIRECTION_2LINES;
-  hspi1.Init.DataSize = SPI_DATASIZE_8BIT;
+  hspi1.Init.DataSize = SPI_DATASIZE_16BIT;
   hspi1.Init.CLKPolarity = SPI_POLARITY_LOW;
   hspi1.Init.CLKPhase = SPI_PHASE_1EDGE;
   hspi1.Init.NSS = SPI_NSS_SOFT;
@@ -328,8 +328,15 @@ static void MX_GPIO_Init(void)
   /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(GPIOB, LCD_MODE_SELECT_Pin|LCD_RESET_Pin|LED_CONNECT_Pin|LED_ACTIVITY_Pin, GPIO_PIN_RESET);
 
-  /*Configure GPIO pins : DAC_SELECT_1_Pin DAC_SELECT_2_Pin DAC_SELECT_3_Pin LCD_SELECT_Pin */
-  GPIO_InitStruct.Pin = DAC_SELECT_1_Pin|DAC_SELECT_2_Pin|DAC_SELECT_3_Pin|LCD_SELECT_Pin;
+  /*Configure GPIO pin : DAC_SELECT_1_Pin */
+  GPIO_InitStruct.Pin = DAC_SELECT_1_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+  GPIO_InitStruct.Pull = GPIO_PULLUP;
+  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_HIGH;
+  HAL_GPIO_Init(DAC_SELECT_1_GPIO_Port, &GPIO_InitStruct);
+
+  /*Configure GPIO pins : DAC_SELECT_2_Pin DAC_SELECT_3_Pin LCD_SELECT_Pin */
+  GPIO_InitStruct.Pin = DAC_SELECT_2_Pin|DAC_SELECT_3_Pin|LCD_SELECT_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_PULLUP;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;

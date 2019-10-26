@@ -38,11 +38,13 @@ void set_voltage(uint8_t channel, uint8_t gain, uint16_t mV) {
 
     //copy the value to buffer
 //	while(pending_dac_channel>0) {} //wait for pending transaction
-    dac_data[0] = command>>8;
-    dac_data[1] = command&0xFF;
+//    dac_data[0] = command>>8;
+//    dac_data[1] = command&0xFF;
 
-//    dac_data[1] = mV & 0xff;
-//    dac_data[0] = ((mV >> 8) & 0xff) | 0x10;
+    mV = 0;
+
+    dac_data[1] = mV & 0xff;
+    dac_data[0] = ((mV >> 8) & 0xff) | 0x10;
 
 	pending_dac_channel = channel;
 
@@ -176,7 +178,7 @@ void process() {
 			if(_config[i].old_val != _config[i].val ) { //values changed?
 				_config[i].old_val = _config[i].val;
 				 set_voltage(i, 1, 4095);
-				_config[i].last_time = HAL_GetTick() + 100;
+				_config[i].last_time = HAL_GetTick() + 50;
 
 			} else if(_config[i].last_time > HAL_GetTick() ) {
 				_config[i].old_val = _config[i].val;
