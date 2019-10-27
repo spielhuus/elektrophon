@@ -43,6 +43,11 @@ https://github.com/FortySevenEffects/arduino_midi_library/wiki
 
 https://de.wikipedia.org/wiki/Tracker_(Musik)
 
+## rotary encoder
+
+https://www.best-microcontroller-projects.com/rotary-encoder.html
+https://www.lelong.com.my/rotary-encoder-arduino-robotic-respberry-littlecraft-175999578-2020-04-Sale-P.htm
+
 ## links
 
 * [Loop Midi](http://www.tobias-erichsen.de/software/loopmidi.html)
