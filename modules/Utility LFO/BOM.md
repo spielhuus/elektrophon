@@ -4,7 +4,7 @@
 
 |Qty|Reference(s)                                                      |Value           |Footprint                                                                                                  |
 |---|------------------------------------------------------------------|----------------|-----------------------------------------------------------------------------------------------------------|
-|2  |C1, C2                                                            |CP              |Electrolytic Capacitors - Radial (D:5.0mm, P:2.50mm)                                                       |
+|2  |C1, C2                                                            |10u             |Electrolytic Capacitors - Radial (D:5.0mm, P:2.50mm)                                                       |
 |6  |C3, C4, C5, C6, C9, C10                                           |100n            |Ceramic Capacitors (L:4mm, P:2.50mm)                                                                       |
 |2  |C7, C8                                                            |47n             |Ceramic Capacitors (L:4mm, P:2.50mm)                                                                       |
 |4  |D1, D2, D3, D4                                                    |D               |Diode                                                                                                      |
