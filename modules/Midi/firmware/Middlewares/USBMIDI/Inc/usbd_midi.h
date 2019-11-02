@@ -24,16 +24,12 @@
 #define MIDI_DATA_FS_MAX_PACKET_SIZE                 64  /* Endpoint IN & OUT Packet size */
 #define MIDI_CMD_PACKET_SIZE                         8  /* Control Endpoint Packet size */ 
 
-#define USB_MIDI_CONFIG_DESC_SIZ                    133//default is 101
+#define USB_MIDI_CONFIG_DESC_SIZ                    101
 #define MIDI_DATA_IN_PACKET_SIZE                    MIDI_DATA_FS_MAX_PACKET_SIZE
 #define MIDI_DATA_OUT_PACKET_SIZE                   MIDI_DATA_FS_MAX_PACKET_SIZE
 #define APP_RX_DATA_SIZE               				((MIDI_DATA_FS_MAX_PACKET_SIZE) * 4) //2048->256
 
 #define MIDI_IN_FRAME_INTERVAL		1
-
-#define MIDI_OUT_JACK_NUM (1)
-#define MIDI_IN_JACK_NUM (1)
-
 
 typedef struct _USBD_MIDI_ItfTypeDef{
   uint16_t (*pIf_MidiRx)    (uint8_t *msg, uint16_t length);

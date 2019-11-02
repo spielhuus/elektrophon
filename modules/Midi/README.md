@@ -5,73 +5,31 @@ When building modules for the synthesizer they also needs to be controller. For 
 the CV Function Generator creates control voltages of different types. it can act as a standalone oscillator or create envelopes for controlling the pitch. but the channels are freely programmable and can also be used as a simple sequenver with variable cv output. this module should create sexteen individual controllable slopes or waveforms.instead of creating different dac and trigger channels, all channels slopes are created with a dac. every dac is freely assignable to a controll channel. the control channels are serial midi, envelope gerator, slope generator, cv sequenver. 
 
 
+## STM32 libraries
 
-## develop with the STM32
+* The USB-MIDI Class Driver is based on [mimuz-tuch](https://github.com/mimuz/mimuz-tuch) project (c) [D.F.Mac. @TripArts Music](https://github.com/tadfmac).
+* [Simple library for STM32 to work with the PCD8544 LCD display \(a.k.a. Nokia 5110\)](https://github.com/evovch/STM32-LCD_PCD8544)
 
-the software is developed with the arduino IDE. before starting you must have installed the arduino software for you OS.
+## MIDI specification
 
-### prepare the arduino IDE
-
-#### install the STM32 board manager
-
-1) add the [STM32 for Arduino](http://dan.drown.org/stm32duino/package_STM32duino_index.json) url to the Additional Boards Manager list in the arduino IDE.
-2) 
-
-## midi drivers
-
-the midi 2 vco module requires midi serial support on the controller. for this some extra drivers have to be installed. 
-
-
-MIDI_CHANNEL_OMNI
-
-https://github.com/FortySevenEffects/arduino_midi_library/wiki
-
-### windows
-
-* [The Hairless MIDI to serial bridge.](http://projectgus.github.io/hairless-midiserial/) connects serial devices (like Arduinos) to send and receive MIDI signals.
-* [ttymidi](http://www.varal.org/ttymidi/) is a GPL-licensed program that allows external serial devices to interface with ALSA MIDI applications. 
-
-### linux
-
-## samples
+* [MIDI 1.0 Specification](https://www.midi.org/specifications-old/item/the-midi-1-0-specification) (Subscription required)
+* [Universal Serial Bus Device Class Definition for MIDI Devices](https://usb.org/sites/default/files/midi10.pdf)
 
 ## software
 
 * [SuperLooper](http://www.essej.net/sooperlooper/index.html) Live looping sampler capable of immediate loop recording, overdubbing, multiplying, reversing and more.
-* [OpenMPT] https://openmpt.org/) is a popular tracker software for Windows.
+* [OpenMPT](https://openmpt.org/) is a popular tracker software for Windows.
 * [MusE](http://www.muse-sequencer.org/index.html) is a MIDI/Audio sequencer with recording and editing capabilities.
-
-https://de.wikipedia.org/wiki/Tracker_(Musik)
 
 ## STM32 drivers
 * [Nokia-LCD5110-HAL](https://github.com/Zeldax64/Nokia-LCD5110-HAL)
 * [mi:muz midi driver](https://github.com/mimuz/mimuz-tuch/tree/master/STM32)
 
-## links
-
-* [Loop Midi](http://www.tobias-erichsen.de/software/loopmidi.html)
-* [Arduino-BLE-MIDI](https://github.com/lathoub/Arduino-BLE-MIDI)
-* [arduino_midi_library
-](https://github.com/FortySevenEffects/arduino_midi_library)
-* [STM32 Programming](https://www.onetransistor.eu/2018/09/stm32cube-code-init-bluepill.html) Programm the STM32 using STM32CubeMX and System Workbench for STM32
-* []()
-* []()
-
-
--
--
--
--
-
-
+## MIDI to CV projects
 
 * [MIDI Module](http://www.experimentalistsanonymous.com/ve3wwg/doku.php?id=analog_synth_midi)
 * [midi2cv](https://github.com/elkayem/midi2cv) - Simple midi to CV converter.
 * [Little-Scale](http://little-scale.blogspot.com/2017/11/usb-midi-to-eight-gates-and-sixteen-cv.html) - Midi2CV converter based on the Teensy.
-* [MCP4802 DAC Datasheet](http://ww1.microchip.com/downloads/en/DeviceDoc/20002249B.pdf)
-* [AVR® Microcontroller Hardware Design Considerations](http://ww1.microchip.com/downloads/en/AppNotes/AN2519-AVR-Microcontroller-Hardware-Design-Considerations-00002519B.pdf)
-https://www.hackster.io/arjun/programming-attiny85-with-arduino-uno-afb829
 
-## license
-
-[License CC BY 4.0](http://creativecommons.org/licenses/by/4.0/) - Attribution 4.0 International
+---
+[![CC BY-SA](https://licensebuttons.net/l/by-sa/3.0/88x31.png)](https://creativecommons.org/licenses/by-sa/4.0/)

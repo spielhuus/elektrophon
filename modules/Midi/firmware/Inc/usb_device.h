@@ -82,8 +82,7 @@ void MX_USB_DEVICE_Init(void);
  * -- Insert functions declaration here --
  */
 /* USER CODE BEGIN FD */
-/** USB device core handle. */
-extern USBD_HandleTypeDef hUsbDeviceFS;
+
 /* USER CODE END FD */
 /**
   * @}

@@ -37,7 +37,15 @@ extern "C" {
 
 /* Exported types ------------------------------------------------------------*/
 /* USER CODE BEGIN ET */
-
+#define PORTS 16
+enum PORT_TYPE { OFF, CV, GATE, PITCH_BEND, TRIGGER };
+typedef struct {
+	enum PORT_TYPE type;
+	uint8_t midi_channel;
+	uint16_t val;
+	uint32_t time;
+} config_t;
+config_t configs[PORTS];
 /* USER CODE END ET */
 
 /* Exported constants --------------------------------------------------------*/
@@ -54,39 +62,34 @@ extern "C" {
 void Error_Handler(void);
 
 /* USER CODE BEGIN EFP */
-//void note_on(uint8_t channel, uint8_t note, uint8_t velocity);
-//void note_off(uint8_t channel, uint8_t note, uint8_t velocity);
 
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
-#define DAC_SELECT_1_Pin GPIO_PIN_3
+#define DAC_SELECT_1_Pin GPIO_PIN_0
 #define DAC_SELECT_1_GPIO_Port GPIOA
-#define DAC_SELECT_2_Pin GPIO_PIN_4
+#define DAC_SELECT_2_Pin GPIO_PIN_1
 #define DAC_SELECT_2_GPIO_Port GPIOA
-#define DAC_SELECT_3_Pin GPIO_PIN_6
+#define DAC_SELECT_3_Pin GPIO_PIN_2
 #define DAC_SELECT_3_GPIO_Port GPIOA
-#define DAC_SELECT_4_Pin GPIO_PIN_0
-#define DAC_SELECT_4_GPIO_Port GPIOB
-#define DAC_SELECT_5_Pin GPIO_PIN_1
-#define DAC_SELECT_5_GPIO_Port GPIOB
-#define DAC_SELECT_6_Pin GPIO_PIN_2
-#define DAC_SELECT_6_GPIO_Port GPIOB
-#define DAC_SELECT_7_Pin GPIO_PIN_10
-#define DAC_SELECT_7_GPIO_Port GPIOB
-#define DAC_SELECT_8_Pin GPIO_PIN_11
-#define DAC_SELECT_8_GPIO_Port GPIOB
-#define LCD_MODE_SELECT_Pin GPIO_PIN_12
-#define LCD_MODE_SELECT_GPIO_Port GPIOB
+#define LED_ACTIVITY_Pin GPIO_PIN_10
+#define LED_ACTIVITY_GPIO_Port GPIOB
+#define LED_CONNECT_Pin GPIO_PIN_11
+#define LED_CONNECT_GPIO_Port GPIOB
+#define LCD_SPI_CE_Pin GPIO_PIN_12
+#define LCD_SPI_CE_GPIO_Port GPIOB
+#define LCD_SPI_CLK_Pin GPIO_PIN_13
+#define LCD_SPI_CLK_GPIO_Port GPIOB
 #define LCD_RESET_Pin GPIO_PIN_14
 #define LCD_RESET_GPIO_Port GPIOB
-#define LCD_SELECT_Pin GPIO_PIN_8
-#define LCD_SELECT_GPIO_Port GPIOA
-#define LED_CONNECT_Pin GPIO_PIN_4
-#define LED_CONNECT_GPIO_Port GPIOB
-#define LED_ACTIVITY_Pin GPIO_PIN_5
-#define LED_ACTIVITY_GPIO_Port GPIOB
+#define LCD_SPI_DIN_Pin GPIO_PIN_15
+#define LCD_SPI_DIN_GPIO_Port GPIOB
+#define LCD_BACKLIGHT_Pin GPIO_PIN_8
+#define LCD_BACKLIGHT_GPIO_Port GPIOA
+#define LCD_DC_Pin GPIO_PIN_9
+#define LCD_DC_GPIO_Port GPIOA
 /* USER CODE BEGIN Private defines */
+
 /* USER CODE END Private defines */
 
 #ifdef __cplusplus
