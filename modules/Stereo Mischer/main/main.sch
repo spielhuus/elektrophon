@@ -1,5 +1,4 @@
 EESchema Schematic File Version 4
-LIBS:main-cache
 EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
@@ -1062,5 +1061,16 @@ F 2 "" H 9800 650 50  0001 C CNN
 F 3 "" H 9800 650 50  0001 C CNN
 	1    9800 650 
 	1    0    0    -1  
+$EndComp
+$Comp
+L Amplifier_Operational:NE5532 U?
+U 2 1 5DBEF772
+P 2950 3250
+F 0 "U?" H 2950 2883 50  0000 C CNN
+F 1 "NE5532" H 2950 2974 50  0000 C CNN
+F 2 "" H 2950 3250 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/ne5532.pdf" H 2950 3250 50  0001 C CNN
+	2    2950 3250
+	1    0    0    1   
 $EndComp
 $EndSCHEMATC
