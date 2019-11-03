@@ -26,8 +26,7 @@ extern SPI_HandleTypeDef hspi1;
 
 void set_voltage(uint8_t channel, uint8_t gain, uint16_t mV) {
 
-//	HAL_GPIO_WritePin(LED_ACTIVITY_GPIO_Port, LED_ACTIVITY_Pin, SET);
-//	activity_led_timer = HAL_GetTick() + 100;
+	HAL_GPIO_TogglePin(LED_CONNECT_GPIO_Port, LED_ACTIVITY_Pin);
 
 	//calculate value
 	uint16_t command = (channel%2) ? 0x9000 : 0x1000;
@@ -135,7 +134,7 @@ void note_off(uint8_t channel, uint8_t note, uint8_t velocity) {
 //	}
 //}
 
-void process() {
+void midi_process() {
 
 	for( unsigned char i = 0; i<PORTS; i++ ) {
 		switch(configs[i].type) {

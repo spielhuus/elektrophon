@@ -10,6 +10,6 @@
 
 void menu_init();
 void menu_logo();
-void process_menu(uint16_t position);
+void process_menu(uint8_t button, uint16_t position);
 
 #endif /* MENU_H_ */

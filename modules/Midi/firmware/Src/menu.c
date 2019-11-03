@@ -11,6 +11,7 @@
 #include "nokia5110_LCD.h"
 
 char buffer[48];
+uint16_t _old_position = 0;
 
 enum menu_types {
 	LOGO,MAIN, CHANNEL
@@ -37,27 +38,30 @@ void menu_logo() {
 }
 
 void _main_menu(uint16_t position) {
-	if(menu_selected != MAIN ) {
-		LCD_clrScr();
+	if(menu_selected != MAIN || _old_position != position ) {
+		if(menu_selected != MAIN || _old_position != position ) {
+			LCD_clrScr();
+		}
+
+		LCD_invertText(1==position); LCD_print("01", 0, 2);
+		LCD_invertText(2==position); LCD_print("02", 20, 2);
+		LCD_invertText(3==position); LCD_print("03", 40, 2);
+		LCD_invertText(4==position); LCD_print("04", 60, 2);
+		LCD_invertText(5==position); LCD_print("05", 0, 3);
+		LCD_invertText(6==position); LCD_print("06", 20, 3);
+		LCD_invertText(7==position); LCD_print("07", 40, 3);
+		LCD_invertText(8==position); LCD_print("08", 60, 3);
+		LCD_invertText(9==position); LCD_print("09", 0, 4);
+		LCD_invertText(10==position); LCD_print("10", 20, 4);
+		LCD_invertText(11==position); LCD_print("11", 40, 4);
+		LCD_invertText(12==position); LCD_print("12", 60, 4);
+		LCD_invertText(13==position); LCD_print("13", 00, 5);
+		LCD_invertText(14==position); LCD_print("14", 20, 5);
+		LCD_invertText(15==position); LCD_print("15", 40, 5);
+		LCD_invertText(16==position); LCD_print("16", 60, 5);
+		_old_position = position;
 		menu_selected = MAIN;
 	}
-
-	LCD_invertText(1==position); LCD_print("01", 0, 2);
-	LCD_invertText(2==position); LCD_print("02", 20, 2);
-	LCD_invertText(3==position); LCD_print("03", 40, 2);
-	LCD_invertText(4==position); LCD_print("04", 60, 2);
-	LCD_invertText(5==position); LCD_print("05", 0, 3);
-	LCD_invertText(6==position); LCD_print("06", 20, 3);
-	LCD_invertText(7==position); LCD_print("07", 40, 3);
-	LCD_invertText(8==position); LCD_print("08", 60, 3);
-	LCD_invertText(9==position); LCD_print("09", 0, 4);
-	LCD_invertText(10==position); LCD_print("10", 20, 4);
-	LCD_invertText(11==position); LCD_print("11", 40, 4);
-	LCD_invertText(12==position); LCD_print("12", 60, 4);
-	LCD_invertText(13==position); LCD_print("13", 00, 5);
-	LCD_invertText(14==position); LCD_print("14", 20, 5);
-	LCD_invertText(15==position); LCD_print("15", 40, 5);
-	LCD_invertText(16==position); LCD_print("16", 60, 5);
 }
 
 void _sub_menu(uint16_t position) {
@@ -84,20 +88,25 @@ void _sub_menu(uint16_t position) {
 //	LCD_invertText(3==position); LCD_print("<--", 0, 4);
 }
 
-void process_menu(uint16_t position) {
+void process_menu(uint8_t button, uint16_t position) {
 	LCD_invertText(false); LCD_print("elektrophon", 8, 0);
-//	if( (HAL_GPIO_ReadPin(ENCODER_SWITCH_GPIO_Port, ENCODER_SWITCH_Pin) == GPIO_PIN_RESET ) ) {
-//		if( menu_selected == MAIN ) {
-//			_sub_menu(1);
-//		} else if( menu_selected == CHANNEL ) {
-//			if( position == 3 )
-//				_main_menu(1);
-//		}
-//	} else {
-//		if(menu_selected == LOGO || menu_selected == MAIN ) {
-//			_main_menu(position);
-//		} else if(menu_selected == CHANNEL ) {
-//			_sub_menu(position);
-//		}
-//	}
+
+	snprintf(buffer, 48, "pos: %d, %d ", position, button);
+	LCD_invertText(false); LCD_print(buffer, 0, 1);
+
+
+	if( button ) {
+		if( menu_selected == MAIN ) {
+			_sub_menu(1);
+		} else if( menu_selected == CHANNEL ) {
+			if( position == 3 )
+				_main_menu(1);
+		}
+	} else {
+		if(menu_selected == LOGO || menu_selected == MAIN ) {
+			_main_menu(position);
+		} else if(menu_selected == CHANNEL ) {
+			_sub_menu(position);
+		}
+	}
 }

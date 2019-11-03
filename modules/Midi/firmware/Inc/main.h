@@ -88,6 +88,8 @@ void Error_Handler(void);
 #define LCD_BACKLIGHT_GPIO_Port GPIOA
 #define LCD_DC_Pin GPIO_PIN_9
 #define LCD_DC_GPIO_Port GPIOA
+#define ENCODER_SWITCH_Pin GPIO_PIN_5
+#define ENCODER_SWITCH_GPIO_Port GPIOB
 /* USER CODE BEGIN Private defines */
 
 /* USER CODE END Private defines */

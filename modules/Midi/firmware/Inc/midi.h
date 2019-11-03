@@ -19,6 +19,6 @@ void note_on(uint8_t channel, uint8_t note, uint8_t velocity);
 void note_off(uint8_t channel, uint8_t note, uint8_t velocity);
 void pitch_bend(uint8_t channel, uint8_t bend);
 
-void process();
+void midi_process();
 
 #endif /* MIDI_H_ */
