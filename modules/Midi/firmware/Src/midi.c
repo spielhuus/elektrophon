@@ -17,7 +17,7 @@
 // DAC output will be (4095/87) = 47.069 mV per note, and 564.9655 mV per octive
 // Note that DAC output will need to be amplified by 1.77X for the standard 1V/octave
 #define NOTE_SF 47.069f // This value can be tuned if CV output isn't exactly 1V/octave
-#define TRIGGER_VALUE 4095
+#define TRIGGER_VALUE 4000
 #define TRIGGER_TIMER 100
 
 uint8_t dac_data[2];
