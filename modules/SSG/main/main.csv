@@ -1,0 +1,36 @@
+Qty,Reference(s),Value,Footprint,Datasheet
+2,"C1, C2",10u,Capacitor_THT:CP_Radial_D5.0mm_P2.50mm,~
+14,"C3, C4, C5, C6, C7, C8, C9, C10, C11, C12, C15, C16, C18, C19",0.1u,Capacitor_THT:C_Disc_D3.4mm_W2.1mm_P2.50mm,~
+3,"C13, C17, C20",220n,Capacitor_THT:C_Disc_D3.4mm_W2.1mm_P2.50mm,~
+1,C14,100n,Capacitor_THT:C_Disc_D3.4mm_W2.1mm_P2.50mm,~
+1,C21,100p,Capacitor_THT:C_Disc_D3.4mm_W2.1mm_P2.50mm,~
+2,"C22, C23",47p,Capacitor_THT:C_Disc_D3.4mm_W2.1mm_P2.50mm,~
+8,"D1, D2, D3, D4, D5, D6, D7, D8",1N4148,Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal,https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf
+1,D9,LED,LED_THT:LED_D5.0mm,~
+1,J1,IDC Header,Connector_IDC:IDC-Header_2x05_P2.54mm_Vertical,~
+1,J2,Conn_01x20_Female,Connector_PinHeader_2.54mm:PinHeader_1x20_P2.54mm_Vertical,~
+2,"Q1, Q2",PN4250,Package_TO_SOT_THT:TO-92_Inline,http://www.fairchildsemi.com/ds/BC/BC557.pdf
+2,"Q3, Q4",J201,Package_TO_SOT_THT:TO-92_Inline,http://www.fairchildsemi.com/ds/BF/BF244A.pdf
+4,"R1, R2, R13, R14",2M7,Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal,~
+9,"R3, R4, R5, R6, R11, R12, R15, R16, R24",33k,Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal,~
+4,"R7, R9, R23, R26",100k,Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal,~
+4,"R8, R10, R21, R22",15k,Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal,~
+2,"R17, R19",82k,Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal,~
+3,"R18, R20, R32",1M5,Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal,~
+1,R25,680k,Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal,~
+2,"R27, R31",820k,Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal,~
+1,R28,1m,Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal,~
+1,R29,4M7,Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal,~
+3,"R30, R42, R43",1M,Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal,~
+3,"R33, R34, R35",330,Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal,~
+4,"R36, R37, R38, R39",10k,Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal,~
+2,"R40, R41",470k,Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal,~
+2,"R44, R45",2M2,Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal,~
+5,"R46, R47, R48, R49, R51",3k3,Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal,~
+2,"R50, R52",100,Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal,~
+1,RV1,R_POT_TRIM,Potentiometer_THT:Potentiometer_Bourns_3296Z_Horizontal,~
+1,RV2,25k,Potentiometer_THT:Potentiometer_Bourns_3296Z_Horizontal,~
+2,"U1, U4",TL072,Package_DIP:DIP-8_W7.62mm_Socket,http://www.ti.com/lit/ds/symlink/tl071.pdf
+2,"U2, U3",LM3900,Package_DIP:DIP-14_W7.62mm_Socket,
+2,"U5, U6",CA3080,Package_DIP:DIP-8_W7.62mm_Socket,http://www.intersil.com/content/dam/Intersil/documents/ca30/ca3080-a.pdf
+1,U7,LM741,Package_DIP:DIP-8_W7.62mm_Socket,http://www.ti.com/lit/ds/symlink/lm741.pdf
