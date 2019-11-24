@@ -1,4 +1,4 @@
-(kicad_pcb (version 20171130) (host pcbnew 5.1.4-e60b266~84~ubuntu19.04.1)
+(kicad_pcb (version 20171130) (host pcbnew 5.1.5-52549c5~84~ubuntu19.04.1)
 
   (general
     (thickness 1.6)
@@ -110,16 +110,17 @@
     (uvia_drill 0.1)
   )
 
-  (module elektrophon:LED_Monitor (layer F.Cu) (tedit 5D62B726) (tstamp 5D9F5E01)
-    (at 33.02 137.16)
+  (module elektrophon:LED_Monitor (layer F.Cu) (tedit 5D62B726) (tstamp 5DD9D886)
+    (at 58.17 135.51)
     (descr "Imported from LED Monitor.svg")
     (tags svg2mod)
+    (path /5DD9DCB6)
     (zone_connect 2)
     (attr smd)
-    (fp_text reference svg2mod (at 0 -5.054774) (layer F.SilkS) hide
+    (fp_text reference H27 (at 0 -5.054774) (layer F.SilkS) hide
       (effects (font (size 1.524 1.524) (thickness 0.3048)))
     )
-    (fp_text value G*** (at 0 5.054774) (layer F.SilkS) hide
+    (fp_text value LED_L_5 (at 0 5.054774) (layer F.SilkS) hide
       (effects (font (size 1.524 1.524) (thickness 0.3048)))
     )
     (pad 1 connect custom (at 0 0) (size 5 5) (layers *.Mask)
@@ -130,16 +131,17 @@
       ))
   )
 
-  (module elektrophon:LED_Monitor (layer F.Cu) (tedit 5D62B726) (tstamp 5D9F5DFD)
-    (at 40.64 137.16)
+  (module elektrophon:LED_Monitor (layer F.Cu) (tedit 5D62B726) (tstamp 5DD9D881)
+    (at 58.17 129.54)
     (descr "Imported from LED Monitor.svg")
     (tags svg2mod)
+    (path /5DD99030)
     (zone_connect 2)
     (attr smd)
-    (fp_text reference svg2mod (at 0 -5.054774) (layer F.SilkS) hide
+    (fp_text reference H26 (at 0 -5.054774) (layer F.SilkS) hide
       (effects (font (size 1.524 1.524) (thickness 0.3048)))
     )
-    (fp_text value G*** (at 0 5.054774) (layer F.SilkS) hide
+    (fp_text value LED_R_5 (at 0 5.054774) (layer F.SilkS) hide
       (effects (font (size 1.524 1.524) (thickness 0.3048)))
     )
     (pad 1 connect custom (at 0 0) (size 5 5) (layers *.Mask)
@@ -150,16 +152,17 @@
       ))
   )
 
-  (module elektrophon:LED_Monitor (layer F.Cu) (tedit 5D62B726) (tstamp 5D9F5DF9)
-    (at 55.88 137.16)
+  (module elektrophon:LED_Monitor (layer F.Cu) (tedit 5D62B726) (tstamp 5DD9D87C)
+    (at 52.2 135.51)
     (descr "Imported from LED Monitor.svg")
     (tags svg2mod)
+    (path /5DD9DCB0)
     (zone_connect 2)
     (attr smd)
-    (fp_text reference svg2mod (at 0 -5.054774) (layer F.SilkS) hide
+    (fp_text reference H25 (at 0 -5.054774) (layer F.SilkS) hide
       (effects (font (size 1.524 1.524) (thickness 0.3048)))
     )
-    (fp_text value G*** (at 0 5.054774) (layer F.SilkS) hide
+    (fp_text value LED_L_4 (at 0 5.054774) (layer F.SilkS) hide
       (effects (font (size 1.524 1.524) (thickness 0.3048)))
     )
     (pad 1 connect custom (at 0 0) (size 5 5) (layers *.Mask)
@@ -170,16 +173,17 @@
       ))
   )
 
-  (module elektrophon:LED_Monitor (layer F.Cu) (tedit 5D62B726) (tstamp 5D9F5DF5)
-    (at 63.5 137.16)
+  (module elektrophon:LED_Monitor (layer F.Cu) (tedit 5D62B726) (tstamp 5DD9D877)
+    (at 52.2 129.54)
     (descr "Imported from LED Monitor.svg")
     (tags svg2mod)
+    (path /5DD98DFD)
     (zone_connect 2)
     (attr smd)
-    (fp_text reference svg2mod (at 0 -5.054774) (layer F.SilkS) hide
+    (fp_text reference H24 (at 0 -5.054774) (layer F.SilkS) hide
       (effects (font (size 1.524 1.524) (thickness 0.3048)))
     )
-    (fp_text value G*** (at 0 5.054774) (layer F.SilkS) hide
+    (fp_text value LED_R_4 (at 0 5.054774) (layer F.SilkS) hide
       (effects (font (size 1.524 1.524) (thickness 0.3048)))
     )
     (pad 1 connect custom (at 0 0) (size 5 5) (layers *.Mask)
@@ -190,16 +194,17 @@
       ))
   )
 
-  (module elektrophon:LED_Monitor (layer F.Cu) (tedit 5D62B726) (tstamp 5D9F5DF1)
-    (at 48.26 137.16)
+  (module elektrophon:LED_Monitor (layer F.Cu) (tedit 5D62B726) (tstamp 5DD9D872)
+    (at 46.23 135.51)
     (descr "Imported from LED Monitor.svg")
     (tags svg2mod)
+    (path /5DD9DCAA)
     (zone_connect 2)
     (attr smd)
-    (fp_text reference svg2mod (at 0 -5.054774) (layer F.SilkS) hide
+    (fp_text reference H23 (at 0 -5.054774) (layer F.SilkS) hide
       (effects (font (size 1.524 1.524) (thickness 0.3048)))
     )
-    (fp_text value G*** (at 0 5.054774) (layer F.SilkS) hide
+    (fp_text value LED_L_3 (at 0 5.054774) (layer F.SilkS) hide
       (effects (font (size 1.524 1.524) (thickness 0.3048)))
     )
     (pad 1 connect custom (at 0 0) (size 5 5) (layers *.Mask)
@@ -210,16 +215,17 @@
       ))
   )
 
-  (module elektrophon:LED_Monitor (layer F.Cu) (tedit 5D62B726) (tstamp 5D9F5D8E)
-    (at 63.5 129.54)
+  (module elektrophon:LED_Monitor (layer F.Cu) (tedit 5D62B726) (tstamp 5DD9D86D)
+    (at 46.23 129.54)
     (descr "Imported from LED Monitor.svg")
     (tags svg2mod)
+    (path /5DD98CB0)
     (zone_connect 2)
     (attr smd)
-    (fp_text reference svg2mod (at 0 -5.054774) (layer F.SilkS) hide
+    (fp_text reference H22 (at 0 -5.054774) (layer F.SilkS) hide
       (effects (font (size 1.524 1.524) (thickness 0.3048)))
     )
-    (fp_text value G*** (at 0 5.054774) (layer F.SilkS) hide
+    (fp_text value LED_R_3 (at 0 5.054774) (layer F.SilkS) hide
       (effects (font (size 1.524 1.524) (thickness 0.3048)))
     )
     (pad 1 connect custom (at 0 0) (size 5 5) (layers *.Mask)
@@ -230,16 +236,17 @@
       ))
   )
 
-  (module elektrophon:LED_Monitor (layer F.Cu) (tedit 5D62B726) (tstamp 5D9F5D8E)
-    (at 55.88 129.54)
+  (module elektrophon:LED_Monitor (layer F.Cu) (tedit 5D62B726) (tstamp 5DD9D868)
+    (at 40.26 135.51)
     (descr "Imported from LED Monitor.svg")
     (tags svg2mod)
+    (path /5DD9DCA4)
     (zone_connect 2)
     (attr smd)
-    (fp_text reference svg2mod (at 0 -5.054774) (layer F.SilkS) hide
+    (fp_text reference H21 (at 0 -5.054774) (layer F.SilkS) hide
       (effects (font (size 1.524 1.524) (thickness 0.3048)))
     )
-    (fp_text value G*** (at 0 5.054774) (layer F.SilkS) hide
+    (fp_text value LED_L_2 (at 0 5.054774) (layer F.SilkS) hide
       (effects (font (size 1.524 1.524) (thickness 0.3048)))
     )
     (pad 1 connect custom (at 0 0) (size 5 5) (layers *.Mask)
@@ -250,16 +257,17 @@
       ))
   )
 
-  (module elektrophon:LED_Monitor (layer F.Cu) (tedit 5D62B726) (tstamp 5D9F5D8E)
-    (at 48.26 129.54)
+  (module elektrophon:LED_Monitor (layer F.Cu) (tedit 5D62B726) (tstamp 5DD9D863)
+    (at 40.26 129.54)
     (descr "Imported from LED Monitor.svg")
     (tags svg2mod)
+    (path /5DD98B35)
     (zone_connect 2)
     (attr smd)
-    (fp_text reference svg2mod (at 0 -5.054774) (layer F.SilkS) hide
+    (fp_text reference H20 (at 0 -5.054774) (layer F.SilkS) hide
       (effects (font (size 1.524 1.524) (thickness 0.3048)))
     )
-    (fp_text value G*** (at 0 5.054774) (layer F.SilkS) hide
+    (fp_text value LED_R_2 (at 0 5.054774) (layer F.SilkS) hide
       (effects (font (size 1.524 1.524) (thickness 0.3048)))
     )
     (pad 1 connect custom (at 0 0) (size 5 5) (layers *.Mask)
@@ -270,16 +278,17 @@
       ))
   )
 
-  (module elektrophon:LED_Monitor (layer F.Cu) (tedit 5D62B726) (tstamp 5D9F5D8E)
-    (at 40.64 129.54)
+  (module elektrophon:LED_Monitor (layer F.Cu) (tedit 5D62B726) (tstamp 5DD9D85E)
+    (at 34.29 135.51)
     (descr "Imported from LED Monitor.svg")
     (tags svg2mod)
+    (path /5DD9DC9E)
     (zone_connect 2)
     (attr smd)
-    (fp_text reference svg2mod (at 0 -5.054774) (layer F.SilkS) hide
+    (fp_text reference H19 (at 0 -5.054774) (layer F.SilkS) hide
       (effects (font (size 1.524 1.524) (thickness 0.3048)))
     )
-    (fp_text value G*** (at 0 5.054774) (layer F.SilkS) hide
+    (fp_text value LED_L_1 (at 0 5.054774) (layer F.SilkS) hide
       (effects (font (size 1.524 1.524) (thickness 0.3048)))
     )
     (pad 1 connect custom (at 0 0) (size 5 5) (layers *.Mask)
@@ -290,16 +299,17 @@
       ))
   )
 
-  (module elektrophon:LED_Monitor (layer F.Cu) (tedit 5D62B726) (tstamp 5D9F5D7F)
-    (at 33.02 129.54)
+  (module elektrophon:LED_Monitor (layer F.Cu) (tedit 5D62B726) (tstamp 5DD9D859)
+    (at 34.29 129.54)
     (descr "Imported from LED Monitor.svg")
     (tags svg2mod)
+    (path /5DD989C0)
     (zone_connect 2)
     (attr smd)
-    (fp_text reference svg2mod (at 0 -5.054774) (layer F.SilkS) hide
+    (fp_text reference H18 (at 0 -5.054774) (layer F.SilkS) hide
       (effects (font (size 1.524 1.524) (thickness 0.3048)))
     )
-    (fp_text value G*** (at 0 5.054774) (layer F.SilkS) hide
+    (fp_text value LED_R_1 (at 0 5.054774) (layer F.SilkS) hide
       (effects (font (size 1.524 1.524) (thickness 0.3048)))
     )
     (pad 1 connect custom (at 0 0) (size 5 5) (layers *.Mask)

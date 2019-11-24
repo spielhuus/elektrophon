@@ -1,5 +1,4 @@
 EESchema Schematic File Version 4
-LIBS:panel-cache
 EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
@@ -199,6 +198,116 @@ F 1 "MountingHole" H 4300 5255 50  0000 L CNN
 F 2 "MountingHole:MountingHole_3.2mm_M3" H 4200 5300 50  0001 C CNN
 F 3 "~" H 4200 5300 50  0001 C CNN
 	1    4200 5300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H18
+U 1 1 5DD989C0
+P 4450 1650
+F 0 "H18" H 4550 1696 50  0000 L CNN
+F 1 "LED_R_1" H 4550 1605 50  0000 L CNN
+F 2 "elektrophon:LED_Monitor" H 4450 1650 50  0001 C CNN
+F 3 "~" H 4450 1650 50  0001 C CNN
+	1    4450 1650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H20
+U 1 1 5DD98B35
+P 5000 1650
+F 0 "H20" H 5100 1696 50  0000 L CNN
+F 1 "LED_R_2" H 5100 1605 50  0000 L CNN
+F 2 "elektrophon:LED_Monitor" H 5000 1650 50  0001 C CNN
+F 3 "~" H 5000 1650 50  0001 C CNN
+	1    5000 1650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H22
+U 1 1 5DD98CB0
+P 5550 1650
+F 0 "H22" H 5650 1696 50  0000 L CNN
+F 1 "LED_R_3" H 5650 1605 50  0000 L CNN
+F 2 "elektrophon:LED_Monitor" H 5550 1650 50  0001 C CNN
+F 3 "~" H 5550 1650 50  0001 C CNN
+	1    5550 1650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H24
+U 1 1 5DD98DFD
+P 6050 1650
+F 0 "H24" H 6150 1696 50  0000 L CNN
+F 1 "LED_R_4" H 6150 1605 50  0000 L CNN
+F 2 "elektrophon:LED_Monitor" H 6050 1650 50  0001 C CNN
+F 3 "~" H 6050 1650 50  0001 C CNN
+	1    6050 1650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H26
+U 1 1 5DD99030
+P 6550 1650
+F 0 "H26" H 6650 1696 50  0000 L CNN
+F 1 "LED_R_5" H 6650 1605 50  0000 L CNN
+F 2 "elektrophon:LED_Monitor" H 6550 1650 50  0001 C CNN
+F 3 "~" H 6550 1650 50  0001 C CNN
+	1    6550 1650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H19
+U 1 1 5DD9DC9E
+P 4450 2100
+F 0 "H19" H 4550 2146 50  0000 L CNN
+F 1 "LED_L_1" H 4550 2055 50  0000 L CNN
+F 2 "elektrophon:LED_Monitor" H 4450 2100 50  0001 C CNN
+F 3 "~" H 4450 2100 50  0001 C CNN
+	1    4450 2100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H21
+U 1 1 5DD9DCA4
+P 5000 2100
+F 0 "H21" H 5100 2146 50  0000 L CNN
+F 1 "LED_L_2" H 5100 2055 50  0000 L CNN
+F 2 "elektrophon:LED_Monitor" H 5000 2100 50  0001 C CNN
+F 3 "~" H 5000 2100 50  0001 C CNN
+	1    5000 2100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H23
+U 1 1 5DD9DCAA
+P 5550 2100
+F 0 "H23" H 5650 2146 50  0000 L CNN
+F 1 "LED_L_3" H 5650 2055 50  0000 L CNN
+F 2 "elektrophon:LED_Monitor" H 5550 2100 50  0001 C CNN
+F 3 "~" H 5550 2100 50  0001 C CNN
+	1    5550 2100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H25
+U 1 1 5DD9DCB0
+P 6050 2100
+F 0 "H25" H 6150 2146 50  0000 L CNN
+F 1 "LED_L_4" H 6150 2055 50  0000 L CNN
+F 2 "elektrophon:LED_Monitor" H 6050 2100 50  0001 C CNN
+F 3 "~" H 6050 2100 50  0001 C CNN
+	1    6050 2100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H27
+U 1 1 5DD9DCB6
+P 6550 2100
+F 0 "H27" H 6650 2146 50  0000 L CNN
+F 1 "LED_L_5" H 6650 2055 50  0000 L CNN
+F 2 "elektrophon:LED_Monitor" H 6550 2100 50  0001 C CNN
+F 3 "~" H 6550 2100 50  0001 C CNN
+	1    6550 2100
 	1    0    0    -1  
 $EndComp
 $EndSCHEMATC
