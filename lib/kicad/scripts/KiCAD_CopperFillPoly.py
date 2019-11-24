@@ -34,7 +34,7 @@ def FNC_poly (cntr, # (x,y)
 
 if __name__ == '__main__':
 
-    Center = [96.52,132.08] # x/y coordinates of the centre of the pcb sheet
+    Center = [66.04,111.76] # x/y coordinates of the centre of the pcb sheet
     innerRadius = 0 # mm
     outerRadius = 2 # mm
     Sides = 200
