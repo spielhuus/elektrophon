@@ -448,7 +448,7 @@ Wire Wire Line
 Wire Wire Line
 	2450 3250 3300 3250
 $Comp
-L elektrophon:LM3900 U?
+L main-rescue:LM3900-elektrophon U?
 U 5 1 5E1807CB
 P 3050 3250
 AR Path="/5E1807CB" Ref="U?"  Part="5" 

@@ -373,7 +373,7 @@ F 3 "~" H 7750 950 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L elektrophon:LM3900 U1
+L main-rescue:LM3900-elektrophon U1
 U 1 1 5DE2E0F7
 P 8350 2600
 F 0 "U1" H 8350 2967 50  0000 C CNN
@@ -384,7 +384,7 @@ F 3 "http://www.ti.com/lit/ds/symlink/lm358.pdf" V 8000 2900 50  0001 C CNN
 	1    0    0    1   
 $EndComp
 $Comp
-L elektrophon:LM3900 U1
+L main-rescue:LM3900-elektrophon U1
 U 2 1 5DE2F2C1
 P 8350 1250
 F 0 "U1" H 8350 883 50  0000 C CNN
@@ -1605,7 +1605,7 @@ Wire Wire Line
 Wire Wire Line
 	3700 1750 3550 1750
 $Comp
-L elektrophon:LM3900 U1
+L main-rescue:LM3900-elektrophon U1
 U 4 1 5DE31D06
 P 5400 1950
 F 0 "U1" H 5400 1583 50  0000 C CNN
@@ -1616,7 +1616,7 @@ F 3 "http://www.ti.com/lit/ds/symlink/lm358.pdf" V 5050 2250 50  0001 C CNN
 	1    0    0    1   
 $EndComp
 $Comp
-L elektrophon:LM3900 U1
+L main-rescue:LM3900-elektrophon U1
 U 3 1 5DE30A0C
 P 4000 1850
 F 0 "U1" H 4000 1483 50  0000 C CNN
