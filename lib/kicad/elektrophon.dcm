@@ -1,0 +1,67 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP BC327
+D 0.8A Ic, 45V Vce, PNP Transistor, TO-92
+K PNP Transistor
+F http://www.onsemi.com/pub_link/Collateral/BC327-D.PDF
+$ENDCMP
+#
+$CMP BC328
+D 0.8A Ic, 25V Vce, PNP Transistor, TO-92
+K PNP Transistor
+F http://www.redrok.com/PNP_BC327_-45V_-800mA_0.625W_Hfe100_TO-92.pdf
+$ENDCMP
+#
+$CMP BC556
+D 0.1A Ic, 65V Vce, PNP Small Signal Transistor, TO-92
+K PNP Transistor
+F http://www.fairchildsemi.com/ds/BC/BC557.pdf
+$ENDCMP
+#
+$CMP BC558
+D 0.1A Ic, 30V Vce, PNP Small Signal Transistor, TO-92
+K PNP Transistor
+F http://www.fairchildsemi.com/ds/BC/BC557.pdf
+$ENDCMP
+#
+$CMP BC559
+D 0.1A Ic, 30V Vce, PNP Small Signal Transistor, TO-92
+K PNP Transistor
+F http://www.fairchildsemi.com/ds/BC/BC557.pdf
+$ENDCMP
+#
+$CMP BC560
+D 0.1A Ic, 45V Vce, PNP Small Signal Transistor, TO-92
+K PNP Transistor
+F http://www.fairchildsemi.com/ds/BC/BC557.pdf
+$ENDCMP
+#
+$CMP BF244B
+D 50mA Id, 30V Vgs, N-Channel FET Transistor, TO-92
+K N-Channel FET Transistor Low Voltage
+F http://www.fairchildsemi.com/ds/BF/BF244A.pdf
+$ENDCMP
+#
+$CMP BF244C
+D 10mA Id, 30V Vgs, N-Channel FET Transistor, TO-92
+K N-Channel FET Transistor Low Voltage
+F http://www.fairchildsemi.com/ds/BF/BF244A.pdf
+$ENDCMP
+#
+$CMP J201
+D 50mA Id, 30V Vgs, N-Channel FET Transistor, TO-92
+K N-Channel FET Transistor Low Voltage
+F http://www.fairchildsemi.com/ds/BF/BF244A.pdf
+$ENDCMP
+#
+$CMP PN4250
+D 0.1A Ic, 45V Vce, PNP Small Signal Transistor, TO-92
+K PNP Transistor
+F http://www.fairchildsemi.com/ds/BC/BC557.pdf
+$ENDCMP
+#
+$CMP lm3916
+F https://cdn.sparkfun.com/datasheets/Components/General%20IC/lm3916.pdf
+$ENDCMP
+#
+#End Doc Library
