@@ -184,7 +184,7 @@ L Mechanical:MountingHole H5
 U 1 1 5DC29D36
 P 1350 4350
 F 0 "H5" H 1450 4396 50  0000 L CNN
-F 1 "vc range" H 1450 4305 50  0000 L CNN
+F 1 "level" H 1450 4305 50  0000 L CNN
 F 2 "elektrophon:panel_potentiometer" H 1350 4350 50  0001 C CNN
 F 3 "~" H 1350 4350 50  0001 C CNN
 	1    1350 4350
@@ -206,7 +206,7 @@ L Mechanical:MountingHole H2
 U 1 1 5DC2AE3E
 P 1350 2050
 F 0 "H2" H 1450 2096 50  0000 L CNN
-F 1 "vc range" H 1450 2005 50  0000 L CNN
+F 1 "vc level" H 1450 2005 50  0000 L CNN
 F 2 "elektrophon:panel_potentiometer" H 1350 2050 50  0001 C CNN
 F 3 "~" H 1350 2050 50  0001 C CNN
 	1    1350 2050
