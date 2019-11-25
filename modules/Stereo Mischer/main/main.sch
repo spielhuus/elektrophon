@@ -1667,9 +1667,9 @@ Wire Wire Line
 	7800 4300 8800 4300
 Wire Wire Line
 	7300 4650 7800 4650
-Text Notes 4800 2550 0    79   ~ 0
+Text Notes 1450 2600 0    79   ~ 0
 Left Channel
-Text Notes 4800 4950 0    79   ~ 0
+Text Notes 1400 4950 0    79   ~ 0
 Right Channel
 Text Label 2400 5800 0    50   ~ 0
 STEREO_R
@@ -1688,8 +1688,8 @@ $Comp
 L elektrophon:lm3916 U4
 U 1 1 5DDA7AD3
 P 9600 2100
-F 0 "U4" H 9600 3231 50  0000 C CNN
-F 1 "lm3916" H 9600 3140 50  0000 C CNN
+F 0 "U4" H 9900 3000 50  0000 C CNN
+F 1 "lm3916" H 9900 2900 50  0000 C CNN
 F 2 "Package_DIP:DIP-18_W7.62mm_Socket" H 9600 2100 50  0001 C CNN
 F 3 "https://cdn.sparkfun.com/datasheets/Components/General%20IC/lm3916.pdf" H 9600 2100 50  0001 C CNN
 	1    9600 2100
@@ -1699,8 +1699,8 @@ $Comp
 L elektrophon:lm3916 U5
 U 1 1 5DDA8ED2
 P 9600 4650
-F 0 "U5" H 9600 5781 50  0000 C CNN
-F 1 "lm3916" H 9600 5690 50  0000 C CNN
+F 0 "U5" H 9900 5550 50  0000 C CNN
+F 1 "lm3916" H 9900 5450 50  0000 C CNN
 F 2 "Package_DIP:DIP-18_W7.62mm_Socket" H 9600 4650 50  0001 C CNN
 F 3 "https://cdn.sparkfun.com/datasheets/Components/General%20IC/lm3916.pdf" H 9600 4650 50  0001 C CNN
 	1    9600 4650

@@ -52,7 +52,7 @@ U 1 1 5DB4B8C4
 P 1050 1300
 F 0 "J1" H 1082 1625 50  0000 C CNN
 F 1 "#1" H 1082 1534 50  0000 C CNN
-F 2 "elektrophon:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles" H 1050 1300 50  0001 C CNN
+F 2 "elektrophon:Jack_3.5mm_WQP-PJ398SM_Vertical" H 1050 1300 50  0001 C CNN
 F 3 "~" H 1050 1300 50  0001 C CNN
 F 4 "J" H 1050 1300 50  0001 C CNN "Spice_Primitive"
 F 5 "AudioJack2_SwitchT" H 1050 1300 50  0001 C CNN "Spice_Model"
@@ -148,7 +148,7 @@ U 1 1 5DB89125
 P 5350 4500
 F 0 "J5" H 5070 4525 50  0000 R CNN
 F 1 "STEREO_OUT" H 5070 4434 50  0000 R CNN
-F 2 "elektrophon:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles" H 5350 4500 50  0001 C CNN
+F 2 "elektrophon:Jack_3.5mm_WQP-PJ301BM_Vertical" H 5350 4500 50  0001 C CNN
 F 3 "~" H 5350 4500 50  0001 C CNN
 F 4 "J" H 5350 4500 50  0001 C CNN "Spice_Primitive"
 F 5 "AudioJack3" H 5350 4500 50  0001 C CNN "Spice_Model"
@@ -392,7 +392,7 @@ U 1 1 5DE75A0D
 P 1050 2650
 F 0 "J2" H 1082 2975 50  0000 C CNN
 F 1 "#2" H 1082 2884 50  0000 C CNN
-F 2 "elektrophon:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles" H 1050 2650 50  0001 C CNN
+F 2 "elektrophon:Jack_3.5mm_WQP-PJ398SM_Vertical" H 1050 2650 50  0001 C CNN
 F 3 "~" H 1050 2650 50  0001 C CNN
 F 4 "J" H 1050 2650 50  0001 C CNN "Spice_Primitive"
 F 5 "AudioJack2_SwitchT" H 1050 2650 50  0001 C CNN "Spice_Model"
@@ -554,7 +554,7 @@ U 1 1 5DE7D00E
 P 1050 4000
 F 0 "J3" H 1082 4325 50  0000 C CNN
 F 1 "#3" H 1082 4234 50  0000 C CNN
-F 2 "elektrophon:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles" H 1050 4000 50  0001 C CNN
+F 2 "elektrophon:Jack_3.5mm_WQP-PJ398SM_Vertical" H 1050 4000 50  0001 C CNN
 F 3 "~" H 1050 4000 50  0001 C CNN
 F 4 "J" H 1050 4000 50  0001 C CNN "Spice_Primitive"
 F 5 "AudioJack2_SwitchT" H 1050 4000 50  0001 C CNN "Spice_Model"
@@ -716,7 +716,7 @@ U 1 1 5DE8663C
 P 1050 5350
 F 0 "J4" H 1082 5675 50  0000 C CNN
 F 1 "#4" H 1082 5584 50  0000 C CNN
-F 2 "elektrophon:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles" H 1050 5350 50  0001 C CNN
+F 2 "elektrophon:Jack_3.5mm_WQP-PJ398SM_Vertical" H 1050 5350 50  0001 C CNN
 F 3 "~" H 1050 5350 50  0001 C CNN
 F 4 "J" H 1050 5350 50  0001 C CNN "Spice_Primitive"
 F 5 "AudioJack2_SwitchT" H 1050 5350 50  0001 C CNN "Spice_Model"
