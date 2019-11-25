@@ -372,28 +372,6 @@ F 3 "~" H 7750 950 50  0001 C CNN
 	1    7750 950 
 	1    0    0    -1  
 $EndComp
-$Comp
-L main-rescue:LM3900-elektrophon U1
-U 1 1 5DE2E0F7
-P 8350 2600
-F 0 "U1" H 8350 2967 50  0000 C CNN
-F 1 "LM3900" H 8350 2876 50  0000 C CNN
-F 2 "Package_DIP:DIP-14_W7.62mm_Socket" V 8000 2900 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/lm358.pdf" V 8000 2900 50  0001 C CNN
-	1    8350 2600
-	1    0    0    1   
-$EndComp
-$Comp
-L main-rescue:LM3900-elektrophon U1
-U 2 1 5DE2F2C1
-P 8350 1250
-F 0 "U1" H 8350 883 50  0000 C CNN
-F 1 "LM3900" H 8350 974 50  0000 C CNN
-F 2 "Package_DIP:DIP-14_W7.62mm_Socket" V 8000 1550 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/lm358.pdf" V 8000 1550 50  0001 C CNN
-	2    8350 1250
-	1    0    0    1   
-$EndComp
 Wire Wire Line
 	7750 1150 8050 1150
 Wire Wire Line
@@ -1605,28 +1583,6 @@ Wire Wire Line
 Wire Wire Line
 	3700 1750 3550 1750
 $Comp
-L main-rescue:LM3900-elektrophon U1
-U 4 1 5DE31D06
-P 5400 1950
-F 0 "U1" H 5400 1583 50  0000 C CNN
-F 1 "LM3900" H 5400 1674 50  0000 C CNN
-F 2 "Package_DIP:DIP-14_W7.62mm_Socket" V 5050 2250 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/lm358.pdf" V 5050 2250 50  0001 C CNN
-	4    5400 1950
-	1    0    0    1   
-$EndComp
-$Comp
-L main-rescue:LM3900-elektrophon U1
-U 3 1 5DE30A0C
-P 4000 1850
-F 0 "U1" H 4000 1483 50  0000 C CNN
-F 1 "LM3900" H 4000 1574 50  0000 C CNN
-F 2 "Package_DIP:DIP-14_W7.62mm_Socket" V 3650 2150 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/lm358.pdf" V 3650 2150 50  0001 C CNN
-	3    4000 1850
-	1    0    0    1   
-$EndComp
-$Comp
 L power:GND #PWR015
 U 1 1 5E07A440
 P 5800 2550
@@ -1998,4 +1954,48 @@ Wire Wire Line
 Connection ~ 7250 5750
 Wire Wire Line
 	7250 3050 7250 4250
+$Comp
+L elektrophon:LM3900 U1
+U 1 1 5DDCE62F
+P 8350 2600
+F 0 "U1" H 8350 2233 50  0000 C CNN
+F 1 "LM3900" H 8350 2324 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" V 8000 2900 50  0001 C CNN
+F 3 "" V 8000 2900 50  0001 C CNN
+	1    8350 2600
+	1    0    0    1   
+$EndComp
+$Comp
+L elektrophon:LM3900 U1
+U 2 1 5DDCFBF9
+P 8350 1250
+F 0 "U1" H 8350 883 50  0000 C CNN
+F 1 "LM3900" H 8350 974 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" V 8000 1550 50  0001 C CNN
+F 3 "" V 8000 1550 50  0001 C CNN
+	2    8350 1250
+	1    0    0    1   
+$EndComp
+$Comp
+L elektrophon:LM3900 U1
+U 3 1 5DDD0E51
+P 4000 1850
+F 0 "U1" H 4000 1483 50  0000 C CNN
+F 1 "LM3900" H 4000 1574 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" V 3650 2150 50  0001 C CNN
+F 3 "" V 3650 2150 50  0001 C CNN
+	3    4000 1850
+	1    0    0    1   
+$EndComp
+$Comp
+L elektrophon:LM3900 U1
+U 4 1 5DDD268F
+P 5400 1950
+F 0 "U1" H 5400 1583 50  0000 C CNN
+F 1 "LM3900" H 5400 1674 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" V 5050 2250 50  0001 C CNN
+F 3 "" V 5050 2250 50  0001 C CNN
+	4    5400 1950
+	1    0    0    1   
+$EndComp
 $EndSCHEMATC

@@ -442,30 +442,7 @@ F 3 "~" H 6300 3900 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	2450 3550 2950 3550
-Wire Wire Line
-	2450 2950 2950 2950
-Wire Wire Line
 	2450 3250 3300 3250
-$Comp
-L main-rescue:LM3900-elektrophon U?
-U 5 1 5E1807CB
-P 3050 3250
-AR Path="/5E1807CB" Ref="U?"  Part="5" 
-AR Path="/5DD3665B/5E1807CB" Ref="U1"  Part="5" 
-F 0 "U1" H 3008 3296 50  0000 L CNN
-F 1 "LM3900" H 3008 3205 50  0000 L CNN
-F 2 "Package_DIP:DIP-14_W7.62mm_Socket" V 2700 3550 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/lm358.pdf" V 2700 3550 50  0001 C CNN
-	5    3050 3250
-	1    0    0    -1  
-$EndComp
-Connection ~ 2950 2950
-Wire Wire Line
-	2950 2950 3300 2950
-Connection ~ 2950 3550
-Wire Wire Line
-	2950 3550 3300 3550
 Connection ~ 3300 2950
 Connection ~ 3300 3250
 Connection ~ 3300 3550
@@ -590,4 +567,25 @@ Connection ~ 4100 2950
 Connection ~ 4100 3550
 Connection ~ 4900 2950
 Connection ~ 4900 3550
+Wire Wire Line
+	2450 3550 2850 3550
+Wire Wire Line
+	2450 2950 2850 2950
+$Comp
+L elektrophon:LM3900 U1
+U 5 1 5DE19E30
+P 2950 3250
+F 0 "U1" H 2908 3296 50  0000 L CNN
+F 1 "LM3900" H 2908 3205 50  0000 L CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" V 2600 3550 50  0001 C CNN
+F 3 "" V 2600 3550 50  0001 C CNN
+	5    2950 3250
+	1    0    0    -1  
+$EndComp
+Connection ~ 2850 2950
+Wire Wire Line
+	2850 2950 3300 2950
+Connection ~ 2850 3550
+Wire Wire Line
+	2850 3550 3300 3550
 $EndSCHEMATC

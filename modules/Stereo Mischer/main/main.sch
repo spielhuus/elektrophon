@@ -1,4 +1,5 @@
 EESchema Schematic File Version 4
+LIBS:main-cache
 EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
@@ -867,12 +868,12 @@ $EndComp
 $Comp
 L Amplifier_Operational:TL074 U3
 U 2 1 5DF75029
-P 6600 2150
-F 0 "U3" H 6600 1783 50  0000 C CNN
-F 1 "TL074" H 6600 1874 50  0000 C CNN
-F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 6550 2250 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 6650 2350 50  0001 C CNN
-	2    6600 2150
+P 6900 2150
+F 0 "U3" H 6900 1783 50  0000 C CNN
+F 1 "TL074" H 6900 1874 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 6850 2250 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 6950 2350 50  0001 C CNN
+	2    6900 2150
 	1    0    0    1   
 $EndComp
 $Comp
@@ -958,18 +959,18 @@ Wire Wire Line
 $Comp
 L power:GND #PWR025
 U 1 1 5DFFDA0E
-P 6250 2300
-F 0 "#PWR025" H 6250 2050 50  0001 C CNN
-F 1 "GND" H 6255 2127 50  0000 C CNN
-F 2 "" H 6250 2300 50  0001 C CNN
-F 3 "" H 6250 2300 50  0001 C CNN
-	1    6250 2300
+P 6550 2300
+F 0 "#PWR025" H 6550 2050 50  0001 C CNN
+F 1 "GND" H 6555 2127 50  0000 C CNN
+F 2 "" H 6550 2300 50  0001 C CNN
+F 3 "" H 6550 2300 50  0001 C CNN
+	1    6550 2300
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	6300 2250 6250 2250
+	6600 2250 6550 2250
 Wire Wire Line
-	6250 2250 6250 2300
+	6550 2250 6550 2300
 $Comp
 L Device:R R22
 U 1 1 5E02CE22
@@ -1012,12 +1013,12 @@ Wire Wire Line
 $Comp
 L Device:R R25
 U 1 1 5E06EB0D
-P 6600 1600
-F 0 "R25" V 6393 1600 50  0000 C CNN
-F 1 "100k" V 6484 1600 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 6530 1600 50  0001 C CNN
-F 3 "~" H 6600 1600 50  0001 C CNN
-	1    6600 1600
+P 6700 1600
+F 0 "R25" V 6493 1600 50  0000 C CNN
+F 1 "100k" V 6584 1600 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 6630 1600 50  0001 C CNN
+F 3 "~" H 6700 1600 50  0001 C CNN
+	1    6700 1600
 	0    1    1    0   
 $EndComp
 $Comp
@@ -1035,61 +1036,44 @@ Connection ~ 4450 1900
 $Comp
 L Device:C C17
 U 1 1 5E070891
-P 6600 1200
-F 0 "C17" V 6348 1200 50  0000 C CNN
-F 1 "0.1u" V 6439 1200 50  0000 C CNN
-F 2 "Capacitor_THT:C_Disc_D3.4mm_W2.1mm_P2.50mm" H 6638 1050 50  0001 C CNN
-F 3 "~" H 6600 1200 50  0001 C CNN
-	1    6600 1200
+P 6700 1200
+F 0 "C17" V 6448 1200 50  0000 C CNN
+F 1 "0.1u" V 6539 1200 50  0000 C CNN
+F 2 "Capacitor_THT:C_Disc_D3.4mm_W2.1mm_P2.50mm" H 6738 1050 50  0001 C CNN
+F 3 "~" H 6700 1200 50  0001 C CNN
+	1    6700 1200
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	6450 1200 6250 1200
+	6550 2050 6600 2050
 Wire Wire Line
-	6250 1200 6250 1600
+	7200 1200 7200 1600
+Connection ~ 7200 1600
 Wire Wire Line
-	6250 2050 6300 2050
-Wire Wire Line
-	6200 2050 6250 2050
-Connection ~ 6200 2050
-Connection ~ 6250 2050
-Wire Wire Line
-	6450 1600 6250 1600
-Connection ~ 6250 1600
-Wire Wire Line
-	6250 1600 6250 2050
-Wire Wire Line
-	6750 1200 6900 1200
-Wire Wire Line
-	6750 1600 6900 1600
-Wire Wire Line
-	6900 1200 6900 1600
-Connection ~ 6900 1600
-Wire Wire Line
-	6900 1600 6900 2150
+	7200 1600 7200 2150
 $Comp
 L Device:R_POT_TRIM RV1
 U 1 1 5E0CFBE0
-P 7150 2300
-F 0 "RV1" H 7080 2346 50  0000 R CNN
-F 1 "R_POT_TRIM" H 7080 2255 50  0000 R CNN
-F 2 "Potentiometer_THT:Potentiometer_Bourns_3296Z_Horizontal" H 7150 2300 50  0001 C CNN
-F 3 "~" H 7150 2300 50  0001 C CNN
-	1    7150 2300
+P 7450 2300
+F 0 "RV1" H 7380 2346 50  0000 R CNN
+F 1 "R_POT_TRIM" H 7380 2255 50  0000 R CNN
+F 2 "Potentiometer_THT:Potentiometer_Bourns_3296Z_Horizontal" H 7450 2300 50  0001 C CNN
+F 3 "~" H 7450 2300 50  0001 C CNN
+	1    7450 2300
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	6900 2150 7150 2150
-Connection ~ 6900 2150
+	7200 2150 7450 2150
+Connection ~ 7200 2150
 $Comp
 L power:GND #PWR029
 U 1 1 5E0DD32A
-P 7150 2450
-F 0 "#PWR029" H 7150 2200 50  0001 C CNN
-F 1 "GND" H 7155 2277 50  0000 C CNN
-F 2 "" H 7150 2450 50  0001 C CNN
-F 3 "" H 7150 2450 50  0001 C CNN
-	1    7150 2450
+P 7450 2450
+F 0 "#PWR029" H 7450 2200 50  0001 C CNN
+F 1 "GND" H 7455 2277 50  0000 C CNN
+F 2 "" H 7450 2450 50  0001 C CNN
+F 3 "" H 7450 2450 50  0001 C CNN
+	1    7450 2450
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -1635,8 +1619,6 @@ Wire Wire Line
 	8800 1750 7850 1750
 Wire Wire Line
 	7850 1750 7850 2300
-Wire Wire Line
-	7850 2300 7300 2300
 Text Label 10400 5100 0    50   ~ 0
 LED_R_1
 Text Label 10400 4300 0    50   ~ 0
@@ -1744,4 +1726,36 @@ F 3 "http://www.ti.com/lit/ds/symlink/ne5532.pdf" V 2550 4550 50  0001 C CNN
 	2    2900 4250
 	1    0    0    1   
 $EndComp
+Wire Wire Line
+	7850 2300 7600 2300
+$Comp
+L Device:R R?
+U 1 1 5DDCC886
+P 6400 2050
+F 0 "R?" V 6193 2050 50  0000 C CNN
+F 1 "47k" V 6284 2050 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 6330 2050 50  0001 C CNN
+F 3 "~" H 6400 2050 50  0001 C CNN
+	1    6400 2050
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6250 1200 6250 1600
+Wire Wire Line
+	6250 2050 6200 2050
+Connection ~ 6250 2050
+Connection ~ 6200 2050
+Wire Wire Line
+	6250 1200 6550 1200
+Wire Wire Line
+	6250 1600 6550 1600
+Connection ~ 6250 1600
+Wire Wire Line
+	6250 1600 6250 2050
+Wire Wire Line
+	6850 1200 7200 1200
+Wire Wire Line
+	6850 1600 7200 1600
+Text Notes 6200 2150 0    50   ~ 0
+add resistor\n
 $EndSCHEMATC
