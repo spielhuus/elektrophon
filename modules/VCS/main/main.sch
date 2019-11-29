@@ -1,4 +1,5 @@
 EESchema Schematic File Version 4
+LIBS:main-cache
 EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
@@ -449,19 +450,19 @@ Text Label 10700 3950 0    50   ~ 0
 FALL_1
 Text Label 10700 4150 0    50   ~ 0
 RISE_2
-Text Label 10700 4950 0    50   ~ 0
+Text Label 10700 4750 0    50   ~ 0
 RISE_RATE
-Text Label 10700 5050 0    50   ~ 0
+Text Label 10700 4950 0    50   ~ 0
 CV
-Text Label 10700 5150 0    50   ~ 0
+Text Label 10700 4850 0    50   ~ 0
 end
-Text Label 10700 5250 0    50   ~ 0
+Text Label 10700 5050 0    50   ~ 0
 AC_OUT
-Text Label 10700 5350 0    50   ~ 0
+Text Label 10700 5150 0    50   ~ 0
 OUT
-Text Label 10700 5450 0    50   ~ 0
+Text Label 10700 5250 0    50   ~ 0
 BIPOLAR_OUT
-Text Label 10700 5550 0    50   ~ 0
+Text Label 10700 5350 0    50   ~ 0
 LED
 Text Label 10700 5650 0    50   ~ 0
 TRIGGER
@@ -2014,16 +2015,16 @@ Text Label 10700 4050 0    50   ~ 0
 FALL
 Text Label 10700 3850 0    50   ~ 0
 RISE
-Text Label 10700 4550 0    50   ~ 0
+Text Label 10700 5450 0    50   ~ 0
 NET_1
-Text Label 10700 4450 0    50   ~ 0
+Text Label 10700 5550 0    50   ~ 0
 CYCLE_1
-Text Label 10700 4650 0    50   ~ 0
+Text Label 10700 4450 0    50   ~ 0
 CYCLE_2
 Text Label 10700 4250 0    50   ~ 0
 FALL_2
-Text Label 10700 4750 0    50   ~ 0
+Text Label 10700 4550 0    50   ~ 0
 FALL_RATE
-Text Label 10700 4850 0    50   ~ 0
+Text Label 10700 4650 0    50   ~ 0
 RISE_1
 $EndSCHEMATC
