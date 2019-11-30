@@ -1,13 +1,12 @@
 EESchema Schematic File Version 4
-LIBS:main-cache
 EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title "ADSR"
-Date "2019-09-07"
-Rev "01"
+Date "2019-11-30"
+Rev "02"
 Comp ""
 Comment1 "Original design by René Schmitz"
 Comment2 "Schema for main circuit"
@@ -310,7 +309,7 @@ L Device:R_POT RV2
 U 1 1 5CB73ABA
 P 7050 2250
 F 0 "RV2" V 6843 2250 50  0000 C CNN
-F 1 "1M" V 6934 2250 50  0000 C CNN
+F 1 "1M LOG" V 6934 2250 50  0000 C CNN
 F 2 "elektrophon:Potentiometer_Alpha_RD901F-40-00D_Single_Vertical" H 7050 2250 50  0001 C CNN
 F 3 "~" H 7050 2250 50  0001 C CNN
 	1    7050 2250
@@ -343,7 +342,7 @@ L Device:R_POT RV3
 U 1 1 5CB76DA6
 P 7050 2750
 F 0 "RV3" V 6843 2750 50  0000 C CNN
-F 1 "1M" V 6934 2750 50  0000 C CNN
+F 1 "1M LOG" V 6934 2750 50  0000 C CNN
 F 2 "elektrophon:Potentiometer_Alpha_RD901F-40-00D_Single_Vertical" H 7050 2750 50  0001 C CNN
 F 3 "~" H 7050 2750 50  0001 C CNN
 	1    7050 2750
@@ -452,7 +451,7 @@ F 1 "10k" H 6480 3805 50  0000 R CNN
 F 2 "elektrophon:Potentiometer_Alpha_RD901F-40-00D_Single_Vertical" H 6550 3850 50  0001 C CNN
 F 3 "~" H 6550 3850 50  0001 C CNN
 	1    6550 3850
-	1    0    0    -1  
+	1    0    0    1   
 $EndComp
 $Comp
 L Amplifier_Operational:LM358 U1
@@ -526,11 +525,11 @@ L Device:R_POT RV4
 U 1 1 5CB9FE03
 P 7850 3300
 F 0 "RV4" H 7780 3254 50  0000 R CNN
-F 1 "1M" H 7780 3345 50  0000 R CNN
+F 1 "1M LOG" H 7780 3345 50  0000 R CNN
 F 2 "elektrophon:Potentiometer_Alpha_RD901F-40-00D_Single_Vertical" H 7850 3300 50  0001 C CNN
 F 3 "~" H 7850 3300 50  0001 C CNN
 	1    7850 3300
-	-1   0    0    1   
+	-1   0    0    -1  
 $EndComp
 $Comp
 L Device:R R10
@@ -613,7 +612,7 @@ Wire Wire Line
 	3200 2500 4950 2500
 Text Notes 4950 3250 0    50   ~ 0
 reset
-Text Notes 6950 3150 0    50   ~ 0
+Text Notes 6800 3150 0    50   ~ 0
 treshold
 $Comp
 L Device:C C3
@@ -872,7 +871,7 @@ Text Notes 6900 2000 0    50   ~ 0
 Release
 Text Notes 6950 2500 0    50   ~ 0
 Attack
-Text Notes 8150 3200 3    50   ~ 0
+Text Notes 7650 3250 3    50   ~ 0
 Decay
 Text Notes 6300 3700 3    50   ~ 0
 Sustain
