@@ -1,5 +1,4 @@
 EESchema Schematic File Version 4
-LIBS:main-cache
 EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
@@ -388,7 +387,7 @@ Wire Wire Line
 	9100 3050 7250 3050
 Connection ~ 7250 3050
 Text Label 10000 1250 0    50   ~ 0
-end
+CYCLE_2
 $Comp
 L Device:CP C10
 U 1 1 5DDA2981
@@ -414,58 +413,40 @@ Mount Connection
 $Comp
 L power:+15V #PWR030
 U 1 1 5D81113C
+P 10700 5650
+F 0 "#PWR030" H 10700 5500 50  0001 C CNN
+F 1 "+15V" V 10715 5778 50  0000 L CNN
+F 2 "" H 10700 5650 50  0001 C CNN
+F 3 "" H 10700 5650 50  0001 C CNN
+	1    10700 5650
+	0    1    1    0   
+$EndComp
+$Comp
+L power:-15V #PWR031
+U 1 1 5D8119E7
 P 10700 5750
-F 0 "#PWR030" H 10700 5600 50  0001 C CNN
-F 1 "+15V" V 10715 5878 50  0000 L CNN
+F 0 "#PWR031" H 10700 5850 50  0001 C CNN
+F 1 "-15V" V 10715 5878 50  0000 L CNN
 F 2 "" H 10700 5750 50  0001 C CNN
 F 3 "" H 10700 5750 50  0001 C CNN
 	1    10700 5750
 	0    1    1    0   
 $EndComp
 $Comp
-L power:-15V #PWR031
-U 1 1 5D8119E7
+L power:GND #PWR032
+U 1 1 5DDBC5C4
 P 10700 5850
-F 0 "#PWR031" H 10700 5950 50  0001 C CNN
-F 1 "-15V" V 10715 5978 50  0000 L CNN
+F 0 "#PWR032" H 10700 5600 50  0001 C CNN
+F 1 "GND" V 10700 5600 50  0000 C CNN
 F 2 "" H 10700 5850 50  0001 C CNN
 F 3 "" H 10700 5850 50  0001 C CNN
 	1    10700 5850
-	0    1    1    0   
-$EndComp
-$Comp
-L power:GND #PWR032
-U 1 1 5DDBC5C4
-P 10700 5950
-F 0 "#PWR032" H 10700 5700 50  0001 C CNN
-F 1 "GND" V 10700 5700 50  0000 C CNN
-F 2 "" H 10700 5950 50  0001 C CNN
-F 3 "" H 10700 5950 50  0001 C CNN
-	1    10700 5950
 	0    -1   -1   0   
 $EndComp
-Text Label 10700 4350 0    50   ~ 0
-IN
 Text Label 10700 3950 0    50   ~ 0
 FALL_1
 Text Label 10700 4150 0    50   ~ 0
 RISE_2
-Text Label 10700 4750 0    50   ~ 0
-RISE_RATE
-Text Label 10700 4950 0    50   ~ 0
-CV
-Text Label 10700 4850 0    50   ~ 0
-end
-Text Label 10700 5050 0    50   ~ 0
-AC_OUT
-Text Label 10700 5150 0    50   ~ 0
-OUT
-Text Label 10700 5250 0    50   ~ 0
-BIPOLAR_OUT
-Text Label 10700 5350 0    50   ~ 0
-LED
-Text Label 10700 5650 0    50   ~ 0
-TRIGGER
 $Comp
 L Connector:Conn_01x22_Male J1
 U 1 1 5E0837A8
@@ -1539,8 +1520,6 @@ Wire Wire Line
 	5100 2050 5000 2050
 Wire Wire Line
 	4900 1850 5100 1850
-Text Label 3100 2700 0    50   ~ 0
-end
 Wire Wire Line
 	5800 2050 7250 2050
 Wire Wire Line
@@ -2015,16 +1994,32 @@ Text Label 10700 4050 0    50   ~ 0
 FALL
 Text Label 10700 3850 0    50   ~ 0
 RISE
-Text Label 10700 5450 0    50   ~ 0
-NET_1
-Text Label 10700 5550 0    50   ~ 0
-CYCLE_1
-Text Label 10700 4450 0    50   ~ 0
-CYCLE_2
 Text Label 10700 4250 0    50   ~ 0
 FALL_2
 Text Label 10700 4550 0    50   ~ 0
-FALL_RATE
-Text Label 10700 4650 0    50   ~ 0
 RISE_1
+Text Label 10700 4450 0    50   ~ 0
+FALL_RATE
+Text Label 10700 5350 0    50   ~ 0
+CYCLE_2
+Text Label 10700 5450 0    50   ~ 0
+CYCLE_1
+Text Label 10700 4950 0    50   ~ 0
+NET_1
+Text Label 10700 5550 0    50   ~ 0
+TRIGGER
+Text Label 10700 5050 0    50   ~ 0
+LED
+Text Label 10700 4850 0    50   ~ 0
+BIPOLAR_OUT
+Text Label 10700 5150 0    50   ~ 0
+OUT
+Text Label 10700 5250 0    50   ~ 0
+AC_OUT
+Text Label 10700 4750 0    50   ~ 0
+CV
+Text Label 10700 4650 0    50   ~ 0
+RISE_RATE
+Text Label 10700 4350 0    50   ~ 0
+IN
 $EndSCHEMATC
