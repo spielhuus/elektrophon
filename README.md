@@ -1,59 +1,20 @@
-# elektrophon
-collection of modules for a modular analog electro acoustic noise machine. all modules are built on stripboards or pcb's and with 3d printed front plates.The goal is it to build the modules quickly. The 3d printed front panels comes complete with holes and stands. This makes it easy to mount the module. The modules can be mount to a rack. <a href="https://spielhuus.github.io/elektrophon/fly_rack.jpg"><img align="right" src="https://spielhuus.github.io/elektrophon/fly_rack_tmb.jpg"></a>  The first rack i built was a small testing rack, the fly rack.There are only two side panels to print. For the rails i used the standard euro panel rails from the electronic vendors (i.e. [farnel](https://de.farnell.com/schroff/34560-484/horizontal-rail-enclosure/dp/2816357)). Every thing from the music stores is very expensive. it is a little bit cheaper to buy those rails. The sizes for modular synths are mostly equal to the standard size for electronic and computer racks.
-
-## module size
-
-The armatures, plugs and knobs, are placed in a fix raster. for the columns used for the module the resulting panel sizes are:
-
-|HU|Armature Rows|Total Height [mm]|Total Width [mm]|PCB Width|PCB Height|
-|--|-------------|-----------------|----------------|---------|----------|
-|10|2            |133.35           |50.7|44.7|107.35|
-|12|2 1/2        |133.35           |60.84|54.84|107.35|
-|14|3            |133.35           |70.98|64.98|107.35|
-|18|4            |133.35           |91.26|85.26|107.35|
-|22|5            |133.35           |111.54|105.54|107.35|
-|26|6            |133.35           |131.82|125.82|107.35|
-|30|7            |133.35           |152.1|146.1|107.35|
-|34|8            |133.35           |172.38|166.38|107.35|
-
-## plug color codes
-
-The banana plugs colors follows this rule:
-
-|Color|Description|
-|--|-------------|
-|Red|Audio Output|
-|Green|Audio Input|
-|Yellow|CV Input|
-|Blue|Trigger/Gate|
-
-# modules 
-
+<font size="14" style="font-size:26px; font-style:italic;">elektrophon</font> is a collection of modular synthesizer modules i built. The module folders contain the schema and PCB files for kicad. You can find all the required files for changing the schemas and building gerber files in this project.  is a collection of modules for a modular analog electro acoustic noise machine. all modules are built on stripboards or pcb's and with 3d printed front plates.The goal is it to build the modules quickly. The 3d printed front panels comes complete with holes and stands. This makes it easy to mount the module. The modules can be mount to a rack. <a href="https://spielhuus.github.io/elektrophon/fly_rack.jpg"><img align="right" src="https://spielhuus.github.io/elektrophon/fly_rack_tmb.jpg"></a>  The first rack i built was a small testing rack, the fly rack.There are only two side panels to print. For the rails i used the standard euro panel rails from the electronic vendors (i.e. [farnel](https://de.farnell.com/schroff/34560-484/horizontal-rail-enclosure/dp/2816357)). Every thing from the music stores is very expensive. it is a little bit cheaper to buy those rails. The sizes for modular synths are mostly equal to the standard size for electronic and computer racks.
 <table>
  <tr>
+  <td><font size="14" style="font-size:26px; font-style:italic;">VCO</font></td>
   <td><a href="https://github.com/spielhuus/elektrophon/blob/master/modules/X4046/README.md"><img src="https://spielhuus.github.io/elektrophon/images/4046-panel-tmb.jpg" height="300px"></img></a><br/>VCO: X4046</td>
   <td><a href="https://github.com/spielhuus/elektrophon/blob/master/modules/VCA/README.md"><img src="https://spielhuus.github.io/elektrophon/images/VCA-panel-tmb.jpg" height="300px"></img></a><br/>VCA</td>
   <td><a href="https://github.com/spielhuus/elektrophon/blob/master/modules/Synthacon%20VCF/README.md"><img src="https://spielhuus.github.io/elektrophon/images/synthacon-panel-tmb.jpg" height="300px"></img></a><br/>Synthacon VCF</td>
-  
-  <td><a href="https://github.com/spielhuus/elektrophon/blob/master/BassPP/README.md"><img src="https://spielhuus.github.io/elektrophon/images/BassPPpanel_tmb.png" height="200px"></img></a><br/>Bass++</td>
-  <td><a href="https://github.com/spielhuus/elektrophon/blob/master/Mixer/README.md"><img src="https://spielhuus.github.io/elektrophon/images/Mixerpanel_tmb.png" height="200px"></img></a><br/>Mixer</td>
-  <td><a href="https://github.com/spielhuus/elektrophon/blob/master/VCO1/README.md"><img src="https://spielhuus.github.io/elektrophon/images/VCO1panel_tmb.png" height="200px"></img></a><br/>VCO-1</td>
+  <td><a href="https://github.com/spielhuus/elektrophon/blob/master/modules/SSG/README.md"><img src="https://spielhuus.github.io/elektrophon/images/SSGPanel_tmb.png" height="200px"></img></a><br/>Smooth and Stepped Generator</td>
+  <td><a href="https://github.com/spielhuus/elektrophon/blob/master/modules/VCS/README.md"><img src="https://spielhuus.github.io/elektrophon/images/VCSpanel_tmb.png" height="200px"></img></a><br/>Voltage Controller Slope</td>
+  <td><a href="https://github.com/spielhuus/elektrophon/blob/master/modules/Stereo Mischer/README.md"><img src="https://spielhuus.github.io/elektrophon/images/Stereo_Mixer_panel_tmb.png" height="200px"></img></a><br/>Stereo Mixer</td>
+  <td><a href="https://github.com/spielhuus/elektrophon/blob/master/modules/BassPP/README.md"><img src="https://spielhuus.github.io/elektrophon/images/Mixerpanel_tmb.png" height="200px"></img></a><br/>Bass++</td>
+  <td><a href="https://github.com/spielhuus/elektrophon/blob/master/modules/ADSR/README.md"><img src="https://spielhuus.github.io/elektrophon/images/Mixerpanel_tmb.png" height="200px"></img></a><br/>ADSR</td>
+  <td><a href="https://github.com/spielhuus/elektrophon/blob/master/modules/MIDI/README.md"><img src="https://spielhuus.github.io/elektrophon/images/Mixerpanel_tmb.png" height="200px"></img></a><br/>midi</td>
+  <td><a href="https://github.com/spielhuus/elektrophon/blob/master/modules/Noise/README.md"><img src="https://spielhuus.github.io/elektrophon/images/Mixerpanel_tmb.png" height="200px"></img></a><br/>noise</td>
+  <td><a href="https://github.com/spielhuus/elektrophon/blob/master/modules/Utility LFO/README.md"><img src="https://spielhuus.github.io/elektrophon/images/Mixerpanel_tmb.png" height="200px"></img></a><br/>LFO</td>
  </tr>
 </table>
-
-# general electronic and synthesizer information 
-
-Here are some links do documents on how to build synthesizers and electronic. the logic noise serie on hackaday are a very good start and does not require in depth electronic knowledge. read the other documents when you think you should know more about a specific topic. 
-
-* [Rod Elliott (ESP) - The Audio Pages](http://sound.whsites.net/articles.htm#feat)
-* [LOGIC NOISE: SWEET, SWEET OSCILLATOR SOUNDS by: Elliot Williams](https://hackaday.com/2015/02/04/logic-noise-sweet-sweet-oscillator-sounds/) hackaday article series for building the basic synthesizer parts with cmos chips.
-
-* [UNDERSTANDING DIGITAL BUFFER, GATE, AND LOGIC IC CIRCUITS]() NUTS & VOLTS article series that describes the concept and application of logic ic citcuits.
-
-
-# general modular information
-
-* [doepfer A100 rack size](http://www.doepfer.de/a100_man/a100m_e.htm)
 
 # links
 
