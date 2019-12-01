@@ -4,14 +4,14 @@ EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 2
-Title ""
-Date ""
-Rev ""
+Title "Voltage Controlled Slope"
+Date "2019-12-01"
+Rev "01"
 Comp ""
-Comment1 ""
-Comment2 ""
+Comment1 "Original design by Ken Stone"
+Comment2 "Schema for main circuit"
 Comment3 ""
-Comment4 ""
+Comment4 "License CC BY 4.0 - Attribution 4.0 International"
 $EndDescr
 $Sheet
 S 10000 1700 1100 700 
@@ -268,7 +268,7 @@ U 1 1 5DD0CB73
 P 9350 1500
 F 0 "D7" V 9304 1579 50  0000 L CNN
 F 1 "5v5" V 9395 1579 50  0000 L CNN
-F 2 "Diode_THT:D_5W_P10.16mm_Horizontal" H 9350 1500 50  0001 C CNN
+F 2 "Diode_THT:D_DO-35_SOD27_P10.16mm_Horizontal" H 9350 1500 50  0001 C CNN
 F 3 "~" H 9350 1500 50  0001 C CNN
 	1    9350 1500
 	0    1    1    0   
@@ -447,17 +447,6 @@ Text Label 10700 3950 0    50   ~ 0
 FALL_1
 Text Label 10700 4150 0    50   ~ 0
 RISE_2
-$Comp
-L Connector:Conn_01x22_Male J1
-U 1 1 5E0837A8
-P 10500 4850
-F 0 "J1" H 10608 6031 50  0000 C CNN
-F 1 "Conn_01x22_Male" H 10608 5940 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x22_P2.54mm_Vertical" H 10500 4850 50  0001 C CNN
-F 3 "~" H 10500 4850 50  0001 C CNN
-	1    10500 4850
-	1    0    0    -1  
-$EndComp
 Text Label 9650 5550 0    50   ~ 0
 LED
 Text Label 10000 3050 0    50   ~ 0
@@ -744,7 +733,7 @@ F 1 "TL074" H 2950 7226 50  0000 C CNN
 F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 2900 7050 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 3000 7150 50  0001 C CNN
 	4    2950 6950
-	1    0    0    -1  
+	1    0    0    1   
 $EndComp
 $Comp
 L Device:R R?
@@ -1550,8 +1539,8 @@ L Device:R_POT_TRIM RV1
 U 1 1 5E065EC6
 P 5800 2400
 F 0 "RV1" H 5730 2354 50  0000 R CNN
-F 1 "R_POT_TRIM" H 5730 2445 50  0000 R CNN
-F 2 "Potentiometer_THT:Potentiometer_Bourns_3266Z_Horizontal" H 5800 2400 50  0001 C CNN
+F 1 "100k" H 5730 2445 50  0000 R CNN
+F 2 "Potentiometer_THT:Potentiometer_Bourns_3296Z_Horizontal" H 5800 2400 50  0001 C CNN
 F 3 "~" H 5800 2400 50  0001 C CNN
 	1    5800 2400
 	-1   0    0    1   
@@ -2022,4 +2011,15 @@ Text Label 10700 4650 0    50   ~ 0
 RISE_RATE
 Text Label 10700 4350 0    50   ~ 0
 IN
+$Comp
+L Connector:Conn_01x21_Female J1
+U 1 1 5DE6051E
+P 10500 4850
+F 0 "J1" H 10392 6035 50  0000 C CNN
+F 1 "Conn_01x21_Female" H 10392 5944 50  0000 C CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x21_P2.54mm_Vertical" H 10500 4850 50  0001 C CNN
+F 3 "~" H 10500 4850 50  0001 C CNN
+	1    10500 4850
+	-1   0    0    -1  
+$EndComp
 $EndSCHEMATC
