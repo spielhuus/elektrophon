@@ -11,7 +11,7 @@ Comp "elektrophon"
 Comment1 ""
 Comment2 "schema for main circuit"
 Comment3 ""
-Comment4 ""
+Comment4 "License CC BY 4.0 - Attribution 4.0 International"
 $EndDescr
 $Comp
 L Device:R_POT RV1

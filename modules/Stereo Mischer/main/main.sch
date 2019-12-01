@@ -1,4 +1,5 @@
 EESchema Schematic File Version 4
+LIBS:main-cache
 EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
@@ -11,7 +12,7 @@ Comp "elektrophon"
 Comment1 ""
 Comment2 "schema for main circuit"
 Comment3 ""
-Comment4 ""
+Comment4 "License CC BY 4.0 - Attribution 4.0 International"
 $EndDescr
 $Comp
 L Amplifier_Operational:NE5532 U1
