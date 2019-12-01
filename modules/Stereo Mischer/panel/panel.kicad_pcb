@@ -1,4 +1,4 @@
-(kicad_pcb (version 20171130) (host pcbnew "(5.1.4)-1")
+(kicad_pcb (version 20171130) (host pcbnew 5.1.5-52549c5~84~ubuntu19.04.1)
 
   (general
     (thickness 1.6)
@@ -136,7 +136,7 @@
   )
 
   (module elektrophon:LED_Monitor (layer F.Cu) (tedit 5D62B726) (tstamp 5DD9D886)
-    (at 63.25 135.51)
+    (at 62.23 135.28)
     (descr "Imported from LED Monitor.svg")
     (tags svg2mod)
     (path /5DD9DCB6)
@@ -157,7 +157,7 @@
   )
 
   (module elektrophon:LED_Monitor (layer F.Cu) (tedit 5D62B726) (tstamp 5DD9D881)
-    (at 63.25 129.54)
+    (at 62.23 127.66)
     (descr "Imported from LED Monitor.svg")
     (tags svg2mod)
     (path /5DD99030)
@@ -178,7 +178,7 @@
   )
 
   (module elektrophon:LED_Monitor (layer F.Cu) (tedit 5D62B726) (tstamp 5DD9D87C)
-    (at 56.01 135.51)
+    (at 54.61 135.28)
     (descr "Imported from LED Monitor.svg")
     (tags svg2mod)
     (path /5DD9DCB0)
@@ -199,7 +199,7 @@
   )
 
   (module elektrophon:LED_Monitor (layer F.Cu) (tedit 5D62B726) (tstamp 5DD9D877)
-    (at 56.01 129.54)
+    (at 54.61 127.66)
     (descr "Imported from LED Monitor.svg")
     (tags svg2mod)
     (path /5DD98DFD)
@@ -220,7 +220,7 @@
   )
 
   (module elektrophon:LED_Monitor (layer F.Cu) (tedit 5D62B726) (tstamp 5DD9D872)
-    (at 48.77 135.51)
+    (at 46.99 135.28)
     (descr "Imported from LED Monitor.svg")
     (tags svg2mod)
     (path /5DD9DCAA)
@@ -241,7 +241,7 @@
   )
 
   (module elektrophon:LED_Monitor (layer F.Cu) (tedit 5D62B726) (tstamp 5DD9D86D)
-    (at 48.77 129.54)
+    (at 46.99 127.66)
     (descr "Imported from LED Monitor.svg")
     (tags svg2mod)
     (path /5DD98CB0)
@@ -262,7 +262,7 @@
   )
 
   (module elektrophon:LED_Monitor (layer F.Cu) (tedit 5D62B726) (tstamp 5DD9D868)
-    (at 41.53 135.51)
+    (at 39.37 135.28)
     (descr "Imported from LED Monitor.svg")
     (tags svg2mod)
     (path /5DD9DCA4)
@@ -283,7 +283,7 @@
   )
 
   (module elektrophon:LED_Monitor (layer F.Cu) (tedit 5D62B726) (tstamp 5DD9D863)
-    (at 41.53 129.54)
+    (at 39.37 127.66)
     (descr "Imported from LED Monitor.svg")
     (tags svg2mod)
     (path /5DD98B35)
@@ -304,7 +304,7 @@
   )
 
   (module elektrophon:LED_Monitor (layer F.Cu) (tedit 5D62B726) (tstamp 5DD9D85E)
-    (at 34.29 135.51)
+    (at 31.75 135.28)
     (descr "Imported from LED Monitor.svg")
     (tags svg2mod)
     (path /5DD9DC9E)
@@ -325,7 +325,7 @@
   )
 
   (module elektrophon:LED_Monitor (layer F.Cu) (tedit 5D62B726) (tstamp 5DD9D859)
-    (at 34.29 129.54)
+    (at 31.75 127.66)
     (descr "Imported from LED Monitor.svg")
     (tags svg2mod)
     (path /5DD989C0)
