@@ -116,7 +116,7 @@
     (fp_text reference H13 (at 0 -6.604) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value EXP (at 0 8.636) (layer F.Mask)
+    (fp_text value EXP_RAISE (at 0 8.636) (layer F.Mask)
       (effects (font (size 2 1.4) (thickness 0.25)))
     )
     (pad "" np_thru_hole circle (at 0 0) (size 6.5 6.5) (drill 6.4) (layers *.Cu *.Mask)
@@ -134,7 +134,7 @@
     (fp_text reference H12 (at 0 -6.604) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value EXP (at 0 8.636) (layer F.Mask)
+    (fp_text value EXP_FALL (at 0 8.636) (layer F.Mask)
       (effects (font (size 2 1.4) (thickness 0.25)))
     )
     (pad "" np_thru_hole circle (at 0 0) (size 6.5 6.5) (drill 6.4) (layers *.Cu *.Mask)
@@ -219,7 +219,7 @@
     (fp_text reference H11 (at 0 -9.4) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value BIPOLAR (at 0 9.144) (layer F.Mask)
+    (fp_text value "BIPOLAR OUT" (at 0 9.144) (layer F.Mask)
       (effects (font (size 2 1.4) (thickness 0.25)))
     )
     (fp_circle (center 0 0) (end 4.2 0) (layer F.CrtYd) (width 0.05))
@@ -269,7 +269,7 @@
     (fp_text reference H21 (at 0 -9.4) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value RATE (at 0 9.144) (layer F.Mask)
+    (fp_text value "FALL RATE" (at 0 9.144) (layer F.Mask)
       (effects (font (size 2 1.4) (thickness 0.25)))
     )
     (fp_circle (center 0 0) (end 6.6 0) (layer F.CrtYd) (width 0.05))
@@ -294,7 +294,7 @@
     (fp_text reference H20 (at 0 -9.4) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value RATE (at 0 9.144) (layer F.Mask)
+    (fp_text value "RISE RATE" (at 0 9.144) (layer F.Mask)
       (effects (font (size 2 1.4) (thickness 0.25)))
     )
     (fp_circle (center 0 0) (end 6.6 0) (layer F.CrtYd) (width 0.05))
@@ -369,7 +369,7 @@
     (fp_text reference H15 (at 0 -9.4) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value CV (at 0 9.144) (layer F.Mask)
+    (fp_text value "CV FALL" (at 0 9.144) (layer F.Mask)
       (effects (font (size 2 1.4) (thickness 0.25)))
     )
     (fp_circle (center 0 0) (end 4.2 0) (layer F.CrtYd) (width 0.05))
@@ -394,7 +394,7 @@
     (fp_text reference H14 (at 0 -9.4) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value CV (at 0 9.144) (layer F.Mask)
+    (fp_text value "CV RISE" (at 0 9.144) (layer F.Mask)
       (effects (font (size 2 1.4) (thickness 0.25)))
     )
     (fp_circle (center 0 0) (end 4.2 0) (layer F.CrtYd) (width 0.05))
@@ -419,7 +419,7 @@
     (fp_text reference H16 (at 0 -9.4) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value BOTH (at 0 9.144) (layer F.Mask)
+    (fp_text value "BOTH CV" (at 0 9.144) (layer F.Mask)
       (effects (font (size 2 1.4) (thickness 0.25)))
     )
     (fp_circle (center 0 0) (end 4.2 0) (layer F.CrtYd) (width 0.05))
@@ -469,7 +469,7 @@
     (fp_text reference H9 (at 0 -9.4) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value AC (at 0 9.144) (layer F.Mask)
+    (fp_text value "AC OUT" (at 0 9.144) (layer F.Mask)
       (effects (font (size 2 1.4) (thickness 0.25)))
     )
     (fp_circle (center 0 0) (end 4.2 0) (layer F.CrtYd) (width 0.05))

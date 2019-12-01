@@ -4,14 +4,14 @@ EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 2 2
-Title ""
-Date ""
-Rev ""
+Title "Voltage Controlled Slope"
+Date "2019-12-01"
+Rev "01"
 Comp ""
-Comment1 ""
-Comment2 ""
+Comment1 "Original design by Ken Stone"
+Comment2 "Schema for main circuit"
 Comment3 ""
-Comment4 ""
+Comment4 "License CC BY 4.0 - Attribution 4.0 International"
 $EndDescr
 $Comp
 L power:+15V #PWR?

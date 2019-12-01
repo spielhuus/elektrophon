@@ -1,5 +1,4 @@
 EESchema Schematic File Version 4
-LIBS:main-cache
 EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
@@ -44,19 +43,6 @@ F 6 "N" H 2350 7050 50  0001 C CNN "Spice_Netlist_Enabled"
 	3    2350 7050
 	1    0    0    -1  
 $EndComp
-$Comp
-L Device:R R1
-U 1 1 5DB45DED
-P 950 1700
-F 0 "R1" V 743 1700 50  0000 C CNN
-F 1 "100" V 834 1700 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 880 1700 50  0001 C CNN
-F 3 "~" H 950 1700 50  0001 C CNN
-	1    950  1700
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	1100 1700 1150 1700
 $Comp
 L Device:R R5
 U 1 1 5DB4698D
@@ -550,7 +536,7 @@ L Device:R R11
 U 1 1 5DCEA435
 P 2250 1800
 F 0 "R11" V 2043 1800 50  0000 C CNN
-F 1 "100k" V 2134 1800 50  0000 C CNN
+F 1 "10k" V 2134 1800 50  0000 C CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 2180 1800 50  0001 C CNN
 F 3 "~" H 2250 1800 50  0001 C CNN
 	1    2250 1800
@@ -589,7 +575,7 @@ L Device:R R15
 U 1 1 5DCFB7CD
 P 2900 1400
 F 0 "R15" V 2693 1400 50  0000 C CNN
-F 1 "100k" V 2784 1400 50  0000 C CNN
+F 1 "10k" V 2784 1400 50  0000 C CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 2830 1400 50  0001 C CNN
 F 3 "~" H 2900 1400 50  0001 C CNN
 	1    2900 1400
@@ -600,8 +586,6 @@ Wire Wire Line
 	2500 1800 2400 1800
 Text Label 3450 1900 1    50   ~ 0
 LEFT_OUT
-Text Notes 2250 2300 0    50   ~ 0
-10k
 Text Notes 950  2250 0    50   ~ 0
 10k
 $Comp
@@ -696,19 +680,6 @@ Wire Wire Line
 	3050 1400 3300 1400
 Connection ~ 3300 1900
 $Comp
-L Device:R R2
-U 1 1 5DEEFB35
-P 950 4050
-F 0 "R2" V 743 4050 50  0000 C CNN
-F 1 "100" V 834 4050 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 880 4050 50  0001 C CNN
-F 3 "~" H 950 4050 50  0001 C CNN
-	1    950  4050
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	1100 4050 1150 4050
-$Comp
 L Device:R R6
 U 1 1 5DEEFB3C
 P 1500 3650
@@ -766,7 +737,7 @@ L Device:R R12
 U 1 1 5DEEFB64
 P 2250 4150
 F 0 "R12" V 2043 4150 50  0000 C CNN
-F 1 "100k" V 2134 4150 50  0000 C CNN
+F 1 "10k" V 2134 4150 50  0000 C CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 2180 4150 50  0001 C CNN
 F 3 "~" H 2250 4150 50  0001 C CNN
 	1    2250 4150
@@ -805,7 +776,7 @@ L Device:R R16
 U 1 1 5DEEFB79
 P 2900 3750
 F 0 "R16" V 2693 3750 50  0000 C CNN
-F 1 "100k" V 2784 3750 50  0000 C CNN
+F 1 "10k" V 2784 3750 50  0000 C CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 2830 3750 50  0001 C CNN
 F 3 "~" H 2900 3750 50  0001 C CNN
 	1    2900 3750
@@ -816,8 +787,6 @@ Wire Wire Line
 	2500 4150 2400 4150
 Text Label 3450 4250 1    50   ~ 0
 RIGHT_OUT
-Text Notes 2250 4650 0    50   ~ 0
-10k
 Text Notes 950  4600 0    50   ~ 0
 10k
 Wire Wire Line
@@ -1045,8 +1014,6 @@ F 3 "~" H 6700 1200 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	6550 2050 6600 2050
-Wire Wire Line
 	7200 1200 7200 1600
 Connection ~ 7200 1600
 Wire Wire Line
@@ -1056,7 +1023,7 @@ L Device:R_POT_TRIM RV1
 U 1 1 5E0CFBE0
 P 7450 2300
 F 0 "RV1" H 7380 2346 50  0000 R CNN
-F 1 "R_POT_TRIM" H 7380 2255 50  0000 R CNN
+F 1 "10k" H 7380 2255 50  0000 R CNN
 F 2 "Potentiometer_THT:Potentiometer_Bourns_3296Z_Horizontal" H 7450 2300 50  0001 C CNN
 F 3 "~" H 7450 2300 50  0001 C CNN
 	1    7450 2300
@@ -1287,7 +1254,7 @@ L Device:R_POT_TRIM RV2
 U 1 1 5E29AE92
 P 7150 4650
 F 0 "RV2" H 7080 4696 50  0000 R CNN
-F 1 "R_POT_TRIM" H 7080 4605 50  0000 R CNN
+F 1 "10k" H 7080 4605 50  0000 R CNN
 F 2 "Potentiometer_THT:Potentiometer_Bourns_3296Z_Horizontal" H 7150 4650 50  0001 C CNN
 F 3 "~" H 7150 4650 50  0001 C CNN
 	1    7150 4650
@@ -1583,17 +1550,6 @@ LED_L_4
 Text Label 6450 7050 0    50   ~ 0
 LED_L_5
 $Comp
-L Connector:Conn_01x16_Male J2
-U 1 1 5DE980B0
-P 6250 6850
-F 0 "J2" H 6358 7731 50  0000 C CNN
-F 1 "Conn_01x16_Male" H 6358 7640 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x16_P2.54mm_Vertical" H 6250 6850 50  0001 C CNN
-F 3 "~" H 6250 6850 50  0001 C CNN
-	1    6250 6850
-	1    0    0    -1  
-$EndComp
-$Comp
 L power:GND #PWR028
 U 1 1 5DE9A520
 P 6450 7650
@@ -1694,7 +1650,7 @@ U 2 1 5DDE6F4C
 P 2900 1900
 F 0 "U1" H 2900 1533 50  0000 C CNN
 F 1 "NE5532" H 2900 1624 50  0000 C CNN
-F 2 "" V 2550 2200 50  0001 C CNN
+F 2 "Package_DIP:DIP-8_W7.62mm_Socket" V 2550 2200 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/ne5532.pdf" V 2550 2200 50  0001 C CNN
 	2    2900 1900
 	1    0    0    1   
@@ -1721,29 +1677,17 @@ U 2 1 5DE1C638
 P 2900 4250
 F 0 "U2" H 2900 3883 50  0000 C CNN
 F 1 "NE5532" H 2900 3974 50  0000 C CNN
-F 2 "" V 2550 4550 50  0001 C CNN
+F 2 "Package_DIP:DIP-8_W7.62mm_Socket" V 2550 4550 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/ne5532.pdf" V 2550 4550 50  0001 C CNN
 	2    2900 4250
 	1    0    0    1   
 $EndComp
 Wire Wire Line
 	7850 2300 7600 2300
-$Comp
-L Device:R R?
-U 1 1 5DDCC886
-P 6400 2050
-F 0 "R?" V 6193 2050 50  0000 C CNN
-F 1 "47k" V 6284 2050 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 6330 2050 50  0001 C CNN
-F 3 "~" H 6400 2050 50  0001 C CNN
-	1    6400 2050
-	0    1    1    0   
-$EndComp
 Wire Wire Line
 	6250 1200 6250 1600
 Wire Wire Line
 	6250 2050 6200 2050
-Connection ~ 6250 2050
 Connection ~ 6200 2050
 Wire Wire Line
 	6250 1200 6550 1200
@@ -1756,6 +1700,22 @@ Wire Wire Line
 	6850 1200 7200 1200
 Wire Wire Line
 	6850 1600 7200 1600
-Text Notes 6200 2150 0    50   ~ 0
-add resistor\n
+Wire Wire Line
+	800  1700 1150 1700
+Wire Wire Line
+	800  4050 1150 4050
+Wire Wire Line
+	6250 2050 6600 2050
+Connection ~ 6250 2050
+$Comp
+L Connector:Conn_01x16_Female J2
+U 1 1 5DEA4CC2
+P 6250 6850
+F 0 "J2" H 6142 7735 50  0000 C CNN
+F 1 "Conn_01x16_Female" H 6142 7644 50  0000 C CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x16_P2.54mm_Vertical" H 6250 6850 50  0001 C CNN
+F 3 "~" H 6250 6850 50  0001 C CNN
+	1    6250 6850
+	-1   0    0    -1  
+$EndComp
 $EndSCHEMATC

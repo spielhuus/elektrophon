@@ -221,22 +221,6 @@ Wire Wire Line
 	5400 2200 5600 2200
 Wire Wire Line
 	5600 2200 5600 2350
-Wire Wire Line
-	5400 1400 5900 1400
-Wire Wire Line
-	5900 1400 5900 2350
-Wire Wire Line
-	5400 1600 6200 1600
-Wire Wire Line
-	6200 1600 6200 2350
-Wire Wire Line
-	5400 1800 6500 1800
-Wire Wire Line
-	6500 1800 6500 2350
-Wire Wire Line
-	5400 2000 6800 2000
-Wire Wire Line
-	6800 2000 6800 2350
 $Comp
 L power:+15V #PWR016
 U 1 1 5DC2B432
@@ -906,22 +890,6 @@ Wire Wire Line
 	7950 2200 8150 2200
 Wire Wire Line
 	8150 2200 8150 2350
-Wire Wire Line
-	7950 1400 8450 1400
-Wire Wire Line
-	8450 1400 8450 2350
-Wire Wire Line
-	7950 1600 8750 1600
-Wire Wire Line
-	8750 1600 8750 2350
-Wire Wire Line
-	7950 1800 9050 1800
-Wire Wire Line
-	9050 1800 9050 2350
-Wire Wire Line
-	7950 2000 9350 2000
-Wire Wire Line
-	9350 2000 9350 2350
 $Comp
 L power:+15V #PWR019
 U 1 1 5E2BE587
@@ -1049,4 +1017,36 @@ Wire Wire Line
 Connection ~ 5900 2800
 Wire Wire Line
 	5900 2800 6200 2800
+Wire Wire Line
+	5400 2000 5900 2000
+Wire Wire Line
+	5900 2000 5900 2350
+Wire Wire Line
+	5400 1800 6200 1800
+Wire Wire Line
+	6200 1800 6200 2350
+Wire Wire Line
+	5400 1600 6500 1600
+Wire Wire Line
+	6500 1600 6500 2350
+Wire Wire Line
+	5400 1400 6800 1400
+Wire Wire Line
+	6800 1400 6800 2350
+Wire Wire Line
+	7950 2000 8450 2000
+Wire Wire Line
+	8450 2000 8450 2350
+Wire Wire Line
+	7950 1800 8750 1800
+Wire Wire Line
+	8750 1800 8750 2350
+Wire Wire Line
+	7950 1600 9050 1600
+Wire Wire Line
+	9050 1600 9050 2350
+Wire Wire Line
+	9350 2350 9350 1400
+Wire Wire Line
+	9350 1400 7950 1400
 $EndSCHEMATC

@@ -1,5 +1,11 @@
 EESchema-DOCLIB  Version 2.0
 #
+$CMP 2N5457
+D JFET N-CH 25V 0.31W TO-92
+K 2N5457-ND
+F https://my.centralsemi.com/get_document.php?cmp=1&mergetype=pd&mergepath=pd&pdf_id=2N5457-5459.PDF
+$ENDCMP
+#
 $CMP BC327
 D 0.8A Ic, 45V Vce, PNP Transistor, TO-92
 K PNP Transistor
