@@ -244,4 +244,15 @@ F 3 "~" H 4200 4250 50  0001 C CNN
 	1    4200 4250
 	1    0    0    -1  
 $EndComp
+$Comp
+L Mechanical:MountingHole H22
+U 1 1 5DE3D3E9
+P 1400 3200
+F 0 "H22" H 1500 3246 50  0000 L CNN
+F 1 "IN" H 1500 3155 50  0000 L CNN
+F 2 "elektrophon:panel_jack" H 1400 3200 50  0001 C CNN
+F 3 "~" H 1400 3200 50  0001 C CNN
+	1    1400 3200
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
