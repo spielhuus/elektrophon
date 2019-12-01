@@ -123,33 +123,22 @@ F 3 "" H 4500 1750 50  0001 C CNN
 	1    4500 1750
 	1    0    0    -1  
 $EndComp
-$Comp
-L elektrophon:J201 Q3
-U 1 1 5DBF02B7
-P 4950 1350
-F 0 "Q3" H 5141 1396 50  0000 L CNN
-F 1 "J201" H 5141 1305 50  0000 L CNN
-F 2 "Package_TO_SOT_THT:TO-92_Inline" H 5150 1275 50  0001 L CIN
-F 3 "http://www.fairchildsemi.com/ds/BF/BF244A.pdf" H 4950 1300 50  0001 L CNN
-	1    4950 1350
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	4300 1350 4500 1350
 Wire Wire Line
 	4500 1450 4500 1350
 Connection ~ 4500 1350
 Wire Wire Line
-	4500 1350 4750 1350
+	4500 1350 4650 1350
 $Comp
 L power:+15V #PWR037
 U 1 1 5DBF3DCB
-P 5050 1150
-F 0 "#PWR037" H 5050 1000 50  0001 C CNN
-F 1 "+15V" H 5065 1323 50  0000 C CNN
-F 2 "" H 5050 1150 50  0001 C CNN
-F 3 "" H 5050 1150 50  0001 C CNN
-	1    5050 1150
+P 5050 1050
+F 0 "#PWR037" H 5050 900 50  0001 C CNN
+F 1 "+15V" H 5065 1223 50  0000 C CNN
+F 2 "" H 5050 1050 50  0001 C CNN
+F 3 "" H 5050 1050 50  0001 C CNN
+	1    5050 1050
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -163,8 +152,6 @@ F 3 "~" H 5500 1650 50  0001 C CNN
 	1    5500 1650
 	0    1    1    0   
 $EndComp
-Wire Wire Line
-	5050 1650 5050 1550
 Wire Wire Line
 	5350 1650 5050 1650
 Connection ~ 2700 1150
@@ -336,17 +323,6 @@ F 2 "" H 2150 2450 50  0001 C CNN
 F 3 "" H 2150 2450 50  0001 C CNN
 	1    2150 2450
 	1    0    0    -1  
-$EndComp
-$Comp
-L elektrophon:PN4250 Q1
-U 1 1 5DC22899
-P 2500 2850
-F 0 "Q1" V 2828 2850 50  0000 C CNN
-F 1 "PN4250" V 2737 2850 50  0000 C CNN
-F 2 "Package_TO_SOT_THT:TO-92_Inline" H 2700 2775 50  0001 L CIN
-F 3 "http://www.fairchildsemi.com/ds/BC/BC557.pdf" H 2500 2850 50  0001 L CNN
-	1    2500 2850
-	0    1    -1   0   
 $EndComp
 $Comp
 L Device:R R3
@@ -866,48 +842,35 @@ F 3 "" H 4500 4800 50  0001 C CNN
 	1    4500 4800
 	1    0    0    -1  
 $EndComp
-$Comp
-L elektrophon:J201 Q4
-U 1 1 5DC7AD19
-P 4950 4400
-F 0 "Q4" H 5141 4446 50  0000 L CNN
-F 1 "J201" H 5141 4355 50  0000 L CNN
-F 2 "Package_TO_SOT_THT:TO-92_Inline" H 5150 4325 50  0001 L CIN
-F 3 "http://www.fairchildsemi.com/ds/BF/BF244A.pdf" H 4950 4350 50  0001 L CNN
-	1    4950 4400
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	4300 4400 4500 4400
 Wire Wire Line
 	4500 4500 4500 4400
 Connection ~ 4500 4400
 Wire Wire Line
-	4500 4400 4750 4400
+	4500 4400 4650 4400
 $Comp
 L power:+15V #PWR038
 U 1 1 5DC7AD23
-P 5050 4200
-F 0 "#PWR038" H 5050 4050 50  0001 C CNN
-F 1 "+15V" H 5065 4373 50  0000 C CNN
-F 2 "" H 5050 4200 50  0001 C CNN
-F 3 "" H 5050 4200 50  0001 C CNN
-	1    5050 4200
+P 5050 4100
+F 0 "#PWR038" H 5050 3950 50  0001 C CNN
+F 1 "+15V" H 5065 4273 50  0000 C CNN
+F 2 "" H 5050 4100 50  0001 C CNN
+F 3 "" H 5050 4100 50  0001 C CNN
+	1    5050 4100
 	1    0    0    -1  
 $EndComp
 $Comp
 L Device:R R28
 U 1 1 5DC7AD2F
 P 5500 4700
-F 0 "R28" V 5293 4700 50  0000 C CNN
-F 1 "1m" V 5384 4700 50  0000 C CNN
+F 0 "R28" V 5600 4700 50  0000 C CNN
+F 1 "1m" V 5700 4700 50  0000 C CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 5430 4700 50  0001 C CNN
 F 3 "~" H 5500 4700 50  0001 C CNN
 	1    5500 4700
 	0    1    1    0   
 $EndComp
-Wire Wire Line
-	5050 4700 5050 4600
 Wire Wire Line
 	5350 4700 5050 4700
 Connection ~ 2700 4200
@@ -969,17 +932,6 @@ F 2 "" H 2150 5500 50  0001 C CNN
 F 3 "" H 2150 5500 50  0001 C CNN
 	1    2150 5500
 	1    0    0    -1  
-$EndComp
-$Comp
-L elektrophon:PN4250 Q2
-U 1 1 5DC7AD6E
-P 2500 5900
-F 0 "Q2" V 2828 5900 50  0000 C CNN
-F 1 "PN4250" V 2737 5900 50  0000 C CNN
-F 2 "Package_TO_SOT_THT:TO-92_Inline" H 2700 5825 50  0001 L CIN
-F 3 "http://www.fairchildsemi.com/ds/BC/BC557.pdf" H 2500 5900 50  0001 L CNN
-	1    2500 5900
-	0    1    -1   0   
 $EndComp
 $Comp
 L Device:R R4
@@ -2458,4 +2410,66 @@ Wire Wire Line
 Connection ~ 3850 7600
 Wire Wire Line
 	3850 7600 4250 7600
+$Comp
+L elektrophon:PN4250 Q2
+U 1 1 5DE556A5
+P 2500 5900
+F 0 "Q2" V 2828 5900 50  0000 C CNN
+F 1 "PN4250" V 2737 5900 50  0000 C CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 2700 5825 50  0001 L CIN
+F 3 "http://www.fairchildsemi.com/ds/BC/BC557.pdf" H 2500 5900 50  0001 L CNN
+	1    2500 5900
+	0    1    -1   0   
+$EndComp
+$Comp
+L elektrophon:PN4250 Q1
+U 1 1 5DE69817
+P 2500 2850
+F 0 "Q1" V 2828 2850 50  0000 C CNN
+F 1 "PN4250" V 2737 2850 50  0000 C CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 2700 2775 50  0001 L CIN
+F 3 "http://www.fairchildsemi.com/ds/BC/BC557.pdf" H 2500 2850 50  0001 L CNN
+	1    2500 2850
+	0    1    -1   0   
+$EndComp
+$Comp
+L elektrophon:2N5457 Q3
+U 1 1 5DE9106C
+P 4950 1350
+F 0 "Q3" H 5138 1297 60  0000 L CNN
+F 1 "2N5457" H 5138 1403 60  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 5150 1550 60  0001 L CNN
+F 3 "https://my.centralsemi.com/get_document.php?cmp=1&mergetype=pd&mergepath=pd&pdf_id=2N5457-5459.PDF" H 5150 1650 60  0001 L CNN
+F 4 "2N5457-ND" H 5150 1750 60  0001 L CNN "Digi-Key_PN"
+F 5 "2N5457" H 5150 1850 60  0001 L CNN "MPN"
+F 6 "Discrete Semiconductor Products" H 5150 1950 60  0001 L CNN "Category"
+F 7 "Transistors - JFETs" H 5150 2050 60  0001 L CNN "Family"
+F 8 "https://my.centralsemi.com/get_document.php?cmp=1&mergetype=pd&mergepath=pd&pdf_id=2N5457-5459.PDF" H 5150 2150 60  0001 L CNN "DK_Datasheet_Link"
+F 9 "/product-detail/en/central-semiconductor-corp/2N5457/2N5457-ND/4806918" H 5150 2250 60  0001 L CNN "DK_Detail_Page"
+F 10 "JFET N-CH 25V 0.31W TO-92" H 5150 2350 60  0001 L CNN "Description"
+F 11 "Central Semiconductor Corp" H 5150 2450 60  0001 L CNN "Manufacturer"
+F 12 "Active NonStock" H 5150 2550 60  0001 L CNN "Status"
+	1    4950 1350
+	1    0    0    1   
+$EndComp
+$Comp
+L elektrophon:2N5457 Q4
+U 1 1 5DEB36C0
+P 4950 4400
+F 0 "Q4" H 5138 4347 60  0000 L CNN
+F 1 "2N5457" H 5138 4453 60  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 5150 4600 60  0001 L CNN
+F 3 "https://my.centralsemi.com/get_document.php?cmp=1&mergetype=pd&mergepath=pd&pdf_id=2N5457-5459.PDF" H 5150 4700 60  0001 L CNN
+F 4 "2N5457-ND" H 5150 4800 60  0001 L CNN "Digi-Key_PN"
+F 5 "2N5457" H 5150 4900 60  0001 L CNN "MPN"
+F 6 "Discrete Semiconductor Products" H 5150 5000 60  0001 L CNN "Category"
+F 7 "Transistors - JFETs" H 5150 5100 60  0001 L CNN "Family"
+F 8 "https://my.centralsemi.com/get_document.php?cmp=1&mergetype=pd&mergepath=pd&pdf_id=2N5457-5459.PDF" H 5150 5200 60  0001 L CNN "DK_Datasheet_Link"
+F 9 "/product-detail/en/central-semiconductor-corp/2N5457/2N5457-ND/4806918" H 5150 5300 60  0001 L CNN "DK_Detail_Page"
+F 10 "JFET N-CH 25V 0.31W TO-92" H 5150 5400 60  0001 L CNN "Description"
+F 11 "Central Semiconductor Corp" H 5150 5500 60  0001 L CNN "Manufacturer"
+F 12 "Active NonStock" H 5150 5600 60  0001 L CNN "Status"
+	1    4950 4400
+	1    0    0    1   
+$EndComp
 $EndSCHEMATC
