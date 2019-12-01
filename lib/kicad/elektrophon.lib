@@ -1,6 +1,35 @@
 EESchema-LIBRARY Version 2.4
 #encoding utf-8
 #
+# 2N5457
+#
+DEF 2N5457 Q 0 0 Y Y 1 F N
+F0 "Q" -106 143 60 H V R CNN
+F1 "2N5457" -252 -244 60 H V C CNN
+F2 "digikey-footprints:TO-92-3" 200 200 60 H I L CNN
+F3 "https://my.centralsemi.com/get_document.php?cmp=1&mergetype=pd&mergepath=pd&pdf_id=2N5457-5459.PDF" 200 300 60 H I L CNN
+F4 "2N5457-ND" 200 400 60 H I L CNN "Digi-Key_PN"
+F5 "2N5457" 200 500 60 H I L CNN "MPN"
+F6 "Discrete Semiconductor Products" 200 600 60 H I L CNN "Category"
+F7 "Transistors - JFETs" 200 700 60 H I L CNN "Family"
+F8 "https://my.centralsemi.com/get_document.php?cmp=1&mergetype=pd&mergepath=pd&pdf_id=2N5457-5459.PDF" 200 800 60 H I L CNN "DK_Datasheet_Link"
+F9 "/product-detail/en/central-semiconductor-corp/2N5457/2N5457-ND/4806918" 200 900 60 H I L CNN "DK_Detail_Page"
+F10 "JFET N-CH 25V 0.31W TO-92" 200 1000 60 H I L CNN "Description"
+F11 "Central Semiconductor Corp" 200 1100 60 H I L CNN "Manufacturer"
+F12 "Active NonStock" 200 1200 60 H I L CNN "Status"
+DRAW
+C 0 0 152 1 1 0 f
+P 2 0 1 0 -25 -100 -25 100 N
+P 2 0 1 0 -25 0 -175 0 N
+P 3 0 1 0 -25 -75 100 -75 100 -150 N
+P 3 0 1 0 -25 75 100 75 100 150 N
+P 4 1 1 0 -75 25 -75 -25 -25 0 -75 25 F
+X D 1 100 -300 200 U 50 50 1 1 P
+X S 2 100 300 200 D 50 50 1 1 P
+X G 3 -300 0 200 R 50 50 1 1 I
+ENDDRAW
+ENDDEF
+#
 # CA3080
 #
 DEF CA3080 U 0 5 Y Y 2 F N
@@ -46,8 +75,8 @@ P 3 0 1 0 100 -100 100 -50 10 -50 N
 P 3 0 1 0 100 100 100 55 10 55 N
 P 4 0 1 0 0 0 -40 15 -40 -15 0 0 F
 X D 1 100 200 100 D 50 50 1 1 P
-X G 2 -200 0 210 R 50 50 1 1 I
-X S 3 100 -200 100 U 50 50 1 1 P
+X S 2 100 -200 100 U 50 50 1 1 P
+X G 3 -200 0 210 R 50 50 1 1 I
 ENDDRAW
 ENDDEF
 #
@@ -155,9 +184,9 @@ P 2 0 1 0 25 25 100 100 N
 P 3 0 1 0 25 -25 100 -100 100 -100 N
 P 3 0 1 20 25 75 25 -75 25 -75 N
 P 5 0 1 0 90 -70 70 -90 50 -50 90 -70 90 -70 F
-X C 1 100 200 100 D 50 50 1 1 P
+X E 1 100 -200 100 U 50 50 1 1 P
 X B 2 -200 0 225 R 50 50 1 1 I
-X E 3 100 -200 100 U 50 50 1 1 P
+X C 3 100 200 100 D 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
