@@ -181,23 +181,23 @@ $EndComp
 $Comp
 L Mechanical:MountingHole H16
 U 1 1 5D74E4E8
-P 4200 4950
-F 0 "H16" H 4300 4996 50  0000 L CNN
-F 1 "MountingHole" H 4300 4905 50  0000 L CNN
-F 2 "MountingHole:MountingHole_3.2mm_M3" H 4200 4950 50  0001 C CNN
-F 3 "~" H 4200 4950 50  0001 C CNN
-	1    4200 4950
+P 4450 4950
+F 0 "H16" H 4550 4996 50  0000 L CNN
+F 1 "MountingHole" H 4550 4905 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3" H 4450 4950 50  0001 C CNN
+F 3 "~" H 4450 4950 50  0001 C CNN
+	1    4450 4950
 	1    0    0    -1  
 $EndComp
 $Comp
 L Mechanical:MountingHole H17
 U 1 1 5D74E67C
-P 4200 5300
-F 0 "H17" H 4300 5346 50  0000 L CNN
-F 1 "MountingHole" H 4300 5255 50  0000 L CNN
-F 2 "MountingHole:MountingHole_3.2mm_M3" H 4200 5300 50  0001 C CNN
-F 3 "~" H 4200 5300 50  0001 C CNN
-	1    4200 5300
+P 4450 5300
+F 0 "H17" H 4550 5346 50  0000 L CNN
+F 1 "MountingHole" H 4550 5255 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3" H 4450 5300 50  0001 C CNN
+F 3 "~" H 4450 5300 50  0001 C CNN
+	1    4450 5300
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -308,6 +308,28 @@ F 1 "LED_L_5" H 6650 2055 50  0000 L CNN
 F 2 "elektrophon:LED_Monitor" H 6550 2100 50  0001 C CNN
 F 3 "~" H 6550 2100 50  0001 C CNN
 	1    6550 2100
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0101
+U 1 1 5DE43B85
+P 1900 6400
+F 0 "#PWR0101" H 1900 6150 50  0001 C CNN
+F 1 "GND" H 1905 6227 50  0000 C CNN
+F 2 "" H 1900 6400 50  0001 C CNN
+F 3 "" H 1900 6400 50  0001 C CNN
+	1    1900 6400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:PWR_FLAG #FLG0101
+U 1 1 5DE4513F
+P 1900 6400
+F 0 "#FLG0101" H 1900 6475 50  0001 C CNN
+F 1 "PWR_FLAG" H 1900 6573 50  0000 C CNN
+F 2 "" H 1900 6400 50  0001 C CNN
+F 3 "~" H 1900 6400 50  0001 C CNN
+	1    1900 6400
 	1    0    0    -1  
 $EndComp
 $EndSCHEMATC
