@@ -17,7 +17,7 @@
 |1  |J2                                                           |12 Pins / 1 Row |Pin Socket Connector (P2.54mm)                                                                             |
 |1  |J3                                                           |9 Pins / 1 Row  |Pin Socket Connector (P2.54mm)                                                                             |
 |2  |Q1, Q2                                                       |PN4250          |Bipolar Transistors – BJT (TO-92)                                                                          |
-|2  |Q3, Q4                                                       |J201            |JFET (TO-92)                                                                                               |
+|2  |Q3, Q4                                                       |2N5457          |JFET (TO-92)                                                                                               |
 |4  |R1, R2, R13, R14                                             |2M7             |Resistor (L:6.3mm, D:2.5mm)                                                                                |
 |9  |R3, R4, R5, R6, R11, R12, R15, R16, R24                      |33k             |Resistor (L:6.3mm, D:2.5mm)                                                                                |
 |4  |R7, R9, R23, R26                                             |100k            |Resistor (L:6.3mm, D:2.5mm)                                                                                |
