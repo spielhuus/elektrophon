@@ -1,21 +1,21 @@
-Qty,Reference(s),Value,Footprint,Datasheet
-1,D1,LED,LED_THT:LED_D5.0mm_Clear,~
-1,J1,FALL CV,elektrophon:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles,~
-1,J2,BOTH CV,elektrophon:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles,~
-1,J3,RISE CV,elektrophon:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles,~
-1,J4,CV (1V/OCT),elektrophon:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles,~
-1,J5,IN,elektrophon:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles,~
-1,J6,TRIGGER,elektrophon:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles,~
-1,J7,Conn_01x22_Male,Connector_PinHeader_2.54mm:PinHeader_1x22_P2.54mm_Vertical,~
-1,J8,END,elektrophon:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles,~
-1,J9,AC OUT,elektrophon:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles,~
-1,J10,OUT,elektrophon:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles,~
-1,J11,BIPOLAR OUT,elektrophon:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles,~
-2,"R1, R2",330k,"Resistor (L:6.3mm, D:2.5mm)",~
-4,"R3, R4, R9, R10",1M,"Resistor (L:6.3mm, D:2.5mm)",~
-4,"R5, R6, R7, R8",100k,"Resistor (L:6.3mm, D:2.5mm)",~
-2,"RV1, RV3",50k,elektrophon:Potentiometer_Alpha_RD901F-40-00D_Single_Vertical,~
-2,"RV2, RV4",100k,elektrophon:Potentiometer_Alpha_RD901F-40-00D_Single_Vertical,~
-1,SW1,EXP_FALL,4ms-footprints:SPDT_KIT,~
-1,SW2,RISE_EXP,4ms-footprints:SPDT_KIT,~
-1,SW3,CYCLE,4ms-footprints:SPDT_KIT,~
+Qty,Reference(s),Value,Footprint
+1,D1,LED,LED_THT:LED_D5.0mm_Clear
+1,J1,FALL CV,elektrophon:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles
+1,J2,BOTH CV,elektrophon:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles
+1,J3,RISE CV,elektrophon:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles
+1,J4,CV (1V/OCT),elektrophon:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles
+1,J5,IN,elektrophon:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles
+1,J6,TRIGGER,elektrophon:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles
+1,J7,Conn_01x22_Male,Connector_PinHeader_2.54mm:PinHeader_1x22_P2.54mm_Vertical
+1,J8,END,elektrophon:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles
+1,J9,AC OUT,elektrophon:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles
+1,J10,OUT,elektrophon:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles
+1,J11,BIPOLAR OUT,elektrophon:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles
+2,"R1, R2",330k,"Resistor (L:6.3mm, D:2.5mm)"
+4,"R3, R4, R9, R10",1M,"Resistor (L:6.3mm, D:2.5mm)"
+4,"R5, R6, R7, R8",100k,"Resistor (L:6.3mm, D:2.5mm)"
+2,"RV1, RV3",50k,elektrophon:Potentiometer_Alpha_RD901F-40-00D_Single_Vertical
+2,"RV2, RV4",100k,elektrophon:Potentiometer_Alpha_RD901F-40-00D_Single_Vertical
+1,SW1,EXP_FALL,4ms-footprints:SPDT_KIT
+1,SW2,RISE_EXP,4ms-footprints:SPDT_KIT
+1,SW3,CYCLE,4ms-footprints:SPDT_KIT
