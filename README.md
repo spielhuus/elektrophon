@@ -1,7 +1,7 @@
-<font size="14" style="font-size:26px; font-style:italic;">elektrophon</font> 
-
 # **<font size="24">*elekrophon*</font>** 
 is a collection of modular synthesizer modules i built. The module folders contain the schema and PCB files for kicad. You can find all the required files for changing the schemas and building gerber files in this project.  is a collection of modules for a modular analog electro acoustic noise machine. all modules are built on stripboards or pcb's and with 3d printed front plates.The goal is it to build the modules quickly. The 3d printed front panels comes complete with holes and stands. This makes it easy to mount the module. The modules can be mount to a rack. <a href="https://spielhuus.github.io/elektrophon/fly_rack.jpg"><img align="right" src="https://spielhuus.github.io/elektrophon/fly_rack_tmb.jpg"></a>  The first rack i built was a small testing rack, the fly rack.There are only two side panels to print. For the rails i used the standard euro panel rails from the electronic vendors (i.e. [farnel](https://de.farnell.com/schroff/34560-484/horizontal-rail-enclosure/dp/2816357)). Every thing from the music stores is very expensive. it is a little bit cheaper to buy those rails. The sizes for modular synths are mostly equal to the standard size for electronic and computer racks.
+
+## **<font size="24">*modules*</font>** 
 <table>
  <tr>
   <td><font size="14" style="font-size:26px; font-style:italic;">VCO</font></td>
@@ -19,7 +19,7 @@ is a collection of modular synthesizer modules i built. The module folders conta
  </tr>
 </table>
 
-# links
+## **<font size="24">*modules*</font>** 
 
 * [Thomas Henry](http://birthofasynth.com/Thomas_Henry/TH_main.html) modules archived by [Scott Stites](http://birthofasynth.com/index.html). 
   * The [Electronic Music Circuits: The Reprints](https://web.archive.org/web/20190907204304/https://static.miraheze.org/sdiywiki/5/5d/The_Reprint_Collection_by_Thomas_Henry_CC_BY_NC.pdf) from Thomas Henry.
