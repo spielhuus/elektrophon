@@ -8,21 +8,23 @@ is a collection of modular synthesizer modules i built. The module folders conta
  <tr>
   <td align="left">*<img src="https://spielhuus.github.io/elektrophon/images/text_osillator.png"></td>
   <td><a href="https://github.com/spielhuus/elektrophon/blob/master/modules/X4046/README.md"><img src="https://spielhuus.github.io/elektrophon/images/4046-panel-tmb.jpg" height="300px"></img></a><br/>VCO: X4046</td>
+  <td><a href="https://github.com/spielhuus/elektrophon/blob/master/modules/Utility LFO/README.md"><img src="https://spielhuus.github.io/elektrophon/images/Mixerpanel_tmb.png" height="200px"></img></a><br/>LFO</td>
+  <td><a href="https://github.com/spielhuus/elektrophon/blob/master/modules/Noise/README.md"><img src="https://spielhuus.github.io/elektrophon/images/Mixerpanel_tmb.png" height="200px"></img></a><br/>noise</td>
 
   <td><img src="https://spielhuus.github.io/elektrophon/images/text_filter.png"></td>
-  <td><img src="https://spielhuus.github.io/elektrophon/images/text_function.png"></td>
-  <td><img src="https://spielhuus.github.io/elektrophon/images/text_mixer.png"></td>
-
-<td><a href="https://github.com/spielhuus/elektrophon/blob/master/modules/VCA/README.md"><img src="https://spielhuus.github.io/elektrophon/images/VCA-panel-tmb.jpg" height="300px"></img></a><br/>VCA</td>
   <td><a href="https://github.com/spielhuus/elektrophon/blob/master/modules/Synthacon%20VCF/README.md"><img src="https://spielhuus.github.io/elektrophon/images/synthacon-panel-tmb.jpg" height="300px"></img></a><br/>Synthacon VCF</td>
-  <td><a href="https://github.com/spielhuus/elektrophon/blob/master/modules/SSG/README.md"><img src="https://spielhuus.github.io/elektrophon/images/SSGPanel_tmb.png" height="200px"></img></a><br/>Smooth and Stepped Generator</td>
+
+  <td><img src="https://spielhuus.github.io/elektrophon/images/text_function.png"></td>
   <td><a href="https://github.com/spielhuus/elektrophon/blob/master/modules/VCS/README.md"><img src="https://spielhuus.github.io/elektrophon/images/VCSpanel_tmb.png" height="200px"></img></a><br/>Voltage Controller Slope</td>
-  <td><a href="https://github.com/spielhuus/elektrophon/blob/master/modules/Stereo Mischer/README.md"><img src="https://spielhuus.github.io/elektrophon/images/Stereo_Mixer_panel_tmb.png" height="200px"></img></a><br/>Stereo Mixer</td>
-  <td><a href="https://github.com/spielhuus/elektrophon/blob/master/modules/BassPP/README.md"><img src="https://spielhuus.github.io/elektrophon/images/Mixerpanel_tmb.png" height="200px"></img></a><br/>Bass++</td>
+  <td><a href="https://github.com/spielhuus/elektrophon/blob/master/modules/SSG/README.md"><img src="https://spielhuus.github.io/elektrophon/images/SSGPanel_tmb.png" height="200px"></img></a><br/>Smooth and Stepped Generator</td>
   <td><a href="https://github.com/spielhuus/elektrophon/blob/master/modules/ADSR/README.md"><img src="https://spielhuus.github.io/elektrophon/images/Mixerpanel_tmb.png" height="200px"></img></a><br/>ADSR</td>
+
+  <td><img src="https://spielhuus.github.io/elektrophon/images/text_mixer.png"></td>
+  <td><a href="https://github.com/spielhuus/elektrophon/blob/master/modules/VCA/README.md"><img src="https://spielhuus.github.io/elektrophon/images/VCA-panel-tmb.jpg" height="300px"></img></a><br/>VCA</td>
+  <td><a href="https://github.com/spielhuus/elektrophon/blob/master/modules/Stereo Mischer/README.md"><img src="https://spielhuus.github.io/elektrophon/images/Stereo_Mixer_panel_tmb.png" height="200px"></img></a><br/>Stereo Mixer</td>
+  
+  <td><a href="https://github.com/spielhuus/elektrophon/blob/master/modules/BassPP/README.md"><img src="https://spielhuus.github.io/elektrophon/images/Mixerpanel_tmb.png" height="200px"></img></a><br/>Bass++</td>
   <td><a href="https://github.com/spielhuus/elektrophon/blob/master/modules/MIDI/README.md"><img src="https://spielhuus.github.io/elektrophon/images/Mixerpanel_tmb.png" height="200px"></img></a><br/>midi</td>
-  <td><a href="https://github.com/spielhuus/elektrophon/blob/master/modules/Noise/README.md"><img src="https://spielhuus.github.io/elektrophon/images/Mixerpanel_tmb.png" height="200px"></img></a><br/>noise</td>
-  <td><a href="https://github.com/spielhuus/elektrophon/blob/master/modules/Utility LFO/README.md"><img src="https://spielhuus.github.io/elektrophon/images/Mixerpanel_tmb.png" height="200px"></img></a><br/>LFO</td>
  </tr>
 </table>
 
