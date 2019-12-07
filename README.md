@@ -10,7 +10,7 @@ is a collection of modular synthesizer modules i built. The module folders conta
   <td><a href="https://github.com/spielhuus/elektrophon/blob/master/modules/Noise/README.md"><img src="https://spielhuus.github.io/elektrophon/images/Mixerpanel_tmb.png" height="200px"></img></a><br/>noise</td>
 
 </tr><tr>
-  <td width="32px"><img src="https://spielhuus.github.io/elektrophon/images/text_filter.png"/></td>
+  <td width="64px"><img src="https://spielhuus.github.io/elektrophon/images/text_filter.png height="200px"/></td>
   <td><a href="https://github.com/spielhuus/elektrophon/blob/master/modules/Synthacon%20VCF/README.md"><img src="https://spielhuus.github.io/elektrophon/images/synthacon-panel-tmb.jpg" height="300px"></img></a><br/>Synthacon VCF</td>
 
 </tr><tr>
