@@ -1,3 +1,10 @@
+<style
+  type="text/css">
+h1 {color:red;}
+
+p {color:blue;}
+</style>
+
 <font size="14" style="font-size:26px; font-style:italic;">elektrophon</font> 
 
 # **<font size="24">*elekrophon*</font>** 
