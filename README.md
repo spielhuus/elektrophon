@@ -20,6 +20,7 @@ is a collection of modular synthesizer modules i built. The module folders conta
   <td><a href="https://github.com/spielhuus/elektrophon/blob/master/modules/ADSR/README.md"><img src="https://spielhuus.github.io/elektrophon/images/Mixerpanel_tmb.png" height="200px"></img></a><br/>ADSR</td>
 
 </tr><tr>
+ 
   <td><img src="https://spielhuus.github.io/elektrophon/images/text_mixer.png"/></td>
   <td><a href="https://github.com/spielhuus/elektrophon/blob/master/modules/VCA/README.md"><img src="https://spielhuus.github.io/elektrophon/images/VCA-panel-tmb.jpg" height="300px"></img></a><br/>VCA</td>
   <td><a href="https://github.com/spielhuus/elektrophon/blob/master/modules/Stereo Mischer/README.md"><img src="https://spielhuus.github.io/elektrophon/images/Stereo_Mixer_panel_tmb.png" height="200px"></img></a><br/>Stereo Mixer</td>
