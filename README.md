@@ -6,7 +6,7 @@ is a collection of modular synthesizer modules i built. The module folders conta
 ## **<font size="24">*modules*</font>** 
 <table>
  <tr>
-  <td align="right">
+  <td width="100px">
 .<img src="https://spielhuus.github.io/elektrophon/images/text_osillator.png" height="100px"/>
   </td>
   <td><a href="https://github.com/spielhuus/elektrophon/blob/master/modules/X4046/README.md"><img src="https://spielhuus.github.io/elektrophon/images/4046-panel-tmb.jpg" height="300px"></img></a><br/>VCO: X4046</td>
