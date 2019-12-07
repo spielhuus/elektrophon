@@ -6,7 +6,12 @@ is a collection of modular synthesizer modules i built. The module folders conta
  <tr>
   <td><font size="14" style="font-size:26px; font-style:italic;"><img src="https://spielhuus.github.io/elektrophon/images/text_osillator.png"></font></td>
   <td><a href="https://github.com/spielhuus/elektrophon/blob/master/modules/X4046/README.md"><img src="https://spielhuus.github.io/elektrophon/images/4046-panel-tmb.jpg" height="300px"></img></a><br/>VCO: X4046</td>
-  <td><a href="https://github.com/spielhuus/elektrophon/blob/master/modules/VCA/README.md"><img src="https://spielhuus.github.io/elektrophon/images/VCA-panel-tmb.jpg" height="300px"></img></a><br/>VCA</td>
+
+  <td><font size="14" style="font-size:26px; font-style:italic;"><img src="https://spielhuus.github.io/elektrophon/images/text_function.png"></font></td>
+    <td><font size="14" style="font-size:26px; font-style:italic;"><img src="https://spielhuus.github.io/elektrophon/images/text_mixer.png"></font></td>
+  <td><font size="14" style="font-size:26px; font-style:italic;"><img src="https://spielhuus.github.io/elektrophon/images/text_filter.png"></font></td>
+
+<td><a href="https://github.com/spielhuus/elektrophon/blob/master/modules/VCA/README.md"><img src="https://spielhuus.github.io/elektrophon/images/VCA-panel-tmb.jpg" height="300px"></img></a><br/>VCA</td>
   <td><a href="https://github.com/spielhuus/elektrophon/blob/master/modules/Synthacon%20VCF/README.md"><img src="https://spielhuus.github.io/elektrophon/images/synthacon-panel-tmb.jpg" height="300px"></img></a><br/>Synthacon VCF</td>
   <td><a href="https://github.com/spielhuus/elektrophon/blob/master/modules/SSG/README.md"><img src="https://spielhuus.github.io/elektrophon/images/SSGPanel_tmb.png" height="200px"></img></a><br/>Smooth and Stepped Generator</td>
   <td><a href="https://github.com/spielhuus/elektrophon/blob/master/modules/VCS/README.md"><img src="https://spielhuus.github.io/elektrophon/images/VCSpanel_tmb.png" height="200px"></img></a><br/>Voltage Controller Slope</td>
