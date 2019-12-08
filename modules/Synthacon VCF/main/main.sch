@@ -1,4 +1,5 @@
 EESchema Schematic File Version 4
+LIBS:main-cache
 EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
@@ -1487,4 +1488,8 @@ Text Notes 10250 1500 0    50   ~ 0
 level
 Text Notes 1450 7150 1    50   ~ 10
 voltage wrong 
+Text Notes 7700 2900 0    50   ~ 0
+1k
+Text Notes 8050 2900 0    50   ~ 0
+680
 $EndSCHEMATC
