@@ -1719,4 +1719,6 @@ F 3 "~" H 6250 6850 50  0001 C CNN
 	1    6250 6850
 	-1   0    0    -1  
 $EndComp
+Text Notes 900  5650 0    50   ~ 0
+C3/C4 footprint
 $EndSCHEMATC
