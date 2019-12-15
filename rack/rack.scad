@@ -34,10 +34,11 @@ module left() {
         translate(RAIL_POS_1) rotate([-60,0,0]) holes();
         translate(RAIL_POS_2) rotate([-30,0,0]) holes();
         translate(RAIL_POS_3) rotate([0,0,0]) holes();
-        translate([0,-30,290]) 
-            rotate([-30,0,0]) 
+        translate([0,280-5.62,300]) 
+            rotate([0,90,0])
+            cylinder(h=60,r=230,center=true,$fn=100);
+        translate([0,280,70]) 
                 cube([10,1000,250]);
-
     } 
 }
 
@@ -45,8 +46,10 @@ module right() {
     translate([431.80,0,0]) {
         difference() { 
             cube([10,360,250]);
-            translate([0,-30,290]) 
-                rotate([-30,0,0]) 
+            translate([0,280-5.62,300]) 
+                rotate([0,90,0])
+                cylinder(h=60,r=230,center=true,$fn=100);
+            translate([0,280,70]) 
                     cube([10,1000,250]);
         }
     }
