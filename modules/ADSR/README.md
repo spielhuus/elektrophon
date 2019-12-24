@@ -1,16 +1,24 @@
-# The Fastest Envelope in the West
+**<font size="6px">*ADSR*</font>** creates an envelope for describing the change of audio over time. The envelope can be used for amplitude, filters or pitch. The origin of an 555 <a href="https://spielhuus.github.io/elektrophon/images/adsr-panel.jpg"><img width="200" align="right" src="https://spielhuus.github.io/elektrophon/images/adsr-titel_tmb.jpg"></a> based ADSR is publishes in electronics by Kirschmann, Jacky et al. This version is directly taken from René Schmitz [5] 'The Fastest Envelope in the West'. For the Attack, Decay and Release the potentiometers are logarithmic. This gives better control over the values. 
 
-The ADSR creates an envelope for describing the change of the sound over time. The envelope can be used for amplitude, 
-<a href="https://spielhuus.github.io/elektrophon/images/ADSR_panel.png"><img src="https://spielhuus.github.io/elektrophon/images/ADSR_panel_tmb.png" width="35px"></img></a>
-frequencies or pitch. The output of the ADSR module can for example be patched to a VCA or VCF. The original schematic is
-used by René Schmitz and Yves Usson. 
-<a href="https://spielhuus.github.io/elektrophon/images/ADSR.svg"><img src="https://spielhuus.github.io/elektrophon/images/ADSR_tmb.jpg" width="125px"></img></a>
-
-<a href="https://spielhuus.github.io/elektrophon/images/ADSR.png"><img src="https://spielhuus.github.io/elektrophon/images/ADSR_tmb.png" width="125px"></img></a>
+<a href="https://spielhuus.github.io/elektrophon/images/adsr-mount.jpg"><img width="200" align="left" src="https://spielhuus.github.io/elektrophon/images/adsr-mount_tmb.jpg"></a> **<font size="6px">*build*</font>** bulid this öslkdfjöalkdsfjöalkdsjf öasldkfj öalkdsf aölskdfj öalkdsfj aölsdkf jölksdj föalskd jföalkdjf öalkdsf jölakd jföalskdf jöalskdfj aölskdfj öalskdf jölskd jfölaksd jföalksdf jöalkdsjf öalksdjf aölksd jföalkdsf jöalskdfj öalskdf jöalksdf jöalksd jföalksdf jöalkdsfj öalskdf jöalskd fjöalksd jfölaksd jföalkds jföalksd jföalksd jfölaskdjf öalsdkf jöaldsk f
 
 
-## links
+**<font size="6px">*use*</font>** bulid this öslkdfjöalkdsfjöalkdsjf öasldkfj öalkdsf <a href="https://spielhuus.github.io/elektrophon/images/adsr-mount.jpg"><img align="right" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/ADSR_parameter.svg/320px-ADSR_parameter.svg.png"></a>aölskdfj öalkdsfj aölsdkf jölksdj föalskd jföalkdjf öalkdsf jölakd jföalskdf jöalskdfj aölskdfj öalskdf jölskd jfölaksd jföalksdf jöalkdsjf öalksdjf aölksd jföalkdsf jöalskdfj öalskdf jöalksdf jöalksd jföalksdf jöalkdsfj öalskdf jöalskd fjöalksd jfölaksd jföalkds jföalksd jföalksd jfölaskdjf öalsdkf jöaldsk f
 
+Attack
+
+Decay 
+
+Sustain
+
+Release
+
+
+**<font size="6px">*links*</font>** bulid this öslkdfjö
+
+1) [Randall Kirschman, Electronics, Jul.1980](https://www.yusynth.net/archives/Electronics/R-Kirschman-ADSR-1980.pdf)
+1) [Jonathan Jacky, Electronics, Sept.1980](https://www.yusynth.net/archives/Electronics/J-Jacky-ADSR-1980.pdf)
+1) [Örley Gàbor, Electronic Design, Aug. 1980](https://www.yusynth.net/archives/ElectronicDesign/O-Gabor-ADSR-1980.pdf)
 1) [Wikipedia: ADSR](https://en.wikipedia.org/wiki/Envelope_(music))
 1) [René Schmitz: The Fastest Envelope in the West](https://www.schmitzbits.de/adsr.html)
 1) [Yves Usson: ADSR](http://www.yusynth.net/Modular/EN/ADSR/index_old.html)
