@@ -1,4 +1,4 @@
-## ***V**oltage **C**ontrolled **S**lope (CGS75)*
+## **V**oltage **C**ontrolled **S**lope (CGS75)
 
 <a href="https://spielhuus.github.io/elektrophon/images/adsr-panel.jpg"><img width="200" align="right" src="https://spielhuus.github.io/elektrophon/images/adsr-titel_tmb.jpg"></a>
 The Voltage Controlled Slope (vcs) is the masterpeace of the serge synth. The most popular clone of the vcs is Native Instruments Math module. This is a very basic module that does not support any of the add ons like attenuator nor ringmodulator. 
