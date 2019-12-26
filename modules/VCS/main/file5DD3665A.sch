@@ -534,4 +534,6 @@ Connection ~ 3750 3550
 Connection ~ 3300 3550
 Wire Wire Line
 	3300 3250 4100 3250
+Text Notes 2350 3700 0    50   ~ 0
+LM3900 Powered from GND
 $EndSCHEMATC
