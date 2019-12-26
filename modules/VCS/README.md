@@ -1,4 +1,4 @@
-## voltage vontrolled slope (CGS75)
+## Voltage Controlled Slope (CGS75)
 
 <a href="https://spielhuus.github.io/elektrophon/images/adsr-panel.jpg"><img width="200" align="right" src="https://spielhuus.github.io/elektrophon/images/adsr-titel_tmb.jpg"></a>
 The Serge VCS module released in conjunction with from bananalogue.com is an extremely versatile control voltage generator and audio source. In the early 1970s, Serge Tcherepnin developed the Positive Slew and Negative Slew modules for the original Serge synthesizer. In time these merged into the classic Dual Universal Slope Generator. The Bananalogue VCS and CGS75 are an adaptation of Serge's original circuit with a few new features.
