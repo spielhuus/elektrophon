@@ -1,9 +1,51 @@
-The Voltage Controlled Slope <font size="14" style="font-size:26px; font-style:italic;">(vcs)</font> is the masterpeace of the serge synth. The most popular clone of the vcs is Native Instruments Math module. This is a very basic module that does not support any of the add ons like attenuator nor ringmodulator. <a href="https://spielhuus.github.io/elektrophon/images/4046-panel.jpg"><img align="right" src="https://spielhuus.github.io/elektrophon/images/4046-panel-tmb.jpg" height="300px"></img></a>
- This is the outstanding CMOS VCO from Thomas Henry. The heart of this VCO is the CD4046 Phased Locked Loop chip. 
-Most of the 'Lunetta' VCOs are built around the 40106 or 4096 chips. They give a good result but this VCO plays in another league. It has an excellent tracking and all the 
-waveforms you will need. The sync is one of the finest. Most of the sections are the same as in other VCO designs from Thomas Henry. The Exponential converter
-and waveshaper sections are also used in the VCO-1. The only downside is that it gets a little pricy with all the trimpots and potentiomenters. The CD4046 shall not be from Texas Instruments, because it is reported that this one is hard or impossible to tune. This is a pitty, becase this is the easyiest to get. You can get almost every other part. I used the Phillips HEF4046, i like it to use a chip with the Phillips logo on it, i remember that logo from my childhood. Nevertheless, in my opinion it is worth 
-the money and effort and you should build more than one of this fantastic VCO.
+## *adsr*
+
+<a href="https://spielhuus.github.io/elektrophon/images/adsr-panel.jpg"><img width="200" align="right" src="https://spielhuus.github.io/elektrophon/images/adsr-titel_tmb.jpg"></a>
+The Voltage Controlled Slope <font size="14" style="font-size:26px; font-style:italic;">(vcs)</font> is the masterpeace of the serge synth. The most popular clone of the vcs is Native Instruments Math module. This is a very basic module that does not support any of the add ons like attenuator nor ringmodulator. 
+
+## *build*
+
+<a href="https://spielhuus.github.io/elektrophon/images/adsr-mount.jpg"><img width="200" align="left" src="https://spielhuus.github.io/elektrophon/images/adsr-mount_tmb.jpg"></a> Before you start assembly, check the board for etching faults. Look for any shorts between tracks, or open circuits due to over etching. Take this opportunity to sand the edges of the board if needed, removing any splinters or rough edges. (With the boards supplied by me, the edges are already milled, and etching faults are very rare.)
+
+When you are happy with the printed circuit board, construction can proceed as normal, starting with the resistors first, followed by the IC socket if used, then moving onto the taller components.
+
+Take particular care with the orientation of the polarized components such as electrolytics, diodes, transistors and ICs.
+
+When inserting ICs into sockets, take care not to accidentally bend any of the pins under the chip. Also, make sure the notch on the chip is aligned with the notch marked on the PCB overlay.
+
+A problem in the genuine Serge is that cycle locks up at various frequencies due to a charge inbalance in the trigger circuit. If you experience this problem, it can be solved by changing the 10n capacitor to 1n. These changes are marked on the circuit diagram.
+
+## *calibrate*
+
+
+
+## *use*
+
+Connect a gate signal to the *IN* of the ADSR and the *OUT* to a VCA or VCF:
+
+<a href="https://spielhuus.github.io/elektrophon/images/adsr-mount.jpg"><img align="right" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/ADSR_parameter.svg/320px-ADSR_parameter.svg.png"></a>
+
+Bipolar out gives an inverted signal.
+
+AC out gives the non-inverted signal, but centered around 0V.
+
+
+**IN** a gate singal for the length of the ADS singal.
+
+**OUT** the final envelope.
+
+**Attack** is the time taken for initial run-up of level from nil to peak, beginning when the key is pressed.
+
+**Decay** is the time taken for the subsequent run down from the attack level to the designated sustain level.
+
+**Sustain** is the level during the main sequence of the sound's duration, until the key is released.
+
+**Release** is the time taken for the level to decay from the sustain level to zero after the key is released.
+
+
+## *links*
+
+
 
 ## building
 
