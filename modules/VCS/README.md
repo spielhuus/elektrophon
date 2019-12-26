@@ -1,7 +1,29 @@
 ## voltage vontrolled slope (CGS75)
 
 <a href="https://spielhuus.github.io/elektrophon/images/adsr-panel.jpg"><img width="200" align="right" src="https://spielhuus.github.io/elektrophon/images/adsr-titel_tmb.jpg"></a>
-The voltage controlled slope (vcs) is the masterpeace of the serge synth. The most popular clone of the vcs is Native Instruments Math module. This is a very basic module that does not support any of the add ons like attenuator nor ringmodulator. 
+The Serge VCS module released in conjunction with from bananalogue.com is an extremely versatile control voltage generator and audio source. In the early 1970s, Serge Tcherepnin developed the Positive Slew and Negative Slew modules for the original Serge synthesizer. In time these merged into the classic Dual Universal Slope Generator. The Bananalogue VCS and CGS75 are an adaptation of Serge's original circuit with a few new features.
+
+The voltage controlled slope (vcs) is possible the most versatile module of the serge synth. this module let you control the fall and rise rate of an existing slope or a trigger signal. 
+
+the masterpeace of the serge synth. The most popular clone of the vcs is Native Instruments Math module. This is a very basic module that does not support any of the add ons like attenuator nor ringmodulator. 
+
+The VCS is a unity gain voltage follower. The rising and falling slopes are independently and jointly voltage controllable over a wide range.
+
+*VC Transient Envelope Generator* A pulse at the trigger input will start the envelope, or a gate input will sustain the level and the envelope will fall when the gate goes low. Rise and fall are independently and jointly voltage controllable, with variable linear and exponential wave shapes.
+
+*VC Portamento* Voltage is slewed according to the rise and fall times.
+
+*VC LFO* When the cycle switch is thrown, the trigger input is connected internally to the end trigger output, creating a VC clock with variable waveform and independent rise and fall times.
+
+*VC Oscillator* While not as wide ranged, or accurate as a dedicated oscillator module, the VCS is still an excellent audio source. The Exp CV input is scaled approximately to the 1v/oct standard. The Output wave can be swept from triangle to saw with linear and non-linear waveforms. End Out also produces a pulse waveform.
+
+*VC Non-Linear Audio Processor (Low-Pass Gate)* If an audio rate signal is slewed, the module responds like a VCF, and a rough VCA. The signal is low-pass filtered down to silence, similar to a low-pass gate.
+
+*Envelope Follower* Positive and negative peak detection envelope follower.
+
+*VC Pulse Delay* Trigger input starts the envelope and a trigger will be produced again at the End Out when the envelope completes its cycle.
+
+*Sub-Harmonic Generator* If a series of triggers are applied to the VCS faster than the total rise and fall times, the module will divide the incoming signal by a whole number. In the audio range the output will be the sub-harmonic series.
 
 ## *build*
 
