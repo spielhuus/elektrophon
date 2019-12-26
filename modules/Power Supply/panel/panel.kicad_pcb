@@ -1,8 +1,8 @@
-(kicad_pcb (version 20171130) (host pcbnew 5.1.5-52549c5~84~ubuntu19.04.1)
+(kicad_pcb (version 20171130) (host pcbnew "(5.1.4)-1")
 
   (general
     (thickness 1.6)
-    (drawings 4)
+    (drawings 8)
     (tracks 0)
     (zones 0)
     (modules 13)
@@ -60,7 +60,7 @@
     (pad_to_mask_clearance 0.051)
     (solder_mask_min_width 0.25)
     (aux_axis_origin 0 0)
-    (visible_elements FFFFFF7F)
+    (visible_elements 7FFFFFFF)
     (pcbplotparams
       (layerselection 0x010fc_ffffffff)
       (usegerberextensions false)
@@ -369,6 +369,10 @@
     (fp_circle (center 0 0) (end 1 0) (layer B.Mask) (width 2))
   )
 
+  (gr_line (start 35.56 106.52) (end 35.56 96.52) (layer F.SilkS) (width 0.12) (tstamp 5E04AEB2))
+  (gr_line (start 57.56 106.52) (end 35.56 106.52) (layer F.SilkS) (width 0.12))
+  (gr_line (start 57.56 96.52) (end 57.56 106.52) (layer F.SilkS) (width 0.12))
+  (gr_line (start 35.56 96.52) (end 57.56 96.52) (layer F.SilkS) (width 0.12))
   (gr_line (start 25.4 158.8) (end 25.4 25.4) (layer Edge.Cuts) (width 0.12) (tstamp 5E01F530))
   (gr_line (start 86 158.8) (end 25.4 158.8) (layer Edge.Cuts) (width 0.12))
   (gr_line (start 86 25.4) (end 86 158.8) (layer Edge.Cuts) (width 0.12))
