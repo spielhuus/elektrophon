@@ -54,6 +54,12 @@ K N-Channel FET Transistor Low Voltage
 F http://www.fairchildsemi.com/ds/BF/BF244A.pdf
 $ENDCMP
 #
+$CMP CEM3340
+D Voltage Controlled Oscillator (VCO), DIP-16/SOIC-16
+K VCO CEM340 ALFA
+F http://www.alfarzpp.lv/eng/sc/AS3340.pdf
+$ENDCMP
+#
 $CMP J201
 D 50mA Id, 30V Vgs, N-Channel FET Transistor, TO-92
 K N-Channel FET Transistor Low Voltage
