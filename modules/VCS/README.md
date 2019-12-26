@@ -16,6 +16,7 @@ the money and effort and you should build more than one of this fantastic VCO.
  ## Links
 
 * [Ken Stone: CGS75](https://www.elby-designs.com/webtek/cgs/serge/cgs75/cgs75_vcs.html) Voltage Controlled Slope.
+* [Tim Stinchcombe: Serge VCS - How it Works](http://www.timstinchcombe.co.uk/index.php?pge=vcs)
 
 
 ---
