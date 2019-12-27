@@ -2472,4 +2472,8 @@ F 12 "Active NonStock" H 5150 5600 60  0001 L CNN "Status"
 	1    4950 4400
 	1    0    0    1   
 $EndComp
+Text Notes 4400 1150 0    50   ~ 0
+Source and Drain changed\n
+Text Notes 4500 4200 0    50   ~ 0
+Source and Drain changed\n
 $EndSCHEMATC
