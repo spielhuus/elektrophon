@@ -72,6 +72,12 @@ K PNP Transistor
 F http://www.fairchildsemi.com/ds/BC/BC557.pdf
 $ENDCMP
 #
+$CMP SSM2040
+D Voltage Controlled Filter (VCF), DIP-18
+K VCF SSM2040
+F http://www.alfarzpp.lv/eng/sc/AS3320.pdf
+$ENDCMP
+#
 $CMP lm3916
 F https://cdn.sparkfun.com/datasheets/Components/General%20IC/lm3916.pdf
 $ENDCMP
