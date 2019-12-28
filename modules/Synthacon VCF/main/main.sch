@@ -1,5 +1,4 @@
 EESchema Schematic File Version 4
-LIBS:main-cache
 EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
@@ -1492,4 +1491,6 @@ Text Notes 7700 2900 0    50   ~ 0
 1k
 Text Notes 8050 2900 0    50   ~ 0
 680
+Text Notes 8600 3650 0    50   ~ 0
+http://electro-music.com/forum/viewtopic.php?highlight=cgs35&t=53179\nhttp://electro-music.com/forum/viewtopic.php?highlight=cgs35&t=61646\nhttp://electro-music.com/forum/viewtopic.php?highlight=cgs35&t=66643
 $EndSCHEMATC
