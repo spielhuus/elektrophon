@@ -1,9 +1,11 @@
 ## Voltage Controlled Slope (CGS75)
 
 <a href="https://spielhuus.github.io/elektrophon/images/adsr-panel.jpg"><img width="200" align="right" src="https://spielhuus.github.io/elektrophon/images/adsr-titel_tmb.jpg"></a>
-The Serge VCS module released in conjunction with from bananalogue.com is an extremely versatile control voltage generator and audio source. In the early 1970s, Serge Tcherepnin developed the Positive Slew and Negative Slew modules for the original Serge synthesizer. In time these merged into the classic Dual Universal Slope Generator. The Bananalogue VCS and CGS75 are an adaptation of Serge's original circuit with a few new features.
+The Serge voltage controlled slope (VCS) is a versatile control voltage generator and audio source. The original module was released in conjunction with bananalogue.com. In the early 1970s, Serge Tcherepnin developed the Positive Slew and Negative Slew modules for the original Serge synthesizer. In time these merged into the classic Dual Universal Slope Generator. The Bananalogue VCS and CGS75 are an adaptation of Serge's original circuit with a few new features. The successor of this modules is the MATHS from Make Noise. The MATHS is a dual slope generator which contaons attenuverter and and OR output. The attenuverter is suggested on Ken Stones schema. Because of the size of the moudle i have not added this extras.
 
-The voltage controlled slope (vcs) is possible the most versatile module of the serge synth. this module let you control the fall and rise rate of an existing slope or a trigger signal. 
+To begin with this module has two modes. The module can be triggered with a pulse signal. The pulse signal is then converted to a 
+
+A voltage controlled slope (vcs) is possible the most versatile module of the serge synth. this module let you control the fall and rise rate of an existing slope or a trigger signal. 
 
 the masterpeace of the serge synth. The most popular clone of the vcs is Native Instruments Math module. This is a very basic module that does not support any of the add ons like attenuator nor ringmodulator. 
 
