@@ -9,7 +9,7 @@ Date "2019-12-27"
 Rev "R01"
 Comp ""
 Comment1 "SSM2040 VCF"
-Comment2 "PCB for mounting the armatures"
+Comment2 "Schema for mount circuit"
 Comment3 ""
 Comment4 "License CC BY 4.0 - Attribution 4.0 International"
 $EndDescr
@@ -158,7 +158,7 @@ F 1 "100k" H 2831 5105 50  0000 R CNN
 F 2 "elektrophon:Potentiometer_Alpha_RD901F-40-00D_Single_Vertical" H 2900 5150 50  0001 C CNN
 F 3 "~" H 2900 5150 50  0001 C CNN
 	1    2900 5150
-	1    0    0    -1  
+	1    0    0    1   
 $EndComp
 Wire Wire Line
 	3150 4350 3050 4350
@@ -201,7 +201,7 @@ F 1 "100k" H 2831 4305 50  0000 R CNN
 F 2 "elektrophon:Potentiometer_Alpha_RD901F-40-00D_Single_Vertical" H 2900 4350 50  0001 C CNN
 F 3 "~" H 2900 4350 50  0001 C CNN
 	1    2900 4350
-	1    0    0    -1  
+	1    0    0    1   
 $EndComp
 NoConn ~ 3050 3750
 $Comp
@@ -267,7 +267,7 @@ F 1 "100k" H 2931 2405 50  0000 R CNN
 F 2 "elektrophon:Potentiometer_Alpha_RD901F-40-00D_Single_Vertical" H 3000 2450 50  0001 C CNN
 F 3 "~" H 3000 2450 50  0001 C CNN
 	1    3000 2450
-	1    0    0    -1  
+	1    0    0    1   
 $EndComp
 Wire Wire Line
 	3400 1700 3150 1700
@@ -436,7 +436,7 @@ F 1 "100k" H 1181 1555 50  0000 R CNN
 F 2 "elektrophon:Potentiometer_Alpha_RD901F-40-00D_Single_Vertical" H 1250 1600 50  0001 C CNN
 F 3 "~" H 1250 1600 50  0001 C CNN
 	1    1250 1600
-	1    0    0    -1  
+	1    0    0    1   
 $EndComp
 $Comp
 L power:+15V #PWR04
@@ -469,7 +469,7 @@ F 1 "100k" H 1181 2355 50  0000 R CNN
 F 2 "elektrophon:Potentiometer_Alpha_RD901F-40-00D_Single_Vertical" H 1250 2400 50  0001 C CNN
 F 3 "~" H 1250 2400 50  0001 C CNN
 	1    1250 2400
-	1    0    0    -1  
+	1    0    0    1   
 $EndComp
 $Comp
 L power:+15V #PWR06
@@ -558,7 +558,7 @@ F 1 "100k" H 1181 4605 50  0000 R CNN
 F 2 "elektrophon:Potentiometer_Alpha_RD901F-40-00D_Single_Vertical" H 1250 4650 50  0001 C CNN
 F 3 "~" H 1250 4650 50  0001 C CNN
 	1    1250 4650
-	1    0    0    -1  
+	1    0    0    1   
 $EndComp
 $Comp
 L Device:R R3

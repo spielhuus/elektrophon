@@ -2,7 +2,7 @@
 
   (general
     (thickness 1.6)
-    (drawings 10)
+    (drawings 6)
     (tracks 0)
     (zones 0)
     (modules 13)
@@ -11,10 +11,10 @@
 
   (page A4)
   (title_block
-    (title ADSR)
-    (date 2019-09-22)
+    (title VCF)
+    (date 2019-12-30)
     (rev 01)
-    (comment 1 "Original design by René Schmitz")
+    (comment 1 "VCF SSM2040")
     (comment 2 "PCB for Panel")
     (comment 4 "License CC BY 4.0 - Attribution 4.0 International")
   )
@@ -169,7 +169,7 @@
     (fp_text reference H9 (at 0 -9.4) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value Atten (at 0 9.144) (layer F.Mask)
+    (fp_text value atten (at 0 9.144) (layer F.Mask)
       (effects (font (size 2 1.4) (thickness 0.25)))
     )
     (fp_circle (center 0 0) (end 6.6 0) (layer F.CrtYd) (width 0.05))
@@ -199,7 +199,7 @@
     )
     (fp_circle (center 0 0) (end 6.6 0) (layer F.CrtYd) (width 0.05))
     (fp_circle (center 0 0) (end 6.35 0) (layer Cmts.User) (width 0.15))
-    (fp_text user %R (at 0.3 0) (layer F.Fab)
+    (fp_text user %R (at 0.3 0) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (pad "" np_thru_hole circle (at 0 0) (size 7.4 7.4) (drill 7.4) (layers *.Cu *.Mask))
@@ -269,7 +269,7 @@
     (fp_text reference H5 (at 0 -9.4) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value Atten (at 0 9.144) (layer F.Mask)
+    (fp_text value atten (at 0 9.144) (layer F.Mask)
       (effects (font (size 2 1.4) (thickness 0.25)))
     )
     (fp_circle (center 0 0) (end 6.6 0) (layer F.CrtYd) (width 0.05))
@@ -344,7 +344,7 @@
     (fp_text reference H2 (at 0 -9.4) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value Envelope (at 0 9.144) (layer F.Mask)
+    (fp_text value env (at 0 9.144) (layer F.Mask)
       (effects (font (size 2 1.4) (thickness 0.25)))
     )
     (fp_circle (center 0 0) (end 4.2 0) (layer F.CrtYd) (width 0.05))
@@ -369,7 +369,7 @@
     (fp_text reference H1 (at 0 -9.4) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value 1V/OCT (at 0 9.144) (layer F.Mask)
+    (fp_text value CV (at 0 9.144) (layer F.Mask)
       (effects (font (size 2 1.4) (thickness 0.25)))
     )
     (fp_circle (center 0 0) (end 4.2 0) (layer F.CrtYd) (width 0.05))
@@ -423,10 +423,6 @@
     (pad 1 np_thru_hole circle (at 0 0) (size 3.2 3.2) (drill 3.2) (layers *.Cu *.Mask))
   )
 
-  (gr_line (start 55.88 111.76) (end 55.88 132.08) (layer F.SilkS) (width 0.12))
-  (gr_line (start 35.56 111.76) (end 35.56 132.08) (layer F.SilkS) (width 0.12))
-  (gr_line (start 55.88 50.8) (end 55.88 91.44) (layer F.SilkS) (width 0.12))
-  (gr_line (start 35.56 50.8) (end 35.56 91.44) (layer F.SilkS) (width 0.12))
   (gr_text R01 (at 60.12 155.09) (layer F.Cu)
     (effects (font (size 2 1.4) (thickness 0.25)))
   )
