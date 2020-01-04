@@ -1,6 +1,6 @@
 ## *klang*
 
-klang is a digial polyphonic and additive oszillator.
+<img src="http://latex.codecogs.com/gif.latex?klang"/>klang is a digial polyphonic and additive oszillator.
 
 
 ### *direct digital synthesis (DDS)*  ###
