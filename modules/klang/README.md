@@ -74,6 +74,8 @@ Connect a gate signal to the *IN* of the ADSR and the *OUT* to a VCA or VCF:
 
 1) [Fundamentals of Direct Digital Synthesis (DDS)](https://www.analog.com/media/en/training-seminars/tutorials/MT-085.pdf) from [Analog Devices](https://www.analog.com/)
 1) Elliot Williams has an article about [DIRECT DIGITAL SYNTHESIS](https://hackaday.com/2016/02/12/embed-with-elliot-audio-playback-with-direct-digital-synthesis/) on [HACKADAY](https://hackaday.com).
+1) [AN3126](https://www.st.com/content/ccc/resource/technical/document/application_note/05/fb/41/91/39/02/4d/1e/CD00259245.pdf/files/CD00259245.pdf/jcr:content/translations/en.CD00259245.pdf) Audio and waveform generation using the DAC in STM32 microcontrollers
+1) [AN4566](https://www.st.com/content/ccc/resource/technical/document/application_note/6f/35/61/e9/8a/28/48/8c/DM00129215.pdf/files/DM00129215.pdf/jcr:content/translations/en.DM00129215.pdf) Extending the DAC performance of STM32 microcontrollers
 1) all formulas are created with the latex converter at [codecogs](http://latex.codecogs.com/)
 ---
 [![CC BY-SA](https://licensebuttons.net/l/by-sa/3.0/88x31.png)](https://creativecommons.org/licenses/by-sa/4.0/)

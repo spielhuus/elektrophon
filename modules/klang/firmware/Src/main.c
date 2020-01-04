@@ -101,12 +101,10 @@ void note_off(uint8_t channel, uint8_t note, uint8_t velocity) {
 int main(void)
 {
   /* USER CODE BEGIN 1 */
+	/* initialize voices */
 	voices[0].increment = ACCUMULATOR_STEPS;
 	voices[0].accumulator = 0;
 	voices[0].position = 0;
-
-	setHdlNoteOn(note_on);
-	setHdlNoteOff(note_off);
   /* USER CODE END 1 */
   
 
@@ -148,13 +146,11 @@ int main(void)
 	  Error_Handler();
 	}
 
-	HAL_GPIO_TogglePin(CTRL_LED_GPIO_Port, CTRL_LED_Pin);
-	HAL_Delay(500);
-	HAL_GPIO_TogglePin(CTRL_LED_GPIO_Port, CTRL_LED_Pin);
-
 	HAL_TIM_Base_Start_IT(&htim6);
 	//TODO    HAL_ADC_Start(&hadc1);
-	  mimuz_init();
+	mimuz_init();
+	setHdlNoteOn(note_on);
+	setHdlNoteOff(note_off);
   /* USER CODE END 2 */
 
   /* Infinite loop */
