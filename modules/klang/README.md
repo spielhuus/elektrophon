@@ -15,13 +15,13 @@ with a wavetable size of 1024 items and the update frequency of 40kHz:
 
 <img src="http://latex.codecogs.com/gif.latex?f%20%3D%20%5Cfrac%7B1%7D%7B%5Cfrac%7B1%7D%7B40%27000%7D*1024%7D%20%3D%20390.625%20Hz"/><br/>
 
+With a table size of *1024* and *40kHz* update frequency the output frequency is *390.625Hz*. This is a middle *G* or the midi note *67*.
+
 For changing the output frequency either the update frequency or the number of values in the table can be changed. because we want to output multiple voices, with different frequencies, we can not change the update frequency. We have to skip or repeat values in the wavetable. But wich values to skip or repeat? Here the concept of DDS comes in. We use an accumulator. The accumulator multiplies each step in the wavetable. If we step through the accumulator some steps in the wavetable will be skipped or repeated. I do not draw the circle here, there are already good explenations here [1][2].
 
 calculate the accumulator increment for a specific pitch:
 
 <img src="http://latex.codecogs.com/gif.latex?increment%20%3D%20%5Cfrac%7Bsize_%7Baccum%7D%20*%20f_%7Btone%7D%7D%7Bf_%7Bupdate%7D%7D"/><br/>
-
-With a table size of *1024* and *40kHz* update frequency the output frequency is *390.625Hz*. This is a middle *G* or the midi note *67*.
 
 ### *envelopes*  ###
 
