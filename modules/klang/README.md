@@ -22,7 +22,7 @@ For changing the output frequency either the update frequency or the number of v
 
 calculate the accumulator increment for a specific pitch:
 
-<img src="http://latex.codecogs.com/gif.latex?f%20%3D%20%5Cfrac%7Bsize_%7Baccum%7D%20*%20f_%7Btone%7D%7D%7Bf_%7Bupdate%7D%7D"/><br/>
+<img src="http://latex.codecogs.com/gif.latex?increment%20%3D%20%5Cfrac%7Bsize_%7Baccum%7D%20*%20f_%7Btone%7D%7D%7Bf_%7Bupdate%7D%7D"/><br/>
 
 ### *envelopes*  ###
 
