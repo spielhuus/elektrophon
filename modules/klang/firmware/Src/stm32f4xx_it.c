@@ -211,16 +211,48 @@ void TIM6_DAC_IRQHandler(void)
   HAL_DAC_IRQHandler(&hdac);
   HAL_TIM_IRQHandler(&htim6);
   /* USER CODE BEGIN TIM6_DAC_IRQn 1 */
-  int16_t total = 0;
-//     for (uint8_t i = 0; i < NUM_VOICES; i++) {
-  uint8_t i = 0;
-       total += /*(int8_t)*/ sine_table[voices[i].position];
+  uint16_t index = 0;
+  uint32_t total = 0;
+	  uint8_t i = 0; //TODO loop through voices
+	  if(voices[i].velocity) {
+		  index = voices[i].accumulator >> 22;
+		  total += sine_table[index];
+	  }
 
-       /* Take an increment step */
-       voices[i].accumulator += voices[i].increment;
-       voices[i].position += voices[i].accumulator / ACCUMULATOR_STEPS;
-       voices[i].accumulator = voices[i].accumulator % ACCUMULATOR_STEPS;
-       voices[i].position = voices[i].position % SAMPLE_LENGTH;
+
+
+
+
+
+
+
+
+////     for (uint8_t i = 0; i < NUM_VOICES; i++) {
+//  	  uint8_t i = 0;
+//  	  if(voices[i].velocity)
+//  		  total += sine_table[voices[i].position] / 127 * voices[i].envelope;
+//	  //total += sine_table[voices[i].position];
+//
+//       /* Take an increment step */
+//       voices[i].accumulator += voices[i].increment;
+//       voices[i].position += voices[i].accumulator / ACCUMULATOR_STEPS;
+//       voices[i].accumulator = voices[i].accumulator % ACCUMULATOR_STEPS;
+//       voices[i].position = voices[i].position % SAMPLE_LENGTH;
+//       switch(voices[i].adsr) {
+//       case ATTACK:
+//	   	   if( voices[i].envelope < 127 )
+//	   		voices[i].envelope += 1;
+//	   	   else voices[i].adsr = DECAY;
+//	   	   break;
+//       case DECAY:
+//    	   if( voices[i].envelope > 80 )
+//   	   		voices[i].envelope -= 1;
+//	   	   break;
+//       case RELEASE:
+//    	   if(voices[i].envelope > 0 )
+//   	   		voices[i].envelope -= 1;
+//	   	   break;
+//       }
 //     }
 	total = total / NUM_VOICES;
 

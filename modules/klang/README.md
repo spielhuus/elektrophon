@@ -2,6 +2,34 @@
 
 klang is a digial polyphonic and additive oszillator.
 
+
+### *direct digital synthesis (DDS)*  ###
+
+the klang oszillator is using a wavetable to create the output waves. The content of a wavetable is one oszillation of the waveform (360°). When such a waveform is played back, the size of the wavetable and the frequencies in which the values are updated results in the frequency of the final signal. The update interval also defines the max frequency of the output signal. The maximum output frequency is half of the update fequency (Nyquist). 
+
+<img src="http://latex.codecogs.com/gif.latex?%5Cfrac%7B1%7D%7BF_%7BU%7D*SIZE_%7BTABLE%7D%7D"/><br/>
+
+
+With a wavetable size of 1024 items and the update frequency of 1MHz the resulting `f = 1 / (fu * table size)`. 
+
+For example if you have a m
+
+For changing the output frequency either the update frequency or the number of values in the table can be changed. because we want to output multiple voices, with different frequencies, we can not change the update frequency. We have to skip or repeat values in the wavetable. But wich values to skip or repeat? Here the concept of DDS comes in. We use an accumulator. The accumulator multiplies each step in the wavetable. If we step through the accumulator some steps in the wavetable will be skipped or repeated. I do not draw the circle here, there are already good explenations here [1][2].
+
+calculate the accumulator increment for a specific pitch:
+
+<pre>f = (accum size) * f<sub>tone</sub> / f<sub>update</sub></pre>
+
+### *envelopes*  ###
+
+### *polyphonie*  ###
+
+### *additive synthesis*  ###
+
+
+
+
+
 <a href="https://spielhuus.github.io/elektrophon/images/ADSR_panel.png"><img src="https://spielhuus.github.io/elektrophon/images/ADSR_panel_tmb.png" width="35px"></img></a>
 frequencies or pitch. The output of the ADSR module can for example be patched to a VCA or VCF. The original schematic is
 used by René Schmitz and Yves Usson. 
