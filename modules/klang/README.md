@@ -7,18 +7,22 @@ klang is a digial polyphonic and additive oszillator.
 
 the klang oszillator is using a wavetable to create the output waves. The content of a wavetable is one oszillation of the waveform (360°). When such a waveform is played back, the size of the wavetable and the frequencies in which the values are updated results in the frequency of the final signal. The update interval also defines the max frequency of the output signal. The maximum output frequency is half of the update fequency (Nyquist). 
 
-<img src="http://latex.codecogs.com/gif.latex?%5Cfrac%7B1%7D%7BF_%7BU%7D*SIZE_%7BTABLE%7D%7D"/><br/>
+calculate the playback frequency of a wavetable:
+
+<img src="http://latex.codecogs.com/gif.latex?f%20%3D%20%5Cfrac%7B1%7D%7Bt_%7Bint%7D*size_%7Btable%7D%7D"/><br/>
 
 
-With a wavetable size of 1024 items and the update frequency of 1MHz the resulting `f = 1 / (fu * table size)`. 
+with a wavetable size of 1024 items and the update frequency of 40kHz:
 
-For example if you have a m
+<img src="http://latex.codecogs.com/gif.latex?f%20%3D%20%5Cfrac%7B1%7D%7B%5Cfrac%7B1%7D%7B40%27000%7D*1024%7D%20%3D%20390.625%20Hz"/><br/>
+`f = 1 / (fu * table size)`. 
+
 
 For changing the output frequency either the update frequency or the number of values in the table can be changed. because we want to output multiple voices, with different frequencies, we can not change the update frequency. We have to skip or repeat values in the wavetable. But wich values to skip or repeat? Here the concept of DDS comes in. We use an accumulator. The accumulator multiplies each step in the wavetable. If we step through the accumulator some steps in the wavetable will be skipped or repeated. I do not draw the circle here, there are already good explenations here [1][2].
 
 calculate the accumulator increment for a specific pitch:
 
-<pre>f = (accum size) * f<sub>tone</sub> / f<sub>update</sub></pre>
+<img src="http://latex.codecogs.com/gif.latex?f%20%3D%20%5Cfrac%7Bsize_%7Baccum%7D%20*%20f_%7Btone%7D%7D%7Bf_%7Bupdate%7D%7D"/><br/>
 
 ### *envelopes*  ###
 
@@ -69,7 +73,8 @@ Connect a gate signal to the *IN* of the ADSR and the *OUT* to a VCA or VCF:
 
 ## *links*
 
+1) [Fundamentals of Direct Digital Synthesis (DDS)](https://www.analog.com/media/en/training-seminars/tutorials/MT-085.pdf) from [Analog Devices](https://www.analog.com/)
 1) Elliot Williams has an article about [DIRECT DIGITAL SYNTHESIS](https://hackaday.com/2016/02/12/embed-with-elliot-audio-playback-with-direct-digital-synthesis/) on [HACKADAY](https://hackaday.com).
-
+1) all formulas are created with the latex converter at [codecogs](http://latex.codecogs.com/)
 ---
 [![CC BY-SA](https://licensebuttons.net/l/by-sa/3.0/88x31.png)](https://creativecommons.org/licenses/by-sa/4.0/)
