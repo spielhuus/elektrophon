@@ -46,22 +46,44 @@ ADC_HandleTypeDef hadc1;
 
 DAC_HandleTypeDef hdac;
 
+TIM_HandleTypeDef htim1;
+TIM_HandleTypeDef htim2;
 TIM_HandleTypeDef htim6;
 
 /* USER CODE BEGIN PV */
-uint32_t tunes[128] = {
-		877870, 930071, 985375, 1043969, 1106047, 1171815, 1241495, 1315318, 1393531, 1476395,
-		1564186, 1657197, 1755739, 1860141, 1970751, 2087938, 2212093, 2343631, 2482991, 2630637, 2787063, 2952790,
-		3128372, 3314395, 3511479, 3720282, 3941502, 4175876, 4424186, 4687262, 4965981, 5261274, 5574125, 5905580,
-		6256744, 6628789, 7022958, 7440565, 7883004, 8351751, 8848372, 9374524, 9931962, 10522547, 11148251, 11811160,
-		12513488, 13257579, 14045916, 14881129, 15766007, 16703503, 17696745, 18749048, 19863924, 21045095, 22296501,
-		23622320, 25026976, 26515158, 28091831, 29762258, 31532014, 33407005, 35393489, 37498096, 39727849, 42090189,
-		44593002, 47244640, 50053953, 53030316, 56183662, 59524517, 63064029, 66814011, 70786979, 74996192, 79455697,
-		84180379, 89186005, 94489281, 100107906, 106060631, 112367325, 119049034, 126128057, 133628022, 141573958,
-		149992383, 158911395, 168360758, 178372009, 188978561, 200215811, 212121263, 224734649, 238098067, 252256115,
-		267256044, 283147915, 299984767, 317822789, 336721516, 356744019, 377957122, 400431622, 424242525, 449469299,
-		476196134, 504512230, 534512088, 566295831, 599969533, 635645578, 673443031, 713488038, 755914244, 800863244,
-		848485051, 898938597, 952392268, 1009024459, 1069024176, 1132591661, 1199939066, 1271291156, 1346886062
+uint32_t tunes[256] = {
+ 877870,  930071,  985375,  1043969,  1106047,  1171815,  1241495,  1315318,  1393531,
+ 1476395,  1564186,  1657197,  1755739,  1860141,  1970751,  2087938,  2212093,
+ 2343631,  2482991,  2630637,  2787063,  2952790,  3128372,  3314395,  3511479,
+ 3720282,  3941502,  4175876,  4424186,  4687262,  4965981,  5261274,  5574125,
+ 5905580,  6256744,  6628789,  7022958,  7440565,  7883004,  8351751,  8848372,
+ 9374524,  9931962,  10522547,  11148251,  11811160,  12513488,  13257579,  14045916,
+ 14881129,  15766007,  16703503,  17696745,  18749048,  19863924,  21045095,  22296501,
+ 23622320,  25026976,  26515158,  28091831,  29762258,  31532014,  33407005,  35393489,
+ 37498096,  39727849,  42090189,  44593002,  47244640,  50053953,  53030316,  56183662,
+ 59524517,  63064029,  66814011,  70786979,  74996192,  79455697,  84180379,  89186005,
+ 94489281,  100107906,  106060631,  112367325,  119049034,  126128057,  133628022,  141573958,
+ 149992383,  158911395,  168360758,  178372009,  188978561,  200215811,  212121263,  224734649,
+ 238098067,  252256115,  267256044,  283147915,  299984767,  317822789,  336721516,  356744019,
+ 377957122,  400431622,  424242525,  449469299,  476196134,  504512230,  534512088,  566295831,
+ 599969533,  635645578,  673443031,  713488038,  755914244,  800863244,  848485051,  898938597,
+ 952392268,  1009024459,  1069024176,  1132591661,  1199939066,  1271291156,  1346886062,  1426976075,
+ 1511828488,  1601726488,  1696970102,  1797877195,  1904784536,  2018048919,  2138048352,  2265183323,
+ 2399878133,  2542582312,  2693772124,  2853952150,  3023656976,  3203452976,  3393940203,  3595754390,
+ 3809569072,  4036097837,  4276096704,  4530366646,  4799756265,  5085164625,  5387544249,  5707904301,
+ 6047313953,  6406905953,  6787880406,  7191508779,  7619138144,  8072195675,  8552193408,  9060733292,
+ 9599512530,  10170329250,  10775088497,  11415808601,  12094627906,  12813811906,  13575760812,  14383017559,
+ 15238276289,  16144391350,  17104386816,  18121466583,  19199025060,  20340658499,  21550176995,  22831617203,
+ 24189255811,  25627623812,  27151521625,  28766035117,  30476552578,  32288782699,  34208773632,  36242933166,
+ 38398050121,  40681316998,  43100353990,  45663234406,  48378511622,  51255247624,  54303043250,  57532070234,
+ 60953105155,  64577565399,  68417547263,  72485866332,  76796100242,  81362633997,  86200707979,  91326468812,
+ 96757023244,  102510495247,  108606086499,  115064140469,  121906210311,  129155130797,  136835094527,  144971732664,
+ 153592200483,  162725267993,  172401415959,  182652937624,  193514046489,  205020990495,  217212172998,  230128280937,
+ 243812420621,  258310261595,  273670189054,  289943465329,  307184400967,  325450535987,  344802831918,  365305875247,
+ 387028092977,  410041980990,  434424345996,  460256561874,  487624841243,  516620523189,  547340378108,  579886930658,
+ 614368801933,  650901071974,  689605663835,  730611750495,  774056185954,  820083961979,  868848691993,  920513123749,
+ 975249682485,  1033241046379,  1094680756215,  1159773861316,  1228737603866,  1301802143948,  1379211327671,  1461223500989,
+ 1548112371909,  1640167923958,  1737697383986,  1841026247497,  1950499364970,  2066482092757,  2189361512431,
 };
 /* USER CODE END PV */
 
@@ -70,6 +92,8 @@ void SystemClock_Config(void);
 static void MX_GPIO_Init(void);
 static void MX_ADC1_Init(void);
 static void MX_DAC_Init(void);
+static void MX_TIM1_Init(void);
+static void MX_TIM2_Init(void);
 static void MX_TIM6_Init(void);
 /* USER CODE BEGIN PFP */
 extern USBD_HandleTypeDef hUsbDeviceFS;
@@ -79,17 +103,43 @@ extern USBD_HandleTypeDef hUsbDeviceFS;
 /* USER CODE BEGIN 0 */
 void note_on(uint8_t channel, uint8_t note, uint8_t velocity) {
 	if( channel == 0 && note < 128 ) {
-		voices[0].increment = tunes[note];
-		voices[0].velocity = velocity;
-		voices[0].adsr = ATTACK;
-		voices[0].envelope = 0;
+
+		int8_t index = -1;
+		int8_t first_free = -1;
+		int8_t first_release = -1;
+		for( int i=0; i<NUM_VOICES; i++ ) {
+			if(voices[i].note == note ) {
+				index = i;
+				break;
+			} else if(voices[i].adsr == RELEASE ) {
+				first_release = i;
+			} else if(voices[i].adsr == NONE ) {
+				first_free = i;
+			}
+		}
+		if(index == -1) {
+			if(first_free != -1 )
+				index = first_free;
+			else if(first_release != -1 )
+				index = first_release;
+			else index = 0;
+		}
+		voices[index].note = note;
+		voices[index].velocity = velocity;
+		voices[index].adsr = ATTACK;
+		for(uint8_t i=0; i<NUM_HARMONICS; i++) {
+			voices[index].harmonics[i].increment = tunes[note+(i*12)];
+		}
 	}
 }
 void note_off(uint8_t channel, uint8_t note, uint8_t velocity) {
 	if( channel == 0 ) {
-		voices[0].increment = note * 8;
-		voices[0].velocity = velocity;
-		voices[0].adsr = RELEASE;
+		for( int i=0; i<NUM_VOICES; i++ ) {
+			if(voices[i].note == note ) {
+				voices[i].velocity = velocity;
+				voices[i].adsr = RELEASE;
+			}
+		}
 	}
 }
 /* USER CODE END 0 */
@@ -101,10 +151,11 @@ void note_off(uint8_t channel, uint8_t note, uint8_t velocity) {
 int main(void)
 {
   /* USER CODE BEGIN 1 */
+	for(uint8_t i = 0; i<NUM_VOICES; i++ ) {
+		voices[i].adsr = NONE;
+	}
+
 	/* initialize voices */
-	voices[0].increment = ACCUMULATOR_STEPS;
-	voices[0].accumulator = 0;
-	voices[0].position = 0;
   /* USER CODE END 1 */
   
 
@@ -129,11 +180,13 @@ int main(void)
   MX_ADC1_Init();
   MX_DAC_Init();
   MX_USB_DEVICE_Init();
+  MX_TIM1_Init();
+  MX_TIM2_Init();
   MX_TIM6_Init();
   /* USER CODE BEGIN 2 */
-	HAL_Delay(1000);
+
 	/*##-3- Set DAC Channel1 DHR register ######################################*/
-	if (HAL_DAC_SetValue(&hdac, DAC_CHANNEL_1, DAC_ALIGN_8B_R, 0xFF) != HAL_OK)
+	if (HAL_DAC_SetValue(&hdac, DAC_CHANNEL_1, DAC_ALIGN_8B_R, 0) != HAL_OK)
 	{
 	  /* Setting value Error */
 	  Error_Handler();
@@ -145,10 +198,18 @@ int main(void)
 	  /* Start Error */
 	  Error_Handler();
 	}
-
+	mimuz_init();
+	HAL_TIM_Base_Start_IT(&htim2);
 	HAL_TIM_Base_Start_IT(&htim6);
 	//TODO    HAL_ADC_Start(&hadc1);
-	mimuz_init();
+
+	for(uint8_t i=0; i<8; i++ ) {
+		HAL_GPIO_WritePin(MIDI_CONNECT_GPIO_Port, MIDI_CONNECT_Pin, SET);
+		HAL_Delay(100);
+		HAL_GPIO_WritePin(MIDI_CONNECT_GPIO_Port, MIDI_CONNECT_Pin, RESET);
+		HAL_Delay(100);
+	}
+
 	setHdlNoteOn(note_on);
 	setHdlNoteOff(note_off);
   /* USER CODE END 2 */
@@ -309,6 +370,97 @@ static void MX_DAC_Init(void)
   /* USER CODE BEGIN DAC_Init 2 */
 
   /* USER CODE END DAC_Init 2 */
+
+}
+
+/**
+  * @brief TIM1 Initialization Function
+  * @param None
+  * @retval None
+  */
+static void MX_TIM1_Init(void)
+{
+
+  /* USER CODE BEGIN TIM1_Init 0 */
+
+  /* USER CODE END TIM1_Init 0 */
+
+  TIM_ClockConfigTypeDef sClockSourceConfig = {0};
+  TIM_MasterConfigTypeDef sMasterConfig = {0};
+
+  /* USER CODE BEGIN TIM1_Init 1 */
+
+  /* USER CODE END TIM1_Init 1 */
+  htim1.Instance = TIM1;
+  htim1.Init.Prescaler = 0;
+  htim1.Init.CounterMode = TIM_COUNTERMODE_UP;
+  htim1.Init.Period = 0;
+  htim1.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
+  htim1.Init.RepetitionCounter = 0;
+  htim1.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
+  if (HAL_TIM_Base_Init(&htim1) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  sClockSourceConfig.ClockSource = TIM_CLOCKSOURCE_INTERNAL;
+  if (HAL_TIM_ConfigClockSource(&htim1, &sClockSourceConfig) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  sMasterConfig.MasterOutputTrigger = TIM_TRGO_RESET;
+  sMasterConfig.MasterSlaveMode = TIM_MASTERSLAVEMODE_DISABLE;
+  if (HAL_TIMEx_MasterConfigSynchronization(&htim1, &sMasterConfig) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /* USER CODE BEGIN TIM1_Init 2 */
+
+  /* USER CODE END TIM1_Init 2 */
+
+}
+
+/**
+  * @brief TIM2 Initialization Function
+  * @param None
+  * @retval None
+  */
+static void MX_TIM2_Init(void)
+{
+
+  /* USER CODE BEGIN TIM2_Init 0 */
+
+  /* USER CODE END TIM2_Init 0 */
+
+  TIM_ClockConfigTypeDef sClockSourceConfig = {0};
+  TIM_MasterConfigTypeDef sMasterConfig = {0};
+
+  /* USER CODE BEGIN TIM2_Init 1 */
+
+  /* USER CODE END TIM2_Init 1 */
+  htim2.Instance = TIM2;
+  htim2.Init.Prescaler = 0;
+  htim2.Init.CounterMode = TIM_COUNTERMODE_UP;
+  htim2.Init.Period = 16666;
+  htim2.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
+  htim2.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
+  if (HAL_TIM_Base_Init(&htim2) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  sClockSourceConfig.ClockSource = TIM_CLOCKSOURCE_INTERNAL;
+  if (HAL_TIM_ConfigClockSource(&htim2, &sClockSourceConfig) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  sMasterConfig.MasterOutputTrigger = TIM_TRGO_RESET;
+  sMasterConfig.MasterSlaveMode = TIM_MASTERSLAVEMODE_DISABLE;
+  if (HAL_TIMEx_MasterConfigSynchronization(&htim2, &sMasterConfig) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /* USER CODE BEGIN TIM2_Init 2 */
+
+  /* USER CODE END TIM2_Init 2 */
 
 }
 

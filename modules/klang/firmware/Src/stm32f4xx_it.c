@@ -24,6 +24,7 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "sine_table.h"
+#include "saw_table.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -59,6 +60,8 @@
 /* External variables --------------------------------------------------------*/
 extern PCD_HandleTypeDef hpcd_USB_OTG_FS;
 extern DAC_HandleTypeDef hdac;
+extern TIM_HandleTypeDef htim1;
+extern TIM_HandleTypeDef htim2;
 extern TIM_HandleTypeDef htim6;
 /* USER CODE BEGIN EV */
 
@@ -201,66 +204,114 @@ void SysTick_Handler(void)
 /******************************************************************************/
 
 /**
+  * @brief This function handles TIM1 update interrupt and TIM10 global interrupt.
+  */
+void TIM1_UP_TIM10_IRQHandler(void)
+{
+  /* USER CODE BEGIN TIM1_UP_TIM10_IRQn 0 */
+
+  /* USER CODE END TIM1_UP_TIM10_IRQn 0 */
+  HAL_TIM_IRQHandler(&htim1);
+  /* USER CODE BEGIN TIM1_UP_TIM10_IRQn 1 */
+
+
+  /* USER CODE END TIM1_UP_TIM10_IRQn 1 */
+}
+
+/**
+  * @brief This function handles TIM2 global interrupt.
+  */
+void TIM2_IRQHandler(void)
+{
+  /* USER CODE BEGIN TIM2_IRQn 0 */
+
+  /* USER CODE END TIM2_IRQn 0 */
+  HAL_TIM_IRQHandler(&htim2);
+  /* USER CODE BEGIN TIM2_IRQn 1 */
+	for (uint8_t i = 0; i < NUM_VOICES; i++) {
+		if(voices[i].adsr != NONE) {
+			switch(voices[i].adsr) {
+				case ATTACK:
+					if( voices[i].envelope < 1024 )
+						voices[i].envelope += 8;
+					else voices[i].adsr = DECAY;
+					break;
+				case DECAY:
+					if( voices[i].envelope > 800 )
+						voices[i].envelope -= 4;
+					break;
+				case RELEASE:
+					if(voices[i].envelope > 0 )
+						voices[i].envelope -= 4;
+					else {
+						voices[i].adsr = NONE;
+						voices[i].note = 0;
+					}
+					break;
+				default: break;
+			}
+		}
+	}
+  /* USER CODE END TIM2_IRQn 1 */
+}
+
+/**
   * @brief This function handles TIM6 global interrupt, DAC1 and DAC2 underrun error interrupts.
   */
 void TIM6_DAC_IRQHandler(void)
 {
   /* USER CODE BEGIN TIM6_DAC_IRQn 0 */
-
+//
   /* USER CODE END TIM6_DAC_IRQn 0 */
   HAL_DAC_IRQHandler(&hdac);
   HAL_TIM_IRQHandler(&htim6);
   /* USER CODE BEGIN TIM6_DAC_IRQn 1 */
-  uint16_t index = 0;
-  uint32_t total = 0;
-	  uint8_t i = 0; //TODO loop through voices
-	  if(voices[i].velocity) {
-		  index = voices[i].accumulator >> 22;
-		  total += sine_table[index];
-	  }
+	uint16_t index = 0;
+	uint32_t total = 0;
+	uint32_t used_channels = 0;
+	for (uint8_t i = 0; i < NUM_VOICES; i++) {
+		if(voices[i].adsr != NONE) {
+//			switch(voices[i].adsr) {
+//				case ATTACK:
+//					if( voices[i].envelope < 1024 )
+//						voices[i].envelope += 1;
+//					else voices[i].adsr = DECAY;
+//					break;
+//				case DECAY:
+//					if( voices[i].envelope > 800 )
+//						voices[i].envelope -= 1;
+//					break;
+//				case RELEASE:
+//					if(voices[i].envelope > 0 )
+//						voices[i].envelope -= 1;
+//					else {
+//						voices[i].adsr = NONE;
+//						voices[i].note = 0;
+//					}
+//					break;
+//				default: break;
+//			}
 
-
-
-
-
-
-
-
-
-////     for (uint8_t i = 0; i < NUM_VOICES; i++) {
-//  	  uint8_t i = 0;
-//  	  if(voices[i].velocity)
-//  		  total += sine_table[voices[i].position] / 127 * voices[i].envelope;
-//	  //total += sine_table[voices[i].position];
-//
-//       /* Take an increment step */
-//       voices[i].accumulator += voices[i].increment;
-//       voices[i].position += voices[i].accumulator / ACCUMULATOR_STEPS;
-//       voices[i].accumulator = voices[i].accumulator % ACCUMULATOR_STEPS;
-//       voices[i].position = voices[i].position % SAMPLE_LENGTH;
-//       switch(voices[i].adsr) {
-//       case ATTACK:
-//	   	   if( voices[i].envelope < 127 )
-//	   		voices[i].envelope += 1;
-//	   	   else voices[i].adsr = DECAY;
-//	   	   break;
-//       case DECAY:
-//    	   if( voices[i].envelope > 80 )
-//   	   		voices[i].envelope -= 1;
-//	   	   break;
-//       case RELEASE:
-//    	   if(voices[i].envelope > 0 )
-//   	   		voices[i].envelope -= 1;
-//	   	   break;
-//       }
-//     }
-	total = total / NUM_VOICES;
-
-	if (HAL_DAC_SetValue(&hdac, DAC_CHANNEL_1, DAC_ALIGN_12B_R, total) != HAL_OK)
-	{
-	  /* Setting value Error */
-	  Error_Handler();
+			uint32_t voice = 0;
+			for( uint8_t j = 0; j<NUM_HARMONICS; j++ ) {
+				index = voices[i].harmonics[j].accumulator >> 22;
+				voice += sine_table[index];
+				voices[i].harmonics[j].accumulator += voices[i].harmonics[j].increment;
+			}
+			total += voice * voices[i].envelope / 1024 / NUM_HARMONICS;
+			++used_channels;
+		}
 	}
+
+		if(used_channels > 0) {
+			total = total / NUM_VOICES; //used_channels;
+
+			if (HAL_DAC_SetValue(&hdac, DAC_CHANNEL_1, DAC_ALIGN_12B_R, total) != HAL_OK)
+			{
+			  /* Setting value Error */
+			  Error_Handler();
+			}
+		}
   /* USER CODE END TIM6_DAC_IRQn 1 */
 }
 
@@ -279,6 +330,57 @@ void OTG_FS_IRQHandler(void)
 }
 
 /* USER CODE BEGIN 1 */
-
+/**
+  * @brief This function handles TIM6 global interrupt, DAC1 and DAC2 underrun error interrupts.
+  */
+//void TIM6_DAC_IRQHandler(void)
+//{
+//	/* USER CODE BEGIN TIM6_DAC_IRQn 0 */
+//
+//	/* USER CODE END TIM6_DAC_IRQn 0 */
+//	HAL_DAC_IRQHandler(&hdac);
+//	HAL_TIM_IRQHandler(&htim6);
+//	/* USER CODE BEGIN TIM6_DAC_IRQn 1 */
+//	uint16_t index = 0;
+//	uint32_t total = 0;
+//	uint32_t used_channels = 0;
+//	for (uint8_t i = 0; i < NUM_VOICES; i++) {
+//		if(voices[i].adsr != NONE) {
+//			switch(voices[i].adsr) {
+//				case ATTACK:
+//					if( voices[i].envelope < 1024 )
+//						voices[i].envelope += 1;
+//					else voices[i].adsr = DECAY;
+//					break;
+//				case DECAY:
+//					if( voices[i].envelope > 800 )
+//						voices[i].envelope -= 1;
+//					break;
+//				case RELEASE:
+//					if(voices[i].envelope > 0 )
+//						voices[i].envelope -= 1;
+//					else {
+//						voices[i].adsr = NONE;
+//						voices[i].note = 0;
+//					}
+//					break;
+//				default: break;
+//			}
+//
+//			index = voices[i].accumulator >> 22;
+//			total += sine_table[index] * voices[i].envelope / 1024;
+//			voices[i].accumulator += voices[i].increment;
+//			++used_channels;
+//		}
+//	}
+//	if(used_channels > 0) {
+//		total = total / used_channels;
+//
+//	if (HAL_DAC_SetValue(&hdac, DAC_CHANNEL_1, DAC_ALIGN_12B_R, total) != HAL_OK)
+//	{
+//	  /* Setting value Error */
+//	  Error_Handler();
+//	}
+//	}
 /* USER CODE END 1 */
 /************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/
