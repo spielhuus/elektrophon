@@ -582,7 +582,7 @@ F 1 "TL072" H 4250 2226 50  0000 C CNN
 F 2 "Package_DIP:DIP-8_W7.62mm_Socket" H 4250 1950 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 4250 1950 50  0001 C CNN
 	2    4250 1950
-	1    0    0    -1  
+	1    0    0    1   
 $EndComp
 $Comp
 L Device:R R14
@@ -599,8 +599,8 @@ $Comp
 L Device:R R15
 U 1 1 5E4B4A57
 P 3800 2050
-F 0 "R15" V 3593 2050 50  0000 C CNN
-F 1 "15k" V 3684 2050 50  0000 C CNN
+F 0 "R15" V 3900 2050 50  0000 C CNN
+F 1 "15k" V 4000 2050 50  0000 C CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 3730 2050 50  0001 C CNN
 F 3 "~" H 3800 2050 50  0001 C CNN
 	1    3800 2050
@@ -685,8 +685,8 @@ $Comp
 L Device:R R13
 U 1 1 5E4D5C37
 P 3700 2700
-F 0 "R13" H 3630 2654 50  0000 R CNN
-F 1 "1k" H 3630 2745 50  0000 R CNN
+F 0 "R13" H 3900 2650 50  0000 R CNN
+F 1 "1k" H 3850 2750 50  0000 R CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 3630 2700 50  0001 C CNN
 F 3 "~" H 3700 2700 50  0001 C CNN
 	1    3700 2700
@@ -749,8 +749,8 @@ L Device:R R19
 U 1 1 5E4EEDF0
 P 4250 1400
 F 0 "R19" V 4043 1400 50  0000 C CNN
-F 1 "15k" V 4134 1400 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P5.08mm_Vertical" V 4180 1400 50  0001 C CNN
+F 1 "150k" V 4134 1400 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 4180 1400 50  0001 C CNN
 F 3 "~" H 4250 1400 50  0001 C CNN
 	1    4250 1400
 	0    1    1    0   
@@ -1665,7 +1665,7 @@ F 1 "TL074" H 10350 5226 50  0000 C CNN
 F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 10300 5050 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 10400 5150 50  0001 C CNN
 	1    10350 4950
-	1    0    0    -1  
+	1    0    0    1   
 $EndComp
 Connection ~ 10650 4950
 Text Label 1700 2450 2    50   ~ 0
