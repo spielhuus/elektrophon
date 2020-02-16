@@ -537,7 +537,7 @@ U 1 1 5E42012D
 P 3700 4000
 F 0 "Q2" H 3891 4046 50  0000 L CNN
 F 1 "BC547" H 3891 3955 50  0000 L CNN
-F 2 "Package_TO_SOT_THT:TO-92_Inline" H 3900 3925 50  0001 L CIN
+F 2 "Package_TO_SOT_THT:TO-92_Inline_Wide" H 3900 3925 50  0001 L CIN
 F 3 "http://www.fairchildsemi.com/ds/BC/BC547.pdf" H 3700 4000 50  0001 L CNN
 	1    3700 4000
 	1    0    0    -1  
@@ -682,7 +682,7 @@ U 1 1 5E448ECB
 P 3600 2900
 F 0 "Q1" H 3791 2946 50  0000 L CNN
 F 1 "BC547" H 3791 2855 50  0000 L CNN
-F 2 "Package_TO_SOT_THT:TO-92_Inline" H 3800 2825 50  0001 L CIN
+F 2 "Package_TO_SOT_THT:TO-92_Inline_Wide" H 3800 2825 50  0001 L CIN
 F 3 "http://www.fairchildsemi.com/ds/BC/BC547.pdf" H 3600 2900 50  0001 L CNN
 	1    3600 2900
 	1    0    0    -1  
@@ -693,7 +693,7 @@ U 1 1 5E44943E
 P 4500 2900
 F 0 "Q3" H 4691 2946 50  0000 L CNN
 F 1 "BC547" H 4691 2855 50  0000 L CNN
-F 2 "Package_TO_SOT_THT:TO-92_Inline" H 4700 2825 50  0001 L CIN
+F 2 "Package_TO_SOT_THT:TO-92_Inline_Wide" H 4700 2825 50  0001 L CIN
 F 3 "http://www.fairchildsemi.com/ds/BC/BC547.pdf" H 4500 2900 50  0001 L CNN
 	1    4500 2900
 	-1   0    0    -1  
