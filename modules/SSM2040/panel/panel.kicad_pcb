@@ -211,7 +211,7 @@
   )
 
   (module elektrophon:panel_jack (layer F.Cu) (tedit 5DA46DDA) (tstamp 5E063B42)
-    (at 45.72 132.08)
+    (at 55.88 132.08)
     (descr "Mounting Hole 8.4mm, no annular, M8")
     (tags "mounting hole 8.4mm no annular m8")
     (path /5D6B07F8)
@@ -336,7 +336,7 @@
   )
 
   (module elektrophon:panel_jack (layer F.Cu) (tedit 5DA46DDA) (tstamp 5E063B1A)
-    (at 55.88 132.08)
+    (at 45.72 132.08)
     (descr "Mounting Hole 8.4mm, no annular, M8")
     (tags "mounting hole 8.4mm no annular m8")
     (path /5E05F1BE)

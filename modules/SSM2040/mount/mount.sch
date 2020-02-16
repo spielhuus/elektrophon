@@ -628,7 +628,7 @@ U 1 1 5E14D133
 P 4750 7200
 F 0 "J5" H 4858 7681 50  0000 C CNN
 F 1 "Conn_01x07_Male" H 4858 7590 50  0000 C CNN
-F 2 "Connector_PinSocket_2.54mm:PinSocket_1x07_P2.54mm_Vertical" H 4750 7200 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x07_P2.54mm_Vertical" H 4750 7200 50  0001 C CNN
 F 3 "~" H 4750 7200 50  0001 C CNN
 	1    4750 7200
 	1    0    0    -1  

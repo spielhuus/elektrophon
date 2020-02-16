@@ -22,7 +22,7 @@ Connection ~ 2800 4100
 Wire Wire Line
 	2700 4100 2800 4100
 Wire Wire Line
-	2800 3600 2800 1850
+	2800 3600 2800 3200
 Wire Wire Line
 	2800 1850 3050 1850
 Wire Wire Line
@@ -169,7 +169,7 @@ U 1 1 5E2AA771
 P 5800 3550
 F 0 "R14" H 5730 3504 50  0000 R CNN
 F 1 "200" H 5730 3595 50  0000 R CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 5730 3550 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 5730 3550 50  0001 C CNN
 F 3 "~" H 5800 3550 50  0001 C CNN
 	1    5800 3550
 	-1   0    0    1   
@@ -217,7 +217,7 @@ Connection ~ 4050 3200
 Wire Wire Line
 	3700 3200 4050 3200
 Wire Wire Line
-	7950 2350 7950 1950
+	6500 2350 6500 1950
 $Comp
 L power:GND #PWR033
 U 1 1 5E27AD59
@@ -235,13 +235,13 @@ U 1 1 5E27AD53
 P 7950 2500
 F 0 "C14" H 8065 2546 50  0000 L CNN
 F 1 "0.01" H 8065 2455 50  0000 L CNN
-F 2 "Capacitor_THT:C_Disc_D3.4mm_W2.1mm_P2.50mm" H 7988 2350 50  0001 C CNN
+F 2 "Capacitor_THT:C_Rect_L7.2mm_W5.5mm_P5.00mm_FKS2_FKP2_MKS2_MKP2" H 7988 2350 50  0001 C CNN
 F 3 "~" H 7950 2500 50  0001 C CNN
 	1    7950 2500
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	6500 2350 6500 1950
+	7950 2350 7950 1950
 $Comp
 L power:GND #PWR030
 U 1 1 5E2767F1
@@ -259,7 +259,7 @@ U 1 1 5E2767EB
 P 6500 2500
 F 0 "C13" H 6615 2546 50  0000 L CNN
 F 1 "0.01" H 6615 2455 50  0000 L CNN
-F 2 "Capacitor_THT:C_Disc_D3.4mm_W2.1mm_P2.50mm" H 6538 2350 50  0001 C CNN
+F 2 "Capacitor_THT:C_Rect_L7.2mm_W5.5mm_P5.00mm_FKS2_FKP2_MKS2_MKP2" H 6538 2350 50  0001 C CNN
 F 3 "~" H 6500 2500 50  0001 C CNN
 	1    6500 2500
 	1    0    0    -1  
@@ -283,7 +283,7 @@ U 1 1 5E272420
 P 5000 2500
 F 0 "C12" H 5115 2546 50  0000 L CNN
 F 1 "0.01" H 5115 2455 50  0000 L CNN
-F 2 "Capacitor_THT:C_Disc_D3.4mm_W2.1mm_P2.50mm" H 5038 2350 50  0001 C CNN
+F 2 "Capacitor_THT:C_Rect_L7.2mm_W5.5mm_P5.00mm_FKS2_FKP2_MKS2_MKP2" H 5038 2350 50  0001 C CNN
 F 3 "~" H 5000 2500 50  0001 C CNN
 	1    5000 2500
 	1    0    0    -1  
@@ -301,11 +301,7 @@ Wire Wire Line
 Wire Wire Line
 	4050 1850 4050 3200
 Wire Wire Line
-	7400 1850 7250 1850
-Wire Wire Line
-	6850 1850 6950 1850
-Wire Wire Line
-	5800 1850 5950 1850
+	9850 1200 9950 1200
 Wire Wire Line
 	5350 1850 5500 1850
 Wire Wire Line
@@ -329,7 +325,7 @@ U 1 1 5E1FC9B0
 P 7100 3200
 F 0 "R18" V 6893 3200 50  0000 C CNN
 F 1 "10k" V 6984 3200 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 7030 3200 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 7030 3200 50  0001 C CNN
 F 3 "~" H 7100 3200 50  0001 C CNN
 	1    7100 3200
 	0    1    1    0   
@@ -340,7 +336,7 @@ U 1 1 5E1FC697
 P 6350 3200
 F 0 "R16" V 6143 3200 50  0000 C CNN
 F 1 "10k" V 6234 3200 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 6280 3200 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P5.08mm_Vertical" V 6280 3200 50  0001 C CNN
 F 3 "~" H 6350 3200 50  0001 C CNN
 	1    6350 3200
 	0    1    1    0   
@@ -351,7 +347,7 @@ U 1 1 5E1FC384
 P 5650 3200
 F 0 "R13" V 5443 3200 50  0000 C CNN
 F 1 "10k" V 5534 3200 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 5580 3200 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 5580 3200 50  0001 C CNN
 F 3 "~" H 5650 3200 50  0001 C CNN
 	1    5650 3200
 	0    1    1    0   
@@ -408,7 +404,7 @@ U 1 1 5E1C0C11
 P 3600 2500
 F 0 "C9" H 3715 2546 50  0000 L CNN
 F 1 "0.01" H 3715 2455 50  0000 L CNN
-F 2 "Capacitor_THT:C_Disc_D3.4mm_W2.1mm_P2.50mm" H 3638 2350 50  0001 C CNN
+F 2 "Capacitor_THT:C_Rect_L7.2mm_W5.5mm_P5.00mm_FKS2_FKP2_MKS2_MKP2" H 3638 2350 50  0001 C CNN
 F 3 "~" H 3600 2500 50  0001 C CNN
 	1    3600 2500
 	1    0    0    -1  
@@ -882,20 +878,16 @@ Wire Wire Line
 $Comp
 L Device:Thermistor TH1
 U 1 1 5E5368B3
-P 5100 1100
-F 0 "TH1" V 4858 1100 50  0000 C CNN
-F 1 "Thermistor 1k" V 4949 1100 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" H 5100 1100 50  0001 C CNN
-F 3 "~" H 5100 1100 50  0001 C CNN
-	1    5100 1100
-	0    1    1    0   
+P 4900 950
+F 0 "TH1" H 5350 950 50  0000 C CNN
+F 1 "Thermistor 1k" H 5350 1050 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" H 4900 950 50  0001 C CNN
+F 3 "~" H 4900 950 50  0001 C CNN
+	1    4900 950 
+	-1   0    0    1   
 $EndComp
-Text Label 4900 1100 2    50   ~ 0
+Text Label 4700 750  2    50   ~ 0
 CNTL
-Wire Wire Line
-	5300 1100 5500 1100
-Wire Wire Line
-	5500 1100 5500 1300
 $Comp
 L power:+15V #PWR019
 U 1 1 5D5BF152
@@ -1482,12 +1474,12 @@ $EndComp
 $Comp
 L elektrophon:SSM2040 U2
 U 5 1 5E2B376F
-P 6500 1850
-F 0 "U2" H 6400 2217 50  0000 C CNN
-F 1 "SSM2040" H 6400 2126 50  0000 C CNN
-F 2 "Package_DIP:DIP-16_W7.62mm_Socket" H 6800 1550 50  0001 C CNN
-F 3 "http://www.alfarzpp.lv/eng/sc/AS3320.pdf" H 7500 1450 50  0001 C CNN
-	5    6500 1850
+P 7950 1850
+F 0 "U2" H 7850 2217 50  0000 C CNN
+F 1 "SSM2040" H 7850 2126 50  0000 C CNN
+F 2 "Package_DIP:DIP-16_W7.62mm_Socket" H 8250 1550 50  0001 C CNN
+F 3 "http://www.alfarzpp.lv/eng/sc/AS3320.pdf" H 8950 1450 50  0001 C CNN
+	5    7950 1850
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -1499,17 +1491,6 @@ F 1 "SSM2040" H 8400 2150 50  0000 C CNN
 F 2 "Package_DIP:DIP-16_W7.62mm_Socket" H 5800 1450 50  0001 C CNN
 F 3 "http://www.alfarzpp.lv/eng/sc/AS3320.pdf" H 6500 1350 50  0001 C CNN
 	6    5500 1750
-	1    0    0    -1  
-$EndComp
-$Comp
-L elektrophon:SSM2040 U2
-U 4 1 5E2BB57D
-P 7950 1850
-F 0 "U2" H 7850 2200 50  0000 C CNN
-F 1 "SSM2040" H 7850 2100 50  0000 C CNN
-F 2 "Package_DIP:DIP-16_W7.62mm_Socket" H 8250 1550 50  0001 C CNN
-F 3 "http://www.alfarzpp.lv/eng/sc/AS3320.pdf" H 8950 1450 50  0001 C CNN
-	4    7950 1850
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -1622,4 +1603,45 @@ Wire Wire Line
 	4200 7650 4700 7650
 Wire Wire Line
 	4200 7050 4700 7050
+Wire Wire Line
+	4700 750  4900 750 
+Connection ~ 4900 750 
+Wire Wire Line
+	4900 750  5500 750 
+Wire Wire Line
+	5500 750  5500 1300
+$Comp
+L power:GND #PWR0101
+U 1 1 5E4B32EE
+P 4900 1150
+F 0 "#PWR0101" H 4900 900 50  0001 C CNN
+F 1 "GND" H 4905 977 50  0000 C CNN
+F 2 "" H 4900 1150 50  0001 C CNN
+F 3 "" H 4900 1150 50  0001 C CNN
+	1    4900 1150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6850 1850 6950 1850
+$Comp
+L elektrophon:SSM2040 U2
+U 4 1 5E2BB57D
+P 6500 1850
+F 0 "U2" H 6400 2200 50  0000 C CNN
+F 1 "SSM2040" H 6400 2100 50  0000 C CNN
+F 2 "Package_DIP:DIP-16_W7.62mm_Socket" H 6800 1550 50  0001 C CNN
+F 3 "http://www.alfarzpp.lv/eng/sc/AS3320.pdf" H 7500 1450 50  0001 C CNN
+	4    6500 1850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5950 1850 5800 1850
+Wire Wire Line
+	7400 1850 7250 1850
+Wire Wire Line
+	3250 3200 2800 3200
+Connection ~ 3250 3200
+Connection ~ 2800 3200
+Wire Wire Line
+	2800 3200 2800 1850
 $EndSCHEMATC
