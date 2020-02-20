@@ -1200,8 +1200,8 @@ L Device:C C6
 U 1 1 5E05F9E3
 P 3050 5550
 F 0 "C6" V 2798 5550 50  0000 C CNN
-F 1 "C" V 2889 5550 50  0000 C CNN
-F 2 "Capacitor_THT:C_Disc_D3.4mm_W2.1mm_P2.50mm" H 3088 5400 50  0001 C CNN
+F 1 "0.05u" V 2889 5550 50  0000 C CNN
+F 2 "Capacitor_THT:C_Disc_D4.3mm_W1.9mm_P5.00mm" H 3088 5400 50  0001 C CNN
 F 3 "~" H 3050 5550 50  0001 C CNN
 	1    3050 5550
 	0    1    1    0   
@@ -1644,4 +1644,6 @@ Connection ~ 3250 3200
 Connection ~ 2800 3200
 Wire Wire Line
 	2800 3200 2800 1850
+Text Notes 3200 5450 0    50   ~ 0
+0.047u
 $EndSCHEMATC
