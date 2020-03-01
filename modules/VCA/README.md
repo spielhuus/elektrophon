@@ -14,7 +14,7 @@ Run a square wave of about 100 Hz into the CV. turn all the potentiometer to min
 
 ## *use*
 
-Connect a envelope signal to the *env* of the VCA and the *OUT* to a mixer or amplifier:
+Connect a envelope signal to the **env** of the VCA and the **OUT** to a mixer or amplifier:
 
 **#1,#2,#3** the input signal.
 
