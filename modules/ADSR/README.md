@@ -35,7 +35,7 @@ Connect a gate signal to the *IN* of the ADSR and the *OUT* to a VCA or VCF:
 
 ## *links*
 
-1) Wikipedia: ADSR [1]:()
+1) Wikipedia: [ADSR][1]
 1) [Randall Kirschman, Electronics, Jul.1980][2]
 1) [Jonathan Jacky, Electronics, Sept.1980][3]
 1) [Örley Gàbor, Electronic Design, Aug. 1980][4]
