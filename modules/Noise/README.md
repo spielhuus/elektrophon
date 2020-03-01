@@ -16,7 +16,7 @@ No calibration needed.
 
 ## *use*
 
-Use one or multiple output to connect to other modules like a S&H or VCA. 
+Use one or multiple outputs to connect to other modules like a S&H or VCA. 
 
 ## links
 
