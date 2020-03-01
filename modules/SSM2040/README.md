@@ -1,3 +1,6 @@
+![module](https://img.shields.io/badge/module-other-yellow)
+![status](https://img.shields.io/badge/status-work%20in%20progress-orange)
+
 ## *voltage controlled filter*
 
 The ADSR creates an envelope for describing the change of the sound over time. The envelope can be used for amplitude, 
