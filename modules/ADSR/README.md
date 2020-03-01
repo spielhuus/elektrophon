@@ -4,11 +4,11 @@
 ## *adsr*
 
 <a href="https://spielhuus.github.io/elektrophon/images/adsr-panel.jpg"><img width="200" align="right" src="https://spielhuus.github.io/elektrophon/images/adsr-titel_tmb.jpg"></a>
-An ADSR creates an envelope for describing the change of audio over time. The envelope can be used for amplitude, filters or pitch. The origin of an 555  based ADSR is publishes in electronics by Kirschmann, Jacky et al. This version is directly taken from René Schmitz [5] 'The Fastest Envelope in the West'. For the Attack, Decay and Release the potentiometers are logarithmic. This gives better control over the values. 
+An ADSR creates an envelope for describing the change of audio over time. The envelope can be used for amplitude, filters or pitch. The origin of an 555  based ADSR is published in electronics by Kirschmann, Jacky et al. This version is directly taken from René Schmitz [5] 'The Fastest Envelope in the West'. For the Attack, Decay and Release the potentiometers are logarithmic. This gives better control over the values. 
 
 ## *build*
 
-<a href="https://spielhuus.github.io/elektrophon/images/adsr-mount.jpg"><img width="200" align="left" src="https://spielhuus.github.io/elektrophon/images/adsr-mount_tmb.jpg"></a> Bulid this öslkdfjöalkdsfjöalkdsjf öasldkfj öalkdsf aölskdfj öalkdsfj aölsdkf jölksdj föalskd jföalkdjf öalkdsf jölakd jföalskdf jöalskdfj aölskdfj öalskdf jölskd jfölaksd jföalksdf jöalkdsjf öalksdjf aölksd jföalkdsf jöalskdfj öalskdf jöalksdf jöalksd jföalksdf jöalkdsfj öalskdf jöalskd fjöalksd jfölaksd jföalkds jföalksd jföalksd jfölaskdjf öalsdkf jöaldsk flkasdjflkadfj lakdjf lakdfj alkdf jlasdkfj alsdkf jalsdkfj alskdfj alsdkfj laskdf jlaskdfj lakdsf jalskdf jlaskdf jlakdf jlaskdf jlakd jflaskdfj laskdfj lakdfj laskdjf laskdjf laskdjf alskdf jalskdfj laskdfj lakdsfj alsdkf jlaksdfj lskadjf laksdjf laskdf jlakdsfj laskdfj laksdjf laskdf jlaskd jflaksdjf lasdkjf lakdsjf laskd
+<a href="https://spielhuus.github.io/elektrophon/images/adsr-mount.jpg"><img width="200" align="left" src="https://spielhuus.github.io/elektrophon/images/adsr-mount_tmb.jpg"></a> The gerber files are not part of the release. They will have to be created in kicad and ordered from some manufacture. The part are in the [BOM](BOM.md), there are no special parts for this build. 
 
 ## *calibrate*
 
