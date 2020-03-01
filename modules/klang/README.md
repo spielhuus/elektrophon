@@ -77,5 +77,13 @@ Connect a gate signal to the *IN* of the ADSR and the *OUT* to a VCA or VCF:
 1) [AN3126](https://www.st.com/content/ccc/resource/technical/document/application_note/05/fb/41/91/39/02/4d/1e/CD00259245.pdf/files/CD00259245.pdf/jcr:content/translations/en.CD00259245.pdf) Audio and waveform generation using the DAC in STM32 microcontrollers
 1) [AN4566](https://www.st.com/content/ccc/resource/technical/document/application_note/6f/35/61/e9/8a/28/48/8c/DM00129215.pdf/files/DM00129215.pdf/jcr:content/translations/en.DM00129215.pdf) Extending the DAC performance of STM32 microcontrollers
 1) all formulas are created with the latex converter at [codecogs](http://latex.codecogs.com/)
+1) [Arduino I/Q Audio Frequency DDS](http://neilmb.github.io/cheapnewham/2015/07/21/Arduino-IQ-Audio-Frequency-DDS.html) direct digital synthesis using an arduino.
+
+## *ARM application notes*
+
+1) [CMSIS](https://developer.arm.com/tools-and-software/embedded/cmsis) ARM CMIS developer page, direct [dowload](https://github.com/ARM-software/CMSIS_5/releases/tag/5.6.0) and [documentation](https://arm-software.github.io/CMSIS_5/General/html/index.html)
+1) [AN4841](https://www.st.com/content/ccc/resource/technical/document/application_note/group0/c1/ee/18/7a/f9/45/45/3b/DM00273990/files/DM00273990.pdf/jcr:content/translations/en.DM00273990.pdf) Digital signal processing for STM32 microcontrollers using CMSIS)
+1) []()
+
 ---
 [![CC BY-SA](https://licensebuttons.net/l/by-sa/3.0/88x31.png)](https://creativecommons.org/licenses/by-sa/4.0/)
