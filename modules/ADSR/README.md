@@ -1,4 +1,4 @@
-![module](https://img.shields.io/badge/module-ADSR-green)
+![module](https://img.shields.io/badge/module-ADSR-yellow)
 ![status](https://img.shields.io/badge/status-final-green)
 
 ## *adsr*
