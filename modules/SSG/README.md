@@ -1,3 +1,6 @@
+![module](https://img.shields.io/badge/module-other-yellow)
+![status](https://img.shields.io/badge/status-not%20working-red)
+
  # Smooth and Stepped Generator
  
 <a href="https://spielhuus.github.io/elektrophon/images/4046-panel.jpg"><img align="right" src="https://spielhuus.github.io/elektrophon/images/4046-panel-tmb.jpg" height="300px"></img></a>
