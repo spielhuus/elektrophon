@@ -20,7 +20,7 @@ No calibration needed.
 
 Connect a trigger signal to the **IN** of the bass and the **OUT** to mixer or any other output module:
 
-**Trigger Input/Envelope Generator**
+***Trigger Input/Envelope Generator***
 
 **Sensitivity** adjustment of the trigger input
 
