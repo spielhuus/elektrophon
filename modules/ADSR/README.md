@@ -1,4 +1,5 @@
-![Custom badge](https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fspielhuus%2Felektrophon%2Fmaster%2Fmodules%2FADSR%2Finfo.json)
+![module](https://img.shields.io/badge/module-ADSR-green)
+![status](https://img.shields.io/badge/status-final-green)
 
 ## *adsr*
 
