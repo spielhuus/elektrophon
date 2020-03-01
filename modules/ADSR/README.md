@@ -1,3 +1,5 @@
+![Custom badge](https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fspielhuus%2Felektrophon%2Fmaster%2Fmodules%2FADSR%2Finfo.json)
+
 ## *adsr*
 
 <a href="https://spielhuus.github.io/elektrophon/images/adsr-panel.jpg"><img width="200" align="right" src="https://spielhuus.github.io/elektrophon/images/adsr-titel_tmb.jpg"></a>
