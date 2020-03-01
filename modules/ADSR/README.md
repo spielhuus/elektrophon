@@ -8,7 +8,7 @@ An ADSR creates an envelope for describing the change of audio over time. The en
 
 ## *build*
 
-<a href="https://spielhuus.github.io/elektrophon/images/adsr-mount.jpg"><img width="200" align="left" src="https://spielhuus.github.io/elektrophon/images/adsr-mount_tmb.jpg"></a> The gerber files are not part of the release. They will have to be created in kicad and ordered from some manufacture. The part are in the [BOM](BOM.md), there are no special parts for this build. 
+<a href="https://spielhuus.github.io/elektrophon/images/adsr-mount.jpg"><img width="200" align="left" src="https://spielhuus.github.io/elektrophon/images/adsr-mount_tmb.jpg"></a> The gerber files are part of the release. It should be possible to directly order them from your manufacture. But check the result on the preview when you order them. The parts are in the [BOM](BOM.md), there are no special parts for this build. 
 
 ## *calibrate*
 
