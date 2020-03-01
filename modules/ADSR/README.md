@@ -35,8 +35,8 @@ Connect a gate signal to the *IN* of the ADSR and the *OUT* to a VCA or VCF:
 
 ## *links*
 
-1) [Wikipedia: ADSR](https://en.wikipedia.org/wiki/Envelope_(music))
-1) [Randall Kirschman, Electronics, Jul.1980](https://www.yusynth.net/archives/Electronics/R-Kirschman-ADSR-1980.pdf)
+1) Wikipedia: ADSR [1]:(https://en.wikipedia.org/wiki/Envelope_(music))
+1) Randall Kirschman, Electronics, Jul.1980 [2]:(https://www.yusynth.net/archives/Electronics/R-Kirschman-ADSR-1980.pdf)
 1) [Jonathan Jacky, Electronics, Sept.1980](https://www.yusynth.net/archives/Electronics/J-Jacky-ADSR-1980.pdf)
 1) [Örley Gàbor, Electronic Design, Aug. 1980](https://www.yusynth.net/archives/ElectronicDesign/O-Gabor-ADSR-1980.pdf)
 1) [René Schmitz: The Fastest Envelope in the West](https://www.schmitzbits.de/adsr.html)
