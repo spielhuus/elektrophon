@@ -17,9 +17,13 @@ Run a square wave of about 100 Hz into the CV. turn all the potentiometer to min
 Connect a envelope signal to the *env* of the VCA and the *OUT* to a mixer or amplifier:
 
 **#1,#2,#3** the input signal.
+
 **ac/dc** remove a dc offset. if there is any.
+
 **vol** control the volume of each signal
+
 **atten** atenuation of the mixed signal
+
 **initial** initial volume of the signal mix, if turned full of the module is a mixer
 
 ## *links*
