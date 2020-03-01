@@ -21,7 +21,7 @@ No calibration needed.
 Connect a trigger signal to the **IN** of the bass and the **OUT** to mixer or any other output module:
 
 
-<br/><br/>***Trigger Input/Envelope Generator***
+<br/>***Trigger Input/Envelope Generator***
 
 **Sensitivity:** adjustment of the trigger input
 
@@ -30,7 +30,7 @@ Connect a trigger signal to the **IN** of the bass and the **OUT** to mixer or a
 **Decay:** length of the drum voice envelope
 
 
-<br/><br/>***Shell VCO Control***
+<br/>***Shell VCO Control***
 
 **Pitch:** Control	Sets the initial pitch of the Shell VCO.
 
@@ -41,12 +41,12 @@ Connect a trigger signal to the **IN** of the bass and the **OUT** to mixer or a
 **Range Control:**	Sets the level of effect the applied control voltage will have on the pitch of the VCO
 
 
-<br/><br/>***Impact Section***
+<br/>***Impact Section***
 
 **Impact Tone Control:**	Sets tone of the impact signal from bass to treble.
 
 
-<br/><br/>***Signal Mix Section***
+<br/>***Signal Mix Section***
 
 **Shell Volume:**	Adjusts the amount of Shell signal present in the final output signal.
 
