@@ -1,3 +1,6 @@
+![module](https://img.shields.io/badge/module-other-yellow)
+![status](https://img.shields.io/badge/status-work%20in%20progress-orange)
+
 # MIDI
 
 When building modules for the synthesizer they also needs to be controller. For example the pitch of a VCO. In the modular world modules are controller with control volages (CV). There are various sources for a CV. For example a sequencer, ADSR but also an LFO or the DUSG. But when creating music the CV's might get complex for a sequencer and the series of voltages must be reproducable. For this purpose a [DAW](https://en.wikipedia.org/wiki/Digital_audio_workstation) on a computer can be used. The standard interface controlling audio is [MIDI](https://en.wikipedia.org/wiki/MIDI). This is a digital protocol, including note's notation, pitch, velocity. This digital information needs to be converted to CV's. The default connector for MIDI is a [180° five-pin DIN](https://en.wikipedia.org/wiki/DIN_connector) connector. Unless you kept your [Atari ST](https://en.wikipedia.org/wiki/Atari_ST) you most likely dont own a device with such an interface. for isolating the circuits from the computer and the synth a wireless protocol is preferend. It also seems the most practical way to connect the two. This module is build with a [blue pill]() [STM32]() module and connects with [bluetooth]() to the computer.

@@ -1,3 +1,6 @@
+![module](https://img.shields.io/badge/module-other-yellow)
+![status](https://img.shields.io/badge/status-work%20in%20progress-orange)
+
 # **<font size="24">*Stereo Mischer*</font>** 
 
 This is a basic mixer and paner. It has a stereo output that can be connected to the line your computers soundcard. The output voltage is not limited and must be regulated with the volume potentiometers of the channels.

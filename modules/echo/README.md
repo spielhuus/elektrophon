@@ -1,3 +1,6 @@
+![module](https://img.shields.io/badge/module-other-yellow)
+![status](https://img.shields.io/badge/status-work%20in%20progress-orange)
+
 # Echo
 
 <a href="https://spielhuus.github.io/elektrophon/images/VCA-panel.jpg">
