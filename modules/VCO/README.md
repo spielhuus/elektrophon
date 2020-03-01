@@ -1,3 +1,6 @@
+![module](https://img.shields.io/badge/module-other-yellow)
+![status](https://img.shields.io/badge/status-work%20in%20progress-orange)
+
 ## *vco*
 
 <a href="https://spielhuus.github.io/elektrophon/images/adsr-panel.jpg"><img width="200" align="right" src="https://spielhuus.github.io/elektrophon/images/adsr-titel_tmb.jpg"></a>

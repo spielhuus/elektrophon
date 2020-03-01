@@ -1,3 +1,6 @@
+![module](https://img.shields.io/badge/module-other-yellow)
+![status](https://img.shields.io/badge/status-work%20in%20progress-orange)
+
 # Metalizer
 
 Metalizer is the wavefolder module from Yvess Usson. The module uses the Lockhart waveshaper from Hutchins (Frequency multiplication and division methods. Electronotes 1976, 70) and also used in one section of the serge waveshaper. Yves Usson multiplied the lockhart waveshaper and made it CV controllable. This module creates harsh harmonics. 

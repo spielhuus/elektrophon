@@ -1,3 +1,6 @@
+![module](https://img.shields.io/badge/module-other-yellow)
+![status](https://img.shields.io/badge/status-work%20in%20progress-orange)
+
 # Wavefolder
 
 A wavefolder is a device that creates complex waveforms from simple waveshapes.

@@ -1,3 +1,6 @@
+![module](https://img.shields.io/badge/module-other-yellow)
+![status](https://img.shields.io/badge/status-work%20in%20progress-orange)
+
 # Utility LFO
 
 Simple but fancy LFO from Ken Stone. It is a dual LFO with pulse, square, triangle/saw and vari output. the vari output is a mixture of the square and triangle output. the two vari output can be combined with the switch. 
