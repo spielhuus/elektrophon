@@ -1,17 +1,50 @@
-# Bass++
+![module](https://img.shields.io/badge/module-other-yellow)
+![status](https://img.shields.io/badge/status-final-green)
 
-This is a basic VCO designed by Thomas Henry. There are no special features, but it is a solid mixer.
-<a href="https://spielhuus.github.io/elektrophon/images/BassPPpanel.png"><img align="right" src="https://spielhuus.github.io/elektrophon/images/BassPPpanel_tmb.png"></a>
-Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque
-penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque <a href="https://spielhuus.github.io/elektrophon/images/BassPP.svg"><img align="left" src="https://spielhuus.github.io/elektrophon/images/BassPP_tmb_schema.jpg"></a>
+# bass++
 
-sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc, Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. 
-<a href="https://spielhuus.github.io/elektrophon/images/BassPP.png"><img align="right" src="https://spielhuus.github.io/elektrophon/images/BassPP_tmb.png"></a>
-Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc - [BOM](BOM.csv) adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nun
+This is a precussion module designed by Thomas Henry. <a href="https://spielhuus.github.io/elektrophon/images/BassPPpanel.png"><img align="right" src="https://spielhuus.github.io/elektrophon/images/BassPPpanel_tmb.png"></a>
+The bass voice has a very wide range and can produce very low and long bass sounds but also high pitch bass voices. the pitch is voltage controller, but the tracking is not comparable to a vco. 
+
+## *build*
+
+<a href="https://spielhuus.github.io/elektrophon/images/adsr-mount.jpg"><img width="200" align="left" src="https://spielhuus.github.io/elektrophon/images/adsr-mount_tmb.jpg"></a> The gerber files are part of the release. It should be possible to directly order them from your manufacturer. But check the result on the preview when you order them. The parts are in the [BOM](BOM.md), there are no special parts needed for this build. If you want to adjust the pitch range you can change the value of the capacitor C10, as suggested in the schema.<br/><br/><br/><br/><br/>
+
+## *calibrate*
+
+No calibration needed.
+
+## *use*
+
+Connect a trigger signal to the **IN** of the bass and the **OUT** to mixer or any other output module:
+
+### Trigger Input/Envelope Generator Section
+
+**Sensitivity** adjustment of the trigger input
+**Status LED**	visual feedback of operation.
+**Decay** length of the drum voice envelope
+
+### Shell VCO Control Section
+
+**Pitch** Control	Sets the initial pitch of the Shell VCO.
+**Sweep** Control	Sets how much effect the envelope generator will have on the pitch of the Shell VCO.
+**CV Jack** Accepts control voltages used to modulate the pitch of the Shell VCO.
+**Range Control**	Sets the level of effect the applied control voltage will have on the pitch of the VCO
+
+### Impact Section
+
+**Impact Tone Control**	Sets tone of the impact signal from bass to treble.
+
+### Signal Mix Section
+
+**Shell Volume**	Adjusts the amount of Shell signal present in the final output signal.
+**Impact Volume**	Adjusts the amount of Impact signal present in the final output signal.
 
 ## links
 
-1) [Thomas Henry: Bass++](http://birthofasynth.com/Thomas_Henry/Pages/Bass_Plus.html)
+1) [Thomas Henry: Bass++][]
 
 ---
 [![CC BY-SA](https://licensebuttons.net/l/by-sa/3.0/88x31.png)](https://creativecommons.org/licenses/by-sa/4.0/)
+
+[1]: http://birthofasynth.com/Thomas_Henry/Pages/Bass_Plus.html
