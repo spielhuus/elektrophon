@@ -1,4 +1,4 @@
-## BOM: Wavefolder
+## BOM: Metalizer
 
 ### main panel
 
