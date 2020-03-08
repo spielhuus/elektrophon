@@ -3,7 +3,7 @@
 
 ## *wavefolder*
 
-A wavefolder is a device that creates complex waveforms from simple waveshapes. This is the yusynth wavefolder \[[1]\] from Yvess Usson, which itself is based on the design by Jürgen Haible \[[2]\]. The wavefolding is conrolled by a VCA.  
+<a href="https://spielhuus.github.io/elektrophon/images/wavefolder-panel.jpg"><img width="200" align="right" src="https://spielhuus.github.io/elektrophon/images/wavefolder-logo_tmb.jpg"></a> A wavefolder is a device that creates complex waveforms from simple waveshapes. This is the yusynth wavefolder \[[1]\] from Yvess Usson, which itself is based on the design by Jürgen Haible \[[2]\]. The wavefolding is conrolled by a VCA.  
 
 ## *build*
 
