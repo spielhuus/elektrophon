@@ -3,11 +3,11 @@
 
 ## *wavefolder*
 
-<a href="https://spielhuus.github.io/elektrophon/images/wavefolder-panel.jpg"><img width="200" align="right" src="https://spielhuus.github.io/elektrophon/images/wavefolder-logo_tmb.jpg"></a> A wavefolder is a device that creates complex waveforms from simple waveshapes. This is the yusynth wavefolder \[[1]\] from Yvess Usson, which itself is based on the design by Jürgen Haible \[[2]\]. The wavefolding is conrolled by a VCA.  
+<a href="https://spielhuus.github.io/elektrophon/images/wavefolder-panel.jpg"><img width="200" align="right" src="https://spielhuus.github.io/elektrophon/images/wavefolder-logo_tmb.jpg"></a> A wavefolder is a device that creates complex waveforms from simple waveshapes. This is the yusynth wavefolder \[[1]\] from Yvess Usson, which itself is based on the design by Jürgen Haible \[[2]\]. Yves added a VCA to control the wavefolding.<br/><br/><br/><br/><br/>
 
 ## *build*
 
-The gerber files are part of the release. It should be possible to directly order them from your manufacturer. <a href="https://spielhuus.github.io/elektrophon/images/wavefolder-panel.jpg"><img width="200" align="right" src="wavefolder-logo_tmb.jpg"></a>But check the result on the preview when you order them. The parts are in the [BOM](BOM.md), there are no special parts needed for this build. <br/><br/><br/><br/><br/>
+<a href="https://spielhuus.github.io/elektrophon/images/wavefolder-side.jpg"><img width="200" align="left" src="https://spielhuus.github.io/elektrophon/images/wavefolder-side_tmb.jpg"></a> The gerber files are part of the release. It should be possible to directly order them from your manufacturer. But check the result on the preview when you order them. The parts are in the [BOM](BOM.md), there are no special parts needed for this build. <br/><br/><br/><br/><br/>
 
 ## *calibrate*
 
@@ -28,19 +28,18 @@ Next, turn P1 fully counter-clockwise (no CV). Adjust A2 in order to completly m
 
 ## *use*
 
-Connect a gate signal to the *IN* of the ADSR and the *OUT* to a VCA or VCF:
+Connect a gate signal to the **IN** of the sound source and the **OUT** mixer or amplifier:
 
-**IN** a gate singal for the length of the ADS singal.
+**shape** shape of the wave.
 
-**OUT** a gate singal for the length of the ADS singal.
+**range** range of the wavefolding.
 
-**OUT** a gate singal for the length of the ADS singal.
-
-**OUT** a gate singal for the length of the ADS singal.
+**control** voltage control of the range.
 
 ## links
 
-1) This is a tribute to the [wavefolder][1] from Yvess Usson, which is derived from various other [wavefolders][2].
+1) Yves Usson [wavefolder][1]
+2) Jürgen Haible's notes on [wavefolding][2].
 
 ---
 [![CC BY-SA](https://licensebuttons.net/l/by-sa/3.0/88x31.png)](https://creativecommons.org/licenses/by-sa/4.0/)
