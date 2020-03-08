@@ -7,7 +7,7 @@ A wavefolder is a device that creates complex waveforms from simple waveshapes. 
 
 ## *build*
 
-<a href="https://spielhuus.github.io/elektrophon/images/adsr-mount.jpg"><img width="200" align="left" src="https://spielhuus.github.io/elektrophon/images/adsr-mount_tmb.jpg"></a> The gerber files are part of the release. It should be possible to directly order them from your manufacturer. But check the result on the preview when you order them. The parts are in the [BOM](BOM.md), there are no special parts needed for this build. <br/><br/><br/><br/><br/>
+The gerber files are part of the release. It should be possible to directly order them from your manufacturer. <a href="https://spielhuus.github.io/elektrophon/images/wavefolder-panel.jpg"><img width="200" align="right" src="wavefolder-logo_tmb.jpg"></a>But check the result on the preview when you order them. The parts are in the [BOM](BOM.md), there are no special parts needed for this build. <br/><br/><br/><br/><br/>
 
 ## *calibrate*
 
