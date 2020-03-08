@@ -12,7 +12,7 @@ is a collection of modular synthesizer modules i built. The module folders conta
 </tr><tr>
   <td><img src="https://spielhuus.github.io/elektrophon/images/text_filter.png"/></td>
   <td><a href="https://github.com/spielhuus/elektrophon/blob/master/modules/Synthacon%20VCF/README.md"><img src="https://spielhuus.github.io/elektrophon/images/synthacon-panel-tmb.jpg" height="300px"></img></a><br/>Synthacon VCF</td>
- <td><a href="https://github.com/spielhuus/elektrophon/blob/master/modules/Wavefolder/README.md"><img src="https://spielhuus.github.io/elektrophon/images/wavefolder-panel.jpg" height="300px"></img></a><br/>wavefolder</td>
+ <td><a href="https://github.com/spielhuus/elektrophon/blob/master/modules/Wavefolder/README.md"><img src="https://spielhuus.github.io/elektrophon/images/wavefolder-panel_tmb.jpg" height="300px"></img></a><br/>wavefolder</td>
  
 </tr><tr>
   <td><img src="https://spielhuus.github.io/elektrophon/images/text_function.png"/></td>
