@@ -22,9 +22,9 @@ Connect CV1 to 0V and turn RV1 fully clockwise (maximum gain).
 Connect the output of the VCA (pin 1 of U2a) to the second input of the scope.
 
 Adjust the trimmer RV4 in order to have a perfectly symmetrical sine wave at the output (the best way is to superimpose the 
-trace of the sinewave at input and the one at the output). You may have also to play slightly with A2 as well to reduce gain if you have saturation on both the positive and negative crests of the output sinewave.
+trace of the sinewave at input and the one at the output). You may have also to play slightly with RV3 as well to reduce gain if you have saturation on both the positive and negative crests of the output sinewave.
 
-Next, turn P1 fully counter-clockwise (no CV). Adjust A2 in order to completly mute the output signal.
+Next, turn RV1 fully counter-clockwise (no CV). Adjust trimmer RV3 in order to completly mute the output signal.
 
 ## *use*
 
@@ -34,7 +34,7 @@ Connect a gate signal to the **IN** of the sound source and the **OUT** mixer or
 
 **range** range of the wavefolding.
 
-**control** voltage control of the range.
+**control** voltage control of the range, connect the signal of an ADSR.
 
 ## links
 
