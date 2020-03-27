@@ -1,52 +1,21 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Created on Sat Jan  4 14:42:42 2020
+Created on Sun Jan 12 12:33:29 2020
 
 @author: etienne
 """
 
-import numpy as np
-import matplotlib.pyplot as plot
+from pylab import*
 
+#Fourier Series-Saw-tooth wave
+#f(t)=a/2+a/pi[sin(wt)+sin(2wt)/2+sin(3wt)/3+sin(4wt)/4+sin(5wt)/5+........]
 
-
-#x = np.linspace(-np.pi, np.pi, 256)
-x = np.linspace(-np.pi, np.pi, 1024)
-
-
-
-
- # Get x values of the sine wave
-#time        = np.arange(0, 10, 0.1);
-
-# Amplitude of the sine wave is sine of a variable like time
-#amplitude   = np.sin(time)
-
- # Plot a sine wave using time and amplitude obtained for the sine wave
-#plot.plot(time, amplitude)
-
-
-plot.plot(x, signal.sawtooth(0.32 * np.pi * x))
-# Give a title for the sine wave plot
-plot.title('Sine wave') 
-
-# Give x axis label for the sine wave plot
-plot.xlabel('Time')
-
-# Give y axis label for the sine wave plot
-plot.ylabel('Amplitude = sin(time)')
-plot.grid(True, which='both')
-plot.axhline(y=0, color='k')
-plot.show()
-
-rows = 0;
-with open('out.txt', 'w') as f:
-  print("uint16_t saw_table[] = {", file=f)
-  for i in np.nditer(x):
-    if rows > 7 :
-      rows = 0
-      print("", file=f)
-    print("% 4.0f, " %(signal.sawtooth(0.32 * np.pi * i)*(4095/2)+(4095/2)), file=f, end = '')
-    rows = rows + 1
-  print("};", file=f)
+t=linspace(0.0,2*pi,1024)
+a=1.0
+w=1.0
+y=a/2
+for i in range(1,1024):
+    y=y+a*sin(i*w*t)/(pi*i)
+plot(t,y)
+show()

@@ -23,18 +23,22 @@
 #include "stm32f4xx_it.h"
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-#include "sine_table.h"
-#include "saw_table.h"
+#include "usb_device.h"
+#include "oszillator.h"
+#include "adsr.h"
+#include "wavetable.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
 /* USER CODE BEGIN TD */
-
+uint32_t _last_tick;
+uint8_t _last_state;
+uint16_t counter;
 /* USER CODE END TD */
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
- 
+float32_t next_value;
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -45,6 +49,7 @@
 /* Private variables ---------------------------------------------------------*/
 /* USER CODE BEGIN PV */
 
+// TODO extern struct ADSR adsr[NUM_VOICES];
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -62,8 +67,14 @@ extern PCD_HandleTypeDef hpcd_USB_OTG_FS;
 extern DAC_HandleTypeDef hdac;
 extern TIM_HandleTypeDef htim1;
 extern TIM_HandleTypeDef htim2;
+extern TIM_HandleTypeDef htim3;
+extern TIM_HandleTypeDef htim4;
 extern TIM_HandleTypeDef htim6;
 /* USER CODE BEGIN EV */
+extern USBD_HandleTypeDef hUsbDeviceFS;
+extern dds_t voices[NUM_VOICES];
+extern adsr_t adsr[NUM_VOICES];
+extern void processMidiMessage();
 
 /* USER CODE END EV */
 
@@ -228,91 +239,97 @@ void TIM2_IRQHandler(void)
   /* USER CODE END TIM2_IRQn 0 */
   HAL_TIM_IRQHandler(&htim2);
   /* USER CODE BEGIN TIM2_IRQn 1 */
-	for (uint8_t i = 0; i < NUM_VOICES; i++) {
-		if(voices[i].adsr != NONE) {
-			switch(voices[i].adsr) {
-				case ATTACK:
-					if( voices[i].envelope < 1024 )
-						voices[i].envelope += 8;
-					else voices[i].adsr = DECAY;
-					break;
-				case DECAY:
-					if( voices[i].envelope > 800 )
-						voices[i].envelope -= 4;
-					break;
-				case RELEASE:
-					if(voices[i].envelope > 0 )
-						voices[i].envelope -= 4;
-					else {
-						voices[i].adsr = NONE;
-						voices[i].note = 0;
-					}
-					break;
-				default: break;
-			}
-		}
-	}
+  processMidiMessage();
+//
+//	for (uint8_t i = 0; i < NUM_VOICES; i++) {
+////		if(voices[i].adsr != NONE) {
+////			if(voices[i].sequence_counter > voices[i].wave_sequence[voices[i].position][1] ) {
+////				voices[i].position = voices[i].position + 1;
+////				if( voices[i].position >= 8 ) voices[i].position = 0;
+////				uint8_t _wt = voices[i].wave_sequence[voices[i].position][0];
+////				if( _wt == 0 ) voices[i].wavetable = &wt_sine;
+////				else if( _wt == 1 ) voices[i].wavetable = &wt_triangle;
+////				else if( _wt == 2 ) voices[i].wavetable = &wt_saw;
+////				else if( _wt == 3 ) voices[i].wavetable = &wt_square;
+////
+////				voices[i].sequence_counter=0;
+////			} else voices[i].sequence_counter+=1;
+////
+////			switch(voices[i].adsr) {
+////				case ATTACK:
+////					if( voices[i].envelope < 2048 )
+////						voices[i].envelope += 8;
+////					else voices[i].adsr = DECAY;
+////					break;
+////				case DECAY:
+////					if( voices[i].envelope > 1500 )
+////						voices[i].envelope -= 32;
+////					break;
+////				case RELEASE:
+////					if(voices[i].envelope > 32 )
+////						voices[i].envelope -= 32;
+////					else {
+////						voices[i].adsr = NONE;
+////						voices[i].note = 0;
+////					}
+////					break;
+////				default: break;
+////			}
+////		}
+//	}
   /* USER CODE END TIM2_IRQn 1 */
+}
+
+/**
+  * @brief This function handles TIM3 global interrupt.
+  */
+void TIM3_IRQHandler(void)
+{
+  /* USER CODE BEGIN TIM3_IRQn 0 */
+
+  /* USER CODE END TIM3_IRQn 0 */
+  HAL_TIM_IRQHandler(&htim3);
+  /* USER CODE BEGIN TIM3_IRQn 1 */
+	if(USBD_STATE_CONFIGURED == hUsbDeviceFS.dev_state)
+	{
+		HAL_GPIO_WritePin(MIDI_CONNECT_GPIO_Port, MIDI_CONNECT_Pin, SET);
+
+	} else {
+		HAL_GPIO_TogglePin(MIDI_CONNECT_GPIO_Port, MIDI_CONNECT_Pin);
+	}
+  /* USER CODE END TIM3_IRQn 1 */
+}
+
+/**
+  * @brief This function handles TIM4 global interrupt.
+  */
+void TIM4_IRQHandler(void)
+{
+  /* USER CODE BEGIN TIM4_IRQn 0 */
+
+  /* USER CODE END TIM4_IRQn 0 */
+  HAL_TIM_IRQHandler(&htim4);
+  /* USER CODE BEGIN TIM4_IRQn 1 */
+  /* USER CODE END TIM4_IRQn 1 */
 }
 
 /**
   * @brief This function handles TIM6 global interrupt, DAC1 and DAC2 underrun error interrupts.
   */
-void TIM6_DAC_IRQHandler(void)
-{
-  /* USER CODE BEGIN TIM6_DAC_IRQn 0 */
-//
-  /* USER CODE END TIM6_DAC_IRQn 0 */
-  HAL_DAC_IRQHandler(&hdac);
-  HAL_TIM_IRQHandler(&htim6);
-  /* USER CODE BEGIN TIM6_DAC_IRQn 1 */
-	uint16_t index = 0;
-	uint32_t total = 0;
-	uint32_t used_channels = 0;
-	for (uint8_t i = 0; i < NUM_VOICES; i++) {
-		if(voices[i].adsr != NONE) {
-//			switch(voices[i].adsr) {
-//				case ATTACK:
-//					if( voices[i].envelope < 1024 )
-//						voices[i].envelope += 1;
-//					else voices[i].adsr = DECAY;
-//					break;
-//				case DECAY:
-//					if( voices[i].envelope > 800 )
-//						voices[i].envelope -= 1;
-//					break;
-//				case RELEASE:
-//					if(voices[i].envelope > 0 )
-//						voices[i].envelope -= 1;
-//					else {
-//						voices[i].adsr = NONE;
-//						voices[i].note = 0;
-//					}
-//					break;
-//				default: break;
-//			}
-
-			uint32_t voice = 0;
-			for( uint8_t j = 0; j<NUM_HARMONICS; j++ ) {
-				index = voices[i].harmonics[j].accumulator >> 22;
-				voice += sine_table[index];
-				voices[i].harmonics[j].accumulator += voices[i].harmonics[j].increment;
-			}
-			total += voice * voices[i].envelope / 1024 / NUM_HARMONICS;
-			++used_channels;
-		}
+void TIM6_DAC_IRQHandler(void) {
+	/* USER CODE BEGIN TIM6_DAC_IRQn 0 */
+	if (HAL_DAC_SetValue(&hdac, DAC_CHANNEL_1, DAC_ALIGN_12B_R, (next_value + 1)*2046.0f) != HAL_OK) {
+		/* Setting value Error */
+		Error_Handler();
 	}
-
-		if(used_channels > 0) {
-			total = total / NUM_VOICES; //used_channels;
-
-			if (HAL_DAC_SetValue(&hdac, DAC_CHANNEL_1, DAC_ALIGN_12B_R, total) != HAL_OK)
-			{
-			  /* Setting value Error */
-			  Error_Handler();
-			}
-		}
-  /* USER CODE END TIM6_DAC_IRQn 1 */
+	/* USER CODE END TIM6_DAC_IRQn 0 */
+	HAL_DAC_IRQHandler(&hdac);
+	HAL_TIM_IRQHandler(&htim6);
+	/* USER CODE BEGIN TIM6_DAC_IRQn 1 */
+	uint32_t index = voices[0].accumulator >> 22;
+	next_value = wt_sine[index] * calculate(&adsr[0]);
+	voices[0].accumulator += voices[0].increment;
+	/* USER CODE END TIM6_DAC_IRQn 1 */
 }
 
 /**
