@@ -1,5 +1,4 @@
 EESchema Schematic File Version 4
-LIBS:main-cache
 EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
@@ -1052,4 +1051,6 @@ Wire Wire Line
 	9350 1400 7950 1400
 Text Notes 1750 6350 0    50   ~ 0
 C1-C4 flip side
+Text Label 1150 1900 0    50   ~ 0
+REDRUM
 $EndSCHEMATC

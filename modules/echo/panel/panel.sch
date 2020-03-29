@@ -18,7 +18,7 @@ L Mechanical:MountingHole H1
 U 1 1 5D6B047C
 P 4250 2950
 F 0 "H1" H 4350 2996 50  0000 L CNN
-F 1 "MIX" H 4350 2905 50  0000 L CNN
+F 1 "mix" H 4350 2905 50  0000 L CNN
 F 2 "elektrophon:panel_potentiometer" H 4250 2950 50  0001 C CNN
 F 3 "~" H 4250 2950 50  0001 C CNN
 	1    4250 2950

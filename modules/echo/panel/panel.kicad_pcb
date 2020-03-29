@@ -194,7 +194,7 @@
     (fp_text reference H7 (at 0 -9.4) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value "recirc atten" (at 0 9.144) (layer F.Mask)
+    (fp_text value "recirc atten" (at 0 9.144) (layer F.Mask) hide
       (effects (font (size 2 1.4) (thickness 0.25)))
     )
     (fp_circle (center 0 0) (end 6.6 0) (layer F.CrtYd) (width 0.05))
@@ -294,7 +294,7 @@
     (fp_text reference H3 (at 0 -9.4) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value "delay atten" (at 0 9.144) (layer F.Mask)
+    (fp_text value "delay atten" (at 0 9.144) (layer F.Mask) hide
       (effects (font (size 2 1.4) (thickness 0.25)))
     )
     (fp_circle (center 0 0) (end 6.6 0) (layer F.CrtYd) (width 0.05))
@@ -319,7 +319,7 @@
     (fp_text reference H1 (at 0 -9.4) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value MIX (at 0 9.144) (layer F.Mask)
+    (fp_text value mix (at 0 9.144) (layer F.Mask)
       (effects (font (size 2 1.4) (thickness 0.25)))
     )
     (fp_circle (center 0 0) (end 6.6 0) (layer F.CrtYd) (width 0.05))
