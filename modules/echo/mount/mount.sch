@@ -1,4 +1,5 @@
 EESchema Schematic File Version 4
+LIBS:mount-cache
 EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
@@ -80,17 +81,6 @@ F 3 "~" H 6350 6350 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Device:R R2
-U 1 1 5CB65CBC
-P 1550 1000
-F 0 "R2" V 1343 1000 50  0000 C CNN
-F 1 "100k" V 1434 1000 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 1480 1000 50  0001 C CNN
-F 3 "~" H 1550 1000 50  0001 C CNN
-	1    1550 1000
-	0    1    1    0   
-$EndComp
-$Comp
 L Connector:AudioJack2_SwitchT J1
 U 1 1 5D64A5B4
 P 900 1000
@@ -139,17 +129,6 @@ F 3 "" H 7600 1450 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:R R3
-U 1 1 5E5F7AA2
-P 1550 1700
-F 0 "R3" V 1343 1700 50  0000 C CNN
-F 1 "100k" V 1434 1700 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 1480 1700 50  0001 C CNN
-F 3 "~" H 1550 1700 50  0001 C CNN
-	1    1550 1700
-	0    1    1    0   
-$EndComp
-$Comp
 L Connector:AudioJack2_SwitchT J2
 U 1 1 5E5F7AA8
 P 900 1700
@@ -174,12 +153,6 @@ $EndComp
 Wire Wire Line
 	1100 1700 1400 1700
 NoConn ~ 1100 1800
-Wire Wire Line
-	1800 1700 1800 1000
-Wire Wire Line
-	1800 1000 1700 1000
-Wire Wire Line
-	1700 1700 1800 1700
 Wire Wire Line
 	7250 1550 7600 1550
 $Comp
@@ -414,8 +387,8 @@ F 3 "" H 8600 1800 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	7800 1900 8600 1900
-Text Label 1800 1700 0    50   ~ 0
-IN
+Text Label 1400 1000 0    50   ~ 0
+IN1
 Text Label 5650 1600 3    50   ~ 0
 MIX_3
 Text Label 5800 1450 0    50   ~ 0
@@ -443,4 +416,6 @@ F 3 "~" H 4000 6450 50  0001 C CNN
 	1    4000 6450
 	1    0    0    -1  
 $EndComp
+Text Label 1400 1700 0    50   ~ 0
+IN2
 $EndSCHEMATC

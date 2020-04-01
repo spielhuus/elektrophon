@@ -1,4 +1,5 @@
 EESchema Schematic File Version 4
+LIBS:main-cache
 EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
@@ -947,17 +948,6 @@ F 3 "~" H 1400 5950 50  0001 C CNN
 	1    1400 5950
 	0    1    1    0   
 $EndComp
-$Comp
-L power:GND #PWR07
-U 1 1 5E70F516
-P 1900 6350
-F 0 "#PWR07" H 1900 6100 50  0001 C CNN
-F 1 "GND" H 1905 6177 50  0000 C CNN
-F 2 "" H 1900 6350 50  0001 C CNN
-F 3 "" H 1900 6350 50  0001 C CNN
-	1    1900 6350
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	2200 6150 2150 6150
 Wire Wire Line
@@ -1053,8 +1043,6 @@ F 3 "~" H 1900 6150 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 Wire Wire Line
-	1900 6350 1900 6300
-Wire Wire Line
 	1900 6000 1900 5950
 Connection ~ 1900 5950
 Wire Wire Line
@@ -1081,7 +1069,7 @@ L Device:R R13
 U 1 1 5E850D3B
 P 4050 5600
 F 0 "R13" H 3980 5554 50  0000 R CNN
-F 1 "220k" H 3980 5645 50  0000 R CNN
+F 1 "470" H 3980 5645 50  0000 R CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 3980 5600 50  0001 C CNN
 F 3 "~" H 4050 5600 50  0001 C CNN
 	1    4050 5600
@@ -1144,17 +1132,6 @@ Wire Wire Line
 Connection ~ 7350 5000
 Wire Wire Line
 	8950 4700 8950 5000
-$Comp
-L Transistor_BJT:2N3906 Q2
-U 1 1 5E732CE4
-P 8850 4500
-F 0 "Q2" H 9040 4546 50  0000 L CNN
-F 1 "2N3906" H 9040 4455 50  0000 L CNN
-F 2 "Package_TO_SOT_THT:TO-92_Inline" H 9050 4425 50  0001 L CIN
-F 3 "https://www.fairchildsemi.com/datasheets/2N/2N3906.pdf" H 8850 4500 50  0001 L CNN
-	1    8850 4500
-	1    0    0    -1  
-$EndComp
 $Comp
 L Diode:1N4148 D3
 U 1 1 5E731452
@@ -1342,7 +1319,7 @@ L Device:R R28
 U 1 1 5E674082
 P 8400 3200
 F 0 "R28" H 8330 3154 50  0000 R CNN
-F 1 "470" H 8330 3245 50  0000 R CNN
+F 1 "1M" H 8330 3245 50  0000 R CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 8330 3200 50  0001 C CNN
 F 3 "~" H 8400 3200 50  0001 C CNN
 	1    8400 3200
@@ -1531,7 +1508,7 @@ Wire Wire Line
 Wire Wire Line
 	7800 1900 7800 2700
 Wire Wire Line
-	7800 1900 8600 1900
+	7800 1900 8050 1900
 Connection ~ 7800 2700
 Wire Wire Line
 	7800 2700 5650 2700
@@ -1634,24 +1611,13 @@ $EndComp
 $Comp
 L power:GND #PWR017
 U 1 1 5E878386
-P 5000 7200
-F 0 "#PWR017" H 5000 6950 50  0001 C CNN
-F 1 "GND" V 5000 7000 50  0000 C CNN
-F 2 "" H 5000 7200 50  0001 C CNN
-F 3 "" H 5000 7200 50  0001 C CNN
-	1    5000 7200
+P 5000 7000
+F 0 "#PWR017" H 5000 6750 50  0001 C CNN
+F 1 "GND" V 5000 6800 50  0000 C CNN
+F 2 "" H 5000 7000 50  0001 C CNN
+F 3 "" H 5000 7000 50  0001 C CNN
+	1    5000 7000
 	0    1    1    0   
-$EndComp
-$Comp
-L Connector:Conn_01x14_Female J1
-U 1 1 5E87B828
-P 5200 6500
-F 0 "J1" H 5228 6476 50  0000 L CNN
-F 1 "Conn_01x14_Female" H 5228 6385 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x14_P2.54mm_Vertical" H 5200 6500 50  0001 C CNN
-F 3 "~" H 5200 6500 50  0001 C CNN
-	1    5200 6500
-	1    0    0    -1  
 $EndComp
 $Comp
 L Amplifier_Operational:OPA2134 U2
@@ -1817,6 +1783,52 @@ F 1 "MountingHole" H 9650 5905 50  0000 L CNN
 F 2 "MountingHole:MountingHole_2.2mm_M2" H 9550 5950 50  0001 C CNN
 F 3 "~" H 9550 5950 50  0001 C CNN
 	1    9550 5950
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:-15V #PWR07
+U 1 1 5E852B7C
+P 1900 6300
+F 0 "#PWR07" H 1900 6400 50  0001 C CNN
+F 1 "-15V" H 1800 6500 50  0000 L CNN
+F 2 "" H 1900 6300 50  0001 C CNN
+F 3 "" H 1900 6300 50  0001 C CNN
+	1    1900 6300
+	-1   0    0    1   
+$EndComp
+$Comp
+L Transistor_BJT:BC560 Q2
+U 1 1 5E85424B
+P 8850 4500
+F 0 "Q2" H 9041 4546 50  0000 L CNN
+F 1 "BC560" H 9041 4455 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 9050 4425 50  0001 L CIN
+F 3 "http://www.fairchildsemi.com/ds/BC/BC557.pdf" H 8850 4500 50  0001 L CNN
+	1    8850 4500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R31
+U 1 1 5E85FBE9
+P 8200 1900
+F 0 "R31" V 7993 1900 50  0000 C CNN
+F 1 "1k" V 8084 1900 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 8130 1900 50  0001 C CNN
+F 3 "~" H 8200 1900 50  0001 C CNN
+	1    8200 1900
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	8350 1900 8600 1900
+$Comp
+L Connector:Conn_01x12_Female J1
+U 1 1 5E8E2D34
+P 5200 6400
+F 0 "J1" H 5228 6376 50  0000 L CNN
+F 1 "Conn_01x12_Female" H 5228 6285 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x12_P2.54mm_Vertical" H 5200 6400 50  0001 C CNN
+F 3 "~" H 5200 6400 50  0001 C CNN
+	1    5200 6400
 	1    0    0    -1  
 $EndComp
 $EndSCHEMATC
