@@ -16,4 +16,5 @@
 1) Elliott Sound Products article: [Digital Delay Unit For Surround Sound, Reverb, Echo & PA](https://sound-au.com/project26a.htm)
 1) Scott Bernardi [og3 echo](http://www.bernacomp.com/elec/og2/og3_echo.html) module.
 
+---
 [![CC BY-SA](https://licensebuttons.net/l/by-sa/3.0/88x31.png)](https://creativecommons.org/licenses/by-sa/4.0/)
