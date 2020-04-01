@@ -269,51 +269,8 @@ Connection ~ 2950 7150
 Wire Wire Line
 	2950 7150 3750 7150
 Connection ~ 2950 7450
-Wire Wire Line
-	2950 7450 3350 7450
-$Comp
-L Amplifier_Operational:TL074 U1
-U 5 1 5D86D0B4
-P 3450 7150
-F 0 "U1" H 3408 7196 50  0000 L CNN
-F 1 "TL074" H 3408 7105 50  0000 L CNN
-F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 3400 7250 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 3500 7350 50  0001 C CNN
-	5    3450 7150
-	1    0    0    -1  
-$EndComp
-Connection ~ 3350 7450
-Connection ~ 3350 6850
-Wire Wire Line
-	3350 6850 3750 6850
-Wire Wire Line
-	3350 7450 3750 7450
 Connection ~ 3750 7150
-Wire Wire Line
-	2950 6850 3350 6850
 Connection ~ 2950 6850
-$Comp
-L Transistor_BJT:BC557 Q1
-U 1 1 5E45FAA5
-P 1600 4350
-F 0 "Q1" H 1791 4304 50  0000 L CNN
-F 1 "BC557" H 1791 4395 50  0000 L CNN
-F 2 "Package_TO_SOT_THT:TO-92_Inline_Wide" H 1800 4275 50  0001 L CIN
-F 3 "http://www.fairchildsemi.com/ds/BC/BC557.pdf" H 1600 4350 50  0001 L CNN
-	1    1600 4350
-	1    0    0    1   
-$EndComp
-$Comp
-L Transistor_BJT:BC547 Q2
-U 1 1 5E45FAAB
-P 1600 4750
-F 0 "Q2" H 1791 4796 50  0000 L CNN
-F 1 "BC547" H 1791 4705 50  0000 L CNN
-F 2 "Package_TO_SOT_THT:TO-92_Inline_Wide" H 1800 4675 50  0001 L CIN
-F 3 "http://www.fairchildsemi.com/ds/BC/BC547.pdf" H 1600 4750 50  0001 L CNN
-	1    1600 4750
-	1    0    0    -1  
-$EndComp
 $Comp
 L Device:R R5
 U 1 1 5E45FAB1
@@ -325,7 +282,6 @@ F 3 "~" H 2050 4550 50  0001 C CNN
 	1    2050 4550
 	0    1    1    0   
 $EndComp
-Connection ~ 1700 4550
 $Comp
 L Device:R R4
 U 1 1 5E45FAB9
@@ -965,28 +921,6 @@ Wire Notes Line
 Wire Notes Line
 	3300 3500 750  3500
 $Comp
-L Transistor_BJT:BC557 Q5
-U 1 1 5E61493C
-P 4150 4450
-F 0 "Q5" H 4341 4404 50  0000 L CNN
-F 1 "BC557" H 4341 4495 50  0000 L CNN
-F 2 "Package_TO_SOT_THT:TO-92_Inline_Wide" H 4350 4375 50  0001 L CIN
-F 3 "http://www.fairchildsemi.com/ds/BC/BC557.pdf" H 4150 4450 50  0001 L CNN
-	1    4150 4450
-	1    0    0    1   
-$EndComp
-$Comp
-L Transistor_BJT:BC547 Q6
-U 1 1 5E614942
-P 4150 4850
-F 0 "Q6" H 4341 4896 50  0000 L CNN
-F 1 "BC547" H 4341 4805 50  0000 L CNN
-F 2 "Package_TO_SOT_THT:TO-92_Inline_Wide" H 4350 4775 50  0001 L CIN
-F 3 "http://www.fairchildsemi.com/ds/BC/BC547.pdf" H 4150 4850 50  0001 L CNN
-	1    4150 4850
-	1    0    0    -1  
-$EndComp
-$Comp
 L Device:R R20
 U 1 1 5E614948
 P 4600 4650
@@ -997,7 +931,6 @@ F 3 "~" H 4600 4650 50  0001 C CNN
 	1    4600 4650
 	0    1    1    0   
 $EndComp
-Connection ~ 4250 4650
 $Comp
 L Device:R R18
 U 1 1 5E61494F
@@ -1167,28 +1100,6 @@ Wire Notes Line
 Wire Notes Line
 	3300 3500 3300 5600
 $Comp
-L Transistor_BJT:BC557 Q7
-U 1 1 5E61C4BE
-P 6700 4550
-F 0 "Q7" H 6891 4504 50  0000 L CNN
-F 1 "BC557" H 6891 4595 50  0000 L CNN
-F 2 "Package_TO_SOT_THT:TO-92_Inline_Wide" H 6900 4475 50  0001 L CIN
-F 3 "http://www.fairchildsemi.com/ds/BC/BC557.pdf" H 6700 4550 50  0001 L CNN
-	1    6700 4550
-	1    0    0    1   
-$EndComp
-$Comp
-L Transistor_BJT:BC547 Q8
-U 1 1 5E61C4C4
-P 6700 4950
-F 0 "Q8" H 6891 4996 50  0000 L CNN
-F 1 "BC547" H 6891 4905 50  0000 L CNN
-F 2 "Package_TO_SOT_THT:TO-92_Inline_Wide" H 6900 4875 50  0001 L CIN
-F 3 "http://www.fairchildsemi.com/ds/BC/BC547.pdf" H 6700 4950 50  0001 L CNN
-	1    6700 4950
-	1    0    0    -1  
-$EndComp
-$Comp
 L Device:R R26
 U 1 1 5E61C4CA
 P 7150 4750
@@ -1199,7 +1110,6 @@ F 3 "~" H 7150 4750 50  0001 C CNN
 	1    7150 4750
 	0    1    1    0   
 $EndComp
-Connection ~ 6800 4750
 $Comp
 L Device:R R25
 U 1 1 5E61C4D1
@@ -1290,17 +1200,6 @@ F 3 "" H 6250 5200 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Amplifier_Operational:TL074 U1
-U 4 1 5E61C502
-P 7800 4850
-F 0 "U1" H 7800 4483 50  0000 C CNN
-F 1 "TL074" H 7800 4574 50  0000 C CNN
-F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 7750 4950 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 7850 5050 50  0001 C CNN
-	4    7800 4850
-	1    0    0    1   
-$EndComp
-$Comp
 L power:GND #PWR037
 U 1 1 5E61C508
 P 7450 5000
@@ -1371,7 +1270,6 @@ F 3 "~" H 8250 4850 50  0001 C CNN
 	1    8250 4850
 	0    1    1    0   
 $EndComp
-Connection ~ 8100 4850
 Wire Wire Line
 	7000 4750 6800 4750
 Wire Notes Line
@@ -1380,28 +1278,6 @@ Wire Notes Line
 	8400 3700 5850 3700
 Wire Notes Line
 	5850 3600 5850 5700
-$Comp
-L Transistor_BJT:BC557 Q10
-U 1 1 5E628DA2
-P 9250 4650
-F 0 "Q10" H 9441 4604 50  0000 L CNN
-F 1 "BC557" H 9441 4695 50  0000 L CNN
-F 2 "Package_TO_SOT_THT:TO-92_Inline_Wide" H 9450 4575 50  0001 L CIN
-F 3 "http://www.fairchildsemi.com/ds/BC/BC557.pdf" H 9250 4650 50  0001 L CNN
-	1    9250 4650
-	1    0    0    1   
-$EndComp
-$Comp
-L Transistor_BJT:BC547 Q11
-U 1 1 5E628DA8
-P 9250 5050
-F 0 "Q11" H 9441 5096 50  0000 L CNN
-F 1 "BC547" H 9441 5005 50  0000 L CNN
-F 2 "Package_TO_SOT_THT:TO-92_Inline_Wide" H 9450 4975 50  0001 L CIN
-F 3 "http://www.fairchildsemi.com/ds/BC/BC547.pdf" H 9250 5050 50  0001 L CNN
-	1    9250 5050
-	1    0    0    -1  
-$EndComp
 $Comp
 L Device:R R40
 U 1 1 5E628DAE
@@ -1413,7 +1289,6 @@ F 3 "~" H 9700 4850 50  0001 C CNN
 	1    9700 4850
 	0    1    1    0   
 $EndComp
-Connection ~ 9350 4850
 $Comp
 L Device:R R38
 U 1 1 5E628DB5
@@ -1584,42 +1459,6 @@ F 3 "~" H 10800 4950 50  0001 C CNN
 	1    10800 4950
 	0    -1   -1   0   
 $EndComp
-$Comp
-L Amplifier_Operational:TL074 U1
-U 2 1 5E6F37FD
-P 2700 4650
-F 0 "U1" H 2700 4283 50  0000 C CNN
-F 1 "TL074" H 2700 4374 50  0000 C CNN
-F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 2650 4750 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 2750 4850 50  0001 C CNN
-	2    2700 4650
-	1    0    0    1   
-$EndComp
-Connection ~ 3000 4650
-$Comp
-L Amplifier_Operational:TL074 U1
-U 3 1 5E6F99BC
-P 5250 4750
-F 0 "U1" H 5250 4383 50  0000 C CNN
-F 1 "TL074" H 5250 4474 50  0000 C CNN
-F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 5200 4850 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 5300 4950 50  0001 C CNN
-	3    5250 4750
-	1    0    0    1   
-$EndComp
-Connection ~ 5550 4750
-$Comp
-L Amplifier_Operational:TL074 U1
-U 1 1 5E702A4F
-P 10350 4950
-F 0 "U1" H 10350 5317 50  0000 C CNN
-F 1 "TL074" H 10350 5226 50  0000 C CNN
-F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 10300 5050 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 10400 5150 50  0001 C CNN
-	1    10350 4950
-	1    0    0    1   
-$EndComp
-Connection ~ 10650 4950
 Text Label 1700 2450 2    50   ~ 0
 IN
 Wire Wire Line
@@ -1753,4 +1592,167 @@ Text GLabel 1800 6850 0    50   Input ~ 0
 PWR_+15V
 Text GLabel 1800 7450 0    50   Input ~ 0
 PWR_-15V
+$Comp
+L Transistor_BJT:BC549 Q2
+U 1 1 5E84846A
+P 1600 4750
+F 0 "Q2" H 1791 4796 50  0000 L CNN
+F 1 "BC549" H 1791 4705 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline_Wide" H 1800 4675 50  0001 L CIN
+F 3 "http://www.fairchildsemi.com/ds/BC/BC547.pdf" H 1600 4750 50  0001 L CNN
+	1    1600 4750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Transistor_BJT:BC559 Q1
+U 1 1 5E84A2E3
+P 1600 4350
+F 0 "Q1" H 1791 4304 50  0000 L CNN
+F 1 "BC559" H 1791 4395 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline_Wide" H 1800 4275 50  0001 L CIN
+F 3 "http://www.fairchildsemi.com/ds/BC/BC557.pdf" H 1600 4350 50  0001 L CNN
+	1    1600 4350
+	1    0    0    1   
+$EndComp
+Connection ~ 1700 4550
+$Comp
+L Transistor_BJT:BC559 Q5
+U 1 1 5E85009C
+P 4150 4450
+F 0 "Q5" H 4341 4404 50  0000 L CNN
+F 1 "BC559" H 4341 4495 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline_Wide" H 4350 4375 50  0001 L CIN
+F 3 "http://www.fairchildsemi.com/ds/BC/BC557.pdf" H 4150 4450 50  0001 L CNN
+	1    4150 4450
+	1    0    0    1   
+$EndComp
+$Comp
+L Transistor_BJT:BC549 Q6
+U 1 1 5E8508CA
+P 4150 4850
+F 0 "Q6" H 4341 4896 50  0000 L CNN
+F 1 "BC549" H 4341 4805 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline_Wide" H 4350 4775 50  0001 L CIN
+F 3 "http://www.fairchildsemi.com/ds/BC/BC547.pdf" H 4150 4850 50  0001 L CNN
+	1    4150 4850
+	1    0    0    -1  
+$EndComp
+Connection ~ 4250 4650
+$Comp
+L Transistor_BJT:BC559 Q7
+U 1 1 5E851163
+P 6700 4550
+F 0 "Q7" H 6891 4504 50  0000 L CNN
+F 1 "BC559" H 6891 4595 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline_Wide" H 6900 4475 50  0001 L CIN
+F 3 "http://www.fairchildsemi.com/ds/BC/BC557.pdf" H 6700 4550 50  0001 L CNN
+	1    6700 4550
+	1    0    0    1   
+$EndComp
+$Comp
+L Transistor_BJT:BC559 Q10
+U 1 1 5E8518F7
+P 9250 4650
+F 0 "Q10" H 9441 4604 50  0000 L CNN
+F 1 "BC559" H 9441 4695 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline_Wide" H 9450 4575 50  0001 L CIN
+F 3 "http://www.fairchildsemi.com/ds/BC/BC557.pdf" H 9250 4650 50  0001 L CNN
+	1    9250 4650
+	1    0    0    1   
+$EndComp
+$Comp
+L Transistor_BJT:BC549 Q8
+U 1 1 5E851FE9
+P 6700 4950
+F 0 "Q8" H 6891 4996 50  0000 L CNN
+F 1 "BC549" H 6891 4905 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline_Wide" H 6900 4875 50  0001 L CIN
+F 3 "http://www.fairchildsemi.com/ds/BC/BC547.pdf" H 6700 4950 50  0001 L CNN
+	1    6700 4950
+	1    0    0    -1  
+$EndComp
+Connection ~ 6800 4750
+$Comp
+L Transistor_BJT:BC549 Q11
+U 1 1 5E8527DF
+P 9250 5050
+F 0 "Q11" H 9441 5096 50  0000 L CNN
+F 1 "BC549" H 9441 5005 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline_Wide" H 9450 4975 50  0001 L CIN
+F 3 "http://www.fairchildsemi.com/ds/BC/BC547.pdf" H 9250 5050 50  0001 L CNN
+	1    9250 5050
+	1    0    0    -1  
+$EndComp
+Connection ~ 9350 4850
+Text Notes 8450 5950 0    50   ~ 0
+Transistors BC549 and BC559 are type C
+$Comp
+L Amplifier_Operational:OPA4134 U1
+U 1 1 5E89844F
+P 10350 4950
+F 0 "U1" H 10350 4583 50  0000 C CNN
+F 1 "OPA4134" H 10350 4674 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 10300 5050 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/opa134.pdf" H 10400 5150 50  0001 C CNN
+	1    10350 4950
+	1    0    0    1   
+$EndComp
+$Comp
+L Amplifier_Operational:OPA4134 U1
+U 2 1 5E89989E
+P 2700 4650
+F 0 "U1" H 2700 4283 50  0000 C CNN
+F 1 "OPA4134" H 2700 4374 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 2650 4750 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/opa134.pdf" H 2750 4850 50  0001 C CNN
+	2    2700 4650
+	1    0    0    1   
+$EndComp
+$Comp
+L Amplifier_Operational:OPA4134 U1
+U 3 1 5E89BD66
+P 5250 4750
+F 0 "U1" H 5250 4383 50  0000 C CNN
+F 1 "OPA4134" H 5250 4474 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 5200 4850 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/opa134.pdf" H 5300 4950 50  0001 C CNN
+	3    5250 4750
+	1    0    0    1   
+$EndComp
+$Comp
+L Amplifier_Operational:OPA4134 U1
+U 4 1 5E89D457
+P 7800 4850
+F 0 "U1" H 7800 4483 50  0000 C CNN
+F 1 "OPA4134" H 7800 4574 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 7750 4950 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/opa134.pdf" H 7850 5050 50  0001 C CNN
+	4    7800 4850
+	1    0    0    1   
+$EndComp
+$Comp
+L Amplifier_Operational:OPA4134 U1
+U 5 1 5E89EC61
+P 3400 7150
+F 0 "U1" H 3358 7196 50  0000 L CNN
+F 1 "OPA4134" H 3358 7105 50  0000 L CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 3350 7250 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/opa134.pdf" H 3450 7350 50  0001 C CNN
+	5    3400 7150
+	1    0    0    -1  
+$EndComp
+Connection ~ 8100 4850
+Connection ~ 5550 4750
+Connection ~ 3000 4650
+Connection ~ 10650 4950
+Wire Wire Line
+	2950 7450 3300 7450
+Wire Wire Line
+	2950 6850 3300 6850
+Connection ~ 3300 7450
+Wire Wire Line
+	3300 7450 3750 7450
+Connection ~ 3300 6850
+Wire Wire Line
+	3300 6850 3750 6850
 $EndSCHEMATC
