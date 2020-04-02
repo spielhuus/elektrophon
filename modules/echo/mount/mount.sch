@@ -111,7 +111,7 @@ F 1 "100k" H 931 4705 50  0000 R CNN
 F 2 "elektrophon:Potentiometer_Alpha_RD901F-40-00D_Single_Vertical" H 1000 4750 50  0001 C CNN
 F 3 "~" H 1000 4750 50  0001 C CNN
 	1    1000 4750
-	1    0    0    -1  
+	1    0    0    1   
 $EndComp
 Wire Wire Line
 	1000 5000 1000 4900
@@ -269,7 +269,7 @@ F 1 "10k" V 5994 3900 50  0000 C CNN
 F 2 "elektrophon:Potentiometer_Alpha_RD901F-40-00D_Single_Vertical" H 6200 3900 50  0001 C CNN
 F 3 "~" H 6200 3900 50  0001 C CNN
 	1    6200 3900
-	0    -1   -1   0   
+	0    1    -1   0   
 $EndComp
 Wire Wire Line
 	6400 3000 6950 3000

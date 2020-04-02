@@ -1,4 +1,5 @@
 EESchema Schematic File Version 4
+LIBS:main-cache
 EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
@@ -1687,72 +1688,72 @@ Connection ~ 9350 4850
 Text Notes 8450 5950 0    50   ~ 0
 Transistors BC549 and BC559 are type C
 $Comp
-L Amplifier_Operational:OPA4134 U1
-U 1 1 5E89844F
+L Amplifier_Operational:TL074 U1
+U 1 1 5E85F58C
 P 10350 4950
 F 0 "U1" H 10350 4583 50  0000 C CNN
-F 1 "OPA4134" H 10350 4674 50  0000 C CNN
+F 1 "TL074" H 10350 4674 50  0000 C CNN
 F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 10300 5050 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/opa134.pdf" H 10400 5150 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 10400 5150 50  0001 C CNN
 	1    10350 4950
 	1    0    0    1   
 $EndComp
 $Comp
-L Amplifier_Operational:OPA4134 U1
-U 2 1 5E89989E
+L Amplifier_Operational:TL074 U1
+U 2 1 5E867312
 P 2700 4650
 F 0 "U1" H 2700 4283 50  0000 C CNN
-F 1 "OPA4134" H 2700 4374 50  0000 C CNN
+F 1 "TL074" H 2700 4374 50  0000 C CNN
 F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 2650 4750 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/opa134.pdf" H 2750 4850 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 2750 4850 50  0001 C CNN
 	2    2700 4650
 	1    0    0    1   
 $EndComp
 $Comp
-L Amplifier_Operational:OPA4134 U1
-U 3 1 5E89BD66
+L Amplifier_Operational:TL074 U1
+U 3 1 5E86ED36
 P 5250 4750
 F 0 "U1" H 5250 4383 50  0000 C CNN
-F 1 "OPA4134" H 5250 4474 50  0000 C CNN
+F 1 "TL074" H 5250 4474 50  0000 C CNN
 F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 5200 4850 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/opa134.pdf" H 5300 4950 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 5300 4950 50  0001 C CNN
 	3    5250 4750
 	1    0    0    1   
 $EndComp
 $Comp
-L Amplifier_Operational:OPA4134 U1
-U 4 1 5E89D457
+L Amplifier_Operational:TL074 U1
+U 4 1 5E874DAC
 P 7800 4850
 F 0 "U1" H 7800 4483 50  0000 C CNN
-F 1 "OPA4134" H 7800 4574 50  0000 C CNN
+F 1 "TL074" H 7800 4574 50  0000 C CNN
 F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 7750 4950 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/opa134.pdf" H 7850 5050 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 7850 5050 50  0001 C CNN
 	4    7800 4850
 	1    0    0    1   
 $EndComp
 $Comp
-L Amplifier_Operational:OPA4134 U1
-U 5 1 5E89EC61
-P 3400 7150
-F 0 "U1" H 3358 7196 50  0000 L CNN
-F 1 "OPA4134" H 3358 7105 50  0000 L CNN
-F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 3350 7250 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/opa134.pdf" H 3450 7350 50  0001 C CNN
-	5    3400 7150
+L Amplifier_Operational:TL074 U1
+U 5 1 5E87A918
+P 3450 7150
+F 0 "U1" H 3408 7196 50  0000 L CNN
+F 1 "TL074" H 3408 7105 50  0000 L CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 3400 7250 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 3500 7350 50  0001 C CNN
+	5    3450 7150
 	1    0    0    -1  
 $EndComp
-Connection ~ 8100 4850
-Connection ~ 5550 4750
 Connection ~ 3000 4650
+Connection ~ 5550 4750
+Connection ~ 8100 4850
 Connection ~ 10650 4950
 Wire Wire Line
-	2950 7450 3300 7450
+	2950 7450 3350 7450
 Wire Wire Line
-	2950 6850 3300 6850
-Connection ~ 3300 7450
+	2950 6850 3350 6850
+Connection ~ 3350 7450
 Wire Wire Line
-	3300 7450 3750 7450
-Connection ~ 3300 6850
+	3350 7450 3750 7450
+Connection ~ 3350 6850
 Wire Wire Line
-	3300 6850 3750 6850
+	3350 6850 3750 6850
 $EndSCHEMATC
