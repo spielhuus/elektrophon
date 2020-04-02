@@ -119,7 +119,7 @@
     (fp_text reference H10 (at 0 -9.4) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value OUT (at 0 9.144) (layer F.Mask)
+    (fp_text value out (at 0 9.144) (layer F.Mask)
       (effects (font (size 2 1.4) (thickness 0.25)))
     )
     (fp_circle (center 0 0) (end 4.2 0) (layer F.CrtYd) (width 0.05))
@@ -144,7 +144,7 @@
     (fp_text reference H9 (at 0 -9.4) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value IN2 (at 0 9.144) (layer F.Mask)
+    (fp_text value in (at 0 9.144) (layer F.Mask)
       (effects (font (size 2 1.4) (thickness 0.25)))
     )
     (fp_circle (center 0 0) (end 4.2 0) (layer F.CrtYd) (width 0.05))
@@ -161,7 +161,7 @@
   )
 
   (module elektrophon:panel_potentiometer (layer F.Cu) (tedit 5DA46CEF) (tstamp 5E650D73)
-    (at 55.88 91.44)
+    (at 35.56 91.44)
     (descr "Mounting Hole 8.4mm, no annular, M8")
     (tags "mounting hole 8.4mm no annular m8")
     (path /5E64C036)
@@ -219,7 +219,7 @@
     (fp_text reference H6 (at 0 -9.4) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value "delay OUT" (at 0 9.144) (layer F.Mask)
+    (fp_text value delay (at 0 9.144) (layer F.Mask)
       (effects (font (size 2 1.4) (thickness 0.25)))
     )
     (fp_circle (center 0 0) (end 4.2 0) (layer F.CrtYd) (width 0.05))
@@ -244,7 +244,7 @@
     (fp_text reference H5 (at 0 -9.4) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value IN1 (at 0 9.144) (layer F.Mask)
+    (fp_text value in (at 0 9.144) (layer F.Mask)
       (effects (font (size 2 1.4) (thickness 0.25)))
     )
     (fp_circle (center 0 0) (end 4.2 0) (layer F.CrtYd) (width 0.05))
@@ -311,7 +311,7 @@
   )
 
   (module elektrophon:panel_potentiometer (layer F.Cu) (tedit 5DA46CEF) (tstamp 5D6B4BE5)
-    (at 35.56 91.44)
+    (at 55.88 91.44)
     (descr "Mounting Hole 8.4mm, no annular, M8")
     (tags "mounting hole 8.4mm no annular m8")
     (path /5D6B047C)
@@ -382,7 +382,7 @@
     (fp_text reference H2 (at 0 -9.4) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value "delay cv" (at 0 9.144) (layer F.Mask)
+    (fp_text value delay (at 0 9.144) (layer F.Mask)
       (effects (font (size 2 1.4) (thickness 0.25)))
     )
     (fp_circle (center 0 0) (end 4.2 0) (layer F.CrtYd) (width 0.05))
