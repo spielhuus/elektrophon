@@ -1696,4 +1696,6 @@ F 3 "~" H 8600 1150 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	2050 6050 8150 6050
+Text Notes 8250 6200 0    50   ~ 0
+Change value of R25 to 150k for louder output.
 $EndSCHEMATC
