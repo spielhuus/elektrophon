@@ -11,12 +11,13 @@
 |4  |H1, H2, H3, H4                      |MountingHole     |MountingHole:MountingHole_2.2mm_M2                            |
 |1  |J1                                  |Conn_01x05_Female|Connector_PinHeader_2.54mm:PinHeader_1x05_P2.54mm_Vertical    |
 |1  |J2                                  |POWER            |Connector_IDC:IDC-Header_2x05_P2.54mm_Vertical                |
-|4  |Q1, Q5, Q7, Q10                     |BC557            |Package_TO_SOT_THT:TO-92_Inline_Wide                          |
-|8  |Q2, Q3, Q4, Q6, Q8, Q9, Q11, Q12    |BC547            |Package_TO_SOT_THT:TO-92_Inline_Wide                          |
+|4  |Q1, Q5, Q7, Q10                     |BC559            |Package_TO_SOT_THT:TO-92_Inline_Wide                          |
+|4  |Q2, Q6, Q8, Q11                     |BC549            |Package_TO_SOT_THT:TO-92_Inline_Wide                          |
+|4  |Q3, Q4, Q9, Q12                     |BC547            |Package_TO_SOT_THT:TO-92_Inline_Wide                          |
 |4  |R1, R10, R22, R32                   |27k              |Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal|
 |4  |R2, R12, R23, R34                   |68k              |Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal|
 |8  |R3, R4, R17, R18, R24, R25, R37, R38|22k              |Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal|
-|4  |R5, R20, R26, R40                   |10k              |Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal|
+|4  |R5, R20, R26, R40                   |10k              |Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical   |
 |2  |R6, R35                             |120k             |Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal|
 |1  |R7                                  |820              |Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal|
 |4  |R8, R21, R30, R42                   |120k             |Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical   |
@@ -24,6 +25,7 @@
 |1  |R13                                 |1k               |Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal|
 |1  |R16                                 |150k             |Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal|
 |2  |R19, R31                            |150k             |Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical   |
+|2  |R27, R28                            |10               |Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical   |
 |1  |R33                                 |100k             |Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal|
 |1  |R36                                 |1k5              |Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal|
 |1  |R39                                 |18k              |Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal|
