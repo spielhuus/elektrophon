@@ -37,8 +37,8 @@ Connect a gate signal to the *IN* of the ADSR and the *OUT* to a VCA or VCF:
 
 1) [CEM3340 Datasheet](https://github.com/spielhuus/elektrophon/raw/master/docs/datasheet/CEM_3340-3345_Long.pdf)
 1) [AS3340 Datasheet](http://www.alfarzpp.lv/eng/sc/AS3340.pdf)
-1) []()
-1) []()
+1) [CEM3340 Oszillator Designs](https://electricdruid.net/cem3340-vco-voltage-controlled-oscillator-designs/)
+1) [LMNC Simple Oszillator](https://www.lookmumnocomputer.com/cem-3340-diy-simple)
 1) []()
 ---
 [![CC BY-SA](https://licensebuttons.net/l/by-sa/3.0/88x31.png)](https://creativecommons.org/licenses/by-sa/4.0/)
