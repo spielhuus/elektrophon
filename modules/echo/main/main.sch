@@ -1,5 +1,4 @@
 EESchema Schematic File Version 4
-LIBS:main-cache
 EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
@@ -1511,7 +1510,7 @@ IN2
 Text Label 1550 5950 2    50   ~ 0
 CV
 Text Label 6400 4400 2    50   ~ 0
-RECIRC
+RECIRC_IN
 Text Label 6200 5000 2    50   ~ 0
 RECIRC_ATTEN
 Text Label 7600 1550 0    50   ~ 0
@@ -1531,7 +1530,7 @@ CV
 Text Label 5000 6700 2    50   ~ 0
 RECIRC_ATTEN
 Text Label 5000 6600 2    50   ~ 0
-RECIRC
+RECIRC_IN
 Text Label 5000 6500 2    50   ~ 0
 MIXED_OUT
 Text Label 5000 6200 2    50   ~ 0
