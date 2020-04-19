@@ -126,8 +126,8 @@ int main(void)
   configs[3].time = 0;
 
   trigger_count = 0;
-  setHdlNoteOff(note_on);
-  setHdlNoteOn(note_off);
+  setHdlNoteOff(note_off);
+  setHdlNoteOn(note_on);
 
   while (1)
   {
