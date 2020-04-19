@@ -1,5 +1,4 @@
 EESchema Schematic File Version 4
-LIBS:panel-cache
 EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
@@ -23,17 +22,6 @@ F 1 "#1" H 1500 1805 50  0000 L CNN
 F 2 "elektrophon:panel_jack" H 1400 1850 50  0001 C CNN
 F 3 "~" H 1400 1850 50  0001 C CNN
 	1    1400 1850
-	1    0    0    -1  
-$EndComp
-$Comp
-L Mechanical:MountingHole H6
-U 1 1 5D6AF633
-P 1400 1250
-F 0 "H6" H 1500 1296 50  0000 L CNN
-F 1 "encoder" H 1500 1205 50  0000 L CNN
-F 2 "elektrophon:panel_potentiometer" H 1400 1250 50  0001 C CNN
-F 3 "~" H 1400 1250 50  0001 C CNN
-	1    1400 1250
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -202,47 +190,25 @@ F 3 "~" H 2300 2900 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Mechanical:MountingHole H14
-U 1 1 5DAB4ECF
-P 2650 1850
-F 0 "H14" H 2750 1896 50  0000 L CNN
-F 1 "#13" H 2750 1805 50  0000 L CNN
-F 2 "elektrophon:panel_jack" H 2650 1850 50  0001 C CNN
-F 3 "~" H 2650 1850 50  0001 C CNN
-	1    2650 1850
-	1    0    0    -1  
-$EndComp
-$Comp
-L Mechanical:MountingHole H15
-U 1 1 5DAB51B3
-P 2700 2200
-F 0 "H15" H 2800 2246 50  0000 L CNN
-F 1 "#14" H 2800 2155 50  0000 L CNN
-F 2 "elektrophon:panel_jack" H 2700 2200 50  0001 C CNN
-F 3 "~" H 2700 2200 50  0001 C CNN
-	1    2700 2200
-	1    0    0    -1  
-$EndComp
-$Comp
-L Mechanical:MountingHole H16
-U 1 1 5DAB5423
-P 2700 2550
-F 0 "H16" H 2800 2596 50  0000 L CNN
-F 1 "#15" H 2800 2505 50  0000 L CNN
-F 2 "elektrophon:panel_jack" H 2700 2550 50  0001 C CNN
-F 3 "~" H 2700 2550 50  0001 C CNN
-	1    2700 2550
-	1    0    0    -1  
-$EndComp
-$Comp
 L Mechanical:MountingHole H17
 U 1 1 5DAB5561
-P 2700 2900
-F 0 "H17" H 2800 2946 50  0000 L CNN
-F 1 "#16" H 2800 2855 50  0000 L CNN
-F 2 "elektrophon:panel_jack" H 2700 2900 50  0001 C CNN
-F 3 "~" H 2700 2900 50  0001 C CNN
-	1    2700 2900
+P 1350 3300
+F 0 "H17" H 1450 3346 50  0000 L CNN
+F 1 "BEAT" H 1450 3255 50  0000 L CNN
+F 2 "elektrophon:panel_jack" H 1350 3300 50  0001 C CNN
+F 3 "~" H 1350 3300 50  0001 C CNN
+	1    1350 3300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H6
+U 1 1 5E9AF941
+P 2300 3300
+F 0 "H6" H 2400 3346 50  0000 L CNN
+F 1 "USB" H 2400 3255 50  0000 L CNN
+F 2 "elektrophon:panel_jack" H 2300 3300 50  0001 C CNN
+F 3 "~" H 2300 3300 50  0001 C CNN
+	1    2300 3300
 	1    0    0    -1  
 $EndComp
 $EndSCHEMATC

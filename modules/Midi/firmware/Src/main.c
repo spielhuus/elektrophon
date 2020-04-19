@@ -25,7 +25,6 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "usbd_midi_if.h"
-#include "menu.h"
 #include "midi.h"
 /* USER CODE END Includes */
 
@@ -46,8 +45,6 @@
 /* Private variables ---------------------------------------------------------*/
 SPI_HandleTypeDef hspi1;
 
-TIM_HandleTypeDef htim4;
-
 /* USER CODE BEGIN PV */
 extern USBD_HandleTypeDef hUsbDeviceFS;
 /* USER CODE END PV */
@@ -56,7 +53,6 @@ extern USBD_HandleTypeDef hUsbDeviceFS;
 void SystemClock_Config(void);
 static void MX_GPIO_Init(void);
 static void MX_SPI1_Init(void);
-static void MX_TIM4_Init(void);
 /* USER CODE BEGIN PFP */
 
 /* USER CODE END PFP */
@@ -95,11 +91,8 @@ int main(void)
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
   MX_SPI1_Init();
-  MX_TIM4_Init();
   MX_USB_DEVICE_Init();
   /* USER CODE BEGIN 2 */
-  HAL_TIM_Encoder_Start(&htim4,TIM_CHANNEL_ALL);
-  menu_init();
   mimuz_init();
   /* USER CODE END 2 */
 
@@ -140,7 +133,6 @@ int main(void)
 			break;
 		} else
 		{
-			menu_logo();
 			HAL_GPIO_WritePin(LED_CONNECT_GPIO_Port, LED_CONNECT_Pin, SET);
 			HAL_Delay(200);
 			HAL_GPIO_WritePin(LED_CONNECT_GPIO_Port, LED_CONNECT_Pin, RESET);
@@ -152,7 +144,6 @@ int main(void)
     /* USER CODE BEGIN 3 */
 	processMidiMessage();
 	midi_process();
-	process_menu((HAL_GPIO_ReadPin(ENCODER_SWITCH_GPIO_Port, ENCODER_SWITCH_Pin) == GPIO_PIN_RESET), TIM4->CNT/4);
   }
   /* USER CODE END 3 */
 }
@@ -240,55 +231,6 @@ static void MX_SPI1_Init(void)
 }
 
 /**
-  * @brief TIM4 Initialization Function
-  * @param None
-  * @retval None
-  */
-static void MX_TIM4_Init(void)
-{
-
-  /* USER CODE BEGIN TIM4_Init 0 */
-
-  /* USER CODE END TIM4_Init 0 */
-
-  TIM_Encoder_InitTypeDef sConfig = {0};
-  TIM_MasterConfigTypeDef sMasterConfig = {0};
-
-  /* USER CODE BEGIN TIM4_Init 1 */
-
-  /* USER CODE END TIM4_Init 1 */
-  htim4.Instance = TIM4;
-  htim4.Init.Prescaler = 0;
-  htim4.Init.CounterMode = TIM_COUNTERMODE_CENTERALIGNED1;
-  htim4.Init.Period = 65535;
-  htim4.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
-  htim4.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
-  sConfig.EncoderMode = TIM_ENCODERMODE_TI12;
-  sConfig.IC1Polarity = TIM_ICPOLARITY_RISING;
-  sConfig.IC1Selection = TIM_ICSELECTION_DIRECTTI;
-  sConfig.IC1Prescaler = TIM_ICPSC_DIV1;
-  sConfig.IC1Filter = 10;
-  sConfig.IC2Polarity = TIM_ICPOLARITY_RISING;
-  sConfig.IC2Selection = TIM_ICSELECTION_DIRECTTI;
-  sConfig.IC2Prescaler = TIM_ICPSC_DIV1;
-  sConfig.IC2Filter = 10;
-  if (HAL_TIM_Encoder_Init(&htim4, &sConfig) != HAL_OK)
-  {
-    Error_Handler();
-  }
-  sMasterConfig.MasterOutputTrigger = TIM_TRGO_RESET;
-  sMasterConfig.MasterSlaveMode = TIM_MASTERSLAVEMODE_DISABLE;
-  if (HAL_TIMEx_MasterConfigSynchronization(&htim4, &sMasterConfig) != HAL_OK)
-  {
-    Error_Handler();
-  }
-  /* USER CODE BEGIN TIM4_Init 2 */
-
-  /* USER CODE END TIM4_Init 2 */
-
-}
-
-/**
   * @brief GPIO Initialization Function
   * @param None
   * @retval None
@@ -303,17 +245,21 @@ static void MX_GPIO_Init(void)
   __HAL_RCC_GPIOB_CLK_ENABLE();
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOA, DAC_SELECT_1_Pin|DAC_SELECT_2_Pin, GPIO_PIN_SET);
+  HAL_GPIO_WritePin(GPIOA, DAC_SELECT_1_Pin|DAC_SELECT_2_Pin|DAC_SELECT_4_Pin|DAC_SELECT_5_Pin, GPIO_PIN_SET);
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOA, DAC_SELECT_3_Pin|LCD_BACKLIGHT_Pin|LCD_DC_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(DAC_SELECT_3_GPIO_Port, DAC_SELECT_3_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOB, LED_ACTIVITY_Pin|LED_CONNECT_Pin|LCD_SPI_CE_Pin|LCD_SPI_CLK_Pin 
-                          |LCD_RESET_Pin|LCD_SPI_DIN_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(GPIOB, LED_ACTIVITY_Pin|LED_CONNECT_Pin, GPIO_PIN_RESET);
 
-  /*Configure GPIO pins : DAC_SELECT_1_Pin DAC_SELECT_2_Pin DAC_SELECT_3_Pin */
-  GPIO_InitStruct.Pin = DAC_SELECT_1_Pin|DAC_SELECT_2_Pin|DAC_SELECT_3_Pin;
+  /*Configure GPIO pin Output Level */
+  HAL_GPIO_WritePin(GPIOB, SIG_TRIGGER_1_Pin|SIG_TRIGGER_2_Pin|SIG_TRIGGER_3_Pin|SIG_CLOCK_Pin, GPIO_PIN_SET);
+
+  /*Configure GPIO pins : DAC_SELECT_1_Pin DAC_SELECT_2_Pin DAC_SELECT_3_Pin DAC_SELECT_4_Pin 
+                           DAC_SELECT_5_Pin */
+  GPIO_InitStruct.Pin = DAC_SELECT_1_Pin|DAC_SELECT_2_Pin|DAC_SELECT_3_Pin|DAC_SELECT_4_Pin 
+                          |DAC_SELECT_5_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_PULLUP;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
@@ -326,25 +272,12 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
 
-  /*Configure GPIO pins : LCD_SPI_CE_Pin LCD_SPI_CLK_Pin LCD_RESET_Pin LCD_SPI_DIN_Pin */
-  GPIO_InitStruct.Pin = LCD_SPI_CE_Pin|LCD_SPI_CLK_Pin|LCD_RESET_Pin|LCD_SPI_DIN_Pin;
+  /*Configure GPIO pins : SIG_TRIGGER_1_Pin SIG_TRIGGER_2_Pin SIG_TRIGGER_3_Pin SIG_CLOCK_Pin */
+  GPIO_InitStruct.Pin = SIG_TRIGGER_1_Pin|SIG_TRIGGER_2_Pin|SIG_TRIGGER_3_Pin|SIG_CLOCK_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
-  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  GPIO_InitStruct.Pull = GPIO_PULLUP;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
-
-  /*Configure GPIO pins : LCD_BACKLIGHT_Pin LCD_DC_Pin */
-  GPIO_InitStruct.Pin = LCD_BACKLIGHT_Pin|LCD_DC_Pin;
-  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
-  GPIO_InitStruct.Pull = GPIO_NOPULL;
-  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
-  HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
-
-  /*Configure GPIO pin : ENCODER_SWITCH_Pin */
-  GPIO_InitStruct.Pin = ENCODER_SWITCH_Pin;
-  GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
-  GPIO_InitStruct.Pull = GPIO_PULLUP;
-  HAL_GPIO_Init(ENCODER_SWITCH_GPIO_Port, &GPIO_InitStruct);
 
 }
 
