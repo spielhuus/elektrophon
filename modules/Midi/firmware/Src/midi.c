@@ -109,6 +109,9 @@ void note_on(uint8_t channel, uint8_t note, uint8_t velocity) {
 			}
 		}
 	}
+	//TODO select channel
+	HAL_GPIO_WritePin(SIG_TRIGGER_1_GPIO_Port, SIG_TRIGGER_1_Pin, RESET);
+	trigger_count = HAL_GetTick() + 5000;
 }
 
 void note_off(uint8_t channel, uint8_t note, uint8_t velocity) {

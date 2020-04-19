@@ -46,6 +46,7 @@ typedef struct {
 	uint32_t time;
 } config_t;
 config_t configs[PORTS];
+uint32_t trigger_count;
 /* USER CODE END ET */
 
 /* Exported constants --------------------------------------------------------*/
