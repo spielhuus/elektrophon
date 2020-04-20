@@ -104,28 +104,12 @@ int main(void)
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
 
-  //TODO REDO
-  configs[0].midi_channel = 0;
-  configs[0].type = CV;
-  configs[0].val = 0;
-  configs[0].time = 0;
+  //Set all trigger timers to zero
+  for( uint8_t i = 0; i < MIDI_CHANNELS; i++ ) {
+	  trigger_timer[i] = 0;
+  }
 
-  configs[1].midi_channel = 0;
-  configs[1].type = GATE;
-  configs[1].val = 0;
-  configs[1].time = 0;
-
-  configs[2].midi_channel = 1;
-  configs[2].type = CV;
-  configs[2].val = 0;
-  configs[2].time = 0;
-
-  configs[3].midi_channel = 1;
-  configs[3].type = TRIGGER;
-  configs[3].val = 0;
-  configs[3].time = 0;
-
-  trigger_count = 0;
+  //register the MIDI call backs
   setHdlNoteOff(note_off);
   setHdlNoteOn(note_on);
 

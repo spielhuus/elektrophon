@@ -37,16 +37,22 @@ extern "C" {
 
 /* Exported types ------------------------------------------------------------*/
 /* USER CODE BEGIN ET */
-#define PORTS 16
-enum PORT_TYPE { OFF, CV, GATE, PITCH_BEND, TRIGGER };
-typedef struct {
-	enum PORT_TYPE type;
-	uint8_t midi_channel;
-	uint16_t val;
-	uint32_t time;
-} config_t;
-config_t configs[PORTS];
-uint32_t trigger_count;
+// DAC output will be (4095/87) = 47.069 mV per note, and 564.9655 mV per octive
+// Note that DAC output will need to be amplified by 1.77X for the standard 1V/octave
+#define NOTE_SF 47.069f // This value can be tuned if CV output isn't exactly 1V/octave
+#define TRIGGER_VALUE 4000
+#define TRIGGER_TIMER 10
+#define MIDI_CHANNELS 3
+//#define PORTS 16
+//enum PORT_TYPE { OFF, CV, GATE, PITCH_BEND, TRIGGER };
+//typedef struct {
+//	enum PORT_TYPE type;
+//	uint8_t midi_channel;
+//	uint16_t val;
+//	uint32_t time;
+//} config_t;
+//config_t configs[PORTS];
+uint32_t trigger_timer[MIDI_CHANNELS];
 /* USER CODE END ET */
 
 /* Exported constants --------------------------------------------------------*/

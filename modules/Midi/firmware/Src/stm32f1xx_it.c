@@ -222,10 +222,6 @@ void TIM2_IRQHandler(void)
   /* USER CODE END TIM2_IRQn 0 */
   HAL_TIM_IRQHandler(&htim2);
   /* USER CODE BEGIN TIM2_IRQn 1 */
-  if( trigger_count != 0 && trigger_count > HAL_GetTick() ) {
-		HAL_GPIO_WritePin(SIG_TRIGGER_1_GPIO_Port, SIG_TRIGGER_1_Pin, SET);
-
-  }
   /* USER CODE END TIM2_IRQn 1 */
 }
 

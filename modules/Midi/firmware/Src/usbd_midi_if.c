@@ -23,6 +23,8 @@ stB4Arrq rxq;
 void (*cbNoteOff)(uint8_t ch, uint8_t note, uint8_t vel);
 void (*cbNoteOn)(uint8_t ch, uint8_t note, uint8_t vel);
 void (*cbCtlChange)(uint8_t ch, uint8_t num, uint8_t value);
+void (*cbPitchBend)(uint8_t ch, uint8_t num, uint8_t value);
+void (*cbHeartBeat)();
 
 static int checkMidiMessage(uint8_t *pMidi);
 
@@ -68,7 +70,7 @@ static uint16_t MIDI_DataTx(uint8_t *msg, uint16_t length){
   return USBD_OK;
 }
 
-// from mi:muz (Internal)
+// from  (Internal)
 static int checkMidiMessage(uint8_t *pMidi){
   if(((*(pMidi + 1) & 0xf0)== 0x90)&&(*(pMidi + 3) != 0)){
     return 2;
@@ -127,28 +129,46 @@ void sendCtlChange(uint8_t ch, uint8_t num, uint8_t value){
   sendMidiMessage(buffer,4);
 }
 
-void processMidiMessage(){
-  uint8_t *pbuf;
-  uint8_t kindmessage;
-  // Rx();
-  if(rxq.num > 0){
-    pbuf = (uint8_t *)b4arrq_pop(&rxq);
-    kindmessage = checkMidiMessage(pbuf);
-    if(kindmessage == 1){
-      if(cbNoteOff != NULL){
-        (*cbNoteOff)(*(pbuf+1)&0x0f,*(pbuf+2)&0x7f,*(pbuf+3)&0x7f);
-      }
-    }else if(kindmessage == 2){
-      if(cbNoteOn != NULL){
-        (*cbNoteOn)(*(pbuf+1)&0x0f,*(pbuf+2)&0x7f,*(pbuf+3)&0x7f);
-      }
-    }else if(kindmessage == 3){
-      if(cbCtlChange != NULL){
-        (*cbCtlChange)(*(pbuf+1)&0x0f,*(pbuf+2)&0x7f,*(pbuf+3)&0x7f);
-      }
-    }
-  }
-  // Tx
-  USBD_MIDI_SendPacket();
+void processMidiMessage() {
+	uint8_t *pbuf;
+	uint8_t kindmessage;
+	// Rx();
+	if (rxq.num > 0) {
+		pbuf = (uint8_t *) b4arrq_pop(&rxq);
+		kindmessage = checkMidiMessage(pbuf);
+		if (kindmessage == 0) {
+			if (cbNoteOff != NULL) {
+				(*cbNoteOff)(*(pbuf + 1) & 0x0f, *(pbuf + 2) & 0x7f,
+						*(pbuf + 3) & 0x7f);
+			}
+		} else if (kindmessage == 1) {
+			if (cbNoteOff != NULL) {
+				(*cbNoteOff)(*(pbuf + 1) & 0x0f, *(pbuf + 2) & 0x7f,
+						*(pbuf + 3) & 0x7f);
+			}
+		} else if (kindmessage == 2) {
+			if (cbNoteOn != NULL) {
+				(*cbNoteOn)(*(pbuf + 1) & 0x0f, *(pbuf + 2) & 0x7f,
+						*(pbuf + 3) & 0x7f);
+			}
+		} else if (kindmessage == 3) {
+			if (cbCtlChange != NULL) {
+				(*cbCtlChange)(*(pbuf + 1) & 0x0f, *(pbuf + 2) & 0x7f,
+						*(pbuf + 3) & 0x7f);
+			}
+		} else if (kindmessage == 4) {
+			if (cbCtlChange != NULL) {
+				(*cbCtlChange)(*(pbuf + 1) & 0x0f, *(pbuf + 2) & 0x7f,
+						*(pbuf + 3) & 0x7f);
+			}
+		} else if (kindmessage == 5) {
+			if (cbCtlChange != NULL) {
+				(*cbCtlChange)(*(pbuf + 1) & 0x0f, *(pbuf + 2) & 0x7f,
+						*(pbuf + 3) & 0x7f);
+			}
+		}
+	}
+	// Tx
+	USBD_MIDI_SendPacket();
 }
 
