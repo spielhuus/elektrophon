@@ -41,7 +41,7 @@ extern "C" {
 // Note that DAC output will need to be amplified by 1.77X for the standard 1V/octave
 #define NOTE_SF 47.069f // This value can be tuned if CV output isn't exactly 1V/octave
 #define TRIGGER_VALUE 4000
-#define TRIGGER_TIMER 10
+#define TRIGGER_TIMER 20
 #define MIDI_CHANNELS 3
 //#define PORTS 16
 //enum PORT_TYPE { OFF, CV, GATE, PITCH_BEND, TRIGGER };

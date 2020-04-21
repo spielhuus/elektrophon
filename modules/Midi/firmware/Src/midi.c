@@ -118,7 +118,7 @@ void pitch_bend(unsigned char channel, uint8_t bend) {
 
 void midi_process() {
 	for( unsigned char i = 0; i<MIDI_CHANNELS; i++ ) {
-		if( trigger_timer[i] != 0 && trigger_timer[i] > HAL_GetTick() ) {
+		if( trigger_timer[i] != 0 && trigger_timer[i] < HAL_GetTick() ) {
 			HAL_GPIO_WritePin(SIG_TRIGGER_1_GPIO_Port, SIG_TRIGGER_1_Pin, SET);
 			trigger_timer[i] = 0;
 		}
