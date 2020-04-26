@@ -129,7 +129,7 @@ AR Path="/5EABBD14" Ref="R?"  Part="1"
 AR Path="/5EAB1F13/5EABBD14" Ref="R10"  Part="1" 
 F 0 "R10" V 6393 1500 50  0000 C CNN
 F 1 "17k" V 6484 1500 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 6530 1500 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 6530 1500 50  0001 C CNN
 F 3 "~" H 6600 1500 50  0001 C CNN
 	1    6600 1500
 	0    1    1    0   
@@ -366,14 +366,14 @@ $EndComp
 $Comp
 L Amplifier_Operational:LM324 U?
 U 3 1 5EABBD98
-P 6550 3200
+P 6550 4300
 AR Path="/5EABBD98" Ref="U?"  Part="3" 
 AR Path="/5EAB1F13/5EABBD98" Ref="U9"  Part="3" 
-F 0 "U9" H 6550 3567 50  0000 C CNN
-F 1 "LM324" H 6550 3476 50  0000 C CNN
-F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 6500 3300 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/lm2902-n.pdf" H 6600 3400 50  0001 C CNN
-	3    6550 3200
+F 0 "U9" H 6550 4667 50  0000 C CNN
+F 1 "LM324" H 6550 4576 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 6500 4400 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lm2902-n.pdf" H 6600 4500 50  0001 C CNN
+	3    6550 4300
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -414,7 +414,7 @@ AR Path="/5EABBDB4" Ref="R?"  Part="1"
 AR Path="/5EAB1F13/5EABBDB4" Ref="R9"  Part="1" 
 F 0 "R9" V 6343 3700 50  0000 C CNN
 F 1 "17k" V 6434 3700 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 6480 3700 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 6480 3700 50  0001 C CNN
 F 3 "~" H 6550 3700 50  0001 C CNN
 	1    6550 3700
 	0    1    1    0   
@@ -485,7 +485,7 @@ AR Path="/5EABBDDB" Ref="R?"  Part="1"
 AR Path="/5EAB1F13/5EABBDDB" Ref="R16"  Part="1" 
 F 0 "R16" V 9243 1550 50  0000 C CNN
 F 1 "17k" V 9334 1550 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 9380 1550 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 9380 1550 50  0001 C CNN
 F 3 "~" H 9450 1550 50  0001 C CNN
 	1    9450 1550
 	0    1    1    0   
@@ -583,14 +583,14 @@ Wire Wire Line
 $Comp
 L Amplifier_Operational:LM324 U?
 U 4 1 5EABBD9E
-P 6550 4300
+P 6550 3200
 AR Path="/5EABBD9E" Ref="U?"  Part="4" 
 AR Path="/5EAB1F13/5EABBD9E" Ref="U9"  Part="4" 
-F 0 "U9" H 6550 4667 50  0000 C CNN
-F 1 "LM324" H 6550 4576 50  0000 C CNN
-F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 6500 4400 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/lm2902-n.pdf" H 6600 4500 50  0001 C CNN
-	4    6550 4300
+F 0 "U9" H 6550 3567 50  0000 C CNN
+F 1 "LM324" H 6550 3476 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 6500 3300 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lm2902-n.pdf" H 6600 3400 50  0001 C CNN
+	4    6550 3200
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
