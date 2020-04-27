@@ -1,0 +1,84 @@
+
+(rules PCB main
+  (snap_angle 
+    fortyfive_degree
+  )
+  (autoroute_settings
+    (fanout off)
+    (eu.mihosoft.freerouting.autoroute on)
+    (postroute on)
+    (vias on)
+    (via_costs 50)
+    (plane_via_costs 5)
+    (start_ripup_costs 100)
+    (start_pass_no 15679)
+    (layer_rule F.Cu
+      (active on)
+      (preferred_direction vertical)
+      (preferred_direction_trace_costs 1.0)
+      (against_preferred_direction_trace_costs 2.8)
+    )
+    (layer_rule B.Cu
+      (active on)
+      (preferred_direction horizontal)
+      (preferred_direction_trace_costs 1.0)
+      (against_preferred_direction_trace_costs 1.5)
+    )
+  )
+  (rule
+    (width 250.0)
+    (clear 200.2)
+    (clear 125.0 (type smd_to_turn_gap))
+    (clear 50.0 (type smd_smd))
+  )
+  (padstack "Via[0-1]_800:400_um"
+    (shape
+      (circle F.Cu 800.0 0.0 0.0)
+    )
+    (shape
+      (circle B.Cu 800.0 0.0 0.0)
+    )
+    (attach off)
+  )
+  (via 
+    "Via[0-1]_800:400_um" "Via[0-1]_800:400_um" default
+  )
+  (via 
+    "Via[0-1]_800:400_um-kicad_default" "Via[0-1]_800:400_um" "kicad_default"
+  )
+  (via_rule
+    default "Via[0-1]_800:400_um"
+  )
+  (via_rule
+    "kicad_default" "Via[0-1]_800:400_um-kicad_default"
+  )
+  (class default
+    (clearance_class default)
+    (via_rule default)
+    (rule
+      (width 250.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+  (class "kicad_default"
+    +5V GND +3V3 +15V "-15V" "/STM32 Board/RESET" "/STM32 Board/PC14" "/STM32 Board/PC15"
+    "/STM32 Board/OSCIN" "/STM32 Board/OSCOUT" "/STM32 Board/SWDCLK" "/STM32 Board/SWDIO" "Net-(J5-Pad5)" "Net-(J5-Pad2)" "/STM32 Board/BOOT0" "/STM32 Board/BOOT1"
+    "Net-(R11-Pad2)" "Net-(R12-Pad2)" "Net-(R17-Pad2)" "SIG_TRIGGER_1" MOSI SCK "CS_5" "CS_4"
+    "CS_3" "CS_2" "CS_1" "OUT_CLOCK" "OUT_TRIGGER_3" "OUT_TRIGGER_2" "OUT_TRIGGER_1" "PITCH_BEND_3"
+    "PITCH_BEND_2" "PITCH_BEND_1" "Velocity_3" "Velocity_2" "Velocity_1" "Note_3" "Note_2" "Note_1"
+    PA11 PA12 "LED_CONNECT" "LED_ACTIVITY" "Net-(R7-Pad2)" "Net-(R10-Pad2)" "Net-(R10-Pad1)" "Net-(R14-Pad2)"
+    "Net-(R15-Pad2)" "Net-(R16-Pad1)" "Net-(R18-Pad2)" "Net-(R19-Pad2)" "Net-(R21-Pad2)" "SIG_TRIGGER_2" "SIG_TRIGGER_3" "SIG_CLOCK"
+    "/Analog Circuit/SIG_VELOCITY_1" "/Analog Circuit/SIG_NOTE_1" "/Analog Circuit/SIG_VELOCITY_2" "/Analog Circuit/SIG_NOTE_2" "/Analog Circuit/SIG_VELOCITY_3" "/Analog Circuit/SIG_NOTE_3" "/Analog Circuit/SIG_PITCH_BEND_2" "/Analog Circuit/SIG_PITCH_BEND_1"
+    "/Analog Circuit/SIG_PITCH_BEND_3" "Net-(U11-Pad13)" "Net-(U11-Pad1)" "Net-(U11-Pad8)"
+    (clearance_class "kicad_default")
+    (via_rule kicad_default)
+    (rule
+      (width 250.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+)
