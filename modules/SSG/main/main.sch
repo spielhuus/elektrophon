@@ -860,7 +860,7 @@ L Device:R R28
 U 1 1 5DC7AD2F
 P 5500 4700
 F 0 "R28" V 5600 4700 50  0000 C CNN
-F 1 "1m" V 5700 4700 50  0000 C CNN
+F 1 "1M" V 5700 4700 50  0000 C CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 5430 4700 50  0001 C CNN
 F 3 "~" H 5500 4700 50  0001 C CNN
 	1    5500 4700
@@ -2427,8 +2427,6 @@ F 3 "http://www.fairchildsemi.com/ds/BC/BC557.pdf" H 2500 2850 50  0001 L CNN
 	1    2500 2850
 	0    1    -1   0   
 $EndComp
-Text Notes 4400 1150 0    50   ~ 0
-Source and Drain changed\n
 $Comp
 L elektrophon:J201 Q3
 U 1 1 5E65304B
