@@ -85,14 +85,14 @@ $EndComp
 $Comp
 L Amplifier_Operational:LM324 U?
 U 1 1 5EABBD01
-P 6600 2100
+P 6600 1000
 AR Path="/5EABBD01" Ref="U?"  Part="1" 
 AR Path="/5EAB1F13/5EABBD01" Ref="U9"  Part="1" 
-F 0 "U9" H 6600 2467 50  0000 C CNN
-F 1 "LM324" H 6600 2376 50  0000 C CNN
-F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 6550 2200 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/lm2902-n.pdf" H 6650 2300 50  0001 C CNN
-	1    6600 2100
+F 0 "U9" H 6600 1367 50  0000 C CNN
+F 1 "LM324" H 6600 1276 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 6550 1100 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lm2902-n.pdf" H 6650 1200 50  0001 C CNN
+	1    6600 1000
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -109,14 +109,14 @@ Connection ~ 6900 2100
 $Comp
 L Amplifier_Operational:LM324 U?
 U 2 1 5EABBD0D
-P 6600 1000
+P 6600 2100
 AR Path="/5EABBD0D" Ref="U?"  Part="2" 
 AR Path="/5EAB1F13/5EABBD0D" Ref="U9"  Part="2" 
-F 0 "U9" H 6600 1367 50  0000 C CNN
-F 1 "LM324" H 6600 1276 50  0000 C CNN
-F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 6550 1100 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/lm2902-n.pdf" H 6650 1200 50  0001 C CNN
-	2    6600 1000
+F 0 "U9" H 6600 2467 50  0000 C CNN
+F 1 "LM324" H 6600 2376 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 6550 2200 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lm2902-n.pdf" H 6650 2300 50  0001 C CNN
+	2    6600 2100
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -328,14 +328,12 @@ F 3 "" H 2000 4750 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 NoConn ~ 4500 2900
-Text Label 2500 1100 0    50   ~ 0
-SIG_NOTE_1
 Text Label 2500 1400 0    50   ~ 0
+SIG_NOTE_1
+Text Label 2500 1100 0    50   ~ 0
 SIG_VELOCITY_1
 Text Label 5950 900  2    50   ~ 0
 SIG_NOTE_1
-Text Label 5750 2000 2    50   ~ 0
-SIG_VELOCITY_1
 Text Label 2500 2600 0    50   ~ 0
 SIG_NOTE_2
 Text Label 2500 2900 0    50   ~ 0
@@ -1386,4 +1384,6 @@ F 3 "http://www.ti.com/lit/ds/symlink/lm2902-n.pdf" H 9450 5550 50  0001 C CNN
 	3    9400 5350
 	1    0    0    -1  
 $EndComp
+Text Label 5750 2000 2    50   ~ 0
+SIG_VELOCITY_1
 $EndSCHEMATC
