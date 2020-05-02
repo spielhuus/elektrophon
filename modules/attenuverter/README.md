@@ -1,5 +1,5 @@
-![module](https://img.shields.io/badge/module-ADSR-yellow)
-![status](https://img.shields.io/badge/status-final-green)
+![module](https://img.shields.io/badge/module-mischer-yellow)
+![status](https://img.shields.io/badge/status-work%20in%20progress-orange)
 
 ## *Σ-1 (attenuverter)*
 
