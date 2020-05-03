@@ -204,19 +204,6 @@ F 3 "http://www.st.com/st-web-ui/static/active/en/resource/technical/document/da
 	1    0    0    -1  
 $EndComp
 $Comp
-L Regulator_Linear:LM1117-3.3 U?
-U 1 1 5EA3392C
-P 1800 6450
-AR Path="/5EA3392C" Ref="U?"  Part="1" 
-AR Path="/5E9FE2D3/5EA3392C" Ref="U1"  Part="1" 
-F 0 "U1" H 1800 6692 50  0000 C CNN
-F 1 "LM1117-3.3" H 1800 6601 50  0000 C CNN
-F 2 "Package_TO_SOT_SMD:SOT-223-3_TabPin2" H 1800 6450 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/lm1117.pdf" H 1800 6450 50  0001 C CNN
-	1    1800 6450
-	1    0    0    -1  
-$EndComp
-$Comp
 L Device:CP C?
 U 1 1 5EA33932
 P 850 6600
@@ -983,6 +970,17 @@ F 1 "GND" H 3705 6577 50  0000 C CNN
 F 2 "" H 3700 6750 50  0001 C CNN
 F 3 "" H 3700 6750 50  0001 C CNN
 	1    3700 6750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Regulator_Linear:AMS1117-3.3 U1
+U 1 1 5EAECB6F
+P 1800 6450
+F 0 "U1" H 1800 6692 50  0000 C CNN
+F 1 "AMS1117-3.3" H 1800 6601 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-223-3_TabPin2" H 1800 6650 50  0001 C CNN
+F 3 "http://www.advanced-monolithic.com/pdf/ds1117.pdf" H 1900 6200 50  0001 C CNN
+	1    1800 6450
 	1    0    0    -1  
 $EndComp
 $EndSCHEMATC

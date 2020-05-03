@@ -381,9 +381,9 @@ F 3 "~" H 6700 2100 50  0001 C CNN
 	1    6700 2100
 	-1   0    0    -1  
 $EndComp
-Text GLabel 8350 1650 2    50   Input ~ 0
-PA12
 Text GLabel 8350 1750 2    50   Input ~ 0
+PA12
+Text GLabel 8350 1650 2    50   Input ~ 0
 PA11
 $Comp
 L Device:CP C2
