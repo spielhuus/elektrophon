@@ -57,27 +57,14 @@ Wire Wire Line
 $Comp
 L Device:C C?
 U 1 1 5E180719
-P 3300 3100
+P 4950 3100
 AR Path="/5E180719" Ref="C?"  Part="1" 
 AR Path="/5DD3665B/5E180719" Ref="C13"  Part="1" 
-F 0 "C13" H 3415 3146 50  0000 L CNN
-F 1 "0.1u" H 3415 3055 50  0000 L CNN
-F 2 "Capacitor_THT:C_Disc_D3.4mm_W2.1mm_P2.50mm" H 3338 2950 50  0001 C CNN
-F 3 "~" H 3300 3100 50  0001 C CNN
-	1    3300 3100
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:C C?
-U 1 1 5E18071F
-P 3300 3400
-AR Path="/5E18071F" Ref="C?"  Part="1" 
-AR Path="/5DD3665B/5E18071F" Ref="C14"  Part="1" 
-F 0 "C14" H 3415 3446 50  0000 L CNN
-F 1 "0.1u" H 3415 3355 50  0000 L CNN
-F 2 "Capacitor_THT:C_Disc_D3.4mm_W2.1mm_P2.50mm" H 3338 3250 50  0001 C CNN
-F 3 "~" H 3300 3400 50  0001 C CNN
-	1    3300 3400
+F 0 "C13" H 5065 3146 50  0000 L CNN
+F 1 "0.1u" H 5065 3055 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D3.4mm_W2.1mm_P2.50mm" H 4988 2950 50  0001 C CNN
+F 3 "~" H 4950 3100 50  0001 C CNN
+	1    4950 3100
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -124,7 +111,6 @@ Wire Wire Line
 	2450 2950 2250 2950
 Wire Wire Line
 	2200 3550 2450 3550
-Connection ~ 2450 3550
 $Comp
 L Connector_Generic:Conn_02x05_Odd_Even J?
 U 1 1 5E180747
@@ -349,7 +335,6 @@ F 3 "~" H 2450 4050 50  0001 C CNN
 	1    2450 4050
 	0    -1   -1   0   
 $EndComp
-Connection ~ 2450 2950
 $Comp
 L Mechanical:MountingHole H?
 U 1 1 5E1807B0
@@ -402,138 +387,140 @@ F 3 "~" H 6300 3900 50  0001 C CNN
 	1    6300 3900
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	2450 3250 3300 3250
-Connection ~ 3300 3250
 $Comp
 L Amplifier_Operational:TL074 U?
 U 5 1 5E1807E0
-P 3850 3250
+P 2950 3250
 AR Path="/5E1807E0" Ref="U?"  Part="5" 
 AR Path="/5DD3665B/5E1807E0" Ref="U1"  Part="5" 
-F 0 "U1" H 3808 3296 50  0000 L CNN
-F 1 "TL074" H 3808 3205 50  0000 L CNN
-F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 3800 3350 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 3900 3450 50  0001 C CNN
-	5    3850 3250
+F 0 "U1" H 2908 3296 50  0000 L CNN
+F 1 "TL074" H 2908 3205 50  0000 L CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 2900 3350 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 3000 3450 50  0001 C CNN
+	5    2950 3250
 	1    0    0    -1  
 $EndComp
 $Comp
 L Device:C C?
 U 1 1 5E1807E6
-P 4100 3100
+P 3200 3100
 AR Path="/5E1807E6" Ref="C?"  Part="1" 
 AR Path="/5DD3665B/5E1807E6" Ref="C15"  Part="1" 
-F 0 "C15" H 4215 3146 50  0000 L CNN
-F 1 "0.1u" H 4215 3055 50  0000 L CNN
-F 2 "Capacitor_THT:C_Disc_D3.4mm_W2.1mm_P2.50mm" H 4138 2950 50  0001 C CNN
-F 3 "~" H 4100 3100 50  0001 C CNN
-	1    4100 3100
+F 0 "C15" H 3315 3146 50  0000 L CNN
+F 1 "0.1u" H 3315 3055 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D3.4mm_W2.1mm_P2.50mm" H 3238 2950 50  0001 C CNN
+F 3 "~" H 3200 3100 50  0001 C CNN
+	1    3200 3100
 	1    0    0    -1  
 $EndComp
 $Comp
 L Device:C C?
 U 1 1 5E1807EC
-P 4100 3400
+P 3200 3400
 AR Path="/5E1807EC" Ref="C?"  Part="1" 
 AR Path="/5DD3665B/5E1807EC" Ref="C16"  Part="1" 
-F 0 "C16" H 4215 3446 50  0000 L CNN
-F 1 "0.1u" H 4215 3355 50  0000 L CNN
-F 2 "Capacitor_THT:C_Disc_D3.4mm_W2.1mm_P2.50mm" H 4138 3250 50  0001 C CNN
-F 3 "~" H 4100 3400 50  0001 C CNN
-	1    4100 3400
+F 0 "C16" H 3315 3446 50  0000 L CNN
+F 1 "0.1u" H 3315 3355 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D3.4mm_W2.1mm_P2.50mm" H 3238 3250 50  0001 C CNN
+F 3 "~" H 3200 3400 50  0001 C CNN
+	1    3200 3400
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	3750 3550 4100 3550
-Connection ~ 4100 3250
+	2850 3550 3200 3550
+Connection ~ 3200 3250
 Wire Wire Line
-	3750 2950 4100 2950
+	2850 2950 3200 2950
 $Comp
 L Amplifier_Operational:TL074 U?
 U 5 1 5E1807FA
-P 4650 3250
+P 3750 3250
 AR Path="/5E1807FA" Ref="U?"  Part="5" 
 AR Path="/5DD3665B/5E1807FA" Ref="U2"  Part="5" 
-F 0 "U2" H 4608 3296 50  0000 L CNN
-F 1 "TL074" H 4608 3205 50  0000 L CNN
-F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 4600 3350 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 4700 3450 50  0001 C CNN
-	5    4650 3250
+F 0 "U2" H 3708 3296 50  0000 L CNN
+F 1 "TL074" H 3708 3205 50  0000 L CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 3700 3350 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 3800 3450 50  0001 C CNN
+	5    3750 3250
 	1    0    0    -1  
 $EndComp
 $Comp
 L Device:C C?
 U 1 1 5E180800
-P 4900 3100
+P 4000 3100
 AR Path="/5E180800" Ref="C?"  Part="1" 
 AR Path="/5DD3665B/5E180800" Ref="C17"  Part="1" 
-F 0 "C17" H 5015 3146 50  0000 L CNN
-F 1 "0.1u" H 5015 3055 50  0000 L CNN
-F 2 "Capacitor_THT:C_Disc_D3.4mm_W2.1mm_P2.50mm" H 4938 2950 50  0001 C CNN
-F 3 "~" H 4900 3100 50  0001 C CNN
-	1    4900 3100
+F 0 "C17" H 4115 3146 50  0000 L CNN
+F 1 "0.1u" H 4115 3055 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D3.4mm_W2.1mm_P2.50mm" H 4038 2950 50  0001 C CNN
+F 3 "~" H 4000 3100 50  0001 C CNN
+	1    4000 3100
 	1    0    0    -1  
 $EndComp
 $Comp
 L Device:C C?
 U 1 1 5E180806
-P 4900 3400
+P 4000 3400
 AR Path="/5E180806" Ref="C?"  Part="1" 
 AR Path="/5DD3665B/5E180806" Ref="C18"  Part="1" 
-F 0 "C18" H 5015 3446 50  0000 L CNN
-F 1 "0.1u" H 5015 3355 50  0000 L CNN
-F 2 "Capacitor_THT:C_Disc_D3.4mm_W2.1mm_P2.50mm" H 4938 3250 50  0001 C CNN
-F 3 "~" H 4900 3400 50  0001 C CNN
-	1    4900 3400
+F 0 "C18" H 4115 3446 50  0000 L CNN
+F 1 "0.1u" H 4115 3355 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D3.4mm_W2.1mm_P2.50mm" H 4038 3250 50  0001 C CNN
+F 3 "~" H 4000 3400 50  0001 C CNN
+	1    4000 3400
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	4100 3550 4550 3550
+	3200 3550 3650 3550
 Wire Wire Line
-	4100 3250 4900 3250
+	3200 3250 4000 3250
 Wire Wire Line
-	4100 2950 4550 2950
-Connection ~ 4550 2950
-Connection ~ 4550 3550
+	3200 2950 3650 2950
+Connection ~ 3650 2950
+Connection ~ 3650 3550
 Wire Wire Line
-	4550 3550 4900 3550
-Connection ~ 4900 3250
+	3650 3550 4000 3550
+Connection ~ 4000 3250
 Wire Wire Line
-	4550 2950 4900 2950
-Connection ~ 4100 2950
-Connection ~ 4100 3550
-Wire Wire Line
-	2450 3550 2850 3550
-Wire Wire Line
-	2450 2950 2850 2950
+	3650 2950 4000 2950
+Connection ~ 3200 2950
+Connection ~ 3200 3550
 $Comp
 L elektrophon:LM3900 U3
 U 5 1 5DE19E30
-P 2950 3250
-F 0 "U3" H 2908 3296 50  0000 L CNN
-F 1 "LM3900" H 2908 3205 50  0000 L CNN
-F 2 "Package_DIP:DIP-14_W7.62mm_Socket" V 2600 3550 50  0001 C CNN
-F 3 "" V 2600 3550 50  0001 C CNN
-	5    2950 3250
+P 4600 3250
+F 0 "U3" H 4558 3296 50  0000 L CNN
+F 1 "LM3900" H 4558 3205 50  0000 L CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" V 4250 3550 50  0001 C CNN
+F 3 "" V 4250 3550 50  0001 C CNN
+	5    4600 3250
 	1    0    0    -1  
 $EndComp
-Connection ~ 2850 2950
+Connection ~ 4500 2950
 Wire Wire Line
-	2850 2950 3300 2950
-Connection ~ 2850 3550
-Wire Wire Line
-	2850 3550 3300 3550
-Wire Wire Line
-	3300 2950 3750 2950
-Connection ~ 3300 2950
-Connection ~ 3750 2950
-Wire Wire Line
-	3750 3550 3300 3550
-Connection ~ 3750 3550
-Connection ~ 3300 3550
-Wire Wire Line
-	3300 3250 4100 3250
+	4500 2950 4950 2950
 Text Notes 2350 3700 0    50   ~ 0
 LM3900 Powered from GND
+Wire Wire Line
+	2450 2950 2850 2950
+Connection ~ 2450 2950
+Connection ~ 2850 2950
+Wire Wire Line
+	2450 3550 2850 3550
+Connection ~ 2450 3550
+Connection ~ 2850 3550
+Wire Wire Line
+	4000 2950 4000 3250
+Wire Wire Line
+	4000 3250 4350 3250
+Wire Wire Line
+	4000 2950 4500 2950
+Connection ~ 4000 2950
+Wire Wire Line
+	4350 3250 4350 3550
+Wire Wire Line
+	4350 3550 4500 3550
+Connection ~ 4350 3250
+Wire Wire Line
+	4350 3250 4950 3250
 $EndSCHEMATC

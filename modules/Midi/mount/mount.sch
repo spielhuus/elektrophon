@@ -725,8 +725,8 @@ F 3 "~" H 8150 1550 50  0001 C CNN
 	1    8150 1550
 	1    0    0    -1  
 $EndComp
-Text Label 8350 1650 0    50   ~ 0
-PA11
 Text Label 8350 1750 0    50   ~ 0
+PA11
+Text Label 8350 1650 0    50   ~ 0
 PA12
 $EndSCHEMATC

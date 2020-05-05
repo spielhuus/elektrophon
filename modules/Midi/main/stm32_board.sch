@@ -887,7 +887,7 @@ Text Label 1500 1350 2    50   ~ 0
 BOOT0
 Text Label 1500 2450 2    50   ~ 0
 BOOT1
-Text GLabel 1500 2650 0    50   Input ~ 0
+Text GLabel 1500 2850 0    50   Input ~ 0
 SIG_TRIGGER_1
 Text GLabel 2800 2250 2    50   Input ~ 0
 CS_1
@@ -920,7 +920,7 @@ NoConn ~ 2800 3050
 NoConn ~ 2800 2850
 Text GLabel 1500 2750 0    50   Input ~ 0
 SIG_TRIGGER_2
-Text GLabel 1500 2850 0    50   Input ~ 0
+Text GLabel 1500 2650 0    50   Input ~ 0
 SIG_TRIGGER_3
 Text GLabel 1500 2950 0    50   Input ~ 0
 SIG_CLOCK
