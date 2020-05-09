@@ -4,14 +4,14 @@ EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
-Title ""
-Date ""
-Rev ""
+Title "kontrast"
+Date "2020-05-09"
+Rev "01"
 Comp ""
 Comment1 ""
-Comment2 ""
+Comment2 "schema for panel"
 Comment3 ""
-Comment4 ""
+Comment4 "License CC BY 4.0 - Attribution 4.0 International"
 $EndDescr
 $Comp
 L Mechanical:MountingHole H2
@@ -154,6 +154,28 @@ F 1 "out4" H 2100 3305 50  0000 L CNN
 F 2 "elektrophon:panel_jack" H 2000 3350 50  0001 C CNN
 F 3 "~" H 2000 3350 50  0001 C CNN
 	1    2000 3350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H14
+U 1 1 5EB66265
+P 6350 6700
+F 0 "H14" H 6450 6746 50  0000 L CNN
+F 1 "MountingHole" H 6450 6655 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3" H 6350 6700 50  0001 C CNN
+F 3 "~" H 6350 6700 50  0001 C CNN
+	1    6350 6700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H15
+U 1 1 5EB6675B
+P 6350 7000
+F 0 "H15" H 6450 7046 50  0000 L CNN
+F 1 "MountingHole" H 6450 6955 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3" H 6350 7000 50  0001 C CNN
+F 3 "~" H 6350 7000 50  0001 C CNN
+	1    6350 7000
 	1    0    0    -1  
 $EndComp
 $EndSCHEMATC

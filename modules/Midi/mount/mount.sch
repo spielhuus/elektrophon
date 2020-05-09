@@ -120,35 +120,7 @@ Text GLabel 8350 1450 2    50   Input ~ 0
 LED_ACTIVITY
 Text GLabel 8350 1550 2    50   Input ~ 0
 LED_CONNECT
-$Comp
-L Connector:USB_B_Micro J10
-U 1 1 5EA5D33B
-P 3700 5300
-AR Path="/5EA5D33B" Ref="J10"  Part="1" 
-AR Path="/5E9FE2D3/5EA5D33B" Ref="J?"  Part="1" 
-F 0 "J10" H 3757 5767 50  0000 C CNN
-F 1 "USB_B_Micro" H 3757 5676 50  0000 C CNN
-F 2 "Connector_USB:USB_Mini-B_Tensility_54-00023_Vertical" H 3850 5250 50  0001 C CNN
-F 3 "~" H 3850 5250 50  0001 C CNN
-	1    3700 5300
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR012
-U 1 1 5EA5D341
-P 3700 5900
-AR Path="/5EA5D341" Ref="#PWR012"  Part="1" 
-AR Path="/5E9FE2D3/5EA5D341" Ref="#PWR?"  Part="1" 
-F 0 "#PWR012" H 3700 5650 50  0001 C CNN
-F 1 "GND" H 3705 5727 50  0000 C CNN
-F 2 "" H 3700 5900 50  0001 C CNN
-F 3 "" H 3700 5900 50  0001 C CNN
-	1    3700 5900
-	1    0    0    -1  
-$EndComp
 NoConn ~ 4000 5100
-Wire Wire Line
-	4000 5500 4050 5500
 $Comp
 L Device:R R1
 U 1 1 5EA5D349
@@ -173,7 +145,7 @@ F 1 "20" V 4234 5400 50  0000 C CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 4280 5400 50  0001 C CNN
 F 3 "~" H 4350 5400 50  0001 C CNN
 	1    4350 5400
-	0    1    1    0   
+	0    1    -1   0   
 $EndComp
 Wire Wire Line
 	4200 5300 4000 5300
@@ -217,20 +189,6 @@ Wire Wire Line
 Wire Wire Line
 	4800 5400 4500 5400
 NoConn ~ 3600 5700
-NoConn ~ 4050 5500
-$Comp
-L Device:Net-Tie_2 NT?
-U 1 1 5EA5D36B
-P 3700 5800
-AR Path="/5E9FE2D3/5EA5D36B" Ref="NT?"  Part="1" 
-AR Path="/5EA5D36B" Ref="NT1"  Part="1" 
-F 0 "NT1" V 3654 5844 50  0000 L CNN
-F 1 "Net-Tie_2" V 3745 5844 50  0000 L CNN
-F 2 "NetTie:NetTie-2_THT_Pad1.0mm" H 3700 5800 50  0001 C CNN
-F 3 "~" H 3700 5800 50  0001 C CNN
-	1    3700 5800
-	0    1    1    0   
-$EndComp
 NoConn ~ 1850 1650
 $Comp
 L power:GND #PWR03
@@ -725,8 +683,32 @@ F 3 "~" H 8150 1550 50  0001 C CNN
 	1    8150 1550
 	1    0    0    -1  
 $EndComp
-Text Label 8350 1750 0    50   ~ 0
-PA11
 Text Label 8350 1650 0    50   ~ 0
+PA11
+Text Label 8350 1750 0    50   ~ 0
 PA12
+$Comp
+L Connector:USB_B J10
+U 1 1 5EB16A49
+P 3700 5300
+F 0 "J10" H 3757 5767 50  0000 C CNN
+F 1 "USB_B" H 3757 5676 50  0000 C CNN
+F 2 "elektrophon:USB_B_TE_5787834_Vertical" H 3850 5250 50  0001 C CNN
+F 3 " ~" H 3850 5250 50  0001 C CNN
+	1    3700 5300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR012
+U 1 1 5EA5D341
+P 3700 5700
+AR Path="/5EA5D341" Ref="#PWR012"  Part="1" 
+AR Path="/5E9FE2D3/5EA5D341" Ref="#PWR?"  Part="1" 
+F 0 "#PWR012" H 3700 5450 50  0001 C CNN
+F 1 "GND" H 3705 5527 50  0000 C CNN
+F 2 "" H 3700 5700 50  0001 C CNN
+F 3 "" H 3700 5700 50  0001 C CNN
+	1    3700 5700
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC

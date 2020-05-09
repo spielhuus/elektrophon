@@ -4,7 +4,7 @@ EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
-Title "Attenuverter"
+Title "kontrast"
 Date "2020-04-24"
 Rev "01"
 Comp ""
@@ -1080,58 +1080,6 @@ F 2 "" H 1600 7500 50  0001 C CNN
 F 3 "~" H 1600 7500 50  0001 C CNN
 	1    1600 7500
 	0    -1   -1   0   
-$EndComp
-$Comp
-L Mechanical:MountingHole H1
-U 1 1 5E1807B0
-P 6200 6850
-AR Path="/5E1807B0" Ref="H1"  Part="1" 
-AR Path="/5DD3665B/5E1807B0" Ref="H?"  Part="1" 
-F 0 "H1" H 6300 6896 50  0000 L CNN
-F 1 "MountingHole" H 6300 6805 50  0000 L CNN
-F 2 "MountingHole:MountingHole_2.2mm_M2" H 6200 6850 50  0001 C CNN
-F 3 "~" H 6200 6850 50  0001 C CNN
-	1    6200 6850
-	1    0    0    -1  
-$EndComp
-$Comp
-L Mechanical:MountingHole H2
-U 1 1 5E1807B6
-P 6200 7050
-AR Path="/5E1807B6" Ref="H2"  Part="1" 
-AR Path="/5DD3665B/5E1807B6" Ref="H?"  Part="1" 
-F 0 "H2" H 6300 7096 50  0000 L CNN
-F 1 "MountingHole" H 6300 7005 50  0000 L CNN
-F 2 "MountingHole:MountingHole_2.2mm_M2" H 6200 7050 50  0001 C CNN
-F 3 "~" H 6200 7050 50  0001 C CNN
-	1    6200 7050
-	1    0    0    -1  
-$EndComp
-$Comp
-L Mechanical:MountingHole H3
-U 1 1 5E1807BC
-P 6200 7250
-AR Path="/5E1807BC" Ref="H3"  Part="1" 
-AR Path="/5DD3665B/5E1807BC" Ref="H?"  Part="1" 
-F 0 "H3" H 6300 7296 50  0000 L CNN
-F 1 "MountingHole" H 6300 7205 50  0000 L CNN
-F 2 "MountingHole:MountingHole_2.2mm_M2" H 6200 7250 50  0001 C CNN
-F 3 "~" H 6200 7250 50  0001 C CNN
-	1    6200 7250
-	1    0    0    -1  
-$EndComp
-$Comp
-L Mechanical:MountingHole H4
-U 1 1 5E1807C2
-P 6200 7450
-AR Path="/5E1807C2" Ref="H4"  Part="1" 
-AR Path="/5DD3665B/5E1807C2" Ref="H?"  Part="1" 
-F 0 "H4" H 6300 7496 50  0000 L CNN
-F 1 "MountingHole" H 6300 7405 50  0000 L CNN
-F 2 "MountingHole:MountingHole_2.2mm_M2" H 6200 7450 50  0001 C CNN
-F 3 "~" H 6200 7450 50  0001 C CNN
-	1    6200 7450
-	1    0    0    -1  
 $EndComp
 $Comp
 L Device:C C3

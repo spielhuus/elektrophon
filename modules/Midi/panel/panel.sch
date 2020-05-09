@@ -206,9 +206,31 @@ U 1 1 5E9AF941
 P 2300 3300
 F 0 "H6" H 2400 3346 50  0000 L CNN
 F 1 "USB" H 2400 3255 50  0000 L CNN
-F 2 "elektrophon:panel_jack" H 2300 3300 50  0001 C CNN
+F 2 "elektrophon:panel_usb" H 2300 3300 50  0001 C CNN
 F 3 "~" H 2300 3300 50  0001 C CNN
 	1    2300 3300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H14
+U 1 1 5EB3E9AB
+P 1700 3650
+F 0 "H14" H 1800 3696 50  0000 L CNN
+F 1 "CONNECT" H 1800 3605 50  0000 L CNN
+F 2 "elektrophon:LED_Monitor" H 1700 3650 50  0001 C CNN
+F 3 "~" H 1700 3650 50  0001 C CNN
+	1    1700 3650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H15
+U 1 1 5EB3EB48
+P 2300 3650
+F 0 "H15" H 2400 3696 50  0000 L CNN
+F 1 "BEAT_LED" H 2400 3605 50  0000 L CNN
+F 2 "elektrophon:LED_Monitor" H 2300 3650 50  0001 C CNN
+F 3 "~" H 2300 3650 50  0001 C CNN
+	1    2300 3650
 	1    0    0    -1  
 $EndComp
 $EndSCHEMATC
