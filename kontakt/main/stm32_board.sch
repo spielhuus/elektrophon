@@ -211,7 +211,7 @@ AR Path="/5EA33932" Ref="C?"  Part="1"
 AR Path="/5E9FE2D3/5EA33932" Ref="C3"  Part="1" 
 F 0 "C3" H 968 6646 50  0000 L CNN
 F 1 "100u" H 968 6555 50  0000 L CNN
-F 2 "Capacitor_Tantalum_SMD:CP_EIA-3216-18_Kemet-A_Pad1.58x1.35mm_HandSolder" H 888 6450 50  0001 C CNN
+F 2 "Capacitor_Tantalum_SMD:CP_EIA-3528-15_AVX-H_Pad1.50x2.35mm_HandSolder" H 888 6450 50  0001 C CNN
 F 3 "~" H 850 6600 50  0001 C CNN
 	1    850  6600
 	1    0    0    -1  
@@ -295,7 +295,7 @@ AR Path="/5EA3395A" Ref="C?"  Part="1"
 AR Path="/5E9FE2D3/5EA3395A" Ref="C5"  Part="1" 
 F 0 "C5" H 2368 6646 50  0000 L CNN
 F 1 "330u" H 2368 6555 50  0000 L CNN
-F 2 "Capacitor_Tantalum_SMD:CP_EIA-3216-10_Kemet-I_Pad1.58x1.35mm_HandSolder" H 2288 6450 50  0001 C CNN
+F 2 "Capacitor_Tantalum_SMD:CP_EIA-6032-20_AVX-F_Pad2.25x2.35mm_HandSolder" H 2288 6450 50  0001 C CNN
 F 3 "~" H 2250 6600 50  0001 C CNN
 	1    2250 6600
 	1    0    0    -1  
@@ -552,7 +552,7 @@ AR Path="/5EA33A0B" Ref="J?"  Part="1"
 AR Path="/5E9FE2D3/5EA33A0B" Ref="J4"  Part="1" 
 F 0 "J4" H 6208 4331 50  0000 C CNN
 F 1 "SWD" H 6208 4240 50  0000 C CNN
-F 2 "Connector_PinHeader_2.00mm:PinHeader_1x04_P2.00mm_Horizontal" H 6100 4050 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Horizontal" H 6100 4050 50  0001 C CNN
 F 3 "~" H 6100 4050 50  0001 C CNN
 	1    6100 4050
 	1    0    0    -1  
@@ -775,19 +775,6 @@ RESET
 Wire Wire Line
 	5800 1550 5500 1550
 $Comp
-L Connector_Generic:Conn_02x03_Counter_Clockwise J?
-U 1 1 5EA33A96
-P 9050 1700
-AR Path="/5EA33A96" Ref="J?"  Part="1" 
-AR Path="/5E9FE2D3/5EA33A96" Ref="J5"  Part="1" 
-F 0 "J5" H 9100 2017 50  0000 C CNN
-F 1 "Conn_02x03_Counter_Clockwise" H 9100 1926 50  0000 C CNN
-F 2 "Connector_PinHeader_2.00mm:PinHeader_2x03_P2.00mm_Vertical" H 9050 1700 50  0001 C CNN
-F 3 "~" H 9050 1700 50  0001 C CNN
-	1    9050 1700
-	1    0    0    -1  
-$EndComp
-$Comp
 L power:+3.3V #PWR?
 U 1 1 5EA33A9C
 P 9800 1550
@@ -981,6 +968,17 @@ F 1 "AMS1117-3.3" H 1800 6601 50  0000 C CNN
 F 2 "Package_TO_SOT_SMD:SOT-223-3_TabPin2" H 1800 6650 50  0001 C CNN
 F 3 "http://www.advanced-monolithic.com/pdf/ds1117.pdf" H 1900 6200 50  0001 C CNN
 	1    1800 6450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_02x03_Odd_Even J5
+U 1 1 5EBB3828
+P 9050 1700
+F 0 "J5" H 9100 2017 50  0000 C CNN
+F 1 "Conn_02x03_Odd_Even" H 9100 1926 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x03_P2.54mm_Vertical" H 9050 1700 50  0001 C CNN
+F 3 "~" H 9050 1700 50  0001 C CNN
+	1    9050 1700
 	1    0    0    -1  
 $EndComp
 $EndSCHEMATC

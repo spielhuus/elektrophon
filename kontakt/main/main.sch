@@ -360,17 +360,6 @@ F 3 "" H 6900 1400 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Connector:Conn_01x04_Male J3
-U 1 1 5EAC0B93
-P 8150 1550
-F 0 "J3" H 8258 1831 50  0000 C CNN
-F 1 "Conn_01x04_Male" H 8258 1740 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 8150 1550 50  0001 C CNN
-F 3 "~" H 8150 1550 50  0001 C CNN
-	1    8150 1550
-	1    0    0    -1  
-$EndComp
-$Comp
 L Connector:Conn_01x15_Female J2
 U 1 1 5EA557A8
 P 6700 2100
@@ -417,5 +406,16 @@ F 2 "" H 1350 6300 50  0001 C CNN
 F 3 "" H 1350 6300 50  0001 C CNN
 	1    1350 6300
 	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x04_Female J3
+U 1 1 5EB82EA4
+P 8150 1550
+F 0 "J3" H 8042 1835 50  0000 C CNN
+F 1 "Conn_01x04_Female" H 8042 1744 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 8150 1550 50  0001 C CNN
+F 3 "~" H 8150 1550 50  0001 C CNN
+	1    8150 1550
+	-1   0    0    -1  
 $EndComp
 $EndSCHEMATC
