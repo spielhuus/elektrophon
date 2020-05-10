@@ -1,4 +1,5 @@
 EESchema Schematic File Version 4
+LIBS:main-cache
 EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
@@ -460,7 +461,7 @@ L Device:R_POT RV7
 U 1 1 5D58B3F5
 P 1200 3050
 F 0 "RV7" H 1130 3096 50  0000 R CNN
-F 1 "500k" H 1130 3005 50  0000 R CNN
+F 1 "100k" H 1130 3005 50  0000 R CNN
 F 2 "elektrophon:Potentiometer_Alpha_RD901F-40-00D_Single_Vertical" H 1200 3050 50  0001 C CNN
 F 3 "~" H 1200 3050 50  0001 C CNN
 	1    1200 3050

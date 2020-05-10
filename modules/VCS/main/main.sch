@@ -1874,23 +1874,23 @@ F 3 "" H 5900 6600 50  0001 C CNN
 	1    5900 6600
 	0    1    1    0   
 $EndComp
-Text Label 10700 5600 0    50   ~ 0
+Text Label 10700 4700 0    50   ~ 0
 CYCLE_2
-Text Label 10700 5700 0    50   ~ 0
+Text Label 10700 4800 0    50   ~ 0
 CYCLE_1
-Text Label 10700 5200 0    50   ~ 0
+Text Label 10700 4400 0    50   ~ 0
 NET_1
-Text Label 10700 5800 0    50   ~ 0
+Text Label 10700 4900 0    50   ~ 0
 TRIGGER
-Text Label 10700 5100 0    50   ~ 0
+Text Label 10700 4300 0    50   ~ 0
 BIPOLAR_OUT
-Text Label 10700 5400 0    50   ~ 0
+Text Label 10700 4500 0    50   ~ 0
 OUT
-Text Label 10700 5500 0    50   ~ 0
-AC_OUT
-Text Label 10700 5000 0    50   ~ 0
-CV
 Text Label 10700 4600 0    50   ~ 0
+AC_OUT
+Text Label 10700 4200 0    50   ~ 0
+CV
+Text Label 10700 4100 0    50   ~ 0
 IN
 $Comp
 L Connector:Conn_01x21_Female J1

@@ -4,14 +4,14 @@ EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 3 3
-Title ""
-Date ""
-Rev ""
+Title "kontakt"
+Date "2020-05-10"
+Rev "01"
 Comp ""
-Comment1 ""
-Comment2 ""
+Comment1 "midi to cv interface"
+Comment2 "Schema for main circuit"
 Comment3 ""
-Comment4 ""
+Comment4 "License CC BY 4.0 - Attribution 4.0 International"
 $EndDescr
 Text GLabel 7350 1000 2    50   Input ~ 0
 Note_1
