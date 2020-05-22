@@ -21,14 +21,14 @@ U 1 1 5D54CF1A
 P 1250 3200
 F 0 "R1" V 1043 3200 50  0000 C CNN
 F 1 "1M" V 1134 3200 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 1180 3200 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 1180 3200 50  0001 C CNN
 F 3 "~" H 1250 3200 50  0001 C CNN
 	1    1250 3200
 	0    1    1    0   
 $EndComp
 Text Label 1750 3200 1    50   ~ 0
 LIN_FM
-Text Label 9050 1950 2    50   ~ 0
+Text Label 9050 2050 2    50   ~ 0
 TRIANGLE
 $Comp
 L Mechanical:MountingHole H1
@@ -76,9 +76,9 @@ F 3 "~" H 6200 7600 50  0001 C CNN
 $EndComp
 Text Label 9050 1850 2    50   ~ 0
 SAW
-Text Label 9050 2050 2    50   ~ 0
-SINE
 Text Label 9050 2150 2    50   ~ 0
+SINE
+Text Label 9050 1950 2    50   ~ 0
 PULSE
 $Comp
 L elektrophon:CEM3340 U4
@@ -108,7 +108,7 @@ U 1 1 5E13DB8B
 P 4400 1300
 F 0 "R16" V 4193 1300 50  0000 C CNN
 F 1 "5k6" V 4284 1300 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 4330 1300 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 4330 1300 50  0001 C CNN
 F 3 "~" H 4400 1300 50  0001 C CNN
 	1    4400 1300
 	0    1    1    0   
@@ -335,7 +335,7 @@ U 1 1 5E0576CD
 P 4650 2650
 F 0 "R19" V 4443 2650 50  0000 C CNN
 F 1 "1k8" V 4534 2650 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 4580 2650 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 4580 2650 50  0001 C CNN
 F 3 "~" H 4650 2650 50  0001 C CNN
 	1    4650 2650
 	0    1    1    0   
@@ -368,7 +368,7 @@ U 1 1 5EAF2BD6
 P 4050 3700
 F 0 "R11" V 3843 3700 50  0000 C CNN
 F 1 "30k" V 3934 3700 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 3980 3700 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 3980 3700 50  0001 C CNN
 F 3 "~" H 4050 3700 50  0001 C CNN
 	1    4050 3700
 	0    1    1    0   
@@ -392,7 +392,7 @@ U 1 1 5EAF727A
 P 4050 4100
 F 0 "R12" V 3843 4100 50  0000 C CNN
 F 1 "10k" V 3934 4100 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 3980 4100 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 3980 4100 50  0001 C CNN
 F 3 "~" H 4050 4100 50  0001 C CNN
 	1    4050 4100
 	0    1    1    0   
@@ -973,12 +973,12 @@ Connection ~ 4900 5500
 $Comp
 L Amplifier_Operational:TL072 U3
 U 2 1 5EC677CC
-P 9100 5550
-F 0 "U3" H 9100 5183 50  0000 C CNN
-F 1 "TL072" H 9100 5274 50  0000 C CNN
-F 2 "Package_DIP:DIP-8_W7.62mm_Socket" H 9100 5550 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 9100 5550 50  0001 C CNN
-	2    9100 5550
+P 6450 6200
+F 0 "U3" H 6450 5833 50  0000 C CNN
+F 1 "TL072" H 6450 5924 50  0000 C CNN
+F 2 "Package_DIP:DIP-8_W7.62mm_Socket" H 6450 6200 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 6450 6200 50  0001 C CNN
+	2    6450 6200
 	1    0    0    1   
 $EndComp
 $Comp
@@ -1172,7 +1172,7 @@ Text Label 9050 1650 2    50   ~ 0
 HARD_SYNC
 Text Label 4800 2150 2    50   ~ 0
 SOFT_SYNC
-Text Label 9050 1750 2    50   ~ 0
+Text Label 9050 1550 2    50   ~ 0
 SOFT_SYNC
 Text Label 4800 1950 2    50   ~ 0
 HARD_SYNC
@@ -1217,7 +1217,7 @@ U 1 1 5EBE0905
 P 1550 3400
 F 0 "R4" V 1343 3400 50  0000 C CNN
 F 1 "470" V 1434 3400 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 1480 3400 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 1480 3400 50  0001 C CNN
 F 3 "~" H 1550 3400 50  0001 C CNN
 	1    1550 3400
 	-1   0    0    1   
@@ -1228,7 +1228,7 @@ U 1 1 5EBE8CB9
 P 1950 3200
 F 0 "R7" V 1743 3200 50  0000 C CNN
 F 1 "1M5" V 1834 3200 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 1880 3200 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 1880 3200 50  0001 C CNN
 F 3 "~" H 1950 3200 50  0001 C CNN
 	1    1950 3200
 	0    1    1    0   
@@ -1293,7 +1293,7 @@ U 1 1 5EC1A3EF
 P 1450 5650
 F 0 "R3" V 1243 5650 50  0000 C CNN
 F 1 "470" V 1334 5650 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 1380 5650 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 1380 5650 50  0001 C CNN
 F 3 "~" H 1450 5650 50  0001 C CNN
 	1    1450 5650
 	-1   0    0    1   
@@ -1430,9 +1430,9 @@ Wire Wire Line
 Connection ~ 1450 1750
 Wire Wire Line
 	950  3200 1100 3200
-Text Label 9050 1550 2    50   ~ 0
-IN_LIN_FM
 Text Label 9050 1450 2    50   ~ 0
+IN_LIN_FM
+Text Label 9050 1750 2    50   ~ 0
 IN_PWM
 Text Label 9050 1350 2    50   ~ 0
 CV
@@ -1906,12 +1906,12 @@ Connection ~ 4050 7650
 $Comp
 L Amplifier_Operational:TL072 U2
 U 2 1 5EC97D47
-P 6450 6200
-F 0 "U2" H 6450 5833 50  0000 C CNN
-F 1 "TL072" H 6450 5924 50  0000 C CNN
-F 2 "Package_DIP:DIP-8_W7.62mm_Socket" H 6450 6200 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 6450 6200 50  0001 C CNN
-	2    6450 6200
+P 9100 5550
+F 0 "U2" H 9100 5183 50  0000 C CNN
+F 1 "TL072" H 9100 5274 50  0000 C CNN
+F 2 "Package_DIP:DIP-8_W7.62mm_Socket" H 9100 5550 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 9100 5550 50  0001 C CNN
+	2    9100 5550
 	1    0    0    1   
 $EndComp
 $Comp
