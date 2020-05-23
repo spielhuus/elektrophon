@@ -79,7 +79,7 @@ F 1 "100k" H 3081 1555 50  0000 R CNN
 F 2 "elektrophon:Potentiometer_Alpha_RD901F-40-00D_Single_Vertical" H 3150 1600 50  0001 C CNN
 F 3 "~" H 3150 1600 50  0001 C CNN
 	1    3150 1600
-	1    0    0    -1  
+	1    0    0    1   
 $EndComp
 $Comp
 L power:GND #PWR015
@@ -207,7 +207,7 @@ F 1 "100k" H 3081 2655 50  0000 R CNN
 F 2 "elektrophon:Potentiometer_Alpha_RD901F-40-00D_Single_Vertical" H 3150 2700 50  0001 C CNN
 F 3 "~" H 3150 2700 50  0001 C CNN
 	1    3150 2700
-	1    0    0    -1  
+	1    0    0    1   
 $EndComp
 $Comp
 L power:GND #PWR016
@@ -335,7 +335,7 @@ F 1 "100k" H 3131 3705 50  0000 R CNN
 F 2 "elektrophon:Potentiometer_Alpha_RD901F-40-00D_Single_Vertical" H 3200 3750 50  0001 C CNN
 F 3 "~" H 3200 3750 50  0001 C CNN
 	1    3200 3750
-	1    0    0    -1  
+	1    0    0    1   
 $EndComp
 $Comp
 L power:GND #PWR017
@@ -461,7 +461,7 @@ F 1 "100k" H 3181 4755 50  0000 R CNN
 F 2 "elektrophon:Potentiometer_Alpha_RD901F-40-00D_Single_Vertical" H 3250 4800 50  0001 C CNN
 F 3 "~" H 3250 4800 50  0001 C CNN
 	1    3250 4800
-	1    0    0    -1  
+	1    0    0    1   
 $EndComp
 $Comp
 L power:GND #PWR018
