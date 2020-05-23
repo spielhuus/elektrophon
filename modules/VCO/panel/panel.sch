@@ -4,12 +4,12 @@ EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
-Title "Voltage Controlled Slope"
-Date "2019-12-01"
+Title "vco"
+Date "2020-05-23"
 Rev "01"
 Comp ""
-Comment1 "Original design by Ken Stone"
-Comment2 "Schema for the panel"
+Comment1 "schema for the panel"
+Comment2 "CEM3340 voltage controlled oszillator"
 Comment3 ""
 Comment4 "License CC BY 4.0 - Attribution 4.0 International"
 $EndDescr
@@ -151,7 +151,7 @@ U 1 1 5DA3331D
 P 1450 2300
 F 0 "H4" H 1550 2346 50  0000 L CNN
 F 1 "1V/OCT" H 1550 2255 50  0000 L CNN
-F 2 "elektrophon:SWITCH_HOLE" H 1450 2300 50  0001 C CNN
+F 2 "elektrophon:panel_jack" H 1450 2300 50  0001 C CNN
 F 3 "~" H 1450 2300 50  0001 C CNN
 	1    1450 2300
 	1    0    0    -1  

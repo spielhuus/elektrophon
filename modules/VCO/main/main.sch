@@ -4,14 +4,14 @@ EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
-Title ""
-Date ""
-Rev ""
+Title "vco"
+Date "2020-05-23"
+Rev "01"
 Comp ""
-Comment1 ""
-Comment2 ""
+Comment1 "schema for main circuit"
+Comment2 "CEM3340 voltage controlled oszillator"
 Comment3 ""
-Comment4 ""
+Comment4 "License CC BY 4.0 - Attribution 4.0 International"
 $EndDescr
 Text Label 2150 5500 1    50   ~ 0
 EXP_FM
@@ -354,12 +354,12 @@ V/O trim
 $Comp
 L Amplifier_Operational:TL072 U2
 U 1 1 5EAEBEFB
-P 4600 4200
-F 0 "U2" H 4600 3833 50  0000 C CNN
-F 1 "TL072" H 4600 3924 50  0000 C CNN
-F 2 "Package_DIP:DIP-8_W7.62mm_Socket" H 4600 4200 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 4600 4200 50  0001 C CNN
-	1    4600 4200
+P 9100 5550
+F 0 "U2" H 9100 5183 50  0000 C CNN
+F 1 "TL072" H 9100 5274 50  0000 C CNN
+F 2 "Package_DIP:DIP-8_W7.62mm_Socket" H 9100 5550 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 9100 5550 50  0001 C CNN
+	1    9100 5550
 	1    0    0    1   
 $EndComp
 $Comp
@@ -1906,12 +1906,12 @@ Connection ~ 4050 7650
 $Comp
 L Amplifier_Operational:TL072 U2
 U 2 1 5EC97D47
-P 9100 5550
-F 0 "U2" H 9100 5183 50  0000 C CNN
-F 1 "TL072" H 9100 5274 50  0000 C CNN
-F 2 "Package_DIP:DIP-8_W7.62mm_Socket" H 9100 5550 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 9100 5550 50  0001 C CNN
-	2    9100 5550
+P 4600 4200
+F 0 "U2" H 4600 3833 50  0000 C CNN
+F 1 "TL072" H 4600 3924 50  0000 C CNN
+F 2 "Package_DIP:DIP-8_W7.62mm_Socket" H 4600 4200 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 4600 4200 50  0001 C CNN
+	2    4600 4200
 	1    0    0    1   
 $EndComp
 $Comp
@@ -1957,4 +1957,8 @@ Wire Notes Line
 	3200 1150 3600 1150
 Text Notes 3300 1700 1    50   ~ 0
 close to pin 3
+Text Notes 6100 4200 1    50   ~ 0
+Sine Round
+Text Notes 7550 5300 0    50   ~ 0
+Sine\nSymmetry
 $EndSCHEMATC
