@@ -1,6 +1,6 @@
-## BOM: kontrast
+## *BOM: kontrast*
 
-### main panel
+### *main panel*
 
 |Qty|Reference(s)                 |Value |Footprint                                    |Datasheet                                  |
 |---|-----------------------------|------|---------------------------------------------|-------------------------------------------|
@@ -16,7 +16,7 @@
 |3  |U1, U2, U3                   |OPA2134|Package_SO:SOIC-8_3.9x4.9mm_P1.27mm          |http://www.ti.com/lit/ds/symlink/opa134.pdf|
 
 
-### misc material
+### *misc material*
 
 | Qty | Reference(s)             | Value              | Description | 
 |-----|--------------------------|--------------------|-------------|
