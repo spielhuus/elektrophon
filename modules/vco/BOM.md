@@ -11,7 +11,6 @@
 |1  |C13                              |1000p            |Capacitor_THT:C_Rect_L7.2mm_W4.5mm_P5.00mm_FKS2_FKP2_MKS2_MKP2|
 |1  |C15                              |0.001u           |Capacitor_THT:C_Rect_L7.2mm_W4.5mm_P5.00mm_FKS2_FKP2_MKS2_MKP2|
 |1  |C16                              |22p              |Capacitor_THT:C_Disc_D3.4mm_W2.1mm_P2.50mm                    |
-|4  |H1, H2, H3, H4                   |MountingHole     |MountingHole:MountingHole_2.2mm_M2                            |
 |1  |J1                               |IDC Header       |Connector_IDC:IDC-Header_2x05_P2.54mm_Vertical                |
 |1  |J2                               |Conn_01x12_Female|Connector_PinHeader_2.54mm:PinHeader_1x12_P2.54mm_Vertical    |
 |2  |Q1, Q2                           |2N3904           |Package_TO_SOT_THT:TO-92_Inline                               |
@@ -55,8 +54,7 @@
 |1  |C2                                |0.001u            |Capacitor_THT:C_Rect_L7.2mm_W4.5mm_P5.00mm_FKS2_FKP2_MKS2_MKP2|
 |1  |C3                                |0.1u              |Capacitor_THT:C_Rect_L4.6mm_W3.0mm_P2.50mm_MKS02_FKP02        |
 |1  |D1                                |1N4148            |Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal                    |
-|4  |H1, H2, H3, H4                    |MountingHole      |MountingHole:MountingHole_2.2mm_M2                            |
-|9  |J1, J2, J3, J4, J5, J6, J7, J8, J9|AudioJack2_SwitchT|elektrophon:Jack_3.5mm_WQP-PJ301BM_Vertical                   |
+|9  |J1, J2, J3, J4, J5, J6, J7, J8, J9|AudioJack2_SwitchT|elektrophon:Jack_3.5mm_WQP-PJ398SM_Vertical                   |
 |1  |J10                               |Conn_01x12_Male   |Connector_PinHeader_2.54mm:PinHeader_1x12_P2.54mm_Vertical    |
 |4  |R1, R2, R4, R6                    |100k              |Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal|
 |1  |R3                                |3M3               |Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal|
@@ -71,7 +69,9 @@
 
 | Qty | Reference(s)             | Value              | Description | 
 |-----|--------------------------|--------------------|-------------|
-| 4   |                        | 6.35mm              | Potentiometer Knobs, colors of your choice   |
+| 4   |                         | M2/15mm             | hex brass standoff, female to female | 
+| 1   |                        | M2-6mm               | Screws   |
+| 6   |                        | 6.35mm              | Potentiometer Knobs, colors of your choice   |
 
 ---
 [![CC BY-SA](https://licensebuttons.net/l/by-sa/3.0/88x31.png)](https://creativecommons.org/licenses/by-sa/4.0/)

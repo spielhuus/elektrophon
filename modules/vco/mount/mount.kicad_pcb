@@ -1886,7 +1886,7 @@
   (segment (start 80.047999 52.107999) (end 80.047999 56.171999) (width 0.25) (layer B.Cu) (net 29))
   (segment (start 79.248 51.308) (end 80.047999 52.107999) (width 0.25) (layer B.Cu) (net 29) (status 10))
 
-  (zone (net 2) (net_name GND) (layer B.Cu) (tstamp 5EC7F5E9) (hatch edge 0.508)
+  (zone (net 2) (net_name GND) (layer B.Cu) (tstamp 5ECA5193) (hatch edge 0.508)
     (connect_pads (clearance 0.508))
     (min_thickness 0.254)
     (fill yes (arc_segments 32) (thermal_gap 0.508) (thermal_bridge_width 0.508))
