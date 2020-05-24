@@ -5,8 +5,8 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title "Smooth and Stepped Generator"
-Date "2019-11-09"
-Rev "01"
+Date "2020-05-24"
+Rev "02"
 Comp ""
 Comment1 "Original design by Ken Stone"
 Comment2 "Schema for main circuit"

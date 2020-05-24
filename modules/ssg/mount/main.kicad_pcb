@@ -12,8 +12,8 @@
   (page A4)
   (title_block
     (title "Smooth and Stepped Generator")
-    (date 2019-11-17)
-    (rev 01)
+    (date 2020-05-24)
+    (rev 02)
     (comment 1 "Original design by Ken Stone")
     (comment 2 "PCB for mount circuit")
     (comment 4 "License CC BY 4.0 - Attribution 4.0 International")
@@ -1530,7 +1530,7 @@
   (segment (start 54.156 133.604) (end 42.324 133.604) (width 0.381) (layer F.Cu) (net 23))
   (segment (start 58.34 129.42) (end 54.156 133.604) (width 0.381) (layer F.Cu) (net 23) (status 10))
 
-  (zone (net 1) (net_name GND) (layer B.Cu) (tstamp 5EC9282D) (hatch edge 0.508)
+  (zone (net 1) (net_name GND) (layer B.Cu) (tstamp 5ECA35A1) (hatch edge 0.508)
     (connect_pads (clearance 0.508))
     (min_thickness 0.254)
     (fill yes (arc_segments 32) (thermal_gap 0.508) (thermal_bridge_width 0.508))
