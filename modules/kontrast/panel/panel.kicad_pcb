@@ -2,7 +2,7 @@
 
   (general
     (thickness 1.6)
-    (drawings 17)
+    (drawings 21)
     (tracks 0)
     (zones 0)
     (modules 15)
@@ -184,12 +184,12 @@
     (fp_text reference H2 (at 0 -9.4) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value "#1" (at -26.67 0 90) (layer F.Mask)
+    (fp_text value vol1 (at -26.67 0 90) (layer F.Mask) hide
       (effects (font (size 2 1.4) (thickness 0.25)))
     )
     (fp_circle (center 0 0) (end 6.6 0) (layer F.CrtYd) (width 0.05))
     (fp_circle (center 0 0) (end 6.35 0) (layer Cmts.User) (width 0.15))
-    (fp_text user %R (at 0.3 0) (layer F.Fab)
+    (fp_text user %R (at 0.3 0) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (pad "" np_thru_hole circle (at 0 0) (size 7.4 7.4) (drill 7.4) (layers *.Cu *.Mask))
@@ -234,12 +234,12 @@
     (fp_text reference H13 (at 0 -9.4) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value "#4" (at -26.67 0 90) (layer F.Mask)
+    (fp_text value vol4 (at -26.67 0 90) (layer F.Mask) hide
       (effects (font (size 2 1.4) (thickness 0.25)))
     )
     (fp_circle (center 0 0) (end 6.6 0) (layer F.CrtYd) (width 0.05))
     (fp_circle (center 0 0) (end 6.35 0) (layer Cmts.User) (width 0.15))
-    (fp_text user %R (at 0.3 0) (layer F.Fab)
+    (fp_text user %R (at 0.3 0) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (pad "" np_thru_hole circle (at 0 0) (size 7.4 7.4) (drill 7.4) (layers *.Cu *.Mask))
@@ -259,12 +259,12 @@
     (fp_text reference H12 (at 0 -9.4) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value "#3" (at -26.67 0 90) (layer F.Mask)
+    (fp_text value vol3 (at -26.67 0 90) (layer F.Mask) hide
       (effects (font (size 2 1.4) (thickness 0.25)))
     )
     (fp_circle (center 0 0) (end 6.6 0) (layer F.CrtYd) (width 0.05))
     (fp_circle (center 0 0) (end 6.35 0) (layer Cmts.User) (width 0.15))
-    (fp_text user %R (at 0.3 0) (layer F.Fab)
+    (fp_text user %R (at 0.3 0) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (pad "" np_thru_hole circle (at 0 0) (size 7.4 7.4) (drill 7.4) (layers *.Cu *.Mask))
@@ -284,12 +284,12 @@
     (fp_text reference H11 (at 0 -9.4) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value "#2" (at -26.67 0 90) (layer F.Mask)
+    (fp_text value vol2 (at -26.67 0 90) (layer F.Mask) hide
       (effects (font (size 2 1.4) (thickness 0.25)))
     )
     (fp_circle (center 0 0) (end 6.6 0) (layer F.CrtYd) (width 0.05))
     (fp_circle (center 0 0) (end 6.35 0) (layer Cmts.User) (width 0.15))
-    (fp_text user %R (at 0.3 0) (layer F.Fab)
+    (fp_text user %R (at 0.3 0) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (pad "" np_thru_hole circle (at 0 0) (size 7.4 7.4) (drill 7.4) (layers *.Cu *.Mask))
@@ -459,7 +459,7 @@
     (fp_text reference H3 (at 0 -9.4) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value out2 (at 0 9.144) (layer F.Mask) hide
+    (fp_text value out1 (at 0 9.144) (layer F.Mask) hide
       (effects (font (size 2 1.4) (thickness 0.25)))
     )
     (fp_circle (center 0 0) (end 4.2 0) (layer F.CrtYd) (width 0.05))
@@ -475,6 +475,18 @@
     )
   )
 
+  (gr_text "#4" (at 29.21 111.76 90) (layer F.Mask) (tstamp 5ECA248D)
+    (effects (font (size 2 1.4) (thickness 0.25)))
+  )
+  (gr_text "#3" (at 29.21 91.44 90) (layer F.Mask) (tstamp 5ECA248D)
+    (effects (font (size 2 1.4) (thickness 0.25)))
+  )
+  (gr_text "#2" (at 29.21 71.12 90) (layer F.Mask) (tstamp 5ECA248D)
+    (effects (font (size 2 1.4) (thickness 0.25)))
+  )
+  (gr_text "#1" (at 29.21 50.8 90) (layer F.Mask)
+    (effects (font (size 2 1.4) (thickness 0.25)))
+  )
   (gr_line (start 55.88 111.76) (end 55.88 132.08) (layer F.Mask) (width 0.25))
   (gr_line (start 55.88 111.76) (end 55.88 38.1) (layer F.Mask) (width 0.25))
   (gr_line (start 55.88 111.76) (end 35.56 116.84) (layer F.Mask) (width 0.25))

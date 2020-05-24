@@ -51,7 +51,7 @@ L Mechanical:MountingHole H3
 U 1 1 5EAD83BF
 P 2000 1800
 F 0 "H3" H 2100 1846 50  0000 L CNN
-F 1 "out2" H 2100 1755 50  0000 L CNN
+F 1 "out1" H 2100 1755 50  0000 L CNN
 F 2 "elektrophon:panel_jack" H 2000 1800 50  0001 C CNN
 F 3 "~" H 2000 1800 50  0001 C CNN
 	1    2000 1800
