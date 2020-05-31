@@ -1,4 +1,5 @@
 EESchema Schematic File Version 4
+LIBS:main-cache
 EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
@@ -1770,4 +1771,6 @@ Text Notes 3100 6400 0    50   ~ 0
 100
 Text Notes 4150 6150 0    50   ~ 0
 470
+Text Notes 2400 2450 0    50   ~ 0
+duplicate
 $EndSCHEMATC
