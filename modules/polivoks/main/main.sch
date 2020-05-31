@@ -1764,4 +1764,10 @@ Wire Wire Line
 	7900 6050 7900 6100
 Wire Wire Line
 	7950 6050 7900 6050
+Text Notes 1800 4150 0    50   ~ 0
+47k
+Text Notes 3100 6400 0    50   ~ 0
+100
+Text Notes 4150 6150 0    50   ~ 0
+470
 $EndSCHEMATC
