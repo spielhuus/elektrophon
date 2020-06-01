@@ -560,4 +560,12 @@ Text Label 7450 2650 0    50   ~ 0
 bp_out
 Text Label 7450 2750 0    50   ~ 0
 lp_out
+Text Notes 1350 3900 0    50   ~ 0
+3
+Text Notes 1350 3500 0    50   ~ 0
+1
+Text Notes 3500 5300 0    50   ~ 0
+3
+Text Notes 3750 5300 0    50   ~ 0
+1
 $EndSCHEMATC
