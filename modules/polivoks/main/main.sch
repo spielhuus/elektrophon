@@ -1,5 +1,4 @@
 EESchema Schematic File Version 4
-LIBS:main-cache
 EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
@@ -1349,11 +1348,11 @@ F 3 "" H 10600 5250 50  0001 C CNN
 $EndComp
 Text Label 10600 5350 0    50   ~ 0
 fm_in
-Text Label 10600 5450 0    50   ~ 0
+Text Label 10600 5650 0    50   ~ 0
 fm_level_1
 Text Label 10600 5550 0    50   ~ 0
 fm_level_2
-Text Label 10600 5650 0    50   ~ 0
+Text Label 10600 5450 0    50   ~ 0
 fm_level_3
 Text Label 10600 5750 0    50   ~ 0
 freq

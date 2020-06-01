@@ -786,45 +786,45 @@ Connection ~ 2300 3550
 $Comp
 L 4xxx:4070 U?
 U 1 1 5E90ED89
-P 5750 3000
-F 0 "U?" H 5750 3325 50  0000 C CNN
-F 1 "4070" H 5750 3234 50  0000 C CNN
-F 2 "" H 5750 3000 50  0001 C CNN
-F 3 "http://www.intersil.com/content/dam/Intersil/documents/cd40/cd4070bms-77bms.pdf" H 5750 3000 50  0001 C CNN
-	1    5750 3000
+P 6700 3200
+F 0 "U?" H 6700 3525 50  0000 C CNN
+F 1 "4070" H 6700 3434 50  0000 C CNN
+F 2 "" H 6700 3200 50  0001 C CNN
+F 3 "http://www.intersil.com/content/dam/Intersil/documents/cd40/cd4070bms-77bms.pdf" H 6700 3200 50  0001 C CNN
+	1    6700 3200
 	1    0    0    -1  
 $EndComp
 $Comp
 L 4xxx:4070 U?
 U 2 1 5E90FCF2
-P 5150 2900
-F 0 "U?" H 5150 3225 50  0000 C CNN
-F 1 "4070" H 5150 3134 50  0000 C CNN
-F 2 "" H 5150 2900 50  0001 C CNN
-F 3 "http://www.intersil.com/content/dam/Intersil/documents/cd40/cd4070bms-77bms.pdf" H 5150 2900 50  0001 C CNN
-	2    5150 2900
+P 5250 2800
+F 0 "U?" H 5250 3125 50  0000 C CNN
+F 1 "4070" H 5250 3034 50  0000 C CNN
+F 2 "" H 5250 2800 50  0001 C CNN
+F 3 "http://www.intersil.com/content/dam/Intersil/documents/cd40/cd4070bms-77bms.pdf" H 5250 2800 50  0001 C CNN
+	2    5250 2800
 	1    0    0    -1  
 $EndComp
 $Comp
 L 4xxx:4070 U?
 U 3 1 5E9119EE
-P 5150 3700
-F 0 "U?" H 5150 4025 50  0000 C CNN
-F 1 "4070" H 5150 3934 50  0000 C CNN
-F 2 "" H 5150 3700 50  0001 C CNN
-F 3 "http://www.intersil.com/content/dam/Intersil/documents/cd40/cd4070bms-77bms.pdf" H 5150 3700 50  0001 C CNN
-	3    5150 3700
+P 5250 3600
+F 0 "U?" H 5250 3925 50  0000 C CNN
+F 1 "4070" H 5250 3834 50  0000 C CNN
+F 2 "" H 5250 3600 50  0001 C CNN
+F 3 "http://www.intersil.com/content/dam/Intersil/documents/cd40/cd4070bms-77bms.pdf" H 5250 3600 50  0001 C CNN
+	3    5250 3600
 	1    0    0    -1  
 $EndComp
 $Comp
 L 4xxx:4070 U?
 U 4 1 5E913093
-P 5750 3800
-F 0 "U?" H 5750 4125 50  0000 C CNN
-F 1 "4070" H 5750 4034 50  0000 C CNN
-F 2 "" H 5750 3800 50  0001 C CNN
-F 3 "http://www.intersil.com/content/dam/Intersil/documents/cd40/cd4070bms-77bms.pdf" H 5750 3800 50  0001 C CNN
-	4    5750 3800
+P 6700 4000
+F 0 "U?" H 6700 4325 50  0000 C CNN
+F 1 "4070" H 6700 4234 50  0000 C CNN
+F 2 "" H 6700 4000 50  0001 C CNN
+F 3 "http://www.intersil.com/content/dam/Intersil/documents/cd40/cd4070bms-77bms.pdf" H 6700 4000 50  0001 C CNN
+	4    6700 4000
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -838,89 +838,89 @@ F 3 "http://www.intersil.com/content/dam/Intersil/documents/cd40/cd4070bms-77bms
 	5    1150 7100
 	1    0    0    -1  
 $EndComp
-Text Label 4850 2800 2    50   ~ 0
+Text Label 4950 2700 2    50   ~ 0
 OSC_3
-Text Label 4850 3000 2    50   ~ 0
+Text Label 4950 2900 2    50   ~ 0
 OSC_4
-Text Label 5450 3100 2    50   ~ 0
+Text Label 6400 3300 2    50   ~ 0
 OSC_2
-Text Label 4850 3600 2    50   ~ 0
+Text Label 4950 3500 2    50   ~ 0
 OSC_1
-Text Label 4850 3800 2    50   ~ 0
+Text Label 4950 3700 2    50   ~ 0
 OSC_5
-Text Label 5450 3900 2    50   ~ 0
+Text Label 6400 4100 2    50   ~ 0
 OSC_6
 $Comp
 L Device:R R?
 U 1 1 5E96F990
-P 6300 3000
-F 0 "R?" V 6093 3000 50  0000 C CNN
-F 1 "100k" V 6184 3000 50  0000 C CNN
-F 2 "" V 6230 3000 50  0001 C CNN
-F 3 "~" H 6300 3000 50  0001 C CNN
-	1    6300 3000
+P 7250 3200
+F 0 "R?" V 7043 3200 50  0000 C CNN
+F 1 "100k" V 7134 3200 50  0000 C CNN
+F 2 "" V 7180 3200 50  0001 C CNN
+F 3 "~" H 7250 3200 50  0001 C CNN
+	1    7250 3200
 	0    1    1    0   
 $EndComp
 $Comp
 L Device:R R?
 U 1 1 5E96FFE6
-P 6300 3800
-F 0 "R?" V 6093 3800 50  0000 C CNN
-F 1 "100k" V 6184 3800 50  0000 C CNN
-F 2 "" V 6230 3800 50  0001 C CNN
-F 3 "~" H 6300 3800 50  0001 C CNN
-	1    6300 3800
+P 7250 4000
+F 0 "R?" V 7043 4000 50  0000 C CNN
+F 1 "100k" V 7134 4000 50  0000 C CNN
+F 2 "" V 7180 4000 50  0001 C CNN
+F 3 "~" H 7250 4000 50  0001 C CNN
+	1    7250 4000
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	6150 3800 6050 3800
+	7100 4000 7000 4000
 Wire Wire Line
-	6150 3000 6050 3000
+	7100 3200 7000 3200
 Wire Wire Line
-	6450 3000 6650 3000
+	7400 3200 7600 3200
 Wire Wire Line
-	6650 3000 6650 3400
+	7600 3200 7600 3600
 Wire Wire Line
-	6650 3800 6450 3800
+	7600 4000 7400 4000
 $Comp
 L Device:C C?
 U 1 1 5E97B5D3
-P 6950 3400
-F 0 "C?" V 6698 3400 50  0000 C CNN
-F 1 "0.1u" V 6789 3400 50  0000 C CNN
-F 2 "" H 6988 3250 50  0001 C CNN
-F 3 "~" H 6950 3400 50  0001 C CNN
-	1    6950 3400
+P 7900 3600
+F 0 "C?" V 7648 3600 50  0000 C CNN
+F 1 "0.1u" V 7739 3600 50  0000 C CNN
+F 2 "" H 7938 3450 50  0001 C CNN
+F 3 "~" H 7900 3600 50  0001 C CNN
+	1    7900 3600
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	6800 3400 6650 3400
-Connection ~ 6650 3400
+	7750 3600 7600 3600
+Connection ~ 7600 3600
 Wire Wire Line
-	6650 3400 6650 3800
+	7600 3600 7600 4000
 $Comp
 L Device:R R?
 U 1 1 5E97DD04
-P 6650 4050
-F 0 "R?" H 6580 4004 50  0000 R CNN
-F 1 "100k" H 6580 4095 50  0000 R CNN
-F 2 "" V 6580 4050 50  0001 C CNN
-F 3 "~" H 6650 4050 50  0001 C CNN
-	1    6650 4050
+P 7600 4250
+F 0 "R?" H 7530 4204 50  0000 R CNN
+F 1 "100k" H 7530 4295 50  0000 R CNN
+F 2 "" V 7530 4250 50  0001 C CNN
+F 3 "~" H 7600 4250 50  0001 C CNN
+	1    7600 4250
 	-1   0    0    1   
 $EndComp
 Wire Wire Line
-	6650 3800 6650 3900
-Connection ~ 6650 3800
+	7600 4000 7600 4100
+Connection ~ 7600 4000
 $Comp
 L power:GND #PWR?
 U 1 1 5E980EBD
-P 6650 4200
-F 0 "#PWR?" H 6650 3950 50  0001 C CNN
-F 1 "GND" H 6655 4027 50  0000 C CNN
-F 2 "" H 6650 4200 50  0001 C CNN
-F 3 "" H 6650 4200 50  0001 C CNN
-	1    6650 4200
+P 7600 4400
+F 0 "#PWR?" H 7600 4150 50  0001 C CNN
+F 1 "GND" H 7605 4227 50  0000 C CNN
+F 2 "" H 7600 4400 50  0001 C CNN
+F 3 "" H 7600 4400 50  0001 C CNN
+	1    7600 4400
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -999,6 +999,62 @@ Wire Wire Line
 	1750 7600 2250 7600
 Text Label 9800 3500 2    50   ~ 0
 out
-Text Label 7100 3400 0    50   ~ 0
+Text Label 8050 3600 0    50   ~ 0
 out
+$Comp
+L Connector:AudioJack2_SwitchT J?
+U 1 1 5ED7550B
+P 6050 2800
+F 0 "J?" H 5870 2825 50  0000 R CNN
+F 1 "OUT" H 5870 2734 50  0000 R CNN
+F 2 "elektrophon:Jack_3.5mm_WQP-PJ398SM_Vertical" H 6050 2800 50  0001 C CNN
+F 3 "~" H 6050 2800 50  0001 C CNN
+	1    6050 2800
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	5800 3100 6400 3100
+$Comp
+L Connector:AudioJack2_SwitchT J?
+U 1 1 5ED95609
+P 6050 3600
+F 0 "J?" H 5870 3625 50  0000 R CNN
+F 1 "OUT" H 5870 3534 50  0000 R CNN
+F 2 "elektrophon:Jack_3.5mm_WQP-PJ398SM_Vertical" H 6050 3600 50  0001 C CNN
+F 3 "~" H 6050 3600 50  0001 C CNN
+	1    6050 3600
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	5750 3900 6400 3900
+$Comp
+L Device:R R?
+U 1 1 5EDB76EA
+P 5700 2800
+F 0 "R?" V 5907 2800 50  0000 C CNN
+F 1 "1k" V 5816 2800 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 5630 2800 50  0001 C CNN
+F 3 "~" H 5700 2800 50  0001 C CNN
+	1    5700 2800
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5EDD4412
+P 5700 3600
+F 0 "R?" V 5907 3600 50  0000 C CNN
+F 1 "1k" V 5816 3600 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 5630 3600 50  0001 C CNN
+F 3 "~" H 5700 3600 50  0001 C CNN
+	1    5700 3600
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	5850 3700 5750 3700
+Wire Wire Line
+	5750 3700 5750 3900
+Wire Wire Line
+	5850 2900 5800 2900
+Wire Wire Line
+	5800 2900 5800 3100
 $EndSCHEMATC

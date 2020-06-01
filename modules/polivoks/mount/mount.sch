@@ -190,7 +190,7 @@ F 1 "47k" H 1430 2405 50  0000 R CNN
 F 2 "elektrophon:Potentiometer_Alpha_RD901F-40-00D_Single_Vertical" H 1500 2450 50  0001 C CNN
 F 3 "~" H 1500 2450 50  0001 C CNN
 	1    1500 2450
-	1    0    0    -1  
+	1    0    0    1   
 $EndComp
 Wire Wire Line
 	1500 2700 1500 2600
@@ -251,7 +251,7 @@ F 1 "100k" H 3581 5155 50  0000 R CNN
 F 2 "elektrophon:Potentiometer_Alpha_RD901F-40-00D_Single_Vertical" H 3650 5200 50  0001 C CNN
 F 3 "~" H 3650 5200 50  0001 C CNN
 	1    3650 5200
-	0    -1   -1   0   
+	0    1    -1   0   
 $EndComp
 $Comp
 L Device:R R5
@@ -540,11 +540,11 @@ F 3 "~" H 7250 2050 50  0001 C CNN
 $EndComp
 Text Label 7450 1750 0    50   ~ 0
 fm_in
-Text Label 7450 1850 0    50   ~ 0
+Text Label 7450 2050 0    50   ~ 0
 fm_level_1
 Text Label 7450 1950 0    50   ~ 0
 fm_level_2
-Text Label 7450 2050 0    50   ~ 0
+Text Label 7450 1850 0    50   ~ 0
 fm_level_3
 Text Label 7450 2150 0    50   ~ 0
 freq
@@ -560,12 +560,4 @@ Text Label 7450 2650 0    50   ~ 0
 bp_out
 Text Label 7450 2750 0    50   ~ 0
 lp_out
-Text Notes 1350 3900 0    50   ~ 0
-3
-Text Notes 1350 3500 0    50   ~ 0
-1
-Text Notes 3500 5300 0    50   ~ 0
-3
-Text Notes 3750 5300 0    50   ~ 0
-1
 $EndSCHEMATC
