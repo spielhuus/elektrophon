@@ -333,8 +333,8 @@ $Comp
 L Device:R R19
 U 1 1 5E0576CD
 P 4650 2650
-F 0 "R19" V 4443 2650 50  0000 C CNN
-F 1 "1k8" V 4534 2650 50  0000 C CNN
+F 0 "R19" V 4750 2650 50  0000 C CNN
+F 1 "1k8" V 4850 2650 50  0000 C CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 4580 2650 50  0001 C CNN
 F 3 "~" H 4650 2650 50  0001 C CNN
 	1    4650 2650
@@ -1961,4 +1961,6 @@ Text Notes 6100 4200 1    50   ~ 0
 Sine Round
 Text Notes 7550 5300 0    50   ~ 0
 Sine\nSymmetry
+Text Notes 3400 700  0    50   ~ 0
+820
 $EndSCHEMATC
