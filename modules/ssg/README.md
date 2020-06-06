@@ -1,23 +1,26 @@
 ![module](https://img.shields.io/badge/module-other-yellow)
 ![status](https://img.shields.io/badge/status-not%20working-red)
 
-## *smooth and stepped generator*
- 
-## *building*
+## ***s**mooth and **s**tepped **g**enerator*
 
-<a href="https://spielhuus.github.io/elektrophon/images/4046-side.jpg"><img align="left" src="https://spielhuus.github.io/elektrophon/images/4046-side-tmb.jpg" height="300px"></img></a>
+the serge **s**mooth and **s**tepped **g**enerator is a versatile module. it can be used as a sample and hold module, <a href=""><img align="left" src="" height="300px"></img></a> a portamento or a simple triangle voltage conrolled lfo and many more applications. but the module wont do anything until you patch the application you want to use it for. this makes this module difficult to use. see the patch section for examples on how to use it. like many of the modules from ken stone it is built around the norton amplifier (LM3900). but all the parts are still active and available from the standard distributors.
+
+## *building*
 
 patch the cycle output of the smooth section into the input. you should get a oscillating signal on the smooth output. adjust it with the rate potentiometer.
 
 ## *calibration*
 
-patch the cycle output of the smooth section into the input. 
-connect the smooth output to a scope. 
-turn the rate potentiometer to minimum.
-adjust RV1 until you get an oscillating signal in the suboudio range
+### *calibrate the smooth section*
+
+* patch the cycle output of the smooth section into the input. 
+* connect the smooth output to a scope. 
+* turn the rate potentiometer to minimum.
+* adjust RV1 until you get an oscillating signal in the suboudio range
 
 ## *usage*
 
+here are some examples patches, all of there are taken from [serge-fans][2]
 
 ### *linear glide*
 
@@ -29,9 +32,9 @@ adjust RV1 until you get an oscillating signal in the suboudio range
 
 * same patch as above
 * patch between smooth out to cv
-* comtrol the glide oth the level potentiometer
+* comtrol the glide with the level potentiometer
 
-3. VC LFO (triangle) or VCO
+### *vc lfo (triangle) or vco*
 
 * patch the cycle output of the smooth section into the input. 
 
@@ -64,9 +67,6 @@ Now send a note envelope from DSG, DTG, or Envelope Generator to the VC rate jac
 Using a DSG or DTG create a rectangular clock pulse with a 99% duty cycle, that is, mostly 'on,' with a tiny 'off' part. 
 Send that pulse into Smooth HOLD.  Turn Smooth Rate fully clockwise. 
 Send Smooth Out to a VCO or some other module that needs a control voltage.  Play with the DSG rise/fall times and Smooth Rate. While HOLD is low the Smooth section takes a 'sample', when HOLD is high that sample is held. This should be enough to get you going for a while! More will follow later. John P.
-
-
-
 
 ## *Links*
 
