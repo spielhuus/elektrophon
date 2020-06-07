@@ -1,7 +1,7 @@
 ![module](https://img.shields.io/badge/module-other-yellow)
 ![status](https://img.shields.io/badge/status-not%20working-red)
 
-## *_s_mooth and _s_tepped _g_enerator*
+## *smooth and stepped generator*
 
 the serge **s**mooth and **s**tepped **g**enerator is a versatile module. it can be used as a sample and hold module, <a href=""><img align="left" src="" height="300px"></img></a> a portamento or a simple triangle voltage conrolled lfo and many more applications. but the module wont do anything until you patch the application you want to use it for. this makes this module difficult to use. see the patch section for examples on how to use it. like many of the modules from ken stone it is built around the norton amplifier (LM3900). but all the parts are still active and available from the standard distributors.
 
