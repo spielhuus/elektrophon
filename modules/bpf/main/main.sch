@@ -1,4 +1,5 @@
 EESchema Schematic File Version 4
+LIBS:main-cache
 EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
@@ -9,7 +10,7 @@ Date "2020-06-05"
 Rev "01"
 Comp ""
 Comment1 "simple resonant band pass filter"
-Comment2 "Schema for main circuit"
+Comment2 "schema for main circuit"
 Comment3 ""
 Comment4 "License CC BY 4.0 - Attribution 4.0 International"
 $EndDescr
@@ -508,7 +509,7 @@ F 1 "TL072" H 7550 3076 50  0000 C CNN
 F 2 "" H 7550 2800 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 7550 2800 50  0001 C CNN
 	2    7550 2800
-	1    0    0    -1  
+	1    0    0    1   
 $EndComp
 $Comp
 L Device:R R1
