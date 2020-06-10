@@ -14,10 +14,10 @@ Comment3 ""
 Comment4 "License CC BY 4.0 - Attribution 4.0 International"
 $EndDescr
 $Comp
-L Amplifier_Operational:TL072 U?
+L Amplifier_Operational:TL072 U3
 U 1 1 5EE6BAC5
 P 2000 2150
-F 0 "U?" H 2000 1783 50  0000 C CNN
+F 0 "U3" H 2000 1783 50  0000 C CNN
 F 1 "TL072" H 2000 1874 50  0000 C CNN
 F 2 "Package_DIP:DIP-8_W7.62mm_Socket" H 2000 2150 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 2000 2150 50  0001 C CNN
@@ -25,10 +25,10 @@ F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 2000 2150 50  0001 C CNN
 	1    0    0    1   
 $EndComp
 $Comp
-L Amplifier_Operational:TL072 U?
+L Amplifier_Operational:TL072 U5
 U 2 1 5EE6BACB
 P 3300 2050
-F 0 "U?" H 3300 1683 50  0000 C CNN
+F 0 "U5" H 3300 1683 50  0000 C CNN
 F 1 "TL072" H 3300 1774 50  0000 C CNN
 F 2 "Package_DIP:DIP-8_W7.62mm_Socket" H 3300 2050 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 3300 2050 50  0001 C CNN
@@ -36,10 +36,10 @@ F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 3300 2050 50  0001 C CNN
 	1    0    0    1   
 $EndComp
 $Comp
-L Amplifier_Operational:TL072 U?
+L Amplifier_Operational:TL072 U5
 U 1 1 5EE6BAD1
 P 4750 2050
-F 0 "U?" H 4750 1683 50  0000 C CNN
+F 0 "U5" H 4750 1683 50  0000 C CNN
 F 1 "TL072" H 4750 1774 50  0000 C CNN
 F 2 "Package_DIP:DIP-8_W7.62mm_Socket" H 4750 2050 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 4750 2050 50  0001 C CNN
@@ -47,10 +47,10 @@ F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 4750 2050 50  0001 C CNN
 	1    0    0    1   
 $EndComp
 $Comp
-L Amplifier_Operational:TL072 U?
+L Amplifier_Operational:TL072 U7
 U 2 1 5EE6BAD7
 P 6000 2050
-F 0 "U?" H 6000 2417 50  0000 C CNN
+F 0 "U7" H 6000 2417 50  0000 C CNN
 F 1 "TL072" H 6000 2326 50  0000 C CNN
 F 2 "Package_DIP:DIP-8_W7.62mm_Socket" H 6000 2050 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 6000 2050 50  0001 C CNN
@@ -58,10 +58,10 @@ F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 6000 2050 50  0001 C CNN
 	1    0    0    1   
 $EndComp
 $Comp
-L Device:R R?
+L Device:R R21
 U 1 1 5EE6BADD
 P 1300 1550
-F 0 "R?" V 1507 1550 50  0000 C CNN
+F 0 "R21" V 1507 1550 50  0000 C CNN
 F 1 "47k" V 1416 1550 50  0000 C CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 1230 1550 50  0001 C CNN
 F 3 "~" H 1300 1550 50  0001 C CNN
@@ -69,10 +69,10 @@ F 3 "~" H 1300 1550 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Device:R R?
+L Device:R R22
 U 1 1 5EE6BAE3
 P 1300 2050
-F 0 "R?" V 1507 2050 50  0000 C CNN
+F 0 "R22" V 1507 2050 50  0000 C CNN
 F 1 "47k" V 1416 2050 50  0000 C CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 1230 2050 50  0001 C CNN
 F 3 "~" H 1300 2050 50  0001 C CNN
@@ -80,10 +80,10 @@ F 3 "~" H 1300 2050 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Device:R R?
+L Device:R R25
 U 1 1 5EE6BAE9
 P 2000 1600
-F 0 "R?" V 2207 1600 50  0000 C CNN
+F 0 "R25" V 2207 1600 50  0000 C CNN
 F 1 "47k" V 2116 1600 50  0000 C CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 1930 1600 50  0001 C CNN
 F 3 "~" H 2000 1600 50  0001 C CNN
@@ -103,10 +103,10 @@ Wire Wire Line
 Wire Wire Line
 	2350 2150 2300 2150
 $Comp
-L Device:R R?
+L Device:R R28
 U 1 1 5EE6BAF5
 P 2600 2150
-F 0 "R?" V 2807 2150 50  0000 C CNN
+F 0 "R28" V 2807 2150 50  0000 C CNN
 F 1 "10k" V 2716 2150 50  0000 C CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 2530 2150 50  0001 C CNN
 F 3 "~" H 2600 2150 50  0001 C CNN
@@ -114,10 +114,10 @@ F 3 "~" H 2600 2150 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Device:R R?
+L Device:R R32
 U 1 1 5EE6BAFB
 P 3300 1500
-F 0 "R?" V 3507 1500 50  0000 C CNN
+F 0 "R32" V 3507 1500 50  0000 C CNN
 F 1 "10k" V 3416 1500 50  0000 C CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 3230 1500 50  0001 C CNN
 F 3 "~" H 3300 1500 50  0001 C CNN
@@ -147,10 +147,10 @@ Wire Wire Line
 Connection ~ 1650 2050
 Connection ~ 1550 2050
 $Comp
-L Device:R R?
+L Device:R R31
 U 1 1 5EE6BB0D
 P 3300 1100
-F 0 "R?" V 3507 1100 50  0000 C CNN
+F 0 "R31" V 3507 1100 50  0000 C CNN
 F 1 "10k" V 3416 1100 50  0000 C CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 3230 1100 50  0001 C CNN
 F 3 "~" H 3300 1100 50  0001 C CNN
@@ -158,10 +158,10 @@ F 3 "~" H 3300 1100 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Device:R R?
+L Device:R R35
 U 1 1 5EE6BB13
 P 3650 3900
-F 0 "R?" H 3720 3946 50  0000 L CNN
+F 0 "R35" H 3720 3946 50  0000 L CNN
 F 1 "15k" H 3720 3855 50  0000 L CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 3580 3900 50  0001 C CNN
 F 3 "~" H 3650 3900 50  0001 C CNN
@@ -169,10 +169,10 @@ F 3 "~" H 3650 3900 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C C?
+L Device:C C9
 U 1 1 5EE6BB19
 P 4800 1500
-F 0 "C?" V 4548 1500 50  0000 C CNN
+F 0 "C9" V 4548 1500 50  0000 C CNN
 F 1 "22n" V 4639 1500 50  0000 C CNN
 F 2 "Capacitor_THT:C_Rect_L7.2mm_W5.5mm_P5.00mm_FKS2_FKP2_MKS2_MKP2" H 4838 1350 50  0001 C CNN
 F 3 "~" H 4800 1500 50  0001 C CNN
@@ -205,10 +205,10 @@ Wire Wire Line
 	2750 2150 2800 2150
 Connection ~ 2350 2150
 $Comp
-L Diode:1N4148 D?
+L Diode:1N4148 D3
 U 1 1 5EE6BB2D
 P 3200 2950
-F 0 "D?" H 3200 3166 50  0000 C CNN
+F 0 "D3" H 3200 3166 50  0000 C CNN
 F 1 "1N4148" H 3200 3075 50  0000 C CNN
 F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 3200 2775 50  0001 C CNN
 F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 3200 2950 50  0001 C CNN
@@ -216,10 +216,10 @@ F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 3200 
 	1    0    0    -1  
 $EndComp
 $Comp
-L Diode:1N4148 D?
+L Diode:1N4148 D4
 U 1 1 5EE6BB33
 P 3200 3300
-F 0 "D?" H 3200 3084 50  0000 C CNN
+F 0 "D4" H 3200 3084 50  0000 C CNN
 F 1 "1N4148" H 3200 3175 50  0000 C CNN
 F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 3200 3125 50  0001 C CNN
 F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 3200 3300 50  0001 C CNN
@@ -227,10 +227,10 @@ F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 3200 
 	-1   0    0    1   
 $EndComp
 $Comp
-L Device:R_POT RV?
+L Device:R_POT RV4
 U 1 1 5EE6BB39
 P 2800 3700
-F 0 "RV?" V 2685 3700 50  0000 C CNN
+F 0 "RV4" V 2685 3700 50  0000 C CNN
 F 1 "50k" V 2594 3700 50  0000 C CNN
 F 2 "Potentiometer_THT:Potentiometer_Alps_RK09Y11_Single_Horizontal" H 2800 3700 50  0001 C CNN
 F 3 "~" H 2800 3700 50  0001 C CNN
@@ -238,10 +238,10 @@ F 3 "~" H 2800 3700 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Device:R R?
+L Device:R R27
 U 1 1 5EE6BB3F
 P 2450 3700
-F 0 "R?" V 2243 3700 50  0000 C CNN
+F 0 "R27" V 2243 3700 50  0000 C CNN
 F 1 "4k7" V 2334 3700 50  0000 C CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 2380 3700 50  0001 C CNN
 F 3 "~" H 2450 3700 50  0001 C CNN
@@ -249,10 +249,10 @@ F 3 "~" H 2450 3700 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L power:GND #PWR?
+L power:GND #PWR029
 U 1 1 5EE6BB45
 P 2250 3750
-F 0 "#PWR?" H 2250 3500 50  0001 C CNN
+F 0 "#PWR029" H 2250 3500 50  0001 C CNN
 F 1 "GND" H 2255 3577 50  0000 C CNN
 F 2 "" H 2250 3750 50  0001 C CNN
 F 3 "" H 2250 3750 50  0001 C CNN
@@ -281,10 +281,10 @@ Connection ~ 3650 3300
 Wire Wire Line
 	3650 3300 3650 2950
 $Comp
-L power:GND #PWR?
+L power:GND #PWR031
 U 1 1 5EE6BB57
 P 3650 4050
-F 0 "#PWR?" H 3650 3800 50  0001 C CNN
+F 0 "#PWR031" H 3650 3800 50  0001 C CNN
 F 1 "GND" H 3655 3877 50  0000 C CNN
 F 2 "" H 3650 4050 50  0001 C CNN
 F 3 "" H 3650 4050 50  0001 C CNN
@@ -297,10 +297,10 @@ Wire Wire Line
 	2800 2150 3000 2150
 Connection ~ 2800 2150
 $Comp
-L Device:R_POT_Dual_Separate RV?
+L Device:R_POT_Dual_Separate RV6
 U 1 1 5EE6BB60
 P 4750 2600
-F 0 "RV?" V 4635 2600 50  0000 C CNN
+F 0 "RV6" V 4635 2600 50  0000 C CNN
 F 1 "100k" V 4544 2600 50  0000 C CNN
 F 2 "Potentiometer_THT:Potentiometer_Alps_RK097_Dual_Horizontal" H 4750 2600 50  0001 C CNN
 F 3 "~" H 4750 2600 50  0001 C CNN
@@ -308,10 +308,10 @@ F 3 "~" H 4750 2600 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Device:R_POT_Dual_Separate RV?
+L Device:R_POT_Dual_Separate RV6
 U 2 1 5EE6BB66
 P 4750 3200
-F 0 "RV?" V 4635 3200 50  0000 C CNN
+F 0 "RV6" V 4635 3200 50  0000 C CNN
 F 1 "100k" V 4544 3200 50  0000 C CNN
 F 2 "Potentiometer_THT:Potentiometer_Alps_RK097_Dual_Horizontal" H 4750 3200 50  0001 C CNN
 F 3 "~" H 4750 3200 50  0001 C CNN
@@ -325,10 +325,10 @@ Wire Wire Line
 Wire Wire Line
 	4600 2450 4600 2600
 $Comp
-L Device:R R?
+L Device:R R37
 U 1 1 5EE6BB6F
 P 3850 2950
-F 0 "R?" V 3643 2950 50  0000 C CNN
+F 0 "R37" V 3643 2950 50  0000 C CNN
 F 1 "6k8" V 3734 2950 50  0000 C CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 3780 2950 50  0001 C CNN
 F 3 "~" H 3850 2950 50  0001 C CNN
@@ -338,10 +338,10 @@ $EndComp
 Wire Wire Line
 	3450 1100 5150 1100
 $Comp
-L Device:R R?
+L Device:R R39
 U 1 1 5EE6BB76
 P 4150 2250
-F 0 "R?" H 3900 2300 50  0000 L CNN
+F 0 "R39" H 3900 2300 50  0000 L CNN
 F 1 "680" H 3900 2200 50  0000 L CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 4080 2250 50  0001 C CNN
 F 3 "~" H 4150 2250 50  0001 C CNN
@@ -366,10 +366,10 @@ Wire Wire Line
 	3700 2950 3650 2950
 Connection ~ 3650 2950
 $Comp
-L Device:R R?
+L Device:R R43
 U 1 1 5EE6BB87
 P 5400 2250
-F 0 "R?" H 5150 2300 50  0000 L CNN
+F 0 "R43" H 5150 2300 50  0000 L CNN
 F 1 "680" H 5150 2200 50  0000 L CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 5330 2250 50  0001 C CNN
 F 3 "~" H 5400 2250 50  0001 C CNN
@@ -401,10 +401,10 @@ Wire Wire Line
 	5300 3700 5300 3200
 Connection ~ 5300 3200
 $Comp
-L Device:R R?
+L Device:R R41
 U 1 1 5EE6BB9A
 P 4750 3700
-F 0 "R?" V 4543 3700 50  0000 C CNN
+F 0 "R41" V 4543 3700 50  0000 C CNN
 F 1 "22k" V 4634 3700 50  0000 C CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 4680 3700 50  0001 C CNN
 F 3 "~" H 4750 3700 50  0001 C CNN
@@ -414,10 +414,10 @@ $EndComp
 Wire Wire Line
 	4900 3700 5300 3700
 $Comp
-L Device:C C?
+L Device:C C11
 U 1 1 5EE6BBA1
 P 5950 1500
-F 0 "C?" V 5698 1500 50  0000 C CNN
+F 0 "C11" V 5698 1500 50  0000 C CNN
 F 1 "22n" V 5789 1500 50  0000 C CNN
 F 2 "Capacitor_THT:C_Rect_L7.2mm_W5.5mm_P5.00mm_FKS2_FKP2_MKS2_MKP2" H 5988 1350 50  0001 C CNN
 F 3 "~" H 5950 1500 50  0001 C CNN
@@ -443,10 +443,10 @@ Connection ~ 6350 2050
 Wire Wire Line
 	2600 3700 2650 3700
 $Comp
-L power:GND #PWR?
+L power:GND #PWR027
 U 1 1 5EE6BBB1
 P 1650 2300
-F 0 "#PWR?" H 1650 2050 50  0001 C CNN
+F 0 "#PWR027" H 1650 2050 50  0001 C CNN
 F 1 "GND" H 1655 2127 50  0000 C CNN
 F 2 "" H 1650 2300 50  0001 C CNN
 F 3 "" H 1650 2300 50  0001 C CNN
@@ -458,10 +458,10 @@ Wire Wire Line
 Wire Wire Line
 	1650 2250 1650 2300
 $Comp
-L power:GND #PWR?
+L power:GND #PWR033
 U 1 1 5EE6BBB9
 P 4400 2200
-F 0 "#PWR?" H 4400 1950 50  0001 C CNN
+F 0 "#PWR033" H 4400 1950 50  0001 C CNN
 F 1 "GND" H 4405 2027 50  0000 C CNN
 F 2 "" H 4400 2200 50  0001 C CNN
 F 3 "" H 4400 2200 50  0001 C CNN
@@ -473,10 +473,10 @@ Wire Wire Line
 Wire Wire Line
 	4400 2150 4400 2200
 $Comp
-L power:GND #PWR?
+L power:GND #PWR035
 U 1 1 5EE6BBC1
 P 5650 2200
-F 0 "#PWR?" H 5650 1950 50  0001 C CNN
+F 0 "#PWR035" H 5650 1950 50  0001 C CNN
 F 1 "GND" H 5655 2027 50  0000 C CNN
 F 2 "" H 5650 2200 50  0001 C CNN
 F 3 "" H 5650 2200 50  0001 C CNN
@@ -502,10 +502,10 @@ IN_2_b
 Text GLabel 6350 2050 2    50   Input ~ 0
 OUT_2
 $Comp
-L Amplifier_Operational:TL072 U?
+L Amplifier_Operational:TL072 U4
 U 1 1 5EE38097
 P 2150 5550
-F 0 "U?" H 2150 5183 50  0000 C CNN
+F 0 "U4" H 2150 5183 50  0000 C CNN
 F 1 "TL072" H 2150 5274 50  0000 C CNN
 F 2 "Package_DIP:DIP-8_W7.62mm_Socket" H 2150 5550 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 2150 5550 50  0001 C CNN
@@ -513,10 +513,10 @@ F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 2150 5550 50  0001 C CNN
 	1    0    0    1   
 $EndComp
 $Comp
-L Amplifier_Operational:TL072 U?
+L Amplifier_Operational:TL072 U6
 U 2 1 5EE3809D
 P 3450 5450
-F 0 "U?" H 3450 5083 50  0000 C CNN
+F 0 "U6" H 3450 5083 50  0000 C CNN
 F 1 "TL072" H 3450 5174 50  0000 C CNN
 F 2 "Package_DIP:DIP-8_W7.62mm_Socket" H 3450 5450 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 3450 5450 50  0001 C CNN
@@ -524,10 +524,10 @@ F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 3450 5450 50  0001 C CNN
 	1    0    0    1   
 $EndComp
 $Comp
-L Amplifier_Operational:TL072 U?
+L Amplifier_Operational:TL072 U6
 U 1 1 5EE380A3
 P 4900 5450
-F 0 "U?" H 4900 5083 50  0000 C CNN
+F 0 "U6" H 4900 5083 50  0000 C CNN
 F 1 "TL072" H 4900 5174 50  0000 C CNN
 F 2 "Package_DIP:DIP-8_W7.62mm_Socket" H 4900 5450 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 4900 5450 50  0001 C CNN
@@ -535,10 +535,10 @@ F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 4900 5450 50  0001 C CNN
 	1    0    0    1   
 $EndComp
 $Comp
-L Amplifier_Operational:TL072 U?
+L Amplifier_Operational:TL072 U8
 U 2 1 5EE380A9
 P 6150 5450
-F 0 "U?" H 6150 5817 50  0000 C CNN
+F 0 "U8" H 6150 5817 50  0000 C CNN
 F 1 "TL072" H 6150 5726 50  0000 C CNN
 F 2 "Package_DIP:DIP-8_W7.62mm_Socket" H 6150 5450 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 6150 5450 50  0001 C CNN
@@ -546,10 +546,10 @@ F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 6150 5450 50  0001 C CNN
 	1    0    0    1   
 $EndComp
 $Comp
-L Device:R R?
+L Device:R R23
 U 1 1 5EE380AF
 P 1450 4950
-F 0 "R?" V 1657 4950 50  0000 C CNN
+F 0 "R23" V 1657 4950 50  0000 C CNN
 F 1 "47k" V 1566 4950 50  0000 C CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 1380 4950 50  0001 C CNN
 F 3 "~" H 1450 4950 50  0001 C CNN
@@ -557,10 +557,10 @@ F 3 "~" H 1450 4950 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Device:R R?
+L Device:R R24
 U 1 1 5EE380B5
 P 1450 5450
-F 0 "R?" V 1657 5450 50  0000 C CNN
+F 0 "R24" V 1657 5450 50  0000 C CNN
 F 1 "47k" V 1566 5450 50  0000 C CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 1380 5450 50  0001 C CNN
 F 3 "~" H 1450 5450 50  0001 C CNN
@@ -568,10 +568,10 @@ F 3 "~" H 1450 5450 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Device:R R?
+L Device:R R26
 U 1 1 5EE380BB
 P 2150 5000
-F 0 "R?" V 2357 5000 50  0000 C CNN
+F 0 "R26" V 2357 5000 50  0000 C CNN
 F 1 "47k" V 2266 5000 50  0000 C CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 2080 5000 50  0001 C CNN
 F 3 "~" H 2150 5000 50  0001 C CNN
@@ -591,10 +591,10 @@ Wire Wire Line
 Wire Wire Line
 	2500 5550 2450 5550
 $Comp
-L Device:R R?
+L Device:R R30
 U 1 1 5EE380C7
 P 2750 5550
-F 0 "R?" V 2957 5550 50  0000 C CNN
+F 0 "R30" V 2957 5550 50  0000 C CNN
 F 1 "10k" V 2866 5550 50  0000 C CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 2680 5550 50  0001 C CNN
 F 3 "~" H 2750 5550 50  0001 C CNN
@@ -602,10 +602,10 @@ F 3 "~" H 2750 5550 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Device:R R?
+L Device:R R34
 U 1 1 5EE380CD
 P 3450 4900
-F 0 "R?" V 3657 4900 50  0000 C CNN
+F 0 "R34" V 3657 4900 50  0000 C CNN
 F 1 "10k" V 3566 4900 50  0000 C CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 3380 4900 50  0001 C CNN
 F 3 "~" H 3450 4900 50  0001 C CNN
@@ -635,10 +635,10 @@ Wire Wire Line
 Connection ~ 1800 5450
 Connection ~ 1700 5450
 $Comp
-L Device:R R?
+L Device:R R33
 U 1 1 5EE380DF
 P 3450 4500
-F 0 "R?" V 3657 4500 50  0000 C CNN
+F 0 "R33" V 3657 4500 50  0000 C CNN
 F 1 "10k" V 3566 4500 50  0000 C CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 3380 4500 50  0001 C CNN
 F 3 "~" H 3450 4500 50  0001 C CNN
@@ -646,10 +646,10 @@ F 3 "~" H 3450 4500 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Device:R R?
+L Device:R R36
 U 1 1 5EE380E5
 P 3800 7300
-F 0 "R?" H 3870 7346 50  0000 L CNN
+F 0 "R36" H 3870 7346 50  0000 L CNN
 F 1 "15k" H 3870 7255 50  0000 L CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 3730 7300 50  0001 C CNN
 F 3 "~" H 3800 7300 50  0001 C CNN
@@ -657,10 +657,10 @@ F 3 "~" H 3800 7300 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C C?
+L Device:C C10
 U 1 1 5EE380EB
 P 4950 4900
-F 0 "C?" V 4698 4900 50  0000 C CNN
+F 0 "C10" V 4698 4900 50  0000 C CNN
 F 1 "22n" V 4789 4900 50  0000 C CNN
 F 2 "Capacitor_THT:C_Rect_L7.2mm_W5.5mm_P5.00mm_FKS2_FKP2_MKS2_MKP2" H 4988 4750 50  0001 C CNN
 F 3 "~" H 4950 4900 50  0001 C CNN
@@ -693,10 +693,10 @@ Wire Wire Line
 	2900 5550 2950 5550
 Connection ~ 2500 5550
 $Comp
-L Diode:1N4148 D?
+L Diode:1N4148 D5
 U 1 1 5EE380FF
 P 3350 6350
-F 0 "D?" H 3350 6566 50  0000 C CNN
+F 0 "D5" H 3350 6566 50  0000 C CNN
 F 1 "1N4148" H 3350 6475 50  0000 C CNN
 F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 3350 6175 50  0001 C CNN
 F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 3350 6350 50  0001 C CNN
@@ -704,10 +704,10 @@ F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 3350 
 	1    0    0    -1  
 $EndComp
 $Comp
-L Diode:1N4148 D?
+L Diode:1N4148 D6
 U 1 1 5EE38105
 P 3350 6700
-F 0 "D?" H 3350 6484 50  0000 C CNN
+F 0 "D6" H 3350 6484 50  0000 C CNN
 F 1 "1N4148" H 3350 6575 50  0000 C CNN
 F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 3350 6525 50  0001 C CNN
 F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 3350 6700 50  0001 C CNN
@@ -715,10 +715,10 @@ F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 3350 
 	-1   0    0    1   
 $EndComp
 $Comp
-L Device:R_POT RV?
+L Device:R_POT RV5
 U 1 1 5EE3810B
 P 2950 7100
-F 0 "RV?" V 2835 7100 50  0000 C CNN
+F 0 "RV5" V 2835 7100 50  0000 C CNN
 F 1 "50k" V 2744 7100 50  0000 C CNN
 F 2 "Potentiometer_THT:Potentiometer_Alps_RK09Y11_Single_Horizontal" H 2950 7100 50  0001 C CNN
 F 3 "~" H 2950 7100 50  0001 C CNN
@@ -726,10 +726,10 @@ F 3 "~" H 2950 7100 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Device:R R?
+L Device:R R29
 U 1 1 5EE38111
 P 2600 7100
-F 0 "R?" V 2393 7100 50  0000 C CNN
+F 0 "R29" V 2393 7100 50  0000 C CNN
 F 1 "4k7" V 2484 7100 50  0000 C CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 2530 7100 50  0001 C CNN
 F 3 "~" H 2600 7100 50  0001 C CNN
@@ -737,10 +737,10 @@ F 3 "~" H 2600 7100 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L power:GND #PWR?
+L power:GND #PWR030
 U 1 1 5EE38117
 P 2400 7150
-F 0 "#PWR?" H 2400 6900 50  0001 C CNN
+F 0 "#PWR030" H 2400 6900 50  0001 C CNN
 F 1 "GND" H 2405 6977 50  0000 C CNN
 F 2 "" H 2400 7150 50  0001 C CNN
 F 3 "" H 2400 7150 50  0001 C CNN
@@ -769,10 +769,10 @@ Connection ~ 3800 6700
 Wire Wire Line
 	3800 6700 3800 6350
 $Comp
-L power:GND #PWR?
+L power:GND #PWR032
 U 1 1 5EE38129
 P 3800 7450
-F 0 "#PWR?" H 3800 7200 50  0001 C CNN
+F 0 "#PWR032" H 3800 7200 50  0001 C CNN
 F 1 "GND" H 3805 7277 50  0000 C CNN
 F 2 "" H 3800 7450 50  0001 C CNN
 F 3 "" H 3800 7450 50  0001 C CNN
@@ -785,10 +785,10 @@ Wire Wire Line
 	2950 5550 3150 5550
 Connection ~ 2950 5550
 $Comp
-L Device:R_POT_Dual_Separate RV?
+L Device:R_POT_Dual_Separate RV7
 U 1 1 5EE38132
 P 4900 6000
-F 0 "RV?" V 4785 6000 50  0000 C CNN
+F 0 "RV7" V 4785 6000 50  0000 C CNN
 F 1 "100k" V 4694 6000 50  0000 C CNN
 F 2 "Potentiometer_THT:Potentiometer_Alps_RK097_Dual_Horizontal" H 4900 6000 50  0001 C CNN
 F 3 "~" H 4900 6000 50  0001 C CNN
@@ -796,10 +796,10 @@ F 3 "~" H 4900 6000 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Device:R_POT_Dual_Separate RV?
+L Device:R_POT_Dual_Separate RV7
 U 2 1 5EE38138
 P 4900 6600
-F 0 "RV?" V 4785 6600 50  0000 C CNN
+F 0 "RV7" V 4785 6600 50  0000 C CNN
 F 1 "100k" V 4694 6600 50  0000 C CNN
 F 2 "Potentiometer_THT:Potentiometer_Alps_RK097_Dual_Horizontal" H 4900 6600 50  0001 C CNN
 F 3 "~" H 4900 6600 50  0001 C CNN
@@ -813,10 +813,10 @@ Wire Wire Line
 Wire Wire Line
 	4750 5850 4750 6000
 $Comp
-L Device:R R?
+L Device:R R38
 U 1 1 5EE38141
 P 4000 6350
-F 0 "R?" V 3793 6350 50  0000 C CNN
+F 0 "R38" V 3793 6350 50  0000 C CNN
 F 1 "6k8" V 3884 6350 50  0000 C CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 3930 6350 50  0001 C CNN
 F 3 "~" H 4000 6350 50  0001 C CNN
@@ -826,10 +826,10 @@ $EndComp
 Wire Wire Line
 	3600 4500 5300 4500
 $Comp
-L Device:R R?
+L Device:R R40
 U 1 1 5EE38148
 P 4300 5650
-F 0 "R?" H 4050 5700 50  0000 L CNN
+F 0 "R40" H 4050 5700 50  0000 L CNN
 F 1 "680" H 4050 5600 50  0000 L CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 4230 5650 50  0001 C CNN
 F 3 "~" H 4300 5650 50  0001 C CNN
@@ -854,10 +854,10 @@ Wire Wire Line
 	3850 6350 3800 6350
 Connection ~ 3800 6350
 $Comp
-L Device:R R?
+L Device:R R44
 U 1 1 5EE38159
 P 5550 5650
-F 0 "R?" H 5300 5700 50  0000 L CNN
+F 0 "R44" H 5300 5700 50  0000 L CNN
 F 1 "680" H 5300 5600 50  0000 L CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 5480 5650 50  0001 C CNN
 F 3 "~" H 5550 5650 50  0001 C CNN
@@ -889,10 +889,10 @@ Wire Wire Line
 	5450 7100 5450 6600
 Connection ~ 5450 6600
 $Comp
-L Device:R R?
+L Device:R R42
 U 1 1 5EE3816C
 P 4900 7100
-F 0 "R?" V 4693 7100 50  0000 C CNN
+F 0 "R42" V 4693 7100 50  0000 C CNN
 F 1 "22k" V 4784 7100 50  0000 C CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 4830 7100 50  0001 C CNN
 F 3 "~" H 4900 7100 50  0001 C CNN
@@ -902,10 +902,10 @@ $EndComp
 Wire Wire Line
 	5050 7100 5450 7100
 $Comp
-L Device:C C?
+L Device:C C12
 U 1 1 5EE38173
 P 6100 4900
-F 0 "C?" V 5848 4900 50  0000 C CNN
+F 0 "C12" V 5848 4900 50  0000 C CNN
 F 1 "22n" V 5939 4900 50  0000 C CNN
 F 2 "Capacitor_THT:C_Rect_L7.2mm_W5.5mm_P5.00mm_FKS2_FKP2_MKS2_MKP2" H 6138 4750 50  0001 C CNN
 F 3 "~" H 6100 4900 50  0001 C CNN
@@ -931,10 +931,10 @@ Connection ~ 6500 5450
 Wire Wire Line
 	2750 7100 2800 7100
 $Comp
-L power:GND #PWR?
+L power:GND #PWR028
 U 1 1 5EE38183
 P 1800 5700
-F 0 "#PWR?" H 1800 5450 50  0001 C CNN
+F 0 "#PWR028" H 1800 5450 50  0001 C CNN
 F 1 "GND" H 1805 5527 50  0000 C CNN
 F 2 "" H 1800 5700 50  0001 C CNN
 F 3 "" H 1800 5700 50  0001 C CNN
@@ -946,10 +946,10 @@ Wire Wire Line
 Wire Wire Line
 	1800 5650 1800 5700
 $Comp
-L power:GND #PWR?
+L power:GND #PWR034
 U 1 1 5EE3818B
 P 4550 5600
-F 0 "#PWR?" H 4550 5350 50  0001 C CNN
+F 0 "#PWR034" H 4550 5350 50  0001 C CNN
 F 1 "GND" H 4555 5427 50  0000 C CNN
 F 2 "" H 4550 5600 50  0001 C CNN
 F 3 "" H 4550 5600 50  0001 C CNN
@@ -961,10 +961,10 @@ Wire Wire Line
 Wire Wire Line
 	4550 5550 4550 5600
 $Comp
-L power:GND #PWR?
+L power:GND #PWR036
 U 1 1 5EE38193
 P 5800 5600
-F 0 "#PWR?" H 5800 5350 50  0001 C CNN
+F 0 "#PWR036" H 5800 5350 50  0001 C CNN
 F 1 "GND" H 5805 5427 50  0000 C CNN
 F 2 "" H 5800 5600 50  0001 C CNN
 F 3 "" H 5800 5600 50  0001 C CNN
