@@ -382,7 +382,7 @@
   (gr_line (start 25.4 25.4) (end 25.4 158.8) (layer Edge.Cuts) (width 0.12))
   (gr_line (start 25.4 25.4) (end 65.7 25.4) (layer Edge.Cuts) (width 0.12))
 
-  (zone (net 0) (net_name "") (layer B.Cu) (tstamp 5E50F21C) (hatch edge 0.508)
+  (zone (net 0) (net_name "") (layer B.Cu) (tstamp 5EDD612B) (hatch edge 0.508)
     (connect_pads (clearance 0.508))
     (min_thickness 0.254)
     (fill yes (arc_segments 32) (thermal_gap 0.508) (thermal_bridge_width 0.508))

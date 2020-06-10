@@ -371,7 +371,7 @@ L Device:R R6
 U 1 1 5EE2CFF5
 P 4050 4700
 F 0 "R6" V 4257 4700 50  0000 C CNN
-F 1 "400" V 4166 4700 50  0000 C CNN
+F 1 "470" V 4166 4700 50  0000 C CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 3980 4700 50  0001 C CNN
 F 3 "~" H 4050 4700 50  0001 C CNN
 	1    4050 4700
@@ -492,8 +492,8 @@ Text Notes 1150 3750 1    50   ~ 0
 freq
 Text Notes 1200 2600 1    50   ~ 0
 fm_level
-Text Notes 3600 5550 0    50   ~ 0
-res
+Text Notes 3450 5600 0    50   ~ 0
+resonance
 Text Label 1650 3650 0    50   ~ 0
 freq
 Text Label 1700 4750 0    50   ~ 0
