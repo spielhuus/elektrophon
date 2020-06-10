@@ -6,7 +6,7 @@
 |---|-----------------------------------------|-----------------|--------------------------------------------------------------|
 |2  |C1, C2                                   |10u              |Capacitor_THT:CP_Radial_D5.0mm_P2.50mm                        |
 |10 |C3, C4, C5, C6, C7, C8, C9, C10, C11, C12|0.1u             |Capacitor_THT:C_Disc_D3.4mm_W2.1mm_P2.50mm                    |
-|2  |C13, C14                                 |1u               |Capacitor_THT:CP_Radial_D5.0mm_P2.50mm                        |
+|2  |C13, C14                                 |1u               |Capacitor_THT:CP_Radial_D5.0mm_P2.00mm                        |
 |1  |J1                                       |IDC Header       |Connector_IDC:IDC-Header_2x05_P2.54mm_Vertical                |
 |1  |J2                                       |Conn_01x14_Female|Connector_PinHeader_2.54mm:PinHeader_1x14_P2.54mm_Vertical    |
 |1  |Q1                                       |2N3904           |Package_TO_SOT_THT:TO-92_Inline                               |
@@ -26,23 +26,23 @@
 
 ### mount panel
 
-|Qty|Reference(s)|Value          |LibPart                     |Footprint                                                     |
-|---|------------|---------------|----------------------------|--------------------------------------------------------------|
-|2  |D1, D2      |1N4148         |Diode:1N4148                |Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal                    |
-|1  |J1          |FM_IN          |Connector:AudioJack2_SwitchT|elektrophon:Jack_3.5mm_WQP-PJ398SM_Vertical                   |
-|1  |J2          |CV_IN          |Connector:AudioJack2_SwitchT|elektrophon:Jack_3.5mm_WQP-PJ398SM_Vertical                   |
-|1  |J3          |INPUT          |Connector:AudioJack2_SwitchT|elektrophon:Jack_3.5mm_WQP-PJ398SM_Vertical                   |
-|1  |J4          |BP_OUT         |Connector:AudioJack2_SwitchT|elektrophon:Jack_3.5mm_WQP-PJ398SM_Vertical                   |
-|1  |J5          |LP_OUT         |Connector:AudioJack2_SwitchT|elektrophon:Jack_3.5mm_WQP-PJ398SM_Vertical                   |
-|1  |J6          |Conn_01x14_Male|Connector:Conn_01x14_Male   |Connector_PinHeader_2.54mm:PinHeader_1x14_P2.54mm_Vertical    |
-|1  |R1          |47k            |Device:R                    |Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal|
-|1  |R2          |100            |Device:R                    |Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal|
-|1  |R3          |27k            |Device:R                    |Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal|
-|2  |R4, R5      |1k             |Device:R                    |Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal|
-|1  |R6          |400            |Device:R                    |Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal|
-|1  |RV1         |47k            |Device:R_POT                |elektrophon:Potentiometer_Alpha_RD901F-40-00D_Single_Vertical |
-|2  |RV2, RV3    |100k           |Device:R_POT                |elektrophon:Potentiometer_Alpha_RD901F-40-00D_Single_Vertical |
-|1  |SW1         |SW_SPDT        |Switch:SW_SPDT              |elektrophon:SPDT_KIT                                          |
+|Qty|Reference(s)|Value          |Footprint                                                     |
+|---|------------|---------------|--------------------------------------------------------------|
+|2  |D1, D2      |1N4148         |Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal                    |
+|1  |J1          |FM_IN          |elektrophon:Jack_3.5mm_WQP-PJ398SM_Vertical                   |
+|1  |J2          |CV_IN          |elektrophon:Jack_3.5mm_WQP-PJ398SM_Vertical                   |
+|1  |J3          |INPUT          |elektrophon:Jack_3.5mm_WQP-PJ398SM_Vertical                   |
+|1  |J4          |BP_OUT         |elektrophon:Jack_3.5mm_WQP-PJ398SM_Vertical                   |
+|1  |J5          |LP_OUT         |elektrophon:Jack_3.5mm_WQP-PJ398SM_Vertical                   |
+|1  |J6          |Conn_01x14_Male|Connector_PinHeader_2.54mm:PinHeader_1x14_P2.54mm_Vertical    |
+|1  |R1          |47k            |Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal|
+|1  |R2          |100            |Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal|
+|1  |R3          |27k            |Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal|
+|2  |R4, R5      |1k             |Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal|
+|1  |R6          |470            |Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal|
+|1  |RV1         |47k            |elektrophon:Potentiometer_Alpha_RD901F-40-00D_Single_Vertical |
+|2  |RV2, RV3    |100k           |elektrophon:Potentiometer_Alpha_RD901F-40-00D_Single_Vertical |
+|1  |SW1         |SW_SPDT        |elektrophon:SPDT_KIT                                          |
 
 ### misc material
 
