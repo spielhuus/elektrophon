@@ -372,50 +372,6 @@ Wire Wire Line
 Wire Wire Line
 	8950 5300 9800 5300
 Connection ~ 9800 5300
-$Comp
-L Device:R R19
-U 1 1 5EE66018
-P 10250 5000
-F 0 "R19" V 10043 5000 50  0000 C CNN
-F 1 "100k" V 10134 5000 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 10180 5000 50  0001 C CNN
-F 3 "~" H 10250 5000 50  0001 C CNN
-	1    10250 5000
-	0    1    1    0   
-$EndComp
-$Comp
-L Device:R R20
-U 1 1 5EE66862
-P 10450 5300
-F 0 "R20" H 10380 5254 50  0000 R CNN
-F 1 "15k" H 10380 5345 50  0000 R CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 10380 5300 50  0001 C CNN
-F 3 "~" H 10450 5300 50  0001 C CNN
-	1    10450 5300
-	-1   0    0    1   
-$EndComp
-$Comp
-L power:GND #PWR026
-U 1 1 5EE66FEF
-P 10450 5500
-F 0 "#PWR026" H 10450 5250 50  0001 C CNN
-F 1 "GND" H 10455 5327 50  0000 C CNN
-F 2 "" H 10450 5500 50  0001 C CNN
-F 3 "" H 10450 5500 50  0001 C CNN
-	1    10450 5500
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	9800 5000 10100 5000
-Wire Wire Line
-	10450 5000 10450 5150
-Wire Wire Line
-	10400 5000 10450 5000
-Wire Wire Line
-	10450 5450 10450 5500
-Connection ~ 9800 5000
-Text Label 10450 5000 0    50   ~ 0
-VREF
 Text Notes 9200 1100 0    50   ~ 0
 C7 and C8 are polyester capacitors
 Text Notes 9200 1450 0    50   ~ 0
