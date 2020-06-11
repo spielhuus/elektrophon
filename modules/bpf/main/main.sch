@@ -1076,9 +1076,9 @@ F0 "Sheet5EE14FFF" 50
 F1 "band pass filters.sch" 50
 $EndSheet
 Text GLabel 950  1300 0    50   Input ~ 0
-IN_1_a
+IN
 Text GLabel 950  1800 0    50   Input ~ 0
-IN_1_b
+IN_1
 Text GLabel 1650 5050 1    50   Input ~ 0
 OUT_1
 Text GLabel 1650 5950 1    50   Input ~ 0
@@ -1092,42 +1092,74 @@ FREQ_1_a
 Text GLabel 4700 2350 3    50   Input ~ 0
 FREQ_1_b
 Text GLabel 4400 2950 3    50   Input ~ 0
-FREQ_2_a
+FREQ_1_c
 Text GLabel 4700 2950 3    50   Input ~ 0
-FREQ_2_b
+FREQ_1_d
 Text GLabel 2600 3300 0    50   Input ~ 0
 RES_1_a
 Text GLabel 2750 3450 0    50   Input ~ 0
-RES_2_b
-$Comp
-L Connector:Conn_01x19_Female J1
-U 1 1 5EE3332E
-P 7750 1750
-F 0 "J1" H 7778 1776 50  0000 L CNN
-F 1 "Conn_01x19_Female" H 7778 1685 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x19_P2.54mm_Vertical" H 7750 1750 50  0001 C CNN
-F 3 "~" H 7750 1750 50  0001 C CNN
-	1    7750 1750
-	1    0    0    -1  
-$EndComp
+RES_1_b
 Text GLabel 7550 850  0    50   Input ~ 0
-IN_1_a
+IN
 Text GLabel 7550 950  0    50   Input ~ 0
-IN_1_b
+IN_1
 Text GLabel 7550 1050 0    50   Input ~ 0
 RES_1_a
 Text GLabel 7550 1150 0    50   Input ~ 0
-RES_2_b
+RES_1_b
 Text GLabel 7550 1250 0    50   Input ~ 0
 FREQ_1_a
 Text GLabel 7550 1350 0    50   Input ~ 0
 FREQ_1_b
 Text GLabel 7550 1450 0    50   Input ~ 0
-FREQ_2_a
+FREQ_1_c
 Text GLabel 7550 1550 0    50   Input ~ 0
-FREQ_2_b
+FREQ_1_d
 Text GLabel 6150 1800 2    50   Input ~ 0
 OUT_1
 Text GLabel 7550 1650 0    50   Input ~ 0
 OUT_1
+Text GLabel 7550 1750 0    50   Input ~ 0
+IN_2
+Text GLabel 7550 1850 0    50   Input ~ 0
+RES_2_a
+Text GLabel 7550 1950 0    50   Input ~ 0
+RES_2_b
+Text GLabel 7550 2050 0    50   Input ~ 0
+FREQ_2_a
+Text GLabel 7550 2150 0    50   Input ~ 0
+FREQ_2_b
+Text GLabel 7550 2250 0    50   Input ~ 0
+FREQ_2_c
+Text GLabel 7550 2350 0    50   Input ~ 0
+FREQ_2_d
+Text GLabel 7550 2450 0    50   Input ~ 0
+OUT_2
+Text GLabel 7550 2550 0    50   Input ~ 0
+IN_3
+Text GLabel 7550 2650 0    50   Input ~ 0
+RES_3_a
+Text GLabel 7550 2750 0    50   Input ~ 0
+RES_3_b
+Text GLabel 7550 2850 0    50   Input ~ 0
+FREQ_3_a
+Text GLabel 7550 2950 0    50   Input ~ 0
+FREQ_3_b
+Text GLabel 7550 3050 0    50   Input ~ 0
+FREQ_3_c
+Text GLabel 7550 3150 0    50   Input ~ 0
+FREQ_3_d
+Text GLabel 7550 3250 0    50   Input ~ 0
+OUT_3
+$Comp
+L Connector:Conn_01x25_Female J1
+U 1 1 5EE4A5D8
+P 7750 2050
+F 0 "J1" H 7778 2076 50  0000 L CNN
+F 1 "Conn_01x25_Female" H 7778 1985 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x25_P2.54mm_Vertical" H 7750 2050 50  0001 C CNN
+F 3 "~" H 7750 2050 50  0001 C CNN
+	1    7750 2050
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC

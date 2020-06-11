@@ -18,21 +18,10 @@ L Mechanical:MountingHole H1
 U 1 1 5D6AF58E
 P 1400 1850
 F 0 "H1" H 1500 1896 50  0000 L CNN
-F 1 "IN_1_a" H 1500 1805 50  0000 L CNN
+F 1 "IN_1" H 1500 1805 50  0000 L CNN
 F 2 "elektrophon:panel_jack" H 1400 1850 50  0001 C CNN
 F 3 "~" H 1400 1850 50  0001 C CNN
 	1    1400 1850
-	1    0    0    -1  
-$EndComp
-$Comp
-L Mechanical:MountingHole H2
-U 1 1 5D6B1084
-P 1400 2350
-F 0 "H2" H 1500 2396 50  0000 L CNN
-F 1 "IN_1_b" H 1500 2305 50  0000 L CNN
-F 2 "elektrophon:panel_jack" H 1400 2350 50  0001 C CNN
-F 3 "~" H 1400 2350 50  0001 C CNN
-	1    1400 2350
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -117,21 +106,10 @@ L Mechanical:MountingHole H10
 U 1 1 5EE0A503
 P 2500 1800
 F 0 "H10" H 2600 1846 50  0000 L CNN
-F 1 "IN_2_a" H 2600 1755 50  0000 L CNN
+F 1 "IN_2" H 2600 1755 50  0000 L CNN
 F 2 "elektrophon:panel_jack" H 2500 1800 50  0001 C CNN
 F 3 "~" H 2500 1800 50  0001 C CNN
 	1    2500 1800
-	1    0    0    -1  
-$EndComp
-$Comp
-L Mechanical:MountingHole H11
-U 1 1 5EE0A509
-P 2500 2300
-F 0 "H11" H 2600 2346 50  0000 L CNN
-F 1 "IN_2_b" H 2600 2255 50  0000 L CNN
-F 2 "elektrophon:panel_jack" H 2500 2300 50  0001 C CNN
-F 3 "~" H 2500 2300 50  0001 C CNN
-	1    2500 2300
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -172,7 +150,7 @@ L Mechanical:MountingHole H15
 U 1 1 5EE0AA5F
 P 3400 1800
 F 0 "H15" H 3500 1846 50  0000 L CNN
-F 1 "IN_3_a" H 3500 1755 50  0000 L CNN
+F 1 "IN_3" H 3500 1755 50  0000 L CNN
 F 2 "elektrophon:panel_jack" H 3400 1800 50  0001 C CNN
 F 3 "~" H 3400 1800 50  0001 C CNN
 	1    3400 1800
@@ -181,12 +159,12 @@ $EndComp
 $Comp
 L Mechanical:MountingHole H16
 U 1 1 5EE0AA65
-P 3400 2300
-F 0 "H16" H 3500 2346 50  0000 L CNN
-F 1 "IN_3_b" H 3500 2255 50  0000 L CNN
-F 2 "elektrophon:panel_jack" H 3400 2300 50  0001 C CNN
-F 3 "~" H 3400 2300 50  0001 C CNN
-	1    3400 2300
+P 1400 1250
+F 0 "H16" H 1500 1296 50  0000 L CNN
+F 1 "IN" H 1500 1205 50  0000 L CNN
+F 2 "elektrophon:panel_jack" H 1400 1250 50  0001 C CNN
+F 3 "~" H 1400 1250 50  0001 C CNN
+	1    1400 1250
 	1    0    0    -1  
 $EndComp
 $Comp

@@ -38,7 +38,7 @@ F 3 "~" H 1400 1350 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Text Notes 1000 1500 1    50   ~ 0
-IN_1_a
+IN_1
 $Comp
 L power:GND #PWR03
 U 1 1 5D4F30EF
@@ -175,7 +175,7 @@ F 3 "~" H 1400 2050 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Text Notes 1000 2200 1    50   ~ 0
-IN_1_b
+IN
 $Comp
 L power:GND #PWR04
 U 1 1 5EE2548F
@@ -196,7 +196,7 @@ U 1 1 5EE271C1
 P 1500 2800
 F 0 "RV2" V 1454 2613 50  0000 R CNN
 F 1 "100k" V 1545 2613 50  0000 R CNN
-F 2 "elektrophon:Potentiometer_Alpha_RD901F-40-00D_Single_Vertical" H 1750 2725 50  0001 C CNN
+F 2 "Potentiometer_THT:Potentiometer_Alpha_RD902F-40-00D_Dual_Vertical" H 1750 2725 50  0001 C CNN
 F 3 "~" H 1750 2725 50  0001 C CNN
 	1    1500 2800
 	0    1    1    0   
@@ -326,7 +326,7 @@ F 3 "~" H 3450 1350 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Text Notes 3050 1500 1    50   ~ 0
-IN_1_a
+IN_2
 $Comp
 L power:GND #PWR09
 U 1 1 5EE6B977
@@ -342,39 +342,12 @@ NoConn ~ 3650 1450
 Text GLabel 3650 1350 2    50   Input ~ 0
 IN_2_a
 $Comp
-L Connector:AudioJack2_SwitchT J5
-U 1 1 5EE6B97F
-P 3450 2050
-F 0 "J5" H 3480 2375 50  0000 C CNN
-F 1 "AudioJack2_SwitchT" H 3480 2284 50  0000 C CNN
-F 2 "elektrophon:Jack_3.5mm_WQP-PJ398SM_Vertical" H 3450 2050 50  0001 C CNN
-F 3 "~" H 3450 2050 50  0001 C CNN
-	1    3450 2050
-	1    0    0    -1  
-$EndComp
-Text Notes 3050 2200 1    50   ~ 0
-IN_1_b
-$Comp
-L power:GND #PWR010
-U 1 1 5EE6B986
-P 3650 1950
-F 0 "#PWR010" H 3650 1700 50  0001 C CNN
-F 1 "GND" V 3655 1822 50  0000 R CNN
-F 2 "" H 3650 1950 50  0001 C CNN
-F 3 "" H 3650 1950 50  0001 C CNN
-	1    3650 1950
-	0    -1   -1   0   
-$EndComp
-NoConn ~ 3650 2150
-Text GLabel 3650 2050 2    50   Input ~ 0
-IN_2_b
-$Comp
 L Device:R_POT_Dual RV4
 U 1 1 5EE6B98E
 P 3550 2800
 F 0 "RV4" V 3504 2613 50  0000 R CNN
 F 1 "100k" V 3595 2613 50  0000 R CNN
-F 2 "elektrophon:Potentiometer_Alpha_RD901F-40-00D_Single_Vertical" H 3800 2725 50  0001 C CNN
+F 2 "Potentiometer_THT:Potentiometer_Alpha_RD902F-40-00D_Dual_Vertical" H 3800 2725 50  0001 C CNN
 F 3 "~" H 3800 2725 50  0001 C CNN
 	1    3550 2800
 	0    1    1    0   
@@ -502,7 +475,7 @@ F 3 "~" H 5400 1350 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Text Notes 5000 1500 1    50   ~ 0
-IN_1_a
+IN_3
 $Comp
 L power:GND #PWR013
 U 1 1 5EE6D9C9
@@ -518,39 +491,12 @@ NoConn ~ 5600 1450
 Text GLabel 5600 1350 2    50   Input ~ 0
 IN_3_a
 $Comp
-L Connector:AudioJack2_SwitchT J8
-U 1 1 5EE6D9D1
-P 5400 2050
-F 0 "J8" H 5430 2375 50  0000 C CNN
-F 1 "AudioJack2_SwitchT" H 5430 2284 50  0000 C CNN
-F 2 "elektrophon:Jack_3.5mm_WQP-PJ398SM_Vertical" H 5400 2050 50  0001 C CNN
-F 3 "~" H 5400 2050 50  0001 C CNN
-	1    5400 2050
-	1    0    0    -1  
-$EndComp
-Text Notes 5000 2200 1    50   ~ 0
-IN_1_b
-$Comp
-L power:GND #PWR014
-U 1 1 5EE6D9D8
-P 5600 1950
-F 0 "#PWR014" H 5600 1700 50  0001 C CNN
-F 1 "GND" V 5605 1822 50  0000 R CNN
-F 2 "" H 5600 1950 50  0001 C CNN
-F 3 "" H 5600 1950 50  0001 C CNN
-	1    5600 1950
-	0    -1   -1   0   
-$EndComp
-NoConn ~ 5600 2150
-Text GLabel 5600 2050 2    50   Input ~ 0
-IN_3_b
-$Comp
 L Device:R_POT_Dual RV6
 U 1 1 5EE6D9E0
 P 5500 2800
 F 0 "RV6" V 5454 2613 50  0000 R CNN
 F 1 "100k" V 5545 2613 50  0000 R CNN
-F 2 "elektrophon:Potentiometer_Alpha_RD901F-40-00D_Single_Vertical" H 5750 2725 50  0001 C CNN
+F 2 "Potentiometer_THT:Potentiometer_Alpha_RD902F-40-00D_Dual_Vertical" H 5750 2725 50  0001 C CNN
 F 3 "~" H 5750 2725 50  0001 C CNN
 	1    5500 2800
 	0    1    1    0   
@@ -690,7 +636,7 @@ U 1 1 5EE788AC
 P 8350 4950
 F 0 "R7" V 8143 4950 50  0000 C CNN
 F 1 "1k" V 8234 4950 50  0000 C CNN
-F 2 "elektrophon:Potentiometer_Alpha_RD901F-40-00D_Single_Vertical" V 8280 4950 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 8280 4950 50  0001 C CNN
 F 3 "~" H 8350 4950 50  0001 C CNN
 	1    8350 4950
 	0    1    1    0   
