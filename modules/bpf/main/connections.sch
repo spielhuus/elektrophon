@@ -4,14 +4,14 @@ EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 3 3
-Title ""
-Date ""
-Rev ""
+Title "bpf"
+Date "2020-06-05"
+Rev "01"
 Comp ""
-Comment1 ""
-Comment2 ""
+Comment1 "simple resonant band pass filter"
+Comment2 "schema for main circuit"
 Comment3 ""
-Comment4 ""
+Comment4 "License CC BY 4.0 - Attribution 4.0 International"
 $EndDescr
 $Comp
 L power:+15V #PWR?
@@ -740,24 +740,28 @@ Text GLabel 2800 3100 0    50   Input ~ 0
 FREQ_3_c
 Text GLabel 2800 3200 0    50   Input ~ 0
 OUT_3
-$Comp
-L Connector:Conn_01x25_Female J?
-U 1 1 5F1A051D
-P 3000 2600
-AR Path="/5F1A051D" Ref="J?"  Part="1" 
-AR Path="/5F169930/5F1A051D" Ref="J1"  Part="1" 
-F 0 "J1" H 3028 2626 50  0000 L CNN
-F 1 "Conn_01x25_Female" H 3028 2535 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x25_P2.54mm_Vertical" H 3000 2600 50  0001 C CNN
-F 3 "~" H 3000 2600 50  0001 C CNN
-	1    3000 2600
-	1    0    0    -1  
-$EndComp
 Text GLabel 2800 3300 0    50   Input ~ 0
 OUT
-NoConn ~ 2800 3400
-NoConn ~ 2800 3500
-NoConn ~ 2800 3600
-NoConn ~ 2800 3700
-NoConn ~ 2800 3800
+$Comp
+L Connector:Conn_01x21_Female J1
+U 1 1 5EE3A396
+P 3000 2300
+F 0 "J1" H 3028 2326 50  0000 L CNN
+F 1 "Conn_01x21_Female" H 3028 2235 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x21_P2.54mm_Vertical" H 3000 2300 50  0001 C CNN
+F 3 "~" H 3000 2300 50  0001 C CNN
+	1    3000 2300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0101
+U 1 1 5EE3DC0A
+P 2800 1300
+F 0 "#PWR0101" H 2800 1050 50  0001 C CNN
+F 1 "GND" V 2805 1172 50  0000 R CNN
+F 2 "" H 2800 1300 50  0001 C CNN
+F 3 "" H 2800 1300 50  0001 C CNN
+	1    2800 1300
+	0    1    1    0   
+$EndComp
 $EndSCHEMATC
