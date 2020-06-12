@@ -250,10 +250,8 @@ F 3 "" H 1400 4150 50  0001 C CNN
 	1    1400 4150
 	1    0    0    -1  
 $EndComp
-Text GLabel 1450 3500 2    50   Input ~ 0
-RES_1_a
 Text GLabel 1550 3700 2    50   Input ~ 0
-RES_1_a
+RES_1
 Wire Wire Line
 	1450 3500 1400 3500
 Wire Wire Line
@@ -766,4 +764,17 @@ Text GLabel 9200 2350 0    50   Input ~ 0
 FREQ_2_b
 Text GLabel 9200 2450 0    50   Input ~ 0
 OUT_1
+Text GLabel 1750 3500 2    50   Input ~ 0
+OUT_1
+$Comp
+L Device:R R?
+U 1 1 5EE25EEF
+P 1600 3500
+F 0 "R?" H 1670 3546 50  0000 L CNN
+F 1 "22k" H 1670 3455 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 1530 3500 50  0001 C CNN
+F 3 "~" H 1600 3500 50  0001 C CNN
+	1    1600 3500
+	0    -1   -1   0   
+$EndComp
 $EndSCHEMATC
