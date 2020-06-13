@@ -1031,4 +1031,20 @@ F 3 "~" H 10400 4050 50  0001 C CNN
 	1    10400 4050
 	-1   0    0    -1  
 $EndComp
+Text Notes 1100 3950 0    50   ~ 0
+3
+Text Notes 1100 3600 0    50   ~ 0
+1
+Text Notes 1450 3950 0    50   ~ 0
+redrum
+Text Notes 1100 2450 0    50   ~ 0
+3
+Text Notes 1200 2850 0    50   ~ 0
+1
+Text Notes 1150 3000 0    50   ~ 0
+6
+Text Notes 1150 3300 0    50   ~ 0
+1
+Text Notes 1650 3150 0    50   ~ 0
+ok\n
 $EndSCHEMATC
