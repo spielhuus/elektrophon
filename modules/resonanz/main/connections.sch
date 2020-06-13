@@ -4,12 +4,12 @@ EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 3 3
-Title "bpf"
-Date "2020-06-05"
+Title "resonanz"
+Date "2020-06-13"
 Rev "01"
 Comp ""
-Comment1 "simple resonant band pass filter"
-Comment2 "schema for main circuit"
+Comment1 "schema for main circuit"
+Comment2 "resonant band pass filter"
 Comment3 ""
 Comment4 "License CC BY 4.0 - Attribution 4.0 International"
 $EndDescr

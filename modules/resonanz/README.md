@@ -1,11 +1,13 @@
 ![module](https://img.shields.io/badge/module-other-yellow)
 ![status](https://img.shields.io/badge/status-draft-grey)
 
-## *resonant band pass filter*
+## *resonanz*
 
 a resonant band pass filter is a simple filter that can be used for artifical instruments or as a percussion module.
 
 ## *build*
+
+[schematics](schematics.pdf)
 
 ## *calibrate*
 
