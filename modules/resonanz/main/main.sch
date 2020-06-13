@@ -4,12 +4,12 @@ EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 3
-Title "bpf"
-Date "2020-06-05"
+Title "resonanz"
+Date "2020-06-13"
 Rev "01"
 Comp ""
-Comment1 "simple resonant band pass filter"
-Comment2 "schema for main circuit"
+Comment1 "schema for main circuit"
+Comment2 "resonant band pass filter"
 Comment3 ""
 Comment4 "License CC BY 4.0 - Attribution 4.0 International"
 $EndDescr
@@ -203,7 +203,7 @@ U 1 1 5EEAAB16
 P 3000 2700
 F 0 "D1" H 3000 2916 50  0000 C CNN
 F 1 "1N4148" H 3000 2825 50  0000 C CNN
-F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 3000 2525 50  0001 C CNN
+F 2 "Diode_THT:D_DO-35_SOD27_P3.81mm_Vertical_AnodeUp" H 3000 2525 50  0001 C CNN
 F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 3000 2700 50  0001 C CNN
 	1    3000 2700
 	1    0    0    -1  
@@ -214,7 +214,7 @@ U 1 1 5EEAAB1C
 P 3000 3050
 F 0 "D2" H 3000 2834 50  0000 C CNN
 F 1 "1N4148" H 3000 2925 50  0000 C CNN
-F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 3000 2875 50  0001 C CNN
+F 2 "Diode_THT:D_DO-35_SOD27_P3.81mm_Vertical_AnodeUp" H 3000 2875 50  0001 C CNN
 F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 3000 3050 50  0001 C CNN
 	1    3000 3050
 	-1   0    0    1   
@@ -393,28 +393,6 @@ Wire Wire Line
 Wire Wire Line
 	6150 1800 6150 2700
 $Comp
-L Device:R_POT RV1
-U 1 1 5EEBA325
-P 1600 5150
-F 0 "RV1" H 1531 5196 50  0000 R CNN
-F 1 "R_POT" H 1531 5105 50  0000 R CNN
-F 2 "" H 1600 5150 50  0001 C CNN
-F 3 "~" H 1600 5150 50  0001 C CNN
-	1    1600 5150
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR02
-U 1 1 5EED8E54
-P 1600 5300
-F 0 "#PWR02" H 1600 5050 50  0001 C CNN
-F 1 "GND" H 1605 5127 50  0000 C CNN
-F 2 "" H 1600 5300 50  0001 C CNN
-F 3 "" H 1600 5300 50  0001 C CNN
-	1    1600 5300
-	1    0    0    -1  
-$EndComp
-$Comp
 L Device:R R4
 U 1 1 5EED9C8C
 P 1900 5150
@@ -437,92 +415,43 @@ F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 3100 1800 50  0001 C CNN
 	1    0    0    1   
 $EndComp
 $Comp
-L Device:R_POT RV2
-U 1 1 5EEE1507
-P 1600 6050
-F 0 "RV2" H 1531 6096 50  0000 R CNN
-F 1 "R_POT" H 1531 6005 50  0000 R CNN
-F 2 "" H 1600 6050 50  0001 C CNN
-F 3 "~" H 1600 6050 50  0001 C CNN
-	1    1600 6050
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR03
-U 1 1 5EEE150D
-P 1600 6200
-F 0 "#PWR03" H 1600 5950 50  0001 C CNN
-F 1 "GND" H 1605 6027 50  0000 C CNN
-F 2 "" H 1600 6200 50  0001 C CNN
-F 3 "" H 1600 6200 50  0001 C CNN
-	1    1600 6200
-	1    0    0    -1  
-$EndComp
-$Comp
 L Device:R R5
 U 1 1 5EEE1513
-P 1900 6050
-F 0 "R5" V 1693 6050 50  0000 C CNN
-F 1 "100k" V 1784 6050 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 1830 6050 50  0001 C CNN
-F 3 "~" H 1900 6050 50  0001 C CNN
-	1    1900 6050
+P 1900 5500
+F 0 "R5" V 1693 5500 50  0000 C CNN
+F 1 "100k" V 1784 5500 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 1830 5500 50  0001 C CNN
+F 3 "~" H 1900 5500 50  0001 C CNN
+	1    1900 5500
 	0    1    1    0   
-$EndComp
-$Comp
-L Device:R_POT RV3
-U 1 1 5EEEFE57
-P 1600 6950
-F 0 "RV3" H 1531 6996 50  0000 R CNN
-F 1 "R_POT" H 1531 6905 50  0000 R CNN
-F 2 "" H 1600 6950 50  0001 C CNN
-F 3 "~" H 1600 6950 50  0001 C CNN
-	1    1600 6950
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR04
-U 1 1 5EEEFE5D
-P 1600 7100
-F 0 "#PWR04" H 1600 6850 50  0001 C CNN
-F 1 "GND" H 1605 6927 50  0000 C CNN
-F 2 "" H 1600 7100 50  0001 C CNN
-F 3 "" H 1600 7100 50  0001 C CNN
-	1    1600 7100
-	1    0    0    -1  
 $EndComp
 $Comp
 L Device:R R6
 U 1 1 5EEEFE63
-P 1900 6950
-F 0 "R6" V 1693 6950 50  0000 C CNN
-F 1 "100k" V 1784 6950 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 1830 6950 50  0001 C CNN
-F 3 "~" H 1900 6950 50  0001 C CNN
-	1    1900 6950
+P 1900 6350
+F 0 "R6" V 1693 6350 50  0000 C CNN
+F 1 "100k" V 1784 6350 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 1830 6350 50  0001 C CNN
+F 3 "~" H 1900 6350 50  0001 C CNN
+	1    1900 6350
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	2050 6950 2300 6950
-Wire Wire Line
-	2300 6950 2300 6050
+	2050 6350 2300 6350
 Wire Wire Line
 	2300 5150 2500 5150
 Wire Wire Line
 	2050 5150 2300 5150
 Connection ~ 2300 5150
 Wire Wire Line
-	2050 6050 2300 6050
-Connection ~ 2300 6050
-Wire Wire Line
-	2300 6050 2300 5150
+	2050 5500 2300 5500
 $Comp
 L Device:R R8
 U 1 1 5EF2B814
 P 2850 4800
 F 0 "R8" V 2643 4800 50  0000 C CNN
 F 1 "100k" V 2734 4800 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 2780 4800 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 2780 4800 50  0001 C CNN
 F 3 "~" H 2850 4800 50  0001 C CNN
 	1    2850 4800
 	0    1    1    0   
@@ -554,12 +483,12 @@ $EndComp
 $Comp
 L Amplifier_Operational:TL072 U2
 U 2 1 5EF4D8B5
-P 4050 5350
-F 0 "U2" H 4050 5000 50  0000 C CNN
-F 1 "TL072" H 4050 5100 50  0000 C CNN
-F 2 "Package_DIP:DIP-8_W7.62mm_Socket" H 4050 5350 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 4050 5350 50  0001 C CNN
-	2    4050 5350
+P 2850 5250
+F 0 "U2" H 2850 4900 50  0000 C CNN
+F 1 "TL072" H 2850 5000 50  0000 C CNN
+F 2 "Package_DIP:DIP-8_W7.62mm_Socket" H 2850 5250 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 2850 5250 50  0001 C CNN
+	2    2850 5250
 	1    0    0    1   
 $EndComp
 $Comp
@@ -644,12 +573,6 @@ Text GLabel 950  1300 0    50   Input ~ 0
 IN
 Text GLabel 950  1800 0    50   Input ~ 0
 IN_1
-Text GLabel 1600 5000 1    50   Input ~ 0
-OUT_1
-Text GLabel 1600 5900 1    50   Input ~ 0
-OUT_2
-Text GLabel 1600 6800 1    50   Input ~ 0
-OUT_3
 Text GLabel 4950 5350 2    50   Input ~ 0
 OUT
 Text GLabel 4400 2350 3    50   Input ~ 0
@@ -670,12 +593,12 @@ Connection ~ 3450 3050
 $Comp
 L Amplifier_Operational:TL072 U2
 U 1 1 5F14EDE8
-P 2850 5250
-F 0 "U2" H 2850 4900 50  0000 C CNN
-F 1 "TL072" H 2850 5000 50  0000 C CNN
-F 2 "Package_DIP:DIP-8_W7.62mm_Socket" H 2850 5250 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 2850 5250 50  0001 C CNN
-	1    2850 5250
+P 4050 5350
+F 0 "U2" H 4050 5000 50  0000 C CNN
+F 1 "TL072" H 4050 5100 50  0000 C CNN
+F 2 "Package_DIP:DIP-8_W7.62mm_Socket" H 4050 5350 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 4050 5350 50  0001 C CNN
+	1    4050 5350
 	1    0    0    1   
 $EndComp
 $Sheet
@@ -684,4 +607,33 @@ U 5F169930
 F0 "connections" 50
 F1 "connections.sch" 50
 $EndSheet
+Text GLabel 1750 5150 0    50   Input ~ 0
+MIX_1
+Text GLabel 1750 5500 0    50   Input ~ 0
+MIX_2
+Text GLabel 1750 6350 0    50   Input ~ 0
+MIX_4
+$Comp
+L Device:R R48
+U 1 1 5EE58A16
+P 1900 5900
+F 0 "R48" V 1693 5900 50  0000 C CNN
+F 1 "100k" V 1784 5900 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 1830 5900 50  0001 C CNN
+F 3 "~" H 1900 5900 50  0001 C CNN
+	1    1900 5900
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2050 5900 2300 5900
+Text GLabel 1750 5900 0    50   Input ~ 0
+MIX_3
+Connection ~ 2300 5500
+Connection ~ 2300 5900
+Wire Wire Line
+	2300 5900 2300 5500
+Wire Wire Line
+	2300 5900 2300 6350
+Wire Wire Line
+	2300 5150 2300 5500
 $EndSCHEMATC
