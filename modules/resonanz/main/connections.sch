@@ -105,19 +105,6 @@ Wire Wire Line
 Connection ~ 2700 5200
 $Comp
 L Amplifier_Operational:TL072 U?
-U 3 1 5F186FE3
-P 2400 5200
-AR Path="/5F186FE3" Ref="U?"  Part="3" 
-AR Path="/5F169930/5F186FE3" Ref="U1"  Part="3" 
-F 0 "U1" H 2358 5246 50  0000 L CNN
-F 1 "TL072" H 2358 5155 50  0000 L CNN
-F 2 "Package_DIP:DIP-8_W7.62mm_Socket" H 2400 5200 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 2400 5200 50  0001 C CNN
-	3    2400 5200
-	1    0    0    -1  
-$EndComp
-$Comp
-L Amplifier_Operational:TL072 U?
 U 3 1 5F186FE9
 P 3250 5200
 AR Path="/5F186FE9" Ref="U?"  Part="3" 
@@ -129,16 +116,6 @@ F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 3250 5200 50  0001 C CNN
 	3    3250 5200
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	1650 4900 2300 4900
-Wire Wire Line
-	1650 5500 2300 5500
-Connection ~ 2300 5500
-Wire Wire Line
-	2300 5500 2700 5500
-Connection ~ 2300 4900
-Wire Wire Line
-	2300 4900 2700 4900
 $Comp
 L Device:C C?
 U 1 1 5F186FF5
@@ -194,19 +171,6 @@ Wire Wire Line
 	2700 5200 3550 5200
 Connection ~ 3550 5200
 $Comp
-L Amplifier_Operational:TL072 U?
-U 3 1 5F187011
-P 4100 5200
-AR Path="/5F187011" Ref="U?"  Part="3" 
-AR Path="/5F169930/5F187011" Ref="U3"  Part="3" 
-F 0 "U3" H 4058 5246 50  0000 L CNN
-F 1 "TL072" H 4058 5155 50  0000 L CNN
-F 2 "Package_DIP:DIP-8_W7.62mm_Socket" H 4100 5200 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 4100 5200 50  0001 C CNN
-	3    4100 5200
-	1    0    0    -1  
-$EndComp
-$Comp
 L Device:C C?
 U 1 1 5F187017
 P 4400 5350
@@ -232,26 +196,7 @@ F 3 "~" H 4400 5050 50  0001 C CNN
 	1    4400 5050
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	3550 4900 4000 4900
-Connection ~ 4000 4900
-Connection ~ 4000 5500
-Wire Wire Line
-	4000 5500 3550 5500
 Connection ~ 4400 5200
-$Comp
-L Amplifier_Operational:TL072 U?
-U 3 1 5F187028
-P 4900 5200
-AR Path="/5F187028" Ref="U?"  Part="3" 
-AR Path="/5F169930/5F187028" Ref="U4"  Part="3" 
-F 0 "U4" H 4858 5246 50  0000 L CNN
-F 1 "TL072" H 4858 5155 50  0000 L CNN
-F 2 "Package_DIP:DIP-8_W7.62mm_Socket" H 4900 5200 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 4900 5200 50  0001 C CNN
-	3    4900 5200
-	1    0    0    -1  
-$EndComp
 $Comp
 L Device:C C?
 U 1 1 5F18702E
@@ -278,32 +223,9 @@ F 3 "~" H 5200 5050 50  0001 C CNN
 	1    5200 5050
 	1    0    0    -1  
 $EndComp
-Connection ~ 4800 4900
-Wire Wire Line
-	4800 4900 5200 4900
-Wire Wire Line
-	5200 5500 4800 5500
-Connection ~ 4800 5500
 Connection ~ 5200 5200
 Wire Wire Line
 	4400 5200 5200 5200
-Wire Wire Line
-	4000 4900 4400 4900
-Wire Wire Line
-	4000 5500 4400 5500
-$Comp
-L Amplifier_Operational:TL072 U?
-U 3 1 5F187042
-P 5750 5200
-AR Path="/5F187042" Ref="U?"  Part="3" 
-AR Path="/5F169930/5F187042" Ref="U5"  Part="3" 
-F 0 "U5" H 5708 5246 50  0000 L CNN
-F 1 "TL072" H 5708 5155 50  0000 L CNN
-F 2 "Package_DIP:DIP-8_W7.62mm_Socket" H 5750 5200 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 5750 5200 50  0001 C CNN
-	3    5750 5200
-	1    0    0    -1  
-$EndComp
 $Comp
 L Device:C C?
 U 1 1 5F187048
@@ -331,31 +253,8 @@ F 3 "~" H 6050 5050 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	5200 4900 5650 4900
-Connection ~ 5650 4900
-Wire Wire Line
-	5650 4900 6050 4900
-Wire Wire Line
-	6050 5500 5650 5500
-Connection ~ 5650 5500
-Wire Wire Line
-	5650 5500 5200 5500
-Wire Wire Line
 	5200 5200 6050 5200
 Connection ~ 6050 5200
-$Comp
-L Amplifier_Operational:TL072 U?
-U 3 1 5F18705C
-P 6600 5200
-AR Path="/5F18705C" Ref="U?"  Part="3" 
-AR Path="/5F169930/5F18705C" Ref="U6"  Part="3" 
-F 0 "U6" H 6558 5246 50  0000 L CNN
-F 1 "TL072" H 6558 5155 50  0000 L CNN
-F 2 "Package_DIP:DIP-8_W7.62mm_Socket" H 6600 5200 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 6600 5200 50  0001 C CNN
-	3    6600 5200
-	1    0    0    -1  
-$EndComp
 $Comp
 L Device:C C?
 U 1 1 5F187062
@@ -383,31 +282,8 @@ F 3 "~" H 6900 5050 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	6050 4900 6500 4900
-Connection ~ 6500 4900
-Wire Wire Line
-	6500 4900 6900 4900
-Wire Wire Line
-	6900 5500 6500 5500
-Connection ~ 6500 5500
-Wire Wire Line
-	6500 5500 6050 5500
-Wire Wire Line
 	6050 5200 6900 5200
 Connection ~ 6900 5200
-$Comp
-L Amplifier_Operational:TL072 U?
-U 3 1 5F187076
-P 7450 5200
-AR Path="/5F187076" Ref="U?"  Part="3" 
-AR Path="/5F169930/5F187076" Ref="U7"  Part="3" 
-F 0 "U7" H 7408 5246 50  0000 L CNN
-F 1 "TL072" H 7408 5155 50  0000 L CNN
-F 2 "Package_DIP:DIP-8_W7.62mm_Socket" H 7450 5200 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 7450 5200 50  0001 C CNN
-	3    7450 5200
-	1    0    0    -1  
-$EndComp
 $Comp
 L Device:C C?
 U 1 1 5F18707C
@@ -435,26 +311,12 @@ F 3 "~" H 7750 5050 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	6900 4900 7350 4900
-Connection ~ 7350 4900
-Wire Wire Line
-	7350 4900 7750 4900
-Wire Wire Line
-	7750 5500 7350 5500
-Connection ~ 7350 5500
-Wire Wire Line
-	7350 5500 6900 5500
-Wire Wire Line
 	6900 5200 7750 5200
 Connection ~ 7750 5200
 Connection ~ 3550 4900
 Connection ~ 3550 5500
 Connection ~ 4400 4900
-Wire Wire Line
-	4400 4900 4800 4900
 Connection ~ 4400 5500
-Wire Wire Line
-	4400 5500 4800 5500
 Connection ~ 5200 4900
 Connection ~ 5200 5500
 Connection ~ 6050 4900
@@ -750,19 +612,6 @@ $EndComp
 Text GLabel 3200 2050 0    50   Input ~ 0
 RES_2
 $Comp
-L Amplifier_Operational:TL072 U?
-U 3 1 5EED6A1B
-P 8300 5200
-AR Path="/5EED6A1B" Ref="U?"  Part="3" 
-AR Path="/5F169930/5EED6A1B" Ref="U8"  Part="3" 
-F 0 "U8" H 8258 5246 50  0000 L CNN
-F 1 "TL072" H 8258 5155 50  0000 L CNN
-F 2 "Package_DIP:DIP-8_W7.62mm_Socket" H 8300 5200 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 8300 5200 50  0001 C CNN
-	3    8300 5200
-	1    0    0    -1  
-$EndComp
-$Comp
 L Device:C C?
 U 1 1 5EED6A21
 P 8600 5350
@@ -789,31 +638,8 @@ F 3 "~" H 8600 5050 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	7750 4900 8200 4900
-Connection ~ 8200 4900
-Wire Wire Line
-	8200 4900 8600 4900
-Wire Wire Line
-	8600 5500 8200 5500
-Connection ~ 8200 5500
-Wire Wire Line
-	8200 5500 7750 5500
-Wire Wire Line
 	7750 5200 8600 5200
 Connection ~ 8600 5200
-$Comp
-L Amplifier_Operational:TL072 U?
-U 3 1 5EED6A35
-P 9150 5200
-AR Path="/5EED6A35" Ref="U?"  Part="3" 
-AR Path="/5F169930/5EED6A35" Ref="U9"  Part="3" 
-F 0 "U9" H 9108 5246 50  0000 L CNN
-F 1 "TL072" H 9108 5155 50  0000 L CNN
-F 2 "Package_DIP:DIP-8_W7.62mm_Socket" H 9150 5200 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 9150 5200 50  0001 C CNN
-	3    9150 5200
-	1    0    0    -1  
-$EndComp
 $Comp
 L Device:C C?
 U 1 1 5EED6A3B
@@ -840,16 +666,6 @@ F 3 "~" H 9450 5050 50  0001 C CNN
 	1    9450 5050
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	8600 4900 9050 4900
-Connection ~ 9050 4900
-Wire Wire Line
-	9050 4900 9450 4900
-Wire Wire Line
-	9450 5500 9050 5500
-Connection ~ 9050 5500
-Wire Wire Line
-	9050 5500 8600 5500
 Wire Wire Line
 	8600 5200 9450 5200
 Connection ~ 9450 5200
@@ -922,8 +738,6 @@ MIX_3
 Text GLabel 5050 2550 0    50   Input ~ 0
 MIX_4
 Wire Wire Line
-	4350 5200 4400 5200
-Wire Wire Line
 	3550 5200 4400 5200
 $Comp
 L Connector:Conn_01x26_Female J1
@@ -947,4 +761,172 @@ F 3 "~" H 5250 2450 50  0001 C CNN
 	1    5250 2450
 	1    0    0    -1  
 $EndComp
+$Comp
+L elektrophon:LM1458 U3
+U 3 1 5EEC450E
+P 4050 5200
+F 0 "U3" H 4008 5246 50  0000 L CNN
+F 1 "LM1458" H 4008 5155 50  0000 L CNN
+F 2 "Package_DIP:DIP-8_W7.62mm_Socket" H 4050 5200 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lm358.pdf" H 4050 5200 50  0001 C CNN
+	3    4050 5200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3550 5500 3950 5500
+Wire Wire Line
+	3550 4900 3950 4900
+Wire Wire Line
+	1650 5500 2250 5500
+Wire Wire Line
+	1650 4900 2250 4900
+$Comp
+L elektrophon:LM1458 U1
+U 3 1 5EE68BBC
+P 2350 5200
+F 0 "U1" H 2308 5246 50  0000 L CNN
+F 1 "LM1458" H 2308 5155 50  0000 L CNN
+F 2 "Package_DIP:DIP-8_W7.62mm_Socket" H 2350 5200 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lm358.pdf" H 2350 5200 50  0001 C CNN
+	3    2350 5200
+	1    0    0    -1  
+$EndComp
+Connection ~ 2250 5500
+Connection ~ 2250 4900
+Wire Wire Line
+	2250 5500 2700 5500
+Wire Wire Line
+	2250 4900 2700 4900
+Connection ~ 3950 5500
+Wire Wire Line
+	3950 5500 4400 5500
+Connection ~ 3950 4900
+Wire Wire Line
+	3950 4900 4400 4900
+$Comp
+L elektrophon:LM1458 U4
+U 3 1 5EF53605
+P 4900 5200
+F 0 "U4" H 4858 5246 50  0000 L CNN
+F 1 "LM1458" H 4858 5155 50  0000 L CNN
+F 2 "Package_DIP:DIP-8_W7.62mm_Socket" H 4900 5200 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lm358.pdf" H 4900 5200 50  0001 C CNN
+	3    4900 5200
+	1    0    0    -1  
+$EndComp
+$Comp
+L elektrophon:LM1458 U6
+U 3 1 5EF558E8
+P 6600 5200
+F 0 "U6" H 6558 5246 50  0000 L CNN
+F 1 "LM1458" H 6558 5155 50  0000 L CNN
+F 2 "Package_DIP:DIP-8_W7.62mm_Socket" H 6600 5200 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lm358.pdf" H 6600 5200 50  0001 C CNN
+	3    6600 5200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4400 5500 4800 5500
+Wire Wire Line
+	4400 4900 4800 4900
+Connection ~ 4800 5500
+Wire Wire Line
+	4800 5500 5200 5500
+Connection ~ 4800 4900
+Wire Wire Line
+	4800 4900 5200 4900
+Wire Wire Line
+	6050 5500 6500 5500
+Wire Wire Line
+	6050 4900 6500 4900
+Connection ~ 6500 5500
+Wire Wire Line
+	6500 5500 6900 5500
+Connection ~ 6500 4900
+Wire Wire Line
+	6500 4900 6900 4900
+$Comp
+L elektrophon:LM1458 U5
+U 3 1 5F0B1DD8
+P 5750 5200
+F 0 "U5" H 5708 5246 50  0000 L CNN
+F 1 "LM1458" H 5708 5155 50  0000 L CNN
+F 2 "Package_DIP:DIP-8_W7.62mm_Socket" H 5750 5200 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lm358.pdf" H 5750 5200 50  0001 C CNN
+	3    5750 5200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5200 5500 5650 5500
+Wire Wire Line
+	5200 4900 5650 4900
+Connection ~ 5650 5500
+Wire Wire Line
+	5650 5500 6050 5500
+Connection ~ 5650 4900
+Wire Wire Line
+	5650 4900 6050 4900
+$Comp
+L elektrophon:LM1458 U7
+U 3 1 5F0CF3E8
+P 7450 5200
+F 0 "U7" H 7408 5246 50  0000 L CNN
+F 1 "LM1458" H 7408 5155 50  0000 L CNN
+F 2 "Package_DIP:DIP-8_W7.62mm_Socket" H 7450 5200 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lm358.pdf" H 7450 5200 50  0001 C CNN
+	3    7450 5200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6900 5500 7350 5500
+Wire Wire Line
+	6900 4900 7350 4900
+Connection ~ 7350 5500
+Wire Wire Line
+	7350 5500 7750 5500
+Connection ~ 7350 4900
+Wire Wire Line
+	7350 4900 7750 4900
+$Comp
+L elektrophon:LM1458 U8
+U 3 1 5F0DFF84
+P 8300 5200
+F 0 "U8" H 8258 5246 50  0000 L CNN
+F 1 "LM1458" H 8258 5155 50  0000 L CNN
+F 2 "Package_DIP:DIP-8_W7.62mm_Socket" H 8300 5200 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lm358.pdf" H 8300 5200 50  0001 C CNN
+	3    8300 5200
+	1    0    0    -1  
+$EndComp
+$Comp
+L elektrophon:LM1458 U9
+U 3 1 5F0E3231
+P 9100 5200
+F 0 "U9" H 9058 5246 50  0000 L CNN
+F 1 "LM1458" H 9058 5155 50  0000 L CNN
+F 2 "Package_DIP:DIP-8_W7.62mm_Socket" H 9100 5200 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lm358.pdf" H 9100 5200 50  0001 C CNN
+	3    9100 5200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7750 5500 8200 5500
+Wire Wire Line
+	7750 4900 8200 4900
+Wire Wire Line
+	8600 5500 9000 5500
+Wire Wire Line
+	8600 4900 9000 4900
+Connection ~ 8200 5500
+Wire Wire Line
+	8200 5500 8600 5500
+Connection ~ 8200 4900
+Wire Wire Line
+	8200 4900 8600 4900
+Connection ~ 9000 5500
+Wire Wire Line
+	9000 5500 9450 5500
+Connection ~ 9000 4900
+Wire Wire Line
+	9000 4900 9450 4900
 $EndSCHEMATC

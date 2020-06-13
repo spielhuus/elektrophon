@@ -18,39 +18,6 @@ C7 and C8 are polyester capacitors
 Text Notes 9000 5600 0    50   ~ 0
 the opamps can be TL072 or MC1458 \nfor more vintage sound
 $Comp
-L Amplifier_Operational:TL072 U1
-U 1 1 5EEAAAAE
-P 1800 1900
-F 0 "U1" H 1800 1533 50  0000 C CNN
-F 1 "TL072" H 1800 1624 50  0000 C CNN
-F 2 "Package_DIP:DIP-8_W7.62mm_Socket" H 1800 1900 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 1800 1900 50  0001 C CNN
-	1    1800 1900
-	1    0    0    1   
-$EndComp
-$Comp
-L Amplifier_Operational:TL072 U3
-U 2 1 5EEAAAB4
-P 5800 1800
-F 0 "U3" H 5800 1433 50  0000 C CNN
-F 1 "TL072" H 5800 1524 50  0000 C CNN
-F 2 "Package_DIP:DIP-8_W7.62mm_Socket" H 5800 1800 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 5800 1800 50  0001 C CNN
-	2    5800 1800
-	1    0    0    1   
-$EndComp
-$Comp
-L Amplifier_Operational:TL072 U3
-U 1 1 5EEAAABA
-P 4550 1800
-F 0 "U3" H 4550 1433 50  0000 C CNN
-F 1 "TL072" H 4550 1524 50  0000 C CNN
-F 2 "Package_DIP:DIP-8_W7.62mm_Socket" H 4550 1800 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 4550 1800 50  0001 C CNN
-	1    4550 1800
-	1    0    0    1   
-$EndComp
-$Comp
 L Device:R R1
 U 1 1 5EEAAAC6
 P 1100 1300
@@ -404,17 +371,6 @@ F 3 "~" H 1900 5150 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Amplifier_Operational:TL072 U1
-U 2 1 5EEDB120
-P 3100 1800
-F 0 "U1" H 3100 2167 50  0000 C CNN
-F 1 "TL072" H 3100 2076 50  0000 C CNN
-F 2 "Package_DIP:DIP-8_W7.62mm_Socket" H 3100 1800 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 3100 1800 50  0001 C CNN
-	2    3100 1800
-	1    0    0    1   
-$EndComp
-$Comp
 L Device:R R5
 U 1 1 5EEE1513
 P 1900 5500
@@ -636,4 +592,48 @@ Wire Wire Line
 	2300 5900 2300 6350
 Wire Wire Line
 	2300 5150 2300 5500
+$Comp
+L elektrophon:LM1458 U1
+U 1 1 5EE5E5FB
+P 1800 1900
+F 0 "U1" H 1800 1533 50  0000 C CNN
+F 1 "LM1458" H 1800 1624 50  0000 C CNN
+F 2 "Package_DIP:DIP-8_W7.62mm_Socket" H 1800 1900 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lm358.pdf" H 1800 1900 50  0001 C CNN
+	1    1800 1900
+	1    0    0    1   
+$EndComp
+$Comp
+L elektrophon:LM1458 U1
+U 2 1 5EE6036E
+P 3100 1800
+F 0 "U1" H 3100 1433 50  0000 C CNN
+F 1 "LM1458" H 3100 1524 50  0000 C CNN
+F 2 "Package_DIP:DIP-8_W7.62mm_Socket" H 3100 1800 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lm358.pdf" H 3100 1800 50  0001 C CNN
+	2    3100 1800
+	1    0    0    1   
+$EndComp
+$Comp
+L elektrophon:LM1458 U3
+U 1 1 5EEA09E5
+P 4550 1800
+F 0 "U3" H 4550 1433 50  0000 C CNN
+F 1 "LM1458" H 4550 1524 50  0000 C CNN
+F 2 "Package_DIP:DIP-8_W7.62mm_Socket" H 4550 1800 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lm358.pdf" H 4550 1800 50  0001 C CNN
+	1    4550 1800
+	1    0    0    1   
+$EndComp
+$Comp
+L elektrophon:LM1458 U3
+U 2 1 5EEA243B
+P 5800 1800
+F 0 "U3" H 5800 1433 50  0000 C CNN
+F 1 "LM1458" H 5800 1524 50  0000 C CNN
+F 2 "Package_DIP:DIP-8_W7.62mm_Socket" H 5800 1800 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lm358.pdf" H 5800 1800 50  0001 C CNN
+	2    5800 1800
+	1    0    0    1   
+$EndComp
 $EndSCHEMATC
