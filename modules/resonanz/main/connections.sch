@@ -62,7 +62,7 @@ AR Path="/5F186FCA" Ref="C?"  Part="1"
 AR Path="/5F169930/5F186FCA" Ref="C10"  Part="1" 
 F 0 "C10" H 2815 5396 50  0000 L CNN
 F 1 "0.1u" H 2815 5305 50  0000 L CNN
-F 2 "Capacitor_THT:C_Disc_D3.4mm_W2.1mm_P2.50mm" H 2738 5200 50  0001 C CNN
+F 2 "Capacitor_THT:C_Rect_L4.0mm_W2.5mm_P2.50mm" H 2738 5200 50  0001 C CNN
 F 3 "~" H 2700 5350 50  0001 C CNN
 	1    2700 5350
 	1    0    0    -1  
@@ -104,19 +104,6 @@ Wire Wire Line
 	1650 5200 2700 5200
 Connection ~ 2700 5200
 $Comp
-L Amplifier_Operational:TL072 U?
-U 3 1 5F186FE9
-P 3250 5200
-AR Path="/5F186FE9" Ref="U?"  Part="3" 
-AR Path="/5F169930/5F186FE9" Ref="U2"  Part="3" 
-F 0 "U2" H 3208 5246 50  0000 L CNN
-F 1 "TL072" H 3208 5155 50  0000 L CNN
-F 2 "Package_DIP:DIP-8_W7.62mm_Socket" H 3250 5200 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 3250 5200 50  0001 C CNN
-	3    3250 5200
-	1    0    0    -1  
-$EndComp
-$Comp
 L Device:C C?
 U 1 1 5F186FF5
 P 2700 5050
@@ -124,7 +111,7 @@ AR Path="/5F186FF5" Ref="C?"  Part="1"
 AR Path="/5F169930/5F186FF5" Ref="C9"  Part="1" 
 F 0 "C9" H 2815 5096 50  0000 L CNN
 F 1 "0.1u" H 2815 5005 50  0000 L CNN
-F 2 "Capacitor_THT:C_Disc_D3.4mm_W2.1mm_P2.50mm" H 2738 4900 50  0001 C CNN
+F 2 "Capacitor_THT:C_Rect_L4.0mm_W2.5mm_P2.50mm" H 2738 4900 50  0001 C CNN
 F 3 "~" H 2700 5050 50  0001 C CNN
 	1    2700 5050
 	1    0    0    -1  
@@ -137,7 +124,7 @@ AR Path="/5F186FFB" Ref="C?"  Part="1"
 AR Path="/5F169930/5F186FFB" Ref="C12"  Part="1" 
 F 0 "C12" H 3665 5396 50  0000 L CNN
 F 1 "0.1u" H 3665 5305 50  0000 L CNN
-F 2 "Capacitor_THT:C_Disc_D3.4mm_W2.1mm_P2.50mm" H 3588 5200 50  0001 C CNN
+F 2 "Capacitor_THT:C_Rect_L4.0mm_W2.5mm_P2.50mm" H 3588 5200 50  0001 C CNN
 F 3 "~" H 3550 5350 50  0001 C CNN
 	1    3550 5350
 	1    0    0    -1  
@@ -150,23 +137,13 @@ AR Path="/5F187001" Ref="C?"  Part="1"
 AR Path="/5F169930/5F187001" Ref="C11"  Part="1" 
 F 0 "C11" H 3665 5096 50  0000 L CNN
 F 1 "0.1u" H 3665 5005 50  0000 L CNN
-F 2 "Capacitor_THT:C_Disc_D3.4mm_W2.1mm_P2.50mm" H 3588 4900 50  0001 C CNN
+F 2 "Capacitor_THT:C_Rect_L4.0mm_W2.5mm_P2.50mm" H 3588 4900 50  0001 C CNN
 F 3 "~" H 3550 5050 50  0001 C CNN
 	1    3550 5050
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	2700 4900 3150 4900
 Connection ~ 2700 4900
-Connection ~ 3150 4900
-Wire Wire Line
-	3150 4900 3550 4900
-Wire Wire Line
-	3550 5500 3150 5500
 Connection ~ 2700 5500
-Connection ~ 3150 5500
-Wire Wire Line
-	3150 5500 2700 5500
 Wire Wire Line
 	2700 5200 3550 5200
 Connection ~ 3550 5200
@@ -178,7 +155,7 @@ AR Path="/5F187017" Ref="C?"  Part="1"
 AR Path="/5F169930/5F187017" Ref="C14"  Part="1" 
 F 0 "C14" H 4515 5396 50  0000 L CNN
 F 1 "0.1u" H 4515 5305 50  0000 L CNN
-F 2 "Capacitor_THT:C_Disc_D3.4mm_W2.1mm_P2.50mm" H 4438 5200 50  0001 C CNN
+F 2 "Capacitor_THT:C_Rect_L4.0mm_W2.5mm_P2.50mm" H 4438 5200 50  0001 C CNN
 F 3 "~" H 4400 5350 50  0001 C CNN
 	1    4400 5350
 	1    0    0    -1  
@@ -191,7 +168,7 @@ AR Path="/5F18701D" Ref="C?"  Part="1"
 AR Path="/5F169930/5F18701D" Ref="C13"  Part="1" 
 F 0 "C13" H 4515 5096 50  0000 L CNN
 F 1 "0.1u" H 4515 5005 50  0000 L CNN
-F 2 "Capacitor_THT:C_Disc_D3.4mm_W2.1mm_P2.50mm" H 4438 4900 50  0001 C CNN
+F 2 "Capacitor_THT:C_Rect_L4.0mm_W2.5mm_P2.50mm" H 4438 4900 50  0001 C CNN
 F 3 "~" H 4400 5050 50  0001 C CNN
 	1    4400 5050
 	1    0    0    -1  
@@ -205,7 +182,7 @@ AR Path="/5F18702E" Ref="C?"  Part="1"
 AR Path="/5F169930/5F18702E" Ref="C16"  Part="1" 
 F 0 "C16" H 5315 5396 50  0000 L CNN
 F 1 "0.1u" H 5315 5305 50  0000 L CNN
-F 2 "Capacitor_THT:C_Disc_D3.4mm_W2.1mm_P2.50mm" H 5238 5200 50  0001 C CNN
+F 2 "Capacitor_THT:C_Rect_L4.0mm_W2.5mm_P2.50mm" H 5238 5200 50  0001 C CNN
 F 3 "~" H 5200 5350 50  0001 C CNN
 	1    5200 5350
 	1    0    0    -1  
@@ -218,7 +195,7 @@ AR Path="/5F187034" Ref="C?"  Part="1"
 AR Path="/5F169930/5F187034" Ref="C15"  Part="1" 
 F 0 "C15" H 5315 5096 50  0000 L CNN
 F 1 "0.1u" H 5315 5005 50  0000 L CNN
-F 2 "Capacitor_THT:C_Disc_D3.4mm_W2.1mm_P2.50mm" H 5238 4900 50  0001 C CNN
+F 2 "Capacitor_THT:C_Rect_L4.0mm_W2.5mm_P2.50mm" H 5238 4900 50  0001 C CNN
 F 3 "~" H 5200 5050 50  0001 C CNN
 	1    5200 5050
 	1    0    0    -1  
@@ -234,7 +211,7 @@ AR Path="/5F187048" Ref="C?"  Part="1"
 AR Path="/5F169930/5F187048" Ref="C18"  Part="1" 
 F 0 "C18" H 6165 5396 50  0000 L CNN
 F 1 "0.1u" H 6165 5305 50  0000 L CNN
-F 2 "Capacitor_THT:C_Disc_D3.4mm_W2.1mm_P2.50mm" H 6088 5200 50  0001 C CNN
+F 2 "Capacitor_THT:C_Rect_L4.0mm_W2.5mm_P2.50mm" H 6088 5200 50  0001 C CNN
 F 3 "~" H 6050 5350 50  0001 C CNN
 	1    6050 5350
 	1    0    0    -1  
@@ -247,7 +224,7 @@ AR Path="/5F18704E" Ref="C?"  Part="1"
 AR Path="/5F169930/5F18704E" Ref="C17"  Part="1" 
 F 0 "C17" H 6165 5096 50  0000 L CNN
 F 1 "0.1u" H 6165 5005 50  0000 L CNN
-F 2 "Capacitor_THT:C_Disc_D3.4mm_W2.1mm_P2.50mm" H 6088 4900 50  0001 C CNN
+F 2 "Capacitor_THT:C_Rect_L4.0mm_W2.5mm_P2.50mm" H 6088 4900 50  0001 C CNN
 F 3 "~" H 6050 5050 50  0001 C CNN
 	1    6050 5050
 	1    0    0    -1  
@@ -263,7 +240,7 @@ AR Path="/5F187062" Ref="C?"  Part="1"
 AR Path="/5F169930/5F187062" Ref="C20"  Part="1" 
 F 0 "C20" H 7015 5396 50  0000 L CNN
 F 1 "0.1u" H 7015 5305 50  0000 L CNN
-F 2 "Capacitor_THT:C_Disc_D3.4mm_W2.1mm_P2.50mm" H 6938 5200 50  0001 C CNN
+F 2 "Capacitor_THT:C_Rect_L4.0mm_W2.5mm_P2.50mm" H 6938 5200 50  0001 C CNN
 F 3 "~" H 6900 5350 50  0001 C CNN
 	1    6900 5350
 	1    0    0    -1  
@@ -276,7 +253,7 @@ AR Path="/5F187068" Ref="C?"  Part="1"
 AR Path="/5F169930/5F187068" Ref="C19"  Part="1" 
 F 0 "C19" H 7015 5096 50  0000 L CNN
 F 1 "0.1u" H 7015 5005 50  0000 L CNN
-F 2 "Capacitor_THT:C_Disc_D3.4mm_W2.1mm_P2.50mm" H 6938 4900 50  0001 C CNN
+F 2 "Capacitor_THT:C_Rect_L4.0mm_W2.5mm_P2.50mm" H 6938 4900 50  0001 C CNN
 F 3 "~" H 6900 5050 50  0001 C CNN
 	1    6900 5050
 	1    0    0    -1  
@@ -292,7 +269,7 @@ AR Path="/5F18707C" Ref="C?"  Part="1"
 AR Path="/5F169930/5F18707C" Ref="C22"  Part="1" 
 F 0 "C22" H 7865 5396 50  0000 L CNN
 F 1 "0.1u" H 7865 5305 50  0000 L CNN
-F 2 "Capacitor_THT:C_Disc_D3.4mm_W2.1mm_P2.50mm" H 7788 5200 50  0001 C CNN
+F 2 "Capacitor_THT:C_Rect_L4.0mm_W2.5mm_P2.50mm" H 7788 5200 50  0001 C CNN
 F 3 "~" H 7750 5350 50  0001 C CNN
 	1    7750 5350
 	1    0    0    -1  
@@ -305,7 +282,7 @@ AR Path="/5F187082" Ref="C?"  Part="1"
 AR Path="/5F169930/5F187082" Ref="C21"  Part="1" 
 F 0 "C21" H 7865 5096 50  0000 L CNN
 F 1 "0.1u" H 7865 5005 50  0000 L CNN
-F 2 "Capacitor_THT:C_Disc_D3.4mm_W2.1mm_P2.50mm" H 7788 4900 50  0001 C CNN
+F 2 "Capacitor_THT:C_Rect_L4.0mm_W2.5mm_P2.50mm" H 7788 4900 50  0001 C CNN
 F 3 "~" H 7750 5050 50  0001 C CNN
 	1    7750 5050
 	1    0    0    -1  
@@ -619,7 +596,7 @@ AR Path="/5EED6A21" Ref="C?"  Part="1"
 AR Path="/5F169930/5EED6A21" Ref="C26"  Part="1" 
 F 0 "C26" H 8715 5396 50  0000 L CNN
 F 1 "0.1u" H 8715 5305 50  0000 L CNN
-F 2 "Capacitor_THT:C_Disc_D3.4mm_W2.1mm_P2.50mm" H 8638 5200 50  0001 C CNN
+F 2 "Capacitor_THT:C_Rect_L4.0mm_W2.5mm_P2.50mm" H 8638 5200 50  0001 C CNN
 F 3 "~" H 8600 5350 50  0001 C CNN
 	1    8600 5350
 	1    0    0    -1  
@@ -632,7 +609,7 @@ AR Path="/5EED6A27" Ref="C?"  Part="1"
 AR Path="/5F169930/5EED6A27" Ref="C25"  Part="1" 
 F 0 "C25" H 8715 5096 50  0000 L CNN
 F 1 "0.1u" H 8715 5005 50  0000 L CNN
-F 2 "Capacitor_THT:C_Disc_D3.4mm_W2.1mm_P2.50mm" H 8638 4900 50  0001 C CNN
+F 2 "Capacitor_THT:C_Rect_L4.0mm_W2.5mm_P2.50mm" H 8638 4900 50  0001 C CNN
 F 3 "~" H 8600 5050 50  0001 C CNN
 	1    8600 5050
 	1    0    0    -1  
@@ -648,7 +625,7 @@ AR Path="/5EED6A3B" Ref="C?"  Part="1"
 AR Path="/5F169930/5EED6A3B" Ref="C28"  Part="1" 
 F 0 "C28" H 9565 5396 50  0000 L CNN
 F 1 "0.1u" H 9565 5305 50  0000 L CNN
-F 2 "Capacitor_THT:C_Disc_D3.4mm_W2.1mm_P2.50mm" H 9488 5200 50  0001 C CNN
+F 2 "Capacitor_THT:C_Rect_L4.0mm_W2.5mm_P2.50mm" H 9488 5200 50  0001 C CNN
 F 3 "~" H 9450 5350 50  0001 C CNN
 	1    9450 5350
 	1    0    0    -1  
@@ -661,7 +638,7 @@ AR Path="/5EED6A41" Ref="C?"  Part="1"
 AR Path="/5F169930/5EED6A41" Ref="C27"  Part="1" 
 F 0 "C27" H 9565 5096 50  0000 L CNN
 F 1 "0.1u" H 9565 5005 50  0000 L CNN
-F 2 "Capacitor_THT:C_Disc_D3.4mm_W2.1mm_P2.50mm" H 9488 4900 50  0001 C CNN
+F 2 "Capacitor_THT:C_Rect_L4.0mm_W2.5mm_P2.50mm" H 9488 4900 50  0001 C CNN
 F 3 "~" H 9450 5050 50  0001 C CNN
 	1    9450 5050
 	1    0    0    -1  
@@ -929,4 +906,27 @@ Wire Wire Line
 Connection ~ 9000 4900
 Wire Wire Line
 	9000 4900 9450 4900
+Wire Wire Line
+	3150 4900 3550 4900
+Wire Wire Line
+	2700 4900 3150 4900
+Connection ~ 3150 4900
+Wire Wire Line
+	3150 5500 2700 5500
+Wire Wire Line
+	3550 5500 3150 5500
+Connection ~ 3150 5500
+$Comp
+L Amplifier_Operational:TL072 U?
+U 3 1 5F186FE9
+P 3250 5200
+AR Path="/5F186FE9" Ref="U?"  Part="3" 
+AR Path="/5F169930/5F186FE9" Ref="U2"  Part="3" 
+F 0 "U2" H 3208 5246 50  0000 L CNN
+F 1 "TL072" H 3208 5155 50  0000 L CNN
+F 2 "Package_DIP:DIP-8_W7.62mm_Socket" H 3250 5200 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 3250 5200 50  0001 C CNN
+	3    3250 5200
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
