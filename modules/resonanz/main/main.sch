@@ -13,43 +13,8 @@ Comment2 "resonant band pass filter"
 Comment3 ""
 Comment4 "License CC BY 4.0 - Attribution 4.0 International"
 $EndDescr
-Text Notes 9000 5250 0    50   ~ 0
-C7 and C8 are polyester capacitors
 Text Notes 9000 5600 0    50   ~ 0
 the opamps can be TL072 or MC1458 \nfor more vintage sound
-$Comp
-L Amplifier_Operational:TL072 U1
-U 1 1 5EEAAAAE
-P 1800 1900
-F 0 "U1" H 1800 1533 50  0000 C CNN
-F 1 "TL072" H 1800 1624 50  0000 C CNN
-F 2 "Package_DIP:DIP-8_W7.62mm_Socket" H 1800 1900 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 1800 1900 50  0001 C CNN
-	1    1800 1900
-	1    0    0    1   
-$EndComp
-$Comp
-L Amplifier_Operational:TL072 U3
-U 2 1 5EEAAAB4
-P 5800 1800
-F 0 "U3" H 5800 1433 50  0000 C CNN
-F 1 "TL072" H 5800 1524 50  0000 C CNN
-F 2 "Package_DIP:DIP-8_W7.62mm_Socket" H 5800 1800 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 5800 1800 50  0001 C CNN
-	2    5800 1800
-	1    0    0    1   
-$EndComp
-$Comp
-L Amplifier_Operational:TL072 U3
-U 1 1 5EEAAABA
-P 4550 1800
-F 0 "U3" H 4550 1433 50  0000 C CNN
-F 1 "TL072" H 4550 1524 50  0000 C CNN
-F 2 "Package_DIP:DIP-8_W7.62mm_Socket" H 4550 1800 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 4550 1800 50  0001 C CNN
-	1    4550 1800
-	1    0    0    1   
-$EndComp
 $Comp
 L Device:R R1
 U 1 1 5EEAAAC6
@@ -166,8 +131,8 @@ L Device:C C1
 U 1 1 5EEAAB02
 P 4600 1250
 F 0 "C1" V 4348 1250 50  0000 C CNN
-F 1 "22n" V 4439 1250 50  0000 C CNN
-F 2 "Capacitor_THT:C_Rect_L7.2mm_W5.5mm_P5.00mm_FKS2_FKP2_MKS2_MKP2" H 4638 1100 50  0001 C CNN
+F 1 "22n polyester" V 4439 1250 50  0000 C CNN
+F 2 "Capacitor_THT:C_Rect_L7.2mm_W2.5mm_P5.00mm_FKS2_FKP2_MKS2_MKP2" H 4638 1100 50  0001 C CNN
 F 3 "~" H 4600 1250 50  0001 C CNN
 	1    4600 1250
 	0    1    1    0   
@@ -203,7 +168,7 @@ U 1 1 5EEAAB16
 P 3000 2700
 F 0 "D1" H 3000 2916 50  0000 C CNN
 F 1 "1N4148" H 3000 2825 50  0000 C CNN
-F 2 "Diode_THT:D_DO-35_SOD27_P3.81mm_Vertical_AnodeUp" H 3000 2525 50  0001 C CNN
+F 2 "Diode_THT:D_DO-35_SOD27_P3.81mm_Vertical_KathodeUp" H 3000 2525 50  0001 C CNN
 F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 3000 2700 50  0001 C CNN
 	1    3000 2700
 	1    0    0    -1  
@@ -214,7 +179,7 @@ U 1 1 5EEAAB1C
 P 3000 3050
 F 0 "D2" H 3000 2834 50  0000 C CNN
 F 1 "1N4148" H 3000 2925 50  0000 C CNN
-F 2 "Diode_THT:D_DO-35_SOD27_P3.81mm_Vertical_AnodeUp" H 3000 2875 50  0001 C CNN
+F 2 "Diode_THT:D_DO-35_SOD27_P3.81mm_Vertical_KathodeUp" H 3000 2875 50  0001 C CNN
 F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 3000 3050 50  0001 C CNN
 	1    3000 3050
 	-1   0    0    1   
@@ -321,8 +286,8 @@ L Device:C C2
 U 1 1 5EEAAB8A
 P 5750 1250
 F 0 "C2" V 5498 1250 50  0000 C CNN
-F 1 "22n" V 5589 1250 50  0000 C CNN
-F 2 "Capacitor_THT:C_Rect_L7.2mm_W5.5mm_P5.00mm_FKS2_FKP2_MKS2_MKP2" H 5788 1100 50  0001 C CNN
+F 1 "22n polyester" V 5589 1250 50  0000 C CNN
+F 2 "Capacitor_THT:C_Rect_L7.2mm_W2.5mm_P5.00mm_FKS2_FKP2_MKS2_MKP2" H 5788 1100 50  0001 C CNN
 F 3 "~" H 5750 1250 50  0001 C CNN
 	1    5750 1250
 	0    1    1    0   
@@ -404,17 +369,6 @@ F 3 "~" H 1900 5150 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Amplifier_Operational:TL072 U1
-U 2 1 5EEDB120
-P 3100 1800
-F 0 "U1" H 3100 2167 50  0000 C CNN
-F 1 "TL072" H 3100 2076 50  0000 C CNN
-F 2 "Package_DIP:DIP-8_W7.62mm_Socket" H 3100 1800 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 3100 1800 50  0001 C CNN
-	2    3100 1800
-	1    0    0    1   
-$EndComp
-$Comp
 L Device:R R5
 U 1 1 5EEE1513
 P 1900 5500
@@ -445,28 +399,9 @@ Wire Wire Line
 Connection ~ 2300 5150
 Wire Wire Line
 	2050 5500 2300 5500
-$Comp
-L Device:R R8
-U 1 1 5EF2B814
-P 2850 4800
-F 0 "R8" V 2643 4800 50  0000 C CNN
-F 1 "100k" V 2734 4800 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 2780 4800 50  0001 C CNN
-F 3 "~" H 2850 4800 50  0001 C CNN
-	1    2850 4800
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	2700 4800 2500 4800
-Wire Wire Line
-	2500 4800 2500 5150
 Connection ~ 2500 5150
 Wire Wire Line
 	2500 5150 2550 5150
-Wire Wire Line
-	3000 4800 3200 4800
-Wire Wire Line
-	3200 4800 3200 5250
 Wire Wire Line
 	3200 5250 3150 5250
 $Comp
@@ -481,50 +416,20 @@ F 3 "~" H 3450 5250 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Amplifier_Operational:TL072 U2
-U 2 1 5EF4D8B5
-P 2850 5250
-F 0 "U2" H 2850 4900 50  0000 C CNN
-F 1 "TL072" H 2850 5000 50  0000 C CNN
-F 2 "Package_DIP:DIP-8_W7.62mm_Socket" H 2850 5250 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 2850 5250 50  0001 C CNN
-	2    2850 5250
-	1    0    0    1   
-$EndComp
-$Comp
-L Device:R R15
-U 1 1 5EF4EE16
-P 4050 4850
-F 0 "R15" V 3843 4850 50  0000 C CNN
-F 1 "100k" V 3934 4850 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 3980 4850 50  0001 C CNN
-F 3 "~" H 4050 4850 50  0001 C CNN
-	1    4050 4850
-	0    1    1    0   
-$EndComp
-$Comp
 L Device:R R16
 U 1 1 5EF4F75F
 P 4600 5350
 F 0 "R16" V 4393 5350 50  0000 C CNN
-F 1 "100k" V 4484 5350 50  0000 C CNN
+F 1 "1k" V 4484 5350 50  0000 C CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 4530 5350 50  0001 C CNN
 F 3 "~" H 4600 5350 50  0001 C CNN
 	1    4600 5350
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	4200 4850 4950 4850
-Wire Wire Line
-	4950 4850 4950 5350
-Wire Wire Line
 	4950 5350 4750 5350
 Wire Wire Line
 	4450 5350 4350 5350
-Wire Wire Line
-	3900 4850 3700 4850
-Wire Wire Line
-	3700 4850 3700 5250
 Wire Wire Line
 	3700 5250 3750 5250
 Wire Wire Line
@@ -590,17 +495,6 @@ OUT_1
 Wire Wire Line
 	3450 3100 3450 3050
 Connection ~ 3450 3050
-$Comp
-L Amplifier_Operational:TL072 U2
-U 1 1 5F14EDE8
-P 4050 5350
-F 0 "U2" H 4050 5000 50  0000 C CNN
-F 1 "TL072" H 4050 5100 50  0000 C CNN
-F 2 "Package_DIP:DIP-8_W7.62mm_Socket" H 4050 5350 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 4050 5350 50  0001 C CNN
-	1    4050 5350
-	1    0    0    1   
-$EndComp
 $Sheet
 S 4150 6950 2000 350 
 U 5F169930
@@ -636,4 +530,108 @@ Wire Wire Line
 	2300 5900 2300 6350
 Wire Wire Line
 	2300 5150 2300 5500
+$Comp
+L elektrophon:LM1458 U1
+U 1 1 5EE5E5FB
+P 1800 1900
+F 0 "U1" H 1800 1533 50  0000 C CNN
+F 1 "LM1458" H 1800 1624 50  0000 C CNN
+F 2 "Package_DIP:DIP-8_W7.62mm_Socket" H 1800 1900 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lm358.pdf" H 1800 1900 50  0001 C CNN
+	1    1800 1900
+	1    0    0    1   
+$EndComp
+$Comp
+L elektrophon:LM1458 U1
+U 2 1 5EE6036E
+P 3100 1800
+F 0 "U1" H 3100 1433 50  0000 C CNN
+F 1 "LM1458" H 3100 1524 50  0000 C CNN
+F 2 "Package_DIP:DIP-8_W7.62mm_Socket" H 3100 1800 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lm358.pdf" H 3100 1800 50  0001 C CNN
+	2    3100 1800
+	1    0    0    1   
+$EndComp
+$Comp
+L elektrophon:LM1458 U3
+U 1 1 5EEA09E5
+P 4550 1800
+F 0 "U3" H 4550 1433 50  0000 C CNN
+F 1 "LM1458" H 4550 1524 50  0000 C CNN
+F 2 "Package_DIP:DIP-8_W7.62mm_Socket" H 4550 1800 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lm358.pdf" H 4550 1800 50  0001 C CNN
+	1    4550 1800
+	1    0    0    1   
+$EndComp
+$Comp
+L elektrophon:LM1458 U3
+U 2 1 5EEA243B
+P 5800 1800
+F 0 "U3" H 5800 1433 50  0000 C CNN
+F 1 "LM1458" H 5800 1524 50  0000 C CNN
+F 2 "Package_DIP:DIP-8_W7.62mm_Socket" H 5800 1800 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lm358.pdf" H 5800 1800 50  0001 C CNN
+	2    5800 1800
+	1    0    0    1   
+$EndComp
+$Comp
+L Amplifier_Operational:TL072 U2
+U 1 1 5F14EDE8
+P 4050 5350
+F 0 "U2" H 4050 5000 50  0000 C CNN
+F 1 "TL072" H 4050 5100 50  0000 C CNN
+F 2 "Package_DIP:DIP-8_W7.62mm_Socket" H 4050 5350 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 4050 5350 50  0001 C CNN
+	1    4050 5350
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	4950 4850 4950 5350
+Wire Wire Line
+	3700 4850 3700 5250
+Wire Wire Line
+	4200 4850 4950 4850
+Wire Wire Line
+	3900 4850 3700 4850
+$Comp
+L Device:R R15
+U 1 1 5EF4EE16
+P 4050 4850
+F 0 "R15" V 3843 4850 50  0000 C CNN
+F 1 "100k" V 3934 4850 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 3980 4850 50  0001 C CNN
+F 3 "~" H 4050 4850 50  0001 C CNN
+	1    4050 4850
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3200 4800 3200 5250
+Wire Wire Line
+	2500 4800 2500 5150
+Wire Wire Line
+	2700 4800 2500 4800
+Wire Wire Line
+	3000 4800 3200 4800
+$Comp
+L Device:R R8
+U 1 1 5EF2B814
+P 2850 4800
+F 0 "R8" V 2643 4800 50  0000 C CNN
+F 1 "100k" V 2734 4800 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 2780 4800 50  0001 C CNN
+F 3 "~" H 2850 4800 50  0001 C CNN
+	1    2850 4800
+	0    1    1    0   
+$EndComp
+$Comp
+L Amplifier_Operational:TL072 U2
+U 2 1 5EF4D8B5
+P 2850 5250
+F 0 "U2" H 2850 4900 50  0000 C CNN
+F 1 "TL072" H 2850 5000 50  0000 C CNN
+F 2 "Package_DIP:DIP-8_W7.62mm_Socket" H 2850 5250 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 2850 5250 50  0001 C CNN
+	2    2850 5250
+	1    0    0    1   
+$EndComp
 $EndSCHEMATC

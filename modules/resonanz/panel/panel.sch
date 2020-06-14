@@ -203,45 +203,100 @@ $EndComp
 $Comp
 L Mechanical:MountingHole H20
 U 1 1 5EE0CD30
-P 4450 1750
-F 0 "H20" H 4550 1796 50  0000 L CNN
-F 1 "VOL_1" H 4550 1705 50  0000 L CNN
-F 2 "elektrophon:panel_potentiometer" H 4450 1750 50  0001 C CNN
-F 3 "~" H 4450 1750 50  0001 C CNN
-	1    4450 1750
+P 5350 1750
+F 0 "H20" H 5450 1796 50  0000 L CNN
+F 1 "VOL_1" H 5450 1705 50  0000 L CNN
+F 2 "elektrophon:panel_potentiometer" H 5350 1750 50  0001 C CNN
+F 3 "~" H 5350 1750 50  0001 C CNN
+	1    5350 1750
 	1    0    0    -1  
 $EndComp
 $Comp
 L Mechanical:MountingHole H21
 U 1 1 5EE0CD36
-P 4450 2250
-F 0 "H21" H 4550 2296 50  0000 L CNN
-F 1 "VOL_2" H 4550 2205 50  0000 L CNN
-F 2 "elektrophon:panel_potentiometer" H 4450 2250 50  0001 C CNN
-F 3 "~" H 4450 2250 50  0001 C CNN
-	1    4450 2250
+P 5350 2250
+F 0 "H21" H 5450 2296 50  0000 L CNN
+F 1 "VOL_2" H 5450 2205 50  0000 L CNN
+F 2 "elektrophon:panel_potentiometer" H 5350 2250 50  0001 C CNN
+F 3 "~" H 5350 2250 50  0001 C CNN
+	1    5350 2250
 	1    0    0    -1  
 $EndComp
 $Comp
 L Mechanical:MountingHole H22
 U 1 1 5EE0CD3C
-P 4450 2750
-F 0 "H22" H 4550 2796 50  0000 L CNN
-F 1 "VOL_3" H 4550 2705 50  0000 L CNN
-F 2 "elektrophon:panel_potentiometer" H 4450 2750 50  0001 C CNN
-F 3 "~" H 4450 2750 50  0001 C CNN
-	1    4450 2750
+P 5350 2750
+F 0 "H22" H 5450 2796 50  0000 L CNN
+F 1 "VOL_3" H 5450 2705 50  0000 L CNN
+F 2 "elektrophon:panel_potentiometer" H 5350 2750 50  0001 C CNN
+F 3 "~" H 5350 2750 50  0001 C CNN
+	1    5350 2750
 	1    0    0    -1  
 $EndComp
 $Comp
 L Mechanical:MountingHole H23
 U 1 1 5EE0CD48
-P 4450 3700
-F 0 "H23" H 4550 3746 50  0000 L CNN
-F 1 "OUT" H 4550 3655 50  0000 L CNN
-F 2 "elektrophon:panel_jack" H 4450 3700 50  0001 C CNN
-F 3 "~" H 4450 3700 50  0001 C CNN
-	1    4450 3700
+P 5350 3700
+F 0 "H23" H 5450 3746 50  0000 L CNN
+F 1 "OUT" H 5450 3655 50  0000 L CNN
+F 2 "elektrophon:panel_jack" H 5350 3700 50  0001 C CNN
+F 3 "~" H 5350 3700 50  0001 C CNN
+	1    5350 3700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H26
+U 1 1 5EE61D0A
+P 5350 3200
+F 0 "H26" H 5450 3246 50  0000 L CNN
+F 1 "VOL_4" H 5450 3155 50  0000 L CNN
+F 2 "elektrophon:panel_potentiometer" H 5350 3200 50  0001 C CNN
+F 3 "~" H 5350 3200 50  0001 C CNN
+	1    5350 3200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H2
+U 1 1 5EE65D57
+P 4300 1800
+F 0 "H2" H 4400 1846 50  0000 L CNN
+F 1 "IN_4" H 4400 1755 50  0000 L CNN
+F 2 "elektrophon:panel_jack" H 4300 1800 50  0001 C CNN
+F 3 "~" H 4300 1800 50  0001 C CNN
+	1    4300 1800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H11
+U 1 1 5EE65D5D
+P 4300 2800
+F 0 "H11" H 4400 2846 50  0000 L CNN
+F 1 "resonance_4" H 4400 2755 50  0000 L CNN
+F 2 "elektrophon:panel_potentiometer" H 4300 2800 50  0001 C CNN
+F 3 "~" H 4300 2800 50  0001 C CNN
+	1    4300 2800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H24
+U 1 1 5EE65D63
+P 4300 3300
+F 0 "H24" H 4400 3346 50  0000 L CNN
+F 1 "frequency_4" H 4400 3255 50  0000 L CNN
+F 2 "elektrophon:panel_potentiometer" H 4300 3300 50  0001 C CNN
+F 3 "~" H 4300 3300 50  0001 C CNN
+	1    4300 3300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H25
+U 1 1 5EE65D69
+P 4300 3750
+F 0 "H25" H 4400 3796 50  0000 L CNN
+F 1 "OUT_4" H 4400 3705 50  0000 L CNN
+F 2 "elektrophon:panel_jack" H 4300 3750 50  0001 C CNN
+F 3 "~" H 4300 3750 50  0001 C CNN
+	1    4300 3750
 	1    0    0    -1  
 $EndComp
 $EndSCHEMATC

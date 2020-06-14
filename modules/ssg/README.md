@@ -7,7 +7,7 @@ the serge **s**mooth and **s**tepped **g**enerator is a versatile module. <a hre
 
 ## *building*
 
-patch the cycle output of the smooth section into the input. you should get a oscillating signal on the smooth output. adjust it with the rate potentiometer.
+patch the cycle output of the smooth section into the input. you should get a oscillating <a href="schemas.pdf"><img align="right" src="https://spielhuus.github.io/elektrophon/images/ssg-schemas-tmb.jpg" height="300px"></img></a>signal on the smooth output. adjust it with the rate potentiometer.
 
 ## *calibration*
 

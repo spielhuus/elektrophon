@@ -14,50 +14,6 @@ Comment3 ""
 Comment4 "License CC BY 4.0 - Attribution 4.0 International"
 $EndDescr
 $Comp
-L Amplifier_Operational:TL072 U4
-U 1 1 5EE6BAC5
-P 2000 2150
-F 0 "U4" H 2000 1783 50  0000 C CNN
-F 1 "TL072" H 2000 1874 50  0000 C CNN
-F 2 "Package_DIP:DIP-8_W7.62mm_Socket" H 2000 2150 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 2000 2150 50  0001 C CNN
-	1    2000 2150
-	1    0    0    1   
-$EndComp
-$Comp
-L Amplifier_Operational:TL072 U4
-U 2 1 5EE6BACB
-P 3300 2050
-F 0 "U4" H 3300 1683 50  0000 C CNN
-F 1 "TL072" H 3300 1774 50  0000 C CNN
-F 2 "Package_DIP:DIP-8_W7.62mm_Socket" H 3300 2050 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 3300 2050 50  0001 C CNN
-	2    3300 2050
-	1    0    0    1   
-$EndComp
-$Comp
-L Amplifier_Operational:TL072 U6
-U 1 1 5EE6BAD1
-P 4750 2050
-F 0 "U6" H 4750 1683 50  0000 C CNN
-F 1 "TL072" H 4750 1774 50  0000 C CNN
-F 2 "Package_DIP:DIP-8_W7.62mm_Socket" H 4750 2050 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 4750 2050 50  0001 C CNN
-	1    4750 2050
-	1    0    0    1   
-$EndComp
-$Comp
-L Amplifier_Operational:TL072 U6
-U 2 1 5EE6BAD7
-P 6000 2050
-F 0 "U6" H 6000 2417 50  0000 C CNN
-F 1 "TL072" H 6000 2326 50  0000 C CNN
-F 2 "Package_DIP:DIP-8_W7.62mm_Socket" H 6000 2050 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 6000 2050 50  0001 C CNN
-	2    6000 2050
-	1    0    0    1   
-$EndComp
-$Comp
 L Device:R R18
 U 1 1 5EE6BADD
 P 1300 1550
@@ -173,8 +129,8 @@ L Device:C C3
 U 1 1 5EE6BB19
 P 4800 1500
 F 0 "C3" V 4548 1500 50  0000 C CNN
-F 1 "22n" V 4639 1500 50  0000 C CNN
-F 2 "Capacitor_THT:C_Rect_L7.2mm_W5.5mm_P5.00mm_FKS2_FKP2_MKS2_MKP2" H 4838 1350 50  0001 C CNN
+F 1 "22n polyester" V 4639 1500 50  0000 C CNN
+F 2 "Capacitor_THT:C_Rect_L7.2mm_W2.5mm_P5.00mm_FKS2_FKP2_MKS2_MKP2" H 4838 1350 50  0001 C CNN
 F 3 "~" H 4800 1500 50  0001 C CNN
 	1    4800 1500
 	0    1    1    0   
@@ -210,7 +166,7 @@ U 1 1 5EE6BB2D
 P 3200 2950
 F 0 "D3" H 3200 3166 50  0000 C CNN
 F 1 "1N4148" H 3200 3075 50  0000 C CNN
-F 2 "Diode_THT:D_DO-35_SOD27_P3.81mm_Vertical_AnodeUp" H 3200 2775 50  0001 C CNN
+F 2 "Diode_THT:D_DO-35_SOD27_P3.81mm_Vertical_KathodeUp" H 3200 2775 50  0001 C CNN
 F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 3200 2950 50  0001 C CNN
 	1    3200 2950
 	1    0    0    -1  
@@ -221,7 +177,7 @@ U 1 1 5EE6BB33
 P 3200 3300
 F 0 "D4" H 3200 3084 50  0000 C CNN
 F 1 "1N4148" H 3200 3175 50  0000 C CNN
-F 2 "Diode_THT:D_DO-35_SOD27_P3.81mm_Vertical_AnodeUp" H 3200 3125 50  0001 C CNN
+F 2 "Diode_THT:D_DO-35_SOD27_P3.81mm_Vertical_KathodeUp" H 3200 3125 50  0001 C CNN
 F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 3200 3300 50  0001 C CNN
 	1    3200 3300
 	-1   0    0    1   
@@ -328,8 +284,8 @@ L Device:C C5
 U 1 1 5EE6BBA1
 P 5950 1500
 F 0 "C5" V 5698 1500 50  0000 C CNN
-F 1 "22n" V 5789 1500 50  0000 C CNN
-F 2 "Capacitor_THT:C_Rect_L7.2mm_W5.5mm_P5.00mm_FKS2_FKP2_MKS2_MKP2" H 5988 1350 50  0001 C CNN
+F 1 "22n polyester" V 5789 1500 50  0000 C CNN
+F 2 "Capacitor_THT:C_Rect_L7.2mm_W2.5mm_P5.00mm_FKS2_FKP2_MKS2_MKP2" H 5988 1350 50  0001 C CNN
 F 3 "~" H 5950 1500 50  0001 C CNN
 	1    5950 1500
 	0    1    1    0   
@@ -405,50 +361,6 @@ Text GLabel 1150 2050 0    50   Input ~ 0
 IN_2
 Text GLabel 6350 2050 2    50   Input ~ 0
 OUT_2
-$Comp
-L Amplifier_Operational:TL072 U5
-U 1 1 5EE38097
-P 2150 5550
-F 0 "U5" H 2150 5183 50  0000 C CNN
-F 1 "TL072" H 2150 5274 50  0000 C CNN
-F 2 "Package_DIP:DIP-8_W7.62mm_Socket" H 2150 5550 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 2150 5550 50  0001 C CNN
-	1    2150 5550
-	1    0    0    1   
-$EndComp
-$Comp
-L Amplifier_Operational:TL072 U5
-U 2 1 5EE3809D
-P 3450 5450
-F 0 "U5" H 3450 5083 50  0000 C CNN
-F 1 "TL072" H 3450 5174 50  0000 C CNN
-F 2 "Package_DIP:DIP-8_W7.62mm_Socket" H 3450 5450 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 3450 5450 50  0001 C CNN
-	2    3450 5450
-	1    0    0    1   
-$EndComp
-$Comp
-L Amplifier_Operational:TL072 U7
-U 1 1 5EE380A3
-P 4900 5450
-F 0 "U7" H 4900 5083 50  0000 C CNN
-F 1 "TL072" H 4900 5174 50  0000 C CNN
-F 2 "Package_DIP:DIP-8_W7.62mm_Socket" H 4900 5450 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 4900 5450 50  0001 C CNN
-	1    4900 5450
-	1    0    0    1   
-$EndComp
-$Comp
-L Amplifier_Operational:TL072 U7
-U 2 1 5EE380A9
-P 6150 5450
-F 0 "U7" H 6150 5817 50  0000 C CNN
-F 1 "TL072" H 6150 5726 50  0000 C CNN
-F 2 "Package_DIP:DIP-8_W7.62mm_Socket" H 6150 5450 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 6150 5450 50  0001 C CNN
-	2    6150 5450
-	1    0    0    1   
-$EndComp
 $Comp
 L Device:R R20
 U 1 1 5EE380AF
@@ -565,8 +477,8 @@ L Device:C C4
 U 1 1 5EE380EB
 P 4950 4900
 F 0 "C4" V 4698 4900 50  0000 C CNN
-F 1 "22n" V 4789 4900 50  0000 C CNN
-F 2 "Capacitor_THT:C_Rect_L7.2mm_W5.5mm_P5.00mm_FKS2_FKP2_MKS2_MKP2" H 4988 4750 50  0001 C CNN
+F 1 "22n polyester" V 4789 4900 50  0000 C CNN
+F 2 "Capacitor_THT:C_Rect_L7.2mm_W2.5mm_P5.00mm_FKS2_FKP2_MKS2_MKP2" H 4988 4750 50  0001 C CNN
 F 3 "~" H 4950 4900 50  0001 C CNN
 	1    4950 4900
 	0    1    1    0   
@@ -602,7 +514,7 @@ U 1 1 5EE380FF
 P 3350 6350
 F 0 "D5" H 3350 6566 50  0000 C CNN
 F 1 "1N4148" H 3350 6475 50  0000 C CNN
-F 2 "Diode_THT:D_DO-35_SOD27_P3.81mm_Vertical_AnodeUp" H 3350 6175 50  0001 C CNN
+F 2 "Diode_THT:D_DO-35_SOD27_P3.81mm_Vertical_KathodeUp" H 3350 6175 50  0001 C CNN
 F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 3350 6350 50  0001 C CNN
 	1    3350 6350
 	1    0    0    -1  
@@ -613,7 +525,7 @@ U 1 1 5EE38105
 P 3350 6700
 F 0 "D6" H 3350 6484 50  0000 C CNN
 F 1 "1N4148" H 3350 6575 50  0000 C CNN
-F 2 "Diode_THT:D_DO-35_SOD27_P3.81mm_Vertical_AnodeUp" H 3350 6525 50  0001 C CNN
+F 2 "Diode_THT:D_DO-35_SOD27_P3.81mm_Vertical_KathodeUp" H 3350 6525 50  0001 C CNN
 F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 3350 6700 50  0001 C CNN
 	1    3350 6700
 	-1   0    0    1   
@@ -720,8 +632,8 @@ L Device:C C6
 U 1 1 5EE38173
 P 6100 4900
 F 0 "C6" V 5848 4900 50  0000 C CNN
-F 1 "22n" V 5939 4900 50  0000 C CNN
-F 2 "Capacitor_THT:C_Rect_L7.2mm_W5.5mm_P5.00mm_FKS2_FKP2_MKS2_MKP2" H 6138 4750 50  0001 C CNN
+F 1 "22n polyester" V 5939 4900 50  0000 C CNN
+F 2 "Capacitor_THT:C_Rect_L7.2mm_W2.5mm_P5.00mm_FKS2_FKP2_MKS2_MKP2" H 6138 4750 50  0001 C CNN
 F 3 "~" H 6100 4900 50  0001 C CNN
 	1    6100 4900
 	0    1    1    0   
@@ -823,50 +735,6 @@ Text GLabel 4750 6600 3    50   Input ~ 0
 FREQ_3_c
 Text GLabel 5050 6600 3    50   Input ~ 0
 OUT_3
-$Comp
-L Amplifier_Operational:TL072 U8
-U 1 1 5EE9D10F
-P 6450 3950
-F 0 "U8" H 6450 3583 50  0000 C CNN
-F 1 "TL072" H 6450 3674 50  0000 C CNN
-F 2 "Package_DIP:DIP-8_W7.62mm_Socket" H 6450 3950 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 6450 3950 50  0001 C CNN
-	1    6450 3950
-	1    0    0    1   
-$EndComp
-$Comp
-L Amplifier_Operational:TL072 U8
-U 2 1 5EE9D115
-P 7750 3850
-F 0 "U8" H 7750 3483 50  0000 C CNN
-F 1 "TL072" H 7750 3574 50  0000 C CNN
-F 2 "Package_DIP:DIP-8_W7.62mm_Socket" H 7750 3850 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 7750 3850 50  0001 C CNN
-	2    7750 3850
-	1    0    0    1   
-$EndComp
-$Comp
-L Amplifier_Operational:TL072 U9
-U 1 1 5EE9D11B
-P 9200 3850
-F 0 "U9" H 9200 3483 50  0000 C CNN
-F 1 "TL072" H 9200 3574 50  0000 C CNN
-F 2 "Package_DIP:DIP-8_W7.62mm_Socket" H 9200 3850 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 9200 3850 50  0001 C CNN
-	1    9200 3850
-	1    0    0    1   
-$EndComp
-$Comp
-L Amplifier_Operational:TL072 U9
-U 2 1 5EE9D121
-P 10450 3850
-F 0 "U9" H 10450 4217 50  0000 C CNN
-F 1 "TL072" H 10450 4126 50  0000 C CNN
-F 2 "Package_DIP:DIP-8_W7.62mm_Socket" H 10450 3850 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 10450 3850 50  0001 C CNN
-	2    10450 3850
-	1    0    0    1   
-$EndComp
 $Comp
 L Device:R R38
 U 1 1 5EE9D127
@@ -983,8 +851,8 @@ L Device:C C23
 U 1 1 5EE9D163
 P 9250 3300
 F 0 "C23" V 8998 3300 50  0000 C CNN
-F 1 "22n" V 9089 3300 50  0000 C CNN
-F 2 "Capacitor_THT:C_Rect_L7.2mm_W5.5mm_P5.00mm_FKS2_FKP2_MKS2_MKP2" H 9288 3150 50  0001 C CNN
+F 1 "22n polyester" V 9089 3300 50  0000 C CNN
+F 2 "Capacitor_THT:C_Rect_L7.2mm_W2.5mm_P5.00mm_FKS2_FKP2_MKS2_MKP2" H 9288 3150 50  0001 C CNN
 F 3 "~" H 9250 3300 50  0001 C CNN
 	1    9250 3300
 	0    1    1    0   
@@ -1020,7 +888,7 @@ U 1 1 5EE9D177
 P 7650 4750
 F 0 "D7" H 7650 4966 50  0000 C CNN
 F 1 "1N4148" H 7650 4875 50  0000 C CNN
-F 2 "Diode_THT:D_DO-35_SOD27_P3.81mm_Vertical_AnodeUp" H 7650 4575 50  0001 C CNN
+F 2 "Diode_THT:D_DO-35_SOD27_P3.81mm_Vertical_KathodeUp" H 7650 4575 50  0001 C CNN
 F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 7650 4750 50  0001 C CNN
 	1    7650 4750
 	1    0    0    -1  
@@ -1031,7 +899,7 @@ U 1 1 5EE9D17D
 P 7650 5100
 F 0 "D8" H 7650 4884 50  0000 C CNN
 F 1 "1N4148" H 7650 4975 50  0000 C CNN
-F 2 "Diode_THT:D_DO-35_SOD27_P3.81mm_Vertical_AnodeUp" H 7650 4925 50  0001 C CNN
+F 2 "Diode_THT:D_DO-35_SOD27_P3.81mm_Vertical_KathodeUp" H 7650 4925 50  0001 C CNN
 F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 7650 5100 50  0001 C CNN
 	1    7650 5100
 	-1   0    0    1   
@@ -1138,8 +1006,8 @@ L Device:C C24
 U 1 1 5EE9D1B9
 P 10400 3300
 F 0 "C24" V 10148 3300 50  0000 C CNN
-F 1 "22n" V 10239 3300 50  0000 C CNN
-F 2 "Capacitor_THT:C_Rect_L7.2mm_W5.5mm_P5.00mm_FKS2_FKP2_MKS2_MKP2" H 10438 3150 50  0001 C CNN
+F 1 "22n polyester" V 10239 3300 50  0000 C CNN
+F 2 "Capacitor_THT:C_Rect_L7.2mm_W2.5mm_P5.00mm_FKS2_FKP2_MKS2_MKP2" H 10438 3150 50  0001 C CNN
 F 3 "~" H 10400 3300 50  0001 C CNN
 	1    10400 3300
 	0    1    1    0   
@@ -1228,4 +1096,136 @@ Text GLabel 9050 5000 3    50   Input ~ 0
 FREQ_4_c
 Text GLabel 9350 5000 3    50   Input ~ 0
 OUT_4
+$Comp
+L elektrophon:LM1458 U4
+U 1 1 5EEF4678
+P 2000 2150
+F 0 "U4" H 2000 1783 50  0000 C CNN
+F 1 "LM1458" H 2000 1874 50  0000 C CNN
+F 2 "Package_DIP:DIP-8_W7.62mm_Socket" H 2000 2150 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lm358.pdf" H 2000 2150 50  0001 C CNN
+	1    2000 2150
+	1    0    0    1   
+$EndComp
+$Comp
+L elektrophon:LM1458 U4
+U 2 1 5EEF5EF6
+P 3300 2050
+F 0 "U4" H 3300 1683 50  0000 C CNN
+F 1 "LM1458" H 3300 1774 50  0000 C CNN
+F 2 "Package_DIP:DIP-8_W7.62mm_Socket" H 3300 2050 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lm358.pdf" H 3300 2050 50  0001 C CNN
+	2    3300 2050
+	1    0    0    1   
+$EndComp
+$Comp
+L elektrophon:LM1458 U5
+U 1 1 5EF20ABF
+P 4750 2050
+F 0 "U5" H 4750 1683 50  0000 C CNN
+F 1 "LM1458" H 4750 1774 50  0000 C CNN
+F 2 "Package_DIP:DIP-8_W7.62mm_Socket" H 4750 2050 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lm358.pdf" H 4750 2050 50  0001 C CNN
+	1    4750 2050
+	1    0    0    1   
+$EndComp
+$Comp
+L elektrophon:LM1458 U5
+U 2 1 5EF222B0
+P 6000 2050
+F 0 "U5" H 6000 1683 50  0000 C CNN
+F 1 "LM1458" H 6000 1774 50  0000 C CNN
+F 2 "Package_DIP:DIP-8_W7.62mm_Socket" H 6000 2050 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lm358.pdf" H 6000 2050 50  0001 C CNN
+	2    6000 2050
+	1    0    0    1   
+$EndComp
+$Comp
+L elektrophon:LM1458 U6
+U 1 1 5EF88F3B
+P 2150 5550
+F 0 "U6" H 2150 5183 50  0000 C CNN
+F 1 "LM1458" H 2150 5274 50  0000 C CNN
+F 2 "Package_DIP:DIP-8_W7.62mm_Socket" H 2150 5550 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lm358.pdf" H 2150 5550 50  0001 C CNN
+	1    2150 5550
+	1    0    0    1   
+$EndComp
+$Comp
+L elektrophon:LM1458 U6
+U 2 1 5EF943F4
+P 3450 5450
+F 0 "U6" H 3450 5083 50  0000 C CNN
+F 1 "LM1458" H 3450 5174 50  0000 C CNN
+F 2 "Package_DIP:DIP-8_W7.62mm_Socket" H 3450 5450 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lm358.pdf" H 3450 5450 50  0001 C CNN
+	2    3450 5450
+	1    0    0    1   
+$EndComp
+$Comp
+L elektrophon:LM1458 U7
+U 1 1 5EF9FE3C
+P 4900 5450
+F 0 "U7" H 4900 5083 50  0000 C CNN
+F 1 "LM1458" H 4900 5174 50  0000 C CNN
+F 2 "Package_DIP:DIP-8_W7.62mm_Socket" H 4900 5450 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lm358.pdf" H 4900 5450 50  0001 C CNN
+	1    4900 5450
+	1    0    0    1   
+$EndComp
+$Comp
+L elektrophon:LM1458 U7
+U 2 1 5EFAAC1F
+P 6150 5450
+F 0 "U7" H 6150 5083 50  0000 C CNN
+F 1 "LM1458" H 6150 5174 50  0000 C CNN
+F 2 "Package_DIP:DIP-8_W7.62mm_Socket" H 6150 5450 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lm358.pdf" H 6150 5450 50  0001 C CNN
+	2    6150 5450
+	1    0    0    1   
+$EndComp
+$Comp
+L elektrophon:LM1458 U8
+U 1 1 5F004DD1
+P 6450 3950
+F 0 "U8" H 6450 3583 50  0000 C CNN
+F 1 "LM1458" H 6450 3674 50  0000 C CNN
+F 2 "Package_DIP:DIP-8_W7.62mm_Socket" H 6450 3950 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lm358.pdf" H 6450 3950 50  0001 C CNN
+	1    6450 3950
+	1    0    0    1   
+$EndComp
+$Comp
+L elektrophon:LM1458 U8
+U 2 1 5F007469
+P 7750 3850
+F 0 "U8" H 7750 3483 50  0000 C CNN
+F 1 "LM1458" H 7750 3574 50  0000 C CNN
+F 2 "Package_DIP:DIP-8_W7.62mm_Socket" H 7750 3850 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lm358.pdf" H 7750 3850 50  0001 C CNN
+	2    7750 3850
+	1    0    0    1   
+$EndComp
+$Comp
+L elektrophon:LM1458 U9
+U 2 1 5F00986B
+P 10450 3850
+F 0 "U9" H 10450 3483 50  0000 C CNN
+F 1 "LM1458" H 10450 3574 50  0000 C CNN
+F 2 "Package_DIP:DIP-8_W7.62mm_Socket" H 10450 3850 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lm358.pdf" H 10450 3850 50  0001 C CNN
+	2    10450 3850
+	1    0    0    1   
+$EndComp
+$Comp
+L elektrophon:LM1458 U9
+U 1 1 5F01145A
+P 9200 3850
+F 0 "U9" H 9200 3483 50  0000 C CNN
+F 1 "LM1458" H 9200 3574 50  0000 C CNN
+F 2 "Package_DIP:DIP-8_W7.62mm_Socket" H 9200 3850 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lm358.pdf" H 9200 3850 50  0001 C CNN
+	1    9200 3850
+	1    0    0    1   
+$EndComp
 $EndSCHEMATC
