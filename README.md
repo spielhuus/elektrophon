@@ -18,6 +18,8 @@ is a collection of modular synthesizer modules i built. The module folders conta
 
   <td><a href="https://github.com/spielhuus/elektrophon/blob/master/modules/polivoks/README.md"><img src="https://spielhuus.github.io/elektrophon/images/polivoks-panel-tmb.png" height="300px"></img></a><br/>polivoks</td>
   
+  <td><a href="https://github.com/spielhuus/elektrophon/blob/master/modules/metall/README.md"><img src="https://spielhuus.github.io/elektrophon/images/metall-panel-tmb.png" height="300px"></img></a><br/>metall wave folder</td>
+
   <td><a href="https://github.com/spielhuus/elektrophon/blob/master/modules/wavefolder/README.md"><img src="https://spielhuus.github.io/elektrophon/images/wavefolder-panel-tmb.png" height="300px"></img></a><br/>wavefolder</td>
 
 </tr><tr>
