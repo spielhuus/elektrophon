@@ -14,17 +14,17 @@ is a collection of modular synthesizer modules i built. The module folders conta
 </tr><tr>
   <td><img src="https://spielhuus.github.io/elektrophon/images/text_filter.png"/></td>
 
-  <td><a href="https://github.com/spielhuus/elektrophon/blob/master/modules/resonanz/README.md"><img src="https://spielhuus.github.io/elektrophon/images/resonanz-panel-tmb.png" height="300px"></img></a><br/>polivoks vcf</td>
+  <td><a href="https://github.com/spielhuus/elektrophon/blob/master/modules/resonanz/README.md"><img src="https://spielhuus.github.io/elektrophon/images/resonanz-panel-tmb.png" height="300px"></img></a><br/>resonanz</td>
 
-  <td><a href="https://github.com/spielhuus/elektrophon/blob/master/modules/polivoks/README.md"><img src="https://spielhuus.github.io/elektrophon/images/polivoks-panel-tmb.png" height="300px"></img></a><br/>polivoks vcf</td>
+  <td><a href="https://github.com/spielhuus/elektrophon/blob/master/modules/polivoks/README.md"><img src="https://spielhuus.github.io/elektrophon/images/polivoks-panel-tmb.png" height="300px"></img></a><br/>polivoks</td>
   
   <td><a href="https://github.com/spielhuus/elektrophon/blob/master/modules/wavefolder/README.md"><img src="https://spielhuus.github.io/elektrophon/images/wavefolder-panel-tmb.png" height="300px"></img></a><br/>wavefolder</td>
 
 </tr><tr>
 
   <td><img src="https://spielhuus.github.io/elektrophon/images/text_function.png"/></td>  
-  <td><a href="https://github.com/spielhuus/elektrophon/blob/master/modules/funktion/README.md"><img src="https://spielhuus.github.io/elektrophon/images/funktion-panel-gng" height="200px"></img></a><br/>Voltage Controller Slope</td>
-  <td><a href="https://github.com/spielhuus/elektrophon/blob/master/modules/ssg/README.md"><img src="https://spielhuus.github.io/elektrophon/images/ssg-panel-tmb.jpg" height="200px"></img></a><br/>*s*mooth and *s*tepped *g*enerator</td>
+  <td><a href="https://github.com/spielhuus/elektrophon/blob/master/modules/funktion/README.md"><img src="https://spielhuus.github.io/elektrophon/images/funktion-panel-gng" height="200px"></img></a><br/>vcs</td>
+  <td><a href="https://github.com/spielhuus/elektrophon/blob/master/modules/ssg/README.md"><img src="https://spielhuus.github.io/elektrophon/images/ssg-panel-tmb.jpg" height="200px"></img></a><br/>ssg</td>
   <td><a href="https://github.com/spielhuus/elektrophon/blob/master/modules/ADSR/README.md"><img src="https://spielhuus.github.io/elektrophon/images/adsr-panel_tmb.jpg" height="300px"></img></a><br/>ADSR</td>
 
 </tr><tr>
