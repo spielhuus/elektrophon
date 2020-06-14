@@ -32,7 +32,7 @@ is a collection of modular synthesizer modules i built. The module folders conta
   <td><img src="https://spielhuus.github.io/elektrophon/images/text_mixer.png"/></td>
   <td><a href="https://github.com/spielhuus/elektrophon/blob/master/modules/vca1/README.md"><img src="https://spielhuus.github.io/elektrophon/images/vca1-panel-tmb.png" height="300px"></img></a><br/>VCA</td>
   
-  <td><a href="https://github.com/spielhuus/elektrophon/blob/master/modules/Stereo Mischer/README.md"><img src="https://spielhuus.github.io/elektrophon/images/mischer-panel_tmb.jpg" height="200px"></img></a><br/>Stereo Mixer</td>
+  <td><a href="https://github.com/spielhuus/elektrophon/blob/master/modules/Stereo Mischer/README.md"><img src="https://spielhuus.github.io/elektrophon/images/summe-panel-tmb.png" height="200px"></img></a><br/>Stereo Mixer</td>
   
   <td><a href="https://github.com/spielhuus/elektrophon/blob/master/modules/basspp/README.md"><img src="https://spielhuus.github.io/elektrophon/images/basspp-panel-tmb.png" height="200px"></img></a><br/>Bass++</td>
   <td><a href="https://github.com/spielhuus/elektrophon/blob/master/modules/MIDI/README.md"><img src="https://spielhuus.github.io/elektrophon/images/Mixerpanel_tmb.png" height="200px"></img></a><br/>midi</td>
