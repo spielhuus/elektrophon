@@ -1,4 +1,4 @@
-(kicad_pcb (version 20171130) (host pcbnew 5.1.4-e60b266~84~ubuntu19.04.1)
+(kicad_pcb (version 20171130) (host pcbnew 5.1.6-c6e7f7d~86~ubuntu20.04.1)
 
   (general
     (thickness 1.6)
@@ -122,11 +122,11 @@
     (fp_text value MountingHole_3.2mm_M3 (at 0 4.2) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_circle (center 0 0) (end 3.45 0) (layer F.CrtYd) (width 0.05))
-    (fp_circle (center 0 0) (end 3.2 0) (layer Cmts.User) (width 0.15))
     (fp_text user %R (at 0.3 0) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
+    (fp_circle (center 0 0) (end 3.2 0) (layer Cmts.User) (width 0.15))
+    (fp_circle (center 0 0) (end 3.45 0) (layer F.CrtYd) (width 0.05))
     (pad 1 np_thru_hole circle (at 0 0) (size 3.2 3.2) (drill 3.2) (layers *.Cu *.Mask))
   )
 
@@ -141,11 +141,11 @@
     (fp_text value MountingHole_3.2mm_M3 (at 0 4.2) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_circle (center 0 0) (end 3.45 0) (layer F.CrtYd) (width 0.05))
-    (fp_circle (center 0 0) (end 3.2 0) (layer Cmts.User) (width 0.15))
     (fp_text user %R (at 0.3 0) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
+    (fp_circle (center 0 0) (end 3.2 0) (layer Cmts.User) (width 0.15))
+    (fp_circle (center 0 0) (end 3.45 0) (layer F.CrtYd) (width 0.05))
     (pad 1 np_thru_hole circle (at 0 0) (size 3.2 3.2) (drill 3.2) (layers *.Cu *.Mask))
   )
 
@@ -160,11 +160,11 @@
     (fp_text value MountingHole_3.2mm_M3 (at 0 4.2) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_circle (center 0 0) (end 3.45 0) (layer F.CrtYd) (width 0.05))
-    (fp_circle (center 0 0) (end 3.2 0) (layer Cmts.User) (width 0.15))
     (fp_text user %R (at 0.3 0) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
+    (fp_circle (center 0 0) (end 3.2 0) (layer Cmts.User) (width 0.15))
+    (fp_circle (center 0 0) (end 3.45 0) (layer F.CrtYd) (width 0.05))
     (pad 1 np_thru_hole circle (at 0 0) (size 3.2 3.2) (drill 3.2) (layers *.Cu *.Mask))
   )
 
@@ -179,15 +179,15 @@
     (fp_text value MountingHole_3.2mm_M3 (at 0 4.2) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_circle (center 0 0) (end 3.45 0) (layer F.CrtYd) (width 0.05))
-    (fp_circle (center 0 0) (end 3.2 0) (layer Cmts.User) (width 0.15))
     (fp_text user %R (at 0.3 0) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
+    (fp_circle (center 0 0) (end 3.2 0) (layer Cmts.User) (width 0.15))
+    (fp_circle (center 0 0) (end 3.45 0) (layer F.CrtYd) (width 0.05))
     (pad 1 np_thru_hole circle (at 0 0) (size 3.2 3.2) (drill 3.2) (layers *.Cu *.Mask))
   )
 
-  (module elektrophon:LED_Monitor (layer F.Cu) (tedit 5D62B726) (tstamp 5DA4EE4A)
+  (module elektrophon:LED_Monitor (layer F.Cu) (tedit 5DE4F2C0) (tstamp 5DA4EE4A)
     (at 44.45 132.08)
     (descr "Imported from LED Monitor.svg")
     (tags svg2mod)
@@ -199,12 +199,8 @@
     (fp_text value G*** (at 0 5.054774) (layer F.SilkS) hide
       (effects (font (size 1.524 1.524) (thickness 0.3048)))
     )
-    (pad 1 connect custom (at 0 0) (size 5 5) (layers *.Mask)
-      (zone_connect 2)
-      (options (clearance outline) (anchor circle))
-      (primitives
-        (gr_circle (center 0 0) (end 2.286 0) (width 0.1))
-      ))
+    (fp_circle (center 0 0) (end 1 0) (layer B.Mask) (width 2))
+    (fp_circle (center 0 0) (end 1 0) (layer F.Mask) (width 2))
   )
 
   (module elektrophon:panel_jack (layer F.Cu) (tedit 5DA46DDA) (tstamp 5D954750)
@@ -219,11 +215,11 @@
     (fp_text value out (at 0 9.144) (layer F.Mask) hide
       (effects (font (size 2 1.4) (thickness 0.25)))
     )
-    (fp_circle (center 0 0) (end 4.2 0) (layer F.CrtYd) (width 0.05))
-    (fp_circle (center 0 0) (end 4 0) (layer Cmts.User) (width 0.15))
     (fp_text user %R (at 0.3 0) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
+    (fp_circle (center 0 0) (end 4 0) (layer Cmts.User) (width 0.15))
+    (fp_circle (center 0 0) (end 4.2 0) (layer F.CrtYd) (width 0.05))
     (pad "" np_thru_hole circle (at 0 0) (size 6.4 6.4) (drill 6.4) (layers *.Cu *.Mask))
     (model "${KIPRJMOD}/../../../lib/kicad/models/PJ301M-12 Thonkiconn v0.2.stp"
       (offset (xyz 0 0.8 -10.5))
@@ -232,7 +228,7 @@
     )
   )
 
-  (module elektrophon:panel_potentiometer (layer F.Cu) (tedit 5DA46CEF) (tstamp 5D954748)
+  (module elektrophon:panel_potentiometer (layer F.Cu) (tedit 5EE650CE) (tstamp 5D954748)
     (at 76.2 91.44)
     (descr "Mounting Hole 8.4mm, no annular, M8")
     (tags "mounting hole 8.4mm no annular m8")
@@ -244,20 +240,20 @@
     (fp_text value "impact volume" (at 0 9.144) (layer F.Mask) hide
       (effects (font (size 2 1.4) (thickness 0.25)))
     )
-    (fp_circle (center 0 0) (end 6.6 0) (layer F.CrtYd) (width 0.05))
-    (fp_circle (center 0 0) (end 6.35 0) (layer Cmts.User) (width 0.15))
     (fp_text user %R (at 0.3 0) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
+    (fp_circle (center 0 0) (end 6.35 0) (layer Cmts.User) (width 0.15))
+    (fp_circle (center 0 0) (end 6.6 0) (layer F.CrtYd) (width 0.05))
     (pad "" np_thru_hole circle (at 0 0) (size 7.4 7.4) (drill 7.4) (layers *.Cu *.Mask))
-    (model "${KIPRJMOD}/../../../lib/kicad/models/chroma cap.step"
-      (offset (xyz 0 0 8))
+    (model ${KIPRJMOD}/../../../lib/kicad/models/ALPHA-RD901F-40.step
+      (offset (xyz 0 0.5 -12))
       (scale (xyz 1 1 1))
-      (rotate (xyz -90 0 0))
+      (rotate (xyz 0 0 0))
     )
   )
 
-  (module elektrophon:panel_potentiometer (layer F.Cu) (tedit 5DA46CEF) (tstamp 5D954740)
+  (module elektrophon:panel_potentiometer (layer F.Cu) (tedit 5EE650CE) (tstamp 5D954740)
     (at 76.2 71.12)
     (descr "Mounting Hole 8.4mm, no annular, M8")
     (tags "mounting hole 8.4mm no annular m8")
@@ -269,20 +265,20 @@
     (fp_text value pitch (at 0 9.144) (layer F.Mask) hide
       (effects (font (size 2 1.4) (thickness 0.25)))
     )
-    (fp_circle (center 0 0) (end 6.6 0) (layer F.CrtYd) (width 0.05))
-    (fp_circle (center 0 0) (end 6.35 0) (layer Cmts.User) (width 0.15))
     (fp_text user %R (at 0.3 0) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
+    (fp_circle (center 0 0) (end 6.35 0) (layer Cmts.User) (width 0.15))
+    (fp_circle (center 0 0) (end 6.6 0) (layer F.CrtYd) (width 0.05))
     (pad "" np_thru_hole circle (at 0 0) (size 7.4 7.4) (drill 7.4) (layers *.Cu *.Mask))
-    (model "${KIPRJMOD}/../../../lib/kicad/models/chroma cap.step"
-      (offset (xyz 0 0 8))
+    (model ${KIPRJMOD}/../../../lib/kicad/models/ALPHA-RD901F-40.step
+      (offset (xyz 0 0.5 -12))
       (scale (xyz 1 1 1))
-      (rotate (xyz -90 0 0))
+      (rotate (xyz 0 0 0))
     )
   )
 
-  (module elektrophon:panel_potentiometer (layer F.Cu) (tedit 5DA46CEF) (tstamp 5D954738)
+  (module elektrophon:panel_potentiometer (layer F.Cu) (tedit 5EE650CE) (tstamp 5D954738)
     (at 76.2 50.8)
     (descr "Mounting Hole 8.4mm, no annular, M8")
     (tags "mounting hole 8.4mm no annular m8")
@@ -294,20 +290,20 @@
     (fp_text value "shell volume" (at 0 9.144) (layer F.Mask) hide
       (effects (font (size 2 1.4) (thickness 0.25)))
     )
-    (fp_circle (center 0 0) (end 6.6 0) (layer F.CrtYd) (width 0.05))
-    (fp_circle (center 0 0) (end 6.35 0) (layer Cmts.User) (width 0.15))
     (fp_text user %R (at 0.3 0) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
+    (fp_circle (center 0 0) (end 6.35 0) (layer Cmts.User) (width 0.15))
+    (fp_circle (center 0 0) (end 6.6 0) (layer F.CrtYd) (width 0.05))
     (pad "" np_thru_hole circle (at 0 0) (size 7.4 7.4) (drill 7.4) (layers *.Cu *.Mask))
-    (model "${KIPRJMOD}/../../../lib/kicad/models/chroma cap.step"
-      (offset (xyz 0 0 8))
+    (model ${KIPRJMOD}/../../../lib/kicad/models/ALPHA-RD901F-40.step
+      (offset (xyz 0 0.5 -12))
       (scale (xyz 1 1 1))
-      (rotate (xyz -90 0 0))
+      (rotate (xyz 0 0 0))
     )
   )
 
-  (module elektrophon:panel_potentiometer (layer F.Cu) (tedit 5DA46CEF) (tstamp 5D95472A)
+  (module elektrophon:panel_potentiometer (layer F.Cu) (tedit 5EE650CE) (tstamp 5D95472A)
     (at 55.88 132.08)
     (descr "Mounting Hole 8.4mm, no annular, M8")
     (tags "mounting hole 8.4mm no annular m8")
@@ -319,20 +315,20 @@
     (fp_text value sensitivity (at 0 9.144) (layer F.Mask) hide
       (effects (font (size 2 1.4) (thickness 0.25)))
     )
-    (fp_circle (center 0 0) (end 6.6 0) (layer F.CrtYd) (width 0.05))
-    (fp_circle (center 0 0) (end 6.35 0) (layer Cmts.User) (width 0.15))
     (fp_text user %R (at 0.3 0) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
+    (fp_circle (center 0 0) (end 6.35 0) (layer Cmts.User) (width 0.15))
+    (fp_circle (center 0 0) (end 6.6 0) (layer F.CrtYd) (width 0.05))
     (pad "" np_thru_hole circle (at 0 0) (size 7.4 7.4) (drill 7.4) (layers *.Cu *.Mask))
-    (model "${KIPRJMOD}/../../../lib/kicad/models/chroma cap.step"
-      (offset (xyz 0 0 8))
+    (model ${KIPRJMOD}/../../../lib/kicad/models/ALPHA-RD901F-40.step
+      (offset (xyz 0 0.5 -12))
       (scale (xyz 1 1 1))
-      (rotate (xyz -90 0 0))
+      (rotate (xyz 0 0 0))
     )
   )
 
-  (module elektrophon:panel_potentiometer (layer F.Cu) (tedit 5DA46CEF) (tstamp 5D954722)
+  (module elektrophon:panel_potentiometer (layer F.Cu) (tedit 5EE650CE) (tstamp 5D954722)
     (at 55.88 91.44)
     (descr "Mounting Hole 8.4mm, no annular, M8")
     (tags "mounting hole 8.4mm no annular m8")
@@ -344,20 +340,20 @@
     (fp_text value "impact tone" (at 0 9.144) (layer F.Mask) hide
       (effects (font (size 2 1.4) (thickness 0.25)))
     )
-    (fp_circle (center 0 0) (end 6.6 0) (layer F.CrtYd) (width 0.05))
-    (fp_circle (center 0 0) (end 6.35 0) (layer Cmts.User) (width 0.15))
     (fp_text user %R (at 0.3 0) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
+    (fp_circle (center 0 0) (end 6.35 0) (layer Cmts.User) (width 0.15))
+    (fp_circle (center 0 0) (end 6.6 0) (layer F.CrtYd) (width 0.05))
     (pad "" np_thru_hole circle (at 0 0) (size 7.4 7.4) (drill 7.4) (layers *.Cu *.Mask))
-    (model "${KIPRJMOD}/../../../lib/kicad/models/chroma cap.step"
-      (offset (xyz 0 0 8))
+    (model ${KIPRJMOD}/../../../lib/kicad/models/ALPHA-RD901F-40.step
+      (offset (xyz 0 0.5 -12))
       (scale (xyz 1 1 1))
-      (rotate (xyz -90 0 0))
+      (rotate (xyz 0 0 0))
     )
   )
 
-  (module elektrophon:panel_potentiometer (layer F.Cu) (tedit 5DA46CEF) (tstamp 5D95471A)
+  (module elektrophon:panel_potentiometer (layer F.Cu) (tedit 5EE650CE) (tstamp 5D95471A)
     (at 55.88 71.12)
     (descr "Mounting Hole 8.4mm, no annular, M8")
     (tags "mounting hole 8.4mm no annular m8")
@@ -369,20 +365,20 @@
     (fp_text value range (at 0 9.144) (layer F.Mask) hide
       (effects (font (size 2 1.4) (thickness 0.25)))
     )
-    (fp_circle (center 0 0) (end 6.6 0) (layer F.CrtYd) (width 0.05))
-    (fp_circle (center 0 0) (end 6.35 0) (layer Cmts.User) (width 0.15))
     (fp_text user %R (at 0.3 0) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
+    (fp_circle (center 0 0) (end 6.35 0) (layer Cmts.User) (width 0.15))
+    (fp_circle (center 0 0) (end 6.6 0) (layer F.CrtYd) (width 0.05))
     (pad "" np_thru_hole circle (at 0 0) (size 7.4 7.4) (drill 7.4) (layers *.Cu *.Mask))
-    (model "${KIPRJMOD}/../../../lib/kicad/models/chroma cap.step"
-      (offset (xyz 0 0 8))
+    (model ${KIPRJMOD}/../../../lib/kicad/models/ALPHA-RD901F-40.step
+      (offset (xyz 0 0.5 -12))
       (scale (xyz 1 1 1))
-      (rotate (xyz -90 0 0))
+      (rotate (xyz 0 0 0))
     )
   )
 
-  (module elektrophon:panel_potentiometer (layer F.Cu) (tedit 5DA46CEF) (tstamp 5D954712)
+  (module elektrophon:panel_potentiometer (layer F.Cu) (tedit 5EE650CE) (tstamp 5D954712)
     (at 55.88 50.8)
     (descr "Mounting Hole 8.4mm, no annular, M8")
     (tags "mounting hole 8.4mm no annular m8")
@@ -394,20 +390,20 @@
     (fp_text value sweep (at 0 9.144) (layer F.Mask) hide
       (effects (font (size 2 1.4) (thickness 0.25)))
     )
-    (fp_circle (center 0 0) (end 6.6 0) (layer F.CrtYd) (width 0.05))
-    (fp_circle (center 0 0) (end 6.35 0) (layer Cmts.User) (width 0.15))
     (fp_text user %R (at 0.3 0) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
+    (fp_circle (center 0 0) (end 6.35 0) (layer Cmts.User) (width 0.15))
+    (fp_circle (center 0 0) (end 6.6 0) (layer F.CrtYd) (width 0.05))
     (pad "" np_thru_hole circle (at 0 0) (size 7.4 7.4) (drill 7.4) (layers *.Cu *.Mask))
-    (model "${KIPRJMOD}/../../../lib/kicad/models/chroma cap.step"
-      (offset (xyz 0 0 8))
+    (model ${KIPRJMOD}/../../../lib/kicad/models/ALPHA-RD901F-40.step
+      (offset (xyz 0 0.5 -12))
       (scale (xyz 1 1 1))
-      (rotate (xyz -90 0 0))
+      (rotate (xyz 0 0 0))
     )
   )
 
-  (module elektrophon:panel_potentiometer (layer F.Cu) (tedit 5DA46CEF) (tstamp 5D95470A)
+  (module elektrophon:panel_potentiometer (layer F.Cu) (tedit 5EE650CE) (tstamp 5D95470A)
     (at 35.56 50.8)
     (descr "Mounting Hole 8.4mm, no annular, M8")
     (tags "mounting hole 8.4mm no annular m8")
@@ -419,16 +415,16 @@
     (fp_text value decay (at 0 9.144) (layer F.Mask) hide
       (effects (font (size 2 1.4) (thickness 0.25)))
     )
-    (fp_circle (center 0 0) (end 6.6 0) (layer F.CrtYd) (width 0.05))
-    (fp_circle (center 0 0) (end 6.35 0) (layer Cmts.User) (width 0.15))
     (fp_text user %R (at 0.3 0) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
+    (fp_circle (center 0 0) (end 6.35 0) (layer Cmts.User) (width 0.15))
+    (fp_circle (center 0 0) (end 6.6 0) (layer F.CrtYd) (width 0.05))
     (pad "" np_thru_hole circle (at 0 0) (size 7.4 7.4) (drill 7.4) (layers *.Cu *.Mask))
-    (model "${KIPRJMOD}/../../../lib/kicad/models/chroma cap.step"
-      (offset (xyz 0 0 8))
+    (model ${KIPRJMOD}/../../../lib/kicad/models/ALPHA-RD901F-40.step
+      (offset (xyz 0 0.5 -12))
       (scale (xyz 1 1 1))
-      (rotate (xyz -90 0 0))
+      (rotate (xyz 0 0 0))
     )
   )
 
@@ -444,11 +440,11 @@
     (fp_text value trigger (at 0 9.144) (layer F.Mask) hide
       (effects (font (size 2 1.4) (thickness 0.25)))
     )
-    (fp_circle (center 0 0) (end 4.2 0) (layer F.CrtYd) (width 0.05))
-    (fp_circle (center 0 0) (end 4 0) (layer Cmts.User) (width 0.15))
     (fp_text user %R (at 0.3 0) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
+    (fp_circle (center 0 0) (end 4 0) (layer Cmts.User) (width 0.15))
+    (fp_circle (center 0 0) (end 4.2 0) (layer F.CrtYd) (width 0.05))
     (pad "" np_thru_hole circle (at 0 0) (size 6.4 6.4) (drill 6.4) (layers *.Cu *.Mask))
     (model "${KIPRJMOD}/../../../lib/kicad/models/PJ301M-12 Thonkiconn v0.2.stp"
       (offset (xyz 0 0.8 -10.5))
@@ -469,11 +465,11 @@
     (fp_text value cv (at 0 9.144) (layer F.Mask) hide
       (effects (font (size 2 1.4) (thickness 0.25)))
     )
-    (fp_circle (center 0 0) (end 4.2 0) (layer F.CrtYd) (width 0.05))
-    (fp_circle (center 0 0) (end 4 0) (layer Cmts.User) (width 0.15))
     (fp_text user %R (at 0.3 0) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
+    (fp_circle (center 0 0) (end 4 0) (layer Cmts.User) (width 0.15))
+    (fp_circle (center 0 0) (end 4.2 0) (layer F.CrtYd) (width 0.05))
     (pad "" np_thru_hole circle (at 0 0) (size 6.4 6.4) (drill 6.4) (layers *.Cu *.Mask))
     (model "${KIPRJMOD}/../../../lib/kicad/models/PJ301M-12 Thonkiconn v0.2.stp"
       (offset (xyz 0 0.8 -10.5))
