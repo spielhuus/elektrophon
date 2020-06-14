@@ -5,7 +5,9 @@ is a collection of modular synthesizer modules i built. The module folders conta
 <table>
  <tr>
   <td><img src="https://spielhuus.github.io/elektrophon/images/text_osillator.png"/></td>
-  <td><a href="https://github.com/spielhuus/elektrophon/blob/master/modules/X4046/README.md"><img src="https://spielhuus.github.io/elektrophon/images/4046-panel-tmb.jpg" height="300px"></img></a><br/>VCO: X4046</td>
+
+  <td><a href="https://github.com/spielhuus/elektrophon/blob/master/modules/4046/README.md"><img src="https://spielhuus.github.io/elektrophon/images/4046-panel-tmb.png" height="300px"></img></a><br/>VSO 4046</td>
+  
   <td><a href="https://github.com/spielhuus/elektrophon/blob/master/modules/Utility LFO/README.md"><img src="https://spielhuus.github.io/elektrophon/images/lfo-panel_tmb.jpg" height="300px"></img></a><br/>LFO</td>
   <td><a href="https://github.com/spielhuus/elektrophon/blob/master/modules/noise/README.md"><img src="https://spielhuus.github.io/elektrophon/images/noise-panel_tmb.jpg" height="300px"></img></a><br/>noise</td>
 
