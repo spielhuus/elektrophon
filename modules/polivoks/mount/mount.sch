@@ -251,7 +251,7 @@ F 1 "100k" H 3581 5155 50  0000 R CNN
 F 2 "elektrophon:Potentiometer_Alpha_RD901F-40-00D_Single_Vertical" H 3650 5200 50  0001 C CNN
 F 3 "~" H 3650 5200 50  0001 C CNN
 	1    3650 5200
-	0    1    -1   0   
+	0    -1   -1   0   
 $EndComp
 $Comp
 L Device:R R5
@@ -417,7 +417,7 @@ F 1 "100k" H 1431 3605 50  0000 R CNN
 F 2 "elektrophon:Potentiometer_Alpha_RD901F-40-00D_Single_Vertical" H 1500 3650 50  0001 C CNN
 F 3 "~" H 1500 3650 50  0001 C CNN
 	1    1500 3650
-	1    0    0    -1  
+	1    0    0    1   
 $EndComp
 $Comp
 L Device:R R1

@@ -3,7 +3,7 @@
 
 ## *resonanz*
 
-a resonant band pass filter is a simple filter that can be used for artifical instruments or as a percussion module.
+a resonant band pass filter is a simple filter that can be used for artifical <a href="https://spielhuus.github.io/elektrophon/images/resonanz-schema.png"><img src="https://spielhuus.github.io/elektrophon/images/resonanz-schema-tmb.png" height="120px"></img></a> instruments or as a percussion module.
 
 ## *build*
 

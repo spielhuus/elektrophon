@@ -1,5 +1,4 @@
 EESchema Schematic File Version 4
-LIBS:panel-cache
 EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
@@ -64,7 +63,7 @@ U 1 1 5D6B92F8
 P 2800 1700
 F 0 "H5" H 2900 1746 50  0000 L CNN
 F 1 "square" H 2900 1655 50  0000 L CNN
-F 2 "elektrophon:JACK_HOLE" H 2800 1700 50  0001 C CNN
+F 2 "elektrophon:panel_jack" H 2800 1700 50  0001 C CNN
 F 3 "~" H 2800 1700 50  0001 C CNN
 	1    2800 1700
 	1    0    0    -1  
@@ -75,7 +74,7 @@ U 1 1 5D6B92FE
 P 2800 2150
 F 0 "H6" H 2900 2196 50  0000 L CNN
 F 1 "pulse" H 2900 2105 50  0000 L CNN
-F 2 "elektrophon:JACK_HOLE" H 2800 2150 50  0001 C CNN
+F 2 "elektrophon:panel_jack" H 2800 2150 50  0001 C CNN
 F 3 "~" H 2800 2150 50  0001 C CNN
 	1    2800 2150
 	1    0    0    -1  
@@ -86,7 +85,7 @@ U 1 1 5D6B9304
 P 2800 2650
 F 0 "H7" H 2900 2696 50  0000 L CNN
 F 1 "tri/saw" H 2900 2605 50  0000 L CNN
-F 2 "elektrophon:JACK_HOLE" H 2800 2650 50  0001 C CNN
+F 2 "elektrophon:panel_jack" H 2800 2650 50  0001 C CNN
 F 3 "~" H 2800 2650 50  0001 C CNN
 	1    2800 2650
 	1    0    0    -1  
@@ -97,7 +96,7 @@ U 1 1 5D6B930A
 P 2800 3100
 F 0 "H8" H 2900 3146 50  0000 L CNN
 F 1 "vari" H 2900 3055 50  0000 L CNN
-F 2 "elektrophon:JACK_HOLE" H 2800 3100 50  0001 C CNN
+F 2 "elektrophon:panel_jack" H 2800 3100 50  0001 C CNN
 F 3 "~" H 2800 3100 50  0001 C CNN
 	1    2800 3100
 	1    0    0    -1  
@@ -152,7 +151,7 @@ U 1 1 5D6BE38E
 P 5200 1700
 F 0 "H15" H 5300 1746 50  0000 L CNN
 F 1 "square" H 5300 1655 50  0000 L CNN
-F 2 "elektrophon:JACK_HOLE" H 5200 1700 50  0001 C CNN
+F 2 "elektrophon:panel_jack" H 5200 1700 50  0001 C CNN
 F 3 "~" H 5200 1700 50  0001 C CNN
 	1    5200 1700
 	1    0    0    -1  
@@ -163,7 +162,7 @@ U 1 1 5D6BE394
 P 5200 2150
 F 0 "H16" H 5300 2196 50  0000 L CNN
 F 1 "pulse" H 5300 2105 50  0000 L CNN
-F 2 "elektrophon:JACK_HOLE" H 5200 2150 50  0001 C CNN
+F 2 "elektrophon:panel_jack" H 5200 2150 50  0001 C CNN
 F 3 "~" H 5200 2150 50  0001 C CNN
 	1    5200 2150
 	1    0    0    -1  
@@ -174,7 +173,7 @@ U 1 1 5D6BE39A
 P 5200 2650
 F 0 "H17" H 5300 2696 50  0000 L CNN
 F 1 "tri/saw" H 5300 2605 50  0000 L CNN
-F 2 "elektrophon:JACK_HOLE" H 5200 2650 50  0001 C CNN
+F 2 "elektrophon:panel_jack" H 5200 2650 50  0001 C CNN
 F 3 "~" H 5200 2650 50  0001 C CNN
 	1    5200 2650
 	1    0    0    -1  
@@ -185,7 +184,7 @@ U 1 1 5D6BE3A0
 P 5200 3100
 F 0 "H18" H 5300 3146 50  0000 L CNN
 F 1 "vari" H 5300 3055 50  0000 L CNN
-F 2 "elektrophon:JACK_HOLE" H 5200 3100 50  0001 C CNN
+F 2 "elektrophon:panel_jack" H 5200 3100 50  0001 C CNN
 F 3 "~" H 5200 3100 50  0001 C CNN
 	1    5200 3100
 	1    0    0    -1  
@@ -196,7 +195,7 @@ U 1 1 5D6BE446
 P 2800 3550
 F 0 "H9" H 2900 3596 50  0000 L CNN
 F 1 "join" H 2900 3505 50  0000 L CNN
-F 2 "elektrophon:SWITCH_HOLE" H 2800 3550 50  0001 C CNN
+F 2 "elektrophon:panel_switch" H 2800 3550 50  0001 C CNN
 F 3 "~" H 2800 3550 50  0001 C CNN
 	1    2800 3550
 	1    0    0    -1  
@@ -207,7 +206,7 @@ U 1 1 5D6BE698
 P 5200 3550
 F 0 "H10" H 5300 3596 50  0000 L CNN
 F 1 "swap" H 5300 3505 50  0000 L CNN
-F 2 "elektrophon:SWITCH_HOLE" H 5200 3550 50  0001 C CNN
+F 2 "elektrophon:panel_switch" H 5200 3550 50  0001 C CNN
 F 3 "~" H 5200 3550 50  0001 C CNN
 	1    5200 3550
 	1    0    0    -1  
