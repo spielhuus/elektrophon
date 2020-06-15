@@ -1,6 +1,8 @@
 # **<font size="24">*elekrophon*</font>** 
 is a collection of modular synthesizer modules i built. The module folders contain the schema and PCB files for kicad. You can find all the required files for changing the schemas and building gerber files in this project.  is a collection of modules for a modular analog electro acoustic noise machine. all modules are built on stripboards or pcb's and with 3d printed front plates.The goal is it to build the modules quickly. The 3d printed front panels comes complete with holes and stands. This makes it easy to mount the module. The modules can be mount to a rack. <a href="https://spielhuus.github.io/elektrophon/images/elektrophon.jpg"><img align="right" src="https://spielhuus.github.io/elektrophon/images/elektrophon_tmb.jpg"></a>  The first rack i built was a small testing rack, the fly rack.There are only two side panels to print. For the rails i used the standard euro panel rails from the electronic vendors (i.e. [farnel](https://de.farnell.com/schroff/34560-484/horizontal-rail-enclosure/dp/2816357)). Every thing from the music stores is very expensive. it is a little bit cheaper to buy those rails. The sizes for modular synths are mostly equal to the standard size for electronic and computer racks.
 
+<br/><br/><br/><br/><br/><br/><br/><br/>
+
 ## ***modules*** 
 <table border="0">
  <tr>
