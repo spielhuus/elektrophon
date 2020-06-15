@@ -7,7 +7,7 @@ a resonant band pass filter is a simple filter that can be used for artifical <a
 
 ## *build*
 
-<a href="https://github.com/spielhuus/elektrophon/blob/master/modules/resonanz/schemas.pdf"><img src="https://spielhuus.github.io/elektrophon/images/resonanz-schema-tmb.png" width="120px" align="right"></img></a> The gerber files are part of the release. It should be possible to directly order them from your manufacturer. But check the result on the preview when you order them. The parts are in the [BOM](BOM.md), there are no special parts needed for this build. <br/><br/><br/><br/><br/>
+<a href="https://spielhuus.github.io/elektrophon/schemas/resonanz.pdf"><img src="https://spielhuus.github.io/elektrophon/images/resonanz-schema-tmb.png" width="120px" align="right"></img></a> The gerber files are part of the release. It should be possible to directly order them from your manufacturer. But check the result on the preview when you order them. The parts are in the [BOM](BOM.md), there are no special parts needed for this build. <br/><br/><br/><br/><br/>
 
 ## *calibrate*
 
