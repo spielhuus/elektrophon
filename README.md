@@ -2,7 +2,19 @@
 <a href="https://spielhuus.github.io/elektrophon/images/elektrophon.jpg"><img align="right" src="https://spielhuus.github.io/elektrophon/images/elektrophon_tmb.jpg" width="400"></a>is a collection of modular synthesizer modules i built. The module folders contain the schema and PCB files for kicad. You can find all the required files for changing the schemas and building gerber files in this project.  is a collection of modules for a modular analog electro acoustic noise machine. all modules are built on stripboards or pcb's and with 3d printed front plates.The goal is it to build the modules quickly. The 3d printed front panels comes complete with holes and stands. This makes it easy to mount the module. The modules can be mount to a rack. The first rack i built was a small testing rack, the fly rack.There are only two side panels to print. For the rails i used the standard euro panel rails from the electronic vendors (i.e. [farnel](https://de.farnell.com/schroff/34560-484/horizontal-rail-enclosure/dp/2816357)). Every thing from the music stores is very expensive. it is a little bit cheaper to buy those rails. The sizes for modular synths are mostly equal to the standard size for electronic and computer racks.
 <br><br><br>
 
+
+
 ## ***modules*** 
+
+<div nowrap>
+  <img width="20px" align="left" src="https://spielhuus.github.io/elektrophon/images/text_osillator.png"/>
+
+  <a  width="20px" align="left" href="https://github.com/spielhuus/elektrophon/blob/master/modules/4046/README.md"><img src="https://spielhuus.github.io/elektrophon/images/4046-panel-tmb.png" height="300px"></img></a>
+  
+  <a width="20px" align="left" href="https://github.com/spielhuus/elektrophon/blob/master/modules/Utility LFO/README.md"><img src="https://spielhuus.github.io/elektrophon/images/lfo-panel-tmb.png" height="300px"></img></a>
+
+  <a width="20px" align="left" href="https://github.com/spielhuus/elektrophon/blob/master/modules/noise/README.md"><img src="https://spielhuus.github.io/elektrophon/images/noise-panel-tmb.png" height="300px"></img></a>
+</div>
 
 <table border="0">
  <tr>
