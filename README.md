@@ -2,7 +2,7 @@
 is a collection of modular synthesizer modules i built. The module folders contain the schema and PCB files for kicad. You can find all the required files for changing the schemas and building gerber files in this project.  is a collection of modules for a modular analog electro acoustic noise machine. all modules are built on stripboards or pcb's and with 3d printed front plates.The goal is it to build the modules quickly. The 3d printed front panels comes complete with holes and stands. This makes it easy to mount the module. The modules can be mount to a rack. <a href="https://spielhuus.github.io/elektrophon/images/elektrophon.jpg"><img align="right" src="https://spielhuus.github.io/elektrophon/images/elektrophon_tmb.jpg"></a>  The first rack i built was a small testing rack, the fly rack.There are only two side panels to print. For the rails i used the standard euro panel rails from the electronic vendors (i.e. [farnel](https://de.farnell.com/schroff/34560-484/horizontal-rail-enclosure/dp/2816357)). Every thing from the music stores is very expensive. it is a little bit cheaper to buy those rails. The sizes for modular synths are mostly equal to the standard size for electronic and computer racks.
 
 ## ***modules*** 
-<table>
+<table border="0">
  <tr>
   <td><img src="https://spielhuus.github.io/elektrophon/images/text_osillator.png"/></td>
 
@@ -25,8 +25,8 @@ is a collection of modular synthesizer modules i built. The module folders conta
 </tr><tr>
 
   <td><img src="https://spielhuus.github.io/elektrophon/images/text_function.png"/></td>  
-  <td><a href="https://github.com/spielhuus/elektrophon/blob/master/modules/VCS/README.md"><img src="https://spielhuus.github.io/elektrophon/images/funktion-panel.png" height="200px"></img></a><br/>vcs</td>
-  <td><a href="https://github.com/spielhuus/elektrophon/blob/master/modules/ssg/README.md"><img src="https://spielhuus.github.io/elektrophon/images/ssg-panel-tmb.png" height="200px"></img></a><br/>ssg</td>
+  <td><a href="https://github.com/spielhuus/elektrophon/blob/master/modules/VCS/README.md"><img src="https://spielhuus.github.io/elektrophon/images/funktion-panel.png" height="300px"></img></a><br/>funktion</td>
+  <td><a href="https://github.com/spielhuus/elektrophon/blob/master/modules/ssg/README.md"><img src="https://spielhuus.github.io/elektrophon/images/ssg-panel-tmb.png" height="300px"></img></a><br/>ssg</td>
   <td><a href="https://github.com/spielhuus/elektrophon/blob/master/modules/adsr/README.md"><img src="https://spielhuus.github.io/elektrophon/images/adsr-panel-tmb.png" height="300px"></img></a><br/>adsr</td>
 
 </tr><tr>
