@@ -6,14 +6,28 @@
 
 ## ***modules*** 
 
-<div nowrap>
+<div>
   <img width="20px" align="left" src="https://spielhuus.github.io/elektrophon/images/text_osillator.png"/>
 
-  <a  width="20px" align="left" href="https://github.com/spielhuus/elektrophon/blob/master/modules/4046/README.md"><img src="https://spielhuus.github.io/elektrophon/images/4046-panel-tmb.png" height="300px"></img></a>
+  <a href="https://github.com/spielhuus/elektrophon/blob/master/modules/4046/README.md"><img width="180px" align="left" src="https://spielhuus.github.io/elektrophon/images/4046-panel-tmb.png" height="300px"></img></a>
   
-  <a width="20px" align="left" href="https://github.com/spielhuus/elektrophon/blob/master/modules/Utility LFO/README.md"><img src="https://spielhuus.github.io/elektrophon/images/lfo-panel-tmb.png" height="300px"></img></a>
+  <a href="https://github.com/spielhuus/elektrophon/blob/master/modules/Utility LFO/README.md"><img width="180px" align="left" src="https://spielhuus.github.io/elektrophon/images/lfo-panel-tmb.png" height="300px"></img></a>
 
-  <a width="20px" align="left" href="https://github.com/spielhuus/elektrophon/blob/master/modules/noise/README.md"><img src="https://spielhuus.github.io/elektrophon/images/noise-panel-tmb.png" height="300px"></img></a>
+  <a href="https://github.com/spielhuus/elektrophon/blob/master/modules/noise/README.md"><img width="40px" align="left" src="https://spielhuus.github.io/elektrophon/images/noise-panel-tmb.png" height="300px"></img></a>
+</div>
+
+<br/><br/>
+
+<div>
+  <img width="20px" align="left" src="https://spielhuus.github.io/elektrophon/images/text_filter.png"/>
+
+  <a href="https://github.com/spielhuus/elektrophon/blob/master/modules/resonanz/README.md"><img width="180px" align="left"  src="https://spielhuus.github.io/elektrophon/images/resonanz-panel-tmb.png" height="300px"></img></a>
+
+  <a href="https://github.com/spielhuus/elektrophon/blob/master/modules/polivoks/README.md"><img width="90px" align="left"  src="https://spielhuus.github.io/elektrophon/images/polivoks-panel-tmb.png" height="300px"></img></a>
+  
+  <a href="https://github.com/spielhuus/elektrophon/blob/master/modules/metall/README.md"><img width="90px" align="left"  src="https://spielhuus.github.io/elektrophon/images/metall-panel-tmb.png" height="300px"></img></a>
+
+  <a href="https://github.com/spielhuus/elektrophon/blob/master/modules/wavefolder/README.md"><img width="90px" align="left"  src="https://spielhuus.github.io/elektrophon/images/wavefolder-panel-tmb.png" height="300px"></img></a>
 </div>
 
 <table border="0">
