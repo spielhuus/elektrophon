@@ -8,7 +8,7 @@ is a collection of modular synthesizer modules i built. The module folders conta
 
   <td><a href="https://github.com/spielhuus/elektrophon/blob/master/modules/4046/README.md"><img src="https://spielhuus.github.io/elektrophon/images/4046-panel-tmb.png" height="300px"></img></a><br/>VSO 4046</td>
   
-  <td><a href="https://github.com/spielhuus/elektrophon/blob/master/modules/Utility LFO/README.md"><img src="https://spielhuus.github.io/elektrophon/images/lfo-panel_tmb.jpg" height="300px"></img></a><br/>LFO</td>
+  <td><a href="https://github.com/spielhuus/elektrophon/blob/master/modules/Utility LFO/README.md"><img src="https://spielhuus.github.io/elektrophon/images/lfo-panel-tmb.png" height="300px"></img></a><br/>LFO</td>
   <td><a href="https://github.com/spielhuus/elektrophon/blob/master/modules/noise/README.md"><img src="https://spielhuus.github.io/elektrophon/images/noise-panel-tmb.png" height="300px"></img></a><br/>noise</td>
 
 </tr><tr>
@@ -18,14 +18,14 @@ is a collection of modular synthesizer modules i built. The module folders conta
 
   <td><a href="https://github.com/spielhuus/elektrophon/blob/master/modules/polivoks/README.md"><img src="https://spielhuus.github.io/elektrophon/images/polivoks-panel-tmb.png" height="300px"></img></a><br/>polivoks</td>
   
-  <td><a href="https://github.com/spielhuus/elektrophon/blob/master/modules/metall/README.md"><img src="https://spielhuus.github.io/elektrophon/images/metall-panel-tmb.png" height="300px"></img></a><br/>metall wave folder</td>
+  <td><a href="https://github.com/spielhuus/elektrophon/blob/master/modules/metall/README.md"><img src="https://spielhuus.github.io/elektrophon/images/metall-panel-tmb.png" height="300px"></img></a><br/>metall</td>
 
   <td><a href="https://github.com/spielhuus/elektrophon/blob/master/modules/wavefolder/README.md"><img src="https://spielhuus.github.io/elektrophon/images/wavefolder-panel-tmb.png" height="300px"></img></a><br/>wavefolder</td>
 
 </tr><tr>
 
   <td><img src="https://spielhuus.github.io/elektrophon/images/text_function.png"/></td>  
-  <td><a href="https://github.com/spielhuus/elektrophon/blob/master/modules/funktion/README.md"><img src="https://spielhuus.github.io/elektrophon/images/funktion-panel.png" height="200px"></img></a><br/>vcs</td>
+  <td><a href="https://github.com/spielhuus/elektrophon/blob/master/modules/VCS/README.md"><img src="https://spielhuus.github.io/elektrophon/images/funktion-panel.png" height="200px"></img></a><br/>vcs</td>
   <td><a href="https://github.com/spielhuus/elektrophon/blob/master/modules/ssg/README.md"><img src="https://spielhuus.github.io/elektrophon/images/ssg-panel-tmb.png" height="200px"></img></a><br/>ssg</td>
   <td><a href="https://github.com/spielhuus/elektrophon/blob/master/modules/adsr/README.md"><img src="https://spielhuus.github.io/elektrophon/images/adsr-panel-tmb.png" height="300px"></img></a><br/>adsr</td>
 
@@ -33,17 +33,17 @@ is a collection of modular synthesizer modules i built. The module folders conta
  
   <td><img src="https://spielhuus.github.io/elektrophon/images/text_mixer.png"/></td>
 
-  <td><a href="https://github.com/spielhuus/elektrophon/blob/master/modules/kontrast/README.md"><img src="https://spielhuus.github.io/elektrophon/images/kontrast-panel-tmb.png" height="300px"></img></a><br/>kontrast attenuverter</td>
+  <td><a href="https://github.com/spielhuus/elektrophon/blob/master/modules/kontrast/README.md"><img src="https://spielhuus.github.io/elektrophon/images/kontrast-panel-tmb.png" height="300px"></img></a><br/>kontrast</td>
 
   <td><a href="https://github.com/spielhuus/elektrophon/blob/master/modules/vca1/README.md"><img src="https://spielhuus.github.io/elektrophon/images/vca1-panel-tmb.png" height="300px"></img></a><br/>vca-1</td>
   
-  <td><a href="https://github.com/spielhuus/elektrophon/blob/master/modules/Stereo Mischer/README.md"><img src="https://spielhuus.github.io/elektrophon/images/summe-panel-tmb.png" height="200px"></img></a><br/>summe</td>
+  <td><a href="https://github.com/spielhuus/elektrophon/blob/master/modules/Stereo Mischer/README.md"><img src="https://spielhuus.github.io/elektrophon/images/summe-panel-tmb.png" height="300px"></img></a><br/>summe</td>
   
-  <td><a href="https://github.com/spielhuus/elektrophon/blob/master/modules/basspp/README.md"><img src="https://spielhuus.github.io/elektrophon/images/basspp-panel-tmb.png" height="200px"></img></a><br/>bass++</td>
+  <td><a href="https://github.com/spielhuus/elektrophon/blob/master/modules/basspp/README.md"><img src="https://spielhuus.github.io/elektrophon/images/basspp-panel-tmb.png" height="300px"></img></a><br/>bass++</td>
 
   <td><a href="https://github.com/spielhuus/elektrophon/blob/master/modules/echo/README.md"><img src="https://spielhuus.github.io/elektrophon/images/echo-panel-tmb.png" height="300px"></img></a><br/>echo</td>
 
-  <td><a href="https://github.com/spielhuus/elektrophon/blob/master/modules/MIDI/README.md"><img src="https://spielhuus.github.io/elektrophon/images/Mixerpanel_tmb.png" height="200px"></img></a><br/>midi</td>
+  <td><a href="https://github.com/spielhuus/elektrophon/blob/master/modules/kontakt/README.md"><img src="https://spielhuus.github.io/elektrophon/images/kontakt-panel-tmb.png" height="300px"></img></a><br/>midi</td>
  </tr>
 </table>
 
