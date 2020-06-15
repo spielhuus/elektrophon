@@ -7,6 +7,8 @@ this is a clone of the filter section from the vintage russian analog polivoks s
 
 ## *build*
 
+<a href="https://github.com/spielhuus/elektrophon/blob/master/modules/polivoks/schemas.pdf"><img src="https://spielhuus.github.io/elektrophon/images/polivoks-schema-tmb.png" width="120px" align="right"></img></a> The gerber files are part of the release. It should be possible to directly order them from your manufacturer. But check the result on the preview when you order them. The parts are in the [BOM](BOM.md), there are no special parts needed for this build. <br/><br/><br/><br/><br/>
+
 ## *calibration*
 
 no calibration needed.
