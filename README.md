@@ -30,10 +30,17 @@
 
 
   <img width="20px" align="left" src="https://spielhuus.github.io/elektrophon/images/text_function.png"/>
-  <a href="https://github.com/spielhuus/elektrophon/blob/master/modules/VCS/README.md"><img width="180px" align="left" src="https://spielhuus.github.io/elektrophon/images/funktion-panel.png" height="300px"></img></a>
+  <a href="https://github.com/spielhuus/elektrophon/blob/master/modules/VCS/README.md"><img width="180px" align="left" src="https://spielhuus.github.io/elektrophon/images/funktion-panel-tmb.png" height="300px"></img></a>
   <a href="https://github.com/spielhuus/elektrophon/blob/master/modules/ssg/README.md"><img width="180px" align="left" src="https://spielhuus.github.io/elektrophon/images/ssg-panel-tmb.png" height="300px"></img></a>
   <a href="https://github.com/spielhuus/elektrophon/blob/master/modules/adsr/README.md"><img width="40px" align="left" src="https://spielhuus.github.io/elektrophon/images/adsr-panel-tmb.png" height="300px"></img></a>
 
+  <img width="20px" align="left" src="https://spielhuus.github.io/elektrophon/images/text_mixer.png"/>
+  <a href="https://github.com/spielhuus/elektrophon/blob/master/modules/kontrast/README.md"><img width="40px" align="left"  src="https://spielhuus.github.io/elektrophon/images/kontrast-panel-tmb.png" height="300px"></img></a>
+  <a href="https://github.com/spielhuus/elektrophon/blob/master/modules/vca1/README.md"><img width="180px" align="left"  src="https://spielhuus.github.io/elektrophon/images/vca1-panel-tmb.png" height="300px"></img></a>
+  <a href="https://github.com/spielhuus/elektrophon/blob/master/modules/Stereo Mischer/README.md"><img width="180px" align="left" src="https://spielhuus.github.io/elektrophon/images/summe-panel-tmb.png" height="300px"></img></a>
+  <a href="https://github.com/spielhuus/elektrophon/blob/master/modules/basspp/README.md"><img width="140px" align="left"  src="https://spielhuus.github.io/elektrophon/images/basspp-panel-tmb.png" height="300px"></img></a>
+  <a href="https://github.com/spielhuus/elektrophon/blob/master/modules/echo/README.md"><img width="90px" align="left" src="https://spielhuus.github.io/elektrophon/images/echo-panel-tmb.png" height="300px"></img></a>
+  <a href="https://github.com/spielhuus/elektrophon/blob/master/modules/kontakt/README.md"><img width="180px" align="left" src="https://spielhuus.github.io/elektrophon/images/kontakt-panel-tmb.png" height="300px"></img></a>
 
 </div>
 
