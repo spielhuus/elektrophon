@@ -634,6 +634,4 @@ F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 2850 5250 50  0001 C CNN
 	2    2850 5250
 	1    0    0    1   
 $EndComp
-Text Notes 4400 2850 0    50   ~ 0
-redrum
 $EndSCHEMATC
