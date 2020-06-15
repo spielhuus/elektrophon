@@ -14,11 +14,9 @@
   <a href="https://github.com/spielhuus/elektrophon/blob/master/modules/Utility LFO/README.md"><img width="180px" align="left" src="https://spielhuus.github.io/elektrophon/images/lfo-panel-tmb.png" height="300px"></img></a>
 
   <a href="https://github.com/spielhuus/elektrophon/blob/master/modules/noise/README.md"><img width="40px" align="left" src="https://spielhuus.github.io/elektrophon/images/noise-panel-tmb.png" height="300px"></img></a>
-</div>
 
-<br/><br/>
 
-<div>
+
   <img width="20px" align="left" src="https://spielhuus.github.io/elektrophon/images/text_filter.png"/>
 
   <a href="https://github.com/spielhuus/elektrophon/blob/master/modules/resonanz/README.md"><img width="180px" align="left"  src="https://spielhuus.github.io/elektrophon/images/resonanz-panel-tmb.png" height="300px"></img></a>
@@ -28,6 +26,15 @@
   <a href="https://github.com/spielhuus/elektrophon/blob/master/modules/metall/README.md"><img width="90px" align="left"  src="https://spielhuus.github.io/elektrophon/images/metall-panel-tmb.png" height="300px"></img></a>
 
   <a href="https://github.com/spielhuus/elektrophon/blob/master/modules/wavefolder/README.md"><img width="90px" align="left"  src="https://spielhuus.github.io/elektrophon/images/wavefolder-panel-tmb.png" height="300px"></img></a>
+
+
+
+  <img width="20px" align="left" src="https://spielhuus.github.io/elektrophon/images/text_function.png"/>
+  <a href="https://github.com/spielhuus/elektrophon/blob/master/modules/VCS/README.md"><img width="180px" align="left" src="https://spielhuus.github.io/elektrophon/images/funktion-panel.png" height="300px"></img></a>
+  <a href="https://github.com/spielhuus/elektrophon/blob/master/modules/ssg/README.md"><img width="180px" align="left" src="https://spielhuus.github.io/elektrophon/images/ssg-panel-tmb.png" height="300px"></img></a>
+  <a href="https://github.com/spielhuus/elektrophon/blob/master/modules/adsr/README.md"><img width="40px" align="left" src="https://spielhuus.github.io/elektrophon/images/adsr-panel-tmb.png" height="300px"></img></a>
+
+
 </div>
 
 <table border="0">
