@@ -20,16 +20,16 @@
   )
 
   (layers
-    (0 F.Cu signal)
-    (31 B.Cu signal)
-    (32 B.Adhes user)
-    (33 F.Adhes user)
-    (34 B.Paste user)
-    (35 F.Paste user)
-    (36 B.SilkS user)
-    (37 F.SilkS user)
-    (38 B.Mask user)
-    (39 F.Mask user)
+    (0 F.Cu signal hide)
+    (31 B.Cu signal hide)
+    (32 B.Adhes user hide)
+    (33 F.Adhes user hide)
+    (34 B.Paste user hide)
+    (35 F.Paste user hide)
+    (36 B.SilkS user hide)
+    (37 F.SilkS user hide)
+    (38 B.Mask user hide)
+    (39 F.Mask user hide)
     (40 Dwgs.User user hide)
     (41 Cmts.User user hide)
     (42 Eco1.User user hide)
@@ -122,8 +122,8 @@
     (fp_text value VOL_4 (at 0 9.144) (layer F.Mask) hide
       (effects (font (size 2 1.4) (thickness 0.25)))
     )
-    (fp_circle (center 0 0) (end 6.6 0) (layer F.CrtYd) (width 0.05))
     (fp_circle (center 0 0) (end 6.35 0) (layer Cmts.User) (width 0.15))
+    (fp_circle (center 0 0) (end 6.6 0) (layer F.CrtYd) (width 0.05))
     (fp_text user %R (at 0.3 0) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
@@ -147,8 +147,8 @@
     (fp_text value OUT_4 (at 0 9.144) (layer F.Mask) hide
       (effects (font (size 2 1.4) (thickness 0.25)))
     )
-    (fp_circle (center 0 0) (end 4.2 0) (layer F.CrtYd) (width 0.05))
     (fp_circle (center 0 0) (end 4 0) (layer Cmts.User) (width 0.15))
+    (fp_circle (center 0 0) (end 4.2 0) (layer F.CrtYd) (width 0.05))
     (fp_text user %R (at 0.3 0) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
@@ -172,8 +172,8 @@
     (fp_text value frequency_4 (at 0 9.144) (layer F.Mask) hide
       (effects (font (size 2 1.4) (thickness 0.25)))
     )
-    (fp_circle (center 0 0) (end 6.6 0) (layer F.CrtYd) (width 0.05))
     (fp_circle (center 0 0) (end 6.35 0) (layer Cmts.User) (width 0.15))
+    (fp_circle (center 0 0) (end 6.6 0) (layer F.CrtYd) (width 0.05))
     (fp_text user %R (at 0.3 0) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
@@ -197,8 +197,8 @@
     (fp_text value resonance_4 (at 0 9.144) (layer F.Mask) hide
       (effects (font (size 2 1.4) (thickness 0.25)))
     )
-    (fp_circle (center 0 0) (end 6.6 0) (layer F.CrtYd) (width 0.05))
     (fp_circle (center 0 0) (end 6.35 0) (layer Cmts.User) (width 0.15))
+    (fp_circle (center 0 0) (end 6.6 0) (layer F.CrtYd) (width 0.05))
     (fp_text user %R (at 0.3 0) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
@@ -222,8 +222,8 @@
     (fp_text value IN_4 (at 0 9.144) (layer F.Mask) hide
       (effects (font (size 2 1.4) (thickness 0.25)))
     )
-    (fp_circle (center 0 0) (end 4.2 0) (layer F.CrtYd) (width 0.05))
     (fp_circle (center 0 0) (end 4 0) (layer Cmts.User) (width 0.15))
+    (fp_circle (center 0 0) (end 4.2 0) (layer F.CrtYd) (width 0.05))
     (fp_text user %R (at 0.3 0) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
@@ -247,8 +247,8 @@
     (fp_text value frequency_1 (at 0 9.144) (layer F.Mask) hide
       (effects (font (size 2 1.4) (thickness 0.25)))
     )
-    (fp_circle (center 0 0) (end 6.6 0) (layer F.CrtYd) (width 0.05))
     (fp_circle (center 0 0) (end 6.35 0) (layer Cmts.User) (width 0.15))
+    (fp_circle (center 0 0) (end 6.6 0) (layer F.CrtYd) (width 0.05))
     (fp_text user %R (at 0.3 0) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
@@ -272,8 +272,8 @@
     (fp_text value resonance_1 (at 0 9.144) (layer F.Mask) hide
       (effects (font (size 2 1.4) (thickness 0.25)))
     )
-    (fp_circle (center 0 0) (end 6.6 0) (layer F.CrtYd) (width 0.05))
     (fp_circle (center 0 0) (end 6.35 0) (layer Cmts.User) (width 0.15))
+    (fp_circle (center 0 0) (end 6.6 0) (layer F.CrtYd) (width 0.05))
     (fp_text user %R (at 0.3 0) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
@@ -297,8 +297,8 @@
     (fp_text value OUT (at 0 9.144) (layer F.Mask) hide
       (effects (font (size 2 1.4) (thickness 0.25)))
     )
-    (fp_circle (center 0 0) (end 4.2 0) (layer F.CrtYd) (width 0.05))
     (fp_circle (center 0 0) (end 4 0) (layer Cmts.User) (width 0.15))
+    (fp_circle (center 0 0) (end 4.2 0) (layer F.CrtYd) (width 0.05))
     (fp_text user %R (at 0.3 0) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
@@ -322,8 +322,8 @@
     (fp_text value VOL_3 (at 0 9.144) (layer F.Mask) hide
       (effects (font (size 2 1.4) (thickness 0.25)))
     )
-    (fp_circle (center 0 0) (end 6.6 0) (layer F.CrtYd) (width 0.05))
     (fp_circle (center 0 0) (end 6.35 0) (layer Cmts.User) (width 0.15))
+    (fp_circle (center 0 0) (end 6.6 0) (layer F.CrtYd) (width 0.05))
     (fp_text user %R (at 0.3 0) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
@@ -347,8 +347,8 @@
     (fp_text value VOL_2 (at 0 9.144) (layer F.Mask) hide
       (effects (font (size 2 1.4) (thickness 0.25)))
     )
-    (fp_circle (center 0 0) (end 6.6 0) (layer F.CrtYd) (width 0.05))
     (fp_circle (center 0 0) (end 6.35 0) (layer Cmts.User) (width 0.15))
+    (fp_circle (center 0 0) (end 6.6 0) (layer F.CrtYd) (width 0.05))
     (fp_text user %R (at 0.3 0) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
@@ -372,8 +372,8 @@
     (fp_text value VOL_1 (at 0 9.144) (layer F.Mask) hide
       (effects (font (size 2 1.4) (thickness 0.25)))
     )
-    (fp_circle (center 0 0) (end 6.6 0) (layer F.CrtYd) (width 0.05))
     (fp_circle (center 0 0) (end 6.35 0) (layer Cmts.User) (width 0.15))
+    (fp_circle (center 0 0) (end 6.6 0) (layer F.CrtYd) (width 0.05))
     (fp_text user %R (at 0.3 0) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
@@ -397,8 +397,8 @@
     (fp_text value OUT_3 (at 0 9.144) (layer F.Mask) hide
       (effects (font (size 2 1.4) (thickness 0.25)))
     )
-    (fp_circle (center 0 0) (end 4.2 0) (layer F.CrtYd) (width 0.05))
     (fp_circle (center 0 0) (end 4 0) (layer Cmts.User) (width 0.15))
+    (fp_circle (center 0 0) (end 4.2 0) (layer F.CrtYd) (width 0.05))
     (fp_text user %R (at 0.3 0) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
@@ -422,8 +422,8 @@
     (fp_text value frequency_3 (at 0 9.144) (layer F.Mask) hide
       (effects (font (size 2 1.4) (thickness 0.25)))
     )
-    (fp_circle (center 0 0) (end 6.6 0) (layer F.CrtYd) (width 0.05))
     (fp_circle (center 0 0) (end 6.35 0) (layer Cmts.User) (width 0.15))
+    (fp_circle (center 0 0) (end 6.6 0) (layer F.CrtYd) (width 0.05))
     (fp_text user %R (at 0.3 0) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
@@ -447,8 +447,8 @@
     (fp_text value resonance_3 (at 0 9.144) (layer F.Mask) hide
       (effects (font (size 2 1.4) (thickness 0.25)))
     )
-    (fp_circle (center 0 0) (end 6.6 0) (layer F.CrtYd) (width 0.05))
     (fp_circle (center 0 0) (end 6.35 0) (layer Cmts.User) (width 0.15))
+    (fp_circle (center 0 0) (end 6.6 0) (layer F.CrtYd) (width 0.05))
     (fp_text user %R (at 0.3 0) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
@@ -472,8 +472,8 @@
     (fp_text value IN (at 0 9.144) (layer F.Mask) hide
       (effects (font (size 2 1.4) (thickness 0.25)))
     )
-    (fp_circle (center 0 0) (end 4.2 0) (layer F.CrtYd) (width 0.05))
     (fp_circle (center 0 0) (end 4 0) (layer Cmts.User) (width 0.15))
+    (fp_circle (center 0 0) (end 4.2 0) (layer F.CrtYd) (width 0.05))
     (fp_text user %R (at 0.3 0) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
@@ -497,8 +497,8 @@
     (fp_text value IN_3 (at 0 9.144) (layer F.Mask) hide
       (effects (font (size 2 1.4) (thickness 0.25)))
     )
-    (fp_circle (center 0 0) (end 4.2 0) (layer F.CrtYd) (width 0.05))
     (fp_circle (center 0 0) (end 4 0) (layer Cmts.User) (width 0.15))
+    (fp_circle (center 0 0) (end 4.2 0) (layer F.CrtYd) (width 0.05))
     (fp_text user %R (at 0.3 0) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
@@ -522,8 +522,8 @@
     (fp_text value OUT_2 (at 0 9.144) (layer F.Mask) hide
       (effects (font (size 2 1.4) (thickness 0.25)))
     )
-    (fp_circle (center 0 0) (end 4.2 0) (layer F.CrtYd) (width 0.05))
     (fp_circle (center 0 0) (end 4 0) (layer Cmts.User) (width 0.15))
+    (fp_circle (center 0 0) (end 4.2 0) (layer F.CrtYd) (width 0.05))
     (fp_text user %R (at 0.3 0) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
@@ -547,8 +547,8 @@
     (fp_text value frequency_2 (at 0 9.144) (layer F.Mask) hide
       (effects (font (size 2 1.4) (thickness 0.25)))
     )
-    (fp_circle (center 0 0) (end 6.6 0) (layer F.CrtYd) (width 0.05))
     (fp_circle (center 0 0) (end 6.35 0) (layer Cmts.User) (width 0.15))
+    (fp_circle (center 0 0) (end 6.6 0) (layer F.CrtYd) (width 0.05))
     (fp_text user %R (at 0.3 0) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
@@ -572,8 +572,8 @@
     (fp_text value resonance_2 (at 0 9.144) (layer F.Mask) hide
       (effects (font (size 2 1.4) (thickness 0.25)))
     )
-    (fp_circle (center 0 0) (end 6.6 0) (layer F.CrtYd) (width 0.05))
     (fp_circle (center 0 0) (end 6.35 0) (layer Cmts.User) (width 0.15))
+    (fp_circle (center 0 0) (end 6.6 0) (layer F.CrtYd) (width 0.05))
     (fp_text user %R (at 0.3 0) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
@@ -597,8 +597,8 @@
     (fp_text value IN_2 (at 0 9.144) (layer F.Mask) hide
       (effects (font (size 2 1.4) (thickness 0.25)))
     )
-    (fp_circle (center 0 0) (end 4.2 0) (layer F.CrtYd) (width 0.05))
     (fp_circle (center 0 0) (end 4 0) (layer Cmts.User) (width 0.15))
+    (fp_circle (center 0 0) (end 4.2 0) (layer F.CrtYd) (width 0.05))
     (fp_text user %R (at 0.3 0) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
@@ -622,8 +622,8 @@
     (fp_text value OUT_1 (at 0 9.144) (layer F.Mask) hide
       (effects (font (size 2 1.4) (thickness 0.25)))
     )
-    (fp_circle (center 0 0) (end 4.2 0) (layer F.CrtYd) (width 0.05))
     (fp_circle (center 0 0) (end 4 0) (layer Cmts.User) (width 0.15))
+    (fp_circle (center 0 0) (end 4.2 0) (layer F.CrtYd) (width 0.05))
     (fp_text user %R (at 0.3 0) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
@@ -647,8 +647,8 @@
     (fp_text value IN_1 (at 0 9.144) (layer F.Mask) hide
       (effects (font (size 2 1.4) (thickness 0.25)))
     )
-    (fp_circle (center 0 0) (end 4.2 0) (layer F.CrtYd) (width 0.05))
     (fp_circle (center 0 0) (end 4 0) (layer Cmts.User) (width 0.15))
+    (fp_circle (center 0 0) (end 4.2 0) (layer F.CrtYd) (width 0.05))
     (fp_text user %R (at 0.3 0) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
@@ -672,8 +672,8 @@
     (fp_text value MountingHole (at 0 4.2) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_circle (center 0 0) (end 3.45 0) (layer F.CrtYd) (width 0.05))
     (fp_circle (center 0 0) (end 3.2 0) (layer Cmts.User) (width 0.15))
+    (fp_circle (center 0 0) (end 3.45 0) (layer F.CrtYd) (width 0.05))
     (fp_text user %R (at 0.3 0) (layer F.Fab)
       (effects (font (size 1 1) (thickness 0.15)))
     )
@@ -692,8 +692,8 @@
     (fp_text value MountingHole (at 0 4.2) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_circle (center 0 0) (end 3.45 0) (layer F.CrtYd) (width 0.05))
     (fp_circle (center 0 0) (end 3.2 0) (layer Cmts.User) (width 0.15))
+    (fp_circle (center 0 0) (end 3.45 0) (layer F.CrtYd) (width 0.05))
     (fp_text user %R (at 0.3 0) (layer F.Fab)
       (effects (font (size 1 1) (thickness 0.15)))
     )
@@ -712,8 +712,8 @@
     (fp_text value MountingHole (at 0 4.2) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_circle (center 0 0) (end 3.45 0) (layer F.CrtYd) (width 0.05))
     (fp_circle (center 0 0) (end 3.2 0) (layer Cmts.User) (width 0.15))
+    (fp_circle (center 0 0) (end 3.45 0) (layer F.CrtYd) (width 0.05))
     (fp_text user %R (at 0.3 0) (layer F.Fab)
       (effects (font (size 1 1) (thickness 0.15)))
     )
@@ -732,8 +732,8 @@
     (fp_text value MountingHole (at 0 4.2) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_circle (center 0 0) (end 3.45 0) (layer F.CrtYd) (width 0.05))
     (fp_circle (center 0 0) (end 3.2 0) (layer Cmts.User) (width 0.15))
+    (fp_circle (center 0 0) (end 3.45 0) (layer F.CrtYd) (width 0.05))
     (fp_text user %R (at 0.3 0) (layer F.Fab)
       (effects (font (size 1 1) (thickness 0.15)))
     )
