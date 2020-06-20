@@ -15,8 +15,13 @@ patch the cycle output of the smooth section into the input. you should get a os
 
 * patch the cycle output of the smooth section into the input. 
 * connect the smooth output to a scope. 
-* turn the rate potentiometer to minimum.
-* adjust RV1 until you get an oscillating signal in the suboudio range
+* turn the rate potentiometer to maximum.
+* with the RV1 trimpot the frequency can be adjusted. find the point where the frequency does not get any higher.
+
+### *calibrate the stepped section*
+
+
+
 
 ## *usage*
 
