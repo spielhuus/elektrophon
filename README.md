@@ -35,11 +35,11 @@ when i was looking for some interesting electronic project, i stumpled oppon som
     <td width="20px"><img width="20px" align="left" src="https://spielhuus.github.io/elektrophon/images/text_function.png"/></td>
     <td>
       <a href="https://github.com/spielhuus/elektrophon/blob/master/modules/VCS/README.md"><img width="135px" align="left" src="https://spielhuus.github.io/elektrophon/images/funktion-panel-tmb.png" height="300px"></img></a>
-      <a href="https://github.com/spielhuus/elektrophon/blob/master/modules/ssg/README.md"><img width="137px" align="left" src="https://spielhuus.github.io/elektrophon/images/ssg-panel-tmb.jpg" height="300px"></img></a>
+      <a href="https://github.com/spielhuus/elektrophon/blob/master/modules/ssg/README.md"><img width="137px" align="left" src="https://spielhuus.github.io/elektrophon/images/ssg-panel-tmb.jpg" height="300px alt="smooth and stepped generator"></img></a>
       <a href="https://github.com/spielhuus/elektrophon/blob/master/modules/adsr/README.md"><img width="89px" align="left" src="https://spielhuus.github.io/elektrophon/images/adsr-panel-tmb.png" height="300px"></img></a>
     </td>
   </tr>
-
+th
   <tr>
     <td width="20px"><img width="20px" align="left" src="https://spielhuus.github.io/elektrophon/images/text_mixer.png"/></td>
     <td>
