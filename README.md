@@ -1,4 +1,10 @@
 # **<font size="24">*elekrophon*</font>** 
+
+when i was looking for some interesting electronic project, i stumpled oppon some wierd fellas who build analog electric instruments. 
+
+
+
+
 <a href="https://spielhuus.github.io/elektrophon/images/elektrophon.jpg"><img align="right" src="https://spielhuus.github.io/elektrophon/images/elektrophon_tmb.jpg" width="400"></a>is a collection of modular synthesizer modules i built. The module folders contain the schema and PCB files for kicad. You can find all the required files for changing the schemas and building gerber files in this project.  is a collection of modules for a modular analog electro acoustic noise machine. all modules are built on stripboards or pcb's and with 3d printed front plates.The goal is it to build the modules quickly. The 3d printed front panels comes complete with holes and stands. This makes it easy to mount the module. The modules can be mount to a rack. The first rack i built was a small testing rack, the fly rack.There are only two side panels to print. For the rails i used the standard euro panel rails from the electronic vendors (i.e. [farnel](https://de.farnell.com/schroff/34560-484/horizontal-rail-enclosure/dp/2816357)). Every thing from the music stores is very expensive. it is a little bit cheaper to buy those rails. The sizes for modular synths are mostly equal to the standard size for electronic and computer racks.
 <br><br><br>
 
@@ -29,7 +35,7 @@
     <td width="20px"><img width="20px" align="left" src="https://spielhuus.github.io/elektrophon/images/text_function.png"/></td>
     <td>
       <a href="https://github.com/spielhuus/elektrophon/blob/master/modules/VCS/README.md"><img width="135px" align="left" src="https://spielhuus.github.io/elektrophon/images/funktion-panel-tmb.png" height="300px"></img></a>
-      <a href="https://github.com/spielhuus/elektrophon/blob/master/modules/ssg/README.md"><img width="137px" align="left" src="https://spielhuus.github.io/elektrophon/images/ssg-panel-tmb.png" height="300px"></img></a>
+      <a href="https://github.com/spielhuus/elektrophon/blob/master/modules/ssg/README.md"><img width="137px" align="left" src="https://spielhuus.github.io/elektrophon/images/ssg-panel-tmb.jpg" height="300px"></img></a>
       <a href="https://github.com/spielhuus/elektrophon/blob/master/modules/adsr/README.md"><img width="89px" align="left" src="https://spielhuus.github.io/elektrophon/images/adsr-panel-tmb.png" height="300px"></img></a>
     </td>
   </tr>
@@ -37,7 +43,7 @@
   <tr>
     <td width="20px"><img width="20px" align="left" src="https://spielhuus.github.io/elektrophon/images/text_mixer.png"/></td>
     <td>
-    <a href="https://github.com/spielhuus/elektrophon/blob/master/modules/kontrast/README.md"><img width="93px" align="left"  src="https://spielhuus.github.io/elektrophon/images/kontrast-panel-tmb.png" height="300px"></img></a>
+    <a href="https://github.com/spielhuus/elektrophon/blob/master/modules/kontrast/README.md"><img width="93px" align="left"  src="https://spielhuus.github.io/elektrophon/images/kontrast-panel-tmb.jpg" height="300px"></img></a>
     <a href="https://github.com/spielhuus/elektrophon/blob/master/modules/vca1/README.md"><img width="134px" align="left"  src="https://spielhuus.github.io/elektrophon/images/vca1-panel-tmb.png" height="300px"></img></a>
     <a href="https://github.com/spielhuus/elektrophon/blob/master/modules/Stereo Mischer/README.md"><img width="135px" align="left" src="https://spielhuus.github.io/elektrophon/images/summe-panel-tmb.png" height="300px"></img></a>
     <a href="https://github.com/spielhuus/elektrophon/blob/master/modules/basspp/README.md"><img width="137px" align="left"  src="https://spielhuus.github.io/elektrophon/images/basspp-panel-tmb.png" height="300px"></img></a>
