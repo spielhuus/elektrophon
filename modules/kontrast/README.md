@@ -9,7 +9,7 @@ this is my first smd build. i created this one to try smd soldering with a hot a
 
 ## *build*
 
-<a href="https://spielhuus.github.io/elektrophon/schemas/kontrast.pdf"><img src="https://spielhuus.github.io/elektrophon/images/kontrast-schema-tmb.png" height="200px" align="right"></img></a> The gerber files are part of the release. It should be possible to directly order them from your manufacturer. But check the result on the preview when you order them. The parts are in the [BOM](BOM.md), there are no special parts needed for this build.
+<a href="https://spielhuus.github.io/elektrophon/schemas/kontrast.pdf"><img src="https://spielhuus.github.io/elektrophon/images/kontrast-schema-tmb.png" height="150px" align="right"></img></a> The gerber files are part of the release. It should be possible to directly order them from your manufacturer. But check the result on the preview when you order them. The parts are in the [BOM](BOM.md), there are no special parts needed for this build.
 
 ## *calibrate*
 
