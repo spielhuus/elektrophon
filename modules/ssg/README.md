@@ -3,7 +3,7 @@
 
 ## *smooth and stepped generator*
 
-the serge **s**mooth and **s**tepped **g**enerator is a versatile module. <a href="https://spielhuus.github.io/elektrophon/images/ssg-logo.jpg"><img align="right" src="https://spielhuus.github.io/elektrophon/images/ssg-logo-tmb.jpg" height="300px"></img></a>it can be used as a sample and hold module, a portamento or a simple triangle voltage conrolled lfo and many more applications. but the module wont do anything until you patch the application you want to use it for. this makes this module difficult to use. see the patch section for examples on how to use it. like many of the modules from ken stone it is built around the norton amplifier (LM3900). but all the parts are still active and available from the standard distributors.
+the serge **s**mooth and **s**tepped **g**enerator is a versatile module. <a href="https://photos.app.goo.gl/GWZw29TwRy24dwEQ9"><img align="right" src="https://spielhuus.github.io/elektrophon/images/ssg-logo-tmb.jpg" height="300px"></img></a>it can be used as a sample and hold module, a portamento or a simple triangle voltage conrolled lfo and many more applications. but the module wont do anything until you patch the application you want to use it for. this makes this module difficult to use. see the patch section for examples on how to use it. like many of the modules from ken stone it is built around the norton amplifier (LM3900). but all the parts are still active and available from the standard distributors.
 
 ## *building*
 
