@@ -3,7 +3,7 @@
 
 ## *kontrast*
 
-<a href="https://spielhuus.github.io/elektrophon/images/kontrast-panel.png"><img src="https://spielhuus.github.io/elektrophon/images/kontrast-panel-tmb.png" height="300px" align="right"></a>kontrast ist a simple mixer utility module. it can be used as a **fixed voltage source**, **mixer**, **attenuator**, **attenuverter** or **phase shifter**. the function depends on the patching and settings of the potentiometers. kontrast does not do any ac or dc coupling. the output signal will correspond to the phase of the input signal. 
+<a href="https://spielhuus.github.io/elektrophon/images/kontrast-panel.png"><img src="https://spielhuus.github.io/elektrophon/images/kontrast-panel-tmb.png" height="200px" align="right"></a>kontrast ist a simple mixer utility module. it can be used as a **fixed voltage source**, **mixer**, **attenuator**, **attenuverter** or **phase shifter**. the function depends on the patching and settings of the potentiometers. kontrast does not do any ac or dc coupling. the output signal will correspond to the phase of the input signal. 
 
 this is my first smd build. i created this one to try smd soldering with a hot air soldering station. i was able to place the whole circuit on the mount panel. this saves a complete pcb for this build. give your first smd build a try...
 
