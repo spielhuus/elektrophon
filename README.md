@@ -1,6 +1,6 @@
-# **<font size="24">*elekrophon*</font>** 
+# **<font size="24">*elektrophon*</font>** 
 
-when i was looking for some interesting electronic project, i stumpled oppon some wierd fellas who build analog electric instruments. 
+when i was looking for some interesting electronic project, i stumbled uppon some weird fellas who build analog electric instruments. 
 
 
 
