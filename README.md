@@ -87,7 +87,7 @@ th
 
   <td><a href="https://github.com/spielhuus/elektrophon/blob/master/modules/kontrast/README.md"><img src="https://spielhuus.github.io/elektrophon/images/kontrast-panel-tmb.png" height="300px"></img></a><br/>kontrast</td>
 
-  <td align="centre" colspan="3"><a href="https://github.com/spielhuus/elektrophon/blob/master/modules/vca1/README.md"><img src="https://spielhuus.github.io/elektrophon/images/vca1-panel-tmb.png" height="300px"></img></a><br/>vca-1</td>
+  <td align="centre" colspan="3"><a href="https://github.com/spielhuus/elektrophon/blob/master/modules/vca1/README.md"><img src="https://spielhuus.github.io/elektrophon/images/vca-1-panel-tmb.png" height="300px"></img></a><br/>vca-1</td>
   
   <td align="centre" colspan="3"><a href="https://github.com/spielhuus/elektrophon/blob/master/modules/Stereo Mischer/README.md"><img src="https://spielhuus.github.io/elektrophon/images/summe-panel-tmb.png" height="300px"></img></a><br/>summe</td>
   
