@@ -1,4 +1,4 @@
- ![module](https://img.shields.io/badge/module-other-yellow)
+ ![module](https://img.shields.io/badge/module-filter-orange)
 ![status](https://img.shields.io/badge/status-working-green)
 
 ## *polivoks*
