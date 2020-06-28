@@ -7,7 +7,7 @@
 
 ## *build*
 
-<a href="https://spielhuus.github.io/elektrophon/schemas/polivoks.pdf"><img src="https://spielhuus.github.io/elektrophon/images/polivols-schema-tmb.png" width="200px" align="right"></img></a> The gerber files are part of the release. It should be possible to directly order them from your manufacturer. But check the result on the preview when you order them. The parts are in the [BOM](BOM.md), there are no special parts needed for this build. <br/><br/><br/><br/><br/>
+<a href="https://spielhuus.github.io/elektrophon/schemas/polivoks.pdf"><img src="https://spielhuus.github.io/elektrophon/images/polivols-schema-tmb.png" width="200px" align="right"></img></a> The gerber files are part of the release. It should be possible to directly order them from your manufacturer. But check the result on the preview when you order them. The parts are in the [BOM](BOM.md), there are no special parts needed for this build. <br/><br/><br/>
 
 ## *calibrate*
 
