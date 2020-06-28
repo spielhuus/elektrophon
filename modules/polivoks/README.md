@@ -3,13 +3,13 @@
 
 ## *polivoks*
 
-<a href="https://photos.google.com/album/AF1QipMEuttl8D54eHz38pUnjgdNbpEEXJatdQuZA4Qf"><img src="https://spielhuus.github.io/elektrophon/images/polivoks-logo-tmb.jpg" height="200px" align="right"></img></a>this is a clone of the filter section from the vintage russian analog polivoks synthetiser, invented by vladimir kuzmin[[5]][5]. it is a lowpass (LP) and bandpass (BP) voltage controled filter with a special design and sound. it has no capacitors for the filter poles. instead it uses programmable opamps. in the original synth there were russion parts (KR140UD12). but also the western counterparts can be used (uA776, MC1776, LM4250,NTE888). of course none of these parts is available anymore. i got some LM4250 from china. beside the programmable opamp this filter is a very simple build. no calibration trimmers or accurate tempco stages required. it has a very harsh resonance response but can be very well controlled. 
+<a href="https://photos.google.com/album/AF1QipMEuttl8D54eHz38pUnjgdNbpEEXJatdQuZA4Qf"><img src="https://spielhuus.github.io/elektrophon/images/polivoks-logo-tmb.jpg" height="200px" align="right"></img></a>this is a clone of the filter section from the vintage russian analog polivoks synthetiser, invented by vladimir kuzmin[[5]][5]. it is a lowpass (LP) and bandpass (BP) voltage controled filter with a special design and sound. it has no capacitors for the filter poles. instead it uses programmable opamps. in the original synth there were russion parts (KR140UD12). but also the western counterparts can be used (uA776, MC1776, LM4250,NTE888). of course none of these parts is available anymore. i got some LM4250 from china. beside the programmable opamp this filter is a very simple build. no calibration trimmers or accurate tempco stages required. it has a very harsh resonance response but can be very well controlled. <br/><br>
 
 ## *build*
 
 <a href="https://spielhuus.github.io/elektrophon/schemas/polivoks.pdf"><img src="https://spielhuus.github.io/elektrophon/images/polivols-schema-tmb.png" width="200px" align="right"></img></a> The gerber files are part of the release. It should be possible to directly order them from your manufacturer. But check the result on the preview when you order them. The parts are in the [BOM](BOM.md), there are no special parts needed for this build. <br/><br/><br/><br/><br/>
 
-## *calibration*
+## *calibrate*
 
 no calibration needed.
 
