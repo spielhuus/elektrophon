@@ -10,7 +10,11 @@ A VCA is a fundamental thing for a modular synthesizer. This is the VCA <a href=
 
 ## *calibration*
 
-Run a square wave of about 100 Hz into the CV. turn all the potentiometer to minimum and the *initial* to 50% (or less if you run a strong signal). Connect the out to an amplifier. Now adjust the trimpot until the signal is silent. You may also want to further adjust the trimpot when an input signal and envelope is connected. 
+* Run a square wave of about 100 Hz into the CV. 
+* turn all the potentiometer to minimum and the *initial* to 50% (or less if you run a strong signal). 
+* Connect the out to an amplifier. 
+* Now adjust the trimpot until the signal is silent. 
+* You may also want to further adjust the trimpot when an input signal and envelope is connected. 
 
 ## *use*
 
