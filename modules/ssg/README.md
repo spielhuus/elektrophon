@@ -1,5 +1,5 @@
-![module](https://img.shields.io/badge/module-other-yellow)
-![status](https://img.shields.io/badge/status-not%20working-red)
+![module](https://img.shields.io/badge/module-other-pink)
+![status](https://img.shields.io/badge/status-working-green)
 
 ## *smooth and stepped generator*
 
