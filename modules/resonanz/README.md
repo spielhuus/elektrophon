@@ -3,7 +3,7 @@
 
 ## *resonanz*
 
-<a href="https://spielhuus.github.io/elektrophon/images/resonanz-logo-tmb.jpg"><img src="https://spielhuus.github.io/elektrophon/images/resonanz-schema-tmb.png" height="120px"></img></a> a resonant band pass filter is a simple filter that can be used for artifical  instruments or as a percussion module. this is the substractive way of creating complex waveforms. feed a complex wave into the all input and filter different frequency bands to the sum output signal. you can also ping this filter and get various percusive responses. this filter seems to be boring at a first place, but if you give it a chance you can creat all kind of different sounds. 
+<a href="https://photos.google.com/share/AF1QipPR-NT3Snc10lRdeplb23y1ixCDCxzD0MtOzcAO54NFwgqTECFvAceLAIhImIJdqg?key=UWJQczlmZGFQQV93ZFFFRGc1dmFGaHo3RExic1l3"><img src="https://spielhuus.github.io/elektrophon/images/resonanz-logo-tmb.jpg" height="120px" align="right"></img></a> a resonant band pass filter is a simple filter that can be used for artifical  instruments or as a percussion module. this is the substractive way of creating complex waveforms. feed a complex wave into the all input and filter different frequency bands to the sum output signal. you can also ping this filter and get various percusive responses. this filter seems to be boring at a first place, but if you give it a chance you can creat all kind of different sounds. 
 
 ## *build*
 
