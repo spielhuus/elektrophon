@@ -24,10 +24,10 @@ when i was looking for some interesting electronic project, i stumbled uppon som
   <tr>
     <td width="20px"><img width="20px" align="left" src="https://spielhuus.github.io/elektrophon/images/text_filter.png"/></td>
     <td>
-      <a href="https://github.com/spielhuus/elektrophon/blob/master/modules/resonanz/README.md"><img width="180px" align="left"  src="https://spielhuus.github.io/elektrophon/images/resonanz-panel-tmb.png" height="300px"></img></a>
+      <a href="https://github.com/spielhuus/elektrophon/blob/master/modules/resonanz/README.md"><img width="180px" align="left"  src="https://spielhuus.github.io/elektrophon/images/resonanz-panel-tmb.jpg" height="300px"></img></a>
       <a href="https://github.com/spielhuus/elektrophon/blob/master/modules/polivoks/README.md"><img width="92px" align="left"  src="https://spielhuus.github.io/elektrophon/images/polivoks-panel-tmb.jpg" height="300px"></img></a>
       <a href="https://github.com/spielhuus/elektrophon/blob/master/modules/metall/README.md"><img width="92px" align="left"  src="https://spielhuus.github.io/elektrophon/images/metall-panel-tmb.png" height="300px"></img></a>
-      <a href="https://github.com/spielhuus/elektrophon/blob/master/modules/wavefolder/README.md"><img width="119px" align="left"  src="https://spielhuus.github.io/elektrophon/images/wavefolder-panel-tmb.png" height="300px"></img></a>
+      <a href="https://github.com/spielhuus/elektrophon/blob/master/modules/wavefolder/README.md"><img width="119px" align="left"  src="https://spielhuus.github.io/elektrophon/images/wavefolder-panel-tmb.jpg" height="300px"></img></a>
     </td>
   </tr>
 
@@ -36,10 +36,10 @@ when i was looking for some interesting electronic project, i stumbled uppon som
     <td>
       <a href="https://github.com/spielhuus/elektrophon/blob/master/modules/VCS/README.md"><img width="135px" align="left" src="https://spielhuus.github.io/elektrophon/images/funktion-panel-tmb.png" height="300px"></img></a>
       <a href="https://github.com/spielhuus/elektrophon/blob/master/modules/ssg/README.md"><img width="137px" align="left" src="https://spielhuus.github.io/elektrophon/images/ssg-panel-tmb.jpg" height="300px alt="smooth and stepped generator"></img></a>
-      <a href="https://github.com/spielhuus/elektrophon/blob/master/modules/adsr/README.md"><img width="89px" align="left" src="https://spielhuus.github.io/elektrophon/images/adsr-panel-tmb.png" height="300px"></img></a>
+      <a href="https://github.com/spielhuus/elektrophon/blob/master/modules/adsr/README.md"><img width="89px" align="left" src="https://spielhuus.github.io/elektrophon/images/adsr-panel-tmb.jpg" height="300px"></img></a>
     </td>
   </tr>
-th
+
   <tr>
     <td width="20px"><img width="20px" align="left" src="https://spielhuus.github.io/elektrophon/images/text_mixer.png"/></td>
     <td>
@@ -52,53 +52,6 @@ th
     </td>
   </tr>
 </table>
-
-<!-- table border="0">
- <tr>
-  <td width="40" bgcolor="orange"><img src="https://spielhuus.github.io/elektrophon/images/text_osillator.png"/></td>
-
-  <td width="131" align="centre" colspan="2"><a href="https://github.com/spielhuus/elektrophon/blob/master/modules/4046/README.md"><img src="https://spielhuus.github.io/elektrophon/images/4046-panel-tmb.png" height="300px"></img></a><br/>4046</td>
-  
-  <td width="180" align="centre" colspan="2"><a href="https://github.com/spielhuus/elektrophon/blob/master/modules/Utility LFO/README.md"><img src="https://spielhuus.github.io/elektrophon/images/lfo-panel-tmb.png" height="300px"></img></a><br/>LFO</td>
-
-  <td width="40"><a href="https://github.com/spielhuus/elektrophon/blob/master/modules/noise/README.md"><img src="https://spielhuus.github.io/elektrophon/images/noise-panel-tmb.png" height="300px"></img></a><br/>noise</td>
-
-</tr><tr>
-  <td bgcolor="lightgreen"><img src="https://spielhuus.github.io/elektrophon/images/text_filter.png"/></td>
-
-  <td align="centre" colspan="2"><a href="https://github.com/spielhuus/elektrophon/blob/master/modules/resonanz/README.md"><img src="https://spielhuus.github.io/elektrophon/images/resonanz-panel-tmb.png" height="300px"></img></a><br/>resonanz</td>
-
-  <td><a href="https://github.com/spielhuus/elektrophon/blob/master/modules/polivoks/README.md"><img src="https://spielhuus.github.io/elektrophon/images/polivoks-panel-tmb.png" height="300px"></img></a><br/>polivoks</td>
-  
-  <td><a href="https://github.com/spielhuus/elektrophon/blob/master/modules/metall/README.md"><img src="https://spielhuus.github.io/elektrophon/images/metall-panel-tmb.png" height="300px"></img></a><br/>metall</td>
-
-  <td><a href="https://github.com/spielhuus/elektrophon/blob/master/modules/wavefolder/README.md"><img src="https://spielhuus.github.io/elektrophon/images/wavefolder-panel-tmb.png" height="300px"></img></a><br/>wavefolder</td>
-
-</tr><tr>
-
-  <td bgcolor="yellow"><img src="https://spielhuus.github.io/elektrophon/images/text_function.png"/></td>  
-  <td align="centre" colspan="2"><a href="https://github.com/spielhuus/elektrophon/blob/master/modules/VCS/README.md"><img src="https://spielhuus.github.io/elektrophon/images/funktion-panel.png" height="300px"></img></a><br/>funktion</td>
-  <td align="centre" colspan="2"><a href="https://github.com/spielhuus/elektrophon/blob/master/modules/ssg/README.md"><img src="https://spielhuus.github.io/elektrophon/images/ssg-panel-tmb.png" height="300px"></img></a><br/>ssg</td>
-  <td><a href="https://github.com/spielhuus/elektrophon/blob/master/modules/adsr/README.md"><img src="https://spielhuus.github.io/elektrophon/images/adsr-panel-tmb.png" height="300px"></img></a><br/>adsr</td>
-
-</tr><tr>
- 
-  <td rowspan="2" bgcolor="lightblue"><img src="https://spielhuus.github.io/elektrophon/images/text_mixer.png"/></td>
-
-  <td><a href="https://github.com/spielhuus/elektrophon/blob/master/modules/kontrast/README.md"><img src="https://spielhuus.github.io/elektrophon/images/kontrast-panel-tmb.png" height="300px"></img></a><br/>kontrast</td>
-
-  <td align="centre" colspan="3"><a href="https://github.com/spielhuus/elektrophon/blob/master/modules/vca1/README.md"><img src="https://spielhuus.github.io/elektrophon/images/vca-1-panel-tmb.jpg" height="300px"></img></a><br/>vca-1</td>
-  
-  <td align="centre" colspan="3"><a href="https://github.com/spielhuus/elektrophon/blob/master/modules/Stereo Mischer/README.md"><img src="https://spielhuus.github.io/elektrophon/images/summe-panel-tmb.png" height="300px"></img></a><br/>summe</td>
-  
-  <td align="centre" colspan="3"><a href="https://github.com/spielhuus/elektrophon/blob/master/modules/basspp/README.md"><img src="https://spielhuus.github.io/elektrophon/images/basspp-panel-tmb.png" height="300px"></img></a><br/>bass++</td>
-
-  </tr><tr>
-
-  <td align="centre" colspan="1"><a href="https://github.com/spielhuus/elektrophon/blob/master/modules/echo/README.md"><img src="https://spielhuus.github.io/elektrophon/images/echo-panel-tmb.png" height="300px"></img></a><br/>echo</td>
-  <td align="centre" colspan="2"><a href="https://github.com/spielhuus/elektrophon/blob/master/modules/kontakt/README.md"><img src="https://spielhuus.github.io/elektrophon/images/kontakt-panel-tmb.png" height="300px"></img></a><br/>midi</td>
- </tr>
-</table -->
 
 ## **<font size="24">*ressources*</font>** 
 
