@@ -7,14 +7,22 @@
 
 ## *build*
 
-<a href="https://spielhuus.github.io/elektrophon/schemas/resonanz.pdf"><img src="https://spielhuus.github.io/elektrophon/images/resonanz-schema-tmb.png" width="200px" align="right"></img></a> The gerber files are part of the release. It should be possible to directly order them from your manufacturer. But check the result on the preview when you order them. The parts are in the [BOM](BOM.md), there are no special parts needed for this build. <br/><br/><br/><br/><br/>
+<a href="https://spielhuus.github.io/elektrophon/schemas/resonanz.pdf"><img src="https://spielhuus.github.io/elektrophon/images/resonanz-schema-tmb.png" height="100px" align="right"></img></a> The gerber files are part of the release. It should be possible to directly order them from your manufacturer. But check the result on the preview when you order them. The parts are in the [BOM](BOM.md), there are no special parts needed for this build. <br/><br/><br/><br/><br/>
 
 ## *calibrate*
 no clibration needed.
 
 ## *use*
 
+nothing special about the patching of this module.
 
+* **#1-#4** (left) individual input of the channels
+* **in** input for all channels
+* **#1-#4** (bottom) individual output of the channels
+* **frequency** frquency of the channel
+* **resonance** resonance of the channel
+* **volume** volume for mixed out signal
+* **out** mixed out signal
 
 ## *links*
 
