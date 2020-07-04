@@ -4,7 +4,8 @@
 ## *adsr*
 
 <a href="https://photos.google.com/share/AF1QipOUmZ8lBQsVg5olTzJucm1vQ4VTx7sTNKyZ5O3sOxxsugDAOHfvlMDehwke0mnDIQ?key=M19abU41ZWJOcWxMOVFJejFnWXNoZVdHTmoyekxR"><img height="200" align="right" src="https://spielhuus.github.io/elektrophon/images/adsr-logo-tmb.jpg"></a>
-an **adsr** creates an envelope for describing the change of audio over time. The envelope can be used for amplitude, filters or pitch. The origin of an 555  based ADSR is published in electronics by Kirschmann, Jacky et al \[[2][2],[3][3],[4][4]\]. This version is directly taken from René Schmitz \[[5][5]\] 'The Fastest Envelope in the West'. For the Attack, Decay and Release the potentiometers are logarithmic. This gives better control over the values. 
+an **adsr** creates an envelope for describing the change of audio over time. The envelope can be used for amplitude, filters or pitch. The origin of an 555  based ADSR is published in electronics by Kirschmann, Jacky et al \[[2][2],[3][3],[4][4]\]. This version is directly taken from René Schmitz \[[5][5]\] 'The Fastest Envelope in the West'. For the Attack, Decay and Release the potentiometers are logarithmic. This gives better control over the values. <br/>
+<br/>
 
 ## *build*
 
