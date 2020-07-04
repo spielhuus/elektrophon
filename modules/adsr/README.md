@@ -8,17 +8,16 @@ an **adsr** creates an envelope for describing the change of audio over time. Th
 
 ## *build*
 
-<a href=""><img width="200" align="left" src="https://spielhuus.github.io/elektrophon/images/adsr-schemas.png"></a> The gerber files are part of the release. It should be possible to directly order them from your manufacturer. But check the result on the preview when you order them. The parts are in the [BOM](BOM.md), there are no special parts needed for this build. <br/><br/><br/><br/><br/>
+<a href=""><img width="200" align="roght" src="https://spielhuus.github.io/elektrophon/images/adsr-schemas.png"></a> The gerber files are part of the release. It should be possible to directly order them from your manufacturer. But check the result on the preview when you order them. The parts are in the [BOM](BOM.md), there are no special parts needed for this build. <br/><br/><br/><br/><br/>
 
 ## *calibrate*
 
-No calibration needed.
+no calibration needed.
 
 ## *use*
 
-Connect a gate signal to the *IN* of the ADSR and the *OUT* to a VCA or VCF:
-
 <a href="https://spielhuus.github.io/elektrophon/images/adsr-mount.jpg"><img align="right" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/ADSR_parameter.svg/320px-ADSR_parameter.svg.png"></a>
+connect a gate signal to the **IN** of the adsr and the **OUT** to an audio sink:
 
 **IN** a gate singal for the length of the ADS singal.
 
