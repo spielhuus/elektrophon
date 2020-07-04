@@ -14,17 +14,6 @@ Comment3 ""
 Comment4 "License CC BY 4.0 - Attribution 4.0 International"
 $EndDescr
 $Comp
-L Timer:ICM7555 U2
-U 1 1 5CB62F03
-P 5600 2950
-F 0 "U2" H 5300 3500 50  0000 C CNN
-F 1 "ICM7555" H 5400 3400 50  0000 C CNN
-F 2 "Package_DIP:DIP-8_W7.62mm_Socket" H 5600 2950 50  0001 C CNN
-F 3 "http://www.intersil.com/content/dam/Intersil/documents/icm7/icm7555-56.pdf" H 5600 2950 50  0001 C CNN
-	1    5600 2950
-	1    0    0    -1  
-$EndComp
-$Comp
 L Transistor_BJT:BC547 Q1
 U 1 1 5CB63AB0
 P 2250 3150
@@ -1025,4 +1014,15 @@ Text Notes 9300 5250 0    50   ~ 0
 LED Driver
 NoConn ~ 4200 6850
 NoConn ~ 4700 6850
+$Comp
+L Timer:ICM7555xP U?
+U 1 1 5F013698
+P 5600 2950
+F 0 "U?" H 5600 3531 50  0000 C CNN
+F 1 "ICM7555xP" H 5600 3440 50  0000 C CNN
+F 2 "Package_DIP:DIP-8_W7.62mm" H 6250 2550 50  0001 C CNN
+F 3 "http://www.intersil.com/content/dam/Intersil/documents/icm7/icm7555-56.pdf" H 6450 2550 50  0001 C CNN
+	1    5600 2950
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC

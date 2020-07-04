@@ -3,12 +3,12 @@
 
 ## *adsr*
 
-<a href="https://spielhuus.github.io/elektrophon/images/adsr-panel.jpg"><img width="200" align="right" src="https://spielhuus.github.io/elektrophon/images/adsr-titel_tmb.jpg"></a>
-An ADSR creates an envelope for describing the change of audio over time. The envelope can be used for amplitude, filters or pitch. The origin of an 555  based ADSR is published in electronics by Kirschmann, Jacky et al \[[2][2],[3][3],[4][4]\]. This version is directly taken from René Schmitz \[[5][5]\] 'The Fastest Envelope in the West'. For the Attack, Decay and Release the potentiometers are logarithmic. This gives better control over the values. 
+<a href="https://photos.google.com/share/AF1QipOUmZ8lBQsVg5olTzJucm1vQ4VTx7sTNKyZ5O3sOxxsugDAOHfvlMDehwke0mnDIQ?key=M19abU41ZWJOcWxMOVFJejFnWXNoZVdHTmoyekxR"><img height="200" align="right" src="https://spielhuus.github.io/elektrophon/images/adsr-panel-tmb.jpg"></a>
+an **adsr** creates an envelope for describing the change of audio over time. The envelope can be used for amplitude, filters or pitch. The origin of an 555  based ADSR is published in electronics by Kirschmann, Jacky et al \[[2][2],[3][3],[4][4]\]. This version is directly taken from René Schmitz \[[5][5]\] 'The Fastest Envelope in the West'. For the Attack, Decay and Release the potentiometers are logarithmic. This gives better control over the values. 
 
 ## *build*
 
-<a href="https://spielhuus.github.io/elektrophon/images/adsr-mount.jpg"><img width="200" align="left" src="https://spielhuus.github.io/elektrophon/images/adsr-mount_tmb.jpg"></a> The gerber files are part of the release. It should be possible to directly order them from your manufacturer. But check the result on the preview when you order them. The parts are in the [BOM](BOM.md), there are no special parts needed for this build. <br/><br/><br/><br/><br/>
+<a href=""><img width="200" align="left" src="https://spielhuus.github.io/elektrophon/images/adsr-schemas.png"></a> The gerber files are part of the release. It should be possible to directly order them from your manufacturer. But check the result on the preview when you order them. The parts are in the [BOM](BOM.md), there are no special parts needed for this build. <br/><br/><br/><br/><br/>
 
 ## *calibrate*
 
