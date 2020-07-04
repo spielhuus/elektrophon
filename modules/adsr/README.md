@@ -16,7 +16,7 @@ no calibration needed.
 
 ## *use*
 
-<a href="https://spielhuus.github.io/elektrophon/images/adsr-mount.jpg"><img align="right" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/ADSR_parameter.svg/320px-ADSR_parameter.svg.png" height="200px"></a>
+<a href="https://spielhuus.github.io/elektrophon/images/adsr-mount.jpg"><img align="right" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/ADSR_parameter.svg/320px-ADSR_parameter.svg.png" height="100px"></a>
 connect a gate signal to the **IN** of the adsr and the **OUT** to an audio sink:
 
 **IN** a gate singal for the length of the ADS singal.
