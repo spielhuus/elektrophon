@@ -3,15 +3,18 @@
 
 ## *resonanz*
 
-a resonant band pass filter is a simple filter that can be used for artifical <a href="https://spielhuus.github.io/elektrophon/images/resonanz-schema.png"><img src="https://spielhuus.github.io/elektrophon/images/resonanz-schema-tmb.png" height="120px"></img></a> instruments or as a percussion module.
+<a href="https://spielhuus.github.io/elektrophon/images/resonanz-logo-tmb.jpg"><img src="https://spielhuus.github.io/elektrophon/images/resonanz-schema-tmb.png" height="120px"></img></a> a resonant band pass filter is a simple filter that can be used for artifical  instruments or as a percussion module. this is the substractive way of creating complex waveforms. feed a complex wave into the all input and filter different frequency bands to the sum output signal. you can also ping this filter and get various percusive responses. this filter seems to be boring at a first place, but if you give it a chance you can creat all kind of different sounds. 
 
 ## *build*
 
 <a href="https://spielhuus.github.io/elektrophon/schemas/resonanz.pdf"><img src="https://spielhuus.github.io/elektrophon/images/resonanz-schema-tmb.png" width="200px" align="right"></img></a> The gerber files are part of the release. It should be possible to directly order them from your manufacturer. But check the result on the preview when you order them. The parts are in the [BOM](BOM.md), there are no special parts needed for this build. <br/><br/><br/><br/><br/>
 
 ## *calibrate*
+no clibration needed.
 
 ## *use*
+
+
 
 ## *links*
 
