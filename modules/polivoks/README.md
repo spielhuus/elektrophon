@@ -3,11 +3,11 @@
 
 ## *polivoks*
 
-<a href="https://photos.google.com/album/AF1QipMEuttl8D54eHz38pUnjgdNbpEEXJatdQuZA4Qf"><img src="https://spielhuus.github.io/elektrophon/images/polivoks-logo-tmb.jpg" height="200px" align="right"></img></a>this is a clone of the filter section from the vintage russian analog polivoks synthetiser, invented by vladimir kuzmin[[5]][5]. it is a lowpass (LP) and bandpass (BP) voltage controled filter with a special design and sound. it has no capacitors for the filter poles. instead it uses programmable opamps. in the original synth there were russion parts (KR140UD12). but also the western counterparts can be used (uA776, MC1776, LM4250,NTE888). of course none of these parts is available anymore. i got some LM4250 from china. beside the programmable opamp this filter is a very simple build. no calibration trimmers or accurate tempco stages required. it has a very harsh resonance response but can be very well controlled. <br/><br>
+<a href="https://photos.google.com/album/AF1QipMEuttl8D54eHz38pUnjgdNbpEEXJatdQuZA4Qf"><img src="https://spielhuus.github.io/elektrophon/images/polivoks-logo-tmb.jpg" height="200px" align="right"></img></a> people seem to love the russian plivoks synthesizer [[6][6]]. for me the most interesting thing is the filter section. it is built without any capacitors, instead it uses some weird russian opamps (KR140UD12). these are programmable opamps. with a control voltage the gain can be changed. this filter want to scream and can give percusive feedback responses, but can be well controlled. this filter is invented by vladimir kuzmin[[5][5]]. it has a lowpas and bandpass sections. instead of the original russion opamp also the western counterparts can be used (uA776, MC1776, LM4250,NTE888). of course none of these parts is available anymore. i got some LM4250 from china. beside the programmable opamp this filter is a very simple build. no calibration trimmers or accurate tempco stages required.<br/><br>
 
 ## *build*
 
-<a href="https://spielhuus.github.io/elektrophon/schemas/polivoks.pdf"><img src="https://spielhuus.github.io/elektrophon/images/polivols-schema-tmb.png" width="200px" align="right"></img></a> The gerber files are part of the release. It should be possible to directly order them from your manufacturer. But check the result on the preview when you order them. The parts are in the [BOM](BOM.md), there are no special parts needed for this build. <br/><br/><br/>
+<a href="https://spielhuus.github.io/elektrophon/schemas/polivoks.pdf"><img src="https://spielhuus.github.io/elektrophon/images/polivols-schema-tmb.png" width="200px" align="right"></img></a> The gerber files are part of the release. It should be possible to directly order them from your manufacturer. But check the result on the preview when you order them. The parts are in the [BOM](BOM.md). all of the parts are active and available. but the LM4250 is not and an alternative source has to be find. <br/><br/><br/>
 
 ## *calibrate*
 
@@ -30,3 +30,4 @@ no calibration needed.
 [3]: http://electro-music.com/forum/topic-65609.html
 [4]: http://electro-music.com/forum/phpbb-files/polivoks_vcf_soft_917.png
 [5]: http://www.muztech.com/company.php
+[6]: https://www.youtube.com/watch?v=s8BHnQAXdr4
