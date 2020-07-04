@@ -1,5 +1,5 @@
 ![module](https://img.shields.io/badge/module-other-yellow)
-![status](https://img.shields.io/badge/status-draft-grey)
+![status](https://img.shields.io/badge/status-final-green)
 
 ## *resonanz*
 
