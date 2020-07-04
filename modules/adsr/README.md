@@ -8,7 +8,7 @@ an *adsr* creates an envelope for describing the change of audio over time. the 
 
 ## *build*
 
-<a href=""><img width="200" align="right" src="https://spielhuus.github.io/elektrophon/images/adsr-schemas.png"></a> The gerber files are part of the release. It should be possible to directly order them from your manufacturer. But check the result on the preview when you order them. The parts are in the [BOM](BOM.md), there are no special parts needed for this build. <br/><br/><br/><br/><br/>
+<a href=""><img width="200" align="right" src="https://spielhuus.github.io/elektrophon/images/adsr-schemas.png"></a> the gerber files are part of the release. It should be possible to directly order them from your manufacturer. But check the result on the preview when you order them. The parts are in the [BOM](BOM.md), there are no special parts needed for this build. <br/><br/><br/>
 
 ## *calibrate*
 
