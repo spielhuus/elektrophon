@@ -27,7 +27,7 @@ when i was looking for some interesting electronic project, i stumbled uppon som
       <a href="https://github.com/spielhuus/elektrophon/blob/master/modules/resonanz/README.md"><img width="180px" align="left"  src="https://spielhuus.github.io/elektrophon/images/resonanz-panel-tmb.jpg" height="300px"></img></a>
       <a href="https://github.com/spielhuus/elektrophon/blob/master/modules/polivoks/README.md"><img width="92px" align="left"  src="https://spielhuus.github.io/elektrophon/images/polivoks-panel-tmb.jpg" height="300px"></img></a>
       <a href="https://github.com/spielhuus/elektrophon/blob/master/modules/metall/README.md"><img width="92px" align="left"  src="https://spielhuus.github.io/elektrophon/images/metall-panel-tmb.png" height="300px"></img></a>
-      <a href="https://github.com/spielhuus/elektrophon/blob/master/modules/wavefolder/README.md"><img width="119px" align="left"  src="https://spielhuus.github.io/elektrophon/images/wavefolder-panel-tmb.jpg" height="300px"></img></a>
+      <a href="https://github.com/spielhuus/elektrophon/blob/master/modules/wavefolder/README.md"><img width="92px" align="left"  src="https://spielhuus.github.io/elektrophon/images/wavefolder-panel-tmb.jpg" height="300px"></img></a>
     </td>
   </tr>
 
