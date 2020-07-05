@@ -4,7 +4,7 @@
 ## *bass++*
 
 This is a precussion module designed by Thomas Henry. \[[1][1]\]<a href="https://photos.app.goo.gl/SccjAAS7x1J2cVFWA"><img align="right" height="200px" src="https://spielhuus.github.io/elektrophon/images/basspp-logo-tmb.jpg"></a>
-The bass voice has a very wide range and can produce very low and long bass sounds but also high pitch bass voices. the pitch is voltage controller, but the tracking is not comparable to a vco. the voltage control for the pitch does not track very well. i never use it, maybe i build a version of this module without this part.
+The bass voice has a very wide range and can produce very low and long bass sounds but also high pitch bass voices. the pitch is voltage controller, but the tracking is not comparable to a vco. the voltage control for the pitch does not track very well. i never use it, maybe i build a version of this module without this part. <br/><br/>
 
 ## *build*
 
