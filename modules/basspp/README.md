@@ -8,7 +8,7 @@ The bass voice has a very wide range and can produce very low and long bass soun
 
 ## *build*
 
-<a href="https://spielhuus.github.io/elektrophon/schemas/adsr.pdf"><img height="150" align="right" src="https://spielhuus.github.io/elektrophon/images/basspp-schemas.png"></a> The gerber files are part of the release. It should be possible to directly order them from your manufacturer. But check the result on the preview when you order them. The parts are in the [BOM](BOM.md), there are no special parts needed for this build. 
+<a href="https://spielhuus.github.io/elektrophon/schemas/adsr.pdf"><img height="100px" align="right" src="https://spielhuus.github.io/elektrophon/images/basspp-schemas.png"></a> The gerber files are part of the release. It should be possible to directly order them from your manufacturer. But check the result on the preview when you order them. The parts are in the [BOM](BOM.md), there are no special parts needed for this build. 
 
 If you want to adjust the pitch range you can change the value of the capacitor C10, as suggested in the schema.<br/><br/><br/>
 
