@@ -11,7 +11,7 @@ the money and effort and you should build more than one of this fantastic VCO.
 
 ## building
 
-<a href="https://spielhuus.github.io/elektrophon/images/4046-side.jpg"><img align="left" src="https://spielhuus.github.io/elektrophon/images/4046-side-tmb.jpg" height="300px"></img></a>
+<a href="https://spielhuus.github.io/elektrophon/schemas/4046.pdf"><img align="left" src="https://spielhuus.github.io/elektrophon/images/4046-schemas.png" height="300px"></img></a>
 
 
 ## calibration
