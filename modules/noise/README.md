@@ -18,7 +18,7 @@ no calibration needed.
 
 use one or multiple outputs to connect to other modules like a S&H or VCA. 
 
-## links
+## *links*
 
 1) [Yves Usson: Noise generator][1]
 
