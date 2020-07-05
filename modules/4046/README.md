@@ -2,7 +2,7 @@
 ![status](https://img.shields.io/badge/status-work%20in%20progress-orange)
 
  # VCO: X4046
-<a href="https://spielhuus.github.io/elektrophon/images/4046-panel.jpg"><img align="right" src="https://spielhuus.github.io/elektrophon/images/4046-panel-tmb.jpg" height="300px"></img></a>
+<a href="https://photos.app.goo.gl/NhE2TPGxzUfEHXZ19"><img align="right" src="https://spielhuus.github.io/elektrophon/images/4046-logo-tmb.jpg" height="300px"></img></a>
  This is the outstanding CMOS VCO from Thomas Henry. The heart of this VCO is the CD4046 Phased Locked Loop chip. 
 Most of the 'Lunetta' VCOs are built around the 40106 or 4096 chips. They give a good result but this VCO plays in another league. It has an excellent tracking and all the 
 waveforms you will need. The sync is one of the finest. Most of the sections are the same as in other VCO designs from Thomas Henry. The Exponential converter
