@@ -8,7 +8,7 @@ nothing special about this module. it creates white/pink noise and random voltag
 
 ## *build*
 
-<a href="https://spielhuus.github.io/elektrophon/schemas/noise.pdf"><img height="100px" align="right" src="https://spielhuus.github.io/elektrophon/images/noise-schemas.png"></a> the gerber files are part of the release. it should be possible to directly order them from your manufacturer. but check the result on the preview when you order them. the parts are in the [BOM](BOM.md), there are no special parts needed for this build. <br/><br/><br/><br/><br/>
+<a href="https://spielhuus.github.io/elektrophon/schemas/noise.pdf"><img height="100px" align="right" src="https://spielhuus.github.io/elektrophon/images/noise-schemas.png"></a> the gerber files are part of the release. it should be possible to directly order them from your manufacturer. but check the result on the preview when you order them. the parts are in the [BOM](BOM.md), there are no special parts needed for this build. <br/><br/>
 
 ## *calibrate*
 
