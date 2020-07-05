@@ -3,12 +3,12 @@
 
 ## *noise*
 
-<a href="https://photos.app.goo.gl/f84SmyP2tHNpZC5dA"><img width="200" align="right" src="https://spielhuus.github.io/elektrophon/images/noise-logo-tmb.jpg"></a>
-nothing special about this module. it creates white/pink noise and random voltage. the noise source can be used to create percussion instruments. The random voltage for feeding into a sample and hold module, for example the smooth and stepped generator. it does not have an internal sample and hold, like most of the random source modules, to keep the module small. The base of the module is taken from Yves Usson noise generator \[[1][1]]\.
+<a href="https://photos.app.goo.gl/f84SmyP2tHNpZC5dA"><img height="200px" align="right" src="https://spielhuus.github.io/elektrophon/images/noise-logo-tmb.jpg"></a>
+nothing special about this module. it creates white/pink noise and random voltage. the noise source can be used to create percussion instruments. The random voltage for feeding into a sample and hold module, for example the smooth and stepped generator. it does not have an internal sample and hold, like most of the random source modules, to keep the module small. The base of the module is taken from Yves Usson noise generator \[[1][1]]\. <br/><br/><br/><br/>
 
 ## *build*
 
-<a href="https://spielhuus.github.io/elektrophon/schemas/noise.pdf"><img width="200" align="left" src="https://spielhuus.github.io/elektrophon/images/noise-schemas.png"></a> the gerber files are part of the release. it should be possible to directly order them from your manufacturer. but check the result on the preview when you order them. the parts are in the [BOM](BOM.md), there are no special parts needed for this build. <br/><br/><br/><br/><br/>
+<a href="https://spielhuus.github.io/elektrophon/schemas/noise.pdf"><img height="100px" align="left" src="https://spielhuus.github.io/elektrophon/images/noise-schemas.png"></a> the gerber files are part of the release. it should be possible to directly order them from your manufacturer. but check the result on the preview when you order them. the parts are in the [BOM](BOM.md), there are no special parts needed for this build. <br/><br/><br/><br/><br/>
 
 ## *calibrate*
 
