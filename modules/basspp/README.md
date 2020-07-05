@@ -1,24 +1,24 @@
 ![module](https://img.shields.io/badge/module-other-yellow)
 ![status](https://img.shields.io/badge/status-final-green)
 
-# bass++
+## *bass++*
 
-This is a precussion module designed by Thomas Henry. \[[1][1]\]<a href="https://photos.app.goo.gl/SccjAAS7x1J2cVFWA"><img align="right" src="https://spielhuus.github.io/elektrophon/images/basspp-logo-tmb.jpg"></a>
-The bass voice has a very wide range and can produce very low and long bass sounds but also high pitch bass voices. the pitch is voltage controller, but the tracking is not comparable to a vco. 
+This is a precussion module designed by Thomas Henry. \[[1][1]\]<a href="https://photos.app.goo.gl/SccjAAS7x1J2cVFWA"><img align="right" height="200px" src="https://spielhuus.github.io/elektrophon/images/basspp-logo-tmb.jpg"></a>
+The bass voice has a very wide range and can produce very low and long bass sounds but also high pitch bass voices. the pitch is voltage controller, but the tracking is not comparable to a vco. the voltage control for the pitch does not track very well. i never use it, maybe i build a version of this module without this part.
 
 ## *build*
 
-<a href="https://spielhuus.github.io/elektrophon/images/adsr-mount.jpg"><img width="200" align="left" src="https://spielhuus.github.io/elektrophon/images/adsr-mount_tmb.jpg"></a> The gerber files are part of the release. It should be possible to directly order them from your manufacturer. But check the result on the preview when you order them. The parts are in the [BOM](BOM.md), there are no special parts needed for this build. 
+<a href="https://spielhuus.github.io/elektrophon/schemas/adsr.pdf"><img height="150" align="right" src="https://spielhuus.github.io/elektrophon/images/adsr-schema.png"></a> The gerber files are part of the release. It should be possible to directly order them from your manufacturer. But check the result on the preview when you order them. The parts are in the [BOM](BOM.md), there are no special parts needed for this build. 
 
 If you want to adjust the pitch range you can change the value of the capacitor C10, as suggested in the schema.<br/><br/><br/>
 
 ## *calibrate*
 
-No calibration needed.
+no calibration needed.
 
 ## *use*
 
-Connect a trigger signal to the **IN** of the bass and the **OUT** to mixer or any other output module:
+connect a trigger signal to the **IN** of the bass and the **OUT** to mixer or any other output module:
 
 
 <br/>***Trigger Input/Envelope Generator***
