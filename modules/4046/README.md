@@ -28,4 +28,4 @@ then you can calibrate the triangle wave. as you can see in the scope there is a
 
 
 
-[1]: https://http://birthofasynth.com/Thomas_Henry/Pages/X-4046.html
+[1]:http://birthofasynth.com/Thomas_Henry/Pages/X-4046.html
