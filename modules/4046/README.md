@@ -1,5 +1,5 @@
 ![module](https://img.shields.io/badge/module-VCO-yellow)
-![status](https://img.shields.io/badge/status-work%20in%20progress-orange)
+![status](https://img.shields.io/badge/status-final-green)
 
  # *4046*
 <a href="https://photos.app.goo.gl/NhE2TPGxzUfEHXZ19"><img align="right" src="https://spielhuus.github.io/elektrophon/images/4046-logo-tmb.jpg" height="200px"></img></a>
