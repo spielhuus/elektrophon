@@ -1,0 +1,4 @@
+name: spice-environment
+channels:
+  - defaults
+prefix: /home/etienne/anaconda3/envs/spice-environment
