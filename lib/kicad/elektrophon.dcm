@@ -24,6 +24,12 @@ K dual opamp
 F https://www.analog.com/media/en/technical-documentation/data-sheets/ADA4807-1_4807-2_4807-4.pdf
 $ENDCMP
 #
+$CMP AudioJack2_SwitchT
+D Audio Jack, 2 Poles (Mono / TS), Switched T Pole (Normalling)
+K audio jack receptacle mono headphones phone TS connector
+F ~
+$ENDCMP
+#
 $CMP BC327
 D 0.8A Ic, 45V Vce, PNP Transistor, TO-92
 K PNP Transistor
