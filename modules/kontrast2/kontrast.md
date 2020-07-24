@@ -24,121 +24,77 @@ kontrast ist a simple mixer utility module. it can be used as a **mixer**, **att
 
 
 
-![svg](kontrast_files/kontrast_4_0.svg)
+![svg](kontrast_files/kontrast_5_0.svg)
 
 
 
-the circuit of the attenuverter is based on the opamp dfferential amplifer. the two resistors at the non-inverting inputs are replaced with a potentiometer. the potentiometer is configured as a voltage divider and replace R3 and R4 from the differential amplifier. when the position of the potentiometer is adjusted, the output voltage will change or invert. at the center position  the output is zero volrs. the response to the potentiometer is linear. we can make it an centered s-curve by adding two parallel resistors (R5,R6) to the potentiometer [[1][1]].
+the circuit of the attenuverter is based on the opamp dfferential amplifer. the two resistors at the non-inverting inputs are replaced with a potentiometer. the potentiometer is configured as a voltage divider and replace R3 and R4 from the differential amplifier. when the position of the potentiometer is adjusted, the output voltage will change or invert. at the center position  the output is zero volrs. the response to the potentiometer is linear. we can make it an centered s-curve by adding two parallel resistors (R5,R6) to the potentiometer [[2][2]].
 
 
-![svg](kontrast_files/kontrast_6_0.svg)
+![svg](kontrast_files/kontrast_7_0.svg)
 
 
 the rest of the circuit is straight forwarn an opamp mixer at the output followed by an inverting amplifier with a gain of 1.
 
 ## construction
 
-    .title Test
-    .subckt voltage_divider n1 n2 n3
-    R1 n1 n2 50kOhm
-    R2 n2 n3 50kOhm
-    .ends voltage_divider
-    V1 +15V 0 15V
-    X1 +15V OUT 0 voltage_divider
+because the channel is silent at potentometer center position, it would be nice to use a potentometer that has a center decent. such potientometers for panel mount are rare. 
+
+
+<img src="main/main.svg"/>
+
+
+    .title KiCad schematic
+    .include /home/etienne/Documents/elektrophon/lib/spice/transistor/OPA2134.LIB
+    .subckt XU1 OUT INVERTING NON_INVERTING POWER_NEGATIVE POWER_POSITIVE
+    X1 NON_INVERTING INVERTING POWER_POSITIVE POWER_NEGATIVE OUT OPA2134
+    .ends XU1
     
-    Node +15v: 15.0 V
-    Node out: 7.5 V
+    .subckt voltage_divider n1 n2 n3
+    R1 n1 n2 0.0kOhm
+    R2 n2 n3 10.0kOhm
+    .ends voltage_divider
+    VJ1 Net-_J1-PadT_ 0 dc 5 ac 0 sin(0 5 1k)
+    R3 Net-_R27-Pad2_ Net-_J2-PadT_ 1k
+    XRV1 0 Net-_R4-Pad1_ Net-_J1-PadT_ voltage_divider
+    R1 Net-_R1-Pad1_ Net-_J1-PadT_ 10k
+    R2 /MIX_1 Net-_R1-Pad1_ 10k
+    XU1 Net-_R4-Pad1_ Net-_R1-Pad1_ +15V -15V /MIX_1 OPA2134
+    R4 Net-_R4-Pad1_ Net-_J1-PadT_ 2.2k
+    R5 0 Net-_R4-Pad1_ 2.2k
+    R21 /MIX_1 Net-_R21-Pad2_ 10k
+    R25 Net-_R21-Pad2_ Net-_R25-Pad2_ 10k
+    R26 Net-_R25-Pad2_ Net-_R26-Pad2_ 10k
+    R27 Net-_R26-Pad2_ Net-_R27-Pad2_ 10k
+    XU2 0 Net-_R21-Pad2_ +15V -15V Net-_R25-Pad2_ OPA2134
+    XU3 0 Net-_R26-Pad2_ +15V -15V Net-_R27-Pad2_ OPA2134
+    V1 +15V 0 15V
+    V2 -15V 0 -15V
+    
 
 
 
-![svg](kontrast_files/kontrast_10_0.svg)
-
-
-## *construction*
-
-
-the center building block of the attenuverter is an integrator opamp circuit. 
-
-
-
-
-
+![svg](kontrast_files/kontrast_11_0.svg)
 
 
 
 ![svg](kontrast_files/kontrast_12_0.svg)
 
 
+## *calibration*
 
-    ---------------------------------------------------------------------------
+## *usage*
 
-    NameError                                 Traceback (most recent call last)
-
-    <ipython-input-11-3c1ade127b7c> in <module>
-          4 directory_path = Path(os.path.abspath('')).resolve().parent.parent
-          5 spice_libraries_path = directory_path.joinpath("lib", "spice", "transistor")
-    ----> 6 spice_library = SpiceLibrary(spice_libraries_path)
-          7 
-          8 class XU1(SubCircuitFactory):
+## *links*
 
 
-    NameError: name 'SpiceLibrary' is not defined
-
-
-
-    ---------------------------------------------------------------------------
-
-    NameError                                 Traceback (most recent call last)
-
-    <ipython-input-12-c4a4d76207ae> in <module>
-          4 for s in steps:
-          5 
-    ----> 6     parser = SpiceParser(path=NETLIST)
-          7     circuit = parser.build_circuit(ground='GND')
-          8     circuit.include(spice_library['OPA2134'])
-
-
-    NameError: name 'SpiceParser' is not defined
-
-
-
-    ---------------------------------------------------------------------------
-
-    NameError                                 Traceback (most recent call last)
-
-    <ipython-input-13-d6086174b2a2> in <module>
-    ----> 1 parser = SpiceParser(path=NETLIST)
-          2 circuit = parser.build_circuit(ground='GND')
-          3 circuit.include(spice_library['OPA2134'])
-          4 circuit.V('1', '+15V', circuit.gnd, 15@u_V)
-          5 circuit.V('2', '-15V', circuit.gnd, -15@u_V)
-
-
-    NameError: name 'SpiceParser' is not defined
-
-
-the input voltage for the amplifier has to be around 100mV. We need to buffer the input signal and attenuate it to that level.
-
-inverting opa amplifier:
-
-\begin{align*}
-Vout = -Vin * \left(\frac{R1}{R2}\right)
-\end{align*}
-
-
-
-
-
-## links
-
-
-1) Rod Elliott (ESP) [Beginners' Guide to Potentiometers][2] 
-
-
----
-[![CC BY-SA](https://licensebuttons.net/l/by-sa/3.0/88x31.png)](https://creativecommons.org/licenses/by-sa/4.0/)
-
+* Rod Elliott (ESP) [Beginners' Guide to Potentiometers][2] 
 
 [1]: https://wikipedia.org
 [2]: https://sound-au.com/pots.htm
 
+
+## *history*
+
+---
+[![CC BY-SA](https://licensebuttons.net/l/by-sa/3.0/88x31.png)](https://creativecommons.org/licenses/by-sa/4.0/)

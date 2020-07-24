@@ -1,6 +1,4 @@
 .title KiCad schematic
-.include "/home/etienne/Documents/elektrophon/lib/spice/TL072.mod"
-.include "/home/etienne/Documents/elektrophon/lib/spice/bv547.lib"
 R1 Net-_C1-Pad2_ Net-_C2-Pad1_ 100k
 XU2 GND Net-_C1-Pad2_ VP VM Net-_C1-Pad1_ TL072
 R2 Net-_C1-Pad1_ Net-_C1-Pad2_ 100k
