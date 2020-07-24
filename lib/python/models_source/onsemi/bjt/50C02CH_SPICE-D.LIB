@@ -1,0 +1,25 @@
+************************* 50C02CH SPICE PARAMETER ****************************
+*.LIB 50C02CH                                                                 
+* DATE : 2013/02/25                                                           
+* Temp = 27 deg                                                               
+*                                                                             
+.MODEL 50C02CH npn (       IS       = 80.00f         BF       = 600           
++NF       = 1              VAF      = 13             IKF      = 50.00m        
++ISE      = 15.00p         NE       = 2              BR       = 110           
++NR       = 1              VAR      = 66             IKR      = 120.0m        
++ISC      = 174.0p         NC       = 2              RB       = 7             
++IRB      = 20.0m          RBM      = 141.0m         RE       = 87.00m        
++RC       = 178.0m         XTB      = 1.4            EG       = 1.11          
++XTI      = 3              CJE      = 36.50p         VJE      = 680.0m        
++MJE      = 300.0m         TF       = 320p           XTF      = 10            
++VTF      = 10             ITF      = 4              PTF      = 0             
++CJC      = 7.700p         VJC      = 500.0m         MJC      = 200.0m        
++XCJC     = 1              TR       = 1.000n         FC       = 500.0m        
++KF       = 0              AF       = 1              )                        
+*                                                                             
+*.ENDL 50C02CH                                                                
+*                                                                             
+*  Information herein is for example only;                                    
+*  it is not guaranteed for volume production.                                
+*                                                                             
+* ON Semiconductor                                                            

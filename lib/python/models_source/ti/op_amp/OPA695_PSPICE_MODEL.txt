@@ -1,0 +1,168 @@
+********************************************************************************
+* Disclaimer
+*
+* This model is designed as an aid for customers of Texas Instruments.
+* TI and its licensors and suppliers make no warranties, either expressed
+* or implied, with respect to this  model, including the warranties of 
+* merchantability or fitness for a particular purpose. The model is 
+* provided solely on an "as is" basis. The entire risk as to its quality 
+* and performance is with the customer.         
+********************************************************************************
+* Copyright
+* 
+* (C) Copyright 2009 Texas Instruments Incorporated. All rights reserved.
+********************************************************************************
+* Released by: Analog eLab Design Center, Texas Instruments Inc.
+* Part: OPA695
+* Date: 05/21/2009
+* Model Type: PSPICE
+* Simulator: PSpice 16.0.0.p001
+* Datasheet: SBOS293G
+********************************************************************************
+* Release Notes:
+* 1.0 Original Version 
+* 2.0 Improving some of the DC performance
+* 2.1 Improving Slew Rate accuracy
+*     This model provides good typical values for the following parameters:
+*     small signal closed loop bandwidth for high gain(i.e G=8), input noise, 
+*     slew rate (in particular non-inverting configuration), current consumption,
+*     input voltage range, input voltage offset and output voltage range. 
+********************************************************************************
+
+.SUBCKT OPA695 + -  V+ V- Out DisA 
+X1 + - DisA Out V+ V- OPA695_model
+.ENDS
+
+.SUBCKT OPA695_model + - Dis OUT V+ V- 
+
+.PARAM x1 = {1/8}
+.PARAM x2 = {x1*2}
+.PARAM x3 = {x1*3}
+.PARAM x5 = {x1*5}
+.PARAM x12 = {x1*12}
+.PARAM x16 = {x1*16}
+.PARAM x60 = {x1*60}
+
+C_C1         Vmid Dis  2p  
+X_S1    $N_0001 0 $N_0002 $N_0003 OPA695_model_S1 
+R_R11         Vmid Dis  100MEG  
+R_R8         Vmid $N_0004  10k  
+Q_Q1         $N_0006 $N_0005 $N_0007 PNP8 {x1}
+Q_Q4         $N_0008 $N_0008 $N_0005 NPN8 {x1}
+Q_Q5         $N_0009 $N_0005 $N_0010 PNP8 {x2}
+Q_Q12         $N_0011 $N_0005 $N_0012 PNP8 {x2}
+Q_Q9         $N_0013 $N_0005 $N_0014 PNP8 {x2}
+Q_Q7         $N_0015 $N_0015 $N_0016 NPN8 {x2}
+Q_Q6         $N_0015 $N_0017 $N_0009 PNP8 {x16}
+Q_Q14         $N_0011 $N_0017 $N_0018 NPN8 {x1}
+Q_Q16         $N_0017 $N_0018 $N_0019 NPN8 {x1}
+Q_Q15         $N_0018 $N_0018 $N_0020 NPN8 {x1}
+Q_Q10         $N_0011 $N_0011 $N_0021 NPN8 {x16}
+Q_Q8         $N_0013 $N_0015 $N_0022 NPN8 {x2}
+D_D3         $N_0023 $N_0021 DX 1
+D_D1         $N_0021 $N_0024 DX 1
+D_D2         $N_0024 $N_0025 DX 1
+Q_Q18         $N_0026 $N_0026 $N_0021 PNP8 {x16}
+Q_Q17         $N_0026 $N_0015 $N_0027 NPN8 {x2}
+R_R24         V- $N_0028  250  
+X_F1    $N_0002 $N_0029 $N_0006 V- OPA695_model_F1 
+Q_Q2         V- $N_0006 $N_0005 PNP8 {x1}
+R_R18         V- $N_0015  50k  
+R_R20         V- $N_0022  500  
+R_R19         V- $N_0016  500  
+R_R21         V- $N_0019  2k  
+R_R22         V- $N_0020  2k  
+R_R23         V- $N_0027  500  
+D_D5         $N_0028 V- DX 1
+Q_Q20         $N_0030 $N_0030 $N_0028 NPN8 {x3}
+Q_Q19         $N_0030 $N_0026 $N_0025 PNP8 {x16}
+Q_Q25         $N_0031 $N_0030 $N_0032 NPN8 {x12}
+Q_Q24         $N_0034 $N_0033 $N_0035 PNP8 {x12}
+R_R10         V+ V-  123.609k  
+E_E1         $N_0004 V- V+ V- 0.5
+E_ABM21         $N_0001 0 VALUE { ( V(Dis)  
++ / (V(V+)   
++ + 1e-6) ) * 5.0  }
+R_R9         Dis V+  41k  
+R_R12         $N_0008 V+  8k  
+R_R14         $N_0010 V+  500  
+R_R15         $N_0014 V+  500  
+R_R16         $N_0012 V+  500  
+R_R17         $N_0006 V+  72k  
+R_R13         $N_0007 V+  1987  
+Q_Q21         $N_0036 $N_0030 $N_0037 NPN8 {x5}
+R_R7         $N_0029 Vmid  10k  
+R_R25         V- $N_0037  150  
+D_D7         V+ $N_0038 DX 1
+R_R26         $N_0038 V+  250  
+Q_Q22         $N_0033 $N_0033 $N_0038 PNP8 {x3}
+R_R27         $N_0039 V+  150  
+Q_Q23         $N_0036 $N_0033 $N_0039 PNP8 {x5}
+D_D8         $N_0039 V+ DX 1
+Q_Q13         $N_0017 $N_0006 $N_0013 PNP8 {x1}
+Q_Q30         $N_0041 $N_0040 $N_0036 NPN8 {x1}
+Q_Q31         $N_0042 $N_0040 $N_0036 PNP8 {x1}
+V_V1         $N_0003 Vmid 2.04V
+L_L1         + $N_0021  1.3nH  
+Q_Q11         $N_0033 $N_0011 $N_0025 NPN8 {x16}
+D_D4         $N_0025 $N_0023 DX 1
+L_L3         $N_0040 OUT  1.3nH  
+L_L2         $N_0025 $N_0043  1.3nH  
+C_C2         $N_0036 V+  0.2p  
+R_R31         $N_0043 -  65  
+Q_Q32         $N_0044 $N_0044 $N_0041 PNP8 {x60}
+Q_Q33         $N_0040 $N_0044 $N_0041 PNP8 {x60}
+Q_Q28         $N_0045 $N_0045 $N_0042 NPN8 {x60}
+Q_Q29         $N_0040 $N_0045 $N_0042 NPN8 {x60}
+Q_Q35         $N_0045 $N_0031 $N_0040 PNP8 {x60}
+Q_Q34         $N_0044 $N_0034 $N_0040 NPN8 {x60}
+Q_Q27         $N_0042 $N_0036 $N_0034 PNP8 {x60}
+Q_Q26         $N_0041 $N_0036 $N_0031 NPN8 {x60}
+R_R28         $N_0035 V+  62.5  
+D_D6         $N_0037 V- DX 1
+R_R29         V- $N_0032  62.5  
+V_V3         V- $N_0042 0.2V
+V_V2         $N_0041 V+ 0.2V
+
+.MODEL NPN8 NPN
++ IS = 7.604E-18 BF = 1.570E+02 NF = 1.000E+00 VAF= 7.871E+01
++ IKF= 3.975E-02 ISE= 3.219E-14 NE = 2.000E+00 BR = 7.614E-01
++ NR = 1.000E+00 VAR= 1.452E+00 IKR= 8.172E-02 ISC= 7.618E-21
++ NC = 1.847E+00 RB = 1.060E+02 IRB= 0.000E+00 RBM= 2.400E+00
++ RE = 2.520E+00 RC = 1.270E+02 CJE= 1.120E-13 VJE= 7.591E-01
++ MJE= 5.406E-01 TF = 1.213E-11 XTF= 2.049E+00 VTF= 1.813E+00
++ ITF= 4.293E-02 PTF= 0.000E+00 CJC= 8.208E-15 VJC= 6.666E-01
++ MJC= 4.509E-01 XCJC=8.450E-02 TR = 4.000E-11 CJS= 1.160E-13
++ VJS= 5.286E-01 MJS= 4.389E-01 XTB= 1.022E+00 EG = 1.120E+00
++ XTI= 1.780E+00 KF = 3.500E-16 AF = 1.000E+00 FC = 8.273E-01
+
+.MODEL PNP8 PNP
++ IS = 7.999E-18 BF = 1.418E+02 NF = 1.000E+00 VAF= 4.158E+01
++ IKF= 1.085E-01 ISE= 2.233E-15 NE = 1.505E+00 BR = 3.252E+01
++ NR = 1.050E+00 VAR= 1.093E+00 IKR= 5.000E-05 ISC= 6.621E-16
++ NC = 1.150E+00 RB = 6.246E+01 IRB= 0.000E+00 RBM= 2.240E+00
++ RE = 2.537E+00 RC = 1.260E+02 CJE= 9.502E-14 VJE= 7.320E-01
++ MJE= 4.930E-01 TF = 1.303E-11 XTF= 3.500E+01 VTF= 3.259E+00
++ ITF= 2.639E-01 PTF= 0.000E+00 CJC= 1.080E-13 VJC= 7.743E-01
++ MJC= 5.000E-01 XCJC=8.504E-02 TR = 1.500E-10 CJS= 1.290E-13
++ VJS= 9.058E-01 MJS= 4.931E-01 XTB= 1.732E+00 EG = 1.120E+00
++ XTI= 2.000E+00 KF = 3.500E-16 AF = 1.000E+00 FC = 8.500E-01
+
+.MODEL DX D
++ IS=1.0000E-15  
+
+.ENDS    OPA695_model
+
+
+
+
+.subckt OPA695_model_S1 1 2 3 4  
+S_S1         3 4 1 2 _S1
+RS_S1         1 2 1G
+.MODEL         _S1 VSWITCH Roff=1e12 Ron=0.001 Voff=3.0 Von=4.5
+.ends OPA695_model_S1
+
+.subckt OPA695_model_F1 1 2 3 4  
+F_F1         3 4 VF_F1 1
+VF_F1         1 2 0V
+.ends OPA695_model_F1

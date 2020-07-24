@@ -1,0 +1,27 @@
+Some spice engines do not work with modelnames that start with a number.
+
+Comment out the .LIB statements
+
+--- models_source/onsemi/bjt/50A02CH-SPICE-D.txt	2013-08-20 08:38:08.000000000 +0200
++++ models/onsemi/bjt/50A02CH.lib	2018-08-29 21:26:48.057054604 +0200
+@@ -1,9 +1,9 @@
+ ********************** 50A02CH SPICE PARAMETER *************************
+-.LIB 50A02CH
++* .LIB 50A02CH
+ * DATE : 2010/05/07
+ * Temp = 27 deg
+
+-.MODEL 50A02CH pnp (       IS       = 50.00f         BF       = 240
++.MODEL Q_50A02CH pnp (     IS       = 50.00f         BF       = 240
+ +NF       = 1              VAF      = 3              IKF      = 50.00m
+ +ISE      = 1.000p         NE       = 2              BR       = 32
+ +NR       = 1              VAR      = 30             IKR      = 130.0m
+@@ -17,7 +17,7 @@
+ +XCJC     = 1              TR       =  1.000n        FC       = 500.0m
+ +KF       = 0              AF       = 1              )
+ *
+-.ENDL 50A02CH
++* .ENDL 50A02CH
+
+ *  Information herein is for example only;
+ *  it is not guaranteed for volume production.

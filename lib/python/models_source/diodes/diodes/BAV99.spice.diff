@@ -1,0 +1,11 @@
+Comment out stray line with "switching"
+
+--- models_source/diodes/diodes/BAV99.spice.txt	2018-08-29 21:40:32.379783776 +0200
++++ models/diodes/diodes/BAV99.lib	2018-08-29 21:51:54.389499917 +0200
+@@ -1,4 +1,4 @@
+ *SRC=BAV99;DI_BAV99;Diodes;Si;  75.0V  0.300A  4.00ns   Diodes Inc.
+-switching
++* switching
+ .MODEL DI_BAV99 D  ( IS=261p RS=0.140 BV=75.0 IBV=2.50u
+ + CJO=1.19p  M=0.333 N=1.70 TT=5.76n )
+

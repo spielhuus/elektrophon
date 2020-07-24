@@ -1,0 +1,13 @@
+Some spice engines do not work with modelnames that start with a number
+
+--- models_source/onsemi/bjt/50C02CH_SPICE-D.LIB	2018-08-29 21:23:39.009017607 +0200
++++ models/onsemi/bjt/50C02CH.lib	2018-08-29 21:31:48.578758105 +0200
+@@ -3,7 +3,7 @@
+ * DATE : 2013/02/25
+ * Temp = 27 deg
+ *
+-.MODEL 50C02CH npn (       IS       = 80.00f         BF       = 600
++.MODEL Q_50C02CH npn (     IS       = 80.00f         BF       = 600
+ +NF       = 1              VAF      = 13             IKF      = 50.00m
+ +ISE      = 15.00p         NE       = 2              BR       = 110
+ +NR       = 1              VAR      = 66             IKR      = 120.0m

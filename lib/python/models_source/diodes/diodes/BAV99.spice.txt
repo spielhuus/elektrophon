@@ -1,0 +1,4 @@
+*SRC=BAV99;DI_BAV99;Diodes;Si;  75.0V  0.300A  4.00ns   Diodes Inc.
+switching
+.MODEL DI_BAV99 D  ( IS=261p RS=0.140 BV=75.0 IBV=2.50u
++ CJO=1.19p  M=0.333 N=1.70 TT=5.76n )

@@ -11,8 +11,7 @@
 * [*construction*](#construction)
 * [*calibration*](#calibration)
 * [*usage*](#usage)
-* [*credits*](#credits)
-* [*links*](#links)
+* [*reference*](#lreference)
 * [*changelog*](#changelog)
 
 <br/><br/>
@@ -28,10 +27,17 @@ kontrast ist a simple mixer utility module. it can be used as a **mixer**, **att
 
 
 
+
+
+
+$\displaystyle Vout = \frac{R_{4} Vin_{2} \left(1 + \frac{R_{2}}{R_{1}}\right)}{R_{3} + R_{4}} - \frac{R_{2} Vin}{R_{1}}$
+
+
+
 the circuit of the attenuverter is based on the opamp dfferential amplifer. the two resistors at the non-inverting inputs are replaced with a potentiometer. the potentiometer is configured as a voltage divider and replace R3 and R4 from the differential amplifier. when the position of the potentiometer is adjusted, the output voltage will change or invert. at the center position  the output is zero volrs. the response to the potentiometer is linear. we can make it an centered s-curve by adding two parallel resistors (R5,R6) to the potentiometer [[2][2]].
 
 
-![svg](kontrast_files/kontrast_7_0.svg)
+![svg](kontrast_files/kontrast_8_0.svg)
 
 
 the rest of the circuit is straight forwarn an opamp mixer at the output followed by an inverting amplifier with a gain of 1.
@@ -42,6 +48,10 @@ because the channel is silent at potentometer center position, it would be nice 
 
 
 <img src="main/main.svg"/>
+
+
+
+![svg](kontrast_files/kontrast_11_0.svg)
 
 
     .title KiCad schematic
@@ -74,27 +84,43 @@ because the channel is silent at potentometer center position, it would be nice 
 
 
 
-![svg](kontrast_files/kontrast_11_0.svg)
+![svg](kontrast_files/kontrast_13_0.svg)
 
 
 
-![svg](kontrast_files/kontrast_12_0.svg)
+![svg](kontrast_files/kontrast_14_0.svg)
 
 
 ## *calibration*
 
+there is no calibration needed. but the potentiomenter knobs have to be aliged to center position.
+
 ## *usage*
 
-## *links*
+the input jacks are wired to 5 volts when nothing is connected.
 
+all channels are mixed to the out jack. when something is connected to the channel out, this channel is removed from the overall mix.
+
+_mixer_
+* connect the different channels from audio or cv sources to the in jacks.
+* connect the out jack to something
+* turn the pots clockwise to adjust the volume.
+
+_attenuverter_
+* connect all or a single channel. 
+* when you turn the pot knob counter clockwise the signal is inverted.
+
+
+## *reference*
 
 * Rod Elliott (ESP) [Beginners' Guide to Potentiometers][2] 
 
 [1]: https://wikipedia.org
 [2]: https://sound-au.com/pots.htm
 
-
 ## *history*
+
+
 
 ---
 [![CC BY-SA](https://licensebuttons.net/l/by-sa/3.0/88x31.png)](https://creativecommons.org/licenses/by-sa/4.0/)
