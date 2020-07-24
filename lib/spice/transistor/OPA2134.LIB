@@ -1,0 +1,83 @@
+* OPA2134
+*$
+*****************************************************************************
+* (C) Copyright 2011 Texas Instruments Incorporated. All rights reserved.                                            
+*****************************************************************************
+** This model is designed as an aid for customers of Texas Instruments.
+** TI and its licensors and suppliers make no warranties, either expressed
+** or implied, with respect to this model, including the warranties of 
+** merchantability or fitness for a particular purpose.  The model is
+** provided solely on an "as is" basis.  The entire risk as to its quality
+** and performance is with the customer.
+*****************************************************************************
+*
+* This model is subject to change without notice. Texas Instruments
+* Incorporated is not responsible for updating this model.
+*
+*****************************************************************************
+*
+** Released by: Analog eLab Design Center, Texas Instruments Inc.
+* Part: OPA2134
+* Date: 31MAY2011
+* Model Type: ALL IN ONE
+* Simulator: PSPICE
+* Simulator Version: 16.0.0.p001
+* EVM Order Number: N/A 
+* EVM Users Guide: N/A
+* Datasheet: SBOS058
+*
+* Model Version: 1.0
+*
+*****************************************************************************
+*
+* Updates:
+*
+* Version 1.0 : 
+* Release to Web
+*
+*****************************************************************************
+* THIS MODEL IS APPLICABLE TO OPA134 AND OPA4134 ALSO.
+*
+* CONNECTIONS:		 NON-INVERTING INPUT
+*	                 | INVERTING INPUT
+*       	         | | POSITIVE POWER SUPPLY
+*               	 | | | NEGATIVE POWER SUPPLY
+*	        	 | | | | OUTPUT
+*       	         | | | | |
+* PIN CONFIG FOR OPA2134 :1 2 3 4 5
+*****************************************************************************
+.SUBCKT OPA2134   1 2 3 4 5
+C1   11 12 3.240E-12
+C2    6  7 8.000E-12
+CSS  10 99 1.000E-30
+DC    5 53 DX
+DE   54  5 DX
+DLP  90 91 DX
+DLN  92 90 DX
+DP    4  3 DX
+EGND 99  0 POLY(2) (3,0) (4,0) 0 .5 .5
+FB    7 99 POLY(5) VB VC VE VLP VLN 0 248.0E6 -250E6 250E6 250E6 -250E6
+GA    6  0 11 12 402.0E-6
+GCM   0  6 10 99 4.020E-9
+ISS   3 10 DC 160.0E-6
+HLIM 90  0 VLIM 1E3
+J1   11  2 10 JX
+J2   12  1 10 JX
+R2    6  9 100.0E3
+RD1   4 11 2.490E3
+RD2   4 12 2.490E3
+RO1   8  5 20
+RO2   7 99 20
+RP    3  4 7.500E3
+RSS  10 99 1.250E6
+VB    9  0 DC 0
+VC    3 53 DC 1.200
+VE   54  4 DC .9
+VLIM  7  8 DC 0
+VLP  91  0 DC 40
+VLN   0 92 DC 40
+.MODEL DX D(IS=800.0E-18)
+.MODEL JX PJF(IS=2.500E-15 BETA=1.010E-3 VTO=-1)
+.ENDS OPA2134
+
+*$
