@@ -1,6 +1,0 @@
-.title KiCad schematic
-RV1 GND Net-_RV1-Pad2_ INPUT 100k
-R1 Net-_R1-Pad1_ INPUT 100k
-R2 OUTPUT Net-_R1-Pad1_ 100k
-U1 OUTPUT Net-_R1-Pad1_ Net-_RV1-Pad2_ -15V +15V OPA2134
-.end

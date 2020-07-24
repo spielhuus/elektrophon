@@ -23,7 +23,7 @@ kontrast ist a simple mixer utility module. it can be used as a **mixer**, **att
 
 
 
-![svg](kontrast_files/kontrast_5_0.svg)
+![svg](README_files/README_5_0.svg)
 
 
 
@@ -37,7 +37,7 @@ $\displaystyle Vout = \frac{R_{4} Vin_{2} \left(1 + \frac{R_{2}}{R_{1}}\right)}{
 the circuit of the attenuverter is based on the opamp dfferential amplifer. the two resistors at the non-inverting inputs are replaced with a potentiometer. the potentiometer is configured as a voltage divider and replace R3 and R4 from the differential amplifier. when the position of the potentiometer is adjusted, the output voltage will change or invert. at the center position  the output is zero volrs. the response to the potentiometer is linear. we can make it an centered s-curve by adding two parallel resistors (R5,R6) to the potentiometer [[2][2]].
 
 
-![svg](kontrast_files/kontrast_8_0.svg)
+![svg](README_files/README_8_0.svg)
 
 
 the rest of the circuit is straight forwarn an opamp mixer at the output followed by an inverting amplifier with a gain of 1.
@@ -51,7 +51,7 @@ because the channel is silent at potentometer center position, it would be nice 
 
 
 
-![svg](kontrast_files/kontrast_11_0.svg)
+![svg](README_files/README_11_0.svg)
 
 
     .title KiCad schematic
@@ -84,11 +84,11 @@ because the channel is silent at potentometer center position, it would be nice 
 
 
 
-![svg](kontrast_files/kontrast_13_0.svg)
+![svg](README_files/README_13_0.svg)
 
 
 
-![svg](kontrast_files/kontrast_14_0.svg)
+![svg](README_files/README_14_0.svg)
 
 
 ## *calibration*
