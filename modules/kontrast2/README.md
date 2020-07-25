@@ -5,13 +5,13 @@
 
 <a href="https://photos.app.goo.gl/pg6iZUC32rTKX5LC7"><img src="https://spielhuus.github.io/elektrophon/images/kontrast-logo-tmb.jpg" height="300px" align="right"></a>
 
-## *table of contents*
+***table of contents***
 
 * [*about*](#about)
 * [*construction*](#construction)
 * [*calibration*](#calibration)
 * [*usage*](#usage)
-* [*reference*](#lreference)
+* [*references*](#lreferences)
 * [*changelog*](#changelog)
 
 <br/><br/>
@@ -48,19 +48,19 @@ the circuit of the attenuverter is based on the opamp dfferential amplifer. the 
 a simulation with the resistance at RV 1 changed from 0-100%. first run is the linear result. the second run is done with the resistors R5 and R6 added. This results in a s curve. the shape of the curve can be changed with the values of the resistors.
 
 
-![png](README_files/README_12_0.png)
+![svg](README_files/README_12_0.svg)
 
 
 ## construction
 
-because the channel is silent at potentometer center position, it would be nice to use a potentometer that has a center decent. such potientometers for panel mount are rare. 
+because the channel is silent at potentometer center position, it would be nice to use a potentometer that has a center decent. such potientometers are not easy to find. some examples are [[10][10]]
 
 
 <img src="main/main.svg"/>
 
 
 
-![png](README_files/README_14_0.png)
+![svg](README_files/README_14_0.svg)
 
 
     .title KiCad schematic
@@ -119,11 +119,11 @@ because the channel is silent at potentometer center position, it would be nice 
 simulation to check the attenuation function. 
 
 
-![png](README_files/README_17_0.png)
+![svg](README_files/README_17_0.svg)
 
 
 
-![png](README_files/README_18_0.png)
+![svg](README_files/README_18_0.svg)
 
 
 ## *calibration*
@@ -146,15 +146,17 @@ _attenuverter_
 * when you turn the pot knob counter clockwise the signal is inverted.
 
 
-## *reference*
+## *references*
 
 - [Op Amp Differential Amplifier][1] eCircuit  Center
 - [Beginners' Guide to Potentiometers][2]  Rod Elliott (ESP)
 
 [1]: http://www.ecircuitcenter.com/Circuits/opdif/opdif.htm
 [2]: https://sound-au.com/pots.htm
+[10]: https://www.mouser.ch/ProductDetail/ALPS/RK09L114001T?qs=Xb8IjHhkxj78e5CYccfZWg%3D%3D
 
-## *history*
+
+## *changelog*
 
 
 
