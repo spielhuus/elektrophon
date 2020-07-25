@@ -148,9 +148,10 @@ _attenuverter_
 
 ## *reference*
 
-* Rod Elliott (ESP) [Beginners' Guide to Potentiometers][2] 
+- [Op Amp Differential Amplifier][1] eCircuit  Center
+- [Beginners' Guide to Potentiometers][2]  Rod Elliott (ESP)
 
-[1]: https://wikipedia.org
+[1]: http://www.ecircuitcenter.com/Circuits/opdif/opdif.htm
 [2]: https://sound-au.com/pots.htm
 
 ## *history*
