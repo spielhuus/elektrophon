@@ -48,7 +48,7 @@ the circuit of the attenuverter is based on the opamp dfferential amplifer. the 
 a simulation with the resistance at RV 1 changed from 0-100%. first run is the linear result. the second run is done with the resistors R5 and R6 added. This results in a s curve. the shape of the curve can be changed with the values of the resistors.
 
 
-![svg](README_files/README_12_0.svg)
+![png](README_files/README_12_0.png)
 
 
 ## construction
@@ -60,7 +60,7 @@ because the channel is silent at potentometer center position, it would be nice 
 
 
 
-![svg](README_files/README_14_0.svg)
+![png](README_files/README_14_0.png)
 
 
     .title KiCad schematic
@@ -119,11 +119,11 @@ because the channel is silent at potentometer center position, it would be nice 
 simulation to check the attenuation function. 
 
 
-![svg](README_files/README_17_0.svg)
+![png](README_files/README_17_0.png)
 
 
 
-![svg](README_files/README_18_0.svg)
+![png](README_files/README_18_0.png)
 
 
 ## *calibration*
