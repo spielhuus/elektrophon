@@ -1,0 +1,20 @@
+.title KiCad schematic
+Q1 OUT_A AUDIO_IN Net-_Q1-Pad3_ BC547B
+Q3 OUT_B 4V Net-_Q1-Pad3_ BC547B
+Q4 OUT_A 4V Net-_Q4-Pad3_ BC547B
+Q6 OUT_B AUDIO_IN Net-_Q4-Pad3_ BC547B
+R1 +15V OUT_A 2.2k
+R3 +15V OUT_B 2.2k
+Q2 Net-_Q1-Pad3_ CV Net-_Q2-Pad3_ BC547B
+Q5 Net-_Q4-Pad3_ 2V Net-_Q2-Pad3_ BC547B
+V5 +15V GND dc 12
+V6 -15V GND dc -12
+R2 Net-_Q8-Pad3_ GND 51
+V2 4V GND dc 4
+V1 2V GND dc 2 ac 5
+Q8 Net-_Q2-Pad3_ Net-_Q7-Pad1_ Net-_Q8-Pad3_ BC547B
+Q7 Net-_Q7-Pad1_ Net-_Q7-Pad1_ Net-_Q7-Pad3_ BC547B
+R5 Net-_Q7-Pad3_ GND 100
+R4 5V Net-_Q7-Pad1_ 3.9k
+V7 5V GND dc 5
+.end

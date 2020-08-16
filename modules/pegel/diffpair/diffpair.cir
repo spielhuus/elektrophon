@@ -1,0 +1,11 @@
+.title KiCad schematic
+V1 +15V GND +15
+V2 -15V GND -15
+R2 Net-_Q1-Pad3_ Net-_Q2-Pad3_ 33k
+R4 Vout_b +15V 15k
+R1 Vout_a +15V 15k
+Q3 Vout_b GND Net-_Q2-Pad3_ BC547B
+Q2 Vout_a Vin_a Net-_Q2-Pad3_ BC547B
+R3 -15V Net-_Q1-Pad3_ 15k
+Q1 GND Vin_b Net-_Q1-Pad3_ BC547B
+.end
