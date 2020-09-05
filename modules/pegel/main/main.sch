@@ -1,0 +1,593 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L elektrophon:AD633 U1
+U 1 1 5F4D35FD
+P 5100 3150
+F 0 "U1" H 4850 3650 50  0000 C CNN
+F 1 "AD633" H 4850 3550 50  0000 C CNN
+F 2 "Package_DIP:DIP-8_W7.62mm" H 5700 2550 50  0001 C CNN
+F 3 "https://www.analog.com/media/en/technical-documentation/data-sheets/AD633.pdf" H 5950 2750 50  0001 C CNN
+F 4 "X" H 5100 3150 50  0001 C CNN "Spice_Primitive"
+F 5 "AD633" H 5100 3150 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 5100 3150 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "/home/etienne/Documents/elektrophon/lib/spice/opamp/ad633.lib" H 5100 3150 50  0001 C CNN "Spice_Lib_File"
+	1    5100 3150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+15V #PWR01
+U 1 1 5F4D3C05
+P 5100 2750
+F 0 "#PWR01" H 5100 2600 50  0001 C CNN
+F 1 "+15V" H 5115 2923 50  0000 C CNN
+F 2 "" H 5100 2750 50  0001 C CNN
+F 3 "" H 5100 2750 50  0001 C CNN
+	1    5100 2750
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:-15V #PWR02
+U 1 1 5F4D47D1
+P 5100 3750
+F 0 "#PWR02" H 5100 3850 50  0001 C CNN
+F 1 "-15V" H 5115 3923 50  0000 C CNN
+F 2 "" H 5100 3750 50  0001 C CNN
+F 3 "" H 5100 3750 50  0001 C CNN
+	1    5100 3750
+	-1   0    0    1   
+$EndComp
+Text GLabel 7650 3250 2    50   Input ~ 0
+OUT
+$Comp
+L Device:R R1
+U 1 1 5F5021C9
+P 7500 3250
+F 0 "R1" V 7293 3250 50  0000 C CNN
+F 1 "1k" V 7384 3250 50  0000 C CNN
+F 2 "" V 7430 3250 50  0001 C CNN
+F 3 "~" H 7500 3250 50  0001 C CNN
+	1    7500 3250
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5600 3350 5600 3400
+$Comp
+L power:GND #PWR017
+U 1 1 5F4FC96D
+P 4600 3550
+F 0 "#PWR017" H 4600 3300 50  0001 C CNN
+F 1 "GND" H 4605 3377 50  0000 C CNN
+F 2 "" H 4600 3550 50  0001 C CNN
+F 3 "" H 4600 3550 50  0001 C CNN
+	1    4600 3550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR016
+U 1 1 5F4FCC03
+P 4600 3150
+F 0 "#PWR016" H 4600 2900 50  0001 C CNN
+F 1 "GND" H 4605 2977 50  0000 C CNN
+F 2 "" H 4600 3150 50  0001 C CNN
+F 3 "" H 4600 3150 50  0001 C CNN
+	1    4600 3150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Amplifier_Operational:TL072 U2
+U 1 1 5F4FEC7E
+P 2400 2200
+F 0 "U2" H 2400 2567 50  0000 C CNN
+F 1 "TL072" H 2400 2476 50  0000 C CNN
+F 2 "" H 2400 2200 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 2400 2200 50  0001 C CNN
+F 4 "X" H 2400 2200 50  0001 C CNN "Spice_Primitive"
+F 5 "TL072" H 2400 2200 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 2400 2200 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "/home/etienne/Documents/elektrophon/lib/spice/opamp/TL072.lib" H 2400 2200 50  0001 C CNN "Spice_Lib_File"
+F 8 "3 2 8 4 1" H 2400 2200 50  0001 C CNN "Spice_Node_Sequence"
+	1    2400 2200
+	1    0    0    1   
+$EndComp
+$Comp
+L Amplifier_Operational:TL072 U2
+U 3 1 5F50185F
+P 3500 5850
+F 0 "U2" H 3458 5896 50  0000 L CNN
+F 1 "TL072" H 3458 5805 50  0000 L CNN
+F 2 "" H 3500 5850 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 3500 5850 50  0001 C CNN
+F 4 "X" H 3500 5850 50  0001 C CNN "Spice_Primitive"
+F 5 "TL072" H 3500 5850 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 3500 5850 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "/home/etienne/Documents/elektrophon/lib/spice/opamp/TL072.lib" H 3500 5850 50  0001 C CNN "Spice_Lib_File"
+F 8 "3 2 8 4 1" H 3500 5850 50  0001 C CNN "Spice_Node_Sequence"
+	3    3500 5850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+15V #PWR012
+U 1 1 5F502CF7
+P 3400 5550
+F 0 "#PWR012" H 3400 5400 50  0001 C CNN
+F 1 "+15V" H 3415 5723 50  0000 C CNN
+F 2 "" H 3400 5550 50  0001 C CNN
+F 3 "" H 3400 5550 50  0001 C CNN
+	1    3400 5550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:-15V #PWR013
+U 1 1 5F503CEA
+P 3400 6150
+F 0 "#PWR013" H 3400 6250 50  0001 C CNN
+F 1 "-15V" H 3415 6323 50  0000 C CNN
+F 2 "" H 3400 6150 50  0001 C CNN
+F 3 "" H 3400 6150 50  0001 C CNN
+	1    3400 6150
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 5F5102C5
+P 1600 2650
+F 0 "R2" V 1393 2650 50  0000 C CNN
+F 1 "100k" V 1484 2650 50  0000 C CNN
+F 2 "" V 1530 2650 50  0001 C CNN
+F 3 "~" H 1600 2650 50  0001 C CNN
+	1    1600 2650
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1300 2650 1450 2650
+Wire Wire Line
+	1750 2650 1950 2650
+$Comp
+L Device:R R4
+U 1 1 5F511D32
+P 2400 2850
+F 0 "R4" V 2193 2850 50  0000 C CNN
+F 1 "100k" V 2284 2850 50  0000 C CNN
+F 2 "" V 2330 2850 50  0001 C CNN
+F 3 "~" H 2400 2850 50  0001 C CNN
+	1    2400 2850
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2050 2850 2050 3350
+Wire Wire Line
+	2250 2850 2050 2850
+Connection ~ 2050 3350
+Wire Wire Line
+	2050 3350 2100 3350
+Wire Wire Line
+	2550 2850 2750 2850
+Wire Wire Line
+	2750 2850 2750 3450
+Wire Wire Line
+	2750 3450 2700 3450
+$Comp
+L power:GND #PWR011
+U 1 1 5F512FD8
+P 2050 3600
+F 0 "#PWR011" H 2050 3350 50  0001 C CNN
+F 1 "GND" H 2055 3427 50  0000 C CNN
+F 2 "" H 2050 3600 50  0001 C CNN
+F 3 "" H 2050 3600 50  0001 C CNN
+	1    2050 3600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2100 3550 2050 3550
+Wire Wire Line
+	2050 3550 2050 3600
+Wire Wire Line
+	1950 3350 2050 3350
+$Comp
+L power:GND #PWR08
+U 1 1 5F527D3F
+P 2050 2350
+F 0 "#PWR08" H 2050 2100 50  0001 C CNN
+F 1 "GND" H 2055 2177 50  0000 C CNN
+F 2 "" H 2050 2350 50  0001 C CNN
+F 3 "" H 2050 2350 50  0001 C CNN
+	1    2050 2350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2050 2350 2050 2300
+Wire Wire Line
+	2050 2300 2100 2300
+Wire Wire Line
+	4100 2200 4100 2950
+Wire Wire Line
+	4100 2950 4600 2950
+Wire Wire Line
+	4600 3350 4100 3350
+Wire Wire Line
+	4100 3350 4100 3450
+Wire Wire Line
+	4100 3450 2750 3450
+Connection ~ 2750 3450
+$Comp
+L Amplifier_Operational:TL072 U3
+U 3 1 5F533808
+P 4300 5850
+F 0 "U3" H 4258 5896 50  0000 L CNN
+F 1 "TL072" H 4258 5805 50  0000 L CNN
+F 2 "" H 4300 5850 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 4300 5850 50  0001 C CNN
+F 4 "X" H 4300 5850 50  0001 C CNN "Spice_Primitive"
+F 5 "TL072" H 4300 5850 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 4300 5850 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "/home/etienne/Documents/elektrophon/lib/spice/opamp/TL072.lib" H 4300 5850 50  0001 C CNN "Spice_Lib_File"
+F 8 "3 2 8 4 1" H 4300 5850 50  0001 C CNN "Spice_Node_Sequence"
+	3    4300 5850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+15V #PWR014
+U 1 1 5F53380E
+P 4200 5550
+F 0 "#PWR014" H 4200 5400 50  0001 C CNN
+F 1 "+15V" H 4215 5723 50  0000 C CNN
+F 2 "" H 4200 5550 50  0001 C CNN
+F 3 "" H 4200 5550 50  0001 C CNN
+	1    4200 5550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:-15V #PWR015
+U 1 1 5F533814
+P 4200 6150
+F 0 "#PWR015" H 4200 6250 50  0001 C CNN
+F 1 "-15V" H 4215 6323 50  0000 C CNN
+F 2 "" H 4200 6150 50  0001 C CNN
+F 3 "" H 4200 6150 50  0001 C CNN
+	1    4200 6150
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R R5
+U 1 1 5F546F1E
+P 6550 3150
+F 0 "R5" V 6343 3150 50  0000 C CNN
+F 1 "100k" V 6434 3150 50  0000 C CNN
+F 2 "" V 6480 3150 50  0001 C CNN
+F 3 "~" H 6550 3150 50  0001 C CNN
+	1    6550 3150
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5600 3150 6400 3150
+Wire Wire Line
+	6700 3150 6750 3150
+$Comp
+L power:GND #PWR019
+U 1 1 5F548566
+P 6700 3400
+F 0 "#PWR019" H 6700 3150 50  0001 C CNN
+F 1 "GND" H 6705 3227 50  0000 C CNN
+F 2 "" H 6700 3400 50  0001 C CNN
+F 3 "" H 6700 3400 50  0001 C CNN
+	1    6700 3400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6700 3400 6700 3350
+Wire Wire Line
+	6700 3350 6750 3350
+Wire Wire Line
+	6950 2750 6750 2750
+Wire Wire Line
+	6750 2750 6750 3150
+Connection ~ 6750 3150
+Wire Wire Line
+	7250 2750 7350 2750
+Wire Wire Line
+	7350 2750 7350 3250
+Connection ~ 7350 3250
+Text GLabel 1300 2100 0    50   Input ~ 0
+X1
+Text GLabel 1300 2650 0    50   Input ~ 0
+Y1
+$Comp
+L Amplifier_Operational:TL072 U4
+U 3 1 5F5927BF
+P 5100 5850
+F 0 "U4" H 5058 5896 50  0000 L CNN
+F 1 "TL072" H 5058 5805 50  0000 L CNN
+F 2 "" H 5100 5850 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 5100 5850 50  0001 C CNN
+F 4 "X" H 5100 5850 50  0001 C CNN "Spice_Primitive"
+F 5 "TL072" H 5100 5850 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 5100 5850 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "/home/etienne/Documents/elektrophon/lib/spice/opamp/TL072.lib" H 5100 5850 50  0001 C CNN "Spice_Lib_File"
+F 8 "3 2 8 4 1" H 5100 5850 50  0001 C CNN "Spice_Node_Sequence"
+	3    5100 5850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+15V #PWR020
+U 1 1 5F5927C5
+P 5000 5550
+F 0 "#PWR020" H 5000 5400 50  0001 C CNN
+F 1 "+15V" H 5015 5723 50  0000 C CNN
+F 2 "" H 5000 5550 50  0001 C CNN
+F 3 "" H 5000 5550 50  0001 C CNN
+	1    5000 5550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:-15V #PWR021
+U 1 1 5F5927CB
+P 5000 6150
+F 0 "#PWR021" H 5000 6250 50  0001 C CNN
+F 1 "-15V" H 5015 6323 50  0000 C CNN
+F 2 "" H 5000 6150 50  0001 C CNN
+F 3 "" H 5000 6150 50  0001 C CNN
+	1    5000 6150
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R R6
+U 1 1 5F548F97
+P 7100 2750
+F 0 "R6" V 6893 2750 50  0000 C CNN
+F 1 "100k" V 6984 2750 50  0000 C CNN
+F 2 "" V 7030 2750 50  0001 C CNN
+F 3 "~" H 7100 2750 50  0001 C CNN
+	1    7100 2750
+	0    1    1    0   
+$EndComp
+$Comp
+L Amplifier_Operational:TL072 U3
+U 1 1 5F533F91
+P 7050 3250
+F 0 "U3" H 7050 2883 50  0000 C CNN
+F 1 "TL072" H 7050 2974 50  0000 C CNN
+F 2 "" H 7050 3250 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 7050 3250 50  0001 C CNN
+F 4 "X" H 7050 3250 50  0001 C CNN "Spice_Primitive"
+F 5 "TL072" H 7050 3250 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 7050 3250 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "/home/etienne/Documents/elektrophon/lib/spice/opamp/TL072.lib" H 7050 3250 50  0001 C CNN "Spice_Lib_File"
+F 8 "3 2 8 4 1" H 7050 3250 50  0001 C CNN "Spice_Node_Sequence"
+	1    7050 3250
+	1    0    0    1   
+$EndComp
+$Comp
+L Amplifier_Operational:TL072 U4
+U 1 1 5F58C1AE
+P 2400 3450
+F 0 "U4" H 2400 3083 50  0000 C CNN
+F 1 "TL072" H 2400 3174 50  0000 C CNN
+F 2 "" H 2400 3450 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 2400 3450 50  0001 C CNN
+F 4 "X" H 2400 3450 50  0001 C CNN "Spice_Primitive"
+F 5 "TL072" H 2400 3450 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 2400 3450 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "/home/etienne/Documents/elektrophon/lib/spice/opamp/TL072.lib" H 2400 3450 50  0001 C CNN "Spice_Lib_File"
+F 8 "3 2 8 4 1" H 2400 3450 50  0001 C CNN "Spice_Node_Sequence"
+	1    2400 3450
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	2050 2100 2050 1700
+Wire Wire Line
+	2050 1700 2250 1700
+Wire Wire Line
+	2800 1700 2800 2200
+Wire Wire Line
+	2100 2100 2050 2100
+Wire Wire Line
+	2050 2100 1750 2100
+Connection ~ 2050 2100
+Wire Wire Line
+	2700 2200 2800 2200
+Wire Wire Line
+	2800 2200 4100 2200
+Connection ~ 2800 2200
+Text Notes 6450 4350 0    50   ~ 0
+.tran 10u 20m 0\n
+$Comp
+L pspice:VSOURCE V4
+U 1 1 5F4FBC9B
+P 10200 3600
+F 0 "V4" H 10428 3646 50  0000 L CNN
+F 1 "VSOURCE" H 10428 3555 50  0000 L CNN
+F 2 "" H 10200 3600 50  0001 C CNN
+F 3 "~" H 10200 3600 50  0001 C CNN
+F 4 "V" H 10200 3600 50  0001 C CNN "Spice_Primitive"
+F 5 "pulse(0 10 0 0 500m 100u 600m)" H 10200 3600 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 10200 3600 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    10200 3600
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR018
+U 1 1 5F57B02B
+P 9250 3950
+F 0 "#PWR018" H 9250 3700 50  0001 C CNN
+F 1 "GND" H 9255 3777 50  0000 C CNN
+F 2 "" H 9250 3950 50  0001 C CNN
+F 3 "" H 9250 3950 50  0001 C CNN
+	1    9250 3950
+	1    0    0    -1  
+$EndComp
+Text GLabel 9250 3350 1    50   Input ~ 0
+Z
+$Comp
+L pspice:VSOURCE V5
+U 1 1 5F57B024
+P 9250 3650
+F 0 "V5" H 9478 3696 50  0000 L CNN
+F 1 "VSOURCE" H 9478 3605 50  0000 L CNN
+F 2 "" H 9250 3650 50  0001 C CNN
+F 3 "~" H 9250 3650 50  0001 C CNN
+F 4 "V" H 9250 3650 50  0001 C CNN "Spice_Primitive"
+F 5 "dc 5 sin(0 5 100)" H 9250 3650 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 9250 3650 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    9250 3650
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR010
+U 1 1 5F5001BB
+P 10200 3900
+F 0 "#PWR010" H 10200 3650 50  0001 C CNN
+F 1 "GND" H 10205 3727 50  0000 C CNN
+F 2 "" H 10200 3900 50  0001 C CNN
+F 3 "" H 10200 3900 50  0001 C CNN
+	1    10200 3900
+	1    0    0    -1  
+$EndComp
+Text GLabel 10200 3300 1    50   Input ~ 0
+Y1
+$Comp
+L power:GND #PWR09
+U 1 1 5F4FFEF1
+P 10200 2650
+F 0 "#PWR09" H 10200 2400 50  0001 C CNN
+F 1 "GND" H 10205 2477 50  0000 C CNN
+F 2 "" H 10200 2650 50  0001 C CNN
+F 3 "" H 10200 2650 50  0001 C CNN
+	1    10200 2650
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:-15V #PWR05
+U 1 1 5F4FE1CE
+P 9250 2100
+F 0 "#PWR05" H 9250 2200 50  0001 C CNN
+F 1 "-15V" H 9265 2273 50  0000 C CNN
+F 2 "" H 9250 2100 50  0001 C CNN
+F 3 "" H 9250 2100 50  0001 C CNN
+	1    9250 2100
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+15V #PWR03
+U 1 1 5F4FD8EE
+P 8250 2100
+F 0 "#PWR03" H 8250 1950 50  0001 C CNN
+F 1 "+15V" H 8265 2273 50  0000 C CNN
+F 2 "" H 8250 2100 50  0001 C CNN
+F 3 "" H 8250 2100 50  0001 C CNN
+	1    8250 2100
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR04
+U 1 1 5F4FD4B9
+P 8250 2700
+F 0 "#PWR04" H 8250 2450 50  0001 C CNN
+F 1 "GND" H 8255 2527 50  0000 C CNN
+F 2 "" H 8250 2700 50  0001 C CNN
+F 3 "" H 8250 2700 50  0001 C CNN
+	1    8250 2700
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR06
+U 1 1 5F4FCE84
+P 9250 2700
+F 0 "#PWR06" H 9250 2450 50  0001 C CNN
+F 1 "GND" H 9255 2527 50  0000 C CNN
+F 2 "" H 9250 2700 50  0001 C CNN
+F 3 "" H 9250 2700 50  0001 C CNN
+	1    9250 2700
+	1    0    0    -1  
+$EndComp
+Text GLabel 10200 2050 1    50   Input ~ 0
+X1
+$Comp
+L pspice:VSOURCE V3
+U 1 1 5F4FB76F
+P 10200 2350
+F 0 "V3" H 10428 2396 50  0000 L CNN
+F 1 "VSOURCE" H 10428 2305 50  0000 L CNN
+F 2 "" H 10200 2350 50  0001 C CNN
+F 3 "~" H 10200 2350 50  0001 C CNN
+F 4 "V" H 10200 2350 50  0001 C CNN "Spice_Primitive"
+F 5 "sin(0 5 440)" H 10200 2350 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 10200 2350 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    10200 2350
+	1    0    0    -1  
+$EndComp
+$Comp
+L pspice:VSOURCE V2
+U 1 1 5F4FB34D
+P 9250 2400
+F 0 "V2" H 9478 2446 50  0000 L CNN
+F 1 "-15" H 9478 2355 50  0000 L CNN
+F 2 "" H 9250 2400 50  0001 C CNN
+F 3 "~" H 9250 2400 50  0001 C CNN
+	1    9250 2400
+	1    0    0    -1  
+$EndComp
+$Comp
+L pspice:VSOURCE V1
+U 1 1 5F4FAFED
+P 8250 2400
+F 0 "V1" H 8478 2446 50  0000 L CNN
+F 1 "+15" H 8478 2355 50  0000 L CNN
+F 2 "" H 8250 2400 50  0001 C CNN
+F 3 "~" H 8250 2400 50  0001 C CNN
+	1    8250 2400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R3
+U 1 1 5F53FE44
+P 1600 2100
+F 0 "R3" V 1393 2100 50  0000 C CNN
+F 1 "100k" V 1484 2100 50  0000 C CNN
+F 2 "" V 1530 2100 50  0001 C CNN
+F 3 "~" H 1600 2100 50  0001 C CNN
+	1    1600 2100
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1450 2100 1300 2100
+$Comp
+L Device:R R7
+U 1 1 5F540528
+P 2400 1700
+F 0 "R7" V 2193 1700 50  0000 C CNN
+F 1 "100k" V 2284 1700 50  0000 C CNN
+F 2 "" V 2330 1700 50  0001 C CNN
+F 3 "~" H 2400 1700 50  0001 C CNN
+	1    2400 1700
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2550 1700 2800 1700
+Wire Wire Line
+	1950 2650 1950 3350
+$Comp
+L power:GND #PWR?
+U 1 1 5F56D198
+P 5600 3400
+F 0 "#PWR?" H 5600 3150 50  0001 C CNN
+F 1 "GND" H 5605 3227 50  0000 C CNN
+F 2 "" H 5600 3400 50  0001 C CNN
+F 3 "" H 5600 3400 50  0001 C CNN
+	1    5600 3400
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC
