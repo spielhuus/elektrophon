@@ -1,6 +1,4 @@
 .title KiCad schematic
-.include "/home/etienne/Documents/elektrophon/lib/spice/opamp/TL072-dual.lib"
-.include "/home/etienne/Documents/elektrophon/lib/spice/transistor/BC547.mod"
 R1 Net-_R1-Pad1_ IN_1a 100k
 R3 Net-_R3-Pad1_ Net-_R1-Pad1_ 100k
 XU1 Net-_R3-Pad1_ Net-_R1-Pad1_ GND -15V GND Net-_R2-Pad1_ Net-_R4-Pad1_ +15V TL072c
@@ -11,13 +9,13 @@ R6 Ya Net-_R4-Pad1_ 10k
 R8 GND Ya 22
 R2 Net-_R2-Pad1_ IN_2a 100k
 XU2 Net-_R19-Pad2_ Net-_R16-Pad2_ Net-_R17-Pad2_ -15V GND Net-_R39-Pad2_ OUT_a +15V TL072c
-R12 +15V DIFF2_a 720
-R9 +15V DIFF1_a 720
-R19 Net-_R16-Pad2_ Net-_R19-Pad2_ 440k
-R18 GND Net-_R17-Pad2_ 440k
+R12 +15V DIFF2_a 750
+R9 +15V DIFF1_a 750
+R19 Net-_R16-Pad2_ Net-_R19-Pad2_ 430k
+R18 GND Net-_R17-Pad2_ 430k
 R16 DIFF1_a Net-_R16-Pad2_ 10k
 R17 DIFF2_a Net-_R17-Pad2_ 10k
-R11 Net-_Q2-Pad3_ -15V 720
+R11 Net-_Q2-Pad3_ -15V 750
 C7 Net-_C7-Pad1_ Xa 0.22u
 R15 Net-_C8-Pad2_ -15V 1k
 R14 +15V Net-_C8-Pad2_ 3k
@@ -32,7 +30,7 @@ C1 +15V GND 10u
 C2 GND -15V 10u
 C12 GND -15V 0.1u
 C11 +15V GND 0.1u
-XU3 Net-_R22-Pad1_ Net-_R20-Pad1_ IN_1b -15V IN_2b Net-_R21-Pad1_ Net-_R23-Pad1_ +15V TL072c
+XU3 Net-_R22-Pad1_ Net-_R20-Pad1_ GND -15V GND Net-_R21-Pad1_ Net-_R23-Pad1_ +15V TL072c
 R40 Net-_R39-Pad2_ OUT_a 100k
 R39 Net-_R19-Pad2_ Net-_R39-Pad2_ 100k
 C14 GND -15V 0.1u
@@ -44,21 +42,21 @@ Q3 DIFF2_a GND Net-_Q1-Pad3_ BC547B
 Q6 DIFF2_a Ya Net-_Q4-Pad3_ BC547B
 Q5 Net-_Q4-Pad3_ Net-_Q5-Pad2_ Net-_Q2-Pad3_ BC547B
 Q1 DIFF1_a Ya Net-_Q1-Pad3_ BC547B
-R20 Net-_R20-Pad1_ GND 100k
+R20 Net-_R20-Pad1_ IN_1b 100k
 R22 Net-_R22-Pad1_ Net-_R20-Pad1_ 100k
 R24 Xb Net-_R22-Pad1_ 10k
 R26 GND Xb 22
 R23 Net-_R23-Pad1_ Net-_R21-Pad1_ 100k
 R25 Yb Net-_R23-Pad1_ 10k
 R27 GND Yb 22
-R21 Net-_R21-Pad1_ GND 100k
-R31 +15V DIFF2_b 720
-R28 +15V DIFF1_b 720
-R38 Net-_R35-Pad2_ Net-_R38-Pad2_ 440k
-R37 GND Net-_R36-Pad2_ 440k
+R21 Net-_R21-Pad1_ IN_2b 100k
+R31 +15V DIFF2_b 750
+R28 +15V DIFF1_b 750
+R38 Net-_R35-Pad2_ Net-_R38-Pad2_ 430k
+R37 GND Net-_R36-Pad2_ 430k
 R35 DIFF1_b Net-_R35-Pad2_ 10k
 R36 DIFF2_b Net-_R36-Pad2_ 10k
-R30 Net-_Q11-Pad3_ -15V 720
+R30 Net-_Q11-Pad3_ -15V 750
 C9 Net-_C9-Pad1_ Xb 0.22u
 R34 Net-_C10-Pad2_ -15V 1k
 R33 +15V Net-_C10-Pad2_ 3k

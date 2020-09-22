@@ -6,6 +6,12 @@ K 2N5457-ND
 F https://my.centralsemi.com/get_document.php?cmp=1&mergetype=pd&mergepath=pd&pdf_id=2N5457-5459.PDF
 $ENDCMP
 #
+$CMP AD633
+D Low Cost Analog Multiplier,  PDIP-8
+K Analog Multiplier
+F https://www.analog.com/media/en/technical-documentation/data-sheets/AD633.pdf
+$ENDCMP
+#
 $CMP AD8620
 D Dual Precision, Very Low Noise, Low Input Bias Current, Wide Bandwidth JFET Operational Amplifiers, SOIC-8
 K dual opamp

@@ -16,15 +16,15 @@ $EndDescr
 $Comp
 L power:GND #PWR?
 U 1 1 5F7A8E19
-P 1750 2050
+P 2200 2650
 AR Path="/5F7A8E19" Ref="#PWR?"  Part="1" 
 AR Path="/5F796C17/5F7A8E19" Ref="#PWR04"  Part="1" 
-F 0 "#PWR04" H 1750 1800 50  0001 C CNN
-F 1 "GND" H 1755 1877 50  0000 C CNN
-F 2 "" H 1750 2050 50  0001 C CNN
-F 3 "" H 1750 2050 50  0001 C CNN
-	1    1750 2050
-	0    1    1    0   
+F 0 "#PWR04" H 2200 2400 50  0001 C CNN
+F 1 "GND" H 2205 2477 50  0000 C CNN
+F 2 "" H 2200 2650 50  0001 C CNN
+F 3 "" H 2200 2650 50  0001 C CNN
+	1    2200 2650
+	1    0    0    -1  
 $EndComp
 Wire Wire Line
 	2200 2650 2250 2650
@@ -39,14 +39,14 @@ Wire Wire Line
 $Comp
 L Device:R R?
 U 1 1 5F7A8E25
-P 1900 2050
+P 1900 2450
 AR Path="/5F7A8E25" Ref="R?"  Part="1" 
 AR Path="/5F796C17/5F7A8E25" Ref="R20"  Part="1" 
-F 0 "R20" V 1693 2050 50  0000 C CNN
-F 1 "100k" V 1784 2050 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 1830 2050 50  0001 C CNN
-F 3 "~" H 1900 2050 50  0001 C CNN
-	1    1900 2050
+F 0 "R20" V 1693 2450 50  0000 C CNN
+F 1 "100k" V 1784 2450 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 1830 2450 50  0001 C CNN
+F 3 "~" H 1900 2450 50  0001 C CNN
+	1    1900 2450
 	0    1    1    0   
 $EndComp
 $Comp
@@ -57,7 +57,7 @@ AR Path="/5F7A8E2B" Ref="R?"  Part="1"
 AR Path="/5F796C17/5F7A8E2B" Ref="R22"  Part="1" 
 F 0 "R22" V 2343 2050 50  0000 C CNN
 F 1 "100k" V 2434 2050 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 2480 2050 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 2480 2050 50  0001 C CNN
 F 3 "~" H 2550 2050 50  0001 C CNN
 	1    2550 2050
 	0    1    1    0   
@@ -65,7 +65,7 @@ $EndComp
 Wire Wire Line
 	2700 2050 2900 2050
 Wire Wire Line
-	2050 2050 2200 2050
+	2050 2450 2200 2450
 Wire Wire Line
 	2900 2050 2900 2550
 Wire Wire Line
@@ -105,7 +105,7 @@ AR Path="/5F7A8E46" Ref="R?"  Part="1"
 AR Path="/5F796C17/5F7A8E46" Ref="R24"  Part="1" 
 F 0 "R24" V 2943 2550 50  0000 C CNN
 F 1 "10k" V 3034 2550 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 3080 2550 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 3080 2550 50  0001 C CNN
 F 3 "~" H 3150 2550 50  0001 C CNN
 	1    3150 2550
 	0    1    1    0   
@@ -139,15 +139,15 @@ $EndComp
 $Comp
 L power:GND #PWR?
 U 1 1 5F7A8E58
-P 1750 3400
+P 2200 4000
 AR Path="/5F7A8E58" Ref="#PWR?"  Part="1" 
 AR Path="/5F796C17/5F7A8E58" Ref="#PWR05"  Part="1" 
-F 0 "#PWR05" H 1750 3150 50  0001 C CNN
-F 1 "GND" H 1755 3227 50  0000 C CNN
-F 2 "" H 1750 3400 50  0001 C CNN
-F 3 "" H 1750 3400 50  0001 C CNN
-	1    1750 3400
-	0    1    1    0   
+F 0 "#PWR05" H 2200 3750 50  0001 C CNN
+F 1 "GND" H 2205 3827 50  0000 C CNN
+F 2 "" H 2200 4000 50  0001 C CNN
+F 3 "" H 2200 4000 50  0001 C CNN
+	1    2200 4000
+	1    0    0    -1  
 $EndComp
 Wire Wire Line
 	2200 4000 2250 4000
@@ -167,7 +167,7 @@ AR Path="/5F7A8E64" Ref="R?"  Part="1"
 AR Path="/5F796C17/5F7A8E64" Ref="R23"  Part="1" 
 F 0 "R23" V 2343 3400 50  0000 C CNN
 F 1 "100k" V 2434 3400 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 2480 3400 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 2480 3400 50  0001 C CNN
 F 3 "~" H 2550 3400 50  0001 C CNN
 	1    2550 3400
 	0    1    1    0   
@@ -230,14 +230,14 @@ $EndComp
 $Comp
 L Device:R R?
 U 1 1 5F7A8E86
-P 1900 3400
+P 1900 3800
 AR Path="/5F7A8E86" Ref="R?"  Part="1" 
 AR Path="/5F796C17/5F7A8E86" Ref="R21"  Part="1" 
-F 0 "R21" V 1693 3400 50  0000 C CNN
-F 1 "100k" V 1784 3400 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 1830 3400 50  0001 C CNN
-F 3 "~" H 1900 3400 50  0001 C CNN
-	1    1900 3400
+F 0 "R21" V 1693 3800 50  0000 C CNN
+F 1 "100k" V 1784 3800 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 1830 3800 50  0001 C CNN
+F 3 "~" H 1900 3800 50  0001 C CNN
+	1    1900 3800
 	0    1    1    0   
 $EndComp
 $Comp
@@ -265,8 +265,6 @@ Wire Wire Line
 Wire Wire Line
 	5450 2100 5450 2300
 Connection ~ 6800 2100
-Wire Wire Line
-	6800 2100 6800 2250
 Text GLabel 4800 1950 2    50   Input ~ 0
 DIFF1_b
 Text GLabel 6650 1950 0    50   Input ~ 0
@@ -290,7 +288,7 @@ P 6800 1700
 AR Path="/5F7A8EDF" Ref="R?"  Part="1" 
 AR Path="/5F796C17/5F7A8EDF" Ref="R31"  Part="1" 
 F 0 "R31" H 6870 1746 50  0000 L CNN
-F 1 "720" H 6870 1655 50  0000 L CNN
+F 1 "750" H 6870 1655 50  0000 L CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 6730 1700 50  0001 C CNN
 F 3 "~" H 6800 1700 50  0001 C CNN
 	1    6800 1700
@@ -303,7 +301,7 @@ P 4700 1700
 AR Path="/5F7A8EE5" Ref="R?"  Part="1" 
 AR Path="/5F796C17/5F7A8EE5" Ref="R28"  Part="1" 
 F 0 "R28" H 4770 1746 50  0000 L CNN
-F 1 "720" H 4770 1655 50  0000 L CNN
+F 1 "750" H 4770 1655 50  0000 L CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 4630 1700 50  0001 C CNN
 F 3 "~" H 4700 1700 50  0001 C CNN
 	1    4700 1700
@@ -355,7 +353,7 @@ P 9000 1500
 AR Path="/5F7A8EFF" Ref="R?"  Part="1" 
 AR Path="/5F796C17/5F7A8EFF" Ref="R38"  Part="1" 
 F 0 "R38" V 9207 1500 50  0000 C CNN
-F 1 "440k" V 9116 1500 50  0000 C CNN
+F 1 "430k" V 9116 1500 50  0000 C CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 8930 1500 50  0001 C CNN
 F 3 "~" H 9000 1500 50  0001 C CNN
 	1    9000 1500
@@ -368,8 +366,8 @@ P 8600 2500
 AR Path="/5F7A8F05" Ref="R?"  Part="1" 
 AR Path="/5F796C17/5F7A8F05" Ref="R37"  Part="1" 
 F 0 "R37" H 8530 2454 50  0000 R CNN
-F 1 "440k" H 8530 2545 50  0000 R CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 8530 2500 50  0001 C CNN
+F 1 "430k" H 8530 2545 50  0000 R CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 8530 2500 50  0001 C CNN
 F 3 "~" H 8600 2500 50  0001 C CNN
 	1    8600 2500
 	-1   0    0    1   
@@ -407,7 +405,7 @@ P 5750 4700
 AR Path="/5F7A8F21" Ref="R?"  Part="1" 
 AR Path="/5F796C17/5F7A8F21" Ref="R30"  Part="1" 
 F 0 "R30" H 5820 4746 50  0000 L CNN
-F 1 "720" H 5820 4655 50  0000 L CNN
+F 1 "750" H 5820 4655 50  0000 L CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 5680 4700 50  0001 C CNN
 F 3 "~" H 5750 4700 50  0001 C CNN
 	1    5750 4700
@@ -438,7 +436,7 @@ AR Path="/5F7A8F2F" Ref="C?"  Part="1"
 AR Path="/5F796C17/5F7A8F2F" Ref="C9"  Part="1" 
 F 0 "C9" V 4398 3900 50  0000 C CNN
 F 1 "0.22u" V 4489 3900 50  0000 C CNN
-F 2 "Capacitor_THT:C_Disc_D9.0mm_W5.0mm_P5.00mm" H 4688 3750 50  0001 C CNN
+F 2 "Capacitor_THT:C_Rect_L7.2mm_W2.5mm_P5.00mm_FKS2_FKP2_MKS2_MKP2" H 4688 3750 50  0001 C CNN
 F 3 "~" H 4650 3900 50  0001 C CNN
 	1    4650 3900
 	0    1    1    0   
@@ -623,7 +621,7 @@ Wire Wire Line
 	7550 3750 7200 3750
 Connection ~ 9350 2050
 Wire Wire Line
-	2050 3400 2200 3400
+	2050 3800 2200 3800
 Wire Wire Line
 	4700 1450 4700 1550
 Wire Wire Line
@@ -649,14 +647,12 @@ F 7 "/home/etienne/Documents/elektrophon/lib/spice/opamp/TL072-dual.lib" H 2550 
 	2    2550 3900
 	1    0    0    1   
 $EndComp
-Text GLabel 2200 2650 0    50   Input ~ 0
+Text GLabel 1750 2450 0    50   Input ~ 0
 IN_1b
-Text GLabel 2200 4000 0    50   Input ~ 0
+Text GLabel 1750 3800 0    50   Input ~ 0
 IN_2b
 Text GLabel 9450 3900 2    50   Input ~ 0
 OUT_b
-Connection ~ 2200 2050
-Connection ~ 2200 3400
 $Comp
 L Amplifier_Operational:TL072 U?
 U 2 1 5F6DF8CF
@@ -678,7 +674,7 @@ AR Path="/5F6DF8D5" Ref="R?"  Part="1"
 AR Path="/5F796C17/5F6DF8D5" Ref="R42"  Part="1" 
 F 0 "R42" V 9357 3350 50  0000 C CNN
 F 1 "100k" V 9266 3350 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 9080 3350 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 9080 3350 50  0001 C CNN
 F 3 "~" H 9150 3350 50  0001 C CNN
 	1    9150 3350
 	0    -1   -1   0   
@@ -718,7 +714,7 @@ AR Path="/5F6DF8E8" Ref="R?"  Part="1"
 AR Path="/5F796C17/5F6DF8E8" Ref="R41"  Part="1" 
 F 0 "R41" V 8757 3800 50  0000 C CNN
 F 1 "100k" V 8666 3800 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 8480 3800 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 8480 3800 50  0001 C CNN
 F 3 "~" H 8550 3800 50  0001 C CNN
 	1    8550 3800
 	0    -1   -1   0   
@@ -850,8 +846,9 @@ F 7 "/home/etienne/Documents/elektrophon/lib/spice/transistor/BC547.mod" H 6900 
 	1    6900 2500
 	-1   0    0    -1  
 $EndComp
-Connection ~ 6800 2250
-Wire Wire Line
-	6800 2250 6800 2300
 Connection ~ 5750 2500
+Wire Wire Line
+	6800 2100 6800 2300
+Connection ~ 2200 3800
+Connection ~ 2200 2450
 $EndSCHEMATC
