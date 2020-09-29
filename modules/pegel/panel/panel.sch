@@ -40,7 +40,7 @@ L Mechanical:MountingHole H5
 U 1 1 5D6B07F8
 P 3050 3550
 F 0 "H5" H 3150 3596 50  0000 L CNN
-F 1 "out" H 3150 3505 50  0000 L CNN
+F 1 "out1" H 3150 3505 50  0000 L CNN
 F 2 "elektrophon:panel_jack" H 3050 3550 50  0001 C CNN
 F 3 "~" H 3050 3550 50  0001 C CNN
 	1    3050 3550
@@ -139,7 +139,7 @@ L Mechanical:MountingHole H10
 U 1 1 5F66785D
 P 3600 3550
 F 0 "H10" H 3700 3596 50  0000 L CNN
-F 1 "out" H 3700 3505 50  0000 L CNN
+F 1 "out2" H 3700 3505 50  0000 L CNN
 F 2 "elektrophon:panel_jack" H 3600 3550 50  0001 C CNN
 F 3 "~" H 3600 3550 50  0001 C CNN
 	1    3600 3550
