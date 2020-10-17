@@ -314,9 +314,9 @@ F 1 "TL072" H 3450 3376 50  0000 C CNN
 F 2 "" H 3450 3100 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 3450 3100 50  0001 C CNN
 F 4 "X" H 3450 3100 50  0001 C CNN "Spice_Primitive"
-F 5 "uopamp_lvl2" H 3450 3100 50  0001 C CNN "Spice_Model"
+F 5 "TL072" H 3450 3100 50  0001 C CNN "Spice_Model"
 F 6 "Y" H 3450 3100 50  0001 C CNN "Spice_Netlist_Enabled"
-F 7 "/home/etienne/Downloads/TL072.301" H 3450 3100 50  0001 C CNN "Spice_Lib_File"
+F 7 "/home/etienne/Documents/elektrophon/lib/spice/opamp/TL072.lib" H 3450 3100 50  0001 C CNN "Spice_Lib_File"
 F 8 "2,3,8,4,1" H 3450 3100 50  0001 C CNN "Spice_Node_Sequence"
 	1    3450 3100
 	1    0    0    -1  
@@ -333,7 +333,7 @@ F 4 "X" H 5200 3200 50  0001 C CNN "Spice_Primitive"
 F 5 "TL072" H 5200 3200 50  0001 C CNN "Spice_Model"
 F 6 "Y" H 5200 3200 50  0001 C CNN "Spice_Netlist_Enabled"
 F 7 "5,6,8,4,7" H 5200 3200 50  0001 C CNN "Spice_Node_Sequence"
-F 8 "/home/etienne/Downloads/TL072.301" H 5200 3200 50  0001 C CNN "Spice_Lib_File"
+F 8 "/home/etienne/Documents/elektrophon/lib/spice/opamp/TL072.lib" H 5200 3200 50  0001 C CNN "Spice_Lib_File"
 	2    5200 3200
 	1    0    0    -1  
 $EndComp
@@ -357,9 +357,9 @@ F 1 "TL072" H 8000 3024 50  0000 C CNN
 F 2 "" H 8000 3300 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 8000 3300 50  0001 C CNN
 F 4 "X" H 8000 3300 50  0001 C CNN "Spice_Primitive"
-F 5 "uopamp_lvl2" H 8000 3300 50  0001 C CNN "Spice_Model"
+F 5 "TL072" H 8000 3300 50  0001 C CNN "Spice_Model"
 F 6 "Y" H 8000 3300 50  0001 C CNN "Spice_Netlist_Enabled"
-F 7 "/home/etienne/Downloads/TL072.301" H 8000 3300 50  0001 C CNN "Spice_Lib_File"
+F 7 "/home/etienne/Documents/elektrophon/lib/spice/opamp/TL072.lib" H 8000 3300 50  0001 C CNN "Spice_Lib_File"
 F 8 "2,3,8,4,1" H 8000 3300 50  0001 C CNN "Spice_Node_Sequence"
 	1    8000 3300
 	1    0    0    1   
@@ -372,6 +372,11 @@ F 0 "U3" H 10550 5967 50  0000 C CNN
 F 1 "TL072" H 10550 5876 50  0000 C CNN
 F 2 "" H 10550 5600 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 10550 5600 50  0001 C CNN
+F 4 "X" H 10550 5600 50  0001 C CNN "Spice_Primitive"
+F 5 "TL072" H 10550 5600 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 10550 5600 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "/home/etienne/Documents/elektrophon/lib/spice/opamp/TL072.lib" H 10550 5600 50  0001 C CNN "Spice_Lib_File"
+F 8 "2,3,8,4,1" H 10550 5600 50  0001 C CNN "Spice_Node_Sequence"
 	2    10550 5600
 	1    0    0    -1  
 $EndComp
@@ -1090,8 +1095,8 @@ F 0 "J2" H 1132 3425 50  0000 C CNN
 F 1 "AudioJack2" H 1132 3334 50  0000 C CNN
 F 2 "" H 1100 3100 50  0001 C CNN
 F 3 "~" H 1100 3100 50  0001 C CNN
-F 4 "I" H 1100 3100 50  0001 C CNN "Spice_Primitive"
-F 5 "dc 15 pulse(0 5 0 0 0 0.2 1)" H 1100 3100 50  0001 C CNN "Spice_Model"
+F 4 "V" H 1100 3100 50  0001 C CNN "Spice_Primitive"
+F 5 "dc 15 pulse(0 5 1m 0 0 10m 1)" H 1100 3100 50  0001 C CNN "Spice_Model"
 F 6 "Y" H 1100 3100 50  0001 C CNN "Spice_Netlist_Enabled"
 	1    1100 3100
 	1    0    0    -1  
@@ -1173,16 +1178,5 @@ Wire Wire Line
 Text Notes 10400 5950 0    50   ~ 0
 check!
 Text Notes 800  3400 0    50   ~ 0
-.tran 1u 1m
-$Comp
-L Device:R R?
-U 1 1 5EF8EE7A
-P 1850 1300
-F 0 "R?" V 1643 1300 50  0000 C CNN
-F 1 "47k" V 1734 1300 50  0000 C CNN
-F 2 "" V 1780 1300 50  0001 C CNN
-F 3 "~" H 1850 1300 50  0001 C CNN
-	1    1850 1300
-	0    1    1    0   
-$EndComp
+.tran 1u 20m
 $EndSCHEMATC

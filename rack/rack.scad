@@ -16,6 +16,10 @@ RAIL_POS_1=[10,30,240-0.5];
 RAIL_POS_2=[10,30+67.5,240-116.913];
 RAIL_POS_3=[10,30+67.5+116.913,240-116.913-67.5+0.5];
 
+module psu() {
+    cube([177.8,123.95,74.93]);
+}
+
 module rails() {
     cube([RAIL_LENGTH,RAIL_WIDTH,RAIL_HEIGHT]);
     translate([0,HU*HU_SIZE-RAIL_WIDTH,0]) {
@@ -75,7 +79,8 @@ module draw() {
             translate([0,0,0]) rotate([0,0,0]) translate([0,0,0]) color("Green") cube([RAIL_LENGTH,HU*HU_SIZE,1]);
         }
     }
-        
+    rotate([180,0,0]) translate([-210,50,40])
+        psu();        
 }
 
 //projection(cut = true) rotate([0,90,0]) translate([431.80/2,0,0]) draw();

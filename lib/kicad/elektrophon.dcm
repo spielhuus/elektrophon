@@ -90,6 +90,12 @@ K VCO CEM340 ALFA
 F http://www.alfarzpp.lv/eng/sc/AS3340.pdf
 $ENDCMP
 #
+$CMP J113
+D 50mA min, 40V, 25mOhm max, 4-10V Vgs(off), N-Channel JFET, SOT-23
+K N-Channel FET Transistor
+F https://www.nxp.com/docs/en/data-sheet/BSR56_57_58.pdf
+$ENDCMP
+#
 $CMP J201
 D 50mA Id, 30V Vgs, N-Channel FET Transistor, TO-92
 K N-Channel FET Transistor Low Voltage

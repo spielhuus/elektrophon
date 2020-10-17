@@ -266,107 +266,8 @@ F 3 "" H 3850 1750 50  0001 C CNN
 	1    3850 1750
 	1    0    0    -1  
 $EndComp
-$Comp
-L power:GND #PWR07
-U 1 1 5F74A975
-P 3600 3700
-F 0 "#PWR07" H 3600 3450 50  0001 C CNN
-F 1 "GND" V 3605 3572 50  0000 R CNN
-F 2 "" H 3600 3700 50  0001 C CNN
-F 3 "" H 3600 3700 50  0001 C CNN
-	1    3600 3700
-	0    -1   -1   0   
-$EndComp
-$Comp
-L Connector:AudioJack2_SwitchT J5
-U 1 1 5F74A980
-P 3400 3800
-F 0 "J5" H 3432 4125 50  0000 C CNN
-F 1 "IN_2b" H 3432 4034 50  0000 C CNN
-F 2 "elektrophon:Jack_3.5mm_WQP-PJ398SM_Vertical" H 3400 3800 50  0001 C CNN
-F 3 "~" H 3400 3800 50  0001 C CNN
-F 4 "X" H 3400 3800 50  0001 C CNN "Spice_Primitive"
-F 5 "IN_2" H 3400 3800 50  0001 C CNN "Spice_Model"
-F 6 "Y" H 3400 3800 50  0001 C CNN "Spice_Netlist_Enabled"
-F 7 "S T" H 3400 3800 50  0001 C CNN "Spice_Node_Sequence"
-	1    3400 3800
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R_POT RV4
-U 1 1 5F74A989
-P 3900 4100
-F 0 "RV4" H 3831 4146 50  0000 R CNN
-F 1 "100k" H 3831 4055 50  0000 R CNN
-F 2 "elektrophon:Potentiometer_Alpha_RD901F-40-00D_Single_Vertical" H 3900 4100 50  0001 C CNN
-F 3 "~" H 3900 4100 50  0001 C CNN
-F 4 "X" H 3900 4100 50  0001 C CNN "Spice_Primitive"
-F 5 "RV2" H 3900 4100 50  0001 C CNN "Spice_Model"
-F 6 "Y" H 3900 4100 50  0001 C CNN "Spice_Netlist_Enabled"
-	1    3900 4100
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	3600 3800 3900 3800
-Wire Wire Line
-	3900 3800 3900 3950
-$Comp
-L power:GND #PWR010
-U 1 1 5F74A991
-P 3900 4250
-F 0 "#PWR010" H 3900 4000 50  0001 C CNN
-F 1 "GND" H 3905 4077 50  0000 C CNN
-F 2 "" H 3900 4250 50  0001 C CNN
-F 3 "" H 3900 4250 50  0001 C CNN
-	1    3900 4250
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	3550 5350 3800 5350
-$Comp
-L power:GND #PWR08
-U 1 1 5F74A998
-P 3800 5250
-F 0 "#PWR08" H 3800 5000 50  0001 C CNN
-F 1 "GND" V 3805 5122 50  0000 R CNN
-F 2 "" H 3800 5250 50  0001 C CNN
-F 3 "" H 3800 5250 50  0001 C CNN
-	1    3800 5250
-	0    1    1    0   
-$EndComp
-NoConn ~ 3800 5450
-$Comp
-L Connector:AudioJack2_SwitchT J6
-U 1 1 5F74A9A3
-P 4000 5350
-F 0 "J6" H 4032 5675 50  0000 C CNN
-F 1 "OUT_b" H 4032 5584 50  0000 C CNN
-F 2 "elektrophon:Jack_3.5mm_WQP-PJ398SM_Vertical" H 4000 5350 50  0001 C CNN
-F 3 "~" H 4000 5350 50  0001 C CNN
-F 4 "X" H 4000 5350 50  0001 C CNN "Spice_Primitive"
-F 5 "OUT" H 4000 5350 50  0001 C CNN "Spice_Model"
-F 6 "Y" H 4000 5350 50  0001 C CNN "Spice_Netlist_Enabled"
-F 7 "S T" H 4000 5350 50  0001 C CNN "Spice_Node_Sequence"
-	1    4000 5350
-	-1   0    0    -1  
-$EndComp
-$Comp
-L Device:R R2
-U 1 1 5F74A9A9
-P 3400 5350
-F 0 "R2" V 3607 5350 50  0000 C CNN
-F 1 "1k" V 3516 5350 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 3330 5350 50  0001 C CNN
-F 3 "~" H 3400 5350 50  0001 C CNN
-	1    3400 5350
-	0    -1   -1   0   
-$EndComp
 Text GLabel 4000 1600 2    50   Input ~ 0
 IN_1b
-Text GLabel 4050 4100 2    50   Input ~ 0
-IN_2b
-Text GLabel 3250 5350 0    50   Input ~ 0
-OUT_b
 Text GLabel 5250 7000 2    50   Input ~ 0
 IN_1a
 Text GLabel 5250 7100 2    50   Input ~ 0
@@ -619,74 +520,6 @@ F 3 "" H 3850 3250 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R R8
-U 1 1 5F6909E8
-P 3500 6400
-F 0 "R8" V 3293 6400 50  0000 C CNN
-F 1 "100k" V 3384 6400 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 3430 6400 50  0001 C CNN
-F 3 "~" H 3500 6400 50  0001 C CNN
-	1    3500 6400
-	0    1    1    0   
-$EndComp
-$Comp
-L Transistor_BJT:BC550 Q4
-U 1 1 5F6909EE
-P 3850 6400
-F 0 "Q4" H 4041 6446 50  0000 L CNN
-F 1 "BC550" H 4041 6355 50  0000 L CNN
-F 2 "Package_TO_SOT_THT:TO-92_Inline_Wide" H 4050 6325 50  0001 L CIN
-F 3 "http://www.fairchildsemi.com/ds/BC/BC547.pdf" H 3850 6400 50  0001 L CNN
-	1    3850 6400
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:+5V #PWR0107
-U 1 1 5F6909F4
-P 3950 5900
-F 0 "#PWR0107" H 3950 5750 50  0001 C CNN
-F 1 "+5V" H 3965 6073 50  0000 C CNN
-F 2 "" H 3950 5900 50  0001 C CNN
-F 3 "" H 3950 5900 50  0001 C CNN
-	1    3950 5900
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R R10
-U 1 1 5F6909FA
-P 3950 6050
-F 0 "R10" H 3880 6004 50  0000 R CNN
-F 1 "5.6k" H 3880 6095 50  0000 R CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 3880 6050 50  0001 C CNN
-F 3 "~" H 3950 6050 50  0001 C CNN
-	1    3950 6050
-	-1   0    0    1   
-$EndComp
-$Comp
-L Device:LED D8
-U 1 1 5F690A01
-P 3950 6750
-F 0 "D8" V 3989 6632 50  0000 R CNN
-F 1 "WP710A10L" V 3898 6632 50  0000 R CNN
-F 2 "LED_THT:LED_D3.0mm" H 3950 6750 50  0001 C CNN
-F 3 "~" H 3950 6750 50  0001 C CNN
-	1    3950 6750
-	0    -1   -1   0   
-$EndComp
-$Comp
-L power:GND #PWR0108
-U 1 1 5F690A07
-P 3950 6900
-F 0 "#PWR0108" H 3950 6650 50  0001 C CNN
-F 1 "GND" H 3955 6727 50  0000 C CNN
-F 2 "" H 3950 6900 50  0001 C CNN
-F 3 "" H 3950 6900 50  0001 C CNN
-	1    3950 6900
-	1    0    0    -1  
-$EndComp
-Text GLabel 3350 6400 0    50   Input ~ 0
-OUT_b
-$Comp
 L Diode:1N4148 D1
 U 1 1 5F69670C
 P 1350 2900
@@ -733,29 +566,6 @@ F 3 "" H 1500 6750 50  0001 C CNN
 $EndComp
 Connection ~ 1500 6450
 $Comp
-L Diode:1N4148 D6
-U 1 1 5F6A3919
-P 3650 6550
-F 0 "D6" V 3604 6630 50  0000 L CNN
-F 1 "1N4148" V 3695 6630 50  0000 L CNN
-F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 3650 6375 50  0001 C CNN
-F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 3650 6550 50  0001 C CNN
-	1    3650 6550
-	0    1    1    0   
-$EndComp
-$Comp
-L power:GND #PWR0111
-U 1 1 5F6A391F
-P 3650 6700
-F 0 "#PWR0111" H 3650 6450 50  0001 C CNN
-F 1 "GND" H 3655 6527 50  0000 C CNN
-F 2 "" H 3650 6700 50  0001 C CNN
-F 3 "" H 3650 6700 50  0001 C CNN
-	1    3650 6700
-	1    0    0    -1  
-$EndComp
-Connection ~ 3650 6400
-$Comp
 L Diode:1N4148 D5
 U 1 1 5F6A71CB
 P 3550 2900
@@ -778,12 +588,6 @@ F 3 "" H 3550 3050 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Connection ~ 3550 2750
-Text GLabel 3500 4200 0    50   Input ~ 0
-OUT_a
-Wire Wire Line
-	3600 3900 3600 4200
-Wire Wire Line
-	3600 4200 3500 4200
 $Comp
 L Amplifier_Operational:TL072 U1
 U 1 1 5F684F4D

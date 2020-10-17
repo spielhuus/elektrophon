@@ -5,8 +5,8 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title "pegel"
-Date "2020-09-20"
-Rev "01"
+Date "2020-10-01"
+Rev "02"
 Comp ""
 Comment1 "schema for panel"
 Comment2 "voltage controlled attenuator and ring modulator"
@@ -91,28 +91,6 @@ F 3 "~" H 3600 1700 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Mechanical:MountingHole H9
-U 1 1 5EADB1C2
-P 3600 3100
-F 0 "H9" H 3700 3146 50  0000 L CNN
-F 1 "vol4" H 3700 3055 50  0000 L CNN
-F 2 "elektrophon:panel_potentiometer" H 3600 3100 50  0001 C CNN
-F 3 "~" H 3600 3100 50  0001 C CNN
-	1    3600 3100
-	1    0    0    -1  
-$EndComp
-$Comp
-L Mechanical:MountingHole H8
-U 1 1 5EADB1C8
-P 3600 2600
-F 0 "H8" H 3700 2646 50  0000 L CNN
-F 1 "in4" H 3700 2555 50  0000 L CNN
-F 2 "elektrophon:panel_jack" H 3600 2600 50  0001 C CNN
-F 3 "~" H 3600 2600 50  0001 C CNN
-	1    3600 2600
-	1    0    0    -1  
-$EndComp
-$Comp
 L Mechanical:MountingHole H11
 U 1 1 5EB66265
 P 6350 6700
@@ -132,17 +110,6 @@ F 1 "MountingHole" H 6450 6955 50  0000 L CNN
 F 2 "MountingHole:MountingHole_3.2mm_M3" H 6350 7000 50  0001 C CNN
 F 3 "~" H 6350 7000 50  0001 C CNN
 	1    6350 7000
-	1    0    0    -1  
-$EndComp
-$Comp
-L Mechanical:MountingHole H10
-U 1 1 5F66785D
-P 3600 3550
-F 0 "H10" H 3700 3596 50  0000 L CNN
-F 1 "out2" H 3700 3505 50  0000 L CNN
-F 2 "elektrophon:panel_jack" H 3600 3550 50  0001 C CNN
-F 3 "~" H 3600 3550 50  0001 C CNN
-	1    3600 3550
 	1    0    0    -1  
 $EndComp
 $EndSCHEMATC
