@@ -1,0 +1,616 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Device:R_POT RV2
+U 1 1 5FAAAE99
+P 2200 3200
+F 0 "RV2" H 2130 3246 50  0000 R CNN
+F 1 "1M" H 2130 3155 50  0000 R CNN
+F 2 "elektrophon:Potentiometer_Alpha_RD901F-40-00D_Single_Vertical" H 2200 3200 50  0001 C CNN
+F 3 "~" H 2200 3200 50  0001 C CNN
+	1    2200 3200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:AudioJack2_SwitchT J4
+U 1 1 5FAAB3AE
+P 1700 2750
+F 0 "J4" H 1732 3075 50  0000 C CNN
+F 1 "CV2" H 1732 2984 50  0000 C CNN
+F 2 "elektrophon:Jack_3.5mm_WQP-PJ301BM_Vertical" H 1700 2750 50  0001 C CNN
+F 3 "~" H 1700 2750 50  0001 C CNN
+	1    1700 2750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1900 2750 2200 2750
+Wire Wire Line
+	2200 2750 2200 3050
+$Comp
+L power:GND #PWR08
+U 1 1 5FAABAEB
+P 2200 3350
+F 0 "#PWR08" H 2200 3100 50  0001 C CNN
+F 1 "GND" H 2205 3177 50  0000 C CNN
+F 2 "" H 2200 3350 50  0001 C CNN
+F 3 "" H 2200 3350 50  0001 C CNN
+	1    2200 3350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR04
+U 1 1 5FAABED3
+P 1900 2650
+F 0 "#PWR04" H 1900 2400 50  0001 C CNN
+F 1 "GND" V 1905 2522 50  0000 R CNN
+F 2 "" H 1900 2650 50  0001 C CNN
+F 3 "" H 1900 2650 50  0001 C CNN
+	1    1900 2650
+	0    -1   -1   0   
+$EndComp
+NoConn ~ 1900 2850
+Text GLabel 2200 2750 2    50   Input ~ 0
+CV2a
+Text GLabel 2350 3200 2    50   Input ~ 0
+CV2b
+$Comp
+L Connector:AudioJack2_SwitchT J5
+U 1 1 5FAADE5C
+P 3200 2700
+F 0 "J5" H 3232 3025 50  0000 C CNN
+F 1 "V/OCT" H 3232 2934 50  0000 C CNN
+F 2 "elektrophon:Jack_3.5mm_WQP-PJ301BM_Vertical" H 3200 2700 50  0001 C CNN
+F 3 "~" H 3200 2700 50  0001 C CNN
+	1    3200 2700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3400 2700 3700 2700
+$Comp
+L power:GND #PWR012
+U 1 1 5FAADE63
+P 3400 2600
+F 0 "#PWR012" H 3400 2350 50  0001 C CNN
+F 1 "GND" V 3405 2472 50  0000 R CNN
+F 2 "" H 3400 2600 50  0001 C CNN
+F 3 "" H 3400 2600 50  0001 C CNN
+	1    3400 2600
+	0    -1   -1   0   
+$EndComp
+NoConn ~ 3400 2800
+Text GLabel 3700 2700 2    50   Input ~ 0
+V_OCT
+$Comp
+L Device:R_POT RV3
+U 1 1 5FAAE614
+P 2200 4050
+F 0 "RV3" H 2130 4096 50  0000 R CNN
+F 1 "20k" H 2130 4005 50  0000 R CNN
+F 2 "elektrophon:Potentiometer_Alpha_RD901F-40-00D_Single_Vertical" H 2200 4050 50  0001 C CNN
+F 3 "~" H 2200 4050 50  0001 C CNN
+	1    2200 4050
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR010
+U 1 1 5FAAE61B
+P 2200 4200
+F 0 "#PWR010" H 2200 3950 50  0001 C CNN
+F 1 "GND" H 2205 4027 50  0000 C CNN
+F 2 "" H 2200 4200 50  0001 C CNN
+F 3 "" H 2200 4200 50  0001 C CNN
+	1    2200 4200
+	1    0    0    -1  
+$EndComp
+Text GLabel 2350 4050 2    50   Input ~ 0
+FREQ
+$Comp
+L power:+15V #PWR09
+U 1 1 5FAAE8ED
+P 2200 3900
+F 0 "#PWR09" H 2200 3750 50  0001 C CNN
+F 1 "+15V" H 2215 4073 50  0000 C CNN
+F 2 "" H 2200 3900 50  0001 C CNN
+F 3 "" H 2200 3900 50  0001 C CNN
+	1    2200 3900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_POT RV1
+U 1 1 5FAB132F
+P 2200 2100
+F 0 "RV1" H 2130 2146 50  0000 R CNN
+F 1 "50k" H 2130 2055 50  0000 R CNN
+F 2 "elektrophon:Potentiometer_Alpha_RD901F-40-00D_Single_Vertical" H 2200 2100 50  0001 C CNN
+F 3 "~" H 2200 2100 50  0001 C CNN
+	1    2200 2100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:AudioJack2_SwitchT J3
+U 1 1 5FAB1335
+P 1700 1650
+F 0 "J3" H 1732 1975 50  0000 C CNN
+F 1 "CV1" H 1732 1884 50  0000 C CNN
+F 2 "elektrophon:Jack_3.5mm_WQP-PJ301BM_Vertical" H 1700 1650 50  0001 C CNN
+F 3 "~" H 1700 1650 50  0001 C CNN
+	1    1700 1650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1900 1650 2200 1650
+Wire Wire Line
+	2200 1650 2200 1950
+$Comp
+L power:GND #PWR07
+U 1 1 5FAB133D
+P 2200 2250
+F 0 "#PWR07" H 2200 2000 50  0001 C CNN
+F 1 "GND" H 2205 2077 50  0000 C CNN
+F 2 "" H 2200 2250 50  0001 C CNN
+F 3 "" H 2200 2250 50  0001 C CNN
+	1    2200 2250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR03
+U 1 1 5FAB1343
+P 1900 1550
+F 0 "#PWR03" H 1900 1300 50  0001 C CNN
+F 1 "GND" V 1905 1422 50  0000 R CNN
+F 2 "" H 1900 1550 50  0001 C CNN
+F 3 "" H 1900 1550 50  0001 C CNN
+	1    1900 1550
+	0    -1   -1   0   
+$EndComp
+NoConn ~ 1900 1750
+Text GLabel 2350 2100 2    50   Input ~ 0
+CV1
+$Comp
+L Switch:SW_DPDT_x2 SW1
+U 1 1 5FAB6AF6
+P 4050 3750
+F 0 "SW1" H 4050 4035 50  0000 C CNN
+F 1 "SW_DPDT_x2" H 4050 3944 50  0000 C CNN
+F 2 "Button_Switch_THT:SW_CuK_JS202011CQN_DPDT_Straight" H 4050 3750 50  0001 C CNN
+F 3 "~" H 4050 3750 50  0001 C CNN
+	1    4050 3750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Switch:SW_DPDT_x2 SW1
+U 2 1 5FAB71D9
+P 4050 4300
+F 0 "SW1" H 4050 4585 50  0000 C CNN
+F 1 "SW_DPDT_x2" H 4050 4494 50  0000 C CNN
+F 2 "Button_Switch_THT:SW_CuK_JS202011CQN_DPDT_Straight" H 4050 4300 50  0001 C CNN
+F 3 "~" H 4050 4300 50  0001 C CNN
+	2    4050 4300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR013
+U 1 1 5FAB7A92
+P 3500 4100
+F 0 "#PWR013" H 3500 3850 50  0001 C CNN
+F 1 "GND" H 3505 3927 50  0000 C CNN
+F 2 "" H 3500 4100 50  0001 C CNN
+F 3 "" H 3500 4100 50  0001 C CNN
+	1    3500 4100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3850 3750 3750 3750
+Wire Wire Line
+	3750 3750 3750 4000
+Wire Wire Line
+	3750 4300 3850 4300
+Wire Wire Line
+	3750 4000 3500 4000
+Wire Wire Line
+	3500 4000 3500 4100
+Connection ~ 3750 4000
+Wire Wire Line
+	3750 4000 3750 4300
+Text GLabel 4250 3650 2    50   Input ~ 0
+A
+Text GLabel 4250 3850 2    50   Input ~ 0
+B
+Text GLabel 4250 4200 2    50   Input ~ 0
+C
+Text GLabel 4250 4400 2    50   Input ~ 0
+D
+$Comp
+L Device:R_POT RV4
+U 1 1 5FAB9D10
+P 2200 4900
+F 0 "RV4" H 2131 4946 50  0000 R CNN
+F 1 "50k (log)" H 2131 4855 50  0000 R CNN
+F 2 "elektrophon:Potentiometer_Alpha_RD901F-40-00D_Single_Vertical" H 2200 4900 50  0001 C CNN
+F 3 "~" H 2200 4900 50  0001 C CNN
+	1    2200 4900
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR011
+U 1 1 5FAB9D16
+P 2200 5050
+F 0 "#PWR011" H 2200 4800 50  0001 C CNN
+F 1 "GND" H 2205 4877 50  0000 C CNN
+F 2 "" H 2200 5050 50  0001 C CNN
+F 3 "" H 2200 5050 50  0001 C CNN
+	1    2200 5050
+	1    0    0    -1  
+$EndComp
+Text GLabel 2350 4900 2    50   Input ~ 0
+RES
+Text GLabel 2350 4600 2    50   Input ~ 0
+OUT_B
+Wire Wire Line
+	2350 4600 2200 4600
+Wire Wire Line
+	2200 4600 2200 4750
+$Comp
+L Connector:AudioJack2_SwitchT J6
+U 1 1 5FABEC10
+P 8550 2400
+F 0 "J6" H 8370 2425 50  0000 R CNN
+F 1 "V/OCT" H 8370 2334 50  0000 R CNN
+F 2 "elektrophon:Jack_3.5mm_WQP-PJ301BM_Vertical" H 8550 2400 50  0001 C CNN
+F 3 "~" H 8550 2400 50  0001 C CNN
+	1    8550 2400
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR015
+U 1 1 5FABEC17
+P 8350 2300
+F 0 "#PWR015" H 8350 2050 50  0001 C CNN
+F 1 "GND" V 8355 2172 50  0000 R CNN
+F 2 "" H 8350 2300 50  0001 C CNN
+F 3 "" H 8350 2300 50  0001 C CNN
+	1    8350 2300
+	0    1    1    0   
+$EndComp
+$Comp
+L Switch:SW_SPDT SW3
+U 1 1 5FAC0394
+P 7850 2400
+F 0 "SW3" H 7850 2685 50  0000 C CNN
+F 1 "SW_SPDT" H 7850 2594 50  0000 C CNN
+F 2 "" H 7850 2400 50  0001 C CNN
+F 3 "~" H 7850 2400 50  0001 C CNN
+	1    7850 2400
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Switch:SW_SPST SW2
+U 1 1 5FAC0AF9
+P 6250 3950
+F 0 "SW2" H 6250 4185 50  0000 C CNN
+F 1 "SW_SPST" H 6250 4094 50  0000 C CNN
+F 2 "" H 6250 3950 50  0001 C CNN
+F 3 "~" H 6250 3950 50  0001 C CNN
+	1    6250 3950
+	1    0    0    -1  
+$EndComp
+NoConn ~ 8350 2500
+Text GLabel 7350 2300 0    50   Input ~ 0
+OUT_A
+Text GLabel 7350 2500 0    50   Input ~ 0
+OUT_B
+Wire Wire Line
+	8350 2400 8050 2400
+$Comp
+L Device:R R1
+U 1 1 5FAC8090
+P 7500 2300
+F 0 "R1" V 7293 2300 50  0000 C CNN
+F 1 "1k" V 7384 2300 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 7430 2300 50  0001 C CNN
+F 3 "~" H 7500 2300 50  0001 C CNN
+	1    7500 2300
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 5FAC85ED
+P 7500 2500
+F 0 "R2" V 7293 2500 50  0000 C CNN
+F 1 "1k" V 7384 2500 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 7430 2500 50  0001 C CNN
+F 3 "~" H 7500 2500 50  0001 C CNN
+	1    7500 2500
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR014
+U 1 1 5FACA24C
+P 6500 4050
+F 0 "#PWR014" H 6500 3800 50  0001 C CNN
+F 1 "GND" H 6505 3877 50  0000 C CNN
+F 2 "" H 6500 4050 50  0001 C CNN
+F 3 "" H 6500 4050 50  0001 C CNN
+	1    6500 4050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6500 4050 6500 3950
+Wire Wire Line
+	6500 3950 6450 3950
+Text GLabel 6050 3950 0    50   Input ~ 0
+CLIP
+$Comp
+L power:GND #PWR020
+U 1 1 5E18079D
+P 10450 5350
+AR Path="/5E18079D" Ref="#PWR020"  Part="1" 
+AR Path="/5DD3665B/5E18079D" Ref="#PWR?"  Part="1" 
+F 0 "#PWR020" H 10450 5100 50  0001 C CNN
+F 1 "GND" V 10450 5150 50  0000 C CNN
+F 2 "" H 10450 5350 50  0001 C CNN
+F 3 "" H 10450 5350 50  0001 C CNN
+	1    10450 5350
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:PWR_FLAG #FLG03
+U 1 1 5E1807A9
+P 10450 5350
+AR Path="/5E1807A9" Ref="#FLG03"  Part="1" 
+AR Path="/5DD3665B/5E1807A9" Ref="#FLG?"  Part="1" 
+F 0 "#FLG03" H 10450 5425 50  0001 C CNN
+F 1 "PWR_FLAG" V 10450 5478 50  0000 L CNN
+F 2 "" H 10450 5350 50  0001 C CNN
+F 3 "~" H 10450 5350 50  0001 C CNN
+	1    10450 5350
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:PWR_FLAG #FLG02
+U 1 1 5E1807A3
+P 10450 5250
+AR Path="/5E1807A3" Ref="#FLG02"  Part="1" 
+AR Path="/5DD3665B/5E1807A3" Ref="#FLG?"  Part="1" 
+F 0 "#FLG02" H 10450 5325 50  0001 C CNN
+F 1 "PWR_FLAG" V 10450 5378 50  0000 L CNN
+F 2 "" H 10450 5250 50  0001 C CNN
+F 3 "~" H 10450 5250 50  0001 C CNN
+	1    10450 5250
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:-15V #PWR019
+U 1 1 5E180797
+P 10450 5250
+AR Path="/5E180797" Ref="#PWR019"  Part="1" 
+AR Path="/5DD3665B/5E180797" Ref="#PWR?"  Part="1" 
+F 0 "#PWR019" H 10450 5350 50  0001 C CNN
+F 1 "-15V" V 10465 5378 50  0000 L CNN
+F 2 "" H 10450 5250 50  0001 C CNN
+F 3 "" H 10450 5250 50  0001 C CNN
+	1    10450 5250
+	0    1    1    0   
+$EndComp
+$Comp
+L power:+15V #PWR018
+U 1 1 5F6BBF92
+P 10450 5150
+AR Path="/5F6BBF92" Ref="#PWR018"  Part="1" 
+AR Path="/5DD3665B/5F6BBF92" Ref="#PWR?"  Part="1" 
+F 0 "#PWR018" H 10450 5000 50  0001 C CNN
+F 1 "+15V" V 10465 5278 50  0000 L CNN
+F 2 "" H 10450 5150 50  0001 C CNN
+F 3 "" H 10450 5150 50  0001 C CNN
+	1    10450 5150
+	0    1    1    0   
+$EndComp
+Text Notes 10250 6450 0    50   ~ 0
+Power
+$Comp
+L power:PWR_FLAG #FLG01
+U 1 1 5E180731
+P 10450 5150
+AR Path="/5E180731" Ref="#FLG01"  Part="1" 
+AR Path="/5DD3665B/5E180731" Ref="#FLG?"  Part="1" 
+F 0 "#FLG01" H 10450 5225 50  0001 C CNN
+F 1 "PWR_FLAG" V 10450 5278 50  0000 L CNN
+F 2 "" H 10450 5150 50  0001 C CNN
+F 3 "~" H 10450 5150 50  0001 C CNN
+	1    10450 5150
+	0    -1   -1   0   
+$EndComp
+Text GLabel 9400 5150 0    50   Input ~ 0
+IN_1
+Text GLabel 9400 5250 0    50   Input ~ 0
+IN_2
+Text GLabel 9400 5350 0    50   Input ~ 0
+CV2a
+Text GLabel 9400 5450 0    50   Input ~ 0
+CV2b
+Text GLabel 9400 5550 0    50   Input ~ 0
+V_OCT
+Text GLabel 9400 5650 0    50   Input ~ 0
+FREQ
+Text GLabel 9400 5750 0    50   Input ~ 0
+CV1
+Text GLabel 9400 5950 0    50   Input ~ 0
+OUT_B
+Text GLabel 9400 6050 0    50   Input ~ 0
+RES
+$Comp
+L power:+15V #PWR017
+U 1 1 600CB0AD
+P 9400 5050
+AR Path="/600CB0AD" Ref="#PWR017"  Part="1" 
+AR Path="/5DD3665B/600CB0AD" Ref="#PWR?"  Part="1" 
+F 0 "#PWR017" H 9400 4900 50  0001 C CNN
+F 1 "+15V" V 9415 5178 50  0000 L CNN
+F 2 "" H 9400 5050 50  0001 C CNN
+F 3 "" H 9400 5050 50  0001 C CNN
+	1    9400 5050
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR016
+U 1 1 600CCC78
+P 9400 4950
+AR Path="/600CCC78" Ref="#PWR016"  Part="1" 
+AR Path="/5DD3665B/600CCC78" Ref="#PWR?"  Part="1" 
+F 0 "#PWR016" H 9400 4700 50  0001 C CNN
+F 1 "GND" V 9400 4750 50  0000 C CNN
+F 2 "" H 9400 4950 50  0001 C CNN
+F 3 "" H 9400 4950 50  0001 C CNN
+	1    9400 4950
+	0    1    1    0   
+$EndComp
+Text GLabel 9400 5850 0    50   Input ~ 0
+OUT_A
+Text GLabel 10000 4450 0    50   Input ~ 0
+A
+Text GLabel 10000 4550 0    50   Input ~ 0
+B
+Text GLabel 10000 4650 0    50   Input ~ 0
+C
+Text GLabel 10000 4750 0    50   Input ~ 0
+D
+Text GLabel 10000 4850 0    50   Input ~ 0
+CLIP
+$Comp
+L Connector:Conn_01x05_Male J8
+U 1 1 5F76B769
+P 10200 4650
+F 0 "J8" H 10172 4674 50  0000 R CNN
+F 1 "Conn_01x05_Male" H 10172 4583 50  0000 R CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x05_P2.54mm_Vertical" H 10200 4650 50  0001 C CNN
+F 3 "~" H 10200 4650 50  0001 C CNN
+	1    10200 4650
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x12_Male J7
+U 1 1 5F76E589
+P 9600 5450
+F 0 "J7" H 9572 5424 50  0000 R CNN
+F 1 "Conn_01x12_Male" H 9572 5333 50  0000 R CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x12_P2.54mm_Vertical" H 9600 5450 50  0001 C CNN
+F 3 "~" H 9600 5450 50  0001 C CNN
+	1    9600 5450
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Connector:AudioJack2_SwitchT J1
+U 1 1 5F780A59
+P 1400 5750
+F 0 "J1" H 1432 6075 50  0000 C CNN
+F 1 "IN1" H 1432 5984 50  0000 C CNN
+F 2 "elektrophon:Jack_3.5mm_WQP-PJ301BM_Vertical" H 1400 5750 50  0001 C CNN
+F 3 "~" H 1400 5750 50  0001 C CNN
+	1    1400 5750
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR01
+U 1 1 5F780A60
+P 1600 5650
+F 0 "#PWR01" H 1600 5400 50  0001 C CNN
+F 1 "GND" V 1605 5522 50  0000 R CNN
+F 2 "" H 1600 5650 50  0001 C CNN
+F 3 "" H 1600 5650 50  0001 C CNN
+	1    1600 5650
+	0    -1   -1   0   
+$EndComp
+NoConn ~ 1600 5850
+$Comp
+L Connector:AudioJack2_SwitchT J2
+U 1 1 5F7811DD
+P 1400 6700
+F 0 "J2" H 1432 7025 50  0000 C CNN
+F 1 "IN2" H 1432 6934 50  0000 C CNN
+F 2 "elektrophon:Jack_3.5mm_WQP-PJ301BM_Vertical" H 1400 6700 50  0001 C CNN
+F 3 "~" H 1400 6700 50  0001 C CNN
+	1    1400 6700
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR02
+U 1 1 5F7811E4
+P 1600 6600
+F 0 "#PWR02" H 1600 6350 50  0001 C CNN
+F 1 "GND" V 1605 6472 50  0000 R CNN
+F 2 "" H 1600 6600 50  0001 C CNN
+F 3 "" H 1600 6600 50  0001 C CNN
+	1    1600 6600
+	0    -1   -1   0   
+$EndComp
+NoConn ~ 1600 6800
+Text GLabel 2100 6050 2    50   Input ~ 0
+IN_1
+Text GLabel 2100 7000 2    50   Input ~ 0
+IN_2
+$Comp
+L Device:R_POT ATTEN1
+U 1 1 5F750447
+P 1950 6050
+F 0 "ATTEN1" H 1881 6096 50  0000 R CNN
+F 1 "100k" H 1881 6005 50  0000 R CNN
+F 2 "elektrophon:Potentiometer_Alpha_RD901F-40-00D_Single_Vertical" H 1950 6050 50  0001 C CNN
+F 3 "~" H 1950 6050 50  0001 C CNN
+	1    1950 6050
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR05
+U 1 1 5F75044D
+P 1950 6200
+F 0 "#PWR05" H 1950 5950 50  0001 C CNN
+F 1 "GND" H 1955 6027 50  0000 C CNN
+F 2 "" H 1950 6200 50  0001 C CNN
+F 3 "" H 1950 6200 50  0001 C CNN
+	1    1950 6200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_POT ATTEN2
+U 1 1 5F750DB1
+P 1950 7000
+F 0 "ATTEN2" H 1881 7046 50  0000 R CNN
+F 1 "100k" H 1881 6955 50  0000 R CNN
+F 2 "elektrophon:Potentiometer_Alpha_RD901F-40-00D_Single_Vertical" H 1950 7000 50  0001 C CNN
+F 3 "~" H 1950 7000 50  0001 C CNN
+	1    1950 7000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR06
+U 1 1 5F750DB7
+P 1950 7150
+F 0 "#PWR06" H 1950 6900 50  0001 C CNN
+F 1 "GND" H 1955 6977 50  0000 C CNN
+F 2 "" H 1950 7150 50  0001 C CNN
+F 3 "" H 1950 7150 50  0001 C CNN
+	1    1950 7150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1950 6850 1950 6700
+Wire Wire Line
+	1600 6700 1950 6700
+Wire Wire Line
+	1950 5900 1950 5750
+Wire Wire Line
+	1600 5750 1950 5750
+$EndSCHEMATC

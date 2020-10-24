@@ -1,6 +1,29 @@
 EESchema-LIBRARY Version 2.4
 #encoding utf-8
 #
+# 23PS122
+#
+DEF 23PS122 C 0 30 Y Y 1 F N
+F0 "C" 350 250 50 H V L CNN
+F1 "23PS122" 350 150 50 H V L CNN
+F2 "23PS122" 350 50 50 H I L CNN
+F3 "https://www.mouser.com/datasheet/2/449/23p-1212170.pdf" 350 -50 50 H I L CNN
+F4 "Film Capacitors STYRENE 50V 220P" 350 -150 50 H I L CNN "Description"
+F5 "5.5" 350 -250 50 H I L CNN "Height"
+F6 "Xicon" 350 -350 50 H I L CNN "Manufacturer_Name"
+F7 "23PS122" 350 -450 50 H I L CNN "Manufacturer_Part_Number"
+F8 "23PS122" 350 -750 50 H I L CNN "Mouser Part Number"
+F9 "https://www.mouser.co.uk/ProductDetail/Xicon/23PS122?qs=VbcEA1k3avNJpJJzICbeHQ%3D%3D" 350 -850 50 H I L CNN "Mouser Price/Stock"
+DRAW
+P 2 0 1 6 200 0 220 0 N
+P 2 0 1 6 220 100 220 -100 N
+P 2 0 1 6 280 0 300 0 N
+P 2 0 1 6 280 100 280 -100 N
+X ~ 1 0 0 200 R 50 50 0 0 P
+X ~ 2 500 0 200 L 50 50 0 0 P
+ENDDRAW
+ENDDEF
+#
 # 2N5457
 #
 DEF 2N5457 Q 0 0 Y Y 1 F N
