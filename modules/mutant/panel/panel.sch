@@ -4,12 +4,12 @@ EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
-Title "Bass++"
-Date "2019-10-17"
+Title "mutant"
+Date "2020-10-25"
 Rev "01"
 Comp ""
-Comment1 "Original design by Thomas Henry"
-Comment2 "Schema for panel"
+Comment1 "schema for panel"
+Comment2 "low pass filter"
 Comment3 ""
 Comment4 "License CC BY 4.0 - Attribution 4.0 International"
 $EndDescr
@@ -88,17 +88,6 @@ F 1 "in_atten_2" H 2050 3255 50  0000 L CNN
 F 2 "elektrophon:panel_potentiometer" H 1950 3300 50  0001 C CNN
 F 3 "~" H 1950 3300 50  0001 C CNN
 	1    1950 3300
-	1    0    0    -1  
-$EndComp
-$Comp
-L Mechanical:MountingHole H15
-U 1 1 5D745729
-P 2050 4400
-F 0 "H15" H 2150 4446 50  0000 L CNN
-F 1 "OUT" H 2150 4355 50  0000 L CNN
-F 2 "elektrophon:panel_jack" H 2050 4400 50  0001 C CNN
-F 3 "~" H 2050 4400 50  0001 C CNN
-	1    2050 4400
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -190,17 +179,6 @@ F 3 "~" H 1450 3300 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Mechanical:MountingHole H2
-U 1 1 5F74E6F5
-P 950 3900
-F 0 "H2" H 1050 3946 50  0000 L CNN
-F 1 "mode" H 1050 3855 50  0000 L CNN
-F 2 "elektrophon:panel_switch" H 950 3900 50  0001 C CNN
-F 3 "~" H 950 3900 50  0001 C CNN
-	1    950  3900
-	1    0    0    -1  
-$EndComp
-$Comp
 L Mechanical:MountingHole H7
 U 1 1 5F74EA6E
 P 1500 3900
@@ -212,14 +190,25 @@ F 3 "~" H 1500 3900 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
+L Mechanical:MountingHole H15
+U 1 1 5D745729
+P 2050 4400
+F 0 "H15" H 2150 4446 50  0000 L CNN
+F 1 "OUT" H 2150 4355 50  0000 L CNN
+F 2 "elektrophon:panel_jack" H 2050 4400 50  0001 C CNN
+F 3 "~" H 2050 4400 50  0001 C CNN
+	1    2050 4400
+	1    0    0    -1  
+$EndComp
+$Comp
 L Mechanical:MountingHole H14
 U 1 1 5F74ED60
-P 2050 3900
-F 0 "H14" H 2150 3946 50  0000 L CNN
-F 1 "select" H 2150 3855 50  0000 L CNN
-F 2 "elektrophon:panel_switch" H 2050 3900 50  0001 C CNN
-F 3 "~" H 2050 3900 50  0001 C CNN
-	1    2050 3900
+P 1450 4400
+F 0 "H14" H 1550 4446 50  0000 L CNN
+F 1 "select" H 1550 4355 50  0000 L CNN
+F 2 "elektrophon:panel_switch" H 1450 4400 50  0001 C CNN
+F 3 "~" H 1450 4400 50  0001 C CNN
+	1    1450 4400
 	1    0    0    -1  
 $EndComp
 $EndSCHEMATC
