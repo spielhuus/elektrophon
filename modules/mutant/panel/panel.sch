@@ -194,19 +194,19 @@ L Mechanical:MountingHole H15
 U 1 1 5D745729
 P 2050 4400
 F 0 "H15" H 2150 4446 50  0000 L CNN
-F 1 "OUT" H 2150 4355 50  0000 L CNN
+F 1 "OUT2" H 2150 4355 50  0000 L CNN
 F 2 "elektrophon:panel_jack" H 2050 4400 50  0001 C CNN
 F 3 "~" H 2050 4400 50  0001 C CNN
 	1    2050 4400
 	1    0    0    -1  
 $EndComp
 $Comp
-L Mechanical:MountingHole H14
-U 1 1 5F74ED60
+L Mechanical:MountingHole H2
+U 1 1 5F9577F6
 P 1450 4400
-F 0 "H14" H 1550 4446 50  0000 L CNN
-F 1 "select" H 1550 4355 50  0000 L CNN
-F 2 "elektrophon:panel_switch" H 1450 4400 50  0001 C CNN
+F 0 "H2" H 1550 4446 50  0000 L CNN
+F 1 "OUT1" H 1550 4355 50  0000 L CNN
+F 2 "elektrophon:panel_jack" H 1450 4400 50  0001 C CNN
 F 3 "~" H 1450 4400 50  0001 C CNN
 	1    1450 4400
 	1    0    0    -1  

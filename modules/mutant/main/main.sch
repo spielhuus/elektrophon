@@ -87,7 +87,7 @@ U 1 1 5F715D58
 P 9600 3550
 F 0 "Q5" H 9791 3504 50  0000 L CNN
 F 1 "BC557" H 9791 3595 50  0000 L CNN
-F 2 "Package_TO_SOT_THT:TO-92_Inline" H 9800 3475 50  0001 L CIN
+F 2 "Package_TO_SOT_THT:TO-92_Inline_Wide" H 9800 3475 50  0001 L CIN
 F 3 "http://www.fairchildsemi.com/ds/BC/BC557.pdf" H 9600 3550 50  0001 L CNN
 F 4 "Q" H 9600 3550 50  0001 C CNN "Spice_Primitive"
 F 5 "BC556B" H 9600 3550 50  0001 C CNN "Spice_Model"
@@ -102,7 +102,7 @@ U 1 1 5F717FD1
 P 10100 3250
 F 0 "Q6" H 10291 3296 50  0000 L CNN
 F 1 "BC547" H 10291 3205 50  0000 L CNN
-F 2 "Package_TO_SOT_THT:TO-92_Inline" H 10300 3175 50  0001 L CIN
+F 2 "Package_TO_SOT_THT:TO-92_Inline_Wide" H 10300 3175 50  0001 L CIN
 F 3 "http://www.fairchildsemi.com/ds/BC/BC547.pdf" H 10100 3250 50  0001 L CNN
 F 4 "Q" H 10100 3250 50  0001 C CNN "Spice_Primitive"
 F 5 "BC846B" H 10100 3250 50  0001 C CNN "Spice_Model"
@@ -856,31 +856,31 @@ F 3 "" H 2350 7300 50  0001 C CNN
 	1    2350 7300
 	0    1    1    0   
 $EndComp
-Text GLabel 8750 5500 0    50   Input ~ 0
+Text GLabel 8750 5400 0    50   Input ~ 0
 IN_1
-Text GLabel 8750 5700 0    50   Input ~ 0
-IN_2
-Text GLabel 8750 6000 0    50   Input ~ 0
-CV2
-Text GLabel 8750 5800 0    50   Input ~ 0
-V_OCT
 Text GLabel 8750 5600 0    50   Input ~ 0
-FREQ
+IN_2
 Text GLabel 8750 5900 0    50   Input ~ 0
+CV2
+Text GLabel 8750 5700 0    50   Input ~ 0
+V_OCT
+Text GLabel 8750 5500 0    50   Input ~ 0
+FREQ
+Text GLabel 8750 5800 0    50   Input ~ 0
 CV
 Text GLabel 10200 5400 0    50   Input ~ 0
 OUT_B
 $Comp
 L power:+15V #PWR019
 U 1 1 600CB0AD
-P 8750 5400
+P 8750 5300
 AR Path="/600CB0AD" Ref="#PWR019"  Part="1" 
 AR Path="/5DD3665B/600CB0AD" Ref="#PWR?"  Part="1" 
-F 0 "#PWR019" H 8750 5250 50  0001 C CNN
-F 1 "+15V" V 8765 5528 50  0000 L CNN
-F 2 "" H 8750 5400 50  0001 C CNN
-F 3 "" H 8750 5400 50  0001 C CNN
-	1    8750 5400
+F 0 "#PWR019" H 8750 5150 50  0001 C CNN
+F 1 "+15V" V 8765 5428 50  0000 L CNN
+F 2 "" H 8750 5300 50  0001 C CNN
+F 3 "" H 8750 5300 50  0001 C CNN
+	1    8750 5300
 	0    -1   -1   0   
 $EndComp
 $Comp
@@ -1462,17 +1462,6 @@ Wire Wire Line
 	3300 7300 4100 7300
 Connection ~ 4100 7300
 $Comp
-L Connector:Conn_01x09_Female J1
-U 1 1 5F96F0ED
-P 8950 5600
-F 0 "J1" H 8978 5580 50  0000 L CNN
-F 1 "Conn_01x09_Female" H 8978 5535 50  0001 L CNN
-F 2 "Connector_PinSocket_2.54mm:PinSocket_1x09_P2.54mm_Vertical" H 8950 5600 50  0001 C CNN
-F 3 "~" H 8950 5600 50  0001 C CNN
-	1    8950 5600
-	1    0    0    -1  
-$EndComp
-$Comp
 L Amplifier_Operational:TL072 U2
 U 1 1 5F9A66C4
 P 2350 4450
@@ -1708,19 +1697,6 @@ Connection ~ 5700 7300
 Connection ~ 4900 7000
 Connection ~ 4900 7600
 $Comp
-L power:+5V #PWR0103
-U 1 1 5FA47847
-P 8750 5300
-AR Path="/5FA47847" Ref="#PWR0103"  Part="1" 
-AR Path="/5DD3665B/5FA47847" Ref="#PWR?"  Part="1" 
-F 0 "#PWR0103" H 8750 5150 50  0001 C CNN
-F 1 "+5V" V 8765 5428 50  0000 L CNN
-F 2 "" H 8750 5300 50  0001 C CNN
-F 3 "" H 8750 5300 50  0001 C CNN
-	1    8750 5300
-	0    -1   -1   0   
-$EndComp
-$Comp
 L Connector:Conn_01x04_Female J2
 U 1 1 5FA4E1EB
 P 10400 5300
@@ -1729,6 +1705,17 @@ F 1 "Conn_01x04_Female" H 10428 5185 50  0001 L CNN
 F 2 "Connector_PinSocket_2.54mm:PinSocket_1x04_P2.54mm_Vertical" H 10400 5300 50  0001 C CNN
 F 3 "~" H 10400 5300 50  0001 C CNN
 	1    10400 5300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x08_Female J1
+U 1 1 5F96F73E
+P 8950 5500
+F 0 "J1" H 8978 5430 50  0000 L CNN
+F 1 "Conn_01x08_Female" H 8978 5385 50  0001 L CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x08_P2.54mm_Vertical" H 8950 5500 50  0001 C CNN
+F 3 "~" H 8950 5500 50  0001 C CNN
+	1    8950 5500
 	1    0    0    -1  
 $EndComp
 $EndSCHEMATC

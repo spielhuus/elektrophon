@@ -210,23 +210,23 @@ Wire Wire Line
 $Comp
 L Connector:AudioJack2_SwitchT J6
 U 1 1 5FABEC10
-P 6650 2400
-F 0 "J6" H 6470 2425 50  0000 R CNN
-F 1 "V/OCT" H 6470 2334 50  0000 R CNN
-F 2 "elektrophon:Jack_3.5mm_WQP-PJ398SM_Vertical" H 6650 2400 50  0001 C CNN
-F 3 "~" H 6650 2400 50  0001 C CNN
-	1    6650 2400
+P 6300 1900
+F 0 "J6" H 6120 1925 50  0000 R CNN
+F 1 "OUt_1" H 6120 1834 50  0000 R CNN
+F 2 "elektrophon:Jack_3.5mm_WQP-PJ398SM_Vertical" H 6300 1900 50  0001 C CNN
+F 3 "~" H 6300 1900 50  0001 C CNN
+	1    6300 1900
 	-1   0    0    -1  
 $EndComp
 $Comp
 L power:GND #PWR013
 U 1 1 5FABEC17
-P 6450 2300
-F 0 "#PWR013" H 6450 2050 50  0001 C CNN
-F 1 "GND" V 6455 2172 50  0000 R CNN
-F 2 "" H 6450 2300 50  0001 C CNN
-F 3 "" H 6450 2300 50  0001 C CNN
-	1    6450 2300
+P 6100 1800
+F 0 "#PWR013" H 6100 1550 50  0001 C CNN
+F 1 "GND" V 6105 1672 50  0000 R CNN
+F 2 "" H 6100 1800 50  0001 C CNN
+F 3 "" H 6100 1800 50  0001 C CNN
+	1    6100 1800
 	0    1    1    0   
 $EndComp
 $Comp
@@ -235,14 +235,14 @@ U 1 1 5FAC0AF9
 P 6250 3700
 F 0 "SW2" H 6250 3935 50  0000 C CNN
 F 1 "SW_SPST" H 6250 3844 50  0000 C CNN
-F 2 "elektrophon:Tumbler_SW_x2" H 6250 3700 50  0001 C CNN
+F 2 "elektrophon:SPDT_KIT" H 6250 3700 50  0001 C CNN
 F 3 "~" H 6250 3700 50  0001 C CNN
 	1    6250 3700
 	1    0    0    -1  
 $EndComp
-NoConn ~ 6450 2500
+NoConn ~ 6100 2000
 Wire Wire Line
-	6450 2400 6150 2400
+	6100 1900 5800 1900
 $Comp
 L power:GND #PWR014
 U 1 1 5FACA24C
@@ -440,31 +440,31 @@ F 3 "~" H 10800 6150 50  0001 C CNN
 	1    10800 6150
 	0    -1   -1   0   
 $EndComp
-Text GLabel 8750 5500 0    50   Input ~ 0
+Text GLabel 8750 5400 0    50   Input ~ 0
 IN_1
-Text GLabel 8750 5700 0    50   Input ~ 0
-IN_2
-Text GLabel 8750 6000 0    50   Input ~ 0
-CV2
-Text GLabel 8750 5800 0    50   Input ~ 0
-V_OCT
 Text GLabel 8750 5600 0    50   Input ~ 0
-FREQ
+IN_2
 Text GLabel 8750 5900 0    50   Input ~ 0
+CV2
+Text GLabel 8750 5700 0    50   Input ~ 0
+V_OCT
+Text GLabel 8750 5500 0    50   Input ~ 0
+FREQ
+Text GLabel 8750 5800 0    50   Input ~ 0
 CV
 Text GLabel 10200 5400 0    50   Input ~ 0
 OUT_B
 $Comp
 L power:+15V #PWR017
 U 1 1 600CB0AD
-P 8750 5400
+P 8750 5300
 AR Path="/600CB0AD" Ref="#PWR017"  Part="1" 
 AR Path="/5DD3665B/600CB0AD" Ref="#PWR?"  Part="1" 
-F 0 "#PWR017" H 8750 5250 50  0001 C CNN
-F 1 "+15V" V 8765 5528 50  0000 L CNN
-F 2 "" H 8750 5400 50  0001 C CNN
-F 3 "" H 8750 5400 50  0001 C CNN
-	1    8750 5400
+F 0 "#PWR017" H 8750 5150 50  0001 C CNN
+F 1 "+15V" V 8765 5428 50  0000 L CNN
+F 2 "" H 8750 5300 50  0001 C CNN
+F 3 "" H 8750 5300 50  0001 C CNN
+	1    8750 5300
 	0    -1   -1   0   
 $EndComp
 $Comp
@@ -487,75 +487,76 @@ CLIP
 Text GLabel 10200 5300 0    50   Input ~ 0
 RES
 $Comp
-L Connector:Conn_01x09_Female J7
-U 1 1 5F96F0ED
-P 8950 5600
-F 0 "J7" H 8978 5580 50  0000 L CNN
-F 1 "Conn_01x09_Female" H 8978 5535 50  0001 L CNN
-F 2 "Connector_PinSocket_2.54mm:PinSocket_1x09_P2.54mm_Vertical" H 8950 5600 50  0001 C CNN
-F 3 "~" H 8950 5600 50  0001 C CNN
-	1    8950 5600
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:+5V #PWR016
-U 1 1 5FA47847
-P 8750 5300
-AR Path="/5FA47847" Ref="#PWR016"  Part="1" 
-AR Path="/5DD3665B/5FA47847" Ref="#PWR?"  Part="1" 
-F 0 "#PWR016" H 8750 5150 50  0001 C CNN
-F 1 "+5V" V 8765 5428 50  0000 L CNN
-F 2 "" H 8750 5300 50  0001 C CNN
-F 3 "" H 8750 5300 50  0001 C CNN
-	1    8750 5300
-	0    -1   -1   0   
-$EndComp
-$Comp
-L Connector:Conn_01x04_Female J8
-U 1 1 5FA4E1EB
-P 10400 5300
-F 0 "J8" H 10428 5230 50  0000 L CNN
-F 1 "Conn_01x04_Female" H 10428 5185 50  0001 L CNN
-F 2 "Connector_PinSocket_2.54mm:PinSocket_1x04_P2.54mm_Vertical" H 10400 5300 50  0001 C CNN
-F 3 "~" H 10400 5300 50  0001 C CNN
-	1    10400 5300
-	1    0    0    -1  
-$EndComp
-$Comp
 L Device:R R1
 U 1 1 5FAC8090
-P 5600 2300
-F 0 "R1" V 5393 2300 50  0000 C CNN
-F 1 "1k" V 5484 2300 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 5530 2300 50  0001 C CNN
-F 3 "~" H 5600 2300 50  0001 C CNN
-	1    5600 2300
+P 5650 1900
+F 0 "R1" V 5443 1900 50  0000 C CNN
+F 1 "1k" V 5534 1900 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 5580 1900 50  0001 C CNN
+F 3 "~" H 5650 1900 50  0001 C CNN
+	1    5650 1900
 	0    1    1    0   
 $EndComp
-Text GLabel 5450 2300 0    50   Input ~ 0
+Text GLabel 5500 1900 0    50   Input ~ 0
 OUT_A
 $Comp
 L Device:R R2
 U 1 1 5FAC85ED
-P 5600 2500
-F 0 "R2" V 5393 2500 50  0000 C CNN
-F 1 "1k" V 5484 2500 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 5530 2500 50  0001 C CNN
-F 3 "~" H 5600 2500 50  0001 C CNN
-	1    5600 2500
+P 5650 2450
+F 0 "R2" V 5443 2450 50  0000 C CNN
+F 1 "1k" V 5534 2450 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 5580 2450 50  0001 C CNN
+F 3 "~" H 5650 2450 50  0001 C CNN
+	1    5650 2450
 	0    1    1    0   
 $EndComp
-Text GLabel 5450 2500 0    50   Input ~ 0
+Text GLabel 5500 2450 0    50   Input ~ 0
 OUT_B
 $Comp
-L Switch:SW_SPDT SW1
-U 1 1 5FAC0394
-P 5950 2400
-F 0 "SW1" H 5950 2685 50  0000 C CNN
-F 1 "SW_SPDT" H 5950 2594 50  0000 C CNN
-F 2 "elektrophon:SPDT_KIT" H 5950 2400 50  0001 C CNN
-F 3 "~" H 5950 2400 50  0001 C CNN
-	1    5950 2400
+L Connector:Conn_01x04_Male J8
+U 1 1 5F95B514
+P 10400 5300
+F 0 "J8" H 10372 5228 50  0000 R CNN
+F 1 "Conn_01x04_Male" H 10372 5183 50  0001 R CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x04_P2.54mm_Vertical" H 10400 5300 50  0001 C CNN
+F 3 "~" H 10400 5300 50  0001 C CNN
+	1    10400 5300
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Connector:AudioJack2_SwitchT J9
+U 1 1 5F95936F
+P 6300 2450
+F 0 "J9" H 6120 2475 50  0000 R CNN
+F 1 "OUT_2" H 6120 2384 50  0000 R CNN
+F 2 "elektrophon:Jack_3.5mm_WQP-PJ398SM_Vertical" H 6300 2450 50  0001 C CNN
+F 3 "~" H 6300 2450 50  0001 C CNN
+	1    6300 2450
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0101
+U 1 1 5F959375
+P 6100 2350
+F 0 "#PWR0101" H 6100 2100 50  0001 C CNN
+F 1 "GND" V 6105 2222 50  0000 R CNN
+F 2 "" H 6100 2350 50  0001 C CNN
+F 3 "" H 6100 2350 50  0001 C CNN
+	1    6100 2350
+	0    1    1    0   
+$EndComp
+NoConn ~ 6100 2550
+Wire Wire Line
+	6100 2450 5800 2450
+$Comp
+L Connector:Conn_01x08_Male J7
+U 1 1 5F95FE1F
+P 8950 5500
+F 0 "J7" H 8922 5428 50  0000 R CNN
+F 1 "Conn_01x08_Male" H 8922 5383 50  0001 R CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x08_P2.54mm_Vertical" H 8950 5500 50  0001 C CNN
+F 3 "~" H 8950 5500 50  0001 C CNN
+	1    8950 5500
 	-1   0    0    -1  
 $EndComp
 $EndSCHEMATC
