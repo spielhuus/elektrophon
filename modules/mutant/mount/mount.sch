@@ -11,14 +11,14 @@ Comp ""
 Comment1 "Schema for mount circuit"
 Comment2 "low pass filter"
 Comment3 ""
-Comment4 "Schema"
+Comment4 "License CC BY 4.0 - Attribution 4.0 International"
 $EndDescr
 $Comp
 L Device:R_POT RV2
 U 1 1 5FAAAE99
 P 2200 2950
 F 0 "RV2" H 2130 2996 50  0000 R CNN
-F 1 "1M" H 2130 2905 50  0000 R CNN
+F 1 "50k" H 2130 2905 50  0000 R CNN
 F 2 "elektrophon:Potentiometer_Alpha_RD901F-40-00D_Single_Vertical" H 2200 2950 50  0001 C CNN
 F 3 "~" H 2200 2950 50  0001 C CNN
 	1    2200 2950
