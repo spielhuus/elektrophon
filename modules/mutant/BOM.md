@@ -26,7 +26,7 @@
 |R32 R33 R34 R35              |4       |110k             |Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal|
 |R36                          |1       |1.5k             |Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal|
 |R37                          |1       |1Meg             |Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal|
-|R7 R8 R12 R15 R18            |5       |100k             |Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal|
+|R3 R7 R8 R12 R15 R18         |6       |100k             |Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal|
 |R1 R9 R14                    |3       |100k             |Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical   |
 |RV1                          |1       |1k               |Potentiometer_THT:Potentiometer_Bourns_3386P_Vertical         |
 |U1 U2 U3 U4                  |4       |TL072            |Package_DIP:DIP-8_W7.62mm_Socket                              |

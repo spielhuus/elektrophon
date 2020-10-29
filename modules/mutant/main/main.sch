@@ -1424,7 +1424,7 @@ Connection ~ 6500 1550
 Wire Wire Line
 	1800 4350 2000 4350
 Wire Wire Line
-	5300 4100 6600 4100
+	5300 4100 5700 4100
 Wire Wire Line
 	8450 1150 8550 1150
 Connection ~ 6500 2200
@@ -1718,4 +1718,17 @@ F 3 "~" H 8950 5500 50  0001 C CNN
 	1    8950 5500
 	1    0    0    -1  
 $EndComp
+$Comp
+L Device:R R3
+U 1 1 5F991352
+P 5850 4100
+F 0 "R3" V 5643 4100 50  0000 C CNN
+F 1 "100k" V 5734 4100 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 5780 4100 50  0001 C CNN
+F 3 "~" H 5850 4100 50  0001 C CNN
+	1    5850 4100
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6000 4100 6600 4100
 $EndSCHEMATC
