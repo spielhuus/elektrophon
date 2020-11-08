@@ -1,0 +1,19 @@
+.title KiCad schematic
+XRV1 GND Net-_C13-Pad2_ NC_01 voltage_divider
+XRV2 GND Net-_C14-Pad2_ NC_02 voltage_divider
+R28 Net-_Q9-Pad3_ -15V 22k
+R29 Net-_Q10-Pad3_ -15V 22k
+R31 Net-_Q11-Pad2_ Net-_Q10-Pad3_ 47k
+R30 Net-_Q11-Pad2_ Net-_Q9-Pad3_ 47k
+Q9 +15V Net-_C13-Pad1_ Net-_Q9-Pad3_ BC846B
+Q10 +15V Net-_C14-Pad1_ Net-_Q10-Pad3_ BC846B
+R32 Net-_C15-Pad2_ -15V 1.5k
+Q11 +15V Net-_Q11-Pad2_ Net-_C15-Pad2_ BC846B
+C13 Net-_C13-Pad1_ Net-_C13-Pad2_ 1u
+C14 Net-_C14-Pad1_ Net-_C14-Pad2_ 1u
+R33 Net-_C15-Pad1_ +15V 68k
+R34 GND Net-_C15-Pad1_ 100k
+C15 Net-_C15-Pad1_ Net-_C15-Pad2_ 1u
+R35 /MIXER_IN -15V 1.5k
+Q12 +15V Net-_C15-Pad1_ /MIXER_IN BC846B
+.end

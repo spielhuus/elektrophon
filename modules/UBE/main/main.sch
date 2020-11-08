@@ -406,10 +406,6 @@ F 6 "Y" H 7750 2600 50  0001 C CNN "Spice_Netlist_Enabled"
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	7900 2600 7900 2850
-Wire Wire Line
-	7900 2850 7750 2850
-Wire Wire Line
 	7750 2850 7750 2750
 $Comp
 L Device:C C6
@@ -452,7 +448,6 @@ Wire Wire Line
 	7450 2600 7600 2600
 Wire Wire Line
 	8000 2600 7950 2600
-Connection ~ 7900 2600
 Wire Wire Line
 	7950 2600 7950 2100
 Wire Wire Line
@@ -696,4 +691,9 @@ F 3 "~" H 10100 2750 50  0001 C CNN
 	1    10100 2750
 	-1   0    0    1   
 $EndComp
+Connection ~ 8600 2600
+Wire Wire Line
+	7950 2850 7950 2600
+Wire Wire Line
+	7750 2850 7950 2850
 $EndSCHEMATC
