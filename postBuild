@@ -2,4 +2,3 @@ LIBRARY_PATH=`pwd`/lib
 mkdir $LIBRARY_PATH
 ln -s /usr/lib/x86_64-linux-gnu/libngspice.so.0 $LIBRARY_PATH/libngspice.so
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$LIBRARY_PATH
-ENV LD_LIBRARY_PATH $LIBRARY_PATH:$LD_LIBRARY_PATH
