@@ -1,0 +1,23 @@
+.title KiCad schematic
+.include /home/etienne/Documents/elektrophon/lib/spice/cmos/CD4069UB-hex.lib
+.include 'Way Huge Red LLama.cir'
+.control
+* Save only the output values
+save v(OUT)
+* 44100Hz sampling frequency
+tran 22.675u 6
+wrdata output v(OUT)
+* you can use output.data as input for scripts
+.endc
+.subckt voltage_divider n1 n2 n3
+R1 n1 n2 0.9MegOhm
+R2 n2 n3 0.09999999999999998MegOhm
+.ends voltage_divider
+V1 +5V 0 DC 5
+a1 %v([IN]) filesrc
+
+.model filesrc filesource (file="input.spice" amploffset=[0] amplscale=[5]
++                          timeoffset=0 timescale=1
++                          timerelative=false amplstep=false)
+
+.end

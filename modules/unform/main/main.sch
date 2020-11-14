@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 6
+Sheet 1 5
 Title ""
 Date ""
 Rev ""
@@ -39,17 +39,4 @@ U 5FA2D9EA
 F0 "Low Pass 200" 50
 F1 "Low Pass 200.sch" 50
 $EndSheet
-$Sheet
-S 1000 3550 1100 350 
-U 5FA7D90C
-F0 "Sheet5FA7D90B" 50
-F1 "Input Mixer.sch" 50
-F2 "MIXER_IN" I R 2100 3700 50 
-$EndSheet
-Wire Wire Line
-	2750 4150 2350 4150
-Wire Wire Line
-	2350 4150 2350 3700
-Wire Wire Line
-	2350 3700 2100 3700
 $EndSCHEMATC
