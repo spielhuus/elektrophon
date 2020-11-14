@@ -1,4 +1,4 @@
 #!/bin/bash
 HOME=/home/jovyan
-export SPICE_LIB_DIR=$HOME/lib/
+export SPICE_LIB_DIR=$HOME/lib/libngspice.so
 exec "$@"
