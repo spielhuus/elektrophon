@@ -1,8 +1,9 @@
 #!/bin/bash
 
-LIBRARY_PATH=`pwd`/lib
-echo $LIBRARY_PATH
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$LIBRARY_PATH
-ldconfig 
+#LIBRARY_PATH=`pwd`/lib
+#echo $LIBRARY_PATH
+#export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$LIBRARY_PATH
+#ldconfig 
+ln -s /usr/lib/x86_64-linux-gnu/libngspice.so.0 /usr/lib/x86_64-linux-gnu/libngspice.so
 
 exec "$@"
