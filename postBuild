@@ -1,6 +1,10 @@
 #!/bin/bash
 
 echo '#################################################'
+wget 'https://downloads.sourceforge.net/project/ngspice/ng-spice-rework/33/ngspice-33.tar.gz?r=https%3A%2F%2Fsourceforge.net%2Fprojects%2Fngspice%2Ffiles%2Flatest%2Fdownload&ts=1605431927' -O ngspice-33.tar.gz
+ls
+tar xfz ngspice-33.tar.gz
+echo '#################################################'
 echo '#################################################'
 echo '#################################################'
 find /usr -name "*ngspice*"
