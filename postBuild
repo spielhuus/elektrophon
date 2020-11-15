@@ -4,6 +4,7 @@ wget 'https://downloads.sourceforge.net/project/ngspice/ng-spice-rework/33/ngspi
 tar xfz ngspice-33.tar.gz
 cd ngspice-33
 ./configure --prefix=$HOME/.local --without-x
-make 
+make
+mkdir -p $HOME/.local/lib
 make install
-ls $HOME/.local/lib
+find $HOME/.local
