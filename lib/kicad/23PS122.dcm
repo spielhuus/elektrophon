@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP 23PS122
+D Film Capacitors STYRENE 50V 220P
+K
+F https://www.mouser.com/datasheet/2/449/23p-1212170.pdf
+$ENDCMP
+#
+#End Doc Library
