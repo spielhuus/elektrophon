@@ -1,10 +1,16 @@
 #!/bin/bash
 
-wget 'https://downloads.sourceforge.net/project/ngspice/ng-spice-rework/33/ngspice-33.tar.gz?r=https%3A%2F%2Fsourceforge.net%2Fprojects%2Fngspice%2Ffiles%2Flatest%2Fdownload&ts=1605431927' -O ngspice-33.tar.gz
-tar xfz ngspice-33.tar.gz
-cd ngspice-33
-./configure --prefix=$HOME/.local --without-x --with-ngshared
+wget 'https://downloads.sourceforge.net/project/ngspice/ng-spice-rework/32/ngspice-32.tar.gz?r=https%3A%2F%2Fsourceforge.net%2Fprojects%2Fngspice%2Ffiles%2Fng-spice-rework%2F32%2Fngspice-32.tar.gz%2Fdownload&ts=1605439792' -O ngspice-32.tar.gz
+tar xfz ngspice-32.tar.gz
+cd ngspice-32
+./configure --prefix=$HOME/.local \
+  --without-x \
+  --with-ngshared \
+  --enable-xspice \
+  --disable-debug \
+  --enable-cider \
+  --with-readline=yes \
+  --enable-openmp
 make
 mkdir -p $HOME/.local/lib
 make install
-find $HOME/.local
