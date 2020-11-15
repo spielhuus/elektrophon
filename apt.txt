@@ -1,1 +1,1 @@
-ngspice
+libngspice0-dev
