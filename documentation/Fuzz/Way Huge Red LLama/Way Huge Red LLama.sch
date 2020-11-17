@@ -197,7 +197,7 @@ Wire Wire Line
 	4550 3350 4500 3350
 Connection ~ 4950 3350
 Connection ~ 4500 3350
-Text GLabel 5750 3350 2    50   Input ~ 0
+Text GLabel 6250 3350 2    50   Input ~ 0
 OUT
 Wire Wire Line
 	5750 3350 5650 3350
@@ -370,4 +370,44 @@ F 6 "Y" H 6200 4650 50  0001 C CNN "Spice_Netlist_Enabled"
 	6    6200 4650
 	1    0    0    -1  
 $EndComp
+$Comp
+L Device:CP C5
+U 1 1 5FB3E4CD
+P 5900 3350
+F 0 "C5" V 6155 3350 50  0000 C CNN
+F 1 "10u" V 6064 3350 50  0000 C CIN
+F 2 "" H 5938 3200 50  0001 C CNN
+F 3 "~" H 5900 3350 50  0001 C CNN
+	1    5900 3350
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R5
+U 1 1 5FB3F028
+P 6150 3550
+F 0 "R5" V 5943 3550 50  0000 C CNN
+F 1 "100k" V 6034 3550 50  0000 C CNN
+F 2 "" V 6080 3550 50  0001 C CNN
+F 3 "~" H 6150 3550 50  0001 C CNN
+	1    6150 3550
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR05
+U 1 1 5FB3F7EF
+P 6150 3700
+F 0 "#PWR05" H 6150 3450 50  0001 C CNN
+F 1 "GND" H 6155 3527 50  0000 C CNN
+F 2 "" H 6150 3700 50  0001 C CNN
+F 3 "" H 6150 3700 50  0001 C CNN
+	1    6150 3700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6250 3350 6150 3350
+Wire Wire Line
+	6150 3400 6150 3350
+Connection ~ 6150 3350
+Wire Wire Line
+	6150 3350 6050 3350
 $EndSCHEMATC

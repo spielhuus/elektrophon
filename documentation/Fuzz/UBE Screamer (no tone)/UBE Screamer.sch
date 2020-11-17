@@ -47,7 +47,7 @@ F 4 "X" H 4200 1150 50  0001 C CNN "Spice_Primitive"
 F 5 "voltage_divider_1" H 4200 1150 50  0001 C CNN "Spice_Model"
 F 6 "Y" H 4200 1150 50  0001 C CNN "Spice_Netlist_Enabled"
 	1    4200 1150
-	0    1    1    0   
+	0    -1   1    0   
 $EndComp
 $Comp
 L Device:R R3
@@ -71,29 +71,14 @@ Wire Wire Line
 Wire Wire Line
 	5200 2100 5200 1550
 Wire Wire Line
-	5200 1150 5350 1150
-Wire Wire Line
-	5650 1150 5900 1150
-Wire Wire Line
-	5900 1150 5900 1550
-Wire Wire Line
-	5900 2100 5850 2100
-Wire Wire Line
-	5900 1550 5650 1550
-Wire Wire Line
 	5350 1550 5200 1550
-Connection ~ 5900 1550
-Wire Wire Line
-	5900 1550 5900 2100
 Connection ~ 5200 1550
-Wire Wire Line
-	5200 1550 5200 1150
 $Comp
 L Device:R R1
 U 1 1 5FB0AB1E
 P 1400 3500
 F 0 "R1" H 1330 3454 50  0000 R CNN
-F 1 "1Meg" H 1330 3545 50  0000 R CNN
+F 1 "10k" H 1330 3545 50  0000 R CNN
 F 2 "" V 1330 3500 50  0001 C CNN
 F 3 "~" H 1400 3500 50  0001 C CNN
 	1    1400 3500
@@ -153,7 +138,6 @@ Wire Wire Line
 Connection ~ 5200 2100
 Text GLabel 10100 2100 2    50   Input ~ 0
 OUT
-Connection ~ 5900 2100
 $Comp
 L Connector:Conn_01x02_Female J1
 U 1 1 5FB13B77
@@ -347,41 +331,31 @@ $EndComp
 $Comp
 L Diode:1N4148 D2
 U 1 1 5FB2869A
-P 5500 1150
-F 0 "D2" H 5500 1367 50  0000 C CNN
-F 1 "1N4148" H 5500 1276 50  0000 C CNN
-F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 5500 975 50  0001 C CNN
-F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 5500 1150 50  0001 C CNN
-F 4 "D" H 5500 1150 50  0001 C CNN "Spice_Primitive"
-F 5 "D1N4148" H 5500 1150 50  0001 C CNN "Spice_Model"
-F 6 "Y" H 5500 1150 50  0001 C CNN "Spice_Netlist_Enabled"
-	1    5500 1150
+P 5350 1150
+F 0 "D2" H 5350 1367 50  0000 C CNN
+F 1 "1N4148" H 5350 1276 50  0000 C CNN
+F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 5350 975 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 5350 1150 50  0001 C CNN
+F 4 "D" H 5350 1150 50  0001 C CNN "Spice_Primitive"
+F 5 "D1N4148" H 5350 1150 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 5350 1150 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    5350 1150
 	1    0    0    -1  
 $EndComp
 $Comp
 L Diode:1N4148 D1
 U 1 1 5FB29099
-P 5500 800
-F 0 "D1" H 5500 583 50  0000 C CNN
-F 1 "1N4148" H 5500 674 50  0000 C CNN
-F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 5500 625 50  0001 C CNN
-F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 5500 800 50  0001 C CNN
-F 4 "D" H 5500 800 50  0001 C CNN "Spice_Primitive"
-F 5 "D1N4148" H 5500 800 50  0001 C CNN "Spice_Model"
-F 6 "Y" H 5500 800 50  0001 C CNN "Spice_Netlist_Enabled"
-	1    5500 800 
+P 5350 800
+F 0 "D1" H 5350 583 50  0000 C CNN
+F 1 "1N4148" H 5350 674 50  0000 C CNN
+F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 5350 625 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 5350 800 50  0001 C CNN
+F 4 "D" H 5350 800 50  0001 C CNN "Spice_Primitive"
+F 5 "D1N4148" H 5350 800 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 5350 800 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    5350 800 
 	-1   0    0    1   
 $EndComp
-Wire Wire Line
-	5350 800  5200 800 
-Wire Wire Line
-	5200 800  5200 1150
-Connection ~ 5200 1150
-Wire Wire Line
-	5650 800  5900 800 
-Wire Wire Line
-	5900 800  5900 1150
-Connection ~ 5900 1150
 $Comp
 L Device:C C7
 U 1 1 5FB49C95
@@ -435,24 +409,6 @@ Wire Wire Line
 Wire Wire Line
 	2650 2100 2850 2100
 Connection ~ 2650 2850
-Wire Wire Line
-	2650 3350 8450 3350
-Wire Wire Line
-	8800 3350 8800 2100
-Connection ~ 2650 3350
-$Comp
-L Device:R R12
-U 1 1 5FB779BA
-P 8600 3350
-F 0 "R12" V 8393 3350 50  0000 C CNN
-F 1 "220k" V 8484 3350 50  0000 C CNN
-F 2 "" V 8530 3350 50  0001 C CNN
-F 3 "~" H 8600 3350 50  0001 C CNN
-	1    8600 3350
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	8750 3350 8800 3350
 $Comp
 L Device:CP C8
 U 1 1 5FB80504
@@ -511,8 +467,6 @@ F 6 "Y" H 5100 4600 50  0001 C CNN "Spice_Netlist_Enabled"
 	4    5100 4600
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	5900 2100 8150 2100
 $Comp
 L power:+5V #PWR0101
 U 1 1 5FB10717
@@ -528,5 +482,110 @@ Wire Wire Line
 	4800 4300 4800 4600
 NoConn ~ 5400 4600
 Wire Wire Line
-	1050 3350 1400 3350
+	1050 3350 1100 3350
+Wire Wire Line
+	5200 800  5200 1150
+Connection ~ 5200 1150
+Wire Wire Line
+	5200 1150 5200 1550
+Wire Wire Line
+	5850 2100 6100 2100
+Connection ~ 6100 2100
+Wire Wire Line
+	6100 2100 8150 2100
+Wire Wire Line
+	5650 1550 6100 1550
+Connection ~ 6100 1550
+Wire Wire Line
+	6100 1550 6100 2100
+Wire Wire Line
+	2650 3350 8400 3350
+Wire Wire Line
+	8800 3350 8800 2100
+Connection ~ 2650 3350
+$Comp
+L Device:R R8
+U 1 1 5FB4CE2D
+P 8550 3350
+F 0 "R8" V 8343 3350 50  0000 C CNN
+F 1 "100k" V 8434 3350 50  0000 C CNN
+F 2 "" V 8480 3350 50  0001 C CNN
+F 3 "~" H 8550 3350 50  0001 C CNN
+	1    8550 3350
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	8700 3350 8800 3350
+Wire Wire Line
+	6100 1150 6100 1550
+Wire Wire Line
+	6100 800  6100 1150
+Connection ~ 6100 1150
+$Comp
+L Diode:1N4148 D6
+U 1 1 5FB454FF
+P 5950 1150
+F 0 "D6" H 5950 1367 50  0000 C CNN
+F 1 "1N4148" H 5950 1276 50  0000 C CNN
+F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 5950 975 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 5950 1150 50  0001 C CNN
+F 4 "D" H 5950 1150 50  0001 C CNN "Spice_Primitive"
+F 5 "D1N4148" H 5950 1150 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 5950 1150 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    5950 1150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Diode:1N4148 D4
+U 1 1 5FB44C72
+P 5650 1150
+F 0 "D4" H 5650 1367 50  0000 C CNN
+F 1 "1N4148" H 5650 1276 50  0000 C CNN
+F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 5650 975 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 5650 1150 50  0001 C CNN
+F 4 "D" H 5650 1150 50  0001 C CNN "Spice_Primitive"
+F 5 "D1N4148" H 5650 1150 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 5650 1150 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    5650 1150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Diode:1N4148 D5
+U 1 1 5FB4330B
+P 5950 800
+F 0 "D5" H 5950 583 50  0000 C CNN
+F 1 "1N4148" H 5950 674 50  0000 C CNN
+F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 5950 625 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 5950 800 50  0001 C CNN
+F 4 "D" H 5950 800 50  0001 C CNN "Spice_Primitive"
+F 5 "D1N4148" H 5950 800 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 5950 800 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    5950 800 
+	-1   0    0    1   
+$EndComp
+$Comp
+L Diode:1N4148 D3
+U 1 1 5FB42CE6
+P 5650 800
+F 0 "D3" H 5650 583 50  0000 C CNN
+F 1 "1N4148" H 5650 674 50  0000 C CNN
+F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 5650 625 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 5650 800 50  0001 C CNN
+F 4 "D" H 5650 800 50  0001 C CNN "Spice_Primitive"
+F 5 "D1N4148" H 5650 800 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 5650 800 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    5650 800 
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R R9
+U 1 1 5FB55FC9
+P 1250 3350
+F 0 "R9" H 1180 3304 50  0000 R CNN
+F 1 "100k" H 1180 3395 50  0000 R CNN
+F 2 "" V 1180 3350 50  0001 C CNN
+F 3 "~" H 1250 3350 50  0001 C CNN
+	1    1250 3350
+	0    -1   -1   0   
+$EndComp
 $EndSCHEMATC

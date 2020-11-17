@@ -47,7 +47,7 @@ F 4 "X" H 4200 1150 50  0001 C CNN "Spice_Primitive"
 F 5 "voltage_divider_1" H 4200 1150 50  0001 C CNN "Spice_Model"
 F 6 "Y" H 4200 1150 50  0001 C CNN "Spice_Netlist_Enabled"
 	1    4200 1150
-	0    1    1    0   
+	0    -1   1    0   
 $EndComp
 $Comp
 L Device:R R3
@@ -93,7 +93,7 @@ L Device:R R1
 U 1 1 5FB0AB1E
 P 1400 3500
 F 0 "R1" H 1330 3454 50  0000 R CNN
-F 1 "2.2k" H 1330 3545 50  0000 R CNN
+F 1 "100k" H 1330 3545 50  0000 R CNN
 F 2 "" V 1330 3500 50  0001 C CNN
 F 3 "~" H 1400 3500 50  0001 C CNN
 	1    1400 3500
@@ -122,7 +122,7 @@ F 3 "~" H 3000 2100 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 Connection ~ 3450 2100
-Text GLabel 750  3350 0    50   Input ~ 0
+Text GLabel 1050 3350 0    50   Input ~ 0
 IN
 $Comp
 L power:GND #PWR01
@@ -590,7 +590,7 @@ L Device:R R12
 U 1 1 5FB779BA
 P 8600 3350
 F 0 "R12" V 8393 3350 50  0000 C CNN
-F 1 "220k" V 8484 3350 50  0000 C CNN
+F 1 "200k" V 8484 3350 50  0000 C CNN
 F 2 "" V 8530 3350 50  0001 C CNN
 F 3 "~" H 8600 3350 50  0001 C CNN
 	1    8600 3350
@@ -639,22 +639,9 @@ F 3 "" H 9900 2450 50  0001 C CNN
 	1    9900 2450
 	1    0    0    -1  
 $EndComp
-$Comp
-L Device:R R15
-U 1 1 5FB8AF2E
-P 1200 3350
-F 0 "R15" V 1407 3350 50  0000 C CNN
-F 1 "100k" V 1316 3350 50  0000 C CNN
-F 2 "" V 1130 3350 50  0001 C CNN
-F 3 "~" H 1200 3350 50  0001 C CNN
-	1    1200 3350
-	0    -1   -1   0   
-$EndComp
 Wire Wire Line
 	1450 3350 1400 3350
-Wire Wire Line
-	750  3350 1050 3350
 Connection ~ 1400 3350
 Wire Wire Line
-	1400 3350 1350 3350
+	1050 3350 1400 3350
 $EndSCHEMATC
