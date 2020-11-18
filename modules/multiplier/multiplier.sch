@@ -16,698 +16,1637 @@ $EndDescr
 $Comp
 L Amplifier_Operational:TL072 U1
 U 1 1 5F3031BF
-P 1900 2750
-F 0 "U1" H 1900 2383 50  0000 C CNN
-F 1 "TL072" H 1900 2474 50  0000 C CNN
-F 2 "" H 1900 2750 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 1900 2750 50  0001 C CNN
-F 4 "X" H 1900 2750 50  0001 C CNN "Spice_Primitive"
-F 5 "OPA2134" H 1900 2750 50  0001 C CNN "Spice_Model"
-F 6 "Y" H 1900 2750 50  0001 C CNN "Spice_Netlist_Enabled"
-F 7 "/home/etienne/Documents/elektrophon/lib/spice/opamp/OPA2134.LIB" H 1900 2750 50  0001 C CNN "Spice_Lib_File"
-F 8 "3 2 8 4 1" H 1900 2750 50  0001 C CNN "Spice_Node_Sequence"
-	1    1900 2750
+P 5100 2350
+F 0 "U1" H 5100 1983 50  0000 C CNN
+F 1 "TL072" H 5100 2074 50  0000 C CNN
+F 2 "" H 5100 2350 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 5100 2350 50  0001 C CNN
+F 4 "X" H 5100 2350 50  0001 C CNN "Spice_Primitive"
+F 5 "OPA2134" H 5100 2350 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 5100 2350 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "/home/etienne/Documents/elektrophon/lib/spice/opamp/OPA2134.LIB" H 5100 2350 50  0001 C CNN "Spice_Lib_File"
+F 8 "3 2 8 4 1" H 5100 2350 50  0001 C CNN "Spice_Node_Sequence"
+	1    5100 2350
 	1    0    0    1   
 $EndComp
 $Comp
 L Amplifier_Operational:TL072 U1
 U 3 1 5F303472
-P 1950 4300
-F 0 "U1" H 1908 4346 50  0000 L CNN
-F 1 "TL072" H 1908 4255 50  0000 L CNN
-F 2 "" H 1950 4300 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 1950 4300 50  0001 C CNN
-	3    1950 4300
+P 900 7100
+F 0 "U1" H 858 7146 50  0000 L CNN
+F 1 "TL072" H 858 7055 50  0000 L CNN
+F 2 "" H 900 7100 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 900 7100 50  0001 C CNN
+	3    900  7100
 	1    0    0    -1  
 $EndComp
 $Comp
 L Amplifier_Operational:TL072 U2
 U 1 1 5F309EDB
-P 3850 2750
-F 0 "U2" H 3850 2383 50  0000 C CNN
-F 1 "TL072" H 3850 2474 50  0000 C CNN
-F 2 "" H 3850 2750 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 3850 2750 50  0001 C CNN
-F 4 "X" H 3850 2750 50  0001 C CNN "Spice_Primitive"
-F 5 "OPA2134" H 3850 2750 50  0001 C CNN "Spice_Model"
-F 6 "Y" H 3850 2750 50  0001 C CNN "Spice_Netlist_Enabled"
-F 7 "/home/etienne/Documents/elektrophon/lib/spice/opamp/OPA2134.LIB" H 3850 2750 50  0001 C CNN "Spice_Lib_File"
-F 8 "3 2 8 4 1" H 3850 2750 50  0001 C CNN "Spice_Node_Sequence"
-	1    3850 2750
+P 6600 2350
+F 0 "U2" H 6600 1983 50  0000 C CNN
+F 1 "TL072" H 6600 2074 50  0000 C CNN
+F 2 "" H 6600 2350 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 6600 2350 50  0001 C CNN
+F 4 "X" H 6600 2350 50  0001 C CNN "Spice_Primitive"
+F 5 "OPA2134" H 6600 2350 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 6600 2350 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "/home/etienne/Documents/elektrophon/lib/spice/opamp/OPA2134.LIB" H 6600 2350 50  0001 C CNN "Spice_Lib_File"
+F 8 "3 2 8 4 1" H 6600 2350 50  0001 C CNN "Spice_Node_Sequence"
+	1    6600 2350
 	1    0    0    1   
 $EndComp
 $Comp
 L Amplifier_Operational:TL072 U2
 U 3 1 5F309EE1
-P 3350 4300
-F 0 "U2" H 3308 4346 50  0000 L CNN
-F 1 "TL072" H 3308 4255 50  0000 L CNN
-F 2 "" H 3350 4300 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 3350 4300 50  0001 C CNN
-	3    3350 4300
+P 2300 7100
+F 0 "U2" H 2258 7146 50  0000 L CNN
+F 1 "TL072" H 2258 7055 50  0000 L CNN
+F 2 "" H 2300 7100 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 2300 7100 50  0001 C CNN
+	3    2300 7100
 	1    0    0    -1  
 $EndComp
 $Comp
 L Device:R R1
 U 1 1 5F30B784
-P 1900 2200
-F 0 "R1" V 1693 2200 50  0000 C CNN
-F 1 "82k" V 1784 2200 50  0000 C CNN
-F 2 "" V 1830 2200 50  0001 C CNN
-F 3 "~" H 1900 2200 50  0001 C CNN
-	1    1900 2200
+P 5100 1800
+F 0 "R1" V 4893 1800 50  0000 C CNN
+F 1 "82k" V 4984 1800 50  0000 C CNN
+F 2 "" V 5030 1800 50  0001 C CNN
+F 3 "~" H 5100 1800 50  0001 C CNN
+	1    5100 1800
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	1450 2650 1600 2650
+	4650 2250 4800 2250
 Wire Wire Line
-	1750 2200 1450 2200
+	4950 1800 4650 1800
 Wire Wire Line
-	1450 2200 1450 2650
+	4650 1800 4650 2250
 Wire Wire Line
-	2350 2750 2200 2750
+	5550 2350 5400 2350
 Wire Wire Line
-	2050 2200 2350 2200
-Connection ~ 2350 2200
+	5250 1800 5550 1800
+Connection ~ 5550 1800
 Wire Wire Line
-	2350 2200 2350 2750
+	5550 1800 5550 2350
 $Comp
 L power:GND #PWR01
 U 1 1 5F30F494
-P 1600 2850
-F 0 "#PWR01" H 1600 2600 50  0001 C CNN
-F 1 "GND" H 1605 2677 50  0000 C CNN
-F 2 "" H 1600 2850 50  0001 C CNN
-F 3 "" H 1600 2850 50  0001 C CNN
-	1    1600 2850
+P 4800 2450
+F 0 "#PWR01" H 4800 2200 50  0001 C CNN
+F 1 "GND" H 4805 2277 50  0000 C CNN
+F 2 "" H 4800 2450 50  0001 C CNN
+F 3 "" H 4800 2450 50  0001 C CNN
+	1    4800 2450
 	1    0    0    -1  
 $EndComp
 $Comp
 L Device:R R2
 U 1 1 5F30F943
-P 3850 2200
-F 0 "R2" V 3643 2200 50  0000 C CNN
-F 1 "100k" V 3734 2200 50  0000 C CNN
-F 2 "" V 3780 2200 50  0001 C CNN
-F 3 "~" H 3850 2200 50  0001 C CNN
-	1    3850 2200
+P 6600 1800
+F 0 "R2" V 6393 1800 50  0000 C CNN
+F 1 "100k" V 6484 1800 50  0000 C CNN
+F 2 "" V 6530 1800 50  0001 C CNN
+F 3 "~" H 6600 1800 50  0001 C CNN
+	1    6600 1800
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	3700 2200 3450 2200
+	6450 1800 6200 1800
 Wire Wire Line
-	3450 2200 3450 2650
+	6200 1800 6200 2250
 Wire Wire Line
-	3450 2650 3550 2650
+	6200 2250 6300 2250
 Wire Wire Line
-	4000 2200 4250 2200
+	6750 1800 7000 1800
 Wire Wire Line
-	4250 2200 4250 2750
+	7000 1800 7000 2350
 Wire Wire Line
-	4250 2750 4150 2750
-Text GLabel 7950 2750 2    50   Input ~ 0
+	7000 2350 6900 2350
+Text GLabel 10800 4100 2    50   Input ~ 0
 OUT
-Text GLabel 1450 2650 0    50   Input ~ 0
-IN
+Text GLabel 1450 2700 0    50   Input ~ 0
+IN_2
 $Comp
 L Diode:1N4148 D2
 U 1 1 5F31269A
-P 3150 3100
-F 0 "D2" V 3104 3180 50  0000 L CNN
-F 1 "1N4148" V 3195 3180 50  0000 L CNN
-F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 3150 2925 50  0001 C CNN
-F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 3150 3100 50  0001 C CNN
-F 4 "D" H 3150 3100 50  0001 C CNN "Spice_Primitive"
-F 5 "D1N4148" H 3150 3100 50  0001 C CNN "Spice_Model"
-F 6 "Y" H 3150 3100 50  0001 C CNN "Spice_Netlist_Enabled"
-F 7 "/home/etienne/Documents/elektrophon/lib/spice/diode/1N4148.mod" H 3150 3100 50  0001 C CNN "Spice_Lib_File"
-	1    3150 3100
+P 6200 2700
+F 0 "D2" V 6154 2780 50  0000 L CNN
+F 1 "1N4148" V 6245 2780 50  0000 L CNN
+F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 6200 2525 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 6200 2700 50  0001 C CNN
+F 4 "D" H 6200 2700 50  0001 C CNN "Spice_Primitive"
+F 5 "D1N4148" H 6200 2700 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 6200 2700 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "/home/etienne/Documents/elektrophon/lib/spice/diode/1N4148.mod" H 6200 2700 50  0001 C CNN "Spice_Lib_File"
+	1    6200 2700
 	0    1    1    0   
 $EndComp
 $Comp
 L Diode:1N4148 D1
 U 1 1 5F313819
-P 2950 3100
-F 0 "D1" V 2996 3020 50  0000 R CNN
-F 1 "1N4148" V 2905 3020 50  0000 R CNN
-F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 2950 2925 50  0001 C CNN
-F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 2950 3100 50  0001 C CNN
-F 4 "D" H 2950 3100 50  0001 C CNN "Spice_Primitive"
-F 5 "D1N4148" H 2950 3100 50  0001 C CNN "Spice_Model"
-F 6 "Y" H 2950 3100 50  0001 C CNN "Spice_Netlist_Enabled"
-F 7 "/home/etienne/Documents/elektrophon/lib/spice/diode/1N4148.mod" H 2950 3100 50  0001 C CNN "Spice_Lib_File"
-	1    2950 3100
+P 6000 2700
+F 0 "D1" V 6046 2620 50  0000 R CNN
+F 1 "1N4148" V 5955 2620 50  0000 R CNN
+F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 6000 2525 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 6000 2700 50  0001 C CNN
+F 4 "D" H 6000 2700 50  0001 C CNN "Spice_Primitive"
+F 5 "D1N4148" H 6000 2700 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 6000 2700 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "/home/etienne/Documents/elektrophon/lib/spice/diode/1N4148.mod" H 6000 2700 50  0001 C CNN "Spice_Lib_File"
+	1    6000 2700
 	0    -1   -1   0   
 $EndComp
 $Comp
 L power:GND #PWR04
 U 1 1 5F314696
-P 3050 3350
-F 0 "#PWR04" H 3050 3100 50  0001 C CNN
-F 1 "GND" H 3055 3177 50  0000 C CNN
-F 2 "" H 3050 3350 50  0001 C CNN
-F 3 "" H 3050 3350 50  0001 C CNN
-	1    3050 3350
+P 6100 2950
+F 0 "#PWR04" H 6100 2700 50  0001 C CNN
+F 1 "GND" H 6105 2777 50  0000 C CNN
+F 2 "" H 6100 2950 50  0001 C CNN
+F 3 "" H 6100 2950 50  0001 C CNN
+	1    6100 2950
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	3050 3250 3050 3350
+	6100 2850 6100 2950
 Wire Wire Line
-	2950 3250 3050 3250
-Connection ~ 3050 3250
+	6000 2850 6100 2850
+Connection ~ 6100 2850
 Wire Wire Line
-	3050 3250 3150 3250
+	6100 2850 6200 2850
 Wire Wire Line
-	2350 2850 2350 2750
-Connection ~ 2350 2750
+	5550 2450 5550 2350
+Connection ~ 5550 2350
 $Comp
 L power:-15V #PWR03
 U 1 1 5F318BB9
-P 1850 4600
-F 0 "#PWR03" H 1850 4700 50  0001 C CNN
-F 1 "-15V" H 1865 4773 50  0000 C CNN
-F 2 "" H 1850 4600 50  0001 C CNN
-F 3 "" H 1850 4600 50  0001 C CNN
-	1    1850 4600
+P 800 7400
+F 0 "#PWR03" H 800 7500 50  0001 C CNN
+F 1 "-15V" H 815 7573 50  0000 C CNN
+F 2 "" H 800 7400 50  0001 C CNN
+F 3 "" H 800 7400 50  0001 C CNN
+	1    800  7400
 	-1   0    0    1   
 $EndComp
 $Comp
 L power:-15V #PWR06
 U 1 1 5F319101
-P 3250 4600
-F 0 "#PWR06" H 3250 4700 50  0001 C CNN
-F 1 "-15V" H 3265 4773 50  0000 C CNN
-F 2 "" H 3250 4600 50  0001 C CNN
-F 3 "" H 3250 4600 50  0001 C CNN
-	1    3250 4600
+P 2200 7400
+F 0 "#PWR06" H 2200 7500 50  0001 C CNN
+F 1 "-15V" H 2215 7573 50  0000 C CNN
+F 2 "" H 2200 7400 50  0001 C CNN
+F 3 "" H 2200 7400 50  0001 C CNN
+	1    2200 7400
 	-1   0    0    1   
 $EndComp
 $Comp
 L power:+15V #PWR05
 U 1 1 5F3199D4
-P 3250 4000
-F 0 "#PWR05" H 3250 3850 50  0001 C CNN
-F 1 "+15V" H 3265 4173 50  0000 C CNN
-F 2 "" H 3250 4000 50  0001 C CNN
-F 3 "" H 3250 4000 50  0001 C CNN
-	1    3250 4000
+P 2200 6800
+F 0 "#PWR05" H 2200 6650 50  0001 C CNN
+F 1 "+15V" H 2215 6973 50  0000 C CNN
+F 2 "" H 2200 6800 50  0001 C CNN
+F 3 "" H 2200 6800 50  0001 C CNN
+	1    2200 6800
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:+15V #PWR02
 U 1 1 5F31A006
-P 1850 4000
-F 0 "#PWR02" H 1850 3850 50  0001 C CNN
-F 1 "+15V" H 1865 4173 50  0000 C CNN
-F 2 "" H 1850 4000 50  0001 C CNN
-F 3 "" H 1850 4000 50  0001 C CNN
-	1    1850 4000
+P 800 6800
+F 0 "#PWR02" H 800 6650 50  0001 C CNN
+F 1 "+15V" H 815 6973 50  0000 C CNN
+F 2 "" H 800 6800 50  0001 C CNN
+F 3 "" H 800 6800 50  0001 C CNN
+	1    800  6800
 	1    0    0    -1  
 $EndComp
 $Comp
 L pspice:VSOURCE V1
 U 1 1 5F31B952
-P 5300 3900
-F 0 "V1" H 5528 3946 50  0000 L CNN
-F 1 "15" H 5528 3855 50  0000 L CNN
-F 2 "" H 5300 3900 50  0001 C CNN
-F 3 "~" H 5300 3900 50  0001 C CNN
-	1    5300 3900
+P 4450 8950
+F 0 "V1" H 4678 8996 50  0000 L CNN
+F 1 "15" H 4678 8905 50  0000 L CNN
+F 2 "" H 4450 8950 50  0001 C CNN
+F 3 "~" H 4450 8950 50  0001 C CNN
+	1    4450 8950
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:GND #PWR08
 U 1 1 5F31CCF4
-P 5300 4200
-F 0 "#PWR08" H 5300 3950 50  0001 C CNN
-F 1 "GND" H 5305 4027 50  0000 C CNN
-F 2 "" H 5300 4200 50  0001 C CNN
-F 3 "" H 5300 4200 50  0001 C CNN
-	1    5300 4200
+P 4450 9250
+F 0 "#PWR08" H 4450 9000 50  0001 C CNN
+F 1 "GND" H 4455 9077 50  0000 C CNN
+F 2 "" H 4450 9250 50  0001 C CNN
+F 3 "" H 4450 9250 50  0001 C CNN
+	1    4450 9250
 	1    0    0    -1  
 $EndComp
 $Comp
 L pspice:VSOURCE V2
 U 1 1 5F321168
-P 6350 3900
-F 0 "V2" H 6578 3946 50  0000 L CNN
-F 1 "-15" H 6578 3855 50  0000 L CNN
-F 2 "" H 6350 3900 50  0001 C CNN
-F 3 "~" H 6350 3900 50  0001 C CNN
-	1    6350 3900
+P 5500 8950
+F 0 "V2" H 5728 8996 50  0000 L CNN
+F 1 "-15" H 5728 8905 50  0000 L CNN
+F 2 "" H 5500 8950 50  0001 C CNN
+F 3 "~" H 5500 8950 50  0001 C CNN
+	1    5500 8950
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:GND #PWR010
 U 1 1 5F32116E
-P 6350 4200
-F 0 "#PWR010" H 6350 3950 50  0001 C CNN
-F 1 "GND" H 6355 4027 50  0000 C CNN
-F 2 "" H 6350 4200 50  0001 C CNN
-F 3 "" H 6350 4200 50  0001 C CNN
-	1    6350 4200
+P 5500 9250
+F 0 "#PWR010" H 5500 9000 50  0001 C CNN
+F 1 "GND" H 5505 9077 50  0000 C CNN
+F 2 "" H 5500 9250 50  0001 C CNN
+F 3 "" H 5500 9250 50  0001 C CNN
+	1    5500 9250
 	1    0    0    -1  
 $EndComp
 $Comp
 L pspice:VSOURCE V3
 U 1 1 5F321BD4
-P 7400 3850
-F 0 "V3" H 7628 3896 50  0000 L CNN
-F 1 "VSOURCE" H 7628 3805 50  0000 L CNN
-F 2 "" H 7400 3850 50  0001 C CNN
-F 3 "~" H 7400 3850 50  0001 C CNN
-F 4 "V" H 7400 3850 50  0001 C CNN "Spice_Primitive"
-F 5 "sin(0 1 1k)" H 7400 3850 50  0001 C CNN "Spice_Model"
-F 6 "Y" H 7400 3850 50  0001 C CNN "Spice_Netlist_Enabled"
-	1    7400 3850
+P 6550 8900
+F 0 "V3" H 6778 8946 50  0000 L CNN
+F 1 "VSOURCE" H 6778 8855 50  0000 L CNN
+F 2 "" H 6550 8900 50  0001 C CNN
+F 3 "~" H 6550 8900 50  0001 C CNN
+F 4 "V" H 6550 8900 50  0001 C CNN "Spice_Primitive"
+F 5 "sin(0 1 1k)" H 6550 8900 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 6550 8900 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    6550 8900
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:GND #PWR011
 U 1 1 5F321BDA
-P 7400 4150
-F 0 "#PWR011" H 7400 3900 50  0001 C CNN
-F 1 "GND" H 7405 3977 50  0000 C CNN
-F 2 "" H 7400 4150 50  0001 C CNN
-F 3 "" H 7400 4150 50  0001 C CNN
-	1    7400 4150
+P 6550 9200
+F 0 "#PWR011" H 6550 8950 50  0001 C CNN
+F 1 "GND" H 6555 9027 50  0000 C CNN
+F 2 "" H 6550 9200 50  0001 C CNN
+F 3 "" H 6550 9200 50  0001 C CNN
+	1    6550 9200
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:+15V #PWR07
 U 1 1 5F322579
-P 5300 3600
-F 0 "#PWR07" H 5300 3450 50  0001 C CNN
-F 1 "+15V" H 5315 3773 50  0000 C CNN
-F 2 "" H 5300 3600 50  0001 C CNN
-F 3 "" H 5300 3600 50  0001 C CNN
-	1    5300 3600
+P 4450 8650
+F 0 "#PWR07" H 4450 8500 50  0001 C CNN
+F 1 "+15V" H 4465 8823 50  0000 C CNN
+F 2 "" H 4450 8650 50  0001 C CNN
+F 3 "" H 4450 8650 50  0001 C CNN
+	1    4450 8650
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:-15V #PWR09
 U 1 1 5F322FC7
-P 6350 3600
-F 0 "#PWR09" H 6350 3700 50  0001 C CNN
-F 1 "-15V" H 6365 3773 50  0000 C CNN
-F 2 "" H 6350 3600 50  0001 C CNN
-F 3 "" H 6350 3600 50  0001 C CNN
-	1    6350 3600
+P 5500 8650
+F 0 "#PWR09" H 5500 8750 50  0001 C CNN
+F 1 "-15V" H 5515 8823 50  0000 C CNN
+F 2 "" H 5500 8650 50  0001 C CNN
+F 3 "" H 5500 8650 50  0001 C CNN
+	1    5500 8650
 	1    0    0    -1  
 $EndComp
-Text GLabel 7400 3550 1    50   Input ~ 0
+Text GLabel 6550 8600 1    50   Input ~ 0
 IN
-Text Notes 4150 4950 0    50   ~ 0
+Text Notes 3100 7750 0    50   ~ 0
 .tran 1u 2m\n
 $Comp
 L Device:R R4
 U 1 1 5F330854
-P 2650 2200
-F 0 "R4" V 2443 2200 50  0000 C CNN
-F 1 "100k" V 2534 2200 50  0000 C CNN
-F 2 "" V 2580 2200 50  0001 C CNN
-F 3 "~" H 2650 2200 50  0001 C CNN
-	1    2650 2200
+P 5800 1800
+F 0 "R4" V 5593 1800 50  0000 C CNN
+F 1 "100k" V 5684 1800 50  0000 C CNN
+F 2 "" V 5730 1800 50  0001 C CNN
+F 3 "~" H 5800 1800 50  0001 C CNN
+	1    5800 1800
 	0    1    1    0   
 $EndComp
-Wire Wire Line
-	2500 2200 2350 2200
-Connection ~ 3450 2200
 $Comp
 L Device:R R3
 U 1 1 5F342B64
-P 2600 2850
-F 0 "R3" V 2393 2850 50  0000 C CNN
-F 1 "33k" V 2484 2850 50  0000 C CNN
-F 2 "" V 2530 2850 50  0001 C CNN
-F 3 "~" H 2600 2850 50  0001 C CNN
-	1    2600 2850
+P 5800 2450
+F 0 "R3" V 5593 2450 50  0000 C CNN
+F 1 "33k" V 5684 2450 50  0000 C CNN
+F 2 "" V 5730 2450 50  0001 C CNN
+F 3 "~" H 5800 2450 50  0001 C CNN
+	1    5800 2450
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	2350 2850 2450 2850
+	5550 2450 5650 2450
 Wire Wire Line
-	2750 2850 2950 2850
+	6200 2550 6200 2450
+Connection ~ 6200 2450
 Wire Wire Line
-	3150 2950 3150 2850
-Connection ~ 3150 2850
+	6200 2450 6300 2450
 Wire Wire Line
-	3150 2850 3550 2850
+	6000 2550 6000 2450
+Connection ~ 6000 2450
 Wire Wire Line
-	2950 2950 2950 2850
-Connection ~ 2950 2850
-Wire Wire Line
-	2950 2850 3150 2850
-Wire Wire Line
-	2800 2200 3450 2200
+	6000 2450 6200 2450
 $Comp
 L Amplifier_Operational:TL072 U3
 U 1 1 5F36287F
-P 5700 2750
-F 0 "U3" H 5700 2383 50  0000 C CNN
-F 1 "TL072" H 5700 2474 50  0000 C CNN
-F 2 "" H 5700 2750 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 5700 2750 50  0001 C CNN
-F 4 "X" H 5700 2750 50  0001 C CNN "Spice_Primitive"
-F 5 "OPA2134" H 5700 2750 50  0001 C CNN "Spice_Model"
-F 6 "Y" H 5700 2750 50  0001 C CNN "Spice_Netlist_Enabled"
-F 7 "/home/etienne/Documents/elektrophon/lib/spice/opamp/OPA2134.LIB" H 5700 2750 50  0001 C CNN "Spice_Lib_File"
-F 8 "3 2 8 4 1" H 5700 2750 50  0001 C CNN "Spice_Node_Sequence"
-	1    5700 2750
+P 8150 2350
+F 0 "U3" H 8150 1983 50  0000 C CNN
+F 1 "TL072" H 8150 2074 50  0000 C CNN
+F 2 "" H 8150 2350 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 8150 2350 50  0001 C CNN
+F 4 "X" H 8150 2350 50  0001 C CNN "Spice_Primitive"
+F 5 "OPA2134" H 8150 2350 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 8150 2350 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "/home/etienne/Documents/elektrophon/lib/spice/opamp/OPA2134.LIB" H 8150 2350 50  0001 C CNN "Spice_Lib_File"
+F 8 "3 2 8 4 1" H 8150 2350 50  0001 C CNN "Spice_Node_Sequence"
+	1    8150 2350
 	1    0    0    1   
 $EndComp
 $Comp
 L Device:R R7
 U 1 1 5F362885
-P 5700 2200
-F 0 "R7" V 5493 2200 50  0000 C CNN
-F 1 "100k" V 5584 2200 50  0000 C CNN
-F 2 "" V 5630 2200 50  0001 C CNN
-F 3 "~" H 5700 2200 50  0001 C CNN
-	1    5700 2200
+P 8150 1800
+F 0 "R7" V 7943 1800 50  0000 C CNN
+F 1 "100k" V 8034 1800 50  0000 C CNN
+F 2 "" V 8080 1800 50  0001 C CNN
+F 3 "~" H 8150 1800 50  0001 C CNN
+	1    8150 1800
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	5550 2200 5300 2200
+	8000 1800 7750 1800
 Wire Wire Line
-	5300 2200 5300 2650
+	7750 1800 7750 2250
 Wire Wire Line
-	5300 2650 5400 2650
+	7750 2250 7850 2250
 Wire Wire Line
-	5850 2200 6100 2200
+	8300 1800 8550 1800
 Wire Wire Line
-	6100 2200 6100 2750
+	8550 1800 8550 2350
 Wire Wire Line
-	6100 2750 6000 2750
+	8550 2350 8450 2350
 $Comp
 L Diode:1N4148 D4
 U 1 1 5F362895
-P 5000 3100
-F 0 "D4" V 4954 3180 50  0000 L CNN
-F 1 "1N4148" V 5045 3180 50  0000 L CNN
-F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 5000 2925 50  0001 C CNN
-F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 5000 3100 50  0001 C CNN
-F 4 "D" H 5000 3100 50  0001 C CNN "Spice_Primitive"
-F 5 "D1N4148" H 5000 3100 50  0001 C CNN "Spice_Model"
-F 6 "Y" H 5000 3100 50  0001 C CNN "Spice_Netlist_Enabled"
-F 7 "/home/etienne/Documents/elektrophon/lib/spice/diode/1N4148.mod" H 5000 3100 50  0001 C CNN "Spice_Lib_File"
-	1    5000 3100
+P 7750 2700
+F 0 "D4" V 7704 2780 50  0000 L CNN
+F 1 "1N4148" V 7795 2780 50  0000 L CNN
+F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 7750 2525 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 7750 2700 50  0001 C CNN
+F 4 "D" H 7750 2700 50  0001 C CNN "Spice_Primitive"
+F 5 "D1N4148" H 7750 2700 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 7750 2700 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "/home/etienne/Documents/elektrophon/lib/spice/diode/1N4148.mod" H 7750 2700 50  0001 C CNN "Spice_Lib_File"
+	1    7750 2700
 	0    1    1    0   
 $EndComp
 $Comp
 L Diode:1N4148 D3
 U 1 1 5F36289F
-P 4800 3100
-F 0 "D3" V 4846 3020 50  0000 R CNN
-F 1 "1N4148" V 4755 3020 50  0000 R CNN
-F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 4800 2925 50  0001 C CNN
-F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 4800 3100 50  0001 C CNN
-F 4 "D" H 4800 3100 50  0001 C CNN "Spice_Primitive"
-F 5 "D1N4148" H 4800 3100 50  0001 C CNN "Spice_Model"
-F 6 "Y" H 4800 3100 50  0001 C CNN "Spice_Netlist_Enabled"
-F 7 "/home/etienne/Documents/elektrophon/lib/spice/diode/1N4148.mod" H 4800 3100 50  0001 C CNN "Spice_Lib_File"
-	1    4800 3100
+P 7550 2700
+F 0 "D3" V 7596 2620 50  0000 R CNN
+F 1 "1N4148" V 7505 2620 50  0000 R CNN
+F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 7550 2525 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 7550 2700 50  0001 C CNN
+F 4 "D" H 7550 2700 50  0001 C CNN "Spice_Primitive"
+F 5 "D1N4148" H 7550 2700 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 7550 2700 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "/home/etienne/Documents/elektrophon/lib/spice/diode/1N4148.mod" H 7550 2700 50  0001 C CNN "Spice_Lib_File"
+	1    7550 2700
 	0    -1   -1   0   
 $EndComp
 $Comp
 L power:GND #PWR012
 U 1 1 5F3628A5
-P 4900 3350
-F 0 "#PWR012" H 4900 3100 50  0001 C CNN
-F 1 "GND" H 4905 3177 50  0000 C CNN
-F 2 "" H 4900 3350 50  0001 C CNN
-F 3 "" H 4900 3350 50  0001 C CNN
-	1    4900 3350
+P 7650 2950
+F 0 "#PWR012" H 7650 2700 50  0001 C CNN
+F 1 "GND" H 7655 2777 50  0000 C CNN
+F 2 "" H 7650 2950 50  0001 C CNN
+F 3 "" H 7650 2950 50  0001 C CNN
+	1    7650 2950
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	4900 3250 4900 3350
+	7650 2850 7650 2950
 Wire Wire Line
-	4800 3250 4900 3250
-Connection ~ 4900 3250
+	7550 2850 7650 2850
+Connection ~ 7650 2850
 Wire Wire Line
-	4900 3250 5000 3250
+	7650 2850 7750 2850
 $Comp
 L Device:R R6
 U 1 1 5F3628AF
-P 4500 2200
-F 0 "R6" V 4293 2200 50  0000 C CNN
-F 1 "100k" V 4384 2200 50  0000 C CNN
-F 2 "" V 4430 2200 50  0001 C CNN
-F 3 "~" H 4500 2200 50  0001 C CNN
-	1    4500 2200
+P 7200 1800
+F 0 "R6" V 6993 1800 50  0000 C CNN
+F 1 "100k" V 7084 1800 50  0000 C CNN
+F 2 "" V 7130 1800 50  0001 C CNN
+F 3 "~" H 7200 1800 50  0001 C CNN
+	1    7200 1800
 	0    1    1    0   
 $EndComp
-Connection ~ 5300 2200
 $Comp
 L Device:R R5
 U 1 1 5F3628B6
-P 4450 2850
-F 0 "R5" V 4243 2850 50  0000 C CNN
-F 1 "33k" V 4334 2850 50  0000 C CNN
-F 2 "" V 4380 2850 50  0001 C CNN
-F 3 "~" H 4450 2850 50  0001 C CNN
-	1    4450 2850
+P 7200 2450
+F 0 "R5" V 6993 2450 50  0000 C CNN
+F 1 "33k" V 7084 2450 50  0000 C CNN
+F 2 "" V 7130 2450 50  0001 C CNN
+F 3 "~" H 7200 2450 50  0001 C CNN
+	1    7200 2450
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	4600 2850 4800 2850
+	7750 2550 7750 2450
 Wire Wire Line
-	5000 2950 5000 2850
-Connection ~ 5000 2850
+	7550 2550 7550 2450
 Wire Wire Line
-	5000 2850 5400 2850
+	7550 2450 7750 2450
 Wire Wire Line
-	4800 2950 4800 2850
-Connection ~ 4800 2850
+	7000 2350 7000 2450
 Wire Wire Line
-	4800 2850 5000 2850
-Wire Wire Line
-	4650 2200 5300 2200
-Wire Wire Line
-	4350 2200 4250 2200
-Connection ~ 4250 2200
-Wire Wire Line
-	4250 2750 4250 2850
-Wire Wire Line
-	4250 2850 4300 2850
-Connection ~ 4250 2750
+	7000 2450 7050 2450
+Connection ~ 7000 2350
 $Comp
 L Amplifier_Operational:TL072 U4
 U 1 1 5F368EC0
-P 7550 2750
-F 0 "U4" H 7550 2383 50  0000 C CNN
-F 1 "TL072" H 7550 2474 50  0000 C CNN
-F 2 "" H 7550 2750 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 7550 2750 50  0001 C CNN
-F 4 "X" H 7550 2750 50  0001 C CNN "Spice_Primitive"
-F 5 "OPA2134" H 7550 2750 50  0001 C CNN "Spice_Model"
-F 6 "Y" H 7550 2750 50  0001 C CNN "Spice_Netlist_Enabled"
-F 7 "/home/etienne/Documents/elektrophon/lib/spice/opamp/OPA2134.LIB" H 7550 2750 50  0001 C CNN "Spice_Lib_File"
-F 8 "3 2 8 4 1" H 7550 2750 50  0001 C CNN "Spice_Node_Sequence"
-	1    7550 2750
+P 9700 2350
+F 0 "U4" H 9700 1983 50  0000 C CNN
+F 1 "TL072" H 9700 2074 50  0000 C CNN
+F 2 "" H 9700 2350 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 9700 2350 50  0001 C CNN
+F 4 "X" H 9700 2350 50  0001 C CNN "Spice_Primitive"
+F 5 "OPA2134" H 9700 2350 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 9700 2350 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "/home/etienne/Documents/elektrophon/lib/spice/opamp/OPA2134.LIB" H 9700 2350 50  0001 C CNN "Spice_Lib_File"
+F 8 "3 2 8 4 1" H 9700 2350 50  0001 C CNN "Spice_Node_Sequence"
+	1    9700 2350
 	1    0    0    1   
 $EndComp
 $Comp
 L Device:R R10
 U 1 1 5F368EC6
-P 7550 2200
-F 0 "R10" V 7343 2200 50  0000 C CNN
-F 1 "100k" V 7434 2200 50  0000 C CNN
-F 2 "" V 7480 2200 50  0001 C CNN
-F 3 "~" H 7550 2200 50  0001 C CNN
-	1    7550 2200
+P 9700 1800
+F 0 "R10" V 9493 1800 50  0000 C CNN
+F 1 "100k" V 9584 1800 50  0000 C CNN
+F 2 "" V 9630 1800 50  0001 C CNN
+F 3 "~" H 9700 1800 50  0001 C CNN
+	1    9700 1800
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	7400 2200 7150 2200
+	9550 1800 9300 1800
 Wire Wire Line
-	7150 2200 7150 2650
+	9300 1800 9300 2250
 Wire Wire Line
-	7150 2650 7250 2650
+	9300 2250 9400 2250
 Wire Wire Line
-	7700 2200 7950 2200
+	9850 1800 10100 1800
 Wire Wire Line
-	7950 2200 7950 2750
+	10100 1800 10100 2350
 Wire Wire Line
-	7950 2750 7850 2750
+	10100 2350 10000 2350
 $Comp
 L Diode:1N4148 D6
 U 1 1 5F368ED6
-P 6850 3100
-F 0 "D6" V 6804 3180 50  0000 L CNN
-F 1 "1N4148" V 6895 3180 50  0000 L CNN
-F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 6850 2925 50  0001 C CNN
-F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 6850 3100 50  0001 C CNN
-F 4 "D" H 6850 3100 50  0001 C CNN "Spice_Primitive"
-F 5 "D1N4148" H 6850 3100 50  0001 C CNN "Spice_Model"
-F 6 "Y" H 6850 3100 50  0001 C CNN "Spice_Netlist_Enabled"
-F 7 "/home/etienne/Documents/elektrophon/lib/spice/diode/1N4148.mod" H 6850 3100 50  0001 C CNN "Spice_Lib_File"
-	1    6850 3100
+P 9300 2700
+F 0 "D6" V 9254 2780 50  0000 L CNN
+F 1 "1N4148" V 9345 2780 50  0000 L CNN
+F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 9300 2525 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 9300 2700 50  0001 C CNN
+F 4 "D" H 9300 2700 50  0001 C CNN "Spice_Primitive"
+F 5 "D1N4148" H 9300 2700 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 9300 2700 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "/home/etienne/Documents/elektrophon/lib/spice/diode/1N4148.mod" H 9300 2700 50  0001 C CNN "Spice_Lib_File"
+	1    9300 2700
 	0    1    1    0   
 $EndComp
 $Comp
 L Diode:1N4148 D5
 U 1 1 5F368EE0
-P 6650 3100
-F 0 "D5" V 6696 3020 50  0000 R CNN
-F 1 "1N4148" V 6605 3020 50  0000 R CNN
-F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 6650 2925 50  0001 C CNN
-F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 6650 3100 50  0001 C CNN
-F 4 "D" H 6650 3100 50  0001 C CNN "Spice_Primitive"
-F 5 "D1N4148" H 6650 3100 50  0001 C CNN "Spice_Model"
-F 6 "Y" H 6650 3100 50  0001 C CNN "Spice_Netlist_Enabled"
-F 7 "/home/etienne/Documents/elektrophon/lib/spice/diode/1N4148.mod" H 6650 3100 50  0001 C CNN "Spice_Lib_File"
-	1    6650 3100
+P 9100 2700
+F 0 "D5" V 9146 2620 50  0000 R CNN
+F 1 "1N4148" V 9055 2620 50  0000 R CNN
+F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 9100 2525 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 9100 2700 50  0001 C CNN
+F 4 "D" H 9100 2700 50  0001 C CNN "Spice_Primitive"
+F 5 "D1N4148" H 9100 2700 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 9100 2700 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "/home/etienne/Documents/elektrophon/lib/spice/diode/1N4148.mod" H 9100 2700 50  0001 C CNN "Spice_Lib_File"
+	1    9100 2700
 	0    -1   -1   0   
 $EndComp
 $Comp
 L power:GND #PWR013
 U 1 1 5F368EE6
-P 6750 3350
-F 0 "#PWR013" H 6750 3100 50  0001 C CNN
-F 1 "GND" H 6755 3177 50  0000 C CNN
-F 2 "" H 6750 3350 50  0001 C CNN
-F 3 "" H 6750 3350 50  0001 C CNN
-	1    6750 3350
+P 9200 2950
+F 0 "#PWR013" H 9200 2700 50  0001 C CNN
+F 1 "GND" H 9205 2777 50  0000 C CNN
+F 2 "" H 9200 2950 50  0001 C CNN
+F 3 "" H 9200 2950 50  0001 C CNN
+	1    9200 2950
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	6750 3250 6750 3350
+	9200 2850 9200 2950
 Wire Wire Line
-	6650 3250 6750 3250
-Connection ~ 6750 3250
+	9100 2850 9200 2850
+Connection ~ 9200 2850
 Wire Wire Line
-	6750 3250 6850 3250
+	9200 2850 9300 2850
 $Comp
 L Device:R R9
 U 1 1 5F368EF0
-P 6350 2200
-F 0 "R9" V 6143 2200 50  0000 C CNN
-F 1 "100k" V 6234 2200 50  0000 C CNN
-F 2 "" V 6280 2200 50  0001 C CNN
-F 3 "~" H 6350 2200 50  0001 C CNN
-	1    6350 2200
+P 8750 1800
+F 0 "R9" V 8543 1800 50  0000 C CNN
+F 1 "100k" V 8634 1800 50  0000 C CNN
+F 2 "" V 8680 1800 50  0001 C CNN
+F 3 "~" H 8750 1800 50  0001 C CNN
+	1    8750 1800
 	0    1    1    0   
 $EndComp
-Connection ~ 7150 2200
 $Comp
 L Device:R R8
 U 1 1 5F368EF7
-P 6300 2850
-F 0 "R8" V 6093 2850 50  0000 C CNN
-F 1 "33k" V 6184 2850 50  0000 C CNN
-F 2 "" V 6230 2850 50  0001 C CNN
-F 3 "~" H 6300 2850 50  0001 C CNN
-	1    6300 2850
+P 8750 2450
+F 0 "R8" V 8543 2450 50  0000 C CNN
+F 1 "33k" V 8634 2450 50  0000 C CNN
+F 2 "" V 8680 2450 50  0001 C CNN
+F 3 "~" H 8750 2450 50  0001 C CNN
+	1    8750 2450
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	6450 2850 6650 2850
+	9300 2550 9300 2450
 Wire Wire Line
-	6850 2950 6850 2850
-Connection ~ 6850 2850
+	9100 2550 9100 2450
 Wire Wire Line
-	6850 2850 7250 2850
+	9100 2450 9300 2450
 Wire Wire Line
-	6650 2950 6650 2850
-Connection ~ 6650 2850
+	8600 2450 8550 2450
 Wire Wire Line
-	6650 2850 6850 2850
-Wire Wire Line
-	6500 2200 7150 2200
-Wire Wire Line
-	6150 2850 6100 2850
-Wire Wire Line
-	6100 2850 6100 2750
-Connection ~ 6100 2750
-Connection ~ 6100 2200
-Wire Wire Line
-	6100 2200 6200 2200
+	8550 2450 8550 2350
+Connection ~ 8550 2350
 $Comp
 L Amplifier_Operational:TL072 U3
 U 3 1 5F383063
-P 5750 5300
-F 0 "U3" H 5708 5346 50  0000 L CNN
-F 1 "TL072" H 5708 5255 50  0000 L CNN
-F 2 "" H 5750 5300 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 5750 5300 50  0001 C CNN
-	3    5750 5300
+P 3150 7000
+F 0 "U3" H 3108 7046 50  0000 L CNN
+F 1 "TL072" H 3108 6955 50  0000 L CNN
+F 2 "" H 3150 7000 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 3150 7000 50  0001 C CNN
+	3    3150 7000
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:-15V #PWR015
 U 1 1 5F383069
-P 5650 5600
-F 0 "#PWR015" H 5650 5700 50  0001 C CNN
-F 1 "-15V" H 5665 5773 50  0000 C CNN
-F 2 "" H 5650 5600 50  0001 C CNN
-F 3 "" H 5650 5600 50  0001 C CNN
-	1    5650 5600
+P 3050 7300
+F 0 "#PWR015" H 3050 7400 50  0001 C CNN
+F 1 "-15V" H 3065 7473 50  0000 C CNN
+F 2 "" H 3050 7300 50  0001 C CNN
+F 3 "" H 3050 7300 50  0001 C CNN
+	1    3050 7300
 	-1   0    0    1   
 $EndComp
 $Comp
 L power:+15V #PWR014
 U 1 1 5F38306F
-P 5650 5000
-F 0 "#PWR014" H 5650 4850 50  0001 C CNN
-F 1 "+15V" H 5665 5173 50  0000 C CNN
-F 2 "" H 5650 5000 50  0001 C CNN
-F 3 "" H 5650 5000 50  0001 C CNN
-	1    5650 5000
+P 3050 6700
+F 0 "#PWR014" H 3050 6550 50  0001 C CNN
+F 1 "+15V" H 3065 6873 50  0000 C CNN
+F 2 "" H 3050 6700 50  0001 C CNN
+F 3 "" H 3050 6700 50  0001 C CNN
+	1    3050 6700
 	1    0    0    -1  
 $EndComp
 $Comp
 L Amplifier_Operational:TL072 U4
 U 3 1 5F385CC7
-P 7500 5450
-F 0 "U4" H 7458 5496 50  0000 L CNN
-F 1 "TL072" H 7458 5405 50  0000 L CNN
-F 2 "" H 7500 5450 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 7500 5450 50  0001 C CNN
-	3    7500 5450
+P 4900 7150
+F 0 "U4" H 4858 7196 50  0000 L CNN
+F 1 "TL072" H 4858 7105 50  0000 L CNN
+F 2 "" H 4900 7150 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 4900 7150 50  0001 C CNN
+	3    4900 7150
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:-15V #PWR017
 U 1 1 5F385CCD
-P 7400 5750
-F 0 "#PWR017" H 7400 5850 50  0001 C CNN
-F 1 "-15V" H 7415 5923 50  0000 C CNN
-F 2 "" H 7400 5750 50  0001 C CNN
-F 3 "" H 7400 5750 50  0001 C CNN
-	1    7400 5750
+P 4800 7450
+F 0 "#PWR017" H 4800 7550 50  0001 C CNN
+F 1 "-15V" H 4815 7623 50  0000 C CNN
+F 2 "" H 4800 7450 50  0001 C CNN
+F 3 "" H 4800 7450 50  0001 C CNN
+	1    4800 7450
 	-1   0    0    1   
 $EndComp
 $Comp
 L power:+15V #PWR016
 U 1 1 5F385CD3
-P 7400 5150
-F 0 "#PWR016" H 7400 5000 50  0001 C CNN
-F 1 "+15V" H 7415 5323 50  0000 C CNN
-F 2 "" H 7400 5150 50  0001 C CNN
-F 3 "" H 7400 5150 50  0001 C CNN
-	1    7400 5150
+P 4800 6850
+F 0 "#PWR016" H 4800 6700 50  0001 C CNN
+F 1 "+15V" H 4815 7023 50  0000 C CNN
+F 2 "" H 4800 6850 50  0001 C CNN
+F 3 "" H 4800 6850 50  0001 C CNN
+	1    4800 6850
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	2350 1750 2350 2200
+	5550 1350 5550 1800
 Wire Wire Line
-	2050 1750 2350 1750
-Connection ~ 1450 2200
+	5250 1350 5550 1350
+Connection ~ 4650 1800
 Wire Wire Line
-	1450 1750 1450 2200
+	4650 1350 4650 1800
 Wire Wire Line
-	1750 1750 1450 1750
+	4950 1350 4650 1350
 $Comp
 L Device:C C1
 U 1 1 5F30C2D1
-P 1900 1750
-F 0 "C1" V 1648 1750 50  0000 C CNN
-F 1 "150p" V 1739 1750 50  0000 C CNN
-F 2 "" H 1938 1600 50  0001 C CNN
-F 3 "~" H 1900 1750 50  0001 C CNN
-	1    1900 1750
+P 5100 1350
+F 0 "C1" V 4848 1350 50  0000 C CNN
+F 1 "150p" V 4939 1350 50  0000 C CNN
+F 2 "" H 5138 1200 50  0001 C CNN
+F 3 "~" H 5100 1350 50  0001 C CNN
+	1    5100 1350
 	0    1    1    0   
 $EndComp
+Wire Wire Line
+	5550 1800 5650 1800
+Wire Wire Line
+	5950 2450 6000 2450
+Wire Wire Line
+	5950 1800 6200 1800
+Connection ~ 6200 1800
+Wire Wire Line
+	7350 2450 7550 2450
+Connection ~ 7550 2450
+Wire Wire Line
+	7750 2450 7850 2450
+Connection ~ 7750 2450
+Wire Wire Line
+	7750 1800 7350 1800
+Wire Wire Line
+	7050 1800 7000 1800
+Connection ~ 7750 1800
+Connection ~ 7000 1800
+Wire Wire Line
+	8900 2450 9100 2450
+Connection ~ 9100 2450
+Wire Wire Line
+	9300 2450 9400 2450
+Connection ~ 9300 2450
+Wire Wire Line
+	9300 1800 8900 1800
+Wire Wire Line
+	8600 1800 8550 1800
+Connection ~ 9300 1800
+Connection ~ 8550 1800
+$Comp
+L Device:C C?
+U 1 1 5FC9581E
+P 6600 1350
+F 0 "C?" V 6348 1350 50  0000 C CNN
+F 1 "47p" V 6439 1350 50  0000 C CNN
+F 2 "" H 6638 1200 50  0001 C CNN
+F 3 "~" H 6600 1350 50  0001 C CNN
+	1    6600 1350
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 5FC95FB8
+P 8150 1350
+F 0 "C?" V 7898 1350 50  0000 C CNN
+F 1 "47p" V 7989 1350 50  0000 C CNN
+F 2 "" H 8188 1200 50  0001 C CNN
+F 3 "~" H 8150 1350 50  0001 C CNN
+	1    8150 1350
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 5FC967F7
+P 9700 1400
+F 0 "C?" V 9448 1400 50  0000 C CNN
+F 1 "47p" V 9539 1400 50  0000 C CNN
+F 2 "" H 9738 1250 50  0001 C CNN
+F 3 "~" H 9700 1400 50  0001 C CNN
+	1    9700 1400
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	9850 1400 10100 1400
+Wire Wire Line
+	10100 1400 10100 1800
+Connection ~ 10100 1800
+Wire Wire Line
+	9550 1400 9300 1400
+Wire Wire Line
+	9300 1400 9300 1800
+Wire Wire Line
+	8550 1800 8550 1350
+Wire Wire Line
+	8550 1350 8300 1350
+Wire Wire Line
+	8000 1350 7750 1350
+Wire Wire Line
+	7750 1350 7750 1800
+Wire Wire Line
+	6200 1800 6200 1350
+Wire Wire Line
+	6200 1350 6450 1350
+Wire Wire Line
+	7000 1350 7000 1800
+Wire Wire Line
+	6750 1350 7000 1350
+$Comp
+L Amplifier_Operational:TL072 U?
+U 1 1 5FCBA54E
+P 6600 4650
+F 0 "U?" H 6600 4283 50  0000 C CNN
+F 1 "TL072" H 6600 4374 50  0000 C CNN
+F 2 "" H 6600 4650 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 6600 4650 50  0001 C CNN
+F 4 "X" H 6600 4650 50  0001 C CNN "Spice_Primitive"
+F 5 "OPA2134" H 6600 4650 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 6600 4650 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "/home/etienne/Documents/elektrophon/lib/spice/opamp/OPA2134.LIB" H 6600 4650 50  0001 C CNN "Spice_Lib_File"
+F 8 "3 2 8 4 1" H 6600 4650 50  0001 C CNN "Spice_Node_Sequence"
+	1    6600 4650
+	1    0    0    1   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5FCBA554
+P 6600 4100
+F 0 "R?" V 6393 4100 50  0000 C CNN
+F 1 "100k" V 6484 4100 50  0000 C CNN
+F 2 "" V 6530 4100 50  0001 C CNN
+F 3 "~" H 6600 4100 50  0001 C CNN
+	1    6600 4100
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6450 4100 6200 4100
+Wire Wire Line
+	6200 4100 6200 4550
+Wire Wire Line
+	6200 4550 6300 4550
+Wire Wire Line
+	6750 4100 7000 4100
+Wire Wire Line
+	7000 4100 7000 4650
+Wire Wire Line
+	7000 4650 6900 4650
+$Comp
+L Diode:1N4148 D?
+U 1 1 5FCBA564
+P 6200 5000
+F 0 "D?" V 6154 5080 50  0000 L CNN
+F 1 "1N4148" V 6245 5080 50  0000 L CNN
+F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 6200 4825 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 6200 5000 50  0001 C CNN
+F 4 "D" H 6200 5000 50  0001 C CNN "Spice_Primitive"
+F 5 "D1N4148" H 6200 5000 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 6200 5000 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "/home/etienne/Documents/elektrophon/lib/spice/diode/1N4148.mod" H 6200 5000 50  0001 C CNN "Spice_Lib_File"
+	1    6200 5000
+	0    1    1    0   
+$EndComp
+$Comp
+L Diode:1N4148 D?
+U 1 1 5FCBA56E
+P 6000 5000
+F 0 "D?" V 6046 4920 50  0000 R CNN
+F 1 "1N4148" V 5955 4920 50  0000 R CNN
+F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 6000 4825 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 6000 5000 50  0001 C CNN
+F 4 "D" H 6000 5000 50  0001 C CNN "Spice_Primitive"
+F 5 "D1N4148" H 6000 5000 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 6000 5000 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "/home/etienne/Documents/elektrophon/lib/spice/diode/1N4148.mod" H 6000 5000 50  0001 C CNN "Spice_Lib_File"
+	1    6000 5000
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5FCBA574
+P 6100 5250
+F 0 "#PWR?" H 6100 5000 50  0001 C CNN
+F 1 "GND" H 6105 5077 50  0000 C CNN
+F 2 "" H 6100 5250 50  0001 C CNN
+F 3 "" H 6100 5250 50  0001 C CNN
+	1    6100 5250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6100 5150 6100 5250
+Wire Wire Line
+	6000 5150 6100 5150
+Connection ~ 6100 5150
+Wire Wire Line
+	6100 5150 6200 5150
+$Comp
+L Device:R R?
+U 1 1 5FCBA57E
+P 5800 4100
+F 0 "R?" V 5593 4100 50  0000 C CNN
+F 1 "100k" V 5684 4100 50  0000 C CNN
+F 2 "" V 5730 4100 50  0001 C CNN
+F 3 "~" H 5800 4100 50  0001 C CNN
+	1    5800 4100
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5FCBA584
+P 5800 4750
+F 0 "R?" V 5593 4750 50  0000 C CNN
+F 1 "33k" V 5684 4750 50  0000 C CNN
+F 2 "" V 5730 4750 50  0001 C CNN
+F 3 "~" H 5800 4750 50  0001 C CNN
+	1    5800 4750
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5550 4750 5650 4750
+Wire Wire Line
+	6200 4850 6200 4750
+Connection ~ 6200 4750
+Wire Wire Line
+	6200 4750 6300 4750
+Wire Wire Line
+	6000 4850 6000 4750
+Connection ~ 6000 4750
+Wire Wire Line
+	6000 4750 6200 4750
+$Comp
+L Amplifier_Operational:TL072 U?
+U 1 1 5FCBA596
+P 8150 4650
+F 0 "U?" H 8150 4283 50  0000 C CNN
+F 1 "TL072" H 8150 4374 50  0000 C CNN
+F 2 "" H 8150 4650 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 8150 4650 50  0001 C CNN
+F 4 "X" H 8150 4650 50  0001 C CNN "Spice_Primitive"
+F 5 "OPA2134" H 8150 4650 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 8150 4650 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "/home/etienne/Documents/elektrophon/lib/spice/opamp/OPA2134.LIB" H 8150 4650 50  0001 C CNN "Spice_Lib_File"
+F 8 "3 2 8 4 1" H 8150 4650 50  0001 C CNN "Spice_Node_Sequence"
+	1    8150 4650
+	1    0    0    1   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5FCBA59C
+P 8150 4100
+F 0 "R?" V 7943 4100 50  0000 C CNN
+F 1 "100k" V 8034 4100 50  0000 C CNN
+F 2 "" V 8080 4100 50  0001 C CNN
+F 3 "~" H 8150 4100 50  0001 C CNN
+	1    8150 4100
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	8000 4100 7750 4100
+Wire Wire Line
+	7750 4100 7750 4550
+Wire Wire Line
+	7750 4550 7850 4550
+Wire Wire Line
+	8300 4100 8550 4100
+Wire Wire Line
+	8550 4100 8550 4650
+Wire Wire Line
+	8550 4650 8450 4650
+$Comp
+L Diode:1N4148 D?
+U 1 1 5FCBA5AC
+P 7750 5000
+F 0 "D?" V 7704 5080 50  0000 L CNN
+F 1 "1N4148" V 7795 5080 50  0000 L CNN
+F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 7750 4825 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 7750 5000 50  0001 C CNN
+F 4 "D" H 7750 5000 50  0001 C CNN "Spice_Primitive"
+F 5 "D1N4148" H 7750 5000 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 7750 5000 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "/home/etienne/Documents/elektrophon/lib/spice/diode/1N4148.mod" H 7750 5000 50  0001 C CNN "Spice_Lib_File"
+	1    7750 5000
+	0    1    1    0   
+$EndComp
+$Comp
+L Diode:1N4148 D?
+U 1 1 5FCBA5B6
+P 7550 5000
+F 0 "D?" V 7596 4920 50  0000 R CNN
+F 1 "1N4148" V 7505 4920 50  0000 R CNN
+F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 7550 4825 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 7550 5000 50  0001 C CNN
+F 4 "D" H 7550 5000 50  0001 C CNN "Spice_Primitive"
+F 5 "D1N4148" H 7550 5000 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 7550 5000 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "/home/etienne/Documents/elektrophon/lib/spice/diode/1N4148.mod" H 7550 5000 50  0001 C CNN "Spice_Lib_File"
+	1    7550 5000
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5FCBA5BC
+P 7650 5250
+F 0 "#PWR?" H 7650 5000 50  0001 C CNN
+F 1 "GND" H 7655 5077 50  0000 C CNN
+F 2 "" H 7650 5250 50  0001 C CNN
+F 3 "" H 7650 5250 50  0001 C CNN
+	1    7650 5250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7650 5150 7650 5250
+Wire Wire Line
+	7550 5150 7650 5150
+Connection ~ 7650 5150
+Wire Wire Line
+	7650 5150 7750 5150
+$Comp
+L Device:R R?
+U 1 1 5FCBA5C6
+P 7200 4100
+F 0 "R?" V 6993 4100 50  0000 C CNN
+F 1 "100k" V 7084 4100 50  0000 C CNN
+F 2 "" V 7130 4100 50  0001 C CNN
+F 3 "~" H 7200 4100 50  0001 C CNN
+	1    7200 4100
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5FCBA5CC
+P 7200 4750
+F 0 "R?" V 6993 4750 50  0000 C CNN
+F 1 "33k" V 7084 4750 50  0000 C CNN
+F 2 "" V 7130 4750 50  0001 C CNN
+F 3 "~" H 7200 4750 50  0001 C CNN
+	1    7200 4750
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	7750 4850 7750 4750
+Wire Wire Line
+	7550 4850 7550 4750
+Wire Wire Line
+	7550 4750 7750 4750
+Wire Wire Line
+	7000 4650 7000 4750
+Wire Wire Line
+	7000 4750 7050 4750
+Connection ~ 7000 4650
+$Comp
+L Amplifier_Operational:TL072 U?
+U 1 1 5FCBA5DD
+P 9700 4650
+F 0 "U?" H 9700 4283 50  0000 C CNN
+F 1 "TL072" H 9700 4374 50  0000 C CNN
+F 2 "" H 9700 4650 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 9700 4650 50  0001 C CNN
+F 4 "X" H 9700 4650 50  0001 C CNN "Spice_Primitive"
+F 5 "OPA2134" H 9700 4650 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 9700 4650 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "/home/etienne/Documents/elektrophon/lib/spice/opamp/OPA2134.LIB" H 9700 4650 50  0001 C CNN "Spice_Lib_File"
+F 8 "3 2 8 4 1" H 9700 4650 50  0001 C CNN "Spice_Node_Sequence"
+	1    9700 4650
+	1    0    0    1   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5FCBA5E3
+P 9700 4100
+F 0 "R?" V 9493 4100 50  0000 C CNN
+F 1 "100k" V 9584 4100 50  0000 C CNN
+F 2 "" V 9630 4100 50  0001 C CNN
+F 3 "~" H 9700 4100 50  0001 C CNN
+	1    9700 4100
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	9550 4100 9300 4100
+Wire Wire Line
+	9300 4100 9300 4550
+Wire Wire Line
+	9300 4550 9350 4550
+Wire Wire Line
+	10100 4650 10000 4650
+$Comp
+L Diode:1N4148 D?
+U 1 1 5FCBA5F3
+P 9150 5000
+F 0 "D?" V 9104 5080 50  0000 L CNN
+F 1 "1N4148" V 9195 5080 50  0000 L CNN
+F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 9150 4825 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 9150 5000 50  0001 C CNN
+F 4 "D" H 9150 5000 50  0001 C CNN "Spice_Primitive"
+F 5 "D1N4148" H 9150 5000 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 9150 5000 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "/home/etienne/Documents/elektrophon/lib/spice/diode/1N4148.mod" H 9150 5000 50  0001 C CNN "Spice_Lib_File"
+	1    9150 5000
+	0    1    1    0   
+$EndComp
+$Comp
+L Diode:1N4148 D?
+U 1 1 5FCBA5FD
+P 8950 5000
+F 0 "D?" V 8996 4920 50  0000 R CNN
+F 1 "1N4148" V 8905 4920 50  0000 R CNN
+F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 8950 4825 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 8950 5000 50  0001 C CNN
+F 4 "D" H 8950 5000 50  0001 C CNN "Spice_Primitive"
+F 5 "D1N4148" H 8950 5000 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 8950 5000 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "/home/etienne/Documents/elektrophon/lib/spice/diode/1N4148.mod" H 8950 5000 50  0001 C CNN "Spice_Lib_File"
+	1    8950 5000
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5FCBA603
+P 9050 5250
+F 0 "#PWR?" H 9050 5000 50  0001 C CNN
+F 1 "GND" H 9055 5077 50  0000 C CNN
+F 2 "" H 9050 5250 50  0001 C CNN
+F 3 "" H 9050 5250 50  0001 C CNN
+	1    9050 5250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9050 5150 9050 5250
+Wire Wire Line
+	8950 5150 9050 5150
+Connection ~ 9050 5150
+Wire Wire Line
+	9050 5150 9150 5150
+$Comp
+L Device:R R?
+U 1 1 5FCBA60D
+P 8750 4100
+F 0 "R?" V 8543 4100 50  0000 C CNN
+F 1 "100k" V 8634 4100 50  0000 C CNN
+F 2 "" V 8680 4100 50  0001 C CNN
+F 3 "~" H 8750 4100 50  0001 C CNN
+	1    8750 4100
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5FCBA613
+P 8750 4750
+F 0 "R?" V 8543 4750 50  0000 C CNN
+F 1 "33k" V 8634 4750 50  0000 C CNN
+F 2 "" V 8680 4750 50  0001 C CNN
+F 3 "~" H 8750 4750 50  0001 C CNN
+	1    8750 4750
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	8600 4750 8550 4750
+Wire Wire Line
+	8550 4750 8550 4650
+Connection ~ 8550 4650
+Wire Wire Line
+	5550 4100 5650 4100
+Wire Wire Line
+	5950 4750 6000 4750
+Wire Wire Line
+	5950 4100 6200 4100
+Connection ~ 6200 4100
+Wire Wire Line
+	7350 4750 7550 4750
+Connection ~ 7550 4750
+Wire Wire Line
+	7750 4750 7850 4750
+Connection ~ 7750 4750
+Wire Wire Line
+	7750 4100 7350 4100
+Wire Wire Line
+	7050 4100 7000 4100
+Connection ~ 7750 4100
+Connection ~ 7000 4100
+Wire Wire Line
+	9300 4100 8900 4100
+Wire Wire Line
+	8600 4100 8550 4100
+Connection ~ 9300 4100
+Connection ~ 8550 4100
+$Comp
+L Device:C C?
+U 1 1 5FCBA633
+P 6600 3650
+F 0 "C?" V 6348 3650 50  0000 C CNN
+F 1 "47p" V 6439 3650 50  0000 C CNN
+F 2 "" H 6638 3500 50  0001 C CNN
+F 3 "~" H 6600 3650 50  0001 C CNN
+	1    6600 3650
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 5FCBA639
+P 8150 3650
+F 0 "C?" V 7898 3650 50  0000 C CNN
+F 1 "47p" V 7989 3650 50  0000 C CNN
+F 2 "" H 8188 3500 50  0001 C CNN
+F 3 "~" H 8150 3650 50  0001 C CNN
+	1    8150 3650
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 5FCBA63F
+P 9700 3700
+F 0 "C?" V 9448 3700 50  0000 C CNN
+F 1 "47p" V 9539 3700 50  0000 C CNN
+F 2 "" H 9738 3550 50  0001 C CNN
+F 3 "~" H 9700 3700 50  0001 C CNN
+	1    9700 3700
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	9850 3700 10100 3700
+Wire Wire Line
+	9550 3700 9300 3700
+Wire Wire Line
+	9300 3700 9300 4100
+Wire Wire Line
+	8550 4100 8550 3650
+Wire Wire Line
+	8550 3650 8300 3650
+Wire Wire Line
+	8000 3650 7750 3650
+Wire Wire Line
+	7750 3650 7750 4100
+Wire Wire Line
+	6200 4100 6200 3650
+Wire Wire Line
+	6200 3650 6450 3650
+Wire Wire Line
+	7000 3650 7000 4100
+Wire Wire Line
+	6750 3650 7000 3650
+Wire Wire Line
+	10100 2350 10100 3300
+Wire Wire Line
+	10100 3300 5550 3300
+Wire Wire Line
+	5550 3300 5550 4100
+Connection ~ 10100 2350
+Connection ~ 5550 4100
+Wire Wire Line
+	5550 4100 5550 4750
+$Comp
+L Device:R R?
+U 1 1 5FCC6EF2
+P 10350 4650
+F 0 "R?" V 10143 4650 50  0000 C CNN
+F 1 "330" V 10234 4650 50  0000 C CNN
+F 2 "" V 10280 4650 50  0001 C CNN
+F 3 "~" H 10350 4650 50  0001 C CNN
+	1    10350 4650
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	10650 4650 10650 4100
+Wire Wire Line
+	10500 4650 10650 4650
+Connection ~ 10650 4100
+Wire Wire Line
+	10650 4100 10800 4100
+Wire Wire Line
+	10100 4650 10200 4650
+Connection ~ 10100 4650
+Wire Wire Line
+	9850 4100 10650 4100
+Wire Wire Line
+	10100 3700 10100 4650
+$Comp
+L Device:R R?
+U 1 1 5FD0A9F0
+P 9350 5000
+F 0 "R?" V 9143 5000 50  0000 C CNN
+F 1 "10k" V 9234 5000 50  0000 C CNN
+F 2 "" V 9280 5000 50  0001 C CNN
+F 3 "~" H 9350 5000 50  0001 C CNN
+	1    9350 5000
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5FD0B423
+P 9350 5150
+F 0 "#PWR?" H 9350 4900 50  0001 C CNN
+F 1 "GND" H 9355 4977 50  0000 C CNN
+F 2 "" H 9350 5150 50  0001 C CNN
+F 3 "" H 9350 5150 50  0001 C CNN
+	1    9350 5150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8900 4750 8950 4750
+Wire Wire Line
+	8950 4850 8950 4750
+Connection ~ 8950 4750
+Wire Wire Line
+	8950 4750 9150 4750
+Wire Wire Line
+	9150 4850 9150 4750
+Connection ~ 9150 4750
+Wire Wire Line
+	9150 4750 9400 4750
+Connection ~ 9350 4550
+Wire Wire Line
+	9350 4550 9400 4550
+Wire Wire Line
+	9350 4550 9350 4850
+$Comp
+L Amplifier_Operational:CA3080 U?
+U 1 1 5FD4E7C7
+P 3300 3400
+F 0 "U?" H 3644 3446 50  0000 L CNN
+F 1 "CA3080" H 3644 3355 50  0000 L CNN
+F 2 "" H 3300 3400 50  0001 C CNN
+F 3 "http://www.intersil.com/content/dam/Intersil/documents/ca30/ca3080-a.pdf" H 3300 3500 50  0001 C CNN
+	1    3300 3400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_POT RV?
+U 1 1 5FD52839
+P 1450 1350
+F 0 "RV?" H 1381 1396 50  0000 R CNN
+F 1 "R_POT" H 1381 1305 50  0000 R CNN
+F 2 "" H 1450 1350 50  0001 C CNN
+F 3 "~" H 1450 1350 50  0001 C CNN
+	1    1450 1350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_POT RV?
+U 1 1 5FD5355F
+P 1450 2150
+F 0 "RV?" H 1381 2196 50  0000 R CNN
+F 1 "R_POT" H 1381 2105 50  0000 R CNN
+F 2 "" H 1450 2150 50  0001 C CNN
+F 3 "~" H 1450 2150 50  0001 C CNN
+	1    1450 2150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_POT RV?
+U 1 1 5FD6BB13
+P 1450 3300
+F 0 "RV?" H 1381 3254 50  0000 R CNN
+F 1 "R_POT" H 1381 3345 50  0000 R CNN
+F 2 "" H 1450 3300 50  0001 C CNN
+F 3 "~" H 1450 3300 50  0001 C CNN
+	1    1450 3300
+	1    0    0    1   
+$EndComp
+Text GLabel 1450 3950 0    50   Input ~ 0
+IN_1
+$Comp
+L Device:R R?
+U 1 1 5FD7174C
+P 1900 3950
+F 0 "R?" V 1693 3950 50  0000 C CNN
+F 1 "100k" V 1784 3950 50  0000 C CNN
+F 2 "" V 1830 3950 50  0001 C CNN
+F 3 "~" H 1900 3950 50  0001 C CNN
+	1    1900 3950
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 5FD72562
+P 2300 3950
+F 0 "C?" V 2048 3950 50  0000 C CNN
+F 1 "220n" V 2139 3950 50  0000 C CNN
+F 2 "" H 2338 3800 50  0001 C CNN
+F 3 "~" H 2300 3950 50  0001 C CNN
+	1    2300 3950
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5FD7CF03
+P 2700 3950
+F 0 "R?" V 2493 3950 50  0000 C CNN
+F 1 "1.5k" V 2584 3950 50  0000 C CNN
+F 2 "" V 2630 3950 50  0001 C CNN
+F 3 "~" H 2700 3950 50  0001 C CNN
+	1    2700 3950
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5FD80051
+P 2900 4000
+F 0 "#PWR?" H 2900 3750 50  0001 C CNN
+F 1 "GND" H 2905 3827 50  0000 C CNN
+F 2 "" H 2900 4000 50  0001 C CNN
+F 3 "" H 2900 4000 50  0001 C CNN
+	1    2900 4000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2900 3950 2900 4000
+Wire Wire Line
+	2050 3950 2150 3950
+Wire Wire Line
+	2450 3950 2550 3950
+Wire Wire Line
+	2850 3950 2900 3950
+Connection ~ 2450 3950
+$Comp
+L Device:R R?
+U 1 1 5FDD5AC5
+P 2100 3300
+F 0 "R?" V 1893 3300 50  0000 C CNN
+F 1 "3.3Meg" V 1984 3300 50  0000 C CNN
+F 2 "" V 2030 3300 50  0001 C CNN
+F 3 "~" H 2100 3300 50  0001 C CNN
+	1    2100 3300
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5FDF6178
+P 2100 2700
+F 0 "R?" V 1893 2700 50  0000 C CNN
+F 1 "100k" V 1984 2700 50  0000 C CNN
+F 2 "" V 2030 2700 50  0001 C CNN
+F 3 "~" H 2100 2700 50  0001 C CNN
+	1    2100 2700
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5FDF6CF6
+P 2750 2700
+F 0 "R?" V 2543 2700 50  0000 C CNN
+F 1 "1.5k" V 2634 2700 50  0000 C CNN
+F 2 "" V 2680 2700 50  0001 C CNN
+F 3 "~" H 2750 2700 50  0001 C CNN
+	1    2750 2700
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1450 2700 1950 2700
+Wire Wire Line
+	2250 2700 2450 2700
+$Comp
+L power:GND #PWR?
+U 1 1 5FDFF396
+P 2950 2750
+F 0 "#PWR?" H 2950 2500 50  0001 C CNN
+F 1 "GND" H 2955 2577 50  0000 C CNN
+F 2 "" H 2950 2750 50  0001 C CNN
+F 3 "" H 2950 2750 50  0001 C CNN
+	1    2950 2750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2950 2750 2950 2700
+Wire Wire Line
+	2950 2700 2900 2700
+Connection ~ 2450 2700
+Wire Wire Line
+	2450 2700 2600 2700
+Wire Wire Line
+	1600 3300 1950 3300
+Wire Wire Line
+	2250 3300 2450 3300
+Connection ~ 2450 3300
+$Comp
+L power:+15V #PWR?
+U 1 1 5FE39793
+P 1450 3150
+F 0 "#PWR?" H 1450 3000 50  0001 C CNN
+F 1 "+15V" H 1465 3323 50  0000 C CNN
+F 2 "" H 1450 3150 50  0001 C CNN
+F 3 "" H 1450 3150 50  0001 C CNN
+	1    1450 3150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:-15V #PWR?
+U 1 1 5FE3A4AE
+P 1450 3450
+F 0 "#PWR?" H 1450 3550 50  0001 C CNN
+F 1 "-15V" H 1465 3623 50  0000 C CNN
+F 2 "" H 1450 3450 50  0001 C CNN
+F 3 "" H 1450 3450 50  0001 C CNN
+	1    1450 3450
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	1750 3950 1450 3950
+Wire Wire Line
+	2450 3300 3000 3300
+Wire Wire Line
+	2450 3500 3000 3500
+Text GLabel 1350 1900 0    50   Input ~ 0
+IN_2
+Wire Wire Line
+	1350 1900 1450 1900
+Wire Wire Line
+	1450 1900 1450 2000
+$Comp
+L power:GND #PWR?
+U 1 1 5FE82372
+P 1450 2300
+F 0 "#PWR?" H 1450 2050 50  0001 C CNN
+F 1 "GND" H 1455 2127 50  0000 C CNN
+F 2 "" H 1450 2300 50  0001 C CNN
+F 3 "" H 1450 2300 50  0001 C CNN
+	1    1450 2300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+15V #PWR?
+U 1 1 5FE829CD
+P 1450 1200
+F 0 "#PWR?" H 1450 1050 50  0001 C CNN
+F 1 "+15V" H 1465 1373 50  0000 C CNN
+F 2 "" H 1450 1200 50  0001 C CNN
+F 3 "" H 1450 1200 50  0001 C CNN
+	1    1450 1200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5FE82F66
+P 1450 1500
+F 0 "#PWR?" H 1450 1250 50  0001 C CNN
+F 1 "GND" H 1455 1327 50  0000 C CNN
+F 2 "" H 1450 1500 50  0001 C CNN
+F 3 "" H 1450 1500 50  0001 C CNN
+	1    1450 1500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5FE83559
+P 2100 1350
+F 0 "R?" V 1893 1350 50  0000 C CNN
+F 1 "47k" V 1984 1350 50  0000 C CNN
+F 2 "" V 2030 1350 50  0001 C CNN
+F 3 "~" H 2100 1350 50  0001 C CNN
+	1    2100 1350
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5FE83BF1
+P 2100 2150
+F 0 "R?" V 1893 2150 50  0000 C CNN
+F 1 "15k" V 1984 2150 50  0000 C CNN
+F 2 "" V 2030 2150 50  0001 C CNN
+F 3 "~" H 2100 2150 50  0001 C CNN
+	1    2100 2150
+	0    1    1    0   
+$EndComp
+$Comp
+L Transistor_BJT:BC557 Q?
+U 1 1 5FE8F24C
+P 3200 2450
+F 0 "Q?" H 3391 2404 50  0000 L CNN
+F 1 "BC557" H 3391 2495 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 3400 2375 50  0001 L CIN
+F 3 "http://www.fairchildsemi.com/ds/BC/BC557.pdf" H 3200 2450 50  0001 L CNN
+	1    3200 2450
+	1    0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5FE917D0
+P 3000 2450
+F 0 "#PWR?" H 3000 2200 50  0001 C CNN
+F 1 "GND" H 3005 2277 50  0000 C CNN
+F 2 "" H 3000 2450 50  0001 C CNN
+F 3 "" H 3000 2450 50  0001 C CNN
+	1    3000 2450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3300 2250 3300 2150
+Wire Wire Line
+	3300 1350 2250 1350
+Wire Wire Line
+	1950 1350 1600 1350
+Wire Wire Line
+	1600 2150 1950 2150
+Wire Wire Line
+	2250 2150 3300 2150
+Connection ~ 3300 2150
+Wire Wire Line
+	3300 2150 3300 1350
+$Comp
+L Device:D D?
+U 1 1 5FEA8269
+P 3550 1350
+F 0 "D?" H 3550 1567 50  0000 C CNN
+F 1 "D" H 3550 1476 50  0000 C CNN
+F 2 "" H 3550 1350 50  0001 C CNN
+F 3 "~" H 3550 1350 50  0001 C CNN
+	1    3550 1350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5FEAB47F
+P 3800 1450
+F 0 "#PWR?" H 3800 1200 50  0001 C CNN
+F 1 "GND" H 3805 1277 50  0000 C CNN
+F 2 "" H 3800 1450 50  0001 C CNN
+F 3 "" H 3800 1450 50  0001 C CNN
+	1    3800 1450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3800 1450 3800 1350
+Wire Wire Line
+	3800 1350 3700 1350
+Wire Wire Line
+	3400 1350 3300 1350
+Connection ~ 3300 1350
+$Comp
+L Device:R R?
+U 1 1 5FEB57AD
+P 3800 2600
+F 0 "R?" V 3593 2600 50  0000 C CNN
+F 1 "6.8Meg" V 3684 2600 50  0000 C CNN
+F 2 "" V 3730 2600 50  0001 C CNN
+F 3 "~" H 3800 2600 50  0001 C CNN
+	1    3800 2600
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:+15V #PWR?
+U 1 1 5FEB8F3E
+P 3800 2450
+F 0 "#PWR?" H 3800 2300 50  0001 C CNN
+F 1 "+15V" H 3815 2623 50  0000 C CNN
+F 2 "" H 3800 2450 50  0001 C CNN
+F 3 "" H 3800 2450 50  0001 C CNN
+	1    3800 2450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3300 2650 3300 2900
+Wire Wire Line
+	3800 2900 3300 2900
+Connection ~ 3300 2900
+Wire Wire Line
+	3300 2900 3300 3100
+Wire Wire Line
+	3800 2750 3800 2900
+$Comp
+L power:+15V #PWR?
+U 1 1 5FED912E
+P 3200 3100
+F 0 "#PWR?" H 3200 2950 50  0001 C CNN
+F 1 "+15V" H 3215 3273 50  0000 C CNN
+F 2 "" H 3200 3100 50  0001 C CNN
+F 3 "" H 3200 3100 50  0001 C CNN
+	1    3200 3100
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:-15V #PWR?
+U 1 1 5FEDAEDF
+P 3200 3700
+F 0 "#PWR?" H 3200 3800 50  0001 C CNN
+F 1 "-15V" H 3215 3873 50  0000 C CNN
+F 2 "" H 3200 3700 50  0001 C CNN
+F 3 "" H 3200 3700 50  0001 C CNN
+	1    3200 3700
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	2450 3500 2450 3950
+Wire Wire Line
+	2450 2700 2450 3300
+Wire Wire Line
+	4650 2250 4300 2250
+Wire Wire Line
+	4300 2250 4300 3400
+Wire Wire Line
+	4300 3400 3600 3400
+Connection ~ 4650 2250
 $EndSCHEMATC
