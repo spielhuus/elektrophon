@@ -35,19 +35,6 @@ F 3 "" H 2950 7450 50  0001 C CNN
 	1    2950 7450
 	-1   0    0    1   
 $EndComp
-$Comp
-L power:GND #PWR011
-U 1 1 5F527D3F
-P 1800 2400
-F 0 "#PWR011" H 1800 2150 50  0001 C CNN
-F 1 "GND" H 1805 2227 50  0000 C CNN
-F 2 "" H 1800 2400 50  0001 C CNN
-F 3 "" H 1800 2400 50  0001 C CNN
-	1    1800 2400
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	1800 2400 1850 2400
 Wire Wire Line
 	1800 2200 1800 1800
 Wire Wire Line
@@ -91,19 +78,6 @@ F 7 "/home/etienne/Documents/elektrophon/lib/spice/opamp/TL072-dual.lib" H 2150 
 $EndComp
 Text GLabel 2600 2300 2    50   Input ~ 0
 Xa
-$Comp
-L power:GND #PWR012
-U 1 1 5F6230CC
-P 1800 3500
-F 0 "#PWR012" H 1800 3250 50  0001 C CNN
-F 1 "GND" H 1805 3327 50  0000 C CNN
-F 2 "" H 1800 3500 50  0001 C CNN
-F 3 "" H 1800 3500 50  0001 C CNN
-	1    1800 3500
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	1800 3500 1850 3500
 Wire Wire Line
 	1800 3300 1800 2900
 Wire Wire Line
@@ -297,8 +271,6 @@ $EndComp
 Connection ~ 850  6900
 Text Notes 1000 7700 0    50   ~ 0
 Power
-Wire Wire Line
-	1650 3300 1800 3300
 $Comp
 L Device:C C3
 U 1 1 5F6F526B
@@ -551,8 +523,6 @@ F 3 "~" H 6850 7550 50  0001 C CNN
 $EndComp
 Text GLabel 5500 2550 2    50   Input ~ 0
 OUT_a
-Connection ~ 1800 2200
-Connection ~ 1800 3300
 Wire Wire Line
 	4850 2650 4800 2650
 Wire Wire Line
@@ -671,19 +641,6 @@ F 6 "N" H 5200 7000 50  0001 C CNN "Spice_Netlist_Enabled"
 $EndComp
 Text GLabel 5400 7100 2    50   Input ~ 0
 IN_Za
-$Comp
-L power:GND #PWR013
-U 1 1 5F7BABB4
-P 1800 4550
-F 0 "#PWR013" H 1800 4300 50  0001 C CNN
-F 1 "GND" H 1805 4377 50  0000 C CNN
-F 2 "" H 1800 4550 50  0001 C CNN
-F 3 "" H 1800 4550 50  0001 C CNN
-	1    1800 4550
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	1800 4550 1850 4550
 Wire Wire Line
 	1800 4350 1800 3950
 Wire Wire Line
@@ -697,8 +654,6 @@ Wire Wire Line
 Connection ~ 2500 4450
 Text GLabel 2600 4450 2    50   Input ~ 0
 Za
-Wire Wire Line
-	1650 4350 1800 4350
 $Comp
 L Amplifier_Operational:TL072 U2
 U 2 1 5F7BABD5
@@ -714,7 +669,6 @@ F 7 "/home/etienne/Documents/elektrophon/lib/spice/opamp/TL072-dual.lib" H 2150 
 	2    2150 4450
 	1    0    0    1   
 $EndComp
-Connection ~ 1800 4350
 NoConn ~ 5400 7600
 $Comp
 L Device:C C7
@@ -806,13 +760,11 @@ F 7 "/home/etienne/Documents/elektrophon/lib/spice/opamp/TL072-dual.lib" H 5150 
 	1    5150 2550
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	1650 2200 1800 2200
-Text GLabel 1650 4350 0    50   Input ~ 0
+Text GLabel 1650 4550 0    50   Input ~ 0
 IN_Za
-Text GLabel 1650 3300 0    50   Input ~ 0
+Text GLabel 1650 3500 0    50   Input ~ 0
 IN_Ya
-Text GLabel 1650 2200 0    50   Input ~ 0
+Text GLabel 1650 2400 0    50   Input ~ 0
 IN_Xa
 Wire Wire Line
 	1800 1800 2500 1800
@@ -871,4 +823,12 @@ Wire Wire Line
 Wire Wire Line
 	4700 3000 4800 3000
 Connection ~ 4800 3000
+Wire Wire Line
+	1650 2400 1850 2400
+Wire Wire Line
+	1650 3500 1850 3500
+Wire Wire Line
+	1650 4550 1850 4550
+Text Notes 1100 4750 0    50   ~ 0
+needs to be grounded when not connectet
 $EndSCHEMATC
