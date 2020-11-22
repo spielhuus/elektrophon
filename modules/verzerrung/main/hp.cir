@@ -1,0 +1,7 @@
+.title KiCad schematic
+XU2 Net-_C4-Pad1_ /OUT +15V -15V /OUT TL072
+C3 Net-_C3-Pad1_ NC_01 2.2n
+R4 /OUT Net-_C3-Pad1_ 4.7k
+R3 GND Net-_C4-Pad1_ 40k
+C4 Net-_C4-Pad1_ Net-_C3-Pad1_ 2.2n
+.end
