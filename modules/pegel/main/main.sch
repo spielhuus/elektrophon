@@ -831,4 +831,6 @@ Wire Wire Line
 	1650 4550 1850 4550
 Text Notes 1100 4750 0    50   ~ 0
 needs to be grounded when not connectet
+Text Notes 4650 6200 0    50   ~ 0
+check connector\n
 $EndSCHEMATC
