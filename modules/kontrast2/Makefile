@@ -1,4 +1,4 @@
-PROJECT = pegel
+PROJECT = summe
 JUPYTER = jupyter
 PANDOC = pandoc
 OUTPUT =  ../../tmp

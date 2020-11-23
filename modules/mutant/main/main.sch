@@ -1216,7 +1216,7 @@ Wire Wire Line
 	2750 2000 2750 2200
 Connection ~ 2750 2200
 Wire Wire Line
-	3000 2200 2750 2200
+	3000 2200 2900 2200
 Text Label 5900 2200 1    50   ~ 0
 V2a
 Text Label 2950 2000 1    50   ~ 0
@@ -1731,4 +1731,29 @@ F 3 "~" H 5850 4100 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	6000 4100 6600 4100
+Wire Wire Line
+	2900 2200 2900 2950
+Wire Wire Line
+	2900 2950 2950 2950
+Wire Wire Line
+	4250 2950 4250 4200
+Connection ~ 2900 2200
+Wire Wire Line
+	2900 2200 2750 2200
+Connection ~ 4250 4200
+Text Label 4250 3300 0    50   ~ 0
+***
+$Comp
+L Device:C C?
+U 1 1 5FB4B20D
+P 3100 2950
+F 0 "C?" V 2848 2950 50  0000 C CNN
+F 1 "4.7n" V 2939 2950 50  0000 C CNN
+F 2 "Capacitor_THT:C_Disc_D3.8mm_W2.6mm_P2.50mm" H 3138 2800 50  0001 C CNN
+F 3 "~" H 3100 2950 50  0001 C CNN
+	1    3100 2950
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3250 2950 4250 2950
 $EndSCHEMATC

@@ -1230,8 +1230,6 @@ Wire Wire Line
 	9800 2700 9800 3500
 Connection ~ 9800 3500
 Wire Wire Line
-	6950 1750 7000 1750
-Wire Wire Line
 	6800 1750 7000 1750
 $Comp
 L Device:D D1
@@ -1719,4 +1717,75 @@ Wire Wire Line
 Wire Wire Line
 	8100 3300 8200 3300
 Connection ~ 8100 3300
+Wire Wire Line
+	1100 1050 1450 1050
+NoConn ~ 1100 1150
+$Comp
+L power:GND #PWR?
+U 1 1 5FB17C2B
+P 1100 950
+F 0 "#PWR?" H 1100 700 50  0001 C CNN
+F 1 "GND" H 1105 777 50  0000 C CNN
+F 2 "" H 1100 950 50  0001 C CNN
+F 3 "" H 1100 950 50  0001 C CNN
+	1    1100 950 
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Connector:AudioJack2_SwitchT J?
+U 1 1 5FB17C31
+P 900 1050
+F 0 "J?" H 932 1375 50  0000 C CNN
+F 1 "offset" H 932 1284 50  0000 C CNN
+F 2 "elektrophon:Jack_3.5mm_WQP-PJ398SM_Vertical" H 900 1050 50  0001 C CNN
+F 3 "~" H 900 1050 50  0001 C CNN
+	1    900  1050
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5FB17C37
+P 1450 1500
+F 0 "#PWR?" H 1450 1250 50  0001 C CNN
+F 1 "GND" H 1455 1327 50  0000 C CNN
+F 2 "" H 1450 1500 50  0001 C CNN
+F 3 "" H 1450 1500 50  0001 C CNN
+	1    1450 1500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1600 1350 1700 1350
+Wire Wire Line
+	1450 1050 1450 1200
+$Comp
+L Device:R_POT RV?
+U 1 1 5FB17C3F
+P 1450 1350
+F 0 "RV?" H 1380 1396 50  0000 R CNN
+F 1 "100k" H 1380 1305 50  0000 R CNN
+F 2 "elektrophon:Potentiometer_Alpha_RD901F-40-00D_Single_Vertical" H 1450 1350 50  0001 C CNN
+F 3 "~" H 1450 1350 50  0001 C CNN
+	1    1450 1350
+	1    0    0    1   
+$EndComp
+Text Notes 1150 1600 1    50   ~ 0
+attenuate
+$Comp
+L Device:R R?
+U 1 1 5FB17C46
+P 1850 1350
+F 0 "R?" V 1643 1350 50  0000 C CNN
+F 1 "390k" V 1734 1350 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 1780 1350 50  0001 C CNN
+F 3 "~" H 1850 1350 50  0001 C CNN
+	1    1850 1350
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2600 950  2600 1350
+Wire Wire Line
+	2600 1350 2000 1350
+Wire Wire Line
+	2600 950  6300 950 
+Connection ~ 6300 950 
 $EndSCHEMATC

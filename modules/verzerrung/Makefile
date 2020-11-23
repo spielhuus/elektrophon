@@ -1,17 +1,23 @@
+PROJECT = verzerrung
 JUPYTER = jupyter
 PANDOC = pandoc
-JUPITERFLAGS = nbconvert --ExecutePreprocessor.timeout=600  pegel.ipynb --execute --to markdown --debug --no-input 
-OUTPUT =  '../../tmp'
+OUTPUT =  ../../tmp
+SRC = $(PROJECT).ipynb
+DEST = $(PROJECT).html
+MD = $(PROJECT).md
+DOCS = docs
 
-SRC = verzerrung
-OBJ = $(SRC:.cc=.o)
-EXEC = verzerrung
+JUPITERFLAGS = nbconvert --ExecutePreprocessor.timeout=600 $(SRC) --execute --to markdown --no-input --log-level=WARN --ExecutePreprocessor.kernel_name=python3 --output-dir=$(OUTPUT)
+PANDOCFLAGS = --mathml -fmarkdown-implicit_figures --extract-media=files
 
-all: $(EXEC)
+all: $(DOCS)
 
-$(EXEC): $(SRC)
-	$(JUPYTER) $(JUPITERFLAGS) --output-dir=$(OUTPUT) $(SRC).ipynb
-	$(PANDOC) --mathml --extract-media=$(OUTPUT)/files -s $(OUTPUT)/$(SRC).md -o $(OUTPUT)/$(SRC).html
+$(DOCS): $(OUTPUT)/$(DEST)
+
+$(OUTPUT)/$(DEST): $(SRC)
+	$(JUPYTER) $(JUPITERFLAGS) $(SRC)
+	cd $(OUTPUT) ; $(PANDOC) $(PANDOCFLAGS) -s $(MD) -o $(DEST)
+	rm -rf $(OUTPUT)/$(MD) $(OUTPUT)/$(PROJECT)_files
 
 clean:
-	rm -rf $(OUTPUT)/*$(SRC)*
+	rm -rf $(OUTPUT)/$(DEST)
