@@ -21,3 +21,5 @@ a1 %v([IN]) filesrc
 +                          timerelative=false amplstep=false)
 
 .end
+.measure tran ymax MAX v(OUT) from=0m to=30m
+.measure tran ymax RMS v(OUT) from=0m to=30m

@@ -1,6 +1,6 @@
 .title KiCad schematic
-.include /home/etienne/Documents/elektrophon/lib/spice/cmos/CD4069UB-hex.lib
-.include /home/etienne/Documents/elektrophon/lib/spice/diode/1N4148.mod
+.include ../../../lib/spice/cmos/CD4069UB-hex.lib
+.include ../../../lib/spice/diode/1N4148.mod
 .include 'UBE Screamer.cir'
 .control
 * Save only the output values
@@ -27,3 +27,6 @@ a1 %v([IN]) filesrc
 +                          timerelative=false amplstep=false)
 
 .end
+.measure tran ymax MAX v(OUT) from=0m to=30m
+.measure tran ymax RMS v(OUT) from=0m to=30m
+

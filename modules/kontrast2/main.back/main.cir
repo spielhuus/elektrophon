@@ -1,0 +1,52 @@
+.title KiCad schematic
+VJ1 Net-_J1-PadT_ GND dc 5 sin(0 5 1k)
+R28 Net-_R27-Pad2_ Net-_J10-PadT_ 1k
+XRV1 GND Net-_R1-Pad1_ Net-_J1-PadT_ voltage_divider_1
+R9 Net-_R13-Pad2_ Net-_J1-PadT_ 100k
+R13 Net-_R13-Pad1_ Net-_R13-Pad2_ 100k
+XU1 Net-_R13-Pad1_ Net-_R13-Pad2_ Net-_R1-Pad1_ -15V Net-_R3-Pad1_ Net-_R10-Pad1_ Net-_R14-Pad1_ +15V OPA2134d
+R1 Net-_R1-Pad1_ Net-_J1-PadT_ 33k
+R2 GND Net-_R1-Pad1_ 33k
+R21 /MIX_1 Net-_R21-Pad2_ 100k
+R25 Net-_R21-Pad2_ Net-_R25-Pad2_ 100k
+R26 Net-_R25-Pad2_ Net-_R26-Pad2_ 100k
+R27 Net-_R26-Pad2_ Net-_R27-Pad2_ 100k
+XU2 Net-_R15-Pad1_ Net-_R11-Pad1_ Net-_R5-Pad1_ -15V Net-_R7-Pad1_ Net-_R12-Pad1_ Net-_R16-Pad1_ +15V OPA2134d
+VJ2 Net-_J2-PadT_ GND dc 5 sin(0 5 2k)
+XRV2 GND Net-_R3-Pad1_ Net-_J2-PadT_ voltage_divider_2
+R10 Net-_R10-Pad1_ Net-_J2-PadT_ 100k
+R14 Net-_R14-Pad1_ Net-_R10-Pad1_ 100k
+R3 Net-_R3-Pad1_ Net-_J2-PadT_ 33k
+R4 GND Net-_R3-Pad1_ 33k
+R22 /MIX_2 Net-_R21-Pad2_ 100k
+XU3 Net-_R25-Pad2_ Net-_R21-Pad2_ GND -15V GND Net-_R26-Pad2_ Net-_R27-Pad2_ +15V OPA2134d
+VJ3 Net-_J3-PadT_ GND dc 5 sin(0 5 4k)
+XRV3 GND Net-_R5-Pad1_ Net-_J3-PadT_ voltage_divider_3
+R11 Net-_R11-Pad1_ Net-_J3-PadT_ 100k
+R15 Net-_R15-Pad1_ Net-_R11-Pad1_ 100k
+R5 Net-_R5-Pad1_ Net-_J3-PadT_ 33k
+R6 GND Net-_R5-Pad1_ 33k
+R23 /MIX_3 Net-_R21-Pad2_ 100k
+VJ4 Net-_J4-PadT_ GND dc 5 sin(0 5 8k)
+XRV4 GND Net-_R7-Pad1_ Net-_J4-PadT_ voltage_divider_4
+R12 Net-_R12-Pad1_ Net-_J4-PadT_ 100k
+R16 Net-_R16-Pad1_ Net-_R12-Pad1_ 100k
+R7 Net-_R7-Pad1_ Net-_J4-PadT_ 33k
+R8 GND Net-_R7-Pad1_ 33k
+R24 /MIX_4 Net-_R21-Pad2_ 100k
+XJ5 Net-_J5-PadT_ GND /MIX_1 jack_out
+R17 Net-_R13-Pad1_ Net-_J5-PadT_ 1k
+XJ6 Net-_J6-PadT_ GND /MIX_2 jack_out
+R18 Net-_R14-Pad1_ Net-_J6-PadT_ 1k
+XJ7 Net-_J7-PadT_ GND /MIX_3 jack_out
+R19 Net-_R15-Pad1_ Net-_J7-PadT_ 1k
+XJ8 Net-_J8-PadT_ GND /MIX_4 jack_out
+R20 Net-_R16-Pad1_ Net-_J8-PadT_ 1k
+R29 Net-_D1-Pad2_ /MIX_1 12k
+D1 Net-_C9-Pad2_ Net-_D1-Pad2_ D1N4148
+Q1 +15V Net-_C9-Pad2_ Net-_D2-Pad2_ BC547B
+C10 +15V GND 100n
+D2 Net-_D2-Pad1_ Net-_D2-Pad2_ LED2
+R30 GND Net-_D2-Pad1_ 470
+C9 GND Net-_C9-Pad2_ 100n
+.end

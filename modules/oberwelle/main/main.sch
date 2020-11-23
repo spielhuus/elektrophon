@@ -1,0 +1,275 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 3
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L power:GND #PWR011
+U 1 1 5E18079D
+P 3200 7300
+AR Path="/5E18079D" Ref="#PWR011"  Part="1" 
+AR Path="/5DD3665B/5E18079D" Ref="#PWR?"  Part="1" 
+F 0 "#PWR011" H 3200 7050 50  0001 C CNN
+F 1 "GND" V 3200 7100 50  0000 C CNN
+F 2 "" H 3200 7300 50  0001 C CNN
+F 3 "" H 3200 7300 50  0001 C CNN
+	1    3200 7300
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:PWR_FLAG #FLG04
+U 1 1 5E1807A9
+P 3200 7300
+AR Path="/5E1807A9" Ref="#FLG04"  Part="1" 
+AR Path="/5DD3665B/5E1807A9" Ref="#FLG?"  Part="1" 
+F 0 "#FLG04" H 3200 7375 50  0001 C CNN
+F 1 "PWR_FLAG" V 3200 7428 50  0000 L CNN
+F 2 "" H 3200 7300 50  0001 C CNN
+F 3 "~" H 3200 7300 50  0001 C CNN
+	1    3200 7300
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	2300 7600 2350 7600
+$Comp
+L power:PWR_FLAG #FLG03
+U 1 1 5E1807A3
+P 3200 7200
+AR Path="/5E1807A3" Ref="#FLG03"  Part="1" 
+AR Path="/5DD3665B/5E1807A3" Ref="#FLG?"  Part="1" 
+F 0 "#FLG03" H 3200 7275 50  0001 C CNN
+F 1 "PWR_FLAG" V 3200 7328 50  0000 L CNN
+F 2 "" H 3200 7200 50  0001 C CNN
+F 3 "~" H 3200 7200 50  0001 C CNN
+	1    3200 7200
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:-15V #PWR010
+U 1 1 5E180797
+P 3200 7200
+AR Path="/5E180797" Ref="#PWR010"  Part="1" 
+AR Path="/5DD3665B/5E180797" Ref="#PWR?"  Part="1" 
+F 0 "#PWR010" H 3200 7300 50  0001 C CNN
+F 1 "-15V" V 3215 7328 50  0000 L CNN
+F 2 "" H 3200 7200 50  0001 C CNN
+F 3 "" H 3200 7200 50  0001 C CNN
+	1    3200 7200
+	0    1    1    0   
+$EndComp
+$Comp
+L power:+15V #PWR09
+U 1 1 5F6BBF92
+P 3200 7100
+AR Path="/5F6BBF92" Ref="#PWR09"  Part="1" 
+AR Path="/5DD3665B/5F6BBF92" Ref="#PWR?"  Part="1" 
+F 0 "#PWR09" H 3200 6950 50  0001 C CNN
+F 1 "+15V" V 3215 7228 50  0000 L CNN
+F 2 "" H 3200 7100 50  0001 C CNN
+F 3 "" H 3200 7100 50  0001 C CNN
+	1    3200 7100
+	0    1    1    0   
+$EndComp
+Connection ~ 900  7050
+$Comp
+L power:PWR_FLAG #FLG01
+U 1 1 5E180789
+P 900 7050
+AR Path="/5E180789" Ref="#FLG01"  Part="1" 
+AR Path="/5DD3665B/5E180789" Ref="#FLG?"  Part="1" 
+F 0 "#FLG01" H 900 7125 50  0001 C CNN
+F 1 "PWR_FLAG" H 900 7178 50  0001 L CNN
+F 2 "" H 900 7050 50  0001 C CNN
+F 3 "~" H 900 7050 50  0001 C CNN
+	1    900  7050
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR01
+U 1 1 5E180783
+P 900 7050
+AR Path="/5E180783" Ref="#PWR01"  Part="1" 
+AR Path="/5DD3665B/5E180783" Ref="#PWR?"  Part="1" 
+F 0 "#PWR01" H 900 6900 50  0001 C CNN
+F 1 "+5V" V 915 7178 50  0000 L CNN
+F 2 "" H 900 7050 50  0001 C CNN
+F 3 "" H 900 7050 50  0001 C CNN
+	1    900  7050
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:+5V #PWR04
+U 1 1 5E18077D
+P 1400 7050
+AR Path="/5E18077D" Ref="#PWR04"  Part="1" 
+AR Path="/5DD3665B/5E18077D" Ref="#PWR?"  Part="1" 
+F 0 "#PWR04" H 1400 6900 50  0001 C CNN
+F 1 "+5V" V 1415 7178 50  0000 L CNN
+F 2 "" H 1400 7050 50  0001 C CNN
+F 3 "" H 1400 7050 50  0001 C CNN
+	1    1400 7050
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR06
+U 1 1 5E180777
+P 1400 7250
+AR Path="/5E180777" Ref="#PWR06"  Part="1" 
+AR Path="/5DD3665B/5E180777" Ref="#PWR?"  Part="1" 
+F 0 "#PWR06" H 1400 7000 50  0001 C CNN
+F 1 "GND" V 1405 7122 50  0000 R CNN
+F 2 "" H 1400 7250 50  0001 C CNN
+F 3 "" H 1400 7250 50  0001 C CNN
+	1    1400 7250
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR05
+U 1 1 5E180771
+P 1400 7150
+AR Path="/5E180771" Ref="#PWR05"  Part="1" 
+AR Path="/5DD3665B/5E180771" Ref="#PWR?"  Part="1" 
+F 0 "#PWR05" H 1400 6900 50  0001 C CNN
+F 1 "GND" V 1405 7022 50  0000 R CNN
+F 2 "" H 1400 7150 50  0001 C CNN
+F 3 "" H 1400 7150 50  0001 C CNN
+	1    1400 7150
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR02
+U 1 1 5E18076B
+P 900 7150
+AR Path="/5E18076B" Ref="#PWR02"  Part="1" 
+AR Path="/5DD3665B/5E18076B" Ref="#PWR?"  Part="1" 
+F 0 "#PWR02" H 900 6900 50  0001 C CNN
+F 1 "GND" V 905 7022 50  0000 R CNN
+F 2 "" H 900 7150 50  0001 C CNN
+F 3 "" H 900 7150 50  0001 C CNN
+	1    900  7150
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR03
+U 1 1 5E180765
+P 900 7250
+AR Path="/5E180765" Ref="#PWR03"  Part="1" 
+AR Path="/5DD3665B/5E180765" Ref="#PWR?"  Part="1" 
+F 0 "#PWR03" H 900 7000 50  0001 C CNN
+F 1 "GND" V 905 7122 50  0000 R CNN
+F 2 "" H 900 7250 50  0001 C CNN
+F 3 "" H 900 7250 50  0001 C CNN
+	1    900  7250
+	0    1    1    0   
+$EndComp
+$Comp
+L Connector_Generic:Conn_02x05_Odd_Even J1
+U 1 1 5E180747
+P 1200 7250
+AR Path="/5E180747" Ref="J1"  Part="1" 
+AR Path="/5DD3665B/5E180747" Ref="J?"  Part="1" 
+F 0 "J1" H 1250 7667 50  0000 C CNN
+F 1 "IDC Header" H 1250 7576 50  0000 C CNN
+F 2 "Connector_IDC:IDC-Header_2x05_P2.54mm_Vertical" H 1200 7250 50  0001 C CNN
+F 3 "~" H 1200 7250 50  0001 C CNN
+	1    1200 7250
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:PWR_FLAG #FLG02
+U 1 1 5E180731
+P 3200 7100
+AR Path="/5E180731" Ref="#FLG02"  Part="1" 
+AR Path="/5DD3665B/5E180731" Ref="#FLG?"  Part="1" 
+F 0 "#FLG02" H 3200 7175 50  0001 C CNN
+F 1 "PWR_FLAG" V 3200 7228 50  0000 L CNN
+F 2 "" H 3200 7100 50  0001 C CNN
+F 3 "~" H 3200 7100 50  0001 C CNN
+	1    3200 7100
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R1
+U 1 1 5FB443E6
+P 2150 7000
+F 0 "R1" V 1943 7000 50  0000 C CNN
+F 1 "10" V 2034 7000 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 2080 7000 50  0001 C CNN
+F 3 "~" H 2150 7000 50  0001 C CNN
+	1    2150 7000
+	0    1    1    0   
+$EndComp
+$Comp
+L power:+15V #PWR07
+U 1 1 5E180706
+P 2350 7000
+AR Path="/5E180706" Ref="#PWR07"  Part="1" 
+AR Path="/5DD3665B/5E180706" Ref="#PWR?"  Part="1" 
+F 0 "#PWR07" H 2350 6850 50  0001 C CNN
+F 1 "+15V" H 2250 7150 50  0000 L CNN
+F 2 "" H 2350 7000 50  0001 C CNN
+F 3 "" H 2350 7000 50  0001 C CNN
+	1    2350 7000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:-15V #PWR08
+U 1 1 5E18073E
+P 2350 7600
+AR Path="/5E18073E" Ref="#PWR08"  Part="1" 
+AR Path="/5DD3665B/5E18073E" Ref="#PWR?"  Part="1" 
+F 0 "#PWR08" H 2350 7700 50  0001 C CNN
+F 1 "-15V" H 2250 7750 50  0000 L CNN
+F 2 "" H 2350 7600 50  0001 C CNN
+F 3 "" H 2350 7600 50  0001 C CNN
+	1    2350 7600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 5FB60D12
+P 2150 7600
+F 0 "R2" V 1943 7600 50  0000 C CNN
+F 1 "10" V 2034 7600 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 2080 7600 50  0001 C CNN
+F 3 "~" H 2150 7600 50  0001 C CNN
+	1    2150 7600
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2300 7000 2350 7000
+Text GLabel 2000 7000 0    50   Input ~ 0
+VP
+Text GLabel 2000 7600 0    50   Input ~ 0
+VN
+Text GLabel 1400 7350 2    50   Input ~ 0
+VP
+Text GLabel 900  7350 0    50   Input ~ 0
+VP
+Text GLabel 1400 7450 2    50   Input ~ 0
+VN
+Text GLabel 900  7450 0    50   Input ~ 0
+VN
+$Sheet
+S 3200 1950 3800 750 
+U 5FB78B97
+F0 "middle_section" 50
+F1 "middle_section.sch" 50
+$EndSheet
+$Sheet
+S 3200 3050 3800 750 
+U 5FEA2364
+F0 "bottom_section" 50
+F1 "bottom_section.sch" 50
+$EndSheet
+$EndSCHEMATC
