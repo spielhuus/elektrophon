@@ -4,14 +4,14 @@ EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 2 3
-Title ""
-Date ""
-Rev ""
+Title "oberwelle"
+Date "2020-11-27"
+Rev "R01"
 Comp ""
-Comment1 ""
-Comment2 ""
+Comment1 "Schema for main circuit"
+Comment2 "wave folder - middle section"
 Comment3 ""
-Comment4 ""
+Comment4 "License CC BY 4.0 - Attribution 4.0 International"
 $EndDescr
 $Comp
 L Amplifier_Operational:TL072 U1
@@ -118,10 +118,10 @@ M_OUT
 Text GLabel 1700 2700 0    50   Input ~ 0
 M_IN_2
 $Comp
-L power:GND #PWR033
+L power:GND #PWR0101
 U 1 1 5F314696
 P 5850 2950
-F 0 "#PWR033" H 5850 2700 50  0001 C CNN
+F 0 "#PWR0101" H 5850 2700 50  0001 C CNN
 F 1 "GND" H 5855 2777 50  0000 C CNN
 F 2 "" H 5850 2950 50  0001 C CNN
 F 3 "" H 5850 2950 50  0001 C CNN
@@ -404,10 +404,10 @@ F 3 "" H 3450 7400 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L power:+15V #PWR025
+L power:+15V #PWR0102
 U 1 1 5F38306F
 P 3450 6800
-F 0 "#PWR025" H 3450 6650 50  0001 C CNN
+F 0 "#PWR0102" H 3450 6650 50  0001 C CNN
 F 1 "+15V" H 3465 6973 50  0000 C CNN
 F 2 "" H 3450 6800 50  0001 C CNN
 F 3 "" H 3450 6800 50  0001 C CNN
@@ -561,10 +561,10 @@ Wire Wire Line
 Wire Wire Line
 	6750 4650 6650 4650
 $Comp
-L power:GND #PWR034
+L power:GND #PWR0103
 U 1 1 5FCBA574
 P 5850 5250
-F 0 "#PWR034" H 5850 5000 50  0001 C CNN
+F 0 "#PWR0103" H 5850 5000 50  0001 C CNN
 F 1 "GND" H 5855 5077 50  0000 C CNN
 F 2 "" H 5850 5250 50  0001 C CNN
 F 3 "" H 5850 5250 50  0001 C CNN
@@ -916,21 +916,6 @@ Wire Wire Line
 Connection ~ 9100 4550
 Wire Wire Line
 	9100 4550 9150 4550
-$Comp
-L Amplifier_Operational:CA3080 U3
-U 1 1 5FD4E7C7
-P 3050 3400
-F 0 "U3" H 3394 3446 50  0000 L CNN
-F 1 "TL072" H 3394 3355 50  0000 L CNN
-F 2 "Package_DIP:DIP-8_W7.62mm_Socket" H 3050 3400 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 3050 3500 50  0001 C CNN
-F 4 "X" H 3050 3400 50  0001 C CNN "Spice_Primitive"
-F 5 "CA3080" H 3050 3400 50  0001 C CNN "Spice_Model"
-F 6 "Y" H 3050 3400 50  0001 C CNN "Spice_Netlist_Enabled"
-F 7 "2 3 4 5 6 7" H 3050 3400 50  0001 C CNN "Spice_Node_Sequence"
-	1    3050 3400
-	1    0    0    -1  
-$EndComp
 Text GLabel 1500 3950 0    50   Input ~ 0
 M_IN_1
 $Comp
@@ -1140,10 +1125,10 @@ Wire Wire Line
 Wire Wire Line
 	3550 2750 3550 2900
 $Comp
-L power:+15V #PWR023
+L power:+15V #PWR0104
 U 1 1 5FED912E
 P 2950 3100
-F 0 "#PWR023" H 2950 2950 50  0001 C CNN
+F 0 "#PWR0104" H 2950 2950 50  0001 C CNN
 F 1 "+15V" V 2950 3350 50  0000 C CNN
 F 2 "" H 2950 3100 50  0001 C CNN
 F 3 "" H 2950 3100 50  0001 C CNN
@@ -1151,10 +1136,10 @@ F 3 "" H 2950 3100 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:-15V #PWR024
+L power:-15V #PWR0105
 U 1 1 5FEDAEDF
 P 2950 3700
-F 0 "#PWR024" H 2950 3800 50  0001 C CNN
+F 0 "#PWR0105" H 2950 3800 50  0001 C CNN
 F 1 "-15V" V 2950 3950 50  0000 C CNN
 F 2 "" H 2950 3700 50  0001 C CNN
 F 3 "" H 2950 3700 50  0001 C CNN
@@ -1229,10 +1214,10 @@ F 6 "Y" H 9450 4650 50  0001 C CNN "Spice_Netlist_Enabled"
 	1    0    0    1   
 $EndComp
 $Comp
-L power:GND #PWR035
+L power:GND #PWR0106
 U 1 1 5FB8F2A7
 P 6050 7350
-F 0 "#PWR035" H 6050 7100 50  0001 C CNN
+F 0 "#PWR0106" H 6050 7100 50  0001 C CNN
 F 1 "GND" H 6055 7177 50  0000 C CNN
 F 2 "" H 6050 7350 50  0001 C CNN
 F 3 "" H 6050 7350 50  0001 C CNN
@@ -1295,8 +1280,6 @@ Text GLabel 5450 7200 0    50   Input ~ 0
 M_IN_1
 Text GLabel 5450 7300 0    50   Input ~ 0
 M_OUT
-Wire Wire Line
-	1800 3950 2200 3950
 Text GLabel 1700 1350 0    50   Input ~ 0
 M_CV_INITIAL
 $Comp
@@ -1502,17 +1485,6 @@ Wire Wire Line
 Connection ~ 1400 6800
 Connection ~ 1400 7400
 $Comp
-L Diode:1N4148W D1
-U 1 1 5FC20C66
-P 3300 1350
-F 0 "D1" V 3350 1550 50  0000 R CNN
-F 1 "1N4148W" V 3250 1800 50  0000 R CNN
-F 2 "Diode_SMD:D_SOD-123" H 3300 1175 50  0001 C CNN
-F 3 "https://www.vishay.com/docs/85748/1n4148w.pdf" H 3300 1350 50  0001 C CNN
-	1    3300 1350
-	1    0    0    -1  
-$EndComp
-$Comp
 L Diode:1N4148 D4
 U 1 1 5FD9321C
 P 5950 2700
@@ -1527,8 +1499,8 @@ $Comp
 L Diode:1N4148 D2
 U 1 1 5FD94103
 P 5750 2700
-F 0 "D2" V 5796 2620 50  0000 R CNN
-F 1 "1N4148" V 5705 2620 50  0000 R CNN
+F 0 "D2" V 5800 2900 50  0000 R CNN
+F 1 "1N4148" V 5700 3100 50  0000 R CNN
 F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 5750 2525 50  0001 C CNN
 F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 5750 2700 50  0001 C CNN
 	1    5750 2700
@@ -1549,8 +1521,8 @@ $Comp
 L Diode:1N4148 D6
 U 1 1 5FDAA7E9
 P 7300 2700
-F 0 "D6" V 7346 2620 50  0000 R CNN
-F 1 "1N4148" V 7255 2620 50  0000 R CNN
+F 0 "D6" V 7350 2900 50  0000 R CNN
+F 1 "1N4148" V 7250 3100 50  0000 R CNN
 F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 7300 2525 50  0001 C CNN
 F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 7300 2700 50  0001 C CNN
 	1    7300 2700
@@ -1571,8 +1543,8 @@ $Comp
 L Diode:1N4148 D11
 U 1 1 5FE0769B
 P 8850 2700
-F 0 "D11" V 8896 2620 50  0000 R CNN
-F 1 "1N4148" V 8805 2620 50  0000 R CNN
+F 0 "D11" V 8900 2950 50  0000 R CNN
+F 1 "1N4148" V 8800 3100 50  0000 R CNN
 F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 8850 2525 50  0001 C CNN
 F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 8850 2700 50  0001 C CNN
 	1    8850 2700
@@ -1593,8 +1565,8 @@ $Comp
 L Diode:1N4148 D3
 U 1 1 5FE7DC34
 P 5750 5000
-F 0 "D3" V 5796 4920 50  0000 R CNN
-F 1 "1N4148" V 5705 4920 50  0000 R CNN
+F 0 "D3" V 5800 5200 50  0000 R CNN
+F 1 "1N4148" V 5700 5400 50  0000 R CNN
 F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 5750 4825 50  0001 C CNN
 F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 5750 5000 50  0001 C CNN
 	1    5750 5000
@@ -1615,8 +1587,8 @@ $Comp
 L Diode:1N4148 D7
 U 1 1 5FE8B424
 P 7300 5000
-F 0 "D7" V 7346 4920 50  0000 R CNN
-F 1 "1N4148" V 7255 4920 50  0000 R CNN
+F 0 "D7" V 7350 5200 50  0000 R CNN
+F 1 "1N4148" V 7250 5400 50  0000 R CNN
 F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 7300 4825 50  0001 C CNN
 F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 7300 5000 50  0001 C CNN
 	1    7300 5000
@@ -1637,11 +1609,75 @@ $Comp
 L Diode:1N4148 D10
 U 1 1 5FEA6942
 P 8700 5000
-F 0 "D10" V 8746 4920 50  0000 R CNN
-F 1 "1N4148" V 8655 4920 50  0000 R CNN
+F 0 "D10" V 8750 5250 50  0000 R CNN
+F 1 "1N4148" V 8650 5400 50  0000 R CNN
 F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 8700 4825 50  0001 C CNN
 F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 8700 5000 50  0001 C CNN
 	1    8700 5000
 	0    -1   -1   0   
 $EndComp
+$Comp
+L Diode:1N4148 D1
+U 1 1 5FC4C17F
+P 3300 1350
+F 0 "D1" H 3350 1600 50  0000 R CNN
+F 1 "1N4148" H 3450 1500 50  0000 R CNN
+F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 3300 1175 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 3300 1350 50  0001 C CNN
+	1    3300 1350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Amplifier_Operational:CA3080 U3
+U 1 1 5FC575A9
+P 3050 3400
+F 0 "U3" H 3394 3446 50  0000 L CNN
+F 1 "CA3080" H 3394 3355 50  0000 L CNN
+F 2 "" H 3050 3400 50  0001 C CNN
+F 3 "http://www.intersil.com/content/dam/Intersil/documents/ca30/ca3080-a.pdf" H 3050 3500 50  0001 C CNN
+	1    3050 3400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R58
+U 1 1 5FC76FC6
+P 2450 3950
+F 0 "R58" V 2243 3950 50  0000 C CNN
+F 1 "1.5k" V 2334 3950 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" V 2380 3950 50  0001 C CNN
+F 3 "~" H 2450 3950 50  0001 C CNN
+	1    2450 3950
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C C35
+U 1 1 5FC78099
+P 1950 3950
+F 0 "C35" V 1698 3950 50  0000 C CNN
+F 1 "220n" V 1789 3950 50  0000 C CNN
+F 2 "Capacitor_THT:C_Rect_L18.0mm_W9.0mm_P15.00mm_FKS3_FKP3" H 1988 3800 50  0001 C CNN
+F 3 "~" H 1950 3950 50  0001 C CNN
+	1    1950 3950
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2100 3950 2200 3950
+Connection ~ 2200 3950
+Wire Wire Line
+	2200 3950 2300 3950
+$Comp
+L power:GND #PWR01
+U 1 1 5FC87B06
+P 2650 4000
+F 0 "#PWR01" H 2650 3750 50  0001 C CNN
+F 1 "GND" H 2655 3827 50  0000 C CNN
+F 2 "" H 2650 4000 50  0001 C CNN
+F 3 "" H 2650 4000 50  0001 C CNN
+	1    2650 4000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2600 3950 2650 3950
+Wire Wire Line
+	2650 3950 2650 4000
 $EndSCHEMATC

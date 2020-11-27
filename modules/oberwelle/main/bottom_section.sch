@@ -4,14 +4,14 @@ EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 3 3
-Title ""
-Date ""
-Rev ""
+Title "oberwelle"
+Date "2020-11-27"
+Rev "R01"
 Comp ""
-Comment1 ""
-Comment2 ""
+Comment1 "Schema for main circuit"
+Comment2 "wave folder - bottom section"
 Comment3 ""
-Comment4 ""
+Comment4 "License CC BY 4.0 - Attribution 4.0 International"
 $EndDescr
 $Comp
 L elektrophon:LM3900 U6
@@ -63,7 +63,7 @@ U 1 1 5FB5C9FB
 P 3600 1100
 F 0 "C23" V 3348 1100 50  0000 C CNN
 F 1 "30p" V 3439 1100 50  0000 C CNN
-F 2 "Capacitor_THT:C_Disc_D3.8mm_W2.6mm_P2.50mm" H 3638 950 50  0001 C CNN
+F 2 "Capacitor_THT:C_Axial_L3.8mm_D2.6mm_P7.50mm_Horizontal" H 3638 950 50  0001 C CNN
 F 3 "~" H 3600 1100 50  0001 C CNN
 	1    3600 1100
 	0    1    1    0   
@@ -270,7 +270,7 @@ U 1 1 5FB9635D
 P 4400 2050
 F 0 "C24" V 4148 2050 50  0000 C CNN
 F 1 "47n" V 4239 2050 50  0000 C CNN
-F 2 "Capacitor_SMD:C_1210_3225Metric" H 4438 1900 50  0001 C CNN
+F 2 "Capacitor_THT:C_Rect_L7.2mm_W3.5mm_P5.00mm_FKS2_FKP2_MKS2_MKP2" H 4438 1900 50  0001 C CNN
 F 3 "~" H 4400 2050 50  0001 C CNN
 	1    4400 2050
 	0    1    1    0   
@@ -303,7 +303,7 @@ U 1 1 5FBA11EC
 P 5350 1000
 F 0 "C26" V 5098 1000 50  0000 C CNN
 F 1 "30p" V 5189 1000 50  0000 C CNN
-F 2 "Capacitor_THT:C_Disc_D3.8mm_W2.6mm_P2.50mm" H 5388 850 50  0001 C CNN
+F 2 "Capacitor_THT:C_Axial_L3.8mm_D2.6mm_P7.50mm_Horizontal" H 5388 850 50  0001 C CNN
 F 3 "~" H 5350 1000 50  0001 C CNN
 	1    5350 1000
 	0    1    1    0   
@@ -380,7 +380,7 @@ L Device:R R50
 U 1 1 5FBA1224
 P 5350 3550
 F 0 "R50" V 5143 3550 50  0000 C CNN
-F 1 "1meg" V 5234 3550 50  0000 C CNN
+F 1 "1.5meg" V 5234 3550 50  0000 C CNN
 F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" V 5280 3550 50  0001 C CNN
 F 3 "~" H 5350 3550 50  0001 C CNN
 	1    5350 3550
@@ -476,7 +476,7 @@ U 1 1 5FBA126B
 P 6150 1950
 F 0 "C27" V 5898 1950 50  0000 C CNN
 F 1 "47n" V 5989 1950 50  0000 C CNN
-F 2 "Capacitor_SMD:C_1210_3225Metric" H 6188 1800 50  0001 C CNN
+F 2 "Capacitor_THT:C_Rect_L7.2mm_W3.5mm_P5.00mm_FKS2_FKP2_MKS2_MKP2" H 6188 1800 50  0001 C CNN
 F 3 "~" H 6150 1950 50  0001 C CNN
 	1    6150 1950
 	0    1    1    0   
@@ -507,7 +507,7 @@ U 1 1 5FBB6B2E
 P 7100 900
 F 0 "C29" V 6848 900 50  0000 C CNN
 F 1 "30p" V 6939 900 50  0000 C CNN
-F 2 "Capacitor_THT:C_Disc_D3.8mm_W2.6mm_P2.50mm" H 7138 750 50  0001 C CNN
+F 2 "Capacitor_THT:C_Axial_L3.8mm_D2.6mm_P7.50mm_Horizontal" H 7138 750 50  0001 C CNN
 F 3 "~" H 7100 900 50  0001 C CNN
 	1    7100 900 
 	0    1    1    0   
@@ -584,7 +584,7 @@ L Device:R R57
 U 1 1 5FBB6B66
 P 7100 3450
 F 0 "R57" V 6893 3450 50  0000 C CNN
-F 1 "1meg" V 6984 3450 50  0000 C CNN
+F 1 "2.2meg" V 6984 3450 50  0000 C CNN
 F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" V 7030 3450 50  0001 C CNN
 F 3 "~" H 7100 3450 50  0001 C CNN
 	1    7100 3450
@@ -663,17 +663,6 @@ Wire Wire Line
 Connection ~ 7450 3450
 Wire Wire Line
 	7450 2850 7450 3000
-$Comp
-L Device:R R58
-U 1 1 5FBB6BA7
-P 7600 1850
-F 0 "R58" V 7393 1850 50  0000 C CNN
-F 1 "1meg" V 7484 1850 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" V 7530 1850 50  0001 C CNN
-F 3 "~" H 7600 1850 50  0001 C CNN
-	1    7600 1850
-	0    1    1    0   
-$EndComp
 Wire Wire Line
 	6400 1650 6750 1650
 Wire Wire Line
@@ -738,7 +727,7 @@ U 1 1 5FBDAABC
 P 2600 2150
 F 0 "C20" V 2348 2150 50  0000 C CNN
 F 1 "47n" V 2439 2150 50  0000 C CNN
-F 2 "Capacitor_SMD:C_1210_3225Metric" H 2638 2000 50  0001 C CNN
+F 2 "Capacitor_THT:C_Rect_L7.2mm_W3.5mm_P5.00mm_FKS2_FKP2_MKS2_MKP2" H 2638 2000 50  0001 C CNN
 F 3 "~" H 2600 2150 50  0001 C CNN
 	1    2600 2150
 	0    1    1    0   
@@ -874,8 +863,6 @@ F 3 "~" H 8900 2000 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	8900 1850 9000 1850
-Wire Wire Line
-	7450 1850 7400 1850
 $Comp
 L power:GND #PWR052
 U 1 1 5FC72A07
@@ -893,13 +880,11 @@ U 1 1 5FC7AB31
 P 8650 1850
 F 0 "C31" V 8905 1850 50  0000 C CNN
 F 1 "47u" V 8814 1850 50  0000 C CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric" H 8688 1700 50  0001 C CNN
+F 2 "Capacitor_THT:CP_Radial_D10.0mm_P5.00mm" H 8688 1700 50  0001 C CNN
 F 3 "~" H 8650 1850 50  0001 C CNN
 	1    8650 1850
 	0    -1   -1   0   
 $EndComp
-Wire Wire Line
-	7750 1850 8050 1850
 Wire Wire Line
 	8800 1850 8900 1850
 Connection ~ 8900 1850
@@ -920,7 +905,7 @@ U 1 1 5FC814BA
 P 8300 3150
 F 0 "C30" V 8048 3150 50  0000 C CNN
 F 1 "47n" V 8139 3150 50  0000 C CNN
-F 2 "Capacitor_SMD:C_1210_3225Metric" H 8338 3000 50  0001 C CNN
+F 2 "Capacitor_THT:C_Rect_L7.2mm_W3.5mm_P5.00mm_FKS2_FKP2_MKS2_MKP2" H 8338 3000 50  0001 C CNN
 F 3 "~" H 8300 3150 50  0001 C CNN
 	1    8300 3150
 	0    1    1    0   
@@ -930,7 +915,7 @@ L Device:C C32
 U 1 1 5FC8E76C
 P 8900 2750
 F 0 "C32" V 8648 2750 50  0000 C CNN
-F 1 "33p" V 8739 2750 50  0000 C CNN
+F 1 "30p" V 8739 2750 50  0000 C CNN
 F 2 "Capacitor_THT:C_Disc_D3.8mm_W2.6mm_P2.50mm" H 8938 2600 50  0001 C CNN
 F 3 "~" H 8900 2750 50  0001 C CNN
 	1    8900 2750
@@ -961,10 +946,7 @@ $EndComp
 Wire Wire Line
 	8050 1850 8050 1900
 Wire Wire Line
-	8050 3600 8550 3600
-Wire Wire Line
 	8050 2200 8050 3150
-Connection ~ 8050 1850
 Wire Wire Line
 	8050 1850 8500 1850
 Wire Wire Line
@@ -977,7 +959,6 @@ Wire Wire Line
 	8750 2750 8550 2750
 Wire Wire Line
 	8550 2750 8550 3150
-Connection ~ 8550 3600
 Wire Wire Line
 	8550 3600 8600 3600
 Connection ~ 8550 3150
@@ -991,9 +972,6 @@ Wire Wire Line
 	8450 3150 8550 3150
 Wire Wire Line
 	9050 3150 9250 3150
-Connection ~ 8050 3150
-Wire Wire Line
-	8050 3150 8050 3600
 Connection ~ 9250 3150
 Wire Wire Line
 	9250 3150 9250 3700
@@ -1223,7 +1201,7 @@ F 1 "LM3900" H 2350 4824 50  0000 C CNN
 F 2 "Package_DIP:DIP-14_W7.62mm_Socket" V 2000 5400 50  0001 C CNN
 F 3 "" V 2000 5400 50  0001 C CNN
 	4    2350 5100
-	1    0    0    -1  
+	1    0    0    1   
 $EndComp
 $Comp
 L Diode:1N4148 D15
@@ -1240,8 +1218,8 @@ $Comp
 L Diode:1N4148 D14
 U 1 1 5FC3BB55
 P 2900 2000
-F 0 "D14" V 2946 1920 50  0000 R CNN
-F 1 "1N4148" V 2855 1920 50  0000 R CNN
+F 0 "D14" V 3200 2100 50  0000 R CNN
+F 1 "1N4148" V 3100 2200 50  0000 R CNN
 F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 2900 1825 50  0001 C CNN
 F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 2900 2000 50  0001 C CNN
 	1    2900 2000
@@ -1291,4 +1269,7 @@ F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 6400 
 	1    6400 1800
 	0    -1   -1   0   
 $EndComp
+Wire Wire Line
+	7400 1850 8050 1850
+Connection ~ 8050 1850
 $EndSCHEMATC
