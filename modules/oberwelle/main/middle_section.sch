@@ -1188,22 +1188,8 @@ $EndComp
 $Comp
 L Amplifier_Operational:TL072 U4
 U 2 1 5FB86461
-P 7900 4650
-F 0 "U4" H 7900 4283 50  0000 C CNN
-F 1 "TL072" H 7900 4374 50  0000 C CNN
-F 2 "Package_DIP:DIP-8_W7.62mm_Socket" H 7900 4650 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 7900 4650 50  0001 C CNN
-F 4 "X" H 7900 4650 50  0001 C CNN "Spice_Primitive"
-F 5 "TL072c" H 7900 4650 50  0001 C CNN "Spice_Model"
-F 6 "Y" H 7900 4650 50  0001 C CNN "Spice_Netlist_Enabled"
-	2    7900 4650
-	1    0    0    1   
-$EndComp
-$Comp
-L Amplifier_Operational:TL072 U2
-U 2 1 5FB8AFF9
 P 9450 4650
-F 0 "U2" H 9450 4283 50  0000 C CNN
+F 0 "U4" H 9450 4283 50  0000 C CNN
 F 1 "TL072" H 9450 4374 50  0000 C CNN
 F 2 "Package_DIP:DIP-8_W7.62mm_Socket" H 9450 4650 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 9450 4650 50  0001 C CNN
@@ -1211,6 +1197,20 @@ F 4 "X" H 9450 4650 50  0001 C CNN "Spice_Primitive"
 F 5 "TL072c" H 9450 4650 50  0001 C CNN "Spice_Model"
 F 6 "Y" H 9450 4650 50  0001 C CNN "Spice_Netlist_Enabled"
 	2    9450 4650
+	1    0    0    1   
+$EndComp
+$Comp
+L Amplifier_Operational:TL072 U2
+U 2 1 5FB8AFF9
+P 7900 4650
+F 0 "U2" H 7900 4283 50  0000 C CNN
+F 1 "TL072" H 7900 4374 50  0000 C CNN
+F 2 "Package_DIP:DIP-8_W7.62mm_Socket" H 7900 4650 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 7900 4650 50  0001 C CNN
+F 4 "X" H 7900 4650 50  0001 C CNN "Spice_Primitive"
+F 5 "TL072c" H 7900 4650 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 7900 4650 50  0001 C CNN "Spice_Netlist_Enabled"
+	2    7900 4650
 	1    0    0    1   
 $EndComp
 $Comp
