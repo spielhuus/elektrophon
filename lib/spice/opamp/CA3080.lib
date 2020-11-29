@@ -1,0 +1,45 @@
+* CA3080 Operational Transconductance Amplifier
+*
+* SPICE (Simulation Program with Integrated Circuit Emphasis)
+* SUBCIRCUIT
+*
+* Connections:
+*              INVERTING INPUT
+*               | NON-INVERTING INPUT
+*               |  |  NEGATIVE POWER SUPPLY
+*               |  |  |  I BIAS
+*               |  |  |  | OUTPUT
+*               |  |  |  |  |  POSITIVE POWER SUPPLY
+*               |  |  |  |  |  |
+.SUBCKT CA3080  2  3  4  5  6  7
+Q1         8 2 1 QN_OTA
+Q2         8 3 12 QN_OTA
+Q3         4 5 8 QN_OTA
+Q4         7 9 1 QP_OTA
+Q5         10 1 11 QP_OTA
+Q6         9 10 11 QP_OTA
+Q7         7 14 12 QP_OTA
+Q8         13 12 6 QP_OTA
+Q9         14 13 6 QP_OTA
+Q10       15 11 6 QN_OTA
+Q11         4 15 11 QN_OTA
+D1         5 4 D_OTA
+D2         1 10 D_OTA
+D3         7 9 D_OTA
+D4         12 13 D_OTA
+D5         7 14 D_OTA
+D6         15 4 D_OTA
+*
+.MODEL QN_OTA NPN(IS=21.48F XTI=3 EG=1.11 VAF=80 BF=550 ISE=50F NE=1.5
++ IKF=10M XTB=1.5 BR=.1 ISC=10F NC=2 IKR=3M RC=10 CJC=800F
++ MJC=.3333 VJC=.75 FC=.5 CJE=1.3P MJE=.3333 VJE=.75 TR=30N
++ TF=400P ITF=30M XTF=1 VTF=10 CJS=5.8P MJS=.3333 VJS=.75)
+*
+.MODEL QP_OTA PNP(IS=50F XTI=3 EG=1.11 VAF=80 BF=100 ISE=130F NE=1.5 IKF=1M
++ XTB=1.5 BR=1 ISC=0 NC=2 IKR=0 RC=0 CJC=4P MJC=.3333
++ VJC=.75 FC=.5 CJE=1.4P MJE=.3333 VJE=.75 TR=500N TF=23N ITF=.1
++ XTF=1 VTF=10 CJS=5.5P MJS=.3333 VJS=.75)
+*
+.MODEL D_OTA D(IS=2P RS=5 BV=40 CJO=3P TT=6N)
+*
+.ENDS
