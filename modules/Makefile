@@ -1,4 +1,4 @@
-SUBDIRS = pegel verzerrung kontrast2 
+SUBDIRS = pegel verzerrung kontrast2 oberwelle
 
 # Register all subdirectories in the project's root directory.
 #SUBDIRS := $(wildcard */.)
