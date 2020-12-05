@@ -78,16 +78,7 @@ Connection ~ 3900 1500
 Wire Wire Line
 	3900 1500 3900 2050
 Wire Wire Line
-	3450 1500 3250 1500
-Wire Wire Line
-	3250 1500 3250 1850
-Wire Wire Line
 	3250 1950 3300 1950
-Wire Wire Line
-	3450 1100 3250 1100
-Wire Wire Line
-	3250 1100 3250 1500
-Connection ~ 3250 1500
 $Comp
 L Device:C C22
 U 1 1 5FB5D6C1
@@ -99,7 +90,6 @@ F 3 "~" H 3100 2000 50  0001 C CNN
 	1    3100 2000
 	1    0    0    -1  
 $EndComp
-Connection ~ 3250 1850
 Wire Wire Line
 	3250 1850 3250 1950
 Wire Wire Line
@@ -121,7 +111,7 @@ U 1 1 5FB63B2E
 P 2900 2800
 F 0 "C21" H 3015 2846 50  0000 L CNN
 F 1 "1u (BP)" H 3015 2755 50  0000 L CNN
-F 2 "Capacitor_THT:C_Radial_D5.0mm_H7.0mm_P2.00mm" H 2938 2650 50  0001 C CNN
+F 2 "Capacitor_THT:C_Radial_D5.0mm_H11.0mm_P2.00mm" H 2938 2650 50  0001 C CNN
 F 3 "~" H 2900 2800 50  0001 C CNN
 	1    2900 2800
 	1    0    0    -1  
@@ -218,7 +208,7 @@ Connection ~ 3100 1850
 Wire Wire Line
 	2900 2150 3100 2150
 Wire Wire Line
-	2900 1850 3100 1850
+	2900 1850 3000 1850
 Wire Wire Line
 	2900 2150 2900 2500
 Wire Wire Line
@@ -348,7 +338,7 @@ U 1 1 5FBA1212
 P 4650 2700
 F 0 "C25" H 4765 2746 50  0000 L CNN
 F 1 "1u (BP)" H 4765 2655 50  0000 L CNN
-F 2 "Capacitor_THT:C_Radial_D5.0mm_H5.0mm_P2.00mm" H 4688 2550 50  0001 C CNN
+F 2 "Capacitor_THT:C_Radial_D5.0mm_H11.0mm_P2.00mm" H 4688 2550 50  0001 C CNN
 F 3 "~" H 4650 2700 50  0001 C CNN
 	1    4650 2700
 	1    0    0    -1  
@@ -552,7 +542,7 @@ U 1 1 5FBB6B54
 P 6400 2600
 F 0 "C28" H 6515 2646 50  0000 L CNN
 F 1 "1u (BP)" H 6515 2555 50  0000 L CNN
-F 2 "Capacitor_THT:C_Radial_D5.0mm_H5.0mm_P2.00mm" H 6438 2450 50  0001 C CNN
+F 2 "Capacitor_THT:C_Radial_D5.0mm_H11.0mm_P2.00mm" H 6438 2450 50  0001 C CNN
 F 3 "~" H 6400 2600 50  0001 C CNN
 	1    6400 2600
 	1    0    0    -1  
@@ -879,7 +869,7 @@ L Device:CP C31
 U 1 1 5FC7AB31
 P 8650 1850
 F 0 "C31" V 8905 1850 50  0000 C CNN
-F 1 "47u" V 8814 1850 50  0000 C CNN
+F 1 "47u (BP)" V 8814 1850 50  0000 C CNN
 F 2 "Capacitor_THT:CP_Radial_D10.0mm_P5.00mm" H 8688 1700 50  0001 C CNN
 F 3 "~" H 8650 1850 50  0001 C CNN
 	1    8650 1850
@@ -916,7 +906,7 @@ U 1 1 5FC8E76C
 P 8900 2750
 F 0 "C32" V 8648 2750 50  0000 C CNN
 F 1 "30p" V 8739 2750 50  0000 C CNN
-F 2 "Capacitor_THT:C_Disc_D3.8mm_W2.6mm_P2.50mm" H 8938 2600 50  0001 C CNN
+F 2 "Capacitor_THT:C_Axial_L3.8mm_D2.6mm_P7.50mm_Horizontal" H 8938 2600 50  0001 C CNN
 F 3 "~" H 8900 2750 50  0001 C CNN
 	1    8900 2750
 	0    1    1    0   
@@ -1272,4 +1262,16 @@ $EndComp
 Wire Wire Line
 	7400 1850 8050 1850
 Connection ~ 8050 1850
+Wire Wire Line
+	3000 1100 3000 1500
+Connection ~ 3000 1850
+Wire Wire Line
+	3000 1850 3100 1850
+Wire Wire Line
+	3000 1100 3450 1100
+Wire Wire Line
+	3000 1500 3450 1500
+Connection ~ 3000 1500
+Wire Wire Line
+	3000 1500 3000 1850
 $EndSCHEMATC
