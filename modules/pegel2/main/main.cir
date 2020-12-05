@@ -1,7 +1,0 @@
-.title KiCad schematic
-XU1 Xa Xa IN_Xa -15V IN_Ya Ya Ya +15V TL072c
-XU2 OUT_a Net-_R1-Pad1_ Net-_U2-Pad3_ -15V IN_Za Za Za +15V TL072c
-XU3 Xa GND Ya GND -15V Za Net-_U2-Pad3_ +15V AD633
-R2 OUT_a Net-_R1-Pad1_ 10k
-R1 Net-_R1-Pad1_ GND 10k
-.end
