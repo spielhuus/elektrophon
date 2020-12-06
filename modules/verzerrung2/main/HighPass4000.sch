@@ -1,0 +1,335 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L 4xxx:4069 U1
+U 1 1 5FCC9F37
+P 6700 2800
+F 0 "U1" H 6700 3117 50  0000 C CNN
+F 1 "4069" H 6700 3026 50  0000 C CNN
+F 2 "" H 6700 2800 50  0001 C CNN
+F 3 "http://www.intersil.com/content/dam/Intersil/documents/cd40/cd4069ubms.pdf" H 6700 2800 50  0001 C CNN
+F 4 "X" H 6700 2800 50  0001 C CNN "Spice_Primitive"
+F 5 "4069UB" H 6700 2800 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 6700 2800 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "1 2 14 7" H 6700 2800 50  0001 C CNN "Spice_Node_Sequence"
+	1    6700 2800
+	1    0    0    -1  
+$EndComp
+$Comp
+L 4xxx:4069 U1
+U 7 1 5FCCB921
+P 6550 4750
+F 0 "U1" H 6780 4796 50  0000 L CNN
+F 1 "4069" H 6780 4705 50  0000 L CNN
+F 2 "" H 6550 4750 50  0001 C CNN
+F 3 "http://www.intersil.com/content/dam/Intersil/documents/cd40/cd4069ubms.pdf" H 6550 4750 50  0001 C CNN
+F 4 "X" H 6550 4750 50  0001 C CNN "Spice_Primitive"
+F 5 "4069UB" H 6550 4750 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 6550 4750 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "1 2 14 7" H 6550 4750 50  0001 C CNN "Spice_Node_Sequence"
+	7    6550 4750
+	1    0    0    -1  
+$EndComp
+$Comp
+L 4xxx:4069 U2
+U 7 1 5FCCC38B
+P 7350 4750
+F 0 "U2" H 7580 4796 50  0000 L CNN
+F 1 "4069" H 7580 4705 50  0000 L CNN
+F 2 "" H 7350 4750 50  0001 C CNN
+F 3 "http://www.intersil.com/content/dam/Intersil/documents/cd40/cd4069ubms.pdf" H 7350 4750 50  0001 C CNN
+F 4 "X" H 7350 4750 50  0001 C CNN "Spice_Primitive"
+F 5 "4069UB" H 7350 4750 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 7350 4750 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "1 2 14 7" H 7350 4750 50  0001 C CNN "Spice_Node_Sequence"
+	7    7350 4750
+	1    0    0    -1  
+$EndComp
+$Comp
+L 4xxx:4069 U2
+U 1 1 5FCCDAE6
+P 7600 2800
+F 0 "U2" H 7600 3117 50  0000 C CNN
+F 1 "4069" H 7600 3026 50  0000 C CNN
+F 2 "" H 7600 2800 50  0001 C CNN
+F 3 "http://www.intersil.com/content/dam/Intersil/documents/cd40/cd4069ubms.pdf" H 7600 2800 50  0001 C CNN
+F 4 "X" H 7600 2800 50  0001 C CNN "Spice_Primitive"
+F 5 "4069UB" H 7600 2800 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 7600 2800 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "1 2 14 7" H 7600 2800 50  0001 C CNN "Spice_Node_Sequence"
+	1    7600 2800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 5FCD14ED
+P 6650 2300
+F 0 "R2" V 6443 2300 50  0000 C CNN
+F 1 "100k" V 6534 2300 50  0000 C CNN
+F 2 "" V 6580 2300 50  0001 C CNN
+F 3 "~" H 6650 2300 50  0001 C CNN
+	1    6650 2300
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R1
+U 1 1 5FCD1BBA
+P 6200 2800
+F 0 "R1" V 5993 2800 50  0000 C CNN
+F 1 "100k" V 6084 2800 50  0000 C CNN
+F 2 "" V 6130 2800 50  0001 C CNN
+F 3 "~" H 6200 2800 50  0001 C CNN
+	1    6200 2800
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	7000 2800 7000 2300
+Wire Wire Line
+	7000 2300 6800 2300
+Text HLabel 9450 2800 2    50   Input ~ 0
+OUT
+Wire Wire Line
+	7950 2800 7900 2800
+Text HLabel 6050 2800 0    50   Input ~ 0
+IN
+Wire Wire Line
+	6400 2800 6400 2300
+Connection ~ 6400 2800
+Wire Wire Line
+	6400 2800 6350 2800
+Wire Wire Line
+	6400 2300 6500 2300
+$Comp
+L power:+15V #PWR01
+U 1 1 5FCE9B43
+P 6550 4250
+F 0 "#PWR01" H 6550 4100 50  0001 C CNN
+F 1 "+15V" H 6565 4423 50  0000 C CNN
+F 2 "" H 6550 4250 50  0001 C CNN
+F 3 "" H 6550 4250 50  0001 C CNN
+	1    6550 4250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+15V #PWR03
+U 1 1 5FCEA2AE
+P 7350 4250
+F 0 "#PWR03" H 7350 4100 50  0001 C CNN
+F 1 "+15V" H 7365 4423 50  0000 C CNN
+F 2 "" H 7350 4250 50  0001 C CNN
+F 3 "" H 7350 4250 50  0001 C CNN
+	1    7350 4250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR04
+U 1 1 5FCEAB1E
+P 7350 5250
+F 0 "#PWR04" H 7350 5000 50  0001 C CNN
+F 1 "GND" H 7355 5077 50  0000 C CNN
+F 2 "" H 7350 5250 50  0001 C CNN
+F 3 "" H 7350 5250 50  0001 C CNN
+	1    7350 5250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR02
+U 1 1 5FCEB10A
+P 6550 5250
+F 0 "#PWR02" H 6550 5000 50  0001 C CNN
+F 1 "GND" H 6555 5077 50  0000 C CNN
+F 2 "" H 6550 5250 50  0001 C CNN
+F 3 "" H 6550 5250 50  0001 C CNN
+	1    6550 5250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C3
+U 1 1 5FCCC8E9
+P 9050 2800
+F 0 "C3" V 8798 2800 50  0000 C CNN
+F 1 "10u" V 8889 2800 50  0000 C CNN
+F 2 "" H 9088 2650 50  0001 C CNN
+F 3 "~" H 9050 2800 50  0001 C CNN
+	1    9050 2800
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R6
+U 1 1 5FCCCF27
+P 9300 2950
+F 0 "R6" V 9093 2950 50  0000 C CNN
+F 1 "1k" V 9184 2950 50  0000 C CNN
+F 2 "" V 9230 2950 50  0001 C CNN
+F 3 "~" H 9300 2950 50  0001 C CNN
+	1    9300 2950
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR05
+U 1 1 5FCCD8CE
+P 9300 3100
+F 0 "#PWR05" H 9300 2850 50  0001 C CNN
+F 1 "GND" H 9305 2927 50  0000 C CNN
+F 2 "" H 9300 3100 50  0001 C CNN
+F 3 "" H 9300 3100 50  0001 C CNN
+	1    9300 3100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9200 2800 9300 2800
+Connection ~ 9300 2800
+Wire Wire Line
+	9300 2800 9450 2800
+Connection ~ 7900 2800
+$Comp
+L Device:R R4
+U 1 1 5FCDB9A8
+P 7600 1800
+F 0 "R4" V 7393 1800 50  0000 C CNN
+F 1 "10k" V 7484 1800 50  0000 C CNN
+F 2 "" V 7530 1800 50  0001 C CNN
+F 3 "~" H 7600 1800 50  0001 C CNN
+	1    7600 1800
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	7450 1800 7300 1800
+Wire Wire Line
+	7750 1800 7900 1800
+$Comp
+L 4xxx:4069 U3
+U 1 1 5FCE0A5F
+P 8550 2800
+F 0 "U3" H 8550 3117 50  0000 C CNN
+F 1 "4069" H 8550 3026 50  0000 C CNN
+F 2 "" H 8550 2800 50  0001 C CNN
+F 3 "http://www.intersil.com/content/dam/Intersil/documents/cd40/cd4069ubms.pdf" H 8550 2800 50  0001 C CNN
+F 4 "X" H 8550 2800 50  0001 C CNN "Spice_Primitive"
+F 5 "4069UB" H 8550 2800 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 8550 2800 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "1 2 14 7" H 8550 2800 50  0001 C CNN "Spice_Node_Sequence"
+	1    8550 2800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C2
+U 1 1 5FCE0A65
+P 8100 2800
+F 0 "C2" V 7848 2800 50  0000 C CNN
+F 1 "4.7n" V 7939 2800 50  0000 C CNN
+F 2 "" H 8138 2650 50  0001 C CNN
+F 3 "~" H 8100 2800 50  0001 C CNN
+	1    8100 2800
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	8900 2800 8850 2800
+Connection ~ 8850 2800
+$Comp
+L Device:R R7
+U 1 1 5FCE0A78
+P 8550 1800
+F 0 "R7" V 8343 1800 50  0000 C CNN
+F 1 "10k" V 8434 1800 50  0000 C CNN
+F 2 "" V 8480 1800 50  0001 C CNN
+F 3 "~" H 8550 1800 50  0001 C CNN
+	1    8550 1800
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	8400 1800 8250 1800
+Wire Wire Line
+	8700 1800 8850 1800
+$Comp
+L 4xxx:4069 U3
+U 7 1 5FCE56B2
+P 8150 4750
+F 0 "U3" H 8380 4796 50  0000 L CNN
+F 1 "4069" H 8380 4705 50  0000 L CNN
+F 2 "" H 8150 4750 50  0001 C CNN
+F 3 "http://www.intersil.com/content/dam/Intersil/documents/cd40/cd4069ubms.pdf" H 8150 4750 50  0001 C CNN
+F 4 "X" H 8150 4750 50  0001 C CNN "Spice_Primitive"
+F 5 "4069UB" H 8150 4750 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 8150 4750 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "1 2 14 7" H 8150 4750 50  0001 C CNN "Spice_Node_Sequence"
+	7    8150 4750
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+15V #PWR06
+U 1 1 5FCE56B8
+P 8150 4250
+F 0 "#PWR06" H 8150 4100 50  0001 C CNN
+F 1 "+15V" H 8165 4423 50  0000 C CNN
+F 2 "" H 8150 4250 50  0001 C CNN
+F 3 "" H 8150 4250 50  0001 C CNN
+	1    8150 4250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR07
+U 1 1 5FCE56BE
+P 8150 5250
+F 0 "#PWR07" H 8150 5000 50  0001 C CNN
+F 1 "GND" H 8155 5077 50  0000 C CNN
+F 2 "" H 8150 5250 50  0001 C CNN
+F 3 "" H 8150 5250 50  0001 C CNN
+	1    8150 5250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8850 2800 8850 3300
+Wire Wire Line
+	8850 3300 8000 3300
+$Comp
+L Device:R R8
+U 1 1 5FCE8A91
+P 7850 3300
+F 0 "R8" V 7643 3300 50  0000 C CNN
+F 1 "100k" V 7734 3300 50  0000 C CNN
+F 2 "" V 7780 3300 50  0001 C CNN
+F 3 "~" H 7850 3300 50  0001 C CNN
+	1    7850 3300
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6400 2800 6400 3300
+Wire Wire Line
+	6400 3300 7700 3300
+$Comp
+L Device:C C1
+U 1 1 5FCCC194
+P 7150 2800
+F 0 "C1" V 6898 2800 50  0000 C CNN
+F 1 "4.7n" V 6989 2800 50  0000 C CNN
+F 2 "" H 7188 2650 50  0001 C CNN
+F 3 "~" H 7150 2800 50  0001 C CNN
+	1    7150 2800
+	0    1    1    0   
+$EndComp
+Connection ~ 7300 2800
+Connection ~ 7000 2800
+Connection ~ 8250 2800
+Wire Wire Line
+	7900 1800 7900 2800
+Wire Wire Line
+	7300 1800 7300 2800
+Wire Wire Line
+	8850 1800 8850 2800
+Wire Wire Line
+	8250 1800 8250 2800
+$EndSCHEMATC
