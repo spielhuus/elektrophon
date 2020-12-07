@@ -44,7 +44,7 @@ F 1 "LM324" H 3600 1274 50  0000 C CNN
 F 2 "" H 3550 1650 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/lm2902-n.pdf" H 3650 1750 50  0001 C CNN
 F 4 "X" H 3600 1550 50  0001 C CNN "Spice_Primitive"
-F 5 "LMx24" H 3600 1550 50  0001 C CNN "Spice_Model"
+F 5 "LMx24c" H 3600 1550 50  0001 C CNN "Spice_Model"
 F 6 "Y" H 3600 1550 50  0001 C CNN "Spice_Netlist_Enabled"
 	1    3600 1550
 	1    0    0    1   
@@ -58,7 +58,7 @@ F 1 "LM324" H 3600 2826 50  0000 C CNN
 F 2 "" H 3550 2650 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/lm2902-n.pdf" H 3650 2750 50  0001 C CNN
 F 4 "X" H 3600 2550 50  0001 C CNN "Spice_Primitive"
-F 5 "LMx24" H 3600 2550 50  0001 C CNN "Spice_Model"
+F 5 "LMx24c" H 3600 2550 50  0001 C CNN "Spice_Model"
 F 6 "Y" H 3600 2550 50  0001 C CNN "Spice_Netlist_Enabled"
 	2    3600 2550
 	1    0    0    -1  
@@ -72,7 +72,7 @@ F 1 "LM324" H 3600 3826 50  0000 C CNN
 F 2 "" H 3550 3650 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/lm2902-n.pdf" H 3650 3750 50  0001 C CNN
 F 4 "X" H 3600 3550 50  0001 C CNN "Spice_Primitive"
-F 5 "LMx24" H 3600 3550 50  0001 C CNN "Spice_Model"
+F 5 "LMx24c" H 3600 3550 50  0001 C CNN "Spice_Model"
 F 6 "Y" H 3600 3550 50  0001 C CNN "Spice_Netlist_Enabled"
 	3    3600 3550
 	1    0    0    -1  
@@ -86,7 +86,7 @@ F 1 "LM324" H 3600 4826 50  0000 C CNN
 F 2 "" H 3550 4650 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/lm2902-n.pdf" H 3650 4750 50  0001 C CNN
 F 4 "X" H 3600 4550 50  0001 C CNN "Spice_Primitive"
-F 5 "LMx24" H 3600 4550 50  0001 C CNN "Spice_Model"
+F 5 "LMx24c" H 3600 4550 50  0001 C CNN "Spice_Model"
 F 6 "Y" H 3600 4550 50  0001 C CNN "Spice_Netlist_Enabled"
 	4    3600 4550
 	1    0    0    -1  
@@ -100,7 +100,7 @@ F 1 "LM324" H 3808 7055 50  0000 L CNN
 F 2 "" H 3800 7200 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/lm2902-n.pdf" H 3900 7300 50  0001 C CNN
 F 4 "X" H 3850 7100 50  0001 C CNN "Spice_Primitive"
-F 5 "LMx24" H 3850 7100 50  0001 C CNN "Spice_Model"
+F 5 "LMx24c" H 3850 7100 50  0001 C CNN "Spice_Model"
 F 6 "Y" H 3850 7100 50  0001 C CNN "Spice_Netlist_Enabled"
 	5    3850 7100
 	1    0    0    -1  
@@ -306,7 +306,7 @@ F 1 "LM324" H 3600 5324 50  0000 C CNN
 F 2 "" H 3550 5700 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/lm2902-n.pdf" H 3650 5800 50  0001 C CNN
 F 4 "X" H 3600 5600 50  0001 C CNN "Spice_Primitive"
-F 5 "LMx24" H 3600 5600 50  0001 C CNN "Spice_Model"
+F 5 "LMx24c" H 3600 5600 50  0001 C CNN "Spice_Model"
 F 6 "Y" H 3600 5600 50  0001 C CNN "Spice_Netlist_Enabled"
 	1    3600 5600
 	1    0    0    1   
@@ -596,7 +596,7 @@ F 1 "LM13700" H 5700 2174 50  0000 C CNN
 F 2 "" H 5400 2475 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/lm13700.pdf" H 5400 2475 50  0001 C CNN
 F 4 "X" H 5700 2450 50  0001 C CNN "Spice_Primitive"
-F 5 "LM13700/NS" H 5700 2450 50  0001 C CNN "Spice_Model"
+F 5 "LM13700d" H 5700 2450 50  0001 C CNN "Spice_Model"
 F 6 "Y" H 5700 2450 50  0001 C CNN "Spice_Netlist_Enabled"
 	1    5700 2450
 	1    0    0    1   
@@ -610,7 +610,7 @@ F 1 "LM13700" H 9200 2257 50  0000 C CNN
 F 2 "" H 9000 2025 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/lm13700.pdf" H 9000 2025 50  0001 C CNN
 F 4 "X" H 9300 2000 50  0001 C CNN "Spice_Primitive"
-F 5 "LM13700/NS" H 9300 2000 50  0001 C CNN "Spice_Model"
+F 5 "LM13700d" H 9300 2000 50  0001 C CNN "Spice_Model"
 F 6 "Y" H 9300 2000 50  0001 C CNN "Spice_Netlist_Enabled"
 	2    9300 2000
 	1    0    0    -1  
@@ -624,7 +624,7 @@ F 1 "LM13700" H 5700 3174 50  0000 C CNN
 F 2 "" H 5400 3475 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/lm13700.pdf" H 5400 3475 50  0001 C CNN
 F 4 "X" H 5700 3450 50  0001 C CNN "Spice_Primitive"
-F 5 "LM13700/NS" H 5700 3450 50  0001 C CNN "Spice_Model"
+F 5 "LM13700d" H 5700 3450 50  0001 C CNN "Spice_Model"
 F 6 "Y" H 5700 3450 50  0001 C CNN "Spice_Netlist_Enabled"
 	3    5700 3450
 	1    0    0    1   
@@ -638,7 +638,7 @@ F 1 "LM13700" H 9200 3057 50  0000 C CNN
 F 2 "" H 9000 2825 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/lm13700.pdf" H 9000 2825 50  0001 C CNN
 F 4 "X" H 9300 2800 50  0001 C CNN "Spice_Primitive"
-F 5 "LM13700/NS" H 9300 2800 50  0001 C CNN "Spice_Model"
+F 5 "LM13700d" H 9300 2800 50  0001 C CNN "Spice_Model"
 F 6 "Y" H 9300 2800 50  0001 C CNN "Spice_Netlist_Enabled"
 	4    9300 2800
 	1    0    0    -1  
@@ -726,7 +726,7 @@ F 1 "LM13700" H 5700 4174 50  0000 C CNN
 F 2 "" H 5400 4475 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/lm13700.pdf" H 5400 4475 50  0001 C CNN
 F 4 "X" H 5700 4450 50  0001 C CNN "Spice_Primitive"
-F 5 "LM13700/NS" H 5700 4450 50  0001 C CNN "Spice_Model"
+F 5 "LM13700d" H 5700 4450 50  0001 C CNN "Spice_Model"
 F 6 "Y" H 5700 4450 50  0001 C CNN "Spice_Netlist_Enabled"
 	1    5700 4450
 	1    0    0    1   
@@ -740,7 +740,7 @@ F 1 "LM13700" H 5700 5174 50  0000 C CNN
 F 2 "" H 5400 5475 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/lm13700.pdf" H 5400 5475 50  0001 C CNN
 F 4 "X" H 5700 5450 50  0001 C CNN "Spice_Primitive"
-F 5 "LM13700/NS" H 5700 5450 50  0001 C CNN "Spice_Model"
+F 5 "LM13700d" H 5700 5450 50  0001 C CNN "Spice_Model"
 F 6 "Y" H 5700 5450 50  0001 C CNN "Spice_Netlist_Enabled"
 	3    5700 5450
 	1    0    0    1   
@@ -828,7 +828,7 @@ F 1 "LM324" H 7250 3424 50  0000 C CNN
 F 2 "" H 7200 3800 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/lm2902-n.pdf" H 7300 3900 50  0001 C CNN
 F 4 "X" H 7250 3700 50  0001 C CNN "Spice_Primitive"
-F 5 "LMx24" H 7250 3700 50  0001 C CNN "Spice_Model"
+F 5 "LMx24c" H 7250 3700 50  0001 C CNN "Spice_Model"
 F 6 "Y" H 7250 3700 50  0001 C CNN "Spice_Netlist_Enabled"
 	2    7250 3700
 	1    0    0    1   
@@ -959,7 +959,7 @@ F 1 "LM324" H 4408 7055 50  0000 L CNN
 F 2 "" H 4400 7200 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/lm2902-n.pdf" H 4500 7300 50  0001 C CNN
 F 4 "X" H 4450 7100 50  0001 C CNN "Spice_Primitive"
-F 5 "LMx24" H 4450 7100 50  0001 C CNN "Spice_Model"
+F 5 "LMx24c" H 4450 7100 50  0001 C CNN "Spice_Model"
 F 6 "Y" H 4450 7100 50  0001 C CNN "Spice_Netlist_Enabled"
 	5    4450 7100
 	1    0    0    -1  
@@ -1043,7 +1043,7 @@ F 1 "LM324" H 9250 5576 50  0000 C CNN
 F 2 "" H 9200 5400 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/lm2902-n.pdf" H 9300 5500 50  0001 C CNN
 F 4 "X" H 9250 5300 50  0001 C CNN "Spice_Primitive"
-F 5 "LMx24" H 9250 5300 50  0001 C CNN "Spice_Model"
+F 5 "LMx24c" H 9250 5300 50  0001 C CNN "Spice_Model"
 F 6 "Y" H 9250 5300 50  0001 C CNN "Spice_Netlist_Enabled"
 	4    9250 5300
 	1    0    0    -1  
@@ -1057,7 +1057,7 @@ F 1 "LM324" H 9300 6226 50  0000 C CNN
 F 2 "" H 9250 6050 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/lm2902-n.pdf" H 9350 6150 50  0001 C CNN
 F 4 "X" H 9300 5950 50  0001 C CNN "Spice_Primitive"
-F 5 "LMx24" H 9300 5950 50  0001 C CNN "Spice_Model"
+F 5 "LMx24c" H 9300 5950 50  0001 C CNN "Spice_Model"
 F 6 "Y" H 9300 5950 50  0001 C CNN "Spice_Netlist_Enabled"
 	3    9300 5950
 	1    0    0    -1  
@@ -1121,7 +1121,7 @@ F 1 "LM13700" H 4958 7055 50  0000 L CNN
 F 2 "" H 4700 7125 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/lm13700.pdf" H 4700 7125 50  0001 C CNN
 F 4 "X" H 5000 7100 50  0001 C CNN "Spice_Primitive"
-F 5 "LM13700/NS" H 5000 7100 50  0001 C CNN "Spice_Model"
+F 5 "LM13700d" H 5000 7100 50  0001 C CNN "Spice_Model"
 F 6 "Y" H 5000 7100 50  0001 C CNN "Spice_Netlist_Enabled"
 	5    5000 7100
 	1    0    0    -1  
@@ -1135,9 +1135,41 @@ F 1 "LM13700" H 5608 7055 50  0000 L CNN
 F 2 "" H 5350 7125 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/lm13700.pdf" H 5350 7125 50  0001 C CNN
 F 4 "X" H 5650 7100 50  0001 C CNN "Spice_Primitive"
-F 5 "LM13700/NS" H 5650 7100 50  0001 C CNN "Spice_Model"
+F 5 "LM13700d" H 5650 7100 50  0001 C CNN "Spice_Model"
 F 6 "Y" H 5650 7100 50  0001 C CNN "Spice_Netlist_Enabled"
 	5    5650 7100
 	1    0    0    -1  
 $EndComp
+$Comp
+L Amplifier_Operational:LM13700 U6
+U 2 1 5FD137F4
+P 10150 1900
+F 0 "U6" H 10050 2248 50  0000 C CNN
+F 1 "LM13700" H 10050 2157 50  0000 C CNN
+F 2 "" H 9850 1925 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lm13700.pdf" H 9850 1925 50  0001 C CNN
+F 4 "X" H 10150 1900 50  0001 C CNN "Spice_Primitive"
+F 5 "LM13700d" H 10150 1900 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 10150 1900 50  0001 C CNN "Spice_Netlist_Enabled"
+	2    10150 1900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Amplifier_Operational:LM13700 U6
+U 4 1 5FD137FD
+P 10150 2700
+F 0 "U6" H 10050 3048 50  0000 C CNN
+F 1 "LM13700" H 10050 2957 50  0000 C CNN
+F 2 "" H 9850 2725 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lm13700.pdf" H 9850 2725 50  0001 C CNN
+F 4 "X" H 10150 2700 50  0001 C CNN "Spice_Primitive"
+F 5 "LM13700d" H 10150 2700 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 10150 2700 50  0001 C CNN "Spice_Netlist_Enabled"
+	4    10150 2700
+	1    0    0    -1  
+$EndComp
+NoConn ~ 9850 1900
+NoConn ~ 10250 2000
+NoConn ~ 10250 2800
+NoConn ~ 9850 2700
 $EndSCHEMATC
