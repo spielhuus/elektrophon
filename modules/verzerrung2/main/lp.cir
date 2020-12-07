@@ -1,7 +1,0 @@
-.title KiCad schematic
-XU1 Net-_C1-Pad2_ /LowPass200/OUT +15V -15V /LowPass200/OUT TL072
-C2 /LowPass200/OUT Net-_C2-Pad2_ 0.082u
-R2 Net-_C1-Pad2_ Net-_C2-Pad2_ 10k
-R1 Net-_C2-Pad2_ NC_01 10k
-C1 GND Net-_C1-Pad2_ 0.082u
-.end

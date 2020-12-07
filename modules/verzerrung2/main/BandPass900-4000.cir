@@ -1,12 +1,13 @@
 .title KiCad schematic
-XU5 Net-_C9-Pad2_ Net-_C10-Pad1_ +15V -15V Net-_C10-Pad1_ TL072
-C10 Net-_C10-Pad1_ Net-_C10-Pad2_ 10n
-R10 Net-_C9-Pad2_ Net-_C10-Pad2_ 15k
-R9 Net-_C10-Pad2_ NC_01 15k
-C9 GND Net-_C9-Pad2_ 910p
-XU6 Net-_C12-Pad1_ /OUT +15V -15V /OUT TL072
-C11 Net-_C11-Pad1_ Net-_C10-Pad1_ 10n
-R12 /OUT Net-_C11-Pad1_ 4.7k
-R11 GND Net-_C12-Pad1_ 40k
-C12 Net-_C12-Pad1_ Net-_C11-Pad1_ 10n
+XU1 Net-_C4-Pad1_ Net-_C2-Pad1_ +15V GND 4069UB
+C1 Net-_C1-Pad1_ Net-_C1-Pad2_ 22n
+C3 /OUT Net-_C2-Pad1_ 10u
+R6 GND /OUT 1k
+C2 Net-_C2-Pad1_ Net-_C1-Pad1_ 22n
+R3 GND Net-_C1-Pad1_ 10
+R1 Net-_C5-Pad2_ Net-_C4-Pad1_ 100k
+R4 Net-_C2-Pad1_ Net-_C5-Pad2_ 100k
+C5 GND Net-_C5-Pad2_ 22n
+C4 Net-_C4-Pad1_ Net-_C1-Pad2_ 100n
+R2 Net-_C1-Pad2_ NC_01 10k
 .end
