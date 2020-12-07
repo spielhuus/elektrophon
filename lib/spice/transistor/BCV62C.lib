@@ -1,0 +1,71 @@
+***********************************************************
+*
+* BCV62C
+*
+* Nexperia
+*
+* General purpose double PNP Transistor
+* IC   = 100 mA
+* VCEO = 30 V 
+* hFE  = 420 - 800 @ 5V/2mA
+*
+*
+*
+*
+* Package pinning does not match Spice model pinning.
+* Package: SOT 143B
+* 
+* Package Pin 1: Collector TR2; Base TR1 and TR2
+* Package Pin 2: Collector TR1
+* Package Pin 3: Emitter   TR1
+* Package Pin 4: Emitter   TR2
+*
+* Extraction date (week/year): 45/2013
+* Spicemodel does not include temperature dependency
+*
+**********************************************************
+*#
+.SUBCKT BC857CW 1 2 3 4
+Q1 1 2 3 MAIN
+Q2 2 2 4 MAIN
+.MODEL MAIN PNP
++ IS = 2.616E-014
++ NF = 0.9973
++ ISE = 4.892E-015
++ NE = 1.411
++ BF = 435
++ IKF = 0.048
++ VAF = 12.54
++ NR = 0.9931
++ ISC = 9.492E-015
++ NC = 1.262
++ BR = 13
++ IKR = 0.02063
++ VAR = 15.21
++ RB = 39
++ IRB = 9.5E-005
++ RBM = 2.95
++ RE = 0.5029
++ RC = 0.287
++ XTB = 0
++ EG = 1.11
++ XTI = 3
++ CJE = 8.778E-012
++ VJE = 0.7445
++ MJE = 0.3727
++ TF = 1.01E-009
++ XTF = 18
++ VTF = 5
++ ITF = 0.8
++ PTF = 0
++ CJC = 5.461E-012
++ VJC = 0.972
++ MJC = 0.522
++ XCJC = 1
++ TR = 4.695E-008
++ CJS = 0
++ VJS = 0.75
++ MJS = 0.333
++ FC = 0.79
+.ENDS 
+*

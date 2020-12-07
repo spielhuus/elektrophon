@@ -1,0 +1,10 @@
+* A dual opamp ngspice model
+* file name: LMx24.cir
+.subckt LMx24c 1out 1in- 1in+ vcc- 2in+ 2in- 2out 3out 3in- 3in+ vcc+ 4in+ 4in- 4out
+.include LMx24_LM2902.cir
+XU1A 1in+ 1in- vcc+ vcc- 1out LM324
+XU1B 2in+ 2in- vcc+ vcc- 2out LM324
+XU1C 3in+ 3in- vcc+ vcc- 3out LM324
+XU1D 4in+ 4in- vcc+ vcc- 4out LM324
+.ends 
+
