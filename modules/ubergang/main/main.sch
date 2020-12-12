@@ -1084,4 +1084,170 @@ F 7 "3 2 1" H 4550 1550 50  0001 C CNN "Spice_Node_Sequence"
 	1    4550 1550
 	1    0    0    1   
 $EndComp
+$Comp
+L Amplifier_Operational:TL072 U?
+U 1 1 5FD5765C
+P 700 4600
+F 0 "U?" H 700 4233 50  0000 C CNN
+F 1 "TL072" H 700 4324 50  0000 C CNN
+F 2 "" H 700 4600 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 700 4600 50  0001 C CNN
+	1    700  4600
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	1000 4600 1050 4600
+Wire Wire Line
+	1050 4600 1050 4100
+Wire Wire Line
+	1050 4100 350  4100
+Wire Wire Line
+	350  4100 350  4500
+Wire Wire Line
+	350  4500 400  4500
+Text GLabel 400  4700 0    50   Input ~ 0
+CV_IN
+Text GLabel 1050 4600 2    50   Input ~ 0
+CV
+$Comp
+L Amplifier_Operational:TL072 U?
+U 1 1 5FD80E6F
+P 650 1350
+F 0 "U?" H 650 983 50  0000 C CNN
+F 1 "TL072" H 650 1074 50  0000 C CNN
+F 2 "" H 650 1350 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 650 1350 50  0001 C CNN
+	1    650  1350
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	950  1350 1000 1350
+Wire Wire Line
+	1000 1350 1000 850 
+Wire Wire Line
+	1000 850  300  850 
+Wire Wire Line
+	300  850  300  1250
+Wire Wire Line
+	300  1250 350  1250
+Text GLabel 350  1450 0    50   Input ~ 0
+IN_1
+Text GLabel 1550 1350 2    50   Input ~ 0
+IN_1_S
+$Comp
+L Amplifier_Operational:TL072 U?
+U 1 1 5FD873BB
+P 650 2200
+F 0 "U?" H 650 1833 50  0000 C CNN
+F 1 "TL072" H 650 1924 50  0000 C CNN
+F 2 "" H 650 2200 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 650 2200 50  0001 C CNN
+	1    650  2200
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	950  2200 1000 2200
+Wire Wire Line
+	1000 2200 1000 1700
+Wire Wire Line
+	1000 1700 300  1700
+Wire Wire Line
+	300  1700 300  2100
+Wire Wire Line
+	300  2100 350  2100
+Text GLabel 350  2300 0    50   Input ~ 0
+IN_2
+Text GLabel 1550 2200 2    50   Input ~ 0
+IN_2_S
+$Comp
+L Amplifier_Operational:TL072 U?
+U 1 1 5FD94C79
+P 700 3000
+F 0 "U?" H 700 2633 50  0000 C CNN
+F 1 "TL072" H 700 2724 50  0000 C CNN
+F 2 "" H 700 3000 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 700 3000 50  0001 C CNN
+	1    700  3000
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	1000 3000 1050 3000
+Wire Wire Line
+	1050 3000 1050 2500
+Wire Wire Line
+	1050 2500 350  2500
+Wire Wire Line
+	350  2500 350  2900
+Wire Wire Line
+	350  2900 400  2900
+Text GLabel 400  3100 0    50   Input ~ 0
+IN_3
+Text GLabel 1600 3000 2    50   Input ~ 0
+IN_3_S
+$Comp
+L Amplifier_Operational:TL072 U?
+U 1 1 5FD94C86
+P 700 3850
+F 0 "U?" H 700 3483 50  0000 C CNN
+F 1 "TL072" H 700 3574 50  0000 C CNN
+F 2 "" H 700 3850 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 700 3850 50  0001 C CNN
+	1    700  3850
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	1000 3850 1050 3850
+Wire Wire Line
+	1050 3850 1050 3350
+Wire Wire Line
+	1050 3350 350  3350
+Wire Wire Line
+	350  3350 350  3750
+Wire Wire Line
+	350  3750 400  3750
+Text GLabel 400  3950 0    50   Input ~ 0
+IN_4
+Text GLabel 1600 3850 2    50   Input ~ 0
+IN_4_S
+$Comp
+L Device:R R?
+U 1 1 5FDB1DF4
+P 1150 1350
+F 0 "R?" V 943 1350 50  0000 C CNN
+F 1 "1Meg" V 1034 1350 50  0000 C CNN
+F 2 "" V 1080 1350 50  0001 C CNN
+F 3 "~" H 1150 1350 50  0001 C CNN
+	1    1150 1350
+	0    1    1    0   
+$EndComp
+Connection ~ 1000 1350
+$Comp
+L Device:R R?
+U 1 1 5FDB507A
+P 1400 1550
+F 0 "R?" H 1470 1596 50  0000 L CNN
+F 1 "220" H 1470 1505 50  0000 L CNN
+F 2 "" V 1330 1550 50  0001 C CNN
+F 3 "~" H 1400 1550 50  0001 C CNN
+	1    1400 1550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1300 1350 1400 1350
+Wire Wire Line
+	1400 1400 1400 1350
+Connection ~ 1400 1350
+Wire Wire Line
+	1400 1350 1550 1350
+$Comp
+L power:GND #PWR?
+U 1 1 5FDC593E
+P 1400 1700
+F 0 "#PWR?" H 1400 1450 50  0001 C CNN
+F 1 "GND" H 1405 1527 50  0000 C CNN
+F 2 "" H 1400 1700 50  0001 C CNN
+F 3 "" H 1400 1700 50  0001 C CNN
+	1    1400 1700
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
