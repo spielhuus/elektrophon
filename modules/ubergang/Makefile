@@ -1,4 +1,4 @@
-PROJECT = zwischenwert
+PROJECT = ubergang
 JUPYTER = jupyter
 PANDOC = pandoc
 OUTPUT =  ../../tmp
