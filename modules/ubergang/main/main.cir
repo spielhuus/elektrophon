@@ -8,10 +8,10 @@ R7 Net-_R12-Pad2_ CV_S 47k
 R8 Net-_R13-Pad2_ CV_S 47k
 R9 Net-_R14-Pad2_ CV_S 47k
 R10 Net-_R10-Pad1_ CV_S 47k
-R13 Net-_Q4-Pad2_ Net-_R13-Pad2_ 2meg
-R14 Net-_Q2-Pad2_ Net-_R14-Pad2_ 2meg
-R15 Net-_Q3-Pad2_ Net-_R10-Pad1_ 2meg
-R12 Net-_Q1-Pad2_ Net-_R12-Pad2_ 2meg
+R13 Net-_Q4-Pad2_ Net-_R13-Pad2_ 750k
+R14 Net-_Q2-Pad2_ Net-_R14-Pad2_ 750k
+R15 Net-_Q3-Pad2_ Net-_R10-Pad1_ 750k
+R12 Net-_Q1-Pad2_ Net-_R12-Pad2_ 750k
 XU5 Net-_Q4-Pad3_ NC_01 IN_2_S GND Net-_R26-Pad2_ -15V NC_02 NC_03 NC_04 NC_05 +15V Net-_R25-Pad2_ GND IN_1_S NC_06 Net-_Q1-Pad3_ LM13700d
 XU6 Net-_Q3-Pad3_ NC_07 IN_4_S GND Net-_R28-Pad2_ -15V NC_08 NC_09 NC_10 NC_11 +15V Net-_R27-Pad2_ GND IN_3_S NC_12 Net-_Q2-Pad3_ LM13700d
 Q4 Net-_Q4-Pad3_ Net-_Q4-Pad2_ Net-_Q4-Pad1_ BC556B
