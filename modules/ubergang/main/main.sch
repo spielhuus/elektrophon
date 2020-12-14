@@ -104,7 +104,7 @@ L Device:R R6
 U 1 1 5FD2041C
 P 2250 5050
 F 0 "R6" H 2320 5096 50  0000 L CNN
-F 1 "15k" H 2320 5005 50  0000 L CNN
+F 1 "36k" H 2320 5005 50  0000 L CNN
 F 2 "" V 2180 5050 50  0001 C CNN
 F 3 "~" H 2250 5050 50  0001 C CNN
 	1    2250 5050
@@ -159,7 +159,7 @@ L Device:R R1
 U 1 1 5FCE18EE
 P 2250 1100
 F 0 "R1" H 2320 1146 50  0000 L CNN
-F 1 "330k" H 2320 1055 50  0000 L CNN
+F 1 "300k" H 2320 1055 50  0000 L CNN
 F 2 "" V 2180 1100 50  0001 C CNN
 F 3 "~" H 2250 1100 50  0001 C CNN
 	1    2250 1100
@@ -581,12 +581,12 @@ $EndComp
 $Comp
 L power:+15V #PWR0108
 U 1 1 5FDCA56F
-P 4650 1050
-F 0 "#PWR0108" H 4650 900 50  0001 C CNN
-F 1 "+15V" H 4665 1223 50  0000 C CNN
-F 2 "" H 4650 1050 50  0001 C CNN
-F 3 "" H 4650 1050 50  0001 C CNN
-	1    4650 1050
+P 4650 450
+F 0 "#PWR0108" H 4650 300 50  0001 C CNN
+F 1 "+15V" H 4665 623 50  0000 C CNN
+F 2 "" H 4650 450 50  0001 C CNN
+F 3 "" H 4650 450 50  0001 C CNN
+	1    4650 450 
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -1564,6 +1564,34 @@ F 3 "~" H 4650 1200 50  0001 C CNN
 	1    4650 1200
 	1    0    0    -1  
 $EndComp
-Text Notes 3150 7950 0    50   ~ 0
-.option savecurrents
+$Comp
+L Diode:1N4148 D1
+U 1 1 5FE07308
+P 4650 600
+F 0 "D1" V 4696 520 50  0000 R CNN
+F 1 "1N4148" V 4605 520 50  0000 R CNN
+F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 4650 425 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 4650 600 50  0001 C CNN
+F 4 "D" H 4650 600 50  0001 C CNN "Spice_Primitive"
+F 5 "D1N4148" H 4650 600 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 4650 600 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "2 1" H 4650 600 50  0001 C CNN "Spice_Node_Sequence"
+	1    4650 600 
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Diode:1N4148 D2
+U 1 1 5FE4D502
+P 4650 900
+F 0 "D2" V 4696 820 50  0000 R CNN
+F 1 "1N4148" V 4605 820 50  0000 R CNN
+F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 4650 725 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 4650 900 50  0001 C CNN
+F 4 "D" H 4650 900 50  0001 C CNN "Spice_Primitive"
+F 5 "D1N4148" H 4650 900 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 4650 900 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "2 1" H 4650 900 50  0001 C CNN "Spice_Node_Sequence"
+	1    4650 900 
+	0    -1   -1   0   
+$EndComp
 $EndSCHEMATC
