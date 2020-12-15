@@ -581,12 +581,12 @@ $EndComp
 $Comp
 L power:+15V #PWR0108
 U 1 1 5FDCA56F
-P 4650 450
-F 0 "#PWR0108" H 4650 300 50  0001 C CNN
-F 1 "+15V" H 4665 623 50  0000 C CNN
-F 2 "" H 4650 450 50  0001 C CNN
-F 3 "" H 4650 450 50  0001 C CNN
-	1    4650 450 
+P 4650 750
+F 0 "#PWR0108" H 4650 600 50  0001 C CNN
+F 1 "+15V" H 4665 923 50  0000 C CNN
+F 2 "" H 4650 750 50  0001 C CNN
+F 3 "" H 4650 750 50  0001 C CNN
+	1    4650 750 
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -1567,23 +1567,8 @@ $EndComp
 $Comp
 L Diode:1N4148 D1
 U 1 1 5FE07308
-P 4650 600
-F 0 "D1" V 4696 520 50  0000 R CNN
-F 1 "1N4148" V 4605 520 50  0000 R CNN
-F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 4650 425 50  0001 C CNN
-F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 4650 600 50  0001 C CNN
-F 4 "D" H 4650 600 50  0001 C CNN "Spice_Primitive"
-F 5 "D1N4148" H 4650 600 50  0001 C CNN "Spice_Model"
-F 6 "Y" H 4650 600 50  0001 C CNN "Spice_Netlist_Enabled"
-F 7 "2 1" H 4650 600 50  0001 C CNN "Spice_Node_Sequence"
-	1    4650 600 
-	0    -1   -1   0   
-$EndComp
-$Comp
-L Diode:1N4148 D2
-U 1 1 5FE4D502
 P 4650 900
-F 0 "D2" V 4696 820 50  0000 R CNN
+F 0 "D1" V 4696 820 50  0000 R CNN
 F 1 "1N4148" V 4605 820 50  0000 R CNN
 F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 4650 725 50  0001 C CNN
 F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 4650 900 50  0001 C CNN
