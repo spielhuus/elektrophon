@@ -1,4 +1,4 @@
-SUBDIRS = midi_notes
+SUBDIRS = midi_notes karplus_strong
 
 # Register all subdirectories in the project's root directory.
 #SUBDIRS := $(wildcard */.)
