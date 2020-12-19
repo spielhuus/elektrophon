@@ -1,4 +1,4 @@
-SUBDIRS = modules
+SUBDIRS = documentation modules
 
 # Register all subdirectories in the project's root directory.
 #SUBDIRS := $(wildcard */.)
