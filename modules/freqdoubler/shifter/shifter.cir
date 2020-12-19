@@ -1,0 +1,7 @@
+.title KiCad schematic
+XU1 Net-_R2-Pad2_ PHASE_SHIFT SAW_IN -15V Net-_R1-Pad1_ Net-_R3-Pad1_ OUT +15V TL072c
+R1 Net-_R1-Pad1_ SAW_IN 100k
+R2 Net-_R1-Pad1_ Net-_R2-Pad2_ 300k
+R4 OUT Net-_R3-Pad1_ 100k
+R3 Net-_R3-Pad1_ PHASE_SHIFT 300k
+.end
