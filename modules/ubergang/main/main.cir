@@ -1,10 +1,9 @@
 .title KiCad schematic
 R6 Net-_R4-Pad2_ GND 10k
-R4 Net-_R3-Pad2_ Net-_R4-Pad2_ 47k
-R3 Net-_R2-Pad2_ Net-_R3-Pad2_ 47k
-R2 Net-_R1-Pad2_ Net-_R2-Pad2_ 47k
-R1 +15V Net-_R1-Pad2_ 520k
-R7 Net-_R12-Pad2_ CV_S 47k
+R4 Net-_R3-Pad2_ Net-_R4-Pad2_ 60k
+R3 Net-_R2-Pad2_ Net-_R3-Pad2_ 60k
+R2 Net-_R1-Pad2_ Net-_R2-Pad2_ 60k
+R1 +15V Net-_R1-Pad2_ 470k
 R8 Net-_R13-Pad2_ CV_S 47k
 R9 Net-_R14-Pad2_ CV_S 47k
 R10 Net-_R10-Pad1_ CV_S 47k
@@ -44,4 +43,5 @@ R17 Net-_Q1-Pad2_ Net-_Q4-Pad1_ 33k
 R5 Net-_D1-Pad1_ Net-_Q1-Pad1_ 33k
 D1 Net-_D1-Pad2_ Net-_D1-Pad1_ D1N4148
 D2 +15V Net-_D1-Pad2_ D1N4148
+R7 Net-_R12-Pad2_ CV_S 47k
 .end
