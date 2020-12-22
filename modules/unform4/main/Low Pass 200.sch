@@ -1,0 +1,190 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 2 4
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Device:C C11
+U 1 1 5FA30E89
+P 3850 3650
+F 0 "C11" H 3965 3696 50  0000 L CNN
+F 1 "22n" H 3965 3605 50  0000 L CNN
+F 2 "" H 3888 3500 50  0001 C CNN
+F 3 "~" H 3850 3650 50  0001 C CNN
+	1    3850 3650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C12
+U 1 1 5FA30E8F
+P 4300 4150
+F 0 "C12" V 4048 4150 50  0000 C CNN
+F 1 "220n" V 4139 4150 50  0000 C CNN
+F 2 "" H 4338 4000 50  0001 C CNN
+F 3 "~" H 4300 4150 50  0001 C CNN
+	1    4300 4150
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3850 3400 3850 3500
+$Comp
+L power:GND #PWR019
+U 1 1 5FA30E9D
+P 3850 3800
+F 0 "#PWR019" H 3850 3550 50  0001 C CNN
+F 1 "GND" H 3855 3627 50  0000 C CNN
+F 2 "" H 3850 3800 50  0001 C CNN
+F 3 "" H 3850 3800 50  0001 C CNN
+	1    3850 3800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R24
+U 1 1 5FA30EA5
+P 3150 3400
+F 0 "R24" V 2943 3400 50  0000 C CNN
+F 1 "15k" V 3034 3400 50  0000 C CNN
+F 2 "" V 3080 3400 50  0001 C CNN
+F 3 "~" H 3150 3400 50  0001 C CNN
+	1    3150 3400
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R25
+U 1 1 5FA7D51D
+P 3550 3400
+F 0 "R25" V 3343 3400 50  0000 C CNN
+F 1 "15k" V 3434 3400 50  0000 C CNN
+F 2 "" V 3480 3400 50  0001 C CNN
+F 3 "~" H 3550 3400 50  0001 C CNN
+	1    3550 3400
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3850 3400 3700 3400
+Wire Wire Line
+	3350 3400 3400 3400
+Wire Wire Line
+	3350 3400 3300 3400
+Connection ~ 3350 3400
+$Comp
+L Transistor_BJT:BC550 Q9
+U 1 1 5FA85250
+P 4700 3400
+F 0 "Q9" H 4891 3446 50  0000 L CNN
+F 1 "BC550" H 4891 3355 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 4900 3325 50  0001 L CIN
+F 3 "https://www.onsemi.com/pub/Collateral/BC550-D.pdf" H 4700 3400 50  0001 L CNN
+F 4 "Q" H 4700 3400 50  0001 C CNN "Spice_Primitive"
+F 5 "BC846B" H 4700 3400 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 4700 3400 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    4700 3400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Transistor_BJT:BC560 Q10
+U 1 1 5FA85C60
+P 5150 3150
+F 0 "Q10" H 5341 3104 50  0000 L CNN
+F 1 "BC560" H 5341 3195 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 5350 3075 50  0001 L CIN
+F 3 "https://www.onsemi.com/pub/Collateral/BC556BTA-D.pdf" H 5150 3150 50  0001 L CNN
+F 4 "Q" H 5150 3150 50  0001 C CNN "Spice_Primitive"
+F 5 "BC556B" H 5150 3150 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 5150 3150 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    5150 3150
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	4950 3150 4800 3150
+Wire Wire Line
+	4800 3150 4800 3200
+Wire Wire Line
+	5250 3350 5250 3550
+Wire Wire Line
+	4800 3750 4800 3600
+$Comp
+L Device:R R26
+U 1 1 5FA87446
+P 4200 3400
+F 0 "R26" V 3993 3400 50  0000 C CNN
+F 1 "10k" V 4084 3400 50  0000 C CNN
+F 2 "" V 4130 3400 50  0001 C CNN
+F 3 "~" H 4200 3400 50  0001 C CNN
+	1    4200 3400
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3850 3400 4050 3400
+Wire Wire Line
+	4350 3400 4500 3400
+Connection ~ 3850 3400
+Wire Wire Line
+	4450 4150 4800 4150
+Wire Wire Line
+	4800 4150 4800 3750
+Connection ~ 4800 3750
+Wire Wire Line
+	4150 4150 3350 4150
+Wire Wire Line
+	3350 4150 3350 3400
+$Comp
+L Device:R R27
+U 1 1 5FA89377
+P 5250 4000
+F 0 "R27" V 5043 4000 50  0000 C CNN
+F 1 "1.5k" V 5134 4000 50  0000 C CNN
+F 2 "" V 5180 4000 50  0001 C CNN
+F 3 "~" H 5250 4000 50  0001 C CNN
+	1    5250 4000
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:+15V #PWR020
+U 1 1 5FA89942
+P 5250 2950
+F 0 "#PWR020" H 5250 2800 50  0001 C CNN
+F 1 "+15V" H 5265 3123 50  0000 C CNN
+F 2 "" H 5250 2950 50  0001 C CNN
+F 3 "" H 5250 2950 50  0001 C CNN
+	1    5250 2950
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR021
+U 1 1 5FA8A24D
+P 5250 4150
+F 0 "#PWR021" H 5250 3900 50  0001 C CNN
+F 1 "GND" H 5255 3977 50  0000 C CNN
+F 2 "" H 5250 4150 50  0001 C CNN
+F 3 "" H 5250 4150 50  0001 C CNN
+	1    5250 4150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5250 3850 5250 3750
+Connection ~ 5250 3750
+Wire Wire Line
+	4800 3750 5250 3750
+Text HLabel 5600 3550 2    50   Input ~ 0
+OUT
+Wire Wire Line
+	5600 3550 5250 3550
+Connection ~ 5250 3550
+Wire Wire Line
+	5250 3550 5250 3750
+Text HLabel 2850 3400 0    50   Input ~ 0
+IN
+Wire Wire Line
+	3000 3400 2850 3400
+$EndSCHEMATC

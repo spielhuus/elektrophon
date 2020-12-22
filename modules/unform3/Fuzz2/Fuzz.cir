@@ -1,0 +1,13 @@
+.title KiCad schematic
+C1 Net-_C1-Pad1_ IN 10u
+XU1 OUT Net-_C2-Pad2_ GND -15V NC_01 NC_02 NC_03 +15V TL072c
+C2 OUT Net-_C2-Pad2_ 47p
+R2 OUT Net-_C2-Pad2_ 100k
+R1 Net-_C2-Pad2_ Net-_C1-Pad1_ 3.3k
+D6 Net-_D4-Pad2_ OUT D1N4148
+D4 Net-_D2-Pad2_ Net-_D4-Pad2_ D1N4148
+D2 Net-_C2-Pad2_ Net-_D2-Pad2_ D1N4148
+D1 Net-_D1-Pad1_ Net-_C2-Pad2_ D1N4148
+D3 Net-_D3-Pad1_ Net-_D1-Pad1_ D1N4148
+D5 OUT Net-_D3-Pad1_ D1N4148
+.end
