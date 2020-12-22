@@ -1,0 +1,204 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 3 10
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+Text HLabel 5000 3750 2    50   Input ~ 0
+MIXER_OUT
+$Comp
+L Device:R R?
+U 1 1 5FA9EA83
+P 4300 3100
+AR Path="/5FA7D90C/5FA9EA83" Ref="R?"  Part="1" 
+AR Path="/5FA9AA4E/5FA9EA83" Ref="R8"  Part="1" 
+F 0 "R8" V 4093 3100 50  0000 C CNN
+F 1 "68k" V 4184 3100 50  0000 C CNN
+F 2 "" V 4230 3100 50  0001 C CNN
+F 3 "~" H 4300 3100 50  0001 C CNN
+	1    4300 3100
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5FA9EA89
+P 4300 3950
+AR Path="/5FA7D90C/5FA9EA89" Ref="R?"  Part="1" 
+AR Path="/5FA9AA4E/5FA9EA89" Ref="R9"  Part="1" 
+F 0 "R9" V 4093 3950 50  0000 C CNN
+F 1 "100k" V 4184 3950 50  0000 C CNN
+F 2 "" V 4230 3950 50  0001 C CNN
+F 3 "~" H 4300 3950 50  0001 C CNN
+	1    4300 3950
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5FA9EA8F
+P 4300 4100
+AR Path="/5FA7D90C/5FA9EA8F" Ref="#PWR?"  Part="1" 
+AR Path="/5FA9AA4E/5FA9EA8F" Ref="#PWR07"  Part="1" 
+F 0 "#PWR07" H 4300 3850 50  0001 C CNN
+F 1 "GND" H 4305 3927 50  0000 C CNN
+F 2 "" H 4300 4100 50  0001 C CNN
+F 3 "" H 4300 4100 50  0001 C CNN
+	1    4300 4100
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+15V #PWR?
+U 1 1 5FA9EA95
+P 4300 2950
+AR Path="/5FA7D90C/5FA9EA95" Ref="#PWR?"  Part="1" 
+AR Path="/5FA9AA4E/5FA9EA95" Ref="#PWR06"  Part="1" 
+F 0 "#PWR06" H 4300 2800 50  0001 C CNN
+F 1 "+15V" H 4315 3123 50  0000 C CNN
+F 2 "" H 4300 2950 50  0001 C CNN
+F 3 "" H 4300 2950 50  0001 C CNN
+	1    4300 2950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4300 3250 4300 3500
+Wire Wire Line
+	4250 3500 4300 3500
+Connection ~ 4300 3500
+Wire Wire Line
+	4300 3500 4350 3500
+$Comp
+L power:+15V #PWR?
+U 1 1 5FA9EA9F
+P 4650 2950
+AR Path="/5FA7D90C/5FA9EA9F" Ref="#PWR?"  Part="1" 
+AR Path="/5FA9AA4E/5FA9EA9F" Ref="#PWR08"  Part="1" 
+F 0 "#PWR08" H 4650 2800 50  0001 C CNN
+F 1 "+15V" H 4665 3123 50  0000 C CNN
+F 2 "" H 4650 2950 50  0001 C CNN
+F 3 "" H 4650 2950 50  0001 C CNN
+	1    4650 2950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5FA9EAA5
+P 4650 3950
+AR Path="/5FA7D90C/5FA9EAA5" Ref="R?"  Part="1" 
+AR Path="/5FA9AA4E/5FA9EAA5" Ref="R10"  Part="1" 
+F 0 "R10" H 4720 3996 50  0000 L CNN
+F 1 "1.5k" H 4720 3905 50  0000 L CNN
+F 2 "" V 4580 3950 50  0001 C CNN
+F 3 "~" H 4650 3950 50  0001 C CNN
+	1    4650 3950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Transistor_BJT:BC550 Q?
+U 1 1 5FA9EAAE
+P 4550 3500
+AR Path="/5FA7D90C/5FA9EAAE" Ref="Q?"  Part="1" 
+AR Path="/5FA9AA4E/5FA9EAAE" Ref="Q3"  Part="1" 
+F 0 "Q3" H 4741 3546 50  0000 L CNN
+F 1 "BC550" H 4741 3455 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 4750 3425 50  0001 L CIN
+F 3 "https://www.onsemi.com/pub/Collateral/BC550-D.pdf" H 4550 3500 50  0001 L CNN
+F 4 "Q" H 4550 3500 50  0001 C CNN "Spice_Primitive"
+F 5 "BC846B" H 4550 3500 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 4550 3500 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    4550 3500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4650 3700 4650 3750
+Connection ~ 4650 3750
+Wire Wire Line
+	4650 3750 4650 3800
+Wire Wire Line
+	4650 3750 5000 3750
+$Comp
+L Device:R R?
+U 1 1 5FA9EAB8
+P 3850 3950
+AR Path="/5FA7D90C/5FA9EAB8" Ref="R?"  Part="1" 
+AR Path="/5FA9AA4E/5FA9EAB8" Ref="R7"  Part="1" 
+F 0 "R7" V 3643 3950 50  0000 C CNN
+F 1 "100k" V 3734 3950 50  0000 C CNN
+F 2 "" V 3780 3950 50  0001 C CNN
+F 3 "~" H 3850 3950 50  0001 C CNN
+	1    3850 3950
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5FA9EABE
+P 3850 4100
+AR Path="/5FA7D90C/5FA9EABE" Ref="#PWR?"  Part="1" 
+AR Path="/5FA9AA4E/5FA9EABE" Ref="#PWR05"  Part="1" 
+F 0 "#PWR05" H 3850 3850 50  0001 C CNN
+F 1 "GND" H 3855 3927 50  0000 C CNN
+F 2 "" H 3850 4100 50  0001 C CNN
+F 3 "" H 3850 4100 50  0001 C CNN
+	1    3850 4100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5FA9EAC4
+P 3600 3500
+AR Path="/5FA7D90C/5FA9EAC4" Ref="R?"  Part="1" 
+AR Path="/5FA9AA4E/5FA9EAC4" Ref="R6"  Part="1" 
+F 0 "R6" V 3393 3500 50  0000 C CNN
+F 1 "2.2k" V 3484 3500 50  0000 C CNN
+F 2 "" V 3530 3500 50  0001 C CNN
+F 3 "~" H 3600 3500 50  0001 C CNN
+	1    3600 3500
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	3750 3500 3850 3500
+Connection ~ 3850 3500
+Wire Wire Line
+	3850 3500 3950 3500
+$Comp
+L Device:CP C?
+U 1 1 5FA9EACD
+P 4100 3500
+AR Path="/5FA7D90C/5FA9EACD" Ref="C?"  Part="1" 
+AR Path="/5FA9AA4E/5FA9EACD" Ref="C4"  Part="1" 
+F 0 "C4" V 3845 3500 50  0000 C CNN
+F 1 "1u" V 3936 3500 50  0000 C CNN
+F 2 "" H 4138 3350 50  0001 C CNN
+F 3 "~" H 4100 3500 50  0001 C CNN
+	1    4100 3500
+	0    1    1    0   
+$EndComp
+Text HLabel 3450 3500 0    50   Input ~ 0
+MIXER_IN
+Wire Wire Line
+	4650 2950 4650 3300
+Wire Wire Line
+	3850 3500 3850 3800
+Wire Wire Line
+	4300 3500 4300 3800
+$Comp
+L power:GND #PWR?
+U 1 1 5FA9EAD7
+P 4650 4100
+AR Path="/5FA7D90C/5FA9EAD7" Ref="#PWR?"  Part="1" 
+AR Path="/5FA9AA4E/5FA9EAD7" Ref="#PWR09"  Part="1" 
+F 0 "#PWR09" H 4650 3850 50  0001 C CNN
+F 1 "GND" H 4655 3927 50  0000 C CNN
+F 2 "" H 4650 4100 50  0001 C CNN
+F 3 "" H 4650 4100 50  0001 C CNN
+	1    4650 4100
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC

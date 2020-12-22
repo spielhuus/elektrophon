@@ -17,7 +17,7 @@ $(DOCS): $(OUTPUT)/$(DEST)
 $(OUTPUT)/$(DEST): $(SRC)
 	$(JUPYTER) $(JUPITERFLAGS) $(SRC)
 	cd $(OUTPUT) ; $(PANDOC) $(PANDOCFLAGS) -s $(MD) -o $(DEST)
-	rm -rf $(OUTPUT)/$(MD) $(OUTPUT)/$(PROJECT)_files
+#	rm -rf $(OUTPUT)/$(MD) $(OUTPUT)/$(PROJECT)_files
 
 clean:
 	rm -rf $(OUTPUT)/$(DEST)
