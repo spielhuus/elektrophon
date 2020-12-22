@@ -7,7 +7,7 @@ DEST = $(PROJECT).html
 MD = $(PROJECT).md
 DOCS = docs
 
-JUPITERFLAGS = nbconvert --ExecutePreprocessor.timeout=600 $(SRC) --execute --to markdown --no-input --log-level=WARN --ExecutePreprocessor.kernel_name=python3 --output-dir=$(OUTPUT)
+JUPITERFLAGS = nbconvert --ExecutePreprocessor.timeout=600 --execute --to markdown --no-input --log-level=WARN --ExecutePreprocessor.kernel_name=python3 --output-dir=$(OUTPUT) $(SRC)
 PANDOCFLAGS = --mathml -fmarkdown-implicit_figures --extract-media=files
 
 all: $(DOCS)

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>pegel</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+</head>
+<body>
+<p><img src="files/180b07efb7539911fe88ead977dd9820e6943f85.svg" alt="module" /> <img src="files/163abc46e99a82463deae9b554c97e6eb2517f9c.svg" alt="status" /></p>
+<h2 id="pegel"><em>pegel</em></h2>
+<p><a href="https://photos.app.goo.gl/pg6iZUC32rTKX5LC7"><img src="https://spielhuus.github.io/elektrophon/images/kontrast-logo-tmb.jpg" height="300px" align="right"></a></p>
+<p><strong><em>table of contents</em></strong></p>
+<ul>
+<li><a href="#about"><em>about</em></a></li>
+<li><a href="#construction"><em>construction</em></a></li>
+<li><a href="#calibration"><em>calibration</em></a></li>
+<li><a href="#usage"><em>usage</em></a></li>
+<li><a href="#credits"><em>credits</em></a></li>
+<li><a href="#links"><em>links</em></a></li>
+<li><a href="#changelog"><em>changelog</em></a></li>
+</ul>
+<p><br/><br/><br/><br/></p>
+<h2 id="about"><em>about</em></h2>
+<p>pegel is a voltage controlled amplifier (vca). there are various designs to implement a vca. rod elliott (ESP) has an article on vca techniques [<a href="https://sound-au.com/articles/vca-techniques.html">1</a>]. diy synthesizer modules are usualy designed with an integrated vca chip [<a href="https://tinaja.com/glib/pop_elec/mus_keying_vca_1+2_75.pdf">2</a>] or with a differential amplifier [<a href="https://www.birthofasynth.com/Thomas_Henry/Pages/VCA-1.html">3</a>]. the integrated vca chips are either obsolete or rather expensive. the differential amplifier can be built with transistors only. the design has some downsides. even in the simulation the result is not symetryc and has a dc offset from the control voltage. this needs a lot of trimming to get an accurate result. but the biggest downside is, that this design can not do proper amplitude modulation (am). when the carrier signal goes below zero the base signal is completely muted.</p>
+<pre><code>&lt;ipython-input-1-6532caf98670&gt;:32: RuntimeWarning: invalid value encountered in true_divide
+  ax2.plot(x2, y1 / y2, c=&#39;Orange&#39;)  # differential output
+
+
+
+
+
+Text(0.5, -0.2, &#39;test signals&#39;)</code></pre>
+<p><img src="files/d090828b3bd4b9e73e502c60eb707f95b57a6b00.svg" alt="svg" /></p>
+<p><img src="files/a53f7729cc0716562c0d01d348db6236949493be.svg" alt="svg" /></p>
+<pre><code>&lt;ipython-input-1-897a87e281da&gt;:6: RuntimeWarning: invalid value encountered in true_divide
+  y = ( np.sin(10 * np.pi * f * (x/fs))  / np.sin( 2 * np.pi * f * (x/fs)) )</code></pre>
+<p><img src="files/7dd0cbe58b7bdb8b7c4b728f8cde909bab34dadb.svg" alt="svg" /></p>
+<p><img src="files/8136725619e16b5705f3a2629c78d43e3be9b18f.svg" alt="svg" /></p>
+<p>more promising is it to use a four quadrant multiplier, also known as gilbert cell. the gilbert cell is designed around two differential amplifiers. the carrier signal switches between those. the result is a multiplication of the input voltages. the gilbert cell is mostly used for amplitude modulation in radio transmission. if you look at the integratd circuits like the 633 it can modulate signals up in the gigahertz range. the gilbert cell is not described in all details here, there is a good introduction from w2aew [<a href="https://www.schmitzbits.de/vca3.png">4</a>].</p>
+<p><img src="files/f5af126ebb9cda8c1143cac1d82727514572ba4b.svg" alt="svg" /></p>
+<p>this is not real amplitude modulation. when the signal is negative the phase of the output is inverted. this can be adjusted by the bias voltage of the control voltage. the control voltage has to be positive at all time.</p>
+<h2 id="construction"><em>construction</em></h2>
+<p>for the final circuit input and output buffering and biasing is needed. the buffering is done with opamps.</p>
+<p>first we design the input stage. the input voltage for the X signal should be 10mV and 20mV for the control voltage.</p>
+<p><img src="files/e3e9c7ce54275036bbd97922c9559199c203cec1.svg" alt="svg" /></p>
+<pre><code>test_am (__main__.TestInputVoltages) ... ok
+test_ringmod (__main__.TestInputVoltages) ... ok
+test_vca (__main__.TestInputVoltages) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.003s
+
+OK
+
+
+
+
+
+&lt;unittest.main.TestProgram at 0x7f7bf23dcf10&gt;</code></pre>
+<h2 id="references"><em>references</em></h2>
+<ul>
+<li><a href="https://sound-au.com/articles/vca-techniques.html">VCA Techniques Investigated</a> Rod Elliott (ESP)</li>
+<li><a href="https://tinaja.com/glib/pop_elec/mus_keying_vca_1+2_75.pdf">Popular Electronics</a> Keyiing and VCA citcuits for electronic music instruments</li>
+<li><a href="https://www.birthofasynth.com/Thomas_Henry/Pages/VCA-1.html">VCA-1</a> Thomas Henry CA3080 vca</li>
+<li><a href="https://www.schmitzbits.de/vca3.png">VCA-3</a> René Schmitz differential pair vca</li>
+<li><a href="https://www.youtube.com/watch?v=7nmmb0pqTU0&amp;t=2s">#223</a>: Basics of the Gilbert Cell | Analog Multiplier | Mixer | Modulator</li>
+<li><a href="https://www.youtube.com/watch?v=38OQub2Vi2Q">#224</a>: AM &amp; DSB-SC Modulation with the Gilbert Cell</li>
+<li><a href="https://www.analog.com/media/en/training-seminars/design-handbooks/ADI_Multiplier_Applications_Guide.pdf">Analog Devices</a>: Analog multiplier application guide</li>
+<li><a href="https://www.analog.com/media/en/technical-documentation/data-sheets/AD633.pdf">AD633</a>: Datasheet</li>
+</ul>
+</body>
+</html>
