@@ -1,3 +1,5 @@
 {
-    "python.pythonPath": "C:\\Users\\etien\\anaconda3\\python.exe"
+    "python.pythonPath": "C:\\Users\\etien\\anaconda3\\python.exe",
+    "stm32-for-vscode.armToolchainPath": "",
+    "cortex-debug.armToolchainPath": ""
 }

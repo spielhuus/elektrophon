@@ -34,3 +34,4 @@ sym-lib-table
 .~lock.*
 Debug
 debug-out*.txt
+build

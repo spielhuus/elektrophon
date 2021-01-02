@@ -1,4 +1,4 @@
-SUBDIRS = pegel ubergang
+SUBDIRS = ubergang pegel
 
 # Register all subdirectories in the project's root directory.
 #SUBDIRS := $(wildcard */.)

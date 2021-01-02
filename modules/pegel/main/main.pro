@@ -1,4 +1,4 @@
-update=Sa 22 Aug 2020 15:13:09
+update=12/24/20 15:57:37
 version=1
 last_client=kicad
 [general]
@@ -34,7 +34,7 @@ LibDir=
 [schematic_editor]
 version=1
 PageLayoutDescrFile=
-PlotDirectoryName=
+PlotDirectoryName=pegel_schematic
 SubpartIdSeparator=0
 SubpartFirstId=65
 NetFmtName=Pcbnew

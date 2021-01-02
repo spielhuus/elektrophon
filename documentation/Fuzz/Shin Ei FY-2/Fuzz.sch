@@ -379,7 +379,6 @@ F 3 "https://www.onsemi.com/pub/Collateral/BC550-D.pdf" H 3950 3350 50  0001 L C
 F 4 "Q" H 3950 3350 50  0001 C CNN "Spice_Primitive"
 F 5 "BC547B" H 3950 3350 50  0001 C CNN "Spice_Model"
 F 6 "Y" H 3950 3350 50  0001 C CNN "Spice_Netlist_Enabled"
-F 7 "/home/etienne/Documents/elektrophon/lib/spice/transistor/BC547.mod" H 3950 3350 50  0001 C CNN "Spice_Lib_File"
 	1    3950 3350
 	1    0    0    -1  
 $EndComp
@@ -397,7 +396,6 @@ F 3 "https://www.onsemi.com/pub/Collateral/BC550-D.pdf" H 5200 3100 50  0001 L C
 F 4 "Q" H 5200 3100 50  0001 C CNN "Spice_Primitive"
 F 5 "BC547B" H 5200 3100 50  0001 C CNN "Spice_Model"
 F 6 "Y" H 5200 3100 50  0001 C CNN "Spice_Netlist_Enabled"
-F 7 "/home/etienne/Documents/elektrophon/lib/spice/transistor/BC547.mod" H 5200 3100 50  0001 C CNN "Spice_Lib_File"
 	1    5200 3100
 	1    0    0    -1  
 $EndComp

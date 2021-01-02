@@ -1,9 +1,8 @@
 .title KiCad schematic
-.include /home/etienne/Documents/elektrophon/lib/spice/transistor/BC547.mod
-
+.include ../../../lib/spice/transistor/BC547.mod
 .include ../../../lib/spice/cmos/CD4069UB-hex.lib
 .include ../../../lib/spice/diode/1N4148.mod
-.include 'FuzzSim.cir'
+.include 'Fuzz.cir'
 .control
 * Save only the output values
 save v(OUT)
@@ -12,10 +11,10 @@ tran 22.675u 6
 wrdata output v(OUT)
 * you can use output.data as input for scripts
 .endc
-.subckt voltage_divider_1 n1 n2 n3
+.subckt voltage_divider n1 n2 n3
 R1 n1 n2 499kOhm
 R2 n2 n3 1kOhm
-.ends voltage_divider_1
+.ends voltage_divider
 
 .subckt voltage_divider_2 n1 n2 n3
 R1 n1 n2 1.0kOhm

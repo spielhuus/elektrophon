@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 1
+Sheet 1 2
 Title ""
 Date ""
 Rev ""
@@ -1581,4 +1581,10 @@ F 3 "~" H 2950 1450 50  0001 C CNN
 	1    2950 1450
 	0    1    1    0   
 $EndComp
+$Sheet
+S 8300 5200 1600 550 
+U 5FE38091
+F0 "vca" 50
+F1 "vca.sch" 50
+$EndSheet
 $EndSCHEMATC
