@@ -1,0 +1,267 @@
+kibot:
+  version: 1
+
+preflight:
+  run_erc: true
+  update_xml: true
+  run_drc: true
+  check_zone_fills: true
+  ignore_unconnected: true
+
+outputs:
+  - name: 'pdf_sch_print'
+    comment: 'Exports the PCB to the most common exhange format. Suitable for printing.'
+    type: 'pdf_sch_print'
+
+  - name: 'pcbdraw_main'
+    comment: 'Exports the PCB as a 2D model (SVG, PNG or JPG).'
+    type: 'pcbdraw'
+    #dir: 'Example/pcbdraw_dir'
+    options:
+      # [boolean=false] render the bottom side of the board (default is top side)
+      bottom: false
+      # [string|list(string)=''] Name of the filter to mark components as not fitted.
+      # A short-cut to use for simple cases where a variant is an overkill
+      #dnf_filter: ''
+      # [number=300] [10,1200] dots per inch (resolution) of the generated image
+      dpi: 300
+      # [string='svg'] [svg,png,jpg] output format. Only used if no `output` is specified
+      format: 'svg'
+      # [list(string)=[]] list of components to highlight
+      highlight: []
+      # [list(string)=[]] list of libraries
+      libs: []
+      # [boolean=false] mirror the board
+      mirror: false
+      # [boolean=false] do not make holes transparent
+      no_drillholes: false
+      # [string='%f-%i%v.%x'] name for the generated file. Affected by global options
+      output: '%f-%i%v.%x'
+      # [boolean=false] show placeholder for missing components
+      placeholder: false
+      # [dict|None] replacements for PCB references using components (lib:component)
+      remap:
+      # [list(string)|string=none] [none,all] list of components to draw, can be also a string for none or all.
+      # The default is none
+      show_components: all
+      # [string|dict] PCB style (colors). An internal name, the name of a JSON file or the style options
+      style:
+        # [string='#4ca06c'] color for the board without copper (covered by solder mask)
+        board: '#4ca06c'
+        # [string='#9c6b28'] color for the PCB core (not covered by solder mask)
+        clad: '#9c6b28'
+        # [string='#417e5a'] color for the copper zones (covered by solder mask)
+        copper: '#417e5a'
+        # [boolean=false] highlight over the component (not under)
+        highlight_on_top: false
+        # [number=1.5] [0,1000] how much the highlight extends around the component [mm]
+        highlight_padding: 1.5
+        # [string='stroke:none;fill:#ff0000;opacity:0.5;'] SVG code for the highlight style
+        highlight_style: 'stroke:none;fill:#ff0000;opacity:0.5;'
+        # [string='#000000'] color for the outline
+        outline: '#000000'
+        # [string='#b5ae30'] color for the exposed pads (metal finish)
+        pads: '#b5ae30'
+        # [string='#f0f0f0'] color for the silk screen
+        silk: '#f0f0f0'
+        # [string='#bf2600'] color for the V-CUTS
+        vcut: '#bf2600'
+      # [string=''] Board variant to apply
+      variant: ''
+      # [boolean=false] render V-CUTS on the Cmts.User layer
+      vcuts: false
+      # [string='visible'] [visible,all,none] using visible only the warnings about components in the visible side are generated
+      warnings: 'visible'
+
+  # PDF PCB Print (Portable Document Format):
+  # This is the main format to document your PCB.
+  # This output is what you get from the 'File/Print' menu in pcbnew.
+  - name: 'pdf_pcb_print'
+    comment: 'Exports the PCB to the most common exhange format. Suitable for printing.'
+    type: 'pdf_pcb_print'
+    #dir: 'Example/pdf_pcb_print_dir'
+    options:
+      # [string|list(string)=''] Name of the filter to mark components as not fitted.
+      # A short-cut to use for simple cases where a variant is an overkill
+      dnf_filter: ''
+      # [string='full'] what to use to indicate the drill places, can be none, small or full (for real scale)
+      drill_marks: 'full'
+      # [boolean=false] print mirrored (X axis inverted). ONLY for KiCad 6
+      mirror: false
+      # [boolean=false] print in black and white
+      monochrome: false
+      # [string='%f-%i%v.%x'] filename for the output PDF (%i=layers, %x=pdf). Affected by global options
+      output: '%f-pcb.%x'
+      # `output_name` is an alias for `output`
+      # [boolean=true] include the title-block
+      plot_sheet_reference: true
+      # [number=1.0] scale factor (0 means autoscaling)
+      scaling: 1.0
+      # [boolean=false] print layers in separated pages
+      separated: true
+      # [string=''] Board variant to apply
+      variant: ''
+    layers: 
+      - 'F.Cu'
+      - 'B.Cu'
+      - 'B.SilkS'
+      - 'F.SilkS'
+      - 'B.Mask'
+      - 'F.Mask'
+
+    
+  # STEP (ISO 10303-21 Clear Text Encoding of the Exchange Structure):
+  # This is the most common 3D format for exchange purposes.
+  # This output is what you get from the 'File/Export/STEP' menu in pcbnew.
+  - name: 'step_pcb'
+    comment: 'Exports the PCB as a 3D model.'
+    type: 'step'
+  # dir: 'Example/step_dir'
+    options:
+      # [string|list(string)=''] Name of the filter to mark components as not fitted.
+      # A short-cut to use for simple cases where a variant is an overkill
+      dnf_filter: ''
+      # [boolean=true] use metric units instead of inches
+      metric_units: true
+      # [number=-1] the minimum distance between points to treat them as separate ones (-1 is KiCad default: 0.01 mm)
+      min_distance: -1
+      # [boolean=false] used to exclude 3D models for components with 'virtual' attribute
+      no_virtual: false
+      # [string='grid'] determines the coordinates origin. Using grid the coordinates are the same as you have in the design sheet.
+      # The drill option uses the auxiliar reference defined by the user.
+      # You can define any other origin using the format 'X,Y', i.e. '3.2,-10'
+      origin: 'grid'
+      # [string='%f-%i%v.%x'] name for the generated STEP file (%i='3D' %x='step'). Affected by global options
+      output: '%f-%i%v.%x'
+      # [string=''] Board variant to apply
+      variant: ''
+
+  # BoM (Bill of Materials):
+  # Is compatible with KiBoM, but doesn't need to update the XML netlist because the components
+  # are loaded from the schematic.
+  # Important differences with KiBoM output:
+  # - All options are in the main `options` section, not in `conf` subsection.
+  # - The `Component` column is named `Row` and works just like any other column.
+  # This output is what you get from the 'Tools/Generate Bill of Materials' menu in eeschema.
+  - name: 'bom'
+    comment: 'Used to generate the BoM in CSV, HTML, TSV, TXT, XML or XLSX format using the internal BoM.'
+    type: 'bom'
+    #dir: 'Example/bom_dir'
+    options:
+      # [list(dict)|list(string)] List of columns to display.
+      # Can be just the name of the field
+      #columns: [ 'Description','Part','References','Value','Quantity Per PCB','Datasheet']
+        # [string=''] Name of the field to use for this column
+#        field: 'ref'
+        # [list(string)|string=''] List of fields to join to this column
+#        join: ''
+        # [string=''] Name to display in the header. The field is used when empty
+#        name: 'ref'
+      # [list(list(string))] A series of values which are considered to be equivalent for the part name.
+      # Each entry is a list of equivalen names. Example: ['c', 'c_small', 'cap' ]
+      # will ensure the equivalent capacitor symbols can be grouped together.
+      # If empty the following aliases are used:
+      # - ['r', 'r_small', 'res', 'resistor']
+      # - ['l', 'l_small', 'inductor']
+      # - ['c', 'c_small', 'cap', 'capacitor']
+      # - ['sw', 'switch']
+      # - ['zener', 'zenersmall']
+      # - ['d', 'diode', 'd_small']
+      component_aliases: [['r', 'r_small', 'res', 'resistor'], ['l', 'l_small', 'inductor'], ['c', 'c_small', 'cap', 'capacitor'], ['sw', 'switch'], ['zener', 'zenersmall'], ['d', 'diode', 'd_small']]
+      # [dict] Options for the CSV, TXT and TSV formats
+      csv:
+        # [boolean=false] Hide project information
+        hide_pcb_info: true
+        # [boolean=false] Hide statistics information
+        hide_stats_info: true
+        # [boolean=false] Enclose all values using double quotes
+        quote_all: false
+        # [string=','] CSV Separator. TXT and TSV always use tab as delimiter
+        separator: ','
+      # [string|list(string)='_kibom_dnc'] Name of the filter to mark components as 'Do Not Change'.
+      # The default filter marks components with a DNC value or DNC in the Config field
+      dnc_filter: '_kibom_dnc'
+      # [string|list(string)='_kibom_dnf'] Name of the filter to mark components as 'Do Not Fit'.
+      # The default filter marks components with a DNF value or DNF in the Config field
+      dnf_filter: '_kibom_dnf'
+      # [string|list(string)='_mechanical'] Name of the filter to exclude components from BoM processing.
+      # The default filter excludes test points, fiducial marks, mounting holes, etc
+      exclude_filter: '_mechanical'
+      # [string='Config'] Field name used for internal filters
+      fit_field: 'Config'
+      # [string=''] [HTML,CSV,TXT,TSV,XML,XLSX] format for the BoM.
+      # If empty defaults to CSV or a guess according to the options.
+      format: 'CSV'
+      # [boolean=true] Connectors with the same footprints will be grouped together, independent of the name of the connector
+      group_connectors: true
+      # [list(string)] List of fields used for sorting individual components into groups.
+      # Components which match (comparing *all* fields) will be grouped together.
+      # Field names are case-insensitive.
+      # If empty: ['Part', 'Part Lib', 'Value', 'Footprint', 'Footprint Lib'] is used
+      group_fields: ['part', 'part lib', 'value', 'footprint', 'footprint lib']
+      # [dict] Options for the HTML format
+      html:
+        # [boolean=true] Use colors to show the field type
+        col_colors: true
+        # [string=''] Column with links to the datasheet
+        datasheet_as_link: ''
+        # [string|list(string)=''] Column/s containing Digi-Key part numbers, will be linked to web page
+        digikey_link: ''
+        # [boolean=true] Generate a separated section for DNF (Do Not Fit) components
+        generate_dnf: true
+        # [boolean=false] Hide project information
+        hide_pcb_info: false
+        # [boolean=false] Hide statistics information
+        hide_stats_info: false
+        # [boolean=true] Use a color for empty cells. Applies only when `col_colors` is `true`
+        highlight_empty: true
+        # [string|boolean=''] PNG file to use as logo, use false to remove
+        logo: ''
+        # [string='modern-blue'] Page style. Internal styles: modern-blue, modern-green, modern-red and classic.
+        # Or you can provide a CSS file name. Please use .css as file extension.
+        style: 'modern-blue'
+        # [string='KiBot Bill of Materials'] BoM title
+        title: 'KiBot Bill of Materials'
+      # [boolean=true] Exclude DNF (Do Not Fit) components
+      ignore_dnf: true
+      # [boolean=true] Component groups with blank fields will be merged into the most compatible group, where possible
+      merge_blank_fields: true
+      # [boolean=false] When normalizing values use the locale decimal point
+      normalize_locale: false
+      # [boolean=false] Try to normalize the R, L and C values, producing uniform units and prefixes
+      normalize_values: false
+      # [number=1] Number of boards to build (components multiplier)
+      number: 1
+      # [string='%f-%i%v.%x'] filename for the output (%i=bom). Affected by global options
+      output: '%f-%i%v.%x'
+      # [string=' '] Separator used for the list of references
+      ref_separator: ' '
+      # [boolean=false] Print grouped references in the alternate compressed style eg: R1-R7,R18
+      use_alt: false
+      # [string=''] Board variant, used to determine which components
+      # are output to the BoM.
+      variant: ''
+      # [dict] Options for the XLSX format
+      xlsx:
+        # [boolean=true] Use colors to show the field type
+        col_colors: true
+        # [string=''] Column with links to the datasheet
+        datasheet_as_link: ''
+        # [string|list(string)=''] Column/s containing Digi-Key part numbers, will be linked to web page
+        digikey_link: ''
+        # [boolean=true] Generate a separated section for DNF (Do Not Fit) components
+        generate_dnf: true
+        # [boolean=false] Hide project information
+        hide_pcb_info: false
+        # [boolean=false] Hide statistics information
+        hide_stats_info: false
+        # [boolean=true] Use a color for empty cells. Applies only when `col_colors` is `true`
+        highlight_empty: true
+        # [string|boolean=''] PNG file to use as logo, use false to remove
+        logo: ''
+        # [number=60] [20,999] Maximum column width (characters)
+        max_col_width: 60
+        # [string='modern-blue'] Head style: modern-blue, modern-green, modern-red and classic.
+        style: 'modern-blue'
+        # [string='KiBot Bill of Materials'] BoM title
+        title: 'KiBot Bill of Materials'

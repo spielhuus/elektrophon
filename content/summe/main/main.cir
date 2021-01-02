@@ -1,0 +1,47 @@
+.title KiCad schematic
+R29 Net-_J1-PadTN_ +5V 1k
+R27 Net-_R26-Pad2_ Net-_R27-Pad2_ 100k
+R26 Net-_R25-Pad2_ Net-_R26-Pad2_ 100k
+XU3 Net-_R25-Pad2_ Net-_R21-Pad2_ GND -15V GND Net-_R26-Pad2_ Net-_R27-Pad2_ +15V OPA2134d
+XU2 Net-_R15-Pad1_ Net-_R11-Pad1_ Net-_R5-Pad2_ -15V Net-_R7-Pad2_ Net-_R12-Pad1_ Net-_R16-Pad1_ +15V OPA2134d
+XU1 Net-_R13-Pad1_ Net-_R13-Pad2_ Net-_R1-Pad2_ -15V Net-_R3-Pad2_ Net-_R10-Pad1_ Net-_R14-Pad1_ +15V OPA2134d
+R28 Net-_R27-Pad2_ Net-_J10-PadT_ 1k
+XJ10 GND Net-_J10-PadT_ NC_01 OUT
+R25 Net-_R21-Pad2_ Net-_R25-Pad2_ 100k
+R21 /MIX_1 Net-_R21-Pad2_ 100k
+R22 /MIX_2 Net-_R21-Pad2_ 100k
+R23 /MIX_3 Net-_R21-Pad2_ 100k
+R24 /MIX_4 Net-_R21-Pad2_ 100k
+R20 Net-_R16-Pad1_ Net-_J9-PadT_ 1k
+XJ9 GND Net-_J9-PadT_ /MIX_4 OUT_4
+R19 Net-_R15-Pad1_ Net-_J8-PadT_ 1k
+XJ8 GND Net-_J8-PadT_ /MIX_3 OUT_3
+R18 Net-_R14-Pad1_ Net-_J7-PadT_ 1k
+XJ7 GND Net-_J7-PadT_ /MIX_2 OUT_2
+R16 Net-_R16-Pad1_ Net-_R12-Pad1_ 100k
+R8 Net-_R7-Pad2_ GND 47k
+R7 Net-_J4-PadT_ Net-_R7-Pad2_ 47k
+R12 Net-_R12-Pad1_ Net-_J4-PadT_ 100k
+XRV4 GND Net-_R7-Pad2_ Net-_J4-PadT_ voltage_divider_4
+XJ4 GND Net-_J4-PadT_ NC_02 IN_4
+R15 Net-_R15-Pad1_ Net-_R11-Pad1_ 100k
+R6 Net-_R5-Pad2_ GND 47k
+R5 Net-_J3-PadT_ Net-_R5-Pad2_ 47k
+R11 Net-_R11-Pad1_ Net-_J3-PadT_ 100k
+XRV3 GND Net-_R5-Pad2_ Net-_J3-PadT_ voltage_divider_3
+XJ3 GND Net-_J3-PadT_ NC_03 IN_3
+R14 Net-_R14-Pad1_ Net-_R10-Pad1_ 100k
+R4 Net-_R3-Pad2_ GND 47k
+R3 Net-_J2-PadT_ Net-_R3-Pad2_ 47k
+R10 Net-_R10-Pad1_ Net-_J2-PadT_ 100k
+XRV2 GND Net-_R3-Pad2_ Net-_J2-PadT_ voltage_divider_2
+XJ2 GND Net-_J2-PadT_ NC_04 IN_2
+R13 Net-_R13-Pad1_ Net-_R13-Pad2_ 100k
+R2 Net-_R1-Pad2_ GND 47k
+R1 Net-_J1-PadT_ Net-_R1-Pad2_ 47k
+R9 Net-_R13-Pad2_ Net-_J1-PadT_ 100k
+XRV1 GND Net-_R1-Pad2_ Net-_J1-PadT_ voltage_divider_1
+R17 Net-_R13-Pad1_ Net-_J6-PadT_ 1k
+XJ6 GND Net-_J6-PadT_ /MIX_1 OUT_1
+XJ1 GND Net-_J1-PadT_ Net-_J1-PadTN_ IN_1
+.end
