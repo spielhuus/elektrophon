@@ -23,7 +23,7 @@ RUN gem install jekyll bundler
 RUN pip3 install --upgrade setuptools
 #install kibot
 RUN apt-get install -y kicad xvfb xdotool xclip xsltproc
-RUN pip3 install --no-compile jupyter matplotlib ipympl pyspice sympy itikz librosa
+RUN pip3 install --no-compile jupyter matplotlib ipympl pyspice sympy schemdraw itikz librosa
 RUN pip3 install --no-compile kiauto pcbdraw kibom kibot
 
 #RUN pip3 install jupyter matplotlib pyspice sympy librosa kibot itikz

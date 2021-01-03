@@ -47,7 +47,7 @@ case "$@" in
                     exit 0
                 fi
                 # Otherwise, generate the default website
-                jekyll new --force $WWW_DIR || exit 1
+                jekyll new --blank --force $WWW_DIR || exit 1
                 cd $WWW_DIR
                 installdeps_bundler_local
                 cd - &>/dev/null
