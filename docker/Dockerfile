@@ -36,8 +36,8 @@ RUN rm -rf /var/lib/apt/lists/*
 EXPOSE 4000
 
 # Setup an entrypoint script
-COPY entrypoint.sh /entrypoint.sh
-COPY entrypoint-user.sh /entrypoint-user.sh
+COPY docker/entrypoint.sh /entrypoint.sh
+COPY docker/entrypoint-user.sh /entrypoint-user.sh
 RUN chmod 755 /entrypoint.sh
 RUN chmod 755 /entrypoint-user.sh
 ENTRYPOINT ["/entrypoint.sh"]

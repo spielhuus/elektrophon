@@ -50,6 +50,7 @@ case "$@" in
                 jekyll new --blank --force $WWW_DIR || exit 1
                 cd $WWW_DIR
                 bundle init
+                echo "gem \"jekyll\"" >> Gemfile
                 installdeps_bundler_local
                 cd - &>/dev/null
                 ;;
