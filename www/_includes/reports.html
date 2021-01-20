@@ -1,0 +1,52 @@
+<div>
+    {% for pcb in site.data[include.content] %}
+    <p>{{ pcb.name }}</p>
+    {% for report in pcb.reports %}
+    {% assign report_count = report.messages | size %}
+    {% if report_count == 0 %}
+    <p>
+        <div class="alert alert-success" role="alert">
+            {{ report.name }} check successfull.
+        </div>
+    </p>
+    {% else %}
+    <p>
+        <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_{{ pcb.name }}_{{ report.name }}" 
+                aria-expanded="false" aria-controls="collapse_{{ pcb.name }}_{{ report.name }}">
+                found {{ report.messages | size }} errors in {{ report.name }} check.
+        </button>
+    </p>
+    <div class="collapse" id="collapse_{{ pcb.name }}_{{ report.name }}">
+        <div class="card card-body">
+            <table class="report">
+                    {% for message in report.messages %}
+                <tr>
+                    <td>{{ message.code }}</td>
+                    <td>{{ message.sheet | strip_newlines }}</td>
+                    <td>{{ message.message | strip_newlines }}</td>
+                </tr>
+                {% for con in message.con %}
+                <tr>
+                    <td>{{ con.x }}</td>
+                    <td>{{ con.y }}</td>
+                    <td>{{ con.message | strip_newlines }}</td>
+                </tr>
+                {% endfor %}
+                {% endfor %}
+            </table>
+        </div>
+    </div>
+{% endif %}
+{% endfor %}
+{% endfor %}
+<div class="dropdown">
+    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+      Dropdown button
+    </button>
+    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+      <li><a class="dropdown-item" href="#">Action</a></li>
+      <li><a class="dropdown-item" href="#">Another action</a></li>
+      <li><a class="dropdown-item" href="#">Something else here</a></li>
+    </ul>
+  </div>
+</div>

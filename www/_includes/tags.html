@@ -1,0 +1,79 @@
+{% assign erc_count=0 %}
+{% assign drc_count=0 %} 
+{% assign unconnected_count=0 %}
+
+{% for pcb in site.data[include.content] %}
+  {% for report in pcb.reports %}
+    {% assign report_count = report.messages | size %}
+    {% if report.name == 'erc' %}
+    {% assign erc_count = erc_count | plus:report_count %}
+    {% elsif report.name == 'drc' %}
+    {% assign drc_count = drc_count | plus:report_count %}
+    {% elsif report.name == 'unconnected' %}
+      {% assign unconnected_count = unconnected_count | plus:report_count %}
+    {% endif %}    
+  {% endfor %}
+{% endfor %}
+
+<div class="field is-grouped">
+  <div class="control">
+    <div class="tags has-addons">
+      <span class="tag is-dark">version</span>
+      <span class="tag is-primary">{{ page.version }}</span>
+    </div>
+  </div>
+  <div class="control">
+    <div class="tags has-addons">
+      <span class="tag is-dark">status</span>
+      <span class="tag is-info">{{ page.status }}</span>
+    </div>
+  </div>
+
+  {% if drc_count == 0 %}
+  <div class="control">
+    <div class="tags has-addons">
+      <span class="tag is-dark">drc</span>
+      <span class="tag is-success">ok</span>
+    </div>
+  </div>
+  {% else %}
+  <div class="control">
+    <div class="tags has-addons">
+      <span class="tag is-dark">drc</span>
+      <span class="tag is-danger">{{ drc_count }}</span>
+    </div>
+  </div>
+  {% endif %}
+
+  {% if erc_count == 0 %}
+  <div class="control">
+    <div class="tags has-addons">
+      <span class="tag is-dark">erc</span>
+      <span class="tag is-success">ok</span>
+    </div>
+  </div>
+  {% else %}
+  <div class="control">
+    <div class="tags has-addons">
+      <span class="tag is-dark">erc</span>
+      <span class="tag is-danger">{{ erc_count }}</span>
+    </div>
+  </div>
+  {% endif %}
+
+  {% if unconnected_count == 0 %}
+  <div class="control">
+    <div class="tags has-addons">
+      <span class="tag is-dark">unconnected</span>
+      <span class="tag is-success">ok</span>
+    </div>
+  </div>
+  {% else %}
+  <div class="control">
+    <div class="tags has-addons">
+      <span class="tag is-dark">unconnected</span>
+      <span class="tag is-danger">{{ unconnected_count }}</span>
+    </div>
+  </div>
+  {% endif %}
+</div>

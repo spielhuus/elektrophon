@@ -1,0 +1,691 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L power:+5V #PWR03
+U 1 1 5FAFD46B
+P 3600 6400
+F 0 "#PWR03" H 3600 6250 50  0001 C CNN
+F 1 "+5V" H 3615 6573 50  0000 C CNN
+F 2 "" H 3600 6400 50  0001 C CNN
+F 3 "" H 3600 6400 50  0001 C CNN
+	1    3600 6400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R4
+U 1 1 5FB03260
+P 5500 1550
+F 0 "R4" V 5293 1550 50  0000 C CNN
+F 1 "1Meg" V 5384 1550 50  0000 C CNN
+F 2 "" V 5430 1550 50  0001 C CNN
+F 3 "~" H 5500 1550 50  0001 C CNN
+	1    5500 1550
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R_POT RV1
+U 1 1 5FB04B84
+P 4200 1150
+F 0 "RV1" V 3993 1150 50  0000 C CNN
+F 1 "500k" V 4084 1150 50  0000 C CNN
+F 2 "" H 4200 1150 50  0001 C CNN
+F 3 "~" H 4200 1150 50  0001 C CNN
+F 4 "X" H 4200 1150 50  0001 C CNN "Spice_Primitive"
+F 5 "voltage_divider_1" H 4200 1150 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 4200 1150 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    4200 1150
+	0    -1   1    0   
+$EndComp
+$Comp
+L Device:R R3
+U 1 1 5FB053A2
+P 3700 1150
+F 0 "R3" V 3493 1150 50  0000 C CNN
+F 1 "100k" V 3584 1150 50  0000 C CNN
+F 2 "" V 3630 1150 50  0001 C CNN
+F 3 "~" H 3700 1150 50  0001 C CNN
+	1    3700 1150
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4350 1150 4450 1150
+Wire Wire Line
+	3550 2100 3450 2100
+Wire Wire Line
+	3450 1150 3550 1150
+Wire Wire Line
+	5250 2100 5200 2100
+Wire Wire Line
+	5200 2100 5200 1550
+Wire Wire Line
+	5200 1150 5350 1150
+Wire Wire Line
+	5650 1150 5900 1150
+Wire Wire Line
+	5900 1150 5900 1550
+Wire Wire Line
+	5900 2100 5850 2100
+Wire Wire Line
+	5900 1550 5650 1550
+Wire Wire Line
+	5350 1550 5200 1550
+Connection ~ 5900 1550
+Wire Wire Line
+	5900 1550 5900 2100
+Connection ~ 5200 1550
+Wire Wire Line
+	5200 1550 5200 1150
+$Comp
+L Device:R R1
+U 1 1 5FB0AB1E
+P 1400 3500
+F 0 "R1" H 1330 3454 50  0000 R CNN
+F 1 "100k" H 1330 3545 50  0000 R CNN
+F 2 "" V 1330 3500 50  0001 C CNN
+F 3 "~" H 1400 3500 50  0001 C CNN
+	1    1400 3500
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 5FB0B2B6
+P 3300 2100
+F 0 "R2" V 3507 2100 50  0000 C CNN
+F 1 "100k" V 3416 2100 50  0000 C CNN
+F 2 "" V 3230 2100 50  0001 C CNN
+F 3 "~" H 3300 2100 50  0001 C CNN
+	1    3300 2100
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:C C1
+U 1 1 5FB0BA67
+P 3000 2100
+F 0 "C1" V 2748 2100 50  0000 C CNN
+F 1 "2.2n" V 2839 2100 50  0000 C CNN
+F 2 "" H 3038 1950 50  0001 C CNN
+F 3 "~" H 3000 2100 50  0001 C CNN
+	1    3000 2100
+	0    1    1    0   
+$EndComp
+Connection ~ 3450 2100
+Text GLabel 1050 3350 0    50   Input ~ 0
+IN
+$Comp
+L power:GND #PWR01
+U 1 1 5FB0DF49
+P 1400 3650
+F 0 "#PWR01" H 1400 3400 50  0001 C CNN
+F 1 "GND" H 1405 3477 50  0000 C CNN
+F 2 "" H 1400 3650 50  0001 C CNN
+F 3 "" H 1400 3650 50  0001 C CNN
+	1    1400 3650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C3
+U 1 1 5FB0E5D5
+P 4950 2100
+F 0 "C3" V 4698 2100 50  0000 C CNN
+F 1 "470n" V 4789 2100 50  0000 C CNN
+F 2 "" H 4988 1950 50  0001 C CNN
+F 3 "~" H 4950 2100 50  0001 C CNN
+	1    4950 2100
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5200 2100 5100 2100
+Wire Wire Line
+	4500 2100 4450 2100
+Connection ~ 5200 2100
+Text GLabel 10100 2100 2    50   Input ~ 0
+OUT
+Wire Wire Line
+	6000 2100 5900 2100
+Connection ~ 5900 2100
+$Comp
+L Connector:Conn_01x02_Female J1
+U 1 1 5FB13B77
+P 5850 7300
+F 0 "J1" H 5878 7276 50  0000 L CNN
+F 1 "Conn_01x02_Female" H 5878 7185 50  0000 L CNN
+F 2 "" H 5850 7300 50  0001 C CNN
+F 3 "~" H 5850 7300 50  0001 C CNN
+F 4 "J" H 5850 7300 50  0001 C CNN "Spice_Primitive"
+F 5 "Conn_01x02_Female" H 5850 7300 50  0001 C CNN "Spice_Model"
+F 6 "N" H 5850 7300 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    5850 7300
+	1    0    0    -1  
+$EndComp
+Text GLabel 5650 7300 0    50   Input ~ 0
+IN
+Text GLabel 5650 7400 0    50   Input ~ 0
+OUT
+$Comp
+L power:GND #PWR04
+U 1 1 5FB17CCE
+P 3600 7400
+F 0 "#PWR04" H 3600 7150 50  0001 C CNN
+F 1 "GND" H 3605 7227 50  0000 C CNN
+F 2 "" H 3600 7400 50  0001 C CNN
+F 3 "" H 3600 7400 50  0001 C CNN
+	1    3600 7400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR02
+U 1 1 5FAFDA0C
+P 4550 7000
+F 0 "#PWR02" H 4550 6850 50  0001 C CNN
+F 1 "+5V" H 4565 7173 50  0000 C CNN
+F 2 "" H 4550 7000 50  0001 C CNN
+F 3 "" H 4550 7000 50  0001 C CNN
+	1    4550 7000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4550 7000 4550 7300
+NoConn ~ 5150 7300
+$Comp
+L 4xxx:4069 U1
+U 7 1 5FB2FD74
+P 3600 6900
+F 0 "U1" H 3830 6946 50  0000 L CNN
+F 1 "4069" H 3830 6855 50  0000 L CNN
+F 2 "" H 3600 6900 50  0001 C CNN
+F 3 "http://www.intersil.com/content/dam/Intersil/documents/cd40/cd4069ubms.pdf" H 3600 6900 50  0001 C CNN
+F 4 "X" H 3600 6900 50  0001 C CNN "Spice_Primitive"
+F 5 "CD4069UBhex" H 3600 6900 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 3600 6900 50  0001 C CNN "Spice_Netlist_Enabled"
+	7    3600 6900
+	1    0    0    -1  
+$EndComp
+$Comp
+L 4xxx:4069 U1
+U 1 1 5FB350C8
+P 2350 3350
+F 0 "U1" H 2350 3667 50  0000 C CNN
+F 1 "4069" H 2350 3576 50  0000 C CNN
+F 2 "" H 2350 3350 50  0001 C CNN
+F 3 "http://www.intersil.com/content/dam/Intersil/documents/cd40/cd4069ubms.pdf" H 2350 3350 50  0001 C CNN
+F 4 "X" H 2350 3350 50  0001 C CNN "Spice_Primitive"
+F 5 "CD4069UBhex" H 2350 3350 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 2350 3350 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    2350 3350
+	1    0    0    -1  
+$EndComp
+$Comp
+L 4xxx:4069 U1
+U 2 1 5FB377E2
+P 3850 2100
+F 0 "U1" H 3850 2417 50  0000 C CNN
+F 1 "4069" H 3850 2326 50  0000 C CNN
+F 2 "" H 3850 2100 50  0001 C CNN
+F 3 "http://www.intersil.com/content/dam/Intersil/documents/cd40/cd4069ubms.pdf" H 3850 2100 50  0001 C CNN
+F 4 "X" H 3850 2100 50  0001 C CNN "Spice_Primitive"
+F 5 "CD4069UBhex" H 3850 2100 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 3850 2100 50  0001 C CNN "Spice_Netlist_Enabled"
+	2    3850 2100
+	1    0    0    -1  
+$EndComp
+$Comp
+L 4xxx:4069 U1
+U 3 1 5FB38630
+P 5550 2100
+F 0 "U1" H 5550 2417 50  0000 C CNN
+F 1 "4069" H 5550 2326 50  0000 C CNN
+F 2 "" H 5550 2100 50  0001 C CNN
+F 3 "http://www.intersil.com/content/dam/Intersil/documents/cd40/cd4069ubms.pdf" H 5550 2100 50  0001 C CNN
+F 4 "X" H 5550 2100 50  0001 C CNN "Spice_Primitive"
+F 5 "CD4069UBhex" H 5550 2100 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 5550 2100 50  0001 C CNN "Spice_Netlist_Enabled"
+	3    5550 2100
+	1    0    0    -1  
+$EndComp
+$Comp
+L 4xxx:4069 U1
+U 4 1 5FB395FB
+P 7800 2100
+F 0 "U1" H 7800 2417 50  0000 C CNN
+F 1 "4069" H 7800 2326 50  0000 C CNN
+F 2 "" H 7800 2100 50  0001 C CNN
+F 3 "http://www.intersil.com/content/dam/Intersil/documents/cd40/cd4069ubms.pdf" H 7800 2100 50  0001 C CNN
+F 4 "X" H 7800 2100 50  0001 C CNN "Spice_Primitive"
+F 5 "CD4069UBhex" H 7800 2100 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 7800 2100 50  0001 C CNN "Spice_Netlist_Enabled"
+	4    7800 2100
+	1    0    0    -1  
+$EndComp
+$Comp
+L 4xxx:4069 U1
+U 5 1 5FB3A1BE
+P 9150 2100
+F 0 "U1" H 9150 2417 50  0000 C CNN
+F 1 "4069" H 9150 2326 50  0000 C CNN
+F 2 "" H 9150 2100 50  0001 C CNN
+F 3 "http://www.intersil.com/content/dam/Intersil/documents/cd40/cd4069ubms.pdf" H 9150 2100 50  0001 C CNN
+F 4 "X" H 9150 2100 50  0001 C CNN "Spice_Primitive"
+F 5 "CD4069UBhex" H 9150 2100 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 9150 2100 50  0001 C CNN "Spice_Netlist_Enabled"
+	5    9150 2100
+	1    0    0    -1  
+$EndComp
+$Comp
+L 4xxx:4069 U1
+U 6 1 5FB3B54C
+P 4850 7300
+F 0 "U1" H 4850 7617 50  0000 C CNN
+F 1 "4069" H 4850 7526 50  0000 C CNN
+F 2 "" H 4850 7300 50  0001 C CNN
+F 3 "http://www.intersil.com/content/dam/Intersil/documents/cd40/cd4069ubms.pdf" H 4850 7300 50  0001 C CNN
+F 4 "X" H 4850 7300 50  0001 C CNN "Spice_Primitive"
+F 5 "CD4069UBhex" H 4850 7300 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 4850 7300 50  0001 C CNN "Spice_Netlist_Enabled"
+	6    4850 7300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C2
+U 1 1 5FB0187E
+P 1600 3350
+F 0 "C2" V 1348 3350 50  0000 C CNN
+F 1 "10n" V 1439 3350 50  0000 C CNN
+F 2 "" H 1638 3200 50  0001 C CNN
+F 3 "~" H 1600 3350 50  0001 C CNN
+	1    1600 3350
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R5
+U 1 1 5FB0215F
+P 1900 3350
+F 0 "R5" V 2107 3350 50  0000 C CNN
+F 1 "470k" V 2016 3350 50  0000 C CNN
+F 2 "" V 1830 3350 50  0001 C CNN
+F 3 "~" H 1900 3350 50  0001 C CNN
+	1    1900 3350
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R6
+U 1 1 5FB06F92
+P 2400 2850
+F 0 "R6" V 2607 2850 50  0000 C CNN
+F 1 "470k" V 2516 2850 50  0000 C CNN
+F 2 "" V 2330 2850 50  0001 C CNN
+F 3 "~" H 2400 2850 50  0001 C CNN
+	1    2400 2850
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	2250 2850 2050 2850
+Wire Wire Line
+	2050 2850 2050 3350
+Connection ~ 2050 3350
+Wire Wire Line
+	2550 2850 2650 2850
+Wire Wire Line
+	2650 2850 2650 3350
+Wire Wire Line
+	3450 1150 3450 2100
+Wire Wire Line
+	4050 1150 3850 1150
+Wire Wire Line
+	4200 1300 4200 2100
+Wire Wire Line
+	4200 2100 4150 2100
+Wire Wire Line
+	4450 1150 4450 2100
+$Comp
+L Device:R R7
+U 1 1 5FB23E64
+P 4650 2100
+F 0 "R7" V 4443 2100 50  0000 C CNN
+F 1 "10k" V 4534 2100 50  0000 C CNN
+F 2 "" V 4580 2100 50  0001 C CNN
+F 3 "~" H 4650 2100 50  0001 C CNN
+	1    4650 2100
+	0    1    1    0   
+$EndComp
+$Comp
+L Diode:1N4148 D2
+U 1 1 5FB2869A
+P 5500 1150
+F 0 "D2" H 5500 1367 50  0000 C CNN
+F 1 "1N4148" H 5500 1276 50  0000 C CNN
+F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 5500 975 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 5500 1150 50  0001 C CNN
+F 4 "D" H 5500 1150 50  0001 C CNN "Spice_Primitive"
+F 5 "D1N4148" H 5500 1150 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 5500 1150 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    5500 1150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Diode:1N4148 D1
+U 1 1 5FB29099
+P 5500 800
+F 0 "D1" H 5500 583 50  0000 C CNN
+F 1 "1N4148" H 5500 674 50  0000 C CNN
+F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 5500 625 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 5500 800 50  0001 C CNN
+F 4 "D" H 5500 800 50  0001 C CNN "Spice_Primitive"
+F 5 "D1N4148" H 5500 800 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 5500 800 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    5500 800 
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	5350 800  5200 800 
+Wire Wire Line
+	5200 800  5200 1150
+Connection ~ 5200 1150
+Wire Wire Line
+	5650 800  5900 800 
+Wire Wire Line
+	5900 800  5900 1150
+Connection ~ 5900 1150
+$Comp
+L Device:C C4
+U 1 1 5FB32F66
+P 6150 2100
+F 0 "C4" V 5898 2100 50  0000 C CNN
+F 1 "100n" V 5989 2100 50  0000 C CNN
+F 2 "" H 6188 1950 50  0001 C CNN
+F 3 "~" H 6150 2100 50  0001 C CNN
+	1    6150 2100
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R8
+U 1 1 5FB33898
+P 6450 2100
+F 0 "R8" V 6243 2100 50  0000 C CNN
+F 1 "100k" V 6334 2100 50  0000 C CNN
+F 2 "" V 6380 2100 50  0001 C CNN
+F 3 "~" H 6450 2100 50  0001 C CNN
+	1    6450 2100
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C C5
+U 1 1 5FB363D6
+P 6650 2350
+F 0 "C5" V 6398 2350 50  0000 C CNN
+F 1 "1.5n" V 6489 2350 50  0000 C CNN
+F 2 "" H 6688 2200 50  0001 C CNN
+F 3 "~" H 6650 2350 50  0001 C CNN
+	1    6650 2350
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR05
+U 1 1 5FB37161
+P 6650 2500
+F 0 "#PWR05" H 6650 2250 50  0001 C CNN
+F 1 "GND" H 6655 2327 50  0000 C CNN
+F 2 "" H 6650 2500 50  0001 C CNN
+F 3 "" H 6650 2500 50  0001 C CNN
+	1    6650 2500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R9
+U 1 1 5FB3814C
+P 6900 2100
+F 0 "R9" V 6693 2100 50  0000 C CNN
+F 1 "10k" V 6784 2100 50  0000 C CNN
+F 2 "" V 6830 2100 50  0001 C CNN
+F 3 "~" H 6900 2100 50  0001 C CNN
+	1    6900 2100
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R_POT RV2
+U 1 1 5FB38BB3
+P 7300 2100
+F 0 "RV2" V 7093 2100 50  0000 C CNN
+F 1 "500k" V 7184 2100 50  0000 C CNN
+F 2 "" H 7300 2100 50  0001 C CNN
+F 3 "~" H 7300 2100 50  0001 C CNN
+F 4 "X" H 7300 2100 50  0001 C CNN "Spice_Primitive"
+F 5 "voltage_divider_2" H 7300 2100 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 7300 2100 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    7300 2100
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	7300 2250 7300 2300
+Wire Wire Line
+	7300 2300 7450 2300
+Wire Wire Line
+	7450 2300 7450 2100
+Wire Wire Line
+	7500 2100 7450 2100
+Connection ~ 7450 2100
+Wire Wire Line
+	7150 2100 7050 2100
+Wire Wire Line
+	6750 2100 6650 2100
+Wire Wire Line
+	6650 2200 6650 2100
+Connection ~ 6650 2100
+Wire Wire Line
+	6650 2100 6600 2100
+$Comp
+L Device:R R10
+U 1 1 5FB4293E
+P 7200 1100
+F 0 "R10" V 6993 1100 50  0000 C CNN
+F 1 "100k" V 7084 1100 50  0000 C CNN
+F 2 "" V 7130 1100 50  0001 C CNN
+F 3 "~" H 7200 1100 50  0001 C CNN
+	1    7200 1100
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	7050 1100 6650 1100
+Wire Wire Line
+	6650 1100 6650 2100
+Wire Wire Line
+	7350 1100 8150 1100
+Wire Wire Line
+	8150 1100 8150 1500
+Wire Wire Line
+	8150 2100 8100 2100
+$Comp
+L Device:C C6
+U 1 1 5FB4538F
+P 7800 1500
+F 0 "C6" V 7548 1500 50  0000 C CNN
+F 1 "150p" V 7639 1500 50  0000 C CNN
+F 2 "" H 7838 1350 50  0001 C CNN
+F 3 "~" H 7800 1500 50  0001 C CNN
+	1    7800 1500
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	7950 1500 8150 1500
+Connection ~ 8150 1500
+Wire Wire Line
+	8150 1500 8150 2100
+Wire Wire Line
+	7650 1500 7450 1500
+Wire Wire Line
+	7450 1500 7450 2100
+$Comp
+L Device:C C7
+U 1 1 5FB49C95
+P 8300 2100
+F 0 "C7" V 8048 2100 50  0000 C CNN
+F 1 "100n" V 8139 2100 50  0000 C CNN
+F 2 "" H 8338 1950 50  0001 C CNN
+F 3 "~" H 8300 2100 50  0001 C CNN
+	1    8300 2100
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R11
+U 1 1 5FB49C9B
+P 8600 2100
+F 0 "R11" V 8393 2100 50  0000 C CNN
+F 1 "100k" V 8484 2100 50  0000 C CNN
+F 2 "" V 8530 2100 50  0001 C CNN
+F 3 "~" H 8600 2100 50  0001 C CNN
+	1    8600 2100
+	0    1    1    0   
+$EndComp
+Connection ~ 8150 2100
+$Comp
+L Device:R R13
+U 1 1 5FB51614
+P 9150 1600
+F 0 "R13" V 8943 1600 50  0000 C CNN
+F 1 "1Meg" V 9034 1600 50  0000 C CNN
+F 2 "" V 9080 1600 50  0001 C CNN
+F 3 "~" H 9150 1600 50  0001 C CNN
+	1    9150 1600
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	8800 1600 8800 2100
+Wire Wire Line
+	8800 2100 8850 2100
+Wire Wire Line
+	8750 2100 8800 2100
+Connection ~ 8800 2100
+Wire Wire Line
+	9000 1600 8800 1600
+Wire Wire Line
+	9300 1600 9500 1600
+Wire Wire Line
+	9500 1600 9500 2100
+Wire Wire Line
+	9500 2100 9450 2100
+Wire Wire Line
+	2650 2850 2650 2100
+Wire Wire Line
+	2650 2100 2850 2100
+Connection ~ 2650 2850
+Wire Wire Line
+	2650 3350 8450 3350
+Wire Wire Line
+	8800 3350 8800 2100
+Connection ~ 2650 3350
+$Comp
+L Device:R R12
+U 1 1 5FB779BA
+P 8600 3350
+F 0 "R12" V 8393 3350 50  0000 C CNN
+F 1 "200k" V 8484 3350 50  0000 C CNN
+F 2 "" V 8530 3350 50  0001 C CNN
+F 3 "~" H 8600 3350 50  0001 C CNN
+	1    8600 3350
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	8750 3350 8800 3350
+$Comp
+L Device:CP C8
+U 1 1 5FB80504
+P 9650 2100
+F 0 "C8" V 9905 2100 50  0000 C CNN
+F 1 "10u" V 9814 2100 50  0000 C CNN
+F 2 "" H 9688 1950 50  0001 C CNN
+F 3 "~" H 9650 2100 50  0001 C CNN
+	1    9650 2100
+	0    -1   -1   0   
+$EndComp
+Connection ~ 9500 2100
+$Comp
+L Device:R R14
+U 1 1 5FB80895
+P 9900 2300
+F 0 "R14" V 9693 2300 50  0000 C CNN
+F 1 "10k" V 9784 2300 50  0000 C CNN
+F 2 "" V 9830 2300 50  0001 C CNN
+F 3 "~" H 9900 2300 50  0001 C CNN
+	1    9900 2300
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	10100 2100 9900 2100
+Wire Wire Line
+	9900 2150 9900 2100
+Connection ~ 9900 2100
+Wire Wire Line
+	9900 2100 9800 2100
+$Comp
+L power:GND #PWR06
+U 1 1 5FB83235
+P 9900 2450
+F 0 "#PWR06" H 9900 2200 50  0001 C CNN
+F 1 "GND" H 9905 2277 50  0000 C CNN
+F 2 "" H 9900 2450 50  0001 C CNN
+F 3 "" H 9900 2450 50  0001 C CNN
+	1    9900 2450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1450 3350 1400 3350
+Connection ~ 1400 3350
+Wire Wire Line
+	1050 3350 1400 3350
+$Comp
+L power:PWR_FLAG #FLG0101
+U 1 1 5FE8CA80
+P 5700 6550
+F 0 "#FLG0101" H 5700 6625 50  0001 C CNN
+F 1 "PWR_FLAG" H 5700 6723 50  0000 C CNN
+F 2 "" H 5700 6550 50  0001 C CNN
+F 3 "~" H 5700 6550 50  0001 C CNN
+	1    5700 6550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:PWR_FLAG #FLG0102
+U 1 1 5FE8CFFC
+P 6100 6550
+F 0 "#FLG0102" H 6100 6625 50  0001 C CNN
+F 1 "PWR_FLAG" H 6100 6723 50  0000 C CNN
+F 2 "" H 6100 6550 50  0001 C CNN
+F 3 "~" H 6100 6550 50  0001 C CNN
+	1    6100 6550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0101
+U 1 1 5FE8D276
+P 5700 6550
+F 0 "#PWR0101" H 5700 6300 50  0001 C CNN
+F 1 "GND" H 5705 6377 50  0000 C CNN
+F 2 "" H 5700 6550 50  0001 C CNN
+F 3 "" H 5700 6550 50  0001 C CNN
+	1    5700 6550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0102
+U 1 1 5FE8D4D0
+P 6100 6550
+F 0 "#PWR0102" H 6100 6400 50  0001 C CNN
+F 1 "+5V" H 6115 6723 50  0000 C CNN
+F 2 "" H 6100 6550 50  0001 C CNN
+F 3 "" H 6100 6550 50  0001 C CNN
+	1    6100 6550
+	-1   0    0    1   
+$EndComp
+$EndSCHEMATC

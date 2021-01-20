@@ -1,0 +1,9 @@
+---
+layout: article
+title: cmos buffer
+author: spielhuus
+tags: cmos
+category: article
+logo: cmos_buffer_files/cd4069.jpg
+excerpt: this is the first article on a serie about the cd4069 cmos chip. in this article the chip is used as voltage buffer and distortion is analysed for different setups.
+---

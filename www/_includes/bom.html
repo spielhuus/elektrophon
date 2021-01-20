@@ -1,0 +1,17 @@
+<table>
+{% for item in site.data[include.content] %}
+<tr>
+    <td> {{ item.Quantity_Per_PCB }} </td>
+    <td> {{ item.Part }} </td>
+    <td> {{ item.References }} </td>
+    <td> {{ item.Value }} </td>
+    <td> {{ item.Description }} </td>
+    <td>
+        {% assign datasheet = item.Datasheet | strip_newlines %}
+        {% if datasheet != "~" %}
+        <a href="{{ datasheet }}"><i class="fas fa-file-pdf"></i></a>
+        {% endif %}
+    </td>
+</tr>
+{% endfor %}
+</table>

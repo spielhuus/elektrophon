@@ -1,0 +1,14 @@
+.title KiCad schematic
+C2 Net-_C2-Pad1_ Net-_C1-Pad1_ 81p
+C4 Net-_C4-Pad1_ Net-_C3-Pad1_ 100p
+R4 Net-_C4-Pad1_ Net-_C3-Pad1_ 1Meg
+XRV1 Net-_C2-Pad1_ Net-_C2-Pad1_ Net-_R3-Pad1_ voltage_divider
+R3 Net-_R3-Pad1_ Net-_C1-Pad1_ 100k
+R1 GND IN 1Meg
+R2 IN Net-_C1-Pad2_ 100k
+C1 Net-_C1-Pad1_ Net-_C1-Pad2_ 68n
+C3 Net-_C3-Pad1_ Net-_C2-Pad1_ 33n
+XU1 Net-_C1-Pad1_ Net-_C2-Pad1_ Net-_C3-Pad1_ Net-_C4-Pad1_ +5V NC_01 GND NC_02 +5V NC_03 +5V NC_04 +5V +5V CD4069UBhex
+C5 Net-_C4-Pad1_ OUT 10u
+R5 GND OUT 100k
+.end

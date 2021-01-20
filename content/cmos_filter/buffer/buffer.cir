@@ -1,0 +1,6 @@
+.title KiCad schematic
+XU1 Net-_C1-Pad1_ OUT +5V GND 4069UB
+R2 OUT Net-_C1-Pad1_ 33k
+C1 Net-_C1-Pad1_ Net-_C1-Pad2_ 47n
+R1 Net-_C1-Pad2_ IN 33k
+.end

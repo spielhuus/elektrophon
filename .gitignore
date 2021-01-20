@@ -35,3 +35,6 @@ sym-lib-table
 Debug
 debug-out*.txt
 build
+
+www/_vendor
+www/.jekyll-cache

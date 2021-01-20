@@ -1,0 +1,12 @@
+---
+layout: module
+title: kontakt
+author: spielhuus
+version: 0
+status: draft
+tags: cv
+category: module
+logo: kontakt_files/kontakt-logo.jpg
+panel: kontakt_files/kontakt-panel.jpg
+excerpt: midi rtp interface using the esp32.
+---

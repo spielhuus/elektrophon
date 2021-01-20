@@ -1,0 +1,37 @@
+title: elektrophon
+author:
+  name: spielhuus
+  email: spielhus@gmail.com
+description: > # this means to ignore newlines until "show_excerpts:"
+  analog and digital modules for an electroacustic instrument.
+
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "" # the subpath of your site, e.g. /blog
+
+show_excerpts: true
+
+plugins:
+  - jekyll-feed
+  - jekyll-toc
+  - jekyll-assets
+  
+sass:
+  style: compact # possible values: nested expanded compact compressed
+
+  social_links:
+    #twitter: jekyllrb
+    github:  spielhuus
+    # devto: jekyll
+    # dribbble: jekyll
+    # facebook: jekyll
+    # flickr:   jekyll
+    # instagram: jekyll
+    # linkedin: jekyll
+    # pinterest: jekyll
+    # youtube: jekyll
+    # youtube_channel: UC8CXR0-3I70i1tfPg1PAE1g
+    # youtube_channel_name: CloudCannon
+    # telegram: jekyll
+    # googleplus: +jekyll
+    # microdotblog: jekyll
+    # keybase: jekyll

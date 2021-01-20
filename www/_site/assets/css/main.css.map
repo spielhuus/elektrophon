@@ -1,0 +1,14 @@
+{
+	"version": 3,
+	"file": "main.css",
+	"sources": [
+		"main.scss",
+		"_sass/_typography.scss"
+	],
+	"sourcesContent": [
+		"// Fonts\n$font-family-base: 'Playfair Display', serif, -apple-system; //Helvetica, Arial, sans-serif, -apple-system;\n$font-family-heading: 'Balsamiq Sans', sens-serif, -apple-system;\n\n@import \"typography\";\n//@import \"bootstrap/bootstrap\";\n\n.navbar-item {\n  font-size: 14pt;\n  font-style: italic;\n  font-weight: bold;\n}\n\n.content {\n  width: 45rem;\n  margin: 0 auto;\n}",
+		"// This is a partial.\r\n// It lies in <source>/_sass, just waiting to be imported.\r\n// It does not contain the YAML front matter and has no corresponding output file in the built site.\r\n\r\nbody {\r\n    font-family: -apple-system,BlinkMacSystemFont,\"Segoe UI\",Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\",\"Segoe UI Symbol\";\r\n    font-size: 18px;\r\n    line-height: 1.5;\r\n    color: #24292e;\r\n    background-color: #fff;\r\n  }\r\n  \r\n  a {\r\n    color: #0366d6;\r\n  }\r\n  \r\n  code,\r\n  pre {\r\n    font-family: Menlo, Consolas, \"Consolas for Powerline\", \"Courier New\", Courier, monospace;\r\n    background-color: #2b2b2b;\r\n    color: #fff;\r\n    padding: 0.25em\r\n  }"
+	],
+	"names": [],
+	"mappings": "ACIA,AAAA,IAAI,CAAC,EACD,WAAW,EAAE,6HAA6H,EAC1I,SAAS,EAAE,IAAI,EACf,WAAW,EAAE,GAAG,EAChB,KAAK,EAAE,OAAO,EACd,gBAAgB,EAAE,IAAI,GACvB;;AAED,AAAA,CAAC,CAAC,EACA,KAAK,EAAE,OAAO,GACf;;AAED,AAAA,IAAI,EACJ,GAAG,CAAC,EACF,WAAW,EAAE,4EAA4E,EACzF,gBAAgB,EAAE,OAAO,EACzB,KAAK,EAAE,IAAI,EACX,OAAO,EAAE,MACX,GAAC;;ADfH,AAAA,YAAY,CAAC,EACX,SAAS,EAAE,IAAI,EACf,UAAU,EAAE,MAAM,EAClB,WAAW,EAAE,IAAI,GAClB;;AAED,AAAA,QAAQ,CAAC,EACP,KAAK,EAAE,KAAK,EACZ,MAAM,EAAE,MAAM,GACf"
+}
