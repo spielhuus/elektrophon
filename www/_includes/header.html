@@ -1,0 +1,19 @@
+
+{% if page.title %}
+<header class="hero is-link">
+  <div class="hero-body">
+    <div class="container">
+      <h1 class="title">
+        {{ page.title }}
+      </h1>
+      <h2 class="subtitle">
+        {% if page.subtitle %}
+          {{ page.subtitle }}
+        {% else if page.date %}
+          {{ page.date | date: site.date_format }}
+        {% endif %}
+      </h2>
+    </div>
+  </div>
+</header>
+{% endif %}

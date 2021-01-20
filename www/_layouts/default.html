@@ -1,4 +1,63 @@
 <!DOCTYPE html>
+<html lang="{{ site.lang }}">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  {% if page.is_post %}
+    <meta name="description" content="{{ page.excerpt | strip_html }}">
+  {% else %}
+    <meta name="description" content="{{ site.description }}">
+  {% endif %}
+  <title>
+    {% if page.title and page.disable_title != true %}
+      {{ page.title }} | {{ site.title }}
+    {% else %}
+      {{ site.title }}
+    {% endif %}
+  </title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/{{ site.version.bulma }}/css/bulma.min.css">
+  <link rel="stylesheet" href="{{ 'assets/css/app.css' | absolute_url }}">
+  <link rel="shortcut icon" type="image/png" href="{{ 'assets/favicon/16x16.png' | absolute_url }}" sizes="16x16"/>
+  <link rel="shortcut icon" type="image/png" href="{{ 'assets/favicon/32x32.png' | absolute_url }}" sizes="32x32"/>
+  <script defer src="https://use.fontawesome.com/releases/v{{ site.version.font-awesome }}/js/all.js"></script>
+  {% include head.html %}
+</head>
+<body>
+  <div id="shadowed" style="display: none;"></div>
+  <div id="app">
+    <nav id="navbar" class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
+      <div id="specialShadow" class="bd-special-shadow"></div>
+      {% include navbar.html %}
+    </nav>
+    {% include header.html %}
+    <main>
+      {{ content }}
+    </main>
+  </div>
+  <footer class="footer">
+    <div class="container">
+      <div class="content has-text-centered">
+        <p>
+          <strong>Bulma</strong> by <a href="https://jgthms.com">Jeremy Thomas</a>. The source code is licensed
+          <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content
+          is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
+        </p>
+        <p>
+          <strong>jekyll-bulma-theme</strong> by <a href="https://github.com/nakorndev">nakorndev</a>. Powered by <a href="https://jekyllrb.com">Jekyll</a> and <a href="https://pages.github.com/">GitHub Pages</a>.
+        </p>
+      </div>
+    </div>
+  </footer>
+  <script src="{{ 'assets/js/app.js' | absolute_url }}"></script>
+  {% include footer.html %}
+</body>
+</html>
+
+
+
+
+<!-- !DOCTYPE html>
 <html lang="{{ site.lang | default: "en-US" }}">
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -21,4 +80,4 @@
 
     {% include footer.html %}
 </body>
-</html>
+</html -->

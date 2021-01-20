@@ -18,21 +18,21 @@ JUPITERFLAGS = nbconvert --ExecutePreprocessor.timeout=600 --execute --to markdo
 all: $(DOCS)
 
 $(DOCS): $(OUTPUT)/$(DEST)
-	$(MAKE) -C $(Overdrive250)
-	$(MAKE) -C $(ShinEy)
-	$(MAKE) -C $(WayHugeRedLLama)
-	$(MAKE) -C $(UBEScreamer)
+#	$(MAKE) -C $(Overdrive250)
+#	$(MAKE) -C $(ShinEy)
+#	$(MAKE) -C $(WayHugeRedLLama)
+#	$(MAKE) -C $(UBEScreamer)
 
 $(OUTPUT)/$(DEST): $(SRC)
 
-	$(JUPYTER) $(JUPITERFLAGS) $(SRC)
-	sed -r -i 's/\!\[(.*)\]\((.*)\)/\!\[\1\]\(\/assets\/\2\)/g' build/$(PROJECT).md
-	cp build/$(PROJECT).md $(OUTPUT)/_posts/$(DATE)-$(PROJECT).md
-	mkdir -p $(OUTPUT)/assets/
-	cp -r build/$(PROJECT)_files $(OUTPUT)/assets/
-	mkdir -p $(OUTPUT)/assets/$(PROJECT)_files
-	cp *_schema.svg $(OUTPUT)/assets/$(PROJECT)_files
-	cp *.jpg $(OUTPUT)/assets/$(PROJECT)_files
+	# $(JUPYTER) $(JUPITERFLAGS) $(SRC)
+	# sed -r -i 's/\!\[(.*)\]\((.*)\)/\!\[\1\]\(\/assets\/\2\)/g' build/$(PROJECT).md
+	# cp build/$(PROJECT).md $(OUTPUT)/_posts/$(DATE)-$(PROJECT).md
+	# mkdir -p $(OUTPUT)/assets/
+	# cp -r build/$(PROJECT)_files $(OUTPUT)/assets/
+	# mkdir -p $(OUTPUT)/assets/$(PROJECT)_files
+	# cp *_schema.svg $(OUTPUT)/assets/$(PROJECT)_files
+	# cp *.jpg $(OUTPUT)/assets/$(PROJECT)_files
 
 clean:
 	rm -rf build

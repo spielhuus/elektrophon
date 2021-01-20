@@ -8,12 +8,25 @@ description: > # this means to ignore newlines until "show_excerpts:"
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 baseurl: "" # the subpath of your site, e.g. /blog
 
-show_excerpts: true
+show_excerpts: false
 
 plugins:
   - jekyll-feed
   - jekyll-toc
   - jekyll-assets
+  
+version:
+  bulma: 0.6.2 # This depend on "cdnjs.com"
+  font-awesome: 5.0.9 # This depend on "use.fontawesome.com", also name version it without "v" prefix.
+
+# Navigation links
+# | Null or comment the line if no need.
+
+navigation:
+  github: nakorndev/jekyll-bulma-theme
+  twitter: nakorndev
+  facebook: nakorndev
+  google: 113457032081840418568
   
 sass:
   style: compact # possible values: nested expanded compact compressed
