@@ -38,3 +38,4 @@ build
 
 www/_vendor
 www/.jekyll-cache
+www/_site
