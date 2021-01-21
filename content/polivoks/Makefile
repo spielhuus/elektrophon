@@ -5,7 +5,6 @@ PCB_PROJECTS = main mount panel
 JUPYTER = jupyter
 OUTPUT =  ../../www
 SRC = $(PROJECT).ipynb
-FRONT_MATTER = $(PROJECT).yaml
 DOCS = docs
 
 PCB_FILES = $(foreach prj, $(PCB_PROJECTS), $(prj)/$(prj).kicad_pcb $(prj)/$(prj).sch )
@@ -15,14 +14,14 @@ KIBOT_REPORT_TARGET = $(OUTPUT)/_data/$(PROJECT)_kibot_data.json
 PCB_TARGETS = $(foreach prj, $(PCB_PROJECTS), $(OUTPUT)/assets/$(PROJECT)_files/$(prj)-bom.csv $(OUTPUT)/assets/$(PROJECT)_files/$(prj)-schematic.pdf $(OUTPUT)/assets/$(PROJECT)_files/$(prj)/$(prj)-pcb.pdf $(OUTPUT)/assets/$(PROJECT)_files/$(prj)/$(prj)-3D.step )
 PCB_BOM_TARGETS = $(foreach prj, $(PCB_PROJECTS), $(OUTPUT)/_data/$(PROJECT)-$(prj)-bom.csv )
 
-JUPITERFLAGS = nbconvert --ExecutePreprocessor.timeout=600 --execute --to html \
+JUPITERFLAGS = nbconvert --ExecutePreprocessor.timeout=600 --execute --to markdown \
                --no-input --log-level=CRITICAL --ExecutePreprocessor.kernel_name=python3 \
 			   --FilesWriter.build_directory=build \
 			   --TemplateExporter.extra_template_basedirs=../../lib/templates \
 			   --template=elektrophon
 
-ARTICLE_TARGETS = $(OUTPUT)/_posts/$(DATE)-$(PROJECT).html
-DEST = build/$(PROJECT).html
+ARTICLE_TARGETS = $(OUTPUT)/_posts/$(DATE)-$(PROJECT).md
+DEST = build/$(PROJECT).md
 CIRCUITS = $(shell find . -iname '*.cir' | sed 's/ /\\ /g')
 IMAGES = $(wildcard *.svg) $(wildcard *.jpg) $(wildcard *.png)
 IMAGE_TARGETS = $(addprefix $(OUTPUT)/assets/$(PROJECT)_files/,$(IMAGES))
@@ -41,9 +40,7 @@ deploy: $(DOCS)
 	$(foreach prj, $(PCB_PROJECTS), \
 		cp build/kibot/$(prj)/$(prj)-bom.csv $(OUTPUT)/_data/$(PROJECT)-$(prj)-bom.csv;)
 	cp $(KIBOT_REPORT) $(KIBOT_REPORT_TARGET)
-	cp $(FRONT_MATTER) $(ARTICLE_TARGETS)
-	echo "\n\n" >> $(ARTICLE_TARGETS)
-	cat $(DEST) >> $(ARTICLE_TARGETS)
+	cp $(DEST) $(ARTICLE_TARGETS)
 
 clean: 
 	rm -rf build

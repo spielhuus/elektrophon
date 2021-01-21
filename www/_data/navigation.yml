@@ -1,0 +1,6 @@
+- name: articles
+  link: /articles/
+- name: modules
+  link: /modules.html
+- name: about
+  link: /about.html

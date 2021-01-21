@@ -4,19 +4,18 @@
 ---
 
 // Fonts
-$font-family-base: 'Playfair Display', serif, -apple-system; //Helvetica, Arial, sans-serif, -apple-system;
-$font-family-heading: 'Balsamiq Sans', sens-serif, -apple-system;
+// $font-family-base: 'Playfair Display', serif, -apple-system; //Helvetica, Arial, sans-serif, -apple-system;
+// $font-family-heading: 'Balsamiq Sans', sens-serif, -apple-system;
+$gap: 100px;
 
 @import "typography";
-//@import "bootstrap/bootstrap";
 
-.navbar-item {
-  font-size: 14pt;
-  font-style: italic;
-  font-weight: bold;
-}
-
-.content {
-  width: 45rem;
-  margin: 0 auto;
-}
+/*! bulma.io v0.9.1 | MIT License | github.com/jgthms/bulma */
+@import "utilities/_all";
+@import "base/_all";
+@import "elements/_all";
+@import "form/_all";
+@import "components/_all";
+@import "grid/_all";
+@import "helpers/_all";
+@import "layout/_all";
