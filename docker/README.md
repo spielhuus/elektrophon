@@ -1,9 +1,7 @@
 ## This repository holds a docker recipe for the jekyll content generator.
 
-[![Build Status](https://travis-ci.org/spielhuus/elektrophon-jekyll.svg?branch=master)](https://hub.docker.com/r/spielhuus/elektrophon-jekyll)
-[![GitHub version](https://badge.fury.io/gh/spielhuus%2Felektrophon-jekyll.svg)](https://github.com/spielhuus/elektrophon/tree/master/docker)
-
-[Docker](https://docker.io) recipe for [jekyll](https://jekyllrb.com/) project
+[![Build Status](https://hub.docker.com/repository/docker/spielhuus/elektrophon-jekyll)](https://img.shields.io/docker/cloud/build/spielhuus/elektrophon-jekyll)
+[![GitHub version](https://hub.docker.com/repository/docker/spielhuus/elektrophon-jekyll)](https://img.shields.io/docker/pulls/spielhuus/elektrophon-jekyll.svg)
 
 ### Create and start the image.
 
