@@ -4,6 +4,7 @@ DATE = 2020-12-10
 JUPYTER = jupyter
 OUTPUT =  ../../www
 SRC = $(PROJECT).ipynb
+FRONT_MATTER = $(PROJECT).yaml
 DOCS = docs
 
 JUPITERFLAGS = nbconvert --ExecutePreprocessor.timeout=600 --execute --to markdown \
@@ -21,7 +22,9 @@ deploy: $(DOCS)
 	mkdir -p $(OUTPUT)/assets/$(PROJECT)_files
 	cp build/$(PROJECT)_files/* $(OUTPUT)/assets/$(PROJECT)_files/
 	cp $(IMAGES) $(OUTPUT)/assets/$(PROJECT)_files/
-	cp $(DEST) $(ARTICLE_TARGETS)
+	cp $(FRONT_MATTER) $(ARTICLE_TARGETS)
+	echo "\n\n" >> $(ARTICLE_TARGETS)
+	cat $(DEST) >> $(ARTICLE_TARGETS)
 
 clean: 
 	rm -rf build

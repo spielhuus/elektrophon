@@ -5,6 +5,7 @@ PCB_PROJECTS = main panel
 JUPYTER = jupyter
 OUTPUT =  ../../www
 SRC = $(PROJECT).ipynb
+FRONT_MATTER = $(PROJECT).yaml
 DOCS = docs
 
 PCB_FILES = $(foreach prj, $(PCB_PROJECTS), $(prj)/$(prj).kicad_pcb $(prj)/$(prj).sch )
@@ -40,7 +41,9 @@ deploy: $(DOCS)
 	$(foreach prj, $(PCB_PROJECTS), \
 		cp build/kibot/$(prj)/$(prj)-bom.csv $(OUTPUT)/_data/$(PROJECT)-$(prj)-bom.csv;)
 	cp $(KIBOT_REPORT) $(KIBOT_REPORT_TARGET)
-	cp $(DEST) $(ARTICLE_TARGETS)
+	cp $(FRONT_MATTER) $(ARTICLE_TARGETS)
+	echo "\n\n" >> $(ARTICLE_TARGETS)
+	cat $(DEST) >> $(ARTICLE_TARGETS)
 
 clean: 
 	rm -rf build

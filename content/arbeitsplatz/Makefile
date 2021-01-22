@@ -4,6 +4,7 @@ DATE = 2020-12-01
 JUPYTER = jupyter
 OUTPUT =  ../../www
 SRC = $(PROJECT).ipynb
+FRONT_MATTER = $(PROJECT).yaml
 DOCS = docs
 
 JUPITERFLAGS = nbconvert --ExecutePreprocessor.timeout=600 --execute --to markdown \
@@ -19,9 +20,21 @@ all: $(DOCS) deploy
 
 deploy: $(DOCS) 
 	mkdir -p $(OUTPUT)/assets/$(PROJECT)_files
-#	cp build/$(PROJECT)_files/* $(OUTPUT)/assets/$(PROJECT)_files/
-	cp $(IMAGES) $(OUTPUT)/assets/$(PROJECT)_files/
-	cp $(DEST) $(ARTICLE_TARGETS)
+	path=build/$(PROJECT)_files
+ 	files=$(wildcard $(path)/.*)
+
+ 	echo "FILES: " $(files)
+ 	ifeq ($(strip $(files)),)
+ 		cp build/$(PROJECT)_files/* $(OUTPUT)/assets/$(PROJECT)_files/
+ 	endif
+
+ 	ifeq ($(strip $(IMAGES)),)
+ 	cp $(IMAGES) $(OUTPUT)/assets/$(PROJECT)_files/
+ 	endif
+
+	cp $(FRONT_MATTER) $(ARTICLE_TARGETS)
+	echo "\n\n" >> $(ARTICLE_TARGETS)
+	cat $(DEST) >> $(ARTICLE_TARGETS)
 
 clean: 
 	rm -rf build
@@ -31,5 +44,6 @@ clean:
 $(DOCS): $(DEST)
 
 $(DEST): $(CIRCUITS) $(SRC)
+	mkdir -p build/$(PROJECT)_files/
 	$(JUPYTER) $(JUPITERFLAGS) $(SRC)
 	sed -r -i 's/\!\[(.*)\]\((.*)\)/\!\[\1\]\(\/assets\/\2\)/g' $(DEST)

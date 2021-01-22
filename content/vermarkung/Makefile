@@ -9,9 +9,9 @@ DOCS = docs
 
 JUPITERFLAGS = nbconvert --ExecutePreprocessor.timeout=600 --execute --to markdown \
                --no-input --log-level=CRITICAL --ExecutePreprocessor.kernel_name=python3 \
-			   --FilesWriter.build_directory=build
-#			   --TemplateExporter.extra_template_basedirs=../../lib/templates \
-#			   --template=elektrophon
+			   --FilesWriter.build_directory=build \
+			   --TemplateExporter.extra_template_basedirs=../../lib/templates \
+			   --template=elektrophon
 
 ARTICLE_TARGETS = $(OUTPUT)/_posts/$(DATE)-$(PROJECT).md
 DEST = build/$(PROJECT).md

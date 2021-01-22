@@ -5,6 +5,7 @@ PCB_PROJECTS = main mount panel
 JUPYTER = jupyter
 OUTPUT =  ../../www
 SRC = $(PROJECT).ipynb
+FRONT_MATTER = $(PROJECT).yaml
 DOCS = docs
 
 PCB_FILES = $(foreach prj, $(PCB_PROJECTS), $(prj)/$(prj).kicad_pcb $(prj)/$(prj).sch )
@@ -30,8 +31,18 @@ all: $(DOCS) deploy
 
 deploy: $(DOCS) 
 	mkdir -p $(OUTPUT)/assets/$(PROJECT)_files
-#	cp build/$(PROJECT)_files/* $(OUTPUT)/assets/$(PROJECT)_files/
-	cp $(IMAGES) $(OUTPUT)/assets/$(PROJECT)_files/
+	path=build/$(PROJECT)_files
+ 	files=$(wildcard $(path)/.*)
+
+ 	echo "FILES: " $(files)
+ 	ifeq ($(strip $(files)),)
+ 		cp build/$(PROJECT)_files/* $(OUTPUT)/assets/$(PROJECT)_files/
+ 	endif
+
+ 	ifeq ($(strip $(IMAGES)),)
+ 	cp $(IMAGES) $(OUTPUT)/assets/$(PROJECT)_files/
+ 	endif
+
 	$(foreach prj, $(PCB_PROJECTS), \
 		cp build/kibot/$(prj)/$(prj)-schematic.pdf $(OUTPUT)/assets/$(PROJECT)_files/$(prj)-schematic.pdf &&\
 		cp build/kibot/$(prj)/$(prj)-pcb.pdf $(OUTPUT)/assets/$(PROJECT)_files/$(prj)-pcb.pdf &&\
@@ -40,7 +51,9 @@ deploy: $(DOCS)
 	$(foreach prj, $(PCB_PROJECTS), \
 		cp build/kibot/$(prj)/$(prj)-bom.csv $(OUTPUT)/_data/$(PROJECT)-$(prj)-bom.csv;)
 	cp $(KIBOT_REPORT) $(KIBOT_REPORT_TARGET)
-	cp $(DEST) $(ARTICLE_TARGETS)
+	cp $(FRONT_MATTER) $(ARTICLE_TARGETS)
+	echo "\n\n" >> $(ARTICLE_TARGETS)
+	cat $(DEST) >> $(ARTICLE_TARGETS)
 
 clean: 
 	rm -rf build

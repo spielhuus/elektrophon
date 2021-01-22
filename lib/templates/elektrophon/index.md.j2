@@ -41,45 +41,62 @@
 {% endblock stream %}
 
 {% block data_svg %}
-<div class="section">
-<div class="container has-text-centered my-2">
+<div class="section" markdown="1">
+<div class="container has-text-centered my-2" markdown="1">
     {% if "filenames" in output.metadata %}
+
 ![svg]({{ output.metadata.filenames['image/svg+xml'] | path2url }})
+
     {% else %}
+
 ![svg](data:image/svg;base64,{{ output.data['image/svg+xml'] }})
+
     {% endif %}
+
 </div>
 </div>
 {% endblock data_svg %}
 
 {% block data_png %}
-<div class="section">
-<div class="container has-text-centered my-2">
+<div class="section" markdown="1">
+<div class="container has-text-centered my-2" markdown="1">
     {% if "filenames" in output.metadata %}
+
 ![png]({{ output.metadata.filenames['image/png'] | path2url }})
+
     {% else %}
+
 ![png](data:image/png;base64,{{ output.data['image/png'] }})
+
     {% endif %}
+
 </div>
 </div>
 {% endblock data_png %}
 
 {% block data_jpg %}
-<div class="section">
-<div class="container has-text-centered my-2">
+<div class="section" markdown="1">
+<div class="container has-text-centered my-2" markdown="1">
     {% if "filenames" in output.metadata %}
+
 ![jpeg]({{ output.metadata.filenames['image/jpeg'] | path2url }})
+
     {% else %}
+
 ![jpeg](data:image/jpeg;base64,{{ output.data['image/jpeg'] }})
+
     {% endif %}
+
 </div>
 </div>
 {% endblock data_jpg %}
 
 {% block data_latex %}
-<div class="section">
-<div class="container has-text-centered my-2">
+<div class="section" markdown="1">
+<div class="container has-text-centered my-2" markdown="1">
+
 {{ output.data['text/latex'] }}
+
 </div>
 </div>
 {% endblock data_latex %}
@@ -90,8 +107,9 @@
 {% endblock data_html %}
 
 {% block data_markdown scoped %}
-<div class="section">
-<div class="container">
+<p>block data mk scoped</p>
+<div class="section" markdown="1">
+<div class="container" markdown="1">
 {{ output.data['text/markdown'] }}
 </div>
 </div>
@@ -102,8 +120,9 @@
 {% endblock data_text %}
 
 {% block markdowncell scoped %}
-<div class="section">
-<div class="container">
+<!-- mk scoped -->
+<div class="section" markdown="1">
+<div class="container" markdown="1">
 {{ cell.source }}
 </div>
 </div>
