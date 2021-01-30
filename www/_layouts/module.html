@@ -5,11 +5,20 @@ layout: default
 {% assign project = page.title | append: "_kibot_data" %}
 {% include tags.html content=project %}
 
-<h1>{{ page.title }}</h1>
-<strong>{{ page.excerpt }}</strong>
+<div class="columns is-full">"
+    <div class="column is-three-quarters"">
+        <h1 class="is-title is-size-1 is-lowercase is-italic is-bold">{{ page.title }}</h1>
+        <div class="is-bold">{{ page.excerpt }}</div>
+    </div>
+    <div class="column">
+        <figure class="image is-128x128">
+            <img src="{{ page.panel }}">
+          </figure>
+    </div>
+</div>
 
-<img src="/assets/{{ page.logo }}"/>
-
-<nav>
-    {{ content | toc }}
-</nav>
+<div clss="section">
+    <nav class="container">
+        {{ content | toc }}
+    </nav>
+</div>

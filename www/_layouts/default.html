@@ -1,58 +1,56 @@
+{% if page.menubar or page.menubar_toc %}
+    {% assign has_left_sidebar = true %}
+{% endif %}
+
+{% if page.show_sidebar and has_left_sidebar  %} 
+    {% assign content_width = 'is-4' %} 
+{% elsif page.show_sidebar or has_left_sidebar %} 
+    {% assign content_width = 'is-8' %} 
+{% else %} 
+    {% assign content_width = 'is-12' %} 
+{% endif %}
+
 <!DOCTYPE html>
-<html lang="{{ site.lang }}">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  {% if page.is_post %}
-  <meta name="description" content="{{ page.excerpt | strip_html }}">
-  {% else %}
-  <meta name="description" content="{{ site.description }}">
-  {% endif %}
-  <title>
-    {% if page.title and page.disable_title != true %}
-    {{ page.title }} | {{ site.title }}
-    {% else %}
-    {{ site.title }}
-    {% endif %}
-  </title>
-  <!-- link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/{{ site.version.bulma }}/css/bulma.min.css" -->
-  <link rel="stylesheet" href="{{ 'assets/css/main.css' | absolute_url }}">
-  <link rel="shortcut icon" type="image/png" href="{{ 'assets/favicon/16x16.png' | absolute_url }}" sizes="16x16" />
-  <link rel="shortcut icon" type="image/png" href="{{ 'assets/favicon/32x32.png' | absolute_url }}" sizes="32x32" />
-  <script defer src="https://use.fontawesome.com/releases/v{{ site.version.font-awesome }}/js/all.js"></script>
+<html {% if site.fixed_navbar %} class="has-navbar-fixed-{{ site.fixed_navbar }}" {% endif %}>
   {% include head.html %}
-</head>
-
-<body>
-  {% include header.html %}
-  <section class="section">
-    <div class="container">
-      <div class="columns">
-        <div class="column {{ content_width }}">
-          {{ content }}
+  <body>
+    {% include header.html %}
+    {% unless page.hide_hero %}
+        {% include hero.html %}
+    {% endunless %}
+    {% include callouts.html %}
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                {% if page.menubar_toc %}
+                <div class="column is-4-desktop is-4-tablet">
+                    {% assign contentsTitle = page.toc_title | default: 'Contents' %}
+                    {% include toc.html html=content class='menu-list' h_min=2 h_max=3 contents_title=contentsTitle %}
+                </div>
+                {% elsif page.menubar %}
+                <div class="column is-4-desktop is-4-tablet">
+                    {% include menubar.html %}
+                </div>
+                {% endif %}
+                <div class="column {{ content_width }}">
+                    {% include tabs.html %}
+                    {% include showcase.html %}
+                    {% include sponsors.html %}
+                    {% include gallery.html %}
+                    {{ content }}
+                </div>
+                {% if site.posts and page.show_sidebar %}
+                <div class="column is-4-desktop is-12-tablet">
+                    {% include latest-posts.html %}
+                </div>
+                {% endif %}
+            </div>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <footer class="footer">
-    <div class="container">
-      <div class="content has-text-centered">
-        <p>
-          <strong>Bulma</strong> by <a href="https://jgthms.com">Jeremy Thomas</a>. The source code is licensed
-          <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content
-          is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
-        </p>
-        <p>
-          <strong>jekyll-bulma-theme</strong> by <a href="https://github.com/nakorndev">nakorndev</a>. Powered by <a
-            href="https://jekyllrb.com">Jekyll</a> and <a href="https://pages.github.com/">GitHub Pages</a>.
-        </p>
-      </div>
-    </div>
-  </footer>
-  <script src="{{ 'assets/js/main.js' | absolute_url }}"></script>
-  {% include footer.html %}
-</body>
+    </section>
+    {% unless page.hide_footer %}
+        {% include footer.html %}
+    {% endunless %}
+    <script src="{{ site.baseurl }}/assets/js/main.js" type="text/javascript"></script>
+    {%- include footer-scripts.html -%}
+  </body>
 </html>

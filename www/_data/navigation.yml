@@ -1,6 +1,6 @@
 - name: articles
-  link: /articles/
+  link: /article/
 - name: modules
-  link: /modules.html
+  link: /module/
 - name: about
   link: /about.html

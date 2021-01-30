@@ -1,11 +1,22 @@
 ---
 layout: default
 ---
-<h1 class="is-title is-size-1 is-italic is-bold">{{ page.title }}</h1>
-<strong>{{ page.excerpt }}</strong>
 
-<img src="/assets/{{ page.logo }}"/>
+<div class="is-section">
+    <div class="container">
+        <h1 class="is-title is-size-1 is-lowercase is-italic is-bold">{{ page.title }}</h1>
+        <p class="is-bold">{{ page.excerpt }}</p>
+    </div>
 
-<nav>
-    {{ content | toc }}
-</nav>
+    <figure class="image is-4by3 has-text-centered my-2">
+        <img src="/assets/{{ page.logo }}"/>
+    </figure>
+</div>
+
+<div class="section">
+    <div class="container">
+        <nav>
+            {{ content | toc }}
+        </nav>
+    </div>
+</div>
