@@ -4,6 +4,9 @@ title: cmos buffer
 author: spielhuus
 tags: cmos
 category: article
-logo: cmos_buffer_files/cd4069.jpg
-excerpt: this is the first article on a serie about the cd4069 cmos chip. in this article the chip is used as voltage buffer and distortion is analysed for different setups.
+image: /assets/cmos_buffer_files/cd4069.jpg
+panel: /assets/cmos_buffer_files/cd4069.jpg
+hero_image: /assets/cmos_buffer_files/cd4069.jpg
+excerpt: this is an article series about the CD4069UBE. in the first article the chip is 'missused' for linear amplification and the simulation is analyzed. it is importand that the chip is unbuffered (UBE), the buffered chip will do the inverse binary logic and can not be used for linear amplification.
+show_sidebar: false
 ---
