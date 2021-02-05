@@ -1,0 +1,16 @@
+UseIconsInMenus=1
+IconScale=0
+MousewheelPAN=0
+ZoomNoCenter=0
+AutoPAN=1
+OpenGLAntialiasingMode=0
+CairoAntialiasingMode=0
+WorkingDir=/srv/jekyll
+ShowEnvVarWarningDialog=1
+[EnvironmentVariables]
+KICAD_SYMBOL_DIR=/usr/share/kicad/library
+KICAD_TEMPLATE_DIR=/usr/share/kicad/template
+KICAD_USER_TEMPLATE_DIR=/srv/jekyll/lib/kicad/templates
+KIGITHUB=https://github.com/KiCad
+KISYS3DMOD=/usr/share/kicad/modules/packages3d/
+KISYSMOD=/usr/share/kicad/modules

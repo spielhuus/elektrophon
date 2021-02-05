@@ -1,7 +1,7 @@
 ## This repository holds a docker recipe for the jekyll content generator.
 
-[![Build Status](https://hub.docker.com/repository/docker/spielhuus/elektrophon-jekyll)](https://img.shields.io/docker/cloud/build/spielhuus/elektrophon-jekyll)
-[![GitHub version](https://hub.docker.com/repository/docker/spielhuus/elektrophon-jekyll)](https://img.shields.io/docker/pulls/spielhuus/elektrophon-jekyll.svg)
+[![Build Status](https://img.shields.io/docker/cloud/build/spielhuus/elektrophon-jekyll)](https://hub.docker.com/repository/docker/spielhuus/elektrophon-jekyll)
+[![GitHub version](https://img.shields.io/docker/pulls/spielhuus/elektrophon-jekyll.svg)](https://hub.docker.com/repository/docker/spielhuus/elektrophon-jekyll)
 
 ### Create and start the image.
 
