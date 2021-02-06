@@ -2,36 +2,36 @@ FROM ubuntu:rolling
 
 ENV DEBIAN_FRONTEND noninteractive
 
+# install ubuntu packages
 RUN apt-get update && apt-get -y upgrade
-RUN apt-get install -y curl apt-transport-https sudo\
-    python3 python3-pip build-essential ngspice libngspice0 git software-properties-common\
-    ruby-full zlib1g-dev git neovim\
-    nodejs libxml2-dev libxslt-dev pkg-config\
-    texlive texlive-latex-extra texlive-pictures texlive-science imagemagick pdf2svg\
-    libsndfile1 
+RUN apt-get install -y curl apt-transport-https sudo ruby-full zlib1g-dev apt-utils build-essential \
+                       texlive texlive-latex-extra texlive-pictures texlive-science imagemagick pdf2svg \
+                       kicad xvfb xdotool xclip xsltproc python3-pip
 
-# Fix ruby and unset locale
-# http://jaredmarkell.com/docker-and-locales/
-RUN apt-get install -y \
-        locales \
-        &&\
+# install jupyter and required packages
+ENV PATH /opt/conda/bin:$PATH
+RUN curl https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh --output Miniconda3-latest-Linux-x86_64.sh
+RUN /bin/bash Miniconda3-latest-Linux-x86_64.sh -b -p /opt/conda
+RUN /opt/conda/bin/conda update conda
+
+#COPY environment.yaml /environment.yaml
+COPY environment.yaml /environment.yaml
+RUN conda env create -f environment.yaml
+RUN rm Miniconda3-latest-Linux-x86_64.sh
+
+# sst locale
+RUN apt-get install -y locales &&\
     locale-gen en_US.UTF-8
 ENV LANG="en_US.UTF-8" LANGUAGE="en_US:en" LC_ALL="en_US.UTF-8"
 
+# install bundler and jekyll
 RUN gem install jekyll bundler
 
-RUN pip3 install --upgrade setuptools
-#install kibot
-RUN apt-get install -y kicad xvfb xdotool xclip xsltproc
-RUN pip3 install --no-compile jupyter matplotlib ipympl pyspice sympy schemdraw itikz librosa
-RUN pip3 install --no-compile kiauto pcbdraw kibom kibot
+#install kibot in system python env
+RUN /usr/bin/pip3 install --no-compile kiauto pcbdraw kibom kibot
 
-#RUN pip3 install jupyter matplotlib pyspice sympy librosa kibot itikz
-#RUN pip3 install git+git://github.com/mkrphys/ipython-tikzmagic.git
-
-RUN ln -s /usr/lib/x86_64-linux-gnu/libngspice.so.0 /usr/lib/x86_64-linux-gnu/libngspice.so
-
-RUN rm -rf /var/lib/apt/lists/*
+# clean cache
+RUN apt-get clean && rm -rf /var/lib/apt/lists/*
 
 EXPOSE 4000
 

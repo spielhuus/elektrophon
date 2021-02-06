@@ -27,6 +27,8 @@ function installdeps_bundler_local()
     fi
 }
 
+. "/opt/conda/etc/profile.d/conda.sh"
+conda activate elektrophon
 cd $WWW_DIR
 
 case "$@" in
