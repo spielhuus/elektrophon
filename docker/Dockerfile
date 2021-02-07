@@ -7,7 +7,8 @@ RUN apt-get update &&\
     apt-get -y upgrade &&\
     apt-get install -y curl apt-transport-https sudo ruby-full zlib1g-dev apt-utils build-essential \
                        texlive texlive-latex-extra texlive-pictures texlive-science imagemagick pdf2svg \
-                       kicad xvfb xdotool xclip xsltproc python3-pip locales
+                       kicad xvfb xdotool xclip xsltproc python3-pip locales &&\
+    apt-get clean && rm -rf /var/lib/apt/lists/*
 
 # install jupyter and required packages
 ENV PATH /opt/conda/bin:$PATH
@@ -15,7 +16,6 @@ RUN curl https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -
 RUN /bin/bash Miniconda3-latest-Linux-x86_64.sh -b -p /opt/conda
 RUN /opt/conda/bin/conda update conda
 
-#COPY environment.yaml /environment.yaml
 COPY environment.yaml /environment.yaml
 RUN conda env create -f environment.yaml
 RUN rm Miniconda3-latest-Linux-x86_64.sh
@@ -30,16 +30,11 @@ RUN gem install jekyll bundler
 #install kibot in system python env
 RUN /usr/bin/pip3 install --no-compile kiauto pcbdraw kibom kibot
 
-# clean cache
-RUN apt-get clean && rm -rf /var/lib/apt/lists/*
-
 EXPOSE 4000
 
 # Setup an entrypoint script
-#COPY docker/entrypoint.sh /entrypoint.sh
-#COPY docker/entrypoint-user.sh /entrypoint-user.sh
-COPY entrypoint.sh /entrypoint.sh
-COPY entrypoint-user.sh /entrypoint-user.sh
+COPY docker/entrypoint.sh /entrypoint.sh
+COPY docker/entrypoint-user.sh /entrypoint-user.sh
 RUN chmod 755 /entrypoint.sh
 RUN chmod 755 /entrypoint-user.sh
 ENTRYPOINT ["/entrypoint.sh"]
