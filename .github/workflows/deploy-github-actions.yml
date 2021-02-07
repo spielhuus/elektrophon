@@ -11,7 +11,8 @@ jobs:
 
       - uses: addnab/docker-run-action@v1
         with:
-          image: docker:latest
+          registry: dockerhub.com
+          image: spielhuus/elektrophon-jekyll
           options: -v $GITHUB_WORKSPACE:/srv/jekyll build
 
       - name: Deploy 🚀
