@@ -2,8 +2,10 @@
 layout: article
 title: speisung
 author: spielhuus
-tags: article
-category: basics
-logo: speisung_files/speisung.jpg
+tags: rack
+category: article
+image: /assets/speisung_files/speisung.jpg
+panel: /assets/speisung_files/speisung.jpg
+hero_image: /assets/speisung_files/speisung.jpg
 excerpt: power connections for the modules.
 ---

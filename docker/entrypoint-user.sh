@@ -67,7 +67,7 @@ case "$@" in
         make
         cd $WWW_DIR
         installdeps_bundler_local
-        bundle exec jekyll serve --host=$(hostname -i | awk '{print $1}')
+        bundle exec jekyll serve --drafts --host=$(hostname -i | awk '{print $1}')
         cd - &>/dev/null
         ;;
     build)

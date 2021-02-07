@@ -1,0 +1,20 @@
+.title KiCad schematic
+XU1 Xa Xa Net-_RV1-Pad2_ -15V Net-_RV2-Pad2_ Ya Ya +15V TL072c
+XU2 Net-_R4-Pad1_ Net-_R3-Pad1_ Net-_U2-Pad3_ -15V Net-_RV3-Pad2_ Za Za +15V TL072c
+XU3 Xa GND Ya GND -15V Za Net-_U2-Pad3_ +15V AD633
+R4 Net-_R4-Pad1_ Net-_R3-Pad1_ 10k
+R3 Net-_R3-Pad1_ GND 10k
+XJ2 GND Net-_J2-PadT_ IN_1
+XRV1 GND Net-_RV1-Pad2_ Net-_J2-PadT_ RV1
+XJ4 GND Net-_J4-PadT_ IN_2
+XRV3 GND Net-_RV3-Pad2_ Net-_J4-PadT_ RV2
+XJ5 GND Net-_J5-PadT_ OUT
+R5 Net-_R4-Pad1_ Net-_J5-PadT_ 1k
+XJ3 GND Net-_J3-PadT_ IN_1
+XRV2 GND Net-_RV2-Pad2_ Net-_J3-PadT_ RV1
+C1 +15V GND 22u
+C2 GND -15V 22u
+J1 VN VN VP VP GND GND GND GND +5V +5V IDC Header
+R1 +15V VP 10
+R2 -15V VN 10
+.end

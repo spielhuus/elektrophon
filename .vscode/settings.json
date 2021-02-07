@@ -2,5 +2,6 @@
     "python.pythonPath": "/usr/bin/python3",
     "stm32-for-vscode.armToolchainPath": "",
     "cortex-debug.armToolchainPath": "",
-    "git.ignoreLimitWarning": true
+    "git.ignoreLimitWarning": true,
+    "cSpell.enabled": true
 }

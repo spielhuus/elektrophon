@@ -1,0 +1,15 @@
+---
+layout: module
+title: pegel
+author: spielhuus
+tags: vca
+category: module
+version: 0
+status: draft
+toc: true
+image: /assets/pegel_files/pegel-logo.jpg
+panel: /assets/pegel_files/pegel-panel.jpg
+hero_image: /assets/pegel_files/pegel-hero.jpg
+excerpt: audio and cv mixer that also can add offset or attenuvert a s
+show_sidebar: false
+---

@@ -1,0 +1,15 @@
+---
+layout: module
+title: resonanz
+author: spielhuus
+tags: filter
+category: module
+version: 0
+status: draft
+toc: true
+image: /assets/resonanz_files/resonanz-logo.jpg
+panel: /assets/resonanz_files/resonanz-panel.jpg
+hero_image: /assets/resonanz_files/resonanz-hero.jpg
+excerpt: audio and cv mixer that also can add offset or attenuvert a s
+show_sidebar: false
+---

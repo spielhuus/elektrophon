@@ -22,8 +22,17 @@ all: $(DOCS) deploy
 
 deploy: $(DOCS) 
 	mkdir -p $(OUTPUT)/assets/$(PROJECT)_files
-	cp build/$(PROJECT)_files/* $(OUTPUT)/assets/$(PROJECT)_files/
-	cp $(IMAGES) $(OUTPUT)/assets/$(PROJECT)_files/
+
+	#copy the jupyter project files
+	if [ -d "build/$(PROJECT)_files" ]; then \
+	cp build/$(PROJECT)_files/* $(OUTPUT)/assets/$(PROJECT)_files/; \
+	fi
+
+	#copy images
+	$(foreach img, $(IMAGES), \
+	convert $(img) -resize 800 $(addprefix $(OUTPUT)/assets/$(PROJECT)_files/,$(img)) &&\
+	convert $(img) -resize 200 $(addprefix $(OUTPUT)/assets/$(PROJECT)_files/tmb_,$(img)) ;)
+
 	cp $(FRONT_MATTER) $(ARTICLE_TARGETS)
 	echo "\n\n" >> $(ARTICLE_TARGETS)
 	cat $(DEST) >> $(ARTICLE_TARGETS)

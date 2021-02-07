@@ -7,7 +7,9 @@ category: module
 version: 0
 status: draft
 toc: true
-logo: summe_files/summe-logo.jpg
-panel: summe_files/summe-panel-tmb.jpg
+image: /assets/summe_files/summe-logo.jpg
+panel: /assets/summe_files/summe-panel.jpg
+hero_image: /assets/summe_files/summe-logo.jpg
 excerpt: audio and cv mixer that also can add offset or attenuvert a s
+show_sidebar: false
 ---

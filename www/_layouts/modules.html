@@ -1,0 +1,34 @@
+---
+layout: default
+---
+
+<div class="is-section">
+    <div class="container is-12">
+        <a href="/module/vco"><span class="tag is-link is-normal">vco</span></a>
+        <a href="/module/vca"><span class="tag is-link is-normal">vca</span></a>
+        <a href="/module/vcf"><span class="tag is-link is-normal">vcf</span></a>
+        <a href="/module/mixer"><span class="tag is-link is-normal">mixer</span></a>
+        <a href="/module/misc"><span class="tag is-link is-normal">misc</span></a>
+    </div>
+</div>
+
+<div class="section">
+    {{ content }}
+</div>
+
+<div class="column is-12">
+    <div class="column is-12">
+        {% include pagination.html %}
+    </div>
+    <div class="columns is-multiline">
+        {% for post in paginator.posts %}
+            {% include card.html %}
+        {% endfor %}
+    </div>
+    <div class="column is-12">
+        {% include pagination.html %}
+    </div>
+    <div class="column is-12">
+        {% include subscribe.html %}
+    </div>
+</div>

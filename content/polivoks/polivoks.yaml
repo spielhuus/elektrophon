@@ -6,7 +6,10 @@ version: 0
 status: draft
 tags: cv
 category: module
-logo: polivoks_files/polivoks-logo.jpg
-panel: polivoks_files/polivoks-panel.jpg
+toc: true
+image: /assets/polivoks_files/polivoks-logo.jpg
+panel: /assets/polivoks_files/polivoks-panel.jpg
+hero_image: /assets/polivoks_files/polivoks-logo.jpg
 excerpt: the polivoks filter has very unusual design. It is a filter without capacitors and also does not need to be trimmed. but it is a very screaming filter.
+show_sidebar: false
 ---
