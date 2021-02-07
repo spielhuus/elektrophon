@@ -2,8 +2,10 @@
 layout: article
 title: vermarkung
 author: spielhuus
-tags: article
-category: basics
-logo: vermarkung_files/rails.jpg
+tags: rack
+category: article
+image: /assets/vermarkung_files/rails.jpg
+hero_image: /assets/vermarkung_files/rails.jpg
 excerpt: construction and measures of a synth rack.
+show_sidebar: false
 ---
