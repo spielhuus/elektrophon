@@ -1,1 +1,6 @@
-ngspice
+texlive 
+texlive-latex-extra 
+texlive-pictures 
+texlive-science 
+imagemagick 
+pdf2svg
