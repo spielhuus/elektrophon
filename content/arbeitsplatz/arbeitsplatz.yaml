@@ -1,9 +1,12 @@
 ---
-layout: default
+layout: article
 title: arbeitsplatz
 author: spielhuus
-tags: basics
+tags: development
 category: article
-logo: arbeitsplatz_files/arbeitsplatz.jpg
+image: /assets/arbeitsplatz_files/arbeitsplatz.jpg 
+panel: /assets/arbeitsplatz_files/arbeitsplatz.jpg 
+hero_image: /assets/radio_hat.jpg 
 excerpt: install and setup required software on windows os.
+show_sidebar: false
 ---
