@@ -3,10 +3,11 @@ FROM ubuntu:rolling
 ENV DEBIAN_FRONTEND noninteractive
 
 # install ubuntu packages
-RUN apt-get update && apt-get -y upgrade
-RUN apt-get install -y curl apt-transport-https sudo ruby-full zlib1g-dev apt-utils build-essential \
+RUN apt-get update &&\
+    apt-get -y upgrade &&\
+    apt-get install -y curl apt-transport-https sudo ruby-full zlib1g-dev apt-utils build-essential \
                        texlive texlive-latex-extra texlive-pictures texlive-science imagemagick pdf2svg \
-                       kicad xvfb xdotool xclip xsltproc python3-pip
+                       kicad xvfb xdotool xclip xsltproc python3-pip locales
 
 # install jupyter and required packages
 ENV PATH /opt/conda/bin:$PATH
@@ -20,8 +21,7 @@ RUN conda env create -f environment.yaml
 RUN rm Miniconda3-latest-Linux-x86_64.sh
 
 # sst locale
-RUN apt-get install -y locales &&\
-    locale-gen en_US.UTF-8
+RUN locale-gen en_US.UTF-8
 ENV LANG="en_US.UTF-8" LANGUAGE="en_US:en" LC_ALL="en_US.UTF-8"
 
 # install bundler and jekyll
@@ -36,8 +36,10 @@ RUN apt-get clean && rm -rf /var/lib/apt/lists/*
 EXPOSE 4000
 
 # Setup an entrypoint script
-COPY docker/entrypoint.sh /entrypoint.sh
-COPY docker/entrypoint-user.sh /entrypoint-user.sh
+#COPY docker/entrypoint.sh /entrypoint.sh
+#COPY docker/entrypoint-user.sh /entrypoint-user.sh
+COPY entrypoint.sh /entrypoint.sh
+COPY entrypoint-user.sh /entrypoint-user.sh
 RUN chmod 755 /entrypoint.sh
 RUN chmod 755 /entrypoint-user.sh
 ENTRYPOINT ["/entrypoint.sh"]
