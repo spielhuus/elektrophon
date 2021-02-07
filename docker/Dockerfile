@@ -16,8 +16,8 @@ RUN curl https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -
 RUN /bin/bash Miniconda3-latest-Linux-x86_64.sh -b -p /opt/conda
 RUN /opt/conda/bin/conda update conda
 
-COPY environment.yaml /environment.yaml
-RUN conda env create -f environment.yaml
+COPY environment.yml /environment.yml
+RUN conda env create -f environment.yml
 RUN rm Miniconda3-latest-Linux-x86_64.sh
 
 # sst locale
