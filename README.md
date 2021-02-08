@@ -1,6 +1,6 @@
 # **<font size="24">*elektrophon*</font>** 
 
-<a href="https://spielhuus.github.io/elektrophon/images/elektrophon.jpg"><img align="right" src="https://spielhuus.github.io/elektrophon/images/elektrophon_tmb.jpg" width="400"></a>is a collection of modular synthesizer modules i built. The module folders contain the schema and PCB files for kicad. You can find all the required files for changing the schemas and building gerber files in the projects.  
+<a href="https://spielhuus.github.io/elektrophon/images/elektrophon.jpg"><img align="right" src="https://spielhuus.github.io/elektrophon/images/elektrophon_tmb.jpg" width="400"></a> is a collection of modular synthesizer modules i built. The module folders contain the schema and PCB files for kicad. You can find all the required files for changing the schemas and building gerber files in the projects.  
 
 ## **<font size="24">*ressources*</font>** 
 
