@@ -1,5 +1,5 @@
 PROJECT = stmdac
-DATE = 2020-01-07
+DATE = 2021-02-01
 TARGET=_drafts
 
 JUPYTER = jupyter
