@@ -1,2 +1,2 @@
 ---
-BUNDLE_PATH: "/srv/jekyll/www/_vendor/bundle"
+BUNDLE_PATH: "/github/workspace/www/_vendor/bundle"

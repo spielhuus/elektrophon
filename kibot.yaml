@@ -109,33 +109,6 @@ outputs:
       - 'B.Mask'
       - 'F.Mask'
 
-    
-  # STEP (ISO 10303-21 Clear Text Encoding of the Exchange Structure):
-  # This is the most common 3D format for exchange purposes.
-  # This output is what you get from the 'File/Export/STEP' menu in pcbnew.
-  - name: 'step_pcb'
-    comment: 'Exports the PCB as a 3D model.'
-    type: 'step'
-  # dir: 'Example/step_dir'
-    options:
-      # [string|list(string)=''] Name of the filter to mark components as not fitted.
-      # A short-cut to use for simple cases where a variant is an overkill
-      dnf_filter: ''
-      # [boolean=true] use metric units instead of inches
-      metric_units: true
-      # [number=-1] the minimum distance between points to treat them as separate ones (-1 is KiCad default: 0.01 mm)
-      min_distance: -1
-      # [boolean=false] used to exclude 3D models for components with 'virtual' attribute
-      no_virtual: false
-      # [string='grid'] determines the coordinates origin. Using grid the coordinates are the same as you have in the design sheet.
-      # The drill option uses the auxiliar reference defined by the user.
-      # You can define any other origin using the format 'X,Y', i.e. '3.2,-10'
-      origin: 'grid'
-      # [string='%f-%i%v.%x'] name for the generated STEP file (%i='3D' %x='step'). Affected by global options
-      output: '%f-%i%v.%x'
-      # [string=''] Board variant to apply
-      variant: ''
-
   # BoM (Bill of Materials):
   # Is compatible with KiBoM, but doesn't need to update the XML netlist because the components
   # are loaded from the schematic.
