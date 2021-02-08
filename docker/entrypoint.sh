@@ -16,11 +16,12 @@ function create_user()
     chown -R $USERNAME:$USERNAME /home/jekyll/.config
 }
 
+ls -la $JEKYLL_DIR/
+
 # Create the user
 create_user
 
 # Execute the rest of the script with the new user
 su -c "/entrypoint-user.sh \"$@\"" $USERNAME
 
-ls -la $JEKYLL_DIR/.git
 chmod -R a+rw $JEKYLL_DIR/.git
