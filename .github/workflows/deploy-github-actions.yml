@@ -9,11 +9,10 @@ jobs:
         with:
           persist-credentials: false
 
-      - uses: addnab/docker-run-action@v1
+      - name: build notebooks and jekyll page
+        uses: docker://spielhuus/elektrophon-jekyll
         with:
-          registry: hub.docker.com
-          image: spielhuus/elektrophon-jekyll
-          options: -v $GITHUB_WORKSPACE:/srv/jekyll build
+         args: -v $GITHUB_WORKSPACE:/srv/jekyll build
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@3.7.1
