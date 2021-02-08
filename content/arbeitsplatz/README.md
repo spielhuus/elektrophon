@@ -2,4 +2,4 @@
 
 ## arbeitsplatz
 
-install and setup required software on windows os.
+install and setup of required software to develop modules.

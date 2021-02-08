@@ -11,7 +11,7 @@ elektrophon is a collection of modular synthesizer modules i built. The module f
 
 <div class="container has-text-centered">
   <figure class="image image is-4by3">
-    <img src="/assets/elektrophon.jpg">
+    <img src="{{ '/assets/elektrophon.jpg' | relative_url }}">
   </figure>
 </div>
 
@@ -21,7 +21,7 @@ the modules are mounted on eurorack rails. the side panels are made of wood. in 
 
 <div class="container has-text-centered">
   <figure class="image">
-    <img src="/assets/construction.jpg">
+    <img src="{{ '/assets/construction.jpg' | relative_url }}">
   </figure>
 </div>
 
