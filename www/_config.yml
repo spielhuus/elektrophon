@@ -5,8 +5,8 @@ author:
 description: > # this means to ignore newlines until "show_excerpts:"
   analog and digital modules for an electroacustic instrument.
 
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
-baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://spielhuus.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "/elektrophon" # the subpath of your site, e.g. /blog
 
 show_excerpts: false
 

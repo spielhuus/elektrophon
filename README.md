@@ -4,6 +4,8 @@
 
 ## **<font size="24">*ressources*</font>** 
 
+ressources on the internet which provide information about electronic instruments.
+
 * [Thomas Henry](http://birthofasynth.com/Thomas_Henry/TH_main.html) modules archived by [Scott Stites](http://birthofasynth.com/index.html). 
   * The [Electronic Music Circuits: The Reprints](https://web.archive.org/web/20190907204304/https://static.miraheze.org/sdiywiki/5/5d/The_Reprint_Collection_by_Thomas_Henry_CC_BY_NC.pdf) from Thomas Henry.
 * [Synthesizer DIY pages of René Schmitz](https://www.schmitzbits.de/index.html)
@@ -12,6 +14,7 @@
 * [Ken Stones - CGS (Cat Girl Synth)](http://www.elby-designs.com/webtek/cgs/cgs.htm)
 * [Osamu Hoshuyama - Unusual Synthesizer Circuits)](http://www5b.biglobe.ne.jp/~houshu/synth/)
 * pdf collection of the [polyphony](http://www.muzines.co.uk/mags/pl/all) magazine
+* free [electronotes](http://electronotes.netfirms.com/free.htm) newsletter published by Bernie Hutchins.
 
 ## **<font size="24">*featured software*</font>** 
 
