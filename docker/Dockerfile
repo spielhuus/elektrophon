@@ -41,14 +41,12 @@ ENTRYPOINT ["/entrypoint.sh"]
 
 #copy the kicad configuration files
 COPY docker/kicad/eeschema /home/jekyll/.config/kicad/eeschema 
-COPY docker/kicad/fp-lib-table /home/jekyll/.config/kicad/fp-lib-table
 COPY docker/kicad/kicad /home/jekyll/.config/kicad/kicad
 COPY docker/kicad/kicad_common /home/jekyll/.config/kicad/kicad_common
 COPY docker/kicad/pcbnew /home/jekyll/.config/kicad/pcbnew
-COPY docker/kicad/sym-lib-table /home/jekyll/.config/kicad/sym-lib-table
 
-ENV JEKYLL_DIR="/srv/jekyll"
-ENV WWW_DIR="/srv/jekyll/www"
+ENV JEKYLL_DIR="/github/workspace/jekyll"
+ENV WWW_DIR="/github/workspace/jekyll/www"
 WORKDIR $JEKYLL_DIR
 ENV GEM_HOME /var/lib/gems
 
