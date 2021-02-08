@@ -12,6 +12,7 @@ function create_user()
     echo "$USERNAME ALL=NOPASSWD:ALL" >> /etc/sudoers
     chown -R $USERNAME:$USERNAME $JEKYLL_DIR
     chown -R $USERNAME:$USERNAME $GEM_HOME
+    chown -R $USERNAME:$USERNAME /home/jekyll
 }
 
 # Create the user
