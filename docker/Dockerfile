@@ -45,8 +45,8 @@ COPY docker/kicad/kicad /home/jekyll/.config/kicad/kicad
 COPY docker/kicad/kicad_common /home/jekyll/.config/kicad/kicad_common
 COPY docker/kicad/pcbnew /home/jekyll/.config/kicad/pcbnew
 
-ENV JEKYLL_DIR="/github/workspace/jekyll"
-ENV WWW_DIR="/github/workspace/jekyll/www"
+ENV JEKYLL_DIR="/github/workspace"
+ENV WWW_DIR="/github/workspace/www"
 WORKDIR $JEKYLL_DIR
 ENV GEM_HOME /var/lib/gems
 
