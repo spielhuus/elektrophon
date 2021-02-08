@@ -13,6 +13,7 @@ function create_user()
     chown -R $USERNAME:$USERNAME $JEKYLL_DIR
     chown -R $USERNAME:$USERNAME $GEM_HOME
     chown -R $USERNAME:$USERNAME /home/jekyll
+    chown -R $USERNAME:$USERNAME /home/jekyll/.config
 }
 
 # Create the user
