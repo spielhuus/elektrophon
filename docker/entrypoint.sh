@@ -5,6 +5,9 @@ USER_UID=${USER_UID:-1000}
 USER_GID=${USER_GID:-1000}
 USERNAME=${USERNAME:-jekyll}
 
+OLD_USER=$(stat -c '%U' $JEKYLL_DIR/Makefile)
+OLD_GROUP=$(stat -c '%G' $JEKYLL_DIR/Makefile)
+
 function create_user()
 {
     groupadd -f -g $USER_GID $USERNAME 2> /dev/null # group
@@ -24,4 +27,4 @@ create_user
 # Execute the rest of the script with the new user
 su -c "/entrypoint-user.sh \"$@\"" $USERNAME
 
-chmod -R a+rw $JEKYLL_DIR/.git
+chown -R $OLD_USER:$OLD_GROUP $JEKYLL_DIR
