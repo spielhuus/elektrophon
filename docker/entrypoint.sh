@@ -19,8 +19,6 @@ function create_user()
     chown -R $USERNAME:$USERNAME /home/jekyll/.config
 }
 
-ls -la $JEKYLL_DIR/
-
 # Create the user
 create_user
 
