@@ -45,4 +45,3 @@ $(DOCS): $(DEST)
 $(DEST): $(CIRCUITS) $(SRC)
 #	mkdir -p build/$(PROJECT)_files/
 	$(JUPYTER) $(JUPITERFLAGS) $(SRC)
-	sed -r -i 's/\!\[(.*)\]\((.*)\)/\!\[\1\]\(\/assets\/\2\)/g' $(DEST)
