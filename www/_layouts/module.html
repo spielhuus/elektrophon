@@ -7,18 +7,19 @@ layout: default
 
 <div class="columns is-full">"
     <div class="column is-three-quarters"">
-        <h1 class="is-title is-size-1 is-lowercase is-italic is-bold">{{ page.title }}</h1>
-        <div class="is-bold">{{ page.excerpt }}</div>
+        <!-- h1 class="is-title is-size-1 is-lowercase is-italic is-bold">{{ page.title }}</h1 -->
+        <div class="section is-bold">{{ page.excerpt }}</div>
+        <div class="section">{% toc %}</div>
     </div>
     <div class="column">
         <figure class="image is-128x128">
-            <img src="{{ page.panel }}">
+            <img src="{{ page.panel | relative_url }}">
           </figure>
     </div>
 </div>
 
 <div clss="section">
     <nav class="container">
-        {{ content | toc }}
+        {{ content }}
     </nav>
 </div>

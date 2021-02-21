@@ -29,6 +29,11 @@ navigation:
 sass:
   style: compact # possible values: nested expanded compact compressed
 
+
+kramdown:
+  hard_wrap: true
+  syntax_highlighter: rouge
+
 social_links:
   #twitter: jekyllrb
   github:  spielhuus
@@ -46,13 +51,6 @@ social_links:
   # googleplus: +jekyll
   # microdotblog: jekyll
   # keybase: jekyll
-
-# Collection configurations
-collections:
-  cmos:
-    output: true
-    permalink: /article/cmos/:path/
-
 
       
 ############################################################

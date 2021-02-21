@@ -76,4 +76,18 @@
     </div>
   </div>
   {% endif %}
+
+    <div class="control">
+      <a class="tags has-addons" href="https://mybinder.org/v2/gh/spielhuus/elektrophon/HEAD?filepath=content%2F{{ include.content }}%2F{{ include.content }}.ipynb">
+        <span class="tag is-dark">launch</span>
+        <span class="tag is-link">binder</span>
+      </a>
+    </div>
+
+    <div class="control">
+      <a class="tags has-addons" href="https://github.com/spielhuus/elektrophon/tree/master/content/{{ page.project }}">
+        <span class="tag is-dark"><i class="fab fa-github" aria-hidden="true"></i></span>
+        <span class="tag is-link">github</span>
+      </a>
+    </div>
 </div>

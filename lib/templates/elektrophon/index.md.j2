@@ -28,7 +28,7 @@
 {% endblock traceback_line %}
 
 {% block execute_result %}
-
+<!-- execute result -->
 {% block data_priority scoped %}
 {{ super() }}
 {% endblock %}
@@ -45,7 +45,7 @@
 <div class="container has-text-centered my-2" markdown="1">
     {% if "filenames" in output.metadata %}
 
-![svg]({{ output.metadata.filenames['image/svg+xml'] | path2url }})
+![svg]({{ '{{ \'/assets/' }}{{ output.metadata.filenames['image/svg+xml'] | path2url }}' | relative_url {{ ' }}' }})
 
     {% else %}
 
@@ -62,7 +62,7 @@
 <div class="container has-text-centered my-2" markdown="1">
     {% if "filenames" in output.metadata %}
 
-![png]({{ output.metadata.filenames['image/png'] | path2url }})
+![png]({{ '{{ \'/assets/' }}{{ output.metadata.filenames['image/png'] | path2url }}' | relative_url {{ ' }}' }})
 
     {% else %}
 
@@ -79,7 +79,7 @@
 <div class="container has-text-centered my-2" markdown="1">
     {% if "filenames" in output.metadata %}
 
-![jpeg]({{ output.metadata.filenames['image/jpeg'] | path2url }})
+![jpeg]({{ '{{ \'/assets/' }}{{ output.metadata.filenames['image/jpeg'] | path2url }}' | relative_url {{ ' }}' }})
 
     {% else %}
 
@@ -93,7 +93,7 @@
 
 {% block data_latex %}
 <div class="section" markdown="1">
-<div class="container has-text-centered my-2" markdown="1">
+<div class="container has-text-centered my-4" markdown="1">
 
 {{ output.data['text/latex'] }}
 
@@ -116,12 +116,13 @@
 {% endblock data_markdown %}
 
 {% block data_text scoped %}
+<!-- text scoped -->
 {{ output.data['text/plain'] | indent }}
 {% endblock data_text %}
 
 {% block markdowncell scoped %}
 <!-- mk scoped -->
-<div class="container" markdown="1">
+<div class="container my-2" markdown="1">
 {{ cell.source }}
 </div>
 {% endblock markdowncell %}
