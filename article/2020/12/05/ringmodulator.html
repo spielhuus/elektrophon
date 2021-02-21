@@ -1,0 +1,661 @@
+
+
+
+
+<!DOCTYPE html>
+<html  class="has-navbar-fixed-top" >
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content=#ffffff>
+    <link rel="stylesheet" href="/elektrophon/assets/css/main.css">
+    <link rel="shortcut icon" type="image/png"
+           href="/elektrophon/favicon.png" 
+    />
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.7.0/dist/alpine.min.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/fontawesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/brands.min.css">
+    
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-social@1/bin/bulma-social.min.css">
+    
+    <!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>ringmodulation | elektrophon</title>
+<meta name="generator" content="Jekyll v4.2.0" />
+<meta property="og:title" content="ringmodulation" />
+<meta name="author" content="spielhuus" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="in this article different amplitude modulation techniques are explored and the relation to voltage controlled amplifierts is explained." />
+<meta property="og:description" content="in this article different amplitude modulation techniques are explored and the relation to voltage controlled amplifierts is explained." />
+<link rel="canonical" href="https://spielhuus.github.io//elektrophon/article/2020/12/05/ringmodulator.html" />
+<meta property="og:url" content="https://spielhuus.github.io//elektrophon/article/2020/12/05/ringmodulator.html" />
+<meta property="og:site_name" content="elektrophon" />
+<meta property="og:image" content="https://spielhuus.github.io//elektrophon/assets/ringmodulator_files/dalek.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-12-05T00:00:00+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://spielhuus.github.io//elektrophon/assets/ringmodulator_files/dalek.png" />
+<meta property="twitter:title" content="ringmodulation" />
+<script type="application/ld+json">
+{"image":"https://spielhuus.github.io//elektrophon/assets/ringmodulator_files/dalek.png","@type":"BlogPosting","headline":"ringmodulation","dateModified":"2020-12-05T00:00:00+00:00","datePublished":"2020-12-05T00:00:00+00:00","url":"https://spielhuus.github.io//elektrophon/article/2020/12/05/ringmodulator.html","mainEntityOfPage":{"@type":"WebPage","@id":"https://spielhuus.github.io//elektrophon/article/2020/12/05/ringmodulator.html"},"author":{"@type":"Person","name":"spielhuus"},"description":"in this article different amplitude modulation techniques are explored and the relation to voltage controlled amplifierts is explained.","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+</head>
+  <body>
+    <nav class="navbar is-light  is-fixed-top  has-shadow">
+  <div class="container">
+      <div class="navbar-brand">
+          <a href="/elektrophon/" class="navbar-item is-italic is-bold is-lowercase">
+              elektrophon
+          </a>
+          <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navMenu">
+              <span aria-hidden="true"></span>
+              <span aria-hidden="true"></span>
+              <span aria-hidden="true"></span>
+          </a>
+      </div>
+      <div class="navbar-menu" id="navMenu">
+          <div class="navbar-end">
+              
+              
+                  
+                  <a href="/elektrophon/article/" class="navbar-item ">articles</a>
+                  
+              
+                  
+                  <a href="/elektrophon/module/" class="navbar-item ">modules</a>
+                  
+              
+                  
+                  <a href="/elektrophon/about.html" class="navbar-item ">about</a>
+                  
+              
+              
+          </div>
+      </div>
+  </div>
+</nav>
+    
+        <section class="hero  is-medium  is-bold is-primary"  style="background: url('/elektrophon/assets/ringmodulator_files/dalek.png') no-repeat center center; background-size: cover;" >
+    <div class="hero-body ">
+        <div class="container">
+            <h1 class="title is-title is-bold is-size-1 is-lowercase is-italic has-text-white">ringmodulation</h1>
+            <p class="subtitle itle is-title is-bold is-size-2 is-lowercase is-italic has-text-white"></p>
+            
+        </div>
+    </div>
+</section>
+    
+    
+
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                
+                <div class="column is-12">
+                    
+                    
+                    
+                    
+                    <div class="is-section">
+    <div class="container is-12">
+        <p class="has-text-weight-semibold">in this article different amplitude modulation techniques are explored and the relation to voltage controlled amplifierts is explained.</p>
+        <div class="container">
+            <!-- 
+    [1;32m2021-02-21 14:03:07,885[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - Element don't define a __pins__ attribute
+    [1;32m2021-02-21 14:03:07,886[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - FixedPinElement don't define a __pins__ attribute
+    [1;32m2021-02-21 14:03:07,887[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - SubCircuitElement don't define a __pins__ attribute
+    [1;32m2021-02-21 14:03:07,889[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - Resistor don't define a __pins__ attribute
+    [1;32m2021-02-21 14:03:07,890[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - SemiconductorResistor don't define a __pins__ attribute
+    [1;32m2021-02-21 14:03:07,892[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - BehavioralResistor don't define a __pins__ attribute
+    [1;32m2021-02-21 14:03:07,893[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - Capacitor don't define a __pins__ attribute
+    [1;32m2021-02-21 14:03:07,894[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - SemiconductorCapacitor don't define a __pins__ attribute
+    [1;32m2021-02-21 14:03:07,895[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - BehavioralCapacitor don't define a __pins__ attribute
+    [1;32m2021-02-21 14:03:07,896[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - Inductor don't define a __pins__ attribute
+    [1;32m2021-02-21 14:03:07,897[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - BehavioralInductor don't define a __pins__ attribute
+    [1;32m2021-02-21 14:03:07,897[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - CoupledInductor don't define a __pins__ attribute
+    [1;32m2021-02-21 14:03:07,898[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - VoltageControlledSwitch don't define a __pins__ attribute
+    [1;32m2021-02-21 14:03:07,898[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - CurrentControlledSwitch don't define a __pins__ attribute
+    [1;32m2021-02-21 14:03:07,899[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - VoltageSource don't define a __pins__ attribute
+    [1;32m2021-02-21 14:03:07,900[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - CurrentSource don't define a __pins__ attribute
+    [1;32m2021-02-21 14:03:07,900[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - VoltageControlledCurrentSource don't define a __pins__ attribute
+    [1;32m2021-02-21 14:03:07,900[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - VoltageControlledVoltageSource don't define a __pins__ attribute
+    [1;32m2021-02-21 14:03:07,901[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - CurrentControlledCurrentSource don't define a __pins__ attribute
+    [1;32m2021-02-21 14:03:07,902[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - CurrentControlledVoltageSource don't define a __pins__ attribute
+    [1;32m2021-02-21 14:03:07,902[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - BehavioralSource don't define a __pins__ attribute
+    [1;32m2021-02-21 14:03:07,903[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - NonLinearVoltageSource don't define a __pins__ attribute
+    [1;32m2021-02-21 14:03:07,903[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - NonLinearCurrentSource don't define a __pins__ attribute
+    [1;32m2021-02-21 14:03:07,904[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - JunctionFieldEffectTransistor don't define a __pins__ attribute
+    [1;32m2021-02-21 14:03:07,904[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - Mesfet don't define a __pins__ attribute
+    [1;32m2021-02-21 14:03:07,905[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - LosslessTransmissionLine don't define a __pins__ attribute
+    [1;32m2021-02-21 14:03:07,906[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - LossyTransmission don't define a __pins__ attribute
+    [1;32m2021-02-21 14:03:07,906[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - CoupledMulticonductorLine don't define a __pins__ attribute
+    [1;32m2021-02-21 14:03:07,907[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - SingleLossyTransmissionLine don't define a __pins__ attribute
+    [1;32m2021-02-21 14:03:07,908[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - XSpiceElement don't define a __pins__ attribute
+    [1;32m2021-02-21 14:03:07,908[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - GSSElement don't define a __pins__ attribute
+    [1;32m2021-02-21 14:03:07,909[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - SinusoidalVoltageSource don't define a __pins__ attribute
+    [1;32m2021-02-21 14:03:07,910[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - SinusoidalCurrentSource don't define a __pins__ attribute
+    [1;32m2021-02-21 14:03:07,910[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - AcLine don't define a __pins__ attribute
+    [1;32m2021-02-21 14:03:07,911[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - PulseVoltageSource don't define a __pins__ attribute
+    [1;32m2021-02-21 14:03:07,912[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - PulseCurrentSource don't define a __pins__ attribute
+    [1;32m2021-02-21 14:03:07,912[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - ExponentialVoltageSource don't define a __pins__ attribute
+    [1;32m2021-02-21 14:03:07,913[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - ExponentialCurrentSource don't define a __pins__ attribute
+    [1;32m2021-02-21 14:03:07,913[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - PieceWiseLinearVoltageSource don't define a __pins__ attribute
+    [1;32m2021-02-21 14:03:07,914[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - PieceWiseLinearCurrentSource don't define a __pins__ attribute
+    [1;32m2021-02-21 14:03:07,914[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - SingleFrequencyFMVoltageSource don't define a __pins__ attribute
+    [1;32m2021-02-21 14:03:07,914[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - SingleFrequencyFMCurrentSource don't define a __pins__ attribute
+    [1;32m2021-02-21 14:03:07,915[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - AmplitudeModulatedVoltageSource don't define a __pins__ attribute
+    [1;32m2021-02-21 14:03:07,915[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - AmplitudeModulatedCurrentSource don't define a __pins__ attribute
+    [1;32m2021-02-21 14:03:07,916[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - RandomVoltageSource don't define a __pins__ attribute
+    [1;32m2021-02-21 14:03:07,916[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - RandomCurrentSource don't define a __pins__ attribute
+    [1;32m2021-02-21 14:03:07,937[0m - [1;34mPySpice.Spice.Library.Library.__init__[0m - [1;31mDEBUG[0m - Parse /github/workspace/lib/spice/opamp/ad633.lib
+    [1;32m2021-02-21 14:03:07,939[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - FSY 8 5 POLY(2) VZC1 VZC2 (2.8286E-3,1,1) 
+    [1;32m2021-02-21 14:03:07,940[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - FSY 8 5 POLY(2) VZC1 VZC2 (2.8286E-3,1,1) 
+    [1;32m2021-02-21 14:03:07,942[0m - [1;34mPySpice.Spice.Library.Library.__init__[0m - [1;31mDEBUG[0m - Parse /github/workspace/lib/spice/opamp/LM324.lib
+    [1;32m2021-02-21 14:03:07,944[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - FB    7 99 POLY(5) VB VC VE VLP VLN 0 15.91E6 -20E6 20E6 20E6 -20E6
+    [1;32m2021-02-21 14:03:07,944[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - FB    7 99 POLY(5) VB VC VE VLP VLN 0 15.91E6 -20E6 20E6 20E6 -20E6
+    [1;32m2021-02-21 14:03:07,946[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - FB    7 99 POLY(5) VB VC VE VLP VLN 0 15.91E6 -20E6 20E6 20E6 -20E6
+    [1;32m2021-02-21 14:03:07,946[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - FB    7 99 POLY(5) VB VC VE VLP VLN 0 15.91E6 -20E6 20E6 20E6 -20E6
+    [1;32m2021-02-21 14:03:07,947[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - FB    7 99 POLY(5) VB VC VE VLP VLN 0 15.91E6 -20E6 20E6 20E6 -20E6
+    [1;32m2021-02-21 14:03:07,948[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - FB    7 99 POLY(5) VB VC VE VLP VLN 0 15.91E6 -20E6 20E6 20E6 -20E6
+    [1;32m2021-02-21 14:03:07,950[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - FB    7 99 POLY(5) VB VC VE VLP VLN 0 15.91E6 -20E6 20E6 20E6 -20E6
+    [1;32m2021-02-21 14:03:07,951[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - FB    7 99 POLY(5) VB VC VE VLP VLN 0 15.91E6 -20E6 20E6 20E6 -20E6
+    [1;32m2021-02-21 14:03:07,952[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - FB    7 99 POLY(5) VB VC VE VLP VLN 0 15.91E6 -20E6 20E6 20E6 -20E6
+    [1;32m2021-02-21 14:03:07,953[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - FB    7 99 POLY(5) VB VC VE VLP VLN 0 15.91E6 -20E6 20E6 20E6 -20E6
+    [1;32m2021-02-21 14:03:07,955[0m - [1;34mPySpice.Spice.Library.Library.__init__[0m - [1;31mDEBUG[0m - Parse /github/workspace/lib/spice/opamp/LM13700.MOD
+    [1;32m2021-02-21 14:03:07,956[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - F1  4  3  POLY(1)   V6 1E-10 5.129E-2 -1.189E4 1.123E9 
+    [1;32m2021-02-21 14:03:07,957[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - F1  4  3  POLY(1)   V6 1E-10 5.129E-2 -1.189E4 1.123E9 
+    [1;32m2021-02-21 14:03:07,958[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - F1  4  3  POLY(1)   V6 1E-10 5.129E-2 -1.189E4 1.123E9 
+    [1;32m2021-02-21 14:03:07,959[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - F1  4  3  POLY(1)   V6 1E-10 5.129E-2 -1.189E4 1.123E9 
+    [1;32m2021-02-21 14:03:07,960[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - F5  5  0  POLY(2)   V3 V7 0 0 0 0 1                  
+    [1;32m2021-02-21 14:03:07,961[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - F5  5  0  POLY(2)   V3 V7 0 0 0 0 1                  
+    [1;32m2021-02-21 14:03:07,962[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - F5  5  0  POLY(2)   V3 V7 0 0 0 0 1                  
+    [1;32m2021-02-21 14:03:07,966[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - F5  5  0  POLY(2)   V3 V7 0 0 0 0 1                  
+    [1;32m2021-02-21 14:03:07,967[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - F5  5  0  POLY(2)   V3 V7 0 0 0 0 1                  
+    [1;32m2021-02-21 14:03:07,968[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - F5  5  0  POLY(2)   V3 V7 0 0 0 0 1                  
+    [1;32m2021-02-21 14:03:07,969[0m - [1;34mPySpice.Spice.Library.Library.__init__[0m - [1;31mDEBUG[0m - Parse /github/workspace/lib/spice/opamp/OPA2134-dual.lib
+    [1;32m2021-02-21 14:03:07,970[0m - [1;34mPySpice.Spice.Library.Library.__init__[0m - [1;31mDEBUG[0m - Parse /github/workspace/lib/spice/opamp/TL072-dual.lib
+    [1;32m2021-02-21 14:03:07,972[0m - [1;34mPySpice.Spice.Library.Library.__init__[0m - [1;31mDEBUG[0m - Parse /github/workspace/lib/spice/opamp/LT1014x_30V.LIB
+    [1;32m2021-02-21 14:03:07,974[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - FB    7 99 POLY(5) VB VC VE VLP VLN 0 3.865E9 -4E9 4E9 4E9 -4E9
+    [1;32m2021-02-21 14:03:07,975[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - FB    7 99 POLY(5) VB VC VE VLP VLN 0 3.865E9 -4E9 4E9 4E9 -4E9
+    [1;32m2021-02-21 14:03:07,975[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - FB    7 99 POLY(5) VB VC VE VLP VLN 0 3.865E9 -4E9 4E9 4E9 -4E9
+    [1;32m2021-02-21 14:03:07,976[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - FB    7 99 POLY(5) VB VC VE VLP VLN 0 3.865E9 -4E9 4E9 4E9 -4E9
+    [1;32m2021-02-21 14:03:07,978[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - FB    7 99 POLY(5) VB VC VE VLP VLN 0 3.865E9 -4E9 4E9 4E9 -4E9
+    [1;32m2021-02-21 14:03:07,978[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - FB    7 99 POLY(5) VB VC VE VLP VLN 0 3.865E9 -4E9 4E9 4E9 -4E9
+    [1;32m2021-02-21 14:03:07,979[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - FB    7 99 POLY(5) VB VC VE VLP VLN 0 3.865E9 -4E9 4E9 4E9 -4E9
+    [1;32m2021-02-21 14:03:07,979[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - FB    7 99 POLY(5) VB VC VE VLP VLN 0 3.865E9 -4E9 4E9 4E9 -4E9
+    [1;32m2021-02-21 14:03:07,980[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - FB    7 99 POLY(5) VB VC VE VLP VLN 0 3.865E9 -4E9 4E9 4E9 -4E9
+    [1;32m2021-02-21 14:03:07,984[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - FB    7 99 POLY(5) VB VC VE VLP VLN 0 3.865E9 -4E9 4E9 4E9 -4E9
+    [1;32m2021-02-21 14:03:07,986[0m - [1;34mPySpice.Spice.Library.Library.__init__[0m - [1;31mDEBUG[0m - Parse /github/workspace/lib/spice/opamp/TL072.lib
+    [1;32m2021-02-21 14:03:07,987[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - FB    7 99 POLY(5) VB VC VE VLP VLN 0 4.715E6 -5E6 5E6 5E6 -5E6
+    [1;32m2021-02-21 14:03:07,987[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - FB    7 99 POLY(5) VB VC VE VLP VLN 0 4.715E6 -5E6 5E6 5E6 -5E6
+    [1;32m2021-02-21 14:03:07,988[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - FB    7 99 POLY(5) VB VC VE VLP VLN 0 4.715E6 -5E6 5E6 5E6 -5E6
+    [1;32m2021-02-21 14:03:07,988[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - FB    7 99 POLY(5) VB VC VE VLP VLN 0 4.715E6 -5E6 5E6 5E6 -5E6
+    [1;32m2021-02-21 14:03:07,989[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - FB    7 99 POLY(5) VB VC VE VLP VLN 0 4.715E6 -5E6 5E6 5E6 -5E6
+    [1;32m2021-02-21 14:03:07,989[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - FB    7 99 POLY(5) VB VC VE VLP VLN 0 4.715E6 -5E6 5E6 5E6 -5E6
+    [1;32m2021-02-21 14:03:07,992[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - FB    7 99 POLY(5) VB VC VE VLP VLN 0 4.715E6 -5E6 5E6 5E6 -5E6
+    [1;32m2021-02-21 14:03:07,993[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - FB    7 99 POLY(5) VB VC VE VLP VLN 0 4.715E6 -5E6 5E6 5E6 -5E6
+    [1;32m2021-02-21 14:03:07,993[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - FB    7 99 POLY(5) VB VC VE VLP VLN 0 4.715E6 -5E6 5E6 5E6 -5E6
+    [1;32m2021-02-21 14:03:07,994[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - FB    7 99 POLY(5) VB VC VE VLP VLN 0 4.715E6 -5E6 5E6 5E6 -5E6
+    [1;32m2021-02-21 14:03:07,995[0m - [1;34mPySpice.Spice.Library.Library.__init__[0m - [1;31mDEBUG[0m - Parse /github/workspace/lib/spice/opamp/LM13700d.MOD
+    [1;32m2021-02-21 14:03:07,996[0m - [1;34mPySpice.Spice.Library.Library.__init__[0m - [1;31mDEBUG[0m - Parse /github/workspace/lib/spice/opamp/LM324c.lib
+    [1;32m2021-02-21 14:03:07,996[0m - [1;34mPySpice.Spice.Library.Library.__init__[0m - [1;31mDEBUG[0m - Parse /github/workspace/lib/spice/opamp/CA3080.lib
+    [1;32m2021-02-21 14:03:07,997[0m - [1;34mPySpice.Spice.Library.Library.__init__[0m - [1;31mDEBUG[0m - Parse /github/workspace/lib/spice/opamp/OPA2134.LIB
+    [1;32m2021-02-21 14:03:07,998[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - FB    7 99 POLY(5) VB VC VE VLP VLN 0 248.0E6 -250E6 250E6 250E6 -250E6
+    [1;32m2021-02-21 14:03:07,999[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - FB    7 99 POLY(5) VB VC VE VLP VLN 0 248.0E6 -250E6 250E6 250E6 -250E6
+    [1;32m2021-02-21 14:03:08,000[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - FB    7 99 POLY(5) VB VC VE VLP VLN 0 248.0E6 -250E6 250E6 250E6 -250E6
+    [1;32m2021-02-21 14:03:08,000[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - FB    7 99 POLY(5) VB VC VE VLP VLN 0 248.0E6 -250E6 250E6 250E6 -250E6
+    [1;32m2021-02-21 14:03:08,001[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - FB    7 99 POLY(5) VB VC VE VLP VLN 0 248.0E6 -250E6 250E6 250E6 -250E6
+    [1;32m2021-02-21 14:03:08,001[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - FB    7 99 POLY(5) VB VC VE VLP VLN 0 248.0E6 -250E6 250E6 250E6 -250E6
+    [1;32m2021-02-21 14:03:08,001[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - FB    7 99 POLY(5) VB VC VE VLP VLN 0 248.0E6 -250E6 250E6 250E6 -250E6
+    [1;32m2021-02-21 14:03:08,002[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - FB    7 99 POLY(5) VB VC VE VLP VLN 0 248.0E6 -250E6 250E6 250E6 -250E6
+    [1;32m2021-02-21 14:03:08,002[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - FB    7 99 POLY(5) VB VC VE VLP VLN 0 248.0E6 -250E6 250E6 250E6 -250E6
+    [1;32m2021-02-21 14:03:08,003[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - FB    7 99 POLY(5) VB VC VE VLP VLN 0 248.0E6 -250E6 250E6 250E6 -250E6
+    [1;32m2021-02-21 14:03:08,003[0m - [1;34mPySpice.Spice.Library.Library.__init__[0m - [1;31mDEBUG[0m - Parse /github/workspace/lib/spice/cmos/4069ub.lib
+    [1;32m2021-02-21 14:03:08,004[0m - [1;34mPySpice.Spice.Library.Library.__init__[0m - [1;31mDEBUG[0m - Parse /github/workspace/lib/spice/cmos/CD4069UB-hex.lib
+    [1;32m2021-02-21 14:03:08,005[0m - [1;34mPySpice.Spice.Library.Library.__init__[0m - [1;31mDEBUG[0m - Parse /github/workspace/lib/spice/transistor/bc5x7.lib
+    [1;32m2021-02-21 14:03:08,005[0m - [1;34mPySpice.Spice.Library.Library.__init__[0m - [1;31mDEBUG[0m - Parse /github/workspace/lib/spice/transistor/2N3906.LIB
+    [1;32m2021-02-21 14:03:08,006[0m - [1;34mPySpice.Spice.Library.Library.__init__[0m - [1;31mDEBUG[0m - Parse /github/workspace/lib/spice/transistor/BCV62C.lib
+    [1;32m2021-02-21 14:03:08,007[0m - [1;34mPySpice.Spice.Library.Library.__init__[0m - [1;31mDEBUG[0m - Parse /github/workspace/lib/spice/transistor/BC547.mod
+    [1;32m2021-02-21 14:03:08,008[0m - [1;34mPySpice.Spice.Library.Library.__init__[0m - [1;31mDEBUG[0m - Parse /github/workspace/lib/spice/diode/led.lib
+    [1;32m2021-02-21 14:03:08,008[0m - [1;34mPySpice.Spice.Library.Library.__init__[0m - [1;31mDEBUG[0m - Parse /github/workspace/lib/spice/diode/1N4148.mod
+
+-->
+
+<!-- mk scoped -->
+<div class="container my-2">
+  <h2 class="subtitle is-lowercase" id="amplitude-modulation">amplitude modulation</h2>
+
+  <p>Amplitude Modulation has its origin in electronic communication technology. It is used in radio transmission where an audio signal is modulated on a carrier signal. Amplitude Modulation is also used in synthesizers. When both signals in a VCA are in the audio range, the resulting audio signal has added timbre. Amplitude Modulation is also used in a Ring Modulator. Ring modulation adds frequencies to the audio signal which gives it a different characteristic. The resulting audio signal has some ‘metallic’ sound. The popular usage of Ring Modulation is the <a href="https://de.wikipedia.org/wiki/Die_Daleks">Dalek</a> voice from the BBC series <a href="https://de.wikipedia.org/wiki/Doctor_Who">Doctor Who</a>.</p>
+
+  <p>In amplitude modulation the amplitude (signal strength) of the carrier changes in proportion to the message signal.</p>
+
+</div>
+
+<!-- mk scoped -->
+<div class="container my-2">
+
+\[\begin{array}{c}
+c(t) = A \sin(2 \pi f_c t)\,
+\end{array}\]
+
+</div>
+
+<!-- mk scoped -->
+<div class="container my-2">
+  <p>Where A is the amplitude of the carrier singal and the function of f the modulation signal. Amplitude Modulation is a multiplication of the two signals.</p>
+</div>
+
+<div class="section">
+  <div class="container has-text-centered my-2">
+
+    <p><img src="/elektrophon/assets/ringmodulator_files/ringmodulator_4_0.svg" alt="svg" /></p>
+
+  </div>
+</div>
+
+<!-- mk scoped -->
+<div class="container my-2">
+  <p>Here the carrier frequency is 1kHz and the modulation frequency is 200Hz. The carrier frequency is modulated by the modulation frequency. When the modulation signal is negative the resulting signal has a phase shift of 180°. The frequency analysis shows that the two sidebands are created at 800Hz and 1200Hz. The modulation frequency is added and subtracted from the base frequency. This is called a double-sideband with suppressed carrier (DSBSC).</p>
+</div>
+
+<div class="section">
+  <div class="container has-text-centered my-2">
+
+    <p><img src="/elektrophon/assets/ringmodulator_files/ringmodulator_6_0.svg" alt="svg" /></p>
+
+  </div>
+</div>
+
+<!-- mk scoped -->
+<div class="container my-2">
+  <p>When the carrier frequency is added to the result, we see two things. First, the final signal is not phase-shifted when the base signal is negative. Second, the carrier signal is part of the final signal. This is basic amplitude modulation. but notice that the output amplitude is twice the input.</p>
+</div>
+
+<!-- mk scoped -->
+<div class="container my-2">
+  <h2 class="subtitle is-lowercase" id="long-tailed-pair">Long tailed pair</h2>
+
+  <p>The long-tailed pair or differential amplifier is probably the most widely used circuit building block. For example, the long-tailed pair is the base for op-amps. Also in synthesizer circuits, we see the long-tailed pair a lot for converting CV signals into current. This circuit can be implemented with BJTs or MOSFETs. The differential pair multiplies the voltage difference between the two inputs with the differential gain. The differential gain can be configured with the current in the long tail. The output can be taken either from one side or the difference from both sides.</p>
+</div>
+
+<!-- execute result -->
+
+<div class="section">
+  <div class="container has-text-centered my-2">
+
+    <p><img src="/elektrophon/assets/ringmodulator_files/ringmodulator_9_0.svg" alt="svg" /></p>
+
+  </div>
+</div>
+
+<!-- mk scoped -->
+<div class="container my-2">
+  <p>In this typical vca configuration, the audio signal is applied to the transistor Q1 where Q2 is grounded. The multiplication factor, or current, is set with the transistor Q3. The output is the difference of OUTa and OUTb (OUTb - OUTa).</p>
+</div>
+
+<!-- 
+    [1;32m2021-02-21 14:03:09,440[0m - [1;34mPySpice.Spice.NgSpice.Shared.NgSpiceShared.new_instance[0m - [1;31mDEBUG[0m - New instance for id 0
+    [1;32m2021-02-21 14:03:09,441[0m - [1;34mPySpice.Spice.NgSpice.Shared.NgSpiceShared._load_library[0m - [1;31mDEBUG[0m - Set locale LC_NUMERIC to C
+    [1;32m2021-02-21 14:03:09,464[0m - [1;34mPySpice.Spice.NgSpice.Shared.NgSpiceShared._load_library[0m - [1;31mDEBUG[0m - Load library libngspice.so
+    [1;32m2021-02-21 14:03:09,482[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout ******'
+    [1;32m2021-02-21 14:03:09,483[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout ** ngspice-32 shared library'
+    [1;32m2021-02-21 14:03:09,484[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout ** Creation Date: Tue Jun  9 21:35:26 UTC 2020'
+    [1;32m2021-02-21 14:03:09,484[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout ******'
+    [1;32m2021-02-21 14:03:09,487[0m - [1;34mPySpice.Spice.NgSpice.Shared.NgSpiceShared.exec_command[0m - [1;31mDEBUG[0m - Execute command: version -f
+    [1;32m2021-02-21 14:03:09,488[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout ******'
+    [1;32m2021-02-21 14:03:09,489[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout ** ngspice-32 : Circuit level simulation program'
+    [1;32m2021-02-21 14:03:09,490[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout ** The U. C. Berkeley CAD Group'
+    [1;32m2021-02-21 14:03:09,490[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout ** Copyright 1985-1994, Regents of the University of California.'
+    [1;32m2021-02-21 14:03:09,491[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout ** Copyright 2001-2020, The ngspice team.'
+    [1;32m2021-02-21 14:03:09,491[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout ** Please get your ngspice manual from http://ngspice.sourceforge.net/docs.html'
+    [1;32m2021-02-21 14:03:09,495[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout ** Please file your bug-reports at http://ngspice.sourceforge.net/bugrep.html'
+    [1;32m2021-02-21 14:03:09,496[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout ** Creation Date: Tue Jun  9 21:35:26 UTC 2020'
+    [1;32m2021-02-21 14:03:09,497[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout **'
+    [1;32m2021-02-21 14:03:09,498[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout ** CIDER 1.b1 (CODECS simulator) included'
+    [1;32m2021-02-21 14:03:09,498[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout ** XSPICE extensions included'
+    [1;32m2021-02-21 14:03:09,499[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b"stdout ** Relevant compilation options (refer to user's manual):"
+    [1;32m2021-02-21 14:03:09,499[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout ** OpenMP multithreading for BSIM3, BSIM4 enabled'
+    [1;32m2021-02-21 14:03:09,500[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout ** X11 interface not compiled into ngspice'
+    [1;32m2021-02-21 14:03:09,500[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout **'
+    [1;32m2021-02-21 14:03:09,501[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout ******'
+    [1;32m2021-02-21 14:03:09,502[0m - [1;34mPySpice.Spice.NgSpice.Shared.NgSpiceShared._get_version[0m - [1;31mDEBUG[0m - Ngspice version 32 with extensions: CIDER, XSPICE
+    [1;32m2021-02-21 14:03:09,502[0m - [1;34mPySpice.Spice.NgSpice.Shared.NgSpiceShared.exec_command[0m - [1;31mDEBUG[0m - Execute command: set nomoremode
+    [1;32m2021-02-21 14:03:09,505[0m - [1;34mPySpice.Spice.NgSpice.Simulation.NgSpiceSharedCircuitSimulator._run[0m - [1;31mDEBUG[0m - desk
+    .title differential pair
+    .include /github/workspace/lib/spice/transistor/BC547.mod
+    V1 +15V 0 DC 15
+    V2 -15V 0 DC -15
+    V3 IN_a 0 DC 0V AC 0V SIN(0 25m 1k)
+    V4 IN_b 0 DC 0V AC 0V SIN(0 5 100)
+    Q1 OUT_A IN_a R3_in BC547B
+    Q2 OUT_B 0 R3_in BC547B
+    Q3 0 IN_b R3_out BC547B
+    R1 OUT_A +15V 15kOhm
+    R2 OUT_B +15V 15kOhm
+    R3 R3_in R3_out 33kOhm
+    R4 R3_out -15V 15kOhm
+    .options TEMP = 25C
+    .options TNOM = 25C
+    .ic 
+    .tran 1us 20ms 0ms
+    .end
+    
+    [1;32m2021-02-21 14:03:09,505[0m - [1;34mPySpice.Spice.NgSpice.Shared.NgSpiceShared.exec_command[0m - [1;31mDEBUG[0m - Execute command: destroy all
+    [1;32m2021-02-21 14:03:09,507[0m - [1;34mPySpice.Spice.NgSpice.Shared.NgSpiceShared.load_circuit[0m - [1;31mDEBUG[0m - ngSpice_Circ
+    .title differential pair
+    .include /github/workspace/lib/spice/transistor/BC547.mod
+    V1 +15V 0 DC 15
+    V2 -15V 0 DC -15
+    V3 IN_a 0 DC 0V AC 0V SIN(0 25m 1k)
+    V4 IN_b 0 DC 0V AC 0V SIN(0 5 100)
+    Q1 OUT_A IN_a R3_in BC547B
+    Q2 OUT_B 0 R3_in BC547B
+    Q3 0 IN_b R3_out BC547B
+    R1 OUT_A +15V 15kOhm
+    R2 OUT_B +15V 15kOhm
+    R3 R3_in R3_out 33kOhm
+    R4 R3_out -15V 15kOhm
+    .options TEMP = 25C
+    .options TNOM = 25C
+    .ic 
+    .tran 1us 20ms 0ms
+    .end
+    
+    [1;32m2021-02-21 14:03:09,515[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout Circuit: differential pair'
+    [1;32m2021-02-21 14:03:09,516[0m - [1;34mPySpice.Spice.NgSpice.Shared.NgSpiceShared.exec_command[0m - [1;31mDEBUG[0m - Execute command: run
+    [1;32m2021-02-21 14:03:09,517[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout Doing analysis at TEMP = 25.000000 and TNOM = 25.000000'
+    [1;32m2021-02-21 14:03:09,517[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout Initial Transient Solution'
+    [1;32m2021-02-21 14:03:09,518[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout --------------------------'
+    [1;32m2021-02-21 14:03:09,518[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout Node                                   Voltage'
+    [1;32m2021-02-21 14:03:09,519[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout ----                                   -------'
+    [1;32m2021-02-21 14:03:09,520[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout +15v                                        15'
+    [1;32m2021-02-21 14:03:09,520[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout -15v                                       -15'
+    [1;32m2021-02-21 14:03:09,521[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout in_a                                         0'
+    [1;32m2021-02-21 14:03:09,521[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout in_b                                         0'
+    [1;32m2021-02-21 14:03:09,521[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout out_a                                  14.9632'
+    [1;32m2021-02-21 14:03:09,522[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout r3_in                                -0.472726'
+    [1;32m2021-02-21 14:03:09,522[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout out_b                                  14.9632'
+    [1;32m2021-02-21 14:03:09,522[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout r3_out                               -0.635594'
+    [1;32m2021-02-21 14:03:09,523[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout v4#branch                         -3.62234e-06'
+    [1;32m2021-02-21 14:03:09,523[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout v3#branch                         -1.72549e-08'
+    [1;32m2021-02-21 14:03:09,524[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout v2#branch                          0.000957627'
+    [1;32m2021-02-21 14:03:09,524[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout v1#branch                         -4.90089e-06'
+    [1;32m2021-02-21 14:03:09,525[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b' Reference value :  0.00000e+00\r'
+    [1;32m2021-02-21 14:03:09,746[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout No. of Data Rows : 20008'
+    [1;32m2021-02-21 14:03:09,747[0m - [1;34mPySpice.Spice.NgSpice.Shared.NgSpiceShared.run[0m - [1;31mDEBUG[0m - Simulation is done
+    [1;32m2021-02-21 14:03:09,748[0m - [1;34mPySpice.Spice.NgSpice.Simulation.NgSpiceSharedCircuitSimulator._run[0m - [1;31mDEBUG[0m - ['tran1', 'const']
+
+-->
+
+<!-- 
+    [1;32m2021-02-21 14:03:09,779[0m - [1;34mPySpice.Probe.WaveForm.WaveForm.__array_ufunc__[0m - [1;31mDEBUG[0m - Conversion for <ufunc 'true_divide'> is NEW_UNIT
+    [1;32m2021-02-21 14:03:09,782[0m - [1;34mPySpice.Probe.WaveForm.WaveForm.__array_ufunc__[0m - [1;31mDEBUG[0m - Conversion for <ufunc 'subtract'> is UNIT_MATCH
+
+-->
+
+<div class="section">
+  <div class="container has-text-centered my-2">
+
+    <p><img src="/elektrophon/assets/ringmodulator_files/ringmodulator_13_1.svg" alt="svg" /></p>
+
+  </div>
+</div>
+
+<!-- mk scoped -->
+<div class="container my-2">
+  <p>The output (red) is the signal multiplied by the input at the long tail. But we see that only the negative signal creates amplification. When the signal is positive the output is silent. This circuit can be useful for a VCA where a DC envelope is applied.</p>
+</div>
+
+<!-- mk scoped -->
+<div class="container my-2">
+  <h2 class="subtitle is-lowercase" id="gilbert-cell">gilbert cell</h2>
+
+  <p>Another circuit for the multiplication of two signals is the Gilbert Cell. Although everybody calls it the Gilbert Cell, it is not invented by <a href="https://en.wikipedia.org/wiki/Barrie_Gilbert">Barrie Gilbert</a>. The circuit was first used by Howard Jones in 1963. But Barrie Gilbert invented and augmented it independently and made it a common building block in analog electronics. The Gilbert Cell essentially comprises two differential transistor pairs whose bias current is controlled by one of the input signals.</p>
+</div>
+
+<!-- execute result -->
+
+<div class="section">
+  <div class="container has-text-centered my-2">
+
+    <p><img src="/elektrophon/assets/ringmodulator_files/ringmodulator_16_0.svg" alt="svg" /></p>
+
+  </div>
+</div>
+
+<!-- mk scoped -->
+<div class="container my-2">
+  <p>It is not so easy to create a discrete Gilbert Cell. All the transistors have to be matched. The most tricky part is the biasing of the input signals. Here the audio signal is biased with a voltage of -7.5V (Vbias). The carrier is biased by the -15V in the long tail. This allows, that the carrier signal can also be a DC signal, like an envelope. This is a very crude implementation of a Gilbert Cell, which most likely is not precise and would add a lot of noise to the output.</p>
+</div>
+
+<!-- 
+    [1;32m2021-02-21 14:03:10,971[0m - [1;34mPySpice.Spice.NgSpice.Simulation.NgSpiceSharedCircuitSimulator._run[0m - [1;31mDEBUG[0m - desk
+    .title gilbert cell
+    .include /github/workspace/lib/spice/transistor/BC547.mod
+    V1 +15V 0 DC 15
+    V2 -15V 0 DC -15
+    V3 IN_x 0 DC 0V AC 0V SIN(0 10m 1k)
+    V4 IN_y 0 DC 0V AC 0V SIN(0 20m 100)
+    V5 Vbias 0 DC -7.5V
+    R1 OUT_a +15V 720Ohm
+    R2 OUT_b +15V 720Ohm
+    R3 R3_in -15V 720Ohm
+    R4 R4_out Vbias 2.2kOhm
+    R5 R5_out Vbias 2.2kOhm
+    C1 IN_x R4_out 0.22uF
+    Q1 OUT_a IN_y emitter_left BC547B
+    Q2 OUT_b 0 emitter_left BC547B
+    Q3 OUT_a 0 emitter_right BC547B
+    Q4 OUT_b IN_y emitter_right BC547B
+    Q5 emitter_left R4_out R3_in BC547B
+    Q6 emitter_right R5_out R3_in BC547B
+    .options TEMP = 25C
+    .options TNOM = 25C
+    .ic 
+    .tran 1us 20ms 0ms
+    .end
+    
+    [1;32m2021-02-21 14:03:10,972[0m - [1;34mPySpice.Spice.NgSpice.Shared.NgSpiceShared.exec_command[0m - [1;31mDEBUG[0m - Execute command: destroy all
+    [1;32m2021-02-21 14:03:10,973[0m - [1;34mPySpice.Spice.NgSpice.Shared.NgSpiceShared.load_circuit[0m - [1;31mDEBUG[0m - ngSpice_Circ
+    .title gilbert cell
+    .include /github/workspace/lib/spice/transistor/BC547.mod
+    V1 +15V 0 DC 15
+    V2 -15V 0 DC -15
+    V3 IN_x 0 DC 0V AC 0V SIN(0 10m 1k)
+    V4 IN_y 0 DC 0V AC 0V SIN(0 20m 100)
+    V5 Vbias 0 DC -7.5V
+    R1 OUT_a +15V 720Ohm
+    R2 OUT_b +15V 720Ohm
+    R3 R3_in -15V 720Ohm
+    R4 R4_out Vbias 2.2kOhm
+    R5 R5_out Vbias 2.2kOhm
+    C1 IN_x R4_out 0.22uF
+    Q1 OUT_a IN_y emitter_left BC547B
+    Q2 OUT_b 0 emitter_left BC547B
+    Q3 OUT_a 0 emitter_right BC547B
+    Q4 OUT_b IN_y emitter_right BC547B
+    Q5 emitter_left R4_out R3_in BC547B
+    Q6 emitter_right R5_out R3_in BC547B
+    .options TEMP = 25C
+    .options TNOM = 25C
+    .ic 
+    .tran 1us 20ms 0ms
+    .end
+    
+    [1;32m2021-02-21 14:03:10,974[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout Circuit: gilbert cell'
+    [1;32m2021-02-21 14:03:10,977[0m - [1;34mPySpice.Spice.NgSpice.Shared.NgSpiceShared.exec_command[0m - [1;31mDEBUG[0m - Execute command: run
+    [1;32m2021-02-21 14:03:10,979[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout Doing analysis at TEMP = 25.000000 and TNOM = 25.000000'
+    [1;32m2021-02-21 14:03:10,980[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout Initial Transient Solution'
+    [1;32m2021-02-21 14:03:10,982[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout --------------------------'
+    [1;32m2021-02-21 14:03:10,982[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout Node                                   Voltage'
+    [1;32m2021-02-21 14:03:10,983[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout ----                                   -------'
+    [1;32m2021-02-21 14:03:10,984[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout +15v                                        15'
+    [1;32m2021-02-21 14:03:10,985[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout -15v                                       -15'
+    [1;32m2021-02-21 14:03:10,986[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout in_x                                         0'
+    [1;32m2021-02-21 14:03:10,986[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout in_y                                         0'
+    [1;32m2021-02-21 14:03:10,987[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout vbias                                     -7.5'
+    [1;32m2021-02-21 14:03:10,988[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout out_a                                  11.6261'
+    [1;32m2021-02-21 14:03:10,989[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout out_b                                  11.6261'
+    [1;32m2021-02-21 14:03:10,989[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout r3_in                                 -8.21224'
+    [1;32m2021-02-21 14:03:10,990[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout r4_out                                -7.53114'
+    [1;32m2021-02-21 14:03:10,991[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout r5_out                                -7.53114'
+    [1;32m2021-02-21 14:03:10,991[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout emitter_left                         -0.655766'
+    [1;32m2021-02-21 14:03:10,992[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout emitter_right                        -0.655766'
+    [1;32m2021-02-21 14:03:10,993[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout v5#branch                         -2.83079e-05'
+    [1;32m2021-02-21 14:03:10,993[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout v4#branch                         -1.35339e-05'
+    [1;32m2021-02-21 14:03:10,994[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout v3#branch                                    0'
+    [1;32m2021-02-21 14:03:10,995[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout v2#branch                           0.00942745'
+    [1;32m2021-02-21 14:03:10,995[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout v1#branch                          -0.00937207'
+    [1;32m2021-02-21 14:03:10,996[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b' Reference value :  0.00000e+00\r'
+    [1;32m2021-02-21 14:03:11,245[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b' Reference value :  1.67483e-02\r'
+    [1;32m2021-02-21 14:03:11,291[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout No. of Data Rows : 20008'
+    [1;32m2021-02-21 14:03:11,291[0m - [1;34mPySpice.Spice.NgSpice.Shared.NgSpiceShared.run[0m - [1;31mDEBUG[0m - Simulation is done
+    [1;32m2021-02-21 14:03:11,292[0m - [1;34mPySpice.Spice.NgSpice.Simulation.NgSpiceSharedCircuitSimulator._run[0m - [1;31mDEBUG[0m - ['tran1', 'const']
+
+-->
+
+<!-- 
+    [1;32m2021-02-21 14:03:11,321[0m - [1;34mPySpice.Probe.WaveForm.WaveForm.__array_ufunc__[0m - [1;31mDEBUG[0m - Conversion for <ufunc 'multiply'> is NEW_UNIT
+    [1;32m2021-02-21 14:03:11,325[0m - [1;34mPySpice.Probe.WaveForm.WaveForm.__array_ufunc__[0m - [1;31mDEBUG[0m - Conversion for <ufunc 'subtract'> is UNIT_MATCH
+
+-->
+
+<div class="section">
+  <div class="container has-text-centered my-2">
+
+    <p><img src="/elektrophon/assets/ringmodulator_files/ringmodulator_19_1.svg" alt="svg" /></p>
+
+  </div>
+</div>
+
+<!-- mk scoped -->
+<div class="container my-2">
+  <p>The plot shows, that the Gilbert Cell does work as excpected and creates real amplitude modulation with double sideband and supressed carrier.</p>
+</div>
+
+<!-- mk scoped -->
+<div class="container my-2">
+  <h2 class="subtitle is-lowercase" id="analog-multiplier">Analog Multiplier</h2>
+
+  <p>We saw that multiple types of multiplier circuits behave differently. Of course, this is a well-defined behaviour. The multipliers are classified in three types. The types are called quadrants. In the following table the different quadrants are listed and for which signal type they can be used.</p>
+
+  <div class="columns is-centered my-4">
+    <div class="column is-narrow">
+
+      <table class="table is-striped is-hoverable is-narrow has-text-centered">
+        <thead>
+          <tr>
+            <th>Type</th>
+            <th>X [V]</th>
+            <th>Y  [V]</th>
+            <th>Out [V]</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1-Quadrant</td>
+            <td>Unipolar</td>
+            <td>Unipolar</td>
+            <td>Unipolar</td>
+          </tr>
+          <tr>
+            <td>2-Quadrant</td>
+            <td>Bipolar</td>
+            <td>Unipolar</td>
+            <td>Bipolar</td>
+          </tr>
+          <tr>
+            <td>4-Quadrant</td>
+            <td>Bipolar</td>
+            <td>Bipolar</td>
+            <td>Bipolar</td>
+          </tr>
+        </tbody>
+      </table>
+
+    </div>
+  </div>
+
+  <p>The simulation showed that the long-tailed pair is a 2-quadrant multiplier. The X signal can be an audio signal but the Y signal has to be unipolar, for example, an envelope. In contrast, the Gilbert Cell is a four-quadrant multiplier and allows both signals to be bipolar. The Gilbert Cell can be used as a Ring Modulator. of course, a 4-quadrant multiplier also works correctly when one signal is unipolar. But the output signal would be the same as with a 2-quadrant multiplier.</p>
+
+</div>
+
+<!-- mk scoped -->
+<div class="container my-2">
+  <h2 class="subtitle is-lowercase" id="conclusion">conclusion</h2>
+
+  <p>There are different circuits for multiplication of signals. The choice of the circuit depends on the nature of the signal and the required functions we want to apply to them. Here only circuits using BJT’s are shown. The downside of these circuits is that all the transistors have to be properly matched. In my experience, they are also very sensitive to noise. My take on a discrete Gilbert Cell produced to much noise to be useful. There are also integrated circuits which implement a VCA or multiplier available. For a simple VCA the <a href="https://www.ti.com/lit/ds/symlink/lm13700.pdf">LM13700</a> is a good choice. There are also integrated circuits available which implement the Gilbert Cell. One example is the <a href="https://www.analog.com/media/en/technical-documentation/data-sheets/AD633.pdf">AD633</a> from Analog Devices. This chip is very handy, it offers the right input and output impedances. No buffering or biasing of the signals is necessary. It is a very precise multiplier, which of course has some price.</p>
+</div>
+
+<!-- mk scoped -->
+<div class="container my-2">
+  <h2 class="subtitle is-lowercase" id="references">references</h2>
+
+  <ul>
+    <li><a href="https://www.ti.com/lit/ds/symlink/lm13700.pdf">LM13700</a> Datasheet</li>
+    <li><a href="https://www.analog.com/media/en/technical-documentation/data-sheets/AD633.pdf">AD633</a> Datasheet</li>
+    <li>VCA Techniques Investigated by <a href="https://sound-au.com/articles/vca-techniques.html">Rod Elliott (ESP)</a></li>
+    <li><a href="https://mybinder.org/v2/gh/spielhuus/elektrophon/HEAD?filepath=content%2Fringmodulator%2Fringmodulator.ipynb"><img src="https://mybinder.org/badge_logo.svg" alt="Binder" /></a></li>
+  </ul>
+
+</div>
+
+        </div>        
+    </div>
+</div>
+
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    
+        <footer class="footer">
+    <div class="container">
+      <div class="content has-text-centered">
+        <div class="soc">
+          <a href="#"><i class="fa fa-github-alt fa-lg" aria-hidden="true"></i></a>
+          <a href="#"><i class="fa fa-youtube fa-lg" aria-hidden="true"></i></a>
+          <a href="#"><i class="fa fa-facebook fa-lg" aria-hidden="true"></i></a>
+          <a href="#"><i class="fa fa-twitter fa-lg" aria-hidden="true"></i></a>
+        </div>
+        <p>
+          <strong>Bulma</strong> by <a href="http://jgthms.com">Jeremy Thomas</a>.
+          The source code is licensed <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. <br>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+<!-- footer class="footer">
+<data class="u-url" href="/elektrophon/"></data>
+<div class="content has-text-centered">
+
+    <div class="footer-col-wrapper">
+    <div class="footer-col">
+        <p class="feed-subscribe">
+        <a href="/elektrophon/feed.xml">
+            <svg class="svg-icon orange">
+            <use xlink:href="/elektrophon/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+        </a>
+        </p>
+        <ul class="contact-list">
+        <li class="p-name">spielhuus</li>
+        <li><a class="u-email" href="mailto:spielhus@gmail.com">spielhus@gmail.com</a></li>
+        </ul>
+    </div>
+    <div class="footer-col">
+        <p>analog and digital modules for an electroacustic instrument.
+</p>
+    </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"></ul></div>
+</div>
+</footer -->
+<!-- script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script -->
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    
+    <script src="/elektrophon/assets/js/main.js" type="text/javascript"></script></body>
+</html>

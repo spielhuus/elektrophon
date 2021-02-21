@@ -1,0 +1,1229 @@
+
+
+
+
+<!DOCTYPE html>
+<html  class="has-navbar-fixed-top" >
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content=#ffffff>
+    <link rel="stylesheet" href="/elektrophon/assets/css/main.css">
+    <link rel="shortcut icon" type="image/png"
+           href="/elektrophon/favicon.png" 
+    />
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.7.0/dist/alpine.min.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/fontawesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/brands.min.css">
+    
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-social@1/bin/bulma-social.min.css">
+    
+    <!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>cmos buffer | elektrophon</title>
+<meta name="generator" content="Jekyll v4.2.0" />
+<meta property="og:title" content="cmos buffer" />
+<meta name="author" content="spielhuus" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="this is an article series about the CD4069UBE. in the first article the chip is ‘missused’ for linear amplification and the simulation is analyzed. it is importand that the chip is unbuffered (UBE), the buffered chip will do the inverse binary logic and can not be used for linear amplification." />
+<meta property="og:description" content="this is an article series about the CD4069UBE. in the first article the chip is ‘missused’ for linear amplification and the simulation is analyzed. it is importand that the chip is unbuffered (UBE), the buffered chip will do the inverse binary logic and can not be used for linear amplification." />
+<link rel="canonical" href="https://spielhuus.github.io//elektrophon/article/2020/12/06/cmos_buffer.html" />
+<meta property="og:url" content="https://spielhuus.github.io//elektrophon/article/2020/12/06/cmos_buffer.html" />
+<meta property="og:site_name" content="elektrophon" />
+<meta property="og:image" content="https://spielhuus.github.io//elektrophon/assets/cmos_buffer_files/cd4069.jpg" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-12-06T00:00:00+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://spielhuus.github.io//elektrophon/assets/cmos_buffer_files/cd4069.jpg" />
+<meta property="twitter:title" content="cmos buffer" />
+<script type="application/ld+json">
+{"image":"https://spielhuus.github.io//elektrophon/assets/cmos_buffer_files/cd4069.jpg","@type":"BlogPosting","headline":"cmos buffer","dateModified":"2020-12-06T00:00:00+00:00","datePublished":"2020-12-06T00:00:00+00:00","url":"https://spielhuus.github.io//elektrophon/article/2020/12/06/cmos_buffer.html","mainEntityOfPage":{"@type":"WebPage","@id":"https://spielhuus.github.io//elektrophon/article/2020/12/06/cmos_buffer.html"},"author":{"@type":"Person","name":"spielhuus"},"description":"this is an article series about the CD4069UBE. in the first article the chip is ‘missused’ for linear amplification and the simulation is analyzed. it is importand that the chip is unbuffered (UBE), the buffered chip will do the inverse binary logic and can not be used for linear amplification.","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+</head>
+  <body>
+    <nav class="navbar is-light  is-fixed-top  has-shadow">
+  <div class="container">
+      <div class="navbar-brand">
+          <a href="/elektrophon/" class="navbar-item is-italic is-bold is-lowercase">
+              elektrophon
+          </a>
+          <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navMenu">
+              <span aria-hidden="true"></span>
+              <span aria-hidden="true"></span>
+              <span aria-hidden="true"></span>
+          </a>
+      </div>
+      <div class="navbar-menu" id="navMenu">
+          <div class="navbar-end">
+              
+              
+                  
+                  <a href="/elektrophon/article/" class="navbar-item ">articles</a>
+                  
+              
+                  
+                  <a href="/elektrophon/module/" class="navbar-item ">modules</a>
+                  
+              
+                  
+                  <a href="/elektrophon/about.html" class="navbar-item ">about</a>
+                  
+              
+              
+          </div>
+      </div>
+  </div>
+</nav>
+    
+        <section class="hero  is-medium  is-bold is-primary"  style="background: url('/elektrophon/assets/cmos_buffer_files/cd4069.jpg') no-repeat center center; background-size: cover;" >
+    <div class="hero-body ">
+        <div class="container">
+            <h1 class="title is-title is-bold is-size-1 is-lowercase is-italic has-text-white">cmos buffer</h1>
+            <p class="subtitle itle is-title is-bold is-size-2 is-lowercase is-italic has-text-white"></p>
+            
+        </div>
+    </div>
+</section>
+    
+    
+
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                
+                <div class="column is-12">
+                    
+                    
+                    
+                    
+                    <div class="is-section">
+    <div class="container is-12">
+        <p class="has-text-weight-semibold">this is an article series about the CD4069UBE. in the first article the chip is 'missused' for linear amplification and the simulation is analyzed. it is importand that the chip is unbuffered (UBE), the buffered chip will do the inverse binary logic and can not be used for linear amplification.</p>
+        <div class="container">
+            <!-- 
+    [1;32m2021-02-21 13:55:20,850[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - Element don't define a __pins__ attribute
+    [1;32m2021-02-21 13:55:20,851[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - FixedPinElement don't define a __pins__ attribute
+    [1;32m2021-02-21 13:55:20,852[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - SubCircuitElement don't define a __pins__ attribute
+    [1;32m2021-02-21 13:55:20,855[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - Resistor don't define a __pins__ attribute
+    [1;32m2021-02-21 13:55:20,856[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - SemiconductorResistor don't define a __pins__ attribute
+    [1;32m2021-02-21 13:55:20,857[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - BehavioralResistor don't define a __pins__ attribute
+    [1;32m2021-02-21 13:55:20,858[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - Capacitor don't define a __pins__ attribute
+    [1;32m2021-02-21 13:55:20,859[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - SemiconductorCapacitor don't define a __pins__ attribute
+    [1;32m2021-02-21 13:55:20,860[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - BehavioralCapacitor don't define a __pins__ attribute
+    [1;32m2021-02-21 13:55:20,861[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - Inductor don't define a __pins__ attribute
+    [1;32m2021-02-21 13:55:20,861[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - BehavioralInductor don't define a __pins__ attribute
+    [1;32m2021-02-21 13:55:20,862[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - CoupledInductor don't define a __pins__ attribute
+    [1;32m2021-02-21 13:55:20,862[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - VoltageControlledSwitch don't define a __pins__ attribute
+    [1;32m2021-02-21 13:55:20,863[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - CurrentControlledSwitch don't define a __pins__ attribute
+    [1;32m2021-02-21 13:55:20,863[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - VoltageSource don't define a __pins__ attribute
+    [1;32m2021-02-21 13:55:20,864[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - CurrentSource don't define a __pins__ attribute
+    [1;32m2021-02-21 13:55:20,864[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - VoltageControlledCurrentSource don't define a __pins__ attribute
+    [1;32m2021-02-21 13:55:20,865[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - VoltageControlledVoltageSource don't define a __pins__ attribute
+    [1;32m2021-02-21 13:55:20,865[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - CurrentControlledCurrentSource don't define a __pins__ attribute
+    [1;32m2021-02-21 13:55:20,866[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - CurrentControlledVoltageSource don't define a __pins__ attribute
+    [1;32m2021-02-21 13:55:20,866[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - BehavioralSource don't define a __pins__ attribute
+    [1;32m2021-02-21 13:55:20,867[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - NonLinearVoltageSource don't define a __pins__ attribute
+    [1;32m2021-02-21 13:55:20,868[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - NonLinearCurrentSource don't define a __pins__ attribute
+    [1;32m2021-02-21 13:55:20,868[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - JunctionFieldEffectTransistor don't define a __pins__ attribute
+    [1;32m2021-02-21 13:55:20,869[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - Mesfet don't define a __pins__ attribute
+    [1;32m2021-02-21 13:55:20,870[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - LosslessTransmissionLine don't define a __pins__ attribute
+    [1;32m2021-02-21 13:55:20,870[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - LossyTransmission don't define a __pins__ attribute
+    [1;32m2021-02-21 13:55:20,871[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - CoupledMulticonductorLine don't define a __pins__ attribute
+    [1;32m2021-02-21 13:55:20,871[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - SingleLossyTransmissionLine don't define a __pins__ attribute
+    [1;32m2021-02-21 13:55:20,872[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - XSpiceElement don't define a __pins__ attribute
+    [1;32m2021-02-21 13:55:20,872[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - GSSElement don't define a __pins__ attribute
+    [1;32m2021-02-21 13:55:20,873[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - SinusoidalVoltageSource don't define a __pins__ attribute
+    [1;32m2021-02-21 13:55:20,874[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - SinusoidalCurrentSource don't define a __pins__ attribute
+    [1;32m2021-02-21 13:55:20,875[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - AcLine don't define a __pins__ attribute
+    [1;32m2021-02-21 13:55:20,875[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - PulseVoltageSource don't define a __pins__ attribute
+    [1;32m2021-02-21 13:55:20,876[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - PulseCurrentSource don't define a __pins__ attribute
+    [1;32m2021-02-21 13:55:20,876[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - ExponentialVoltageSource don't define a __pins__ attribute
+    [1;32m2021-02-21 13:55:20,877[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - ExponentialCurrentSource don't define a __pins__ attribute
+    [1;32m2021-02-21 13:55:20,877[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - PieceWiseLinearVoltageSource don't define a __pins__ attribute
+    [1;32m2021-02-21 13:55:20,877[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - PieceWiseLinearCurrentSource don't define a __pins__ attribute
+    [1;32m2021-02-21 13:55:20,878[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - SingleFrequencyFMVoltageSource don't define a __pins__ attribute
+    [1;32m2021-02-21 13:55:20,878[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - SingleFrequencyFMCurrentSource don't define a __pins__ attribute
+    [1;32m2021-02-21 13:55:20,879[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - AmplitudeModulatedVoltageSource don't define a __pins__ attribute
+    [1;32m2021-02-21 13:55:20,879[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - AmplitudeModulatedCurrentSource don't define a __pins__ attribute
+    [1;32m2021-02-21 13:55:20,879[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - RandomVoltageSource don't define a __pins__ attribute
+    [1;32m2021-02-21 13:55:20,880[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - RandomCurrentSource don't define a __pins__ attribute
+    [1;32m2021-02-21 13:55:20,900[0m - [1;34mPySpice.Spice.Library.Library.__init__[0m - [1;31mDEBUG[0m - Parse /github/workspace/lib/spice/opamp/ad633.lib
+    [1;32m2021-02-21 13:55:20,902[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - FSY 8 5 POLY(2) VZC1 VZC2 (2.8286E-3,1,1) 
+    [1;32m2021-02-21 13:55:20,902[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - FSY 8 5 POLY(2) VZC1 VZC2 (2.8286E-3,1,1) 
+    [1;32m2021-02-21 13:55:20,903[0m - [1;34mPySpice.Spice.Library.Library.__init__[0m - [1;31mDEBUG[0m - Parse /github/workspace/lib/spice/opamp/LM324.lib
+    [1;32m2021-02-21 13:55:20,905[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - FB    7 99 POLY(5) VB VC VE VLP VLN 0 15.91E6 -20E6 20E6 20E6 -20E6
+    [1;32m2021-02-21 13:55:20,906[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - FB    7 99 POLY(5) VB VC VE VLP VLN 0 15.91E6 -20E6 20E6 20E6 -20E6
+    [1;32m2021-02-21 13:55:20,907[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - FB    7 99 POLY(5) VB VC VE VLP VLN 0 15.91E6 -20E6 20E6 20E6 -20E6
+    [1;32m2021-02-21 13:55:20,909[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - FB    7 99 POLY(5) VB VC VE VLP VLN 0 15.91E6 -20E6 20E6 20E6 -20E6
+    [1;32m2021-02-21 13:55:20,909[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - FB    7 99 POLY(5) VB VC VE VLP VLN 0 15.91E6 -20E6 20E6 20E6 -20E6
+    [1;32m2021-02-21 13:55:20,910[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - FB    7 99 POLY(5) VB VC VE VLP VLN 0 15.91E6 -20E6 20E6 20E6 -20E6
+    [1;32m2021-02-21 13:55:20,911[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - FB    7 99 POLY(5) VB VC VE VLP VLN 0 15.91E6 -20E6 20E6 20E6 -20E6
+    [1;32m2021-02-21 13:55:20,913[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - FB    7 99 POLY(5) VB VC VE VLP VLN 0 15.91E6 -20E6 20E6 20E6 -20E6
+    [1;32m2021-02-21 13:55:20,914[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - FB    7 99 POLY(5) VB VC VE VLP VLN 0 15.91E6 -20E6 20E6 20E6 -20E6
+    [1;32m2021-02-21 13:55:20,915[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - FB    7 99 POLY(5) VB VC VE VLP VLN 0 15.91E6 -20E6 20E6 20E6 -20E6
+    [1;32m2021-02-21 13:55:20,916[0m - [1;34mPySpice.Spice.Library.Library.__init__[0m - [1;31mDEBUG[0m - Parse /github/workspace/lib/spice/opamp/LM13700.MOD
+    [1;32m2021-02-21 13:55:20,917[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - F1  4  3  POLY(1)   V6 1E-10 5.129E-2 -1.189E4 1.123E9 
+    [1;32m2021-02-21 13:55:20,918[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - F1  4  3  POLY(1)   V6 1E-10 5.129E-2 -1.189E4 1.123E9 
+    [1;32m2021-02-21 13:55:20,918[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - F1  4  3  POLY(1)   V6 1E-10 5.129E-2 -1.189E4 1.123E9 
+    [1;32m2021-02-21 13:55:20,919[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - F1  4  3  POLY(1)   V6 1E-10 5.129E-2 -1.189E4 1.123E9 
+    [1;32m2021-02-21 13:55:20,920[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - F5  5  0  POLY(2)   V3 V7 0 0 0 0 1                  
+    [1;32m2021-02-21 13:55:20,920[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - F5  5  0  POLY(2)   V3 V7 0 0 0 0 1                  
+    [1;32m2021-02-21 13:55:20,921[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - F5  5  0  POLY(2)   V3 V7 0 0 0 0 1                  
+    [1;32m2021-02-21 13:55:20,922[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - F5  5  0  POLY(2)   V3 V7 0 0 0 0 1                  
+    [1;32m2021-02-21 13:55:20,922[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - F5  5  0  POLY(2)   V3 V7 0 0 0 0 1                  
+    [1;32m2021-02-21 13:55:20,923[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - F5  5  0  POLY(2)   V3 V7 0 0 0 0 1                  
+    [1;32m2021-02-21 13:55:20,924[0m - [1;34mPySpice.Spice.Library.Library.__init__[0m - [1;31mDEBUG[0m - Parse /github/workspace/lib/spice/opamp/OPA2134-dual.lib
+    [1;32m2021-02-21 13:55:20,925[0m - [1;34mPySpice.Spice.Library.Library.__init__[0m - [1;31mDEBUG[0m - Parse /github/workspace/lib/spice/opamp/TL072-dual.lib
+    [1;32m2021-02-21 13:55:20,926[0m - [1;34mPySpice.Spice.Library.Library.__init__[0m - [1;31mDEBUG[0m - Parse /github/workspace/lib/spice/opamp/LT1014x_30V.LIB
+    [1;32m2021-02-21 13:55:20,927[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - FB    7 99 POLY(5) VB VC VE VLP VLN 0 3.865E9 -4E9 4E9 4E9 -4E9
+    [1;32m2021-02-21 13:55:20,927[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - FB    7 99 POLY(5) VB VC VE VLP VLN 0 3.865E9 -4E9 4E9 4E9 -4E9
+    [1;32m2021-02-21 13:55:20,927[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - FB    7 99 POLY(5) VB VC VE VLP VLN 0 3.865E9 -4E9 4E9 4E9 -4E9
+    [1;32m2021-02-21 13:55:20,928[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - FB    7 99 POLY(5) VB VC VE VLP VLN 0 3.865E9 -4E9 4E9 4E9 -4E9
+    [1;32m2021-02-21 13:55:20,928[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - FB    7 99 POLY(5) VB VC VE VLP VLN 0 3.865E9 -4E9 4E9 4E9 -4E9
+    [1;32m2021-02-21 13:55:20,929[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - FB    7 99 POLY(5) VB VC VE VLP VLN 0 3.865E9 -4E9 4E9 4E9 -4E9
+    [1;32m2021-02-21 13:55:20,929[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - FB    7 99 POLY(5) VB VC VE VLP VLN 0 3.865E9 -4E9 4E9 4E9 -4E9
+    [1;32m2021-02-21 13:55:20,930[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - FB    7 99 POLY(5) VB VC VE VLP VLN 0 3.865E9 -4E9 4E9 4E9 -4E9
+    [1;32m2021-02-21 13:55:20,930[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - FB    7 99 POLY(5) VB VC VE VLP VLN 0 3.865E9 -4E9 4E9 4E9 -4E9
+    [1;32m2021-02-21 13:55:20,931[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - FB    7 99 POLY(5) VB VC VE VLP VLN 0 3.865E9 -4E9 4E9 4E9 -4E9
+    [1;32m2021-02-21 13:55:20,932[0m - [1;34mPySpice.Spice.Library.Library.__init__[0m - [1;31mDEBUG[0m - Parse /github/workspace/lib/spice/opamp/TL072.lib
+    [1;32m2021-02-21 13:55:20,934[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - FB    7 99 POLY(5) VB VC VE VLP VLN 0 4.715E6 -5E6 5E6 5E6 -5E6
+    [1;32m2021-02-21 13:55:20,934[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - FB    7 99 POLY(5) VB VC VE VLP VLN 0 4.715E6 -5E6 5E6 5E6 -5E6
+    [1;32m2021-02-21 13:55:20,935[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - FB    7 99 POLY(5) VB VC VE VLP VLN 0 4.715E6 -5E6 5E6 5E6 -5E6
+    [1;32m2021-02-21 13:55:20,935[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - FB    7 99 POLY(5) VB VC VE VLP VLN 0 4.715E6 -5E6 5E6 5E6 -5E6
+    [1;32m2021-02-21 13:55:20,935[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - FB    7 99 POLY(5) VB VC VE VLP VLN 0 4.715E6 -5E6 5E6 5E6 -5E6
+    [1;32m2021-02-21 13:55:20,936[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - FB    7 99 POLY(5) VB VC VE VLP VLN 0 4.715E6 -5E6 5E6 5E6 -5E6
+    [1;32m2021-02-21 13:55:20,936[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - FB    7 99 POLY(5) VB VC VE VLP VLN 0 4.715E6 -5E6 5E6 5E6 -5E6
+    [1;32m2021-02-21 13:55:20,937[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - FB    7 99 POLY(5) VB VC VE VLP VLN 0 4.715E6 -5E6 5E6 5E6 -5E6
+    [1;32m2021-02-21 13:55:20,938[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - FB    7 99 POLY(5) VB VC VE VLP VLN 0 4.715E6 -5E6 5E6 5E6 -5E6
+    [1;32m2021-02-21 13:55:20,938[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - FB    7 99 POLY(5) VB VC VE VLP VLN 0 4.715E6 -5E6 5E6 5E6 -5E6
+    [1;32m2021-02-21 13:55:20,939[0m - [1;34mPySpice.Spice.Library.Library.__init__[0m - [1;31mDEBUG[0m - Parse /github/workspace/lib/spice/opamp/LM13700d.MOD
+    [1;32m2021-02-21 13:55:20,941[0m - [1;34mPySpice.Spice.Library.Library.__init__[0m - [1;31mDEBUG[0m - Parse /github/workspace/lib/spice/opamp/LM324c.lib
+    [1;32m2021-02-21 13:55:20,942[0m - [1;34mPySpice.Spice.Library.Library.__init__[0m - [1;31mDEBUG[0m - Parse /github/workspace/lib/spice/opamp/CA3080.lib
+    [1;32m2021-02-21 13:55:20,943[0m - [1;34mPySpice.Spice.Library.Library.__init__[0m - [1;31mDEBUG[0m - Parse /github/workspace/lib/spice/opamp/OPA2134.LIB
+    [1;32m2021-02-21 13:55:20,944[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - FB    7 99 POLY(5) VB VC VE VLP VLN 0 248.0E6 -250E6 250E6 250E6 -250E6
+    [1;32m2021-02-21 13:55:20,944[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - FB    7 99 POLY(5) VB VC VE VLP VLN 0 248.0E6 -250E6 250E6 250E6 -250E6
+    [1;32m2021-02-21 13:55:20,945[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - FB    7 99 POLY(5) VB VC VE VLP VLN 0 248.0E6 -250E6 250E6 250E6 -250E6
+    [1;32m2021-02-21 13:55:20,945[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - FB    7 99 POLY(5) VB VC VE VLP VLN 0 248.0E6 -250E6 250E6 250E6 -250E6
+    [1;32m2021-02-21 13:55:20,945[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - FB    7 99 POLY(5) VB VC VE VLP VLN 0 248.0E6 -250E6 250E6 250E6 -250E6
+    [1;32m2021-02-21 13:55:20,946[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - FB    7 99 POLY(5) VB VC VE VLP VLN 0 248.0E6 -250E6 250E6 250E6 -250E6
+    [1;32m2021-02-21 13:55:20,946[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - FB    7 99 POLY(5) VB VC VE VLP VLN 0 248.0E6 -250E6 250E6 250E6 -250E6
+    [1;32m2021-02-21 13:55:20,947[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - FB    7 99 POLY(5) VB VC VE VLP VLN 0 248.0E6 -250E6 250E6 250E6 -250E6
+    [1;32m2021-02-21 13:55:20,947[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - FB    7 99 POLY(5) VB VC VE VLP VLN 0 248.0E6 -250E6 250E6 250E6 -250E6
+    [1;32m2021-02-21 13:55:20,948[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - FB    7 99 POLY(5) VB VC VE VLP VLN 0 248.0E6 -250E6 250E6 250E6 -250E6
+    [1;32m2021-02-21 13:55:20,950[0m - [1;34mPySpice.Spice.Library.Library.__init__[0m - [1;31mDEBUG[0m - Parse /github/workspace/lib/spice/cmos/4069ub.lib
+    [1;32m2021-02-21 13:55:20,951[0m - [1;34mPySpice.Spice.Library.Library.__init__[0m - [1;31mDEBUG[0m - Parse /github/workspace/lib/spice/cmos/CD4069UB-hex.lib
+    [1;32m2021-02-21 13:55:20,951[0m - [1;34mPySpice.Spice.Library.Library.__init__[0m - [1;31mDEBUG[0m - Parse /github/workspace/lib/spice/transistor/bc5x7.lib
+    [1;32m2021-02-21 13:55:20,956[0m - [1;34mPySpice.Spice.Library.Library.__init__[0m - [1;31mDEBUG[0m - Parse /github/workspace/lib/spice/transistor/2N3906.LIB
+    [1;32m2021-02-21 13:55:20,956[0m - [1;34mPySpice.Spice.Library.Library.__init__[0m - [1;31mDEBUG[0m - Parse /github/workspace/lib/spice/transistor/BCV62C.lib
+    [1;32m2021-02-21 13:55:20,958[0m - [1;34mPySpice.Spice.Library.Library.__init__[0m - [1;31mDEBUG[0m - Parse /github/workspace/lib/spice/transistor/BC547.mod
+    [1;32m2021-02-21 13:55:20,959[0m - [1;34mPySpice.Spice.Library.Library.__init__[0m - [1;31mDEBUG[0m - Parse /github/workspace/lib/spice/diode/led.lib
+    [1;32m2021-02-21 13:55:20,959[0m - [1;34mPySpice.Spice.Library.Library.__init__[0m - [1;31mDEBUG[0m - Parse /github/workspace/lib/spice/diode/1N4148.mod
+
+-->
+
+<!-- mk scoped -->
+<div class="container my-2">
+  <p>the CD4069UB device consist of six CMOS inverter circuits. these devices are intended for all generalpurpose inverter applications where the mediumpower TTL-drive and logic-level-conversion. this device is not ideal for linear amplification, but can be used as such and will add a lot of soft-clipping. soft-clipping is expected from a valve. this makes this device special for musical usage and can be found in guitar distortion pedals [<a href="http://www.runoffgroove.com/ubescreamer.html">2</a>] or the wasp filter [<a href="https://www.schmitzbits.de/wasp.html">3</a>]. in this article series i want to investigate this device and find out if new modules can be built with it.</p>
+</div>
+
+<!-- mk scoped -->
+<div class="container my-2">
+  <p><strong>the chip should be powered by +5V/GND. With higher voltage the heat dissipation will be to big and the chip will be damaged.</strong></p>
+</div>
+
+<!-- mk scoped -->
+<div class="container my-2">
+  <h1 class="subtitle is-lowercase" id="voltage-follower">voltage follower</h1>
+
+  <p>the simplest circuit to begin with is a voltage follower or buffer. the buffer confifuration looks similar to the opamp buffer. but there are some differences. the first important difference is that the feedback will also do the biasing of the input signal. when an ac signal is applied to the buffer the output will be a dc signal, as long as the chip is able to provide the needed biasing feedback. the gain can be calculated similar to the opamp configuration. but there will be less gain as we would excpect from the calculation.</p>
+</div>
+
+<!-- execute result -->
+
+<div class="section">
+  <div class="container has-text-centered my-2">
+
+    <p><img src="/elektrophon/assets/cmos_buffer_files/cmos_buffer_4_0.svg" alt="svg" /></p>
+
+  </div>
+</div>
+
+<!-- mk scoped -->
+<div class="container my-2">
+  <p>This is the first setup with the 4069 as voltage follower. C1 and C3 are the dc blocking capacitors. When we choose R1 and R2 as 100kOhm we would excpect a gain of one.</p>
+</div>
+
+<!-- 
+    [1;32m2021-02-21 13:55:21,493[0m - [1;34mPySpice.Spice.NgSpice.Shared.NgSpiceShared.new_instance[0m - [1;31mDEBUG[0m - New instance for id 0
+    [1;32m2021-02-21 13:55:21,494[0m - [1;34mPySpice.Spice.NgSpice.Shared.NgSpiceShared._load_library[0m - [1;31mDEBUG[0m - Set locale LC_NUMERIC to C
+    [1;32m2021-02-21 13:55:21,522[0m - [1;34mPySpice.Spice.NgSpice.Shared.NgSpiceShared._load_library[0m - [1;31mDEBUG[0m - Load library libngspice.so
+    [1;32m2021-02-21 13:55:21,539[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout ******'
+    [1;32m2021-02-21 13:55:21,539[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout ** ngspice-32 shared library'
+    [1;32m2021-02-21 13:55:21,540[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout ** Creation Date: Tue Jun  9 21:35:26 UTC 2020'
+    [1;32m2021-02-21 13:55:21,541[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout ******'
+    [1;32m2021-02-21 13:55:21,544[0m - [1;34mPySpice.Spice.NgSpice.Shared.NgSpiceShared.exec_command[0m - [1;31mDEBUG[0m - Execute command: version -f
+    [1;32m2021-02-21 13:55:21,544[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout ******'
+    [1;32m2021-02-21 13:55:21,546[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout ** ngspice-32 : Circuit level simulation program'
+    [1;32m2021-02-21 13:55:21,548[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout ** The U. C. Berkeley CAD Group'
+    [1;32m2021-02-21 13:55:21,549[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout ** Copyright 1985-1994, Regents of the University of California.'
+    [1;32m2021-02-21 13:55:21,550[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout ** Copyright 2001-2020, The ngspice team.'
+    [1;32m2021-02-21 13:55:21,551[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout ** Please get your ngspice manual from http://ngspice.sourceforge.net/docs.html'
+    [1;32m2021-02-21 13:55:21,552[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout ** Please file your bug-reports at http://ngspice.sourceforge.net/bugrep.html'
+    [1;32m2021-02-21 13:55:21,553[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout ** Creation Date: Tue Jun  9 21:35:26 UTC 2020'
+    [1;32m2021-02-21 13:55:21,555[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout **'
+    [1;32m2021-02-21 13:55:21,555[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout ** CIDER 1.b1 (CODECS simulator) included'
+    [1;32m2021-02-21 13:55:21,556[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout ** XSPICE extensions included'
+    [1;32m2021-02-21 13:55:21,558[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b"stdout ** Relevant compilation options (refer to user's manual):"
+    [1;32m2021-02-21 13:55:21,560[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout ** OpenMP multithreading for BSIM3, BSIM4 enabled'
+    [1;32m2021-02-21 13:55:21,560[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout ** X11 interface not compiled into ngspice'
+    [1;32m2021-02-21 13:55:21,561[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout **'
+    [1;32m2021-02-21 13:55:21,563[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout ******'
+    [1;32m2021-02-21 13:55:21,565[0m - [1;34mPySpice.Spice.NgSpice.Shared.NgSpiceShared._get_version[0m - [1;31mDEBUG[0m - Ngspice version 32 with extensions: CIDER, XSPICE
+    [1;32m2021-02-21 13:55:21,565[0m - [1;34mPySpice.Spice.NgSpice.Shared.NgSpiceShared.exec_command[0m - [1;31mDEBUG[0m - Execute command: set nomoremode
+    [1;32m2021-02-21 13:55:21,567[0m - [1;34mPySpice.Spice.NgSpice.Simulation.NgSpiceSharedCircuitSimulator._run[0m - [1;31mDEBUG[0m - desk
+    .title cmos buffer
+    .include /github/workspace/lib/spice/cmos/4069ub.lib
+    V1 +5V 0 DC 5
+    V2 IN 0 DC 5 AC 2.5V SIN(0 2.5V 1k)
+    X1 gate_in gate_out +5V 0 4069UB
+    R2 gate_out gate_in 100kOhm
+    C1 gate_in R1out 47nF
+    R1 R1out IN 100kOhm
+    C2 gate_out OUT 1uF
+    Rload OUT 0 100kOhm
+    .options TEMP = 25C
+    .options TNOM = 25C
+    .ic 
+    .ac dec 10 1Hz 100Hz
+    .end
+    
+    [1;32m2021-02-21 13:55:21,568[0m - [1;34mPySpice.Spice.NgSpice.Shared.NgSpiceShared.exec_command[0m - [1;31mDEBUG[0m - Execute command: destroy all
+    [1;32m2021-02-21 13:55:21,570[0m - [1;34mPySpice.Spice.NgSpice.Shared.NgSpiceShared.load_circuit[0m - [1;31mDEBUG[0m - ngSpice_Circ
+    .title cmos buffer
+    .include /github/workspace/lib/spice/cmos/4069ub.lib
+    V1 +5V 0 DC 5
+    V2 IN 0 DC 5 AC 2.5V SIN(0 2.5V 1k)
+    X1 gate_in gate_out +5V 0 4069UB
+    R2 gate_out gate_in 100kOhm
+    C1 gate_in R1out 47nF
+    R1 R1out IN 100kOhm
+    C2 gate_out OUT 1uF
+    Rload OUT 0 100kOhm
+    .options TEMP = 25C
+    .options TNOM = 25C
+    .ic 
+    .ac dec 10 1Hz 100Hz
+    .end
+    
+    [1;32m2021-02-21 13:55:21,575[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout Circuit: cmos buffer'
+    [1;32m2021-02-21 13:55:21,578[0m - [1;34mPySpice.Spice.NgSpice.Shared.NgSpiceShared.exec_command[0m - [1;31mDEBUG[0m - Execute command: run
+    [1;32m2021-02-21 13:55:21,579[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout Doing analysis at TEMP = 25.000000 and TNOM = 25.000000'
+    [1;32m2021-02-21 13:55:21,580[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b' Reference value :  1.00000e+00\r'
+    [1;32m2021-02-21 13:55:21,582[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout No. of Data Rows : 21'
+    [1;32m2021-02-21 13:55:21,583[0m - [1;34mPySpice.Spice.NgSpice.Shared.NgSpiceShared.run[0m - [1;31mDEBUG[0m - Simulation is done
+    [1;32m2021-02-21 13:55:21,584[0m - [1;34mPySpice.Spice.NgSpice.Simulation.NgSpiceSharedCircuitSimulator._run[0m - [1;31mDEBUG[0m - ['ac1', 'const']
+    [1;32m2021-02-21 13:55:21,586[0m - [1;34mPySpice.Spice.NgSpice.Simulation.NgSpiceSharedCircuitSimulator._run[0m - [1;31mDEBUG[0m - desk
+    .title cmos buffer
+    .include /github/workspace/lib/spice/cmos/4069ub.lib
+    V1 +5V 0 DC 5
+    V2 IN 0 DC 5 AC 2.5V SIN(0 2.5V 1k)
+    X1 gate_in gate_out +5V 0 4069UB
+    R2 gate_out gate_in 100kOhm
+    C1 gate_in R1out 47nF
+    R1 R1out IN 100kOhm
+    C2 gate_out OUT 1uF
+    Rload OUT 0 100kOhm
+    .options TEMP = 25C
+    .options TNOM = 25C
+    .ic 
+    .tran 1us 1ms 0ms
+    .end
+    
+    [1;32m2021-02-21 13:55:21,587[0m - [1;34mPySpice.Spice.NgSpice.Shared.NgSpiceShared.exec_command[0m - [1;31mDEBUG[0m - Execute command: destroy all
+    [1;32m2021-02-21 13:55:21,589[0m - [1;34mPySpice.Spice.NgSpice.Shared.NgSpiceShared.load_circuit[0m - [1;31mDEBUG[0m - ngSpice_Circ
+    .title cmos buffer
+    .include /github/workspace/lib/spice/cmos/4069ub.lib
+    V1 +5V 0 DC 5
+    V2 IN 0 DC 5 AC 2.5V SIN(0 2.5V 1k)
+    X1 gate_in gate_out +5V 0 4069UB
+    R2 gate_out gate_in 100kOhm
+    C1 gate_in R1out 47nF
+    R1 R1out IN 100kOhm
+    C2 gate_out OUT 1uF
+    Rload OUT 0 100kOhm
+    .options TEMP = 25C
+    .options TNOM = 25C
+    .ic 
+    .tran 1us 1ms 0ms
+    .end
+    
+    [1;32m2021-02-21 13:55:21,590[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout Circuit: cmos buffer'
+    [1;32m2021-02-21 13:55:21,592[0m - [1;34mPySpice.Spice.NgSpice.Shared.NgSpiceShared.exec_command[0m - [1;31mDEBUG[0m - Execute command: run
+    [1;32m2021-02-21 13:55:21,593[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout Doing analysis at TEMP = 25.000000 and TNOM = 25.000000'
+    [1;32m2021-02-21 13:55:21,594[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout Initial Transient Solution'
+    [1;32m2021-02-21 13:55:21,595[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout --------------------------'
+    [1;32m2021-02-21 13:55:21,595[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout Node                                   Voltage'
+    [1;32m2021-02-21 13:55:21,596[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout ----                                   -------'
+    [1;32m2021-02-21 13:55:21,597[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout +5v                                          5'
+    [1;32m2021-02-21 13:55:21,597[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout in                                           0'
+    [1;32m2021-02-21 13:55:21,598[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout gate_out                               2.10156'
+    [1;32m2021-02-21 13:55:21,598[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout gate_in                                2.10156'
+    [1;32m2021-02-21 13:55:21,599[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout r1out                                        0'
+    [1;32m2021-02-21 13:55:21,599[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout out                                          0'
+    [1;32m2021-02-21 13:55:21,600[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout v2#branch                                    0'
+    [1;32m2021-02-21 13:55:21,600[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout v1#branch                         -2.92963e-12'
+    [1;32m2021-02-21 13:55:21,615[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout No. of Data Rows : 1008'
+    [1;32m2021-02-21 13:55:21,615[0m - [1;34mPySpice.Spice.NgSpice.Shared.NgSpiceShared.run[0m - [1;31mDEBUG[0m - Simulation is done
+    [1;32m2021-02-21 13:55:21,616[0m - [1;34mPySpice.Spice.NgSpice.Simulation.NgSpiceSharedCircuitSimulator._run[0m - [1;31mDEBUG[0m - ['tran1', 'const']
+    [1;32m2021-02-21 13:55:21,618[0m - [1;34mPySpice.Spice.NgSpice.Simulation.NgSpiceSharedCircuitSimulator._run[0m - [1;31mDEBUG[0m - desk
+    .title cmos buffer
+    .include /github/workspace/lib/spice/cmos/4069ub.lib
+    V1 +5V 0 DC 5
+    V2 IN 0 DC 5 AC 2.5V SIN(0 2.5V 1k)
+    X1 gate_in gate_out +5V 0 4069UB
+    R2 gate_out gate_in 125kOhm
+    C1 gate_in R1out 47nF
+    R1 R1out IN 100kOhm
+    C2 gate_out OUT 1uF
+    Rload OUT 0 100kOhm
+    .options TEMP = 25C
+    .options TNOM = 25C
+    .ic 
+    .ac dec 10 1Hz 100Hz
+    .end
+    
+    [1;32m2021-02-21 13:55:21,619[0m - [1;34mPySpice.Spice.NgSpice.Shared.NgSpiceShared.exec_command[0m - [1;31mDEBUG[0m - Execute command: destroy all
+    [1;32m2021-02-21 13:55:21,620[0m - [1;34mPySpice.Spice.NgSpice.Shared.NgSpiceShared.load_circuit[0m - [1;31mDEBUG[0m - ngSpice_Circ
+    .title cmos buffer
+    .include /github/workspace/lib/spice/cmos/4069ub.lib
+    V1 +5V 0 DC 5
+    V2 IN 0 DC 5 AC 2.5V SIN(0 2.5V 1k)
+    X1 gate_in gate_out +5V 0 4069UB
+    R2 gate_out gate_in 125kOhm
+    C1 gate_in R1out 47nF
+    R1 R1out IN 100kOhm
+    C2 gate_out OUT 1uF
+    Rload OUT 0 100kOhm
+    .options TEMP = 25C
+    .options TNOM = 25C
+    .ic 
+    .ac dec 10 1Hz 100Hz
+    .end
+    
+    [1;32m2021-02-21 13:55:21,620[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout Circuit: cmos buffer'
+    [1;32m2021-02-21 13:55:21,621[0m - [1;34mPySpice.Spice.NgSpice.Shared.NgSpiceShared.exec_command[0m - [1;31mDEBUG[0m - Execute command: run
+    [1;32m2021-02-21 13:55:21,622[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout Doing analysis at TEMP = 25.000000 and TNOM = 25.000000'
+    [1;32m2021-02-21 13:55:21,623[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout No. of Data Rows : 21'
+    [1;32m2021-02-21 13:55:21,626[0m - [1;34mPySpice.Spice.NgSpice.Shared.NgSpiceShared.run[0m - [1;31mDEBUG[0m - Simulation is done
+    [1;32m2021-02-21 13:55:21,627[0m - [1;34mPySpice.Spice.NgSpice.Simulation.NgSpiceSharedCircuitSimulator._run[0m - [1;31mDEBUG[0m - ['ac1', 'const']
+    [1;32m2021-02-21 13:55:21,629[0m - [1;34mPySpice.Spice.NgSpice.Simulation.NgSpiceSharedCircuitSimulator._run[0m - [1;31mDEBUG[0m - desk
+    .title cmos buffer
+    .include /github/workspace/lib/spice/cmos/4069ub.lib
+    V1 +5V 0 DC 5
+    V2 IN 0 DC 5 AC 2.5V SIN(0 2.5V 1k)
+    X1 gate_in gate_out +5V 0 4069UB
+    R2 gate_out gate_in 125kOhm
+    C1 gate_in R1out 47nF
+    R1 R1out IN 100kOhm
+    C2 gate_out OUT 1uF
+    Rload OUT 0 100kOhm
+    .options TEMP = 25C
+    .options TNOM = 25C
+    .ic 
+    .tran 1us 1ms 0ms
+    .end
+    
+    [1;32m2021-02-21 13:55:21,629[0m - [1;34mPySpice.Spice.NgSpice.Shared.NgSpiceShared.exec_command[0m - [1;31mDEBUG[0m - Execute command: destroy all
+    [1;32m2021-02-21 13:55:21,630[0m - [1;34mPySpice.Spice.NgSpice.Shared.NgSpiceShared.load_circuit[0m - [1;31mDEBUG[0m - ngSpice_Circ
+    .title cmos buffer
+    .include /github/workspace/lib/spice/cmos/4069ub.lib
+    V1 +5V 0 DC 5
+    V2 IN 0 DC 5 AC 2.5V SIN(0 2.5V 1k)
+    X1 gate_in gate_out +5V 0 4069UB
+    R2 gate_out gate_in 125kOhm
+    C1 gate_in R1out 47nF
+    R1 R1out IN 100kOhm
+    C2 gate_out OUT 1uF
+    Rload OUT 0 100kOhm
+    .options TEMP = 25C
+    .options TNOM = 25C
+    .ic 
+    .tran 1us 1ms 0ms
+    .end
+    
+    [1;32m2021-02-21 13:55:21,631[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout Circuit: cmos buffer'
+    [1;32m2021-02-21 13:55:21,632[0m - [1;34mPySpice.Spice.NgSpice.Shared.NgSpiceShared.exec_command[0m - [1;31mDEBUG[0m - Execute command: run
+    [1;32m2021-02-21 13:55:21,633[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout Doing analysis at TEMP = 25.000000 and TNOM = 25.000000'
+    [1;32m2021-02-21 13:55:21,634[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout Initial Transient Solution'
+    [1;32m2021-02-21 13:55:21,634[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout --------------------------'
+    [1;32m2021-02-21 13:55:21,635[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout Node                                   Voltage'
+    [1;32m2021-02-21 13:55:21,636[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout ----                                   -------'
+    [1;32m2021-02-21 13:55:21,636[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout +5v                                          5'
+    [1;32m2021-02-21 13:55:21,637[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout in                                           0'
+    [1;32m2021-02-21 13:55:21,637[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout gate_out                               2.10156'
+    [1;32m2021-02-21 13:55:21,638[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout gate_in                                2.10156'
+    [1;32m2021-02-21 13:55:21,638[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout r1out                                        0'
+    [1;32m2021-02-21 13:55:21,640[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout out                                          0'
+    [1;32m2021-02-21 13:55:21,640[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout v2#branch                                    0'
+    [1;32m2021-02-21 13:55:21,641[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout v1#branch                         -2.92963e-12'
+    [1;32m2021-02-21 13:55:21,654[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout No. of Data Rows : 1008'
+    [1;32m2021-02-21 13:55:21,655[0m - [1;34mPySpice.Spice.NgSpice.Shared.NgSpiceShared.run[0m - [1;31mDEBUG[0m - Simulation is done
+    [1;32m2021-02-21 13:55:21,655[0m - [1;34mPySpice.Spice.NgSpice.Simulation.NgSpiceSharedCircuitSimulator._run[0m - [1;31mDEBUG[0m - ['tran1', 'const']
+    [1;32m2021-02-21 13:55:21,657[0m - [1;34mPySpice.Spice.NgSpice.Simulation.NgSpiceSharedCircuitSimulator._run[0m - [1;31mDEBUG[0m - desk
+    .title cmos buffer
+    .include /github/workspace/lib/spice/cmos/4069ub.lib
+    V1 +5V 0 DC 5
+    V2 IN 0 DC 5 AC 2.5V SIN(0 2.5V 1k)
+    X1 gate_in gate_out +5V 0 4069UB
+    R2 gate_out gate_in 150kOhm
+    C1 gate_in R1out 47nF
+    R1 R1out IN 100kOhm
+    C2 gate_out OUT 1uF
+    Rload OUT 0 100kOhm
+    .options TEMP = 25C
+    .options TNOM = 25C
+    .ic 
+    .ac dec 10 1Hz 100Hz
+    .end
+    
+    [1;32m2021-02-21 13:55:21,658[0m - [1;34mPySpice.Spice.NgSpice.Shared.NgSpiceShared.exec_command[0m - [1;31mDEBUG[0m - Execute command: destroy all
+    [1;32m2021-02-21 13:55:21,659[0m - [1;34mPySpice.Spice.NgSpice.Shared.NgSpiceShared.load_circuit[0m - [1;31mDEBUG[0m - ngSpice_Circ
+    .title cmos buffer
+    .include /github/workspace/lib/spice/cmos/4069ub.lib
+    V1 +5V 0 DC 5
+    V2 IN 0 DC 5 AC 2.5V SIN(0 2.5V 1k)
+    X1 gate_in gate_out +5V 0 4069UB
+    R2 gate_out gate_in 150kOhm
+    C1 gate_in R1out 47nF
+    R1 R1out IN 100kOhm
+    C2 gate_out OUT 1uF
+    Rload OUT 0 100kOhm
+    .options TEMP = 25C
+    .options TNOM = 25C
+    .ic 
+    .ac dec 10 1Hz 100Hz
+    .end
+    
+    [1;32m2021-02-21 13:55:21,660[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout Circuit: cmos buffer'
+    [1;32m2021-02-21 13:55:21,661[0m - [1;34mPySpice.Spice.NgSpice.Shared.NgSpiceShared.exec_command[0m - [1;31mDEBUG[0m - Execute command: run
+    [1;32m2021-02-21 13:55:21,661[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout Doing analysis at TEMP = 25.000000 and TNOM = 25.000000'
+    [1;32m2021-02-21 13:55:21,662[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout No. of Data Rows : 21'
+    [1;32m2021-02-21 13:55:21,663[0m - [1;34mPySpice.Spice.NgSpice.Shared.NgSpiceShared.run[0m - [1;31mDEBUG[0m - Simulation is done
+    [1;32m2021-02-21 13:55:21,663[0m - [1;34mPySpice.Spice.NgSpice.Simulation.NgSpiceSharedCircuitSimulator._run[0m - [1;31mDEBUG[0m - ['ac1', 'const']
+    [1;32m2021-02-21 13:55:21,664[0m - [1;34mPySpice.Spice.NgSpice.Simulation.NgSpiceSharedCircuitSimulator._run[0m - [1;31mDEBUG[0m - desk
+    .title cmos buffer
+    .include /github/workspace/lib/spice/cmos/4069ub.lib
+    V1 +5V 0 DC 5
+    V2 IN 0 DC 5 AC 2.5V SIN(0 2.5V 1k)
+    X1 gate_in gate_out +5V 0 4069UB
+    R2 gate_out gate_in 150kOhm
+    C1 gate_in R1out 47nF
+    R1 R1out IN 100kOhm
+    C2 gate_out OUT 1uF
+    Rload OUT 0 100kOhm
+    .options TEMP = 25C
+    .options TNOM = 25C
+    .ic 
+    .tran 1us 1ms 0ms
+    .end
+    
+    [1;32m2021-02-21 13:55:21,668[0m - [1;34mPySpice.Spice.NgSpice.Shared.NgSpiceShared.exec_command[0m - [1;31mDEBUG[0m - Execute command: destroy all
+    [1;32m2021-02-21 13:55:21,669[0m - [1;34mPySpice.Spice.NgSpice.Shared.NgSpiceShared.load_circuit[0m - [1;31mDEBUG[0m - ngSpice_Circ
+    .title cmos buffer
+    .include /github/workspace/lib/spice/cmos/4069ub.lib
+    V1 +5V 0 DC 5
+    V2 IN 0 DC 5 AC 2.5V SIN(0 2.5V 1k)
+    X1 gate_in gate_out +5V 0 4069UB
+    R2 gate_out gate_in 150kOhm
+    C1 gate_in R1out 47nF
+    R1 R1out IN 100kOhm
+    C2 gate_out OUT 1uF
+    Rload OUT 0 100kOhm
+    .options TEMP = 25C
+    .options TNOM = 25C
+    .ic 
+    .tran 1us 1ms 0ms
+    .end
+    
+    [1;32m2021-02-21 13:55:21,670[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout Circuit: cmos buffer'
+    [1;32m2021-02-21 13:55:21,670[0m - [1;34mPySpice.Spice.NgSpice.Shared.NgSpiceShared.exec_command[0m - [1;31mDEBUG[0m - Execute command: run
+    [1;32m2021-02-21 13:55:21,676[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout Doing analysis at TEMP = 25.000000 and TNOM = 25.000000'
+    [1;32m2021-02-21 13:55:21,678[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout Initial Transient Solution'
+    [1;32m2021-02-21 13:55:21,678[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout --------------------------'
+    [1;32m2021-02-21 13:55:21,679[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout Node                                   Voltage'
+    [1;32m2021-02-21 13:55:21,680[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout ----                                   -------'
+    [1;32m2021-02-21 13:55:21,681[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout +5v                                          5'
+    [1;32m2021-02-21 13:55:21,682[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout in                                           0'
+    [1;32m2021-02-21 13:55:21,683[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout gate_out                               2.10156'
+    [1;32m2021-02-21 13:55:21,684[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout gate_in                                2.10156'
+    [1;32m2021-02-21 13:55:21,684[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout r1out                                        0'
+    [1;32m2021-02-21 13:55:21,685[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout out                                          0'
+    [1;32m2021-02-21 13:55:21,685[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout v2#branch                                    0'
+    [1;32m2021-02-21 13:55:21,685[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout v1#branch                         -2.92963e-12'
+    [1;32m2021-02-21 13:55:21,699[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout No. of Data Rows : 1008'
+    [1;32m2021-02-21 13:55:21,699[0m - [1;34mPySpice.Spice.NgSpice.Shared.NgSpiceShared.run[0m - [1;31mDEBUG[0m - Simulation is done
+    [1;32m2021-02-21 13:55:21,701[0m - [1;34mPySpice.Spice.NgSpice.Simulation.NgSpiceSharedCircuitSimulator._run[0m - [1;31mDEBUG[0m - ['tran1', 'const']
+    [1;32m2021-02-21 13:55:21,703[0m - [1;34mPySpice.Spice.NgSpice.Simulation.NgSpiceSharedCircuitSimulator._run[0m - [1;31mDEBUG[0m - desk
+    .title cmos buffer
+    .include /github/workspace/lib/spice/cmos/4069ub.lib
+    V1 +5V 0 DC 5
+    V2 IN 0 DC 5 AC 2.5V SIN(0 2.5V 1k)
+    X1 gate_in gate_out +5V 0 4069UB
+    R2 gate_out gate_in 175kOhm
+    C1 gate_in R1out 47nF
+    R1 R1out IN 100kOhm
+    C2 gate_out OUT 1uF
+    Rload OUT 0 100kOhm
+    .options TEMP = 25C
+    .options TNOM = 25C
+    .ic 
+    .ac dec 10 1Hz 100Hz
+    .end
+    
+    [1;32m2021-02-21 13:55:21,704[0m - [1;34mPySpice.Spice.NgSpice.Shared.NgSpiceShared.exec_command[0m - [1;31mDEBUG[0m - Execute command: destroy all
+    [1;32m2021-02-21 13:55:21,706[0m - [1;34mPySpice.Spice.NgSpice.Shared.NgSpiceShared.load_circuit[0m - [1;31mDEBUG[0m - ngSpice_Circ
+    .title cmos buffer
+    .include /github/workspace/lib/spice/cmos/4069ub.lib
+    V1 +5V 0 DC 5
+    V2 IN 0 DC 5 AC 2.5V SIN(0 2.5V 1k)
+    X1 gate_in gate_out +5V 0 4069UB
+    R2 gate_out gate_in 175kOhm
+    C1 gate_in R1out 47nF
+    R1 R1out IN 100kOhm
+    C2 gate_out OUT 1uF
+    Rload OUT 0 100kOhm
+    .options TEMP = 25C
+    .options TNOM = 25C
+    .ic 
+    .ac dec 10 1Hz 100Hz
+    .end
+    
+    [1;32m2021-02-21 13:55:21,706[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout Circuit: cmos buffer'
+    [1;32m2021-02-21 13:55:21,708[0m - [1;34mPySpice.Spice.NgSpice.Shared.NgSpiceShared.exec_command[0m - [1;31mDEBUG[0m - Execute command: run
+    [1;32m2021-02-21 13:55:21,709[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout Doing analysis at TEMP = 25.000000 and TNOM = 25.000000'
+    [1;32m2021-02-21 13:55:21,711[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout No. of Data Rows : 21'
+    [1;32m2021-02-21 13:55:21,711[0m - [1;34mPySpice.Spice.NgSpice.Shared.NgSpiceShared.run[0m - [1;31mDEBUG[0m - Simulation is done
+    [1;32m2021-02-21 13:55:21,713[0m - [1;34mPySpice.Spice.NgSpice.Simulation.NgSpiceSharedCircuitSimulator._run[0m - [1;31mDEBUG[0m - ['ac1', 'const']
+    [1;32m2021-02-21 13:55:21,715[0m - [1;34mPySpice.Spice.NgSpice.Simulation.NgSpiceSharedCircuitSimulator._run[0m - [1;31mDEBUG[0m - desk
+    .title cmos buffer
+    .include /github/workspace/lib/spice/cmos/4069ub.lib
+    V1 +5V 0 DC 5
+    V2 IN 0 DC 5 AC 2.5V SIN(0 2.5V 1k)
+    X1 gate_in gate_out +5V 0 4069UB
+    R2 gate_out gate_in 175kOhm
+    C1 gate_in R1out 47nF
+    R1 R1out IN 100kOhm
+    C2 gate_out OUT 1uF
+    Rload OUT 0 100kOhm
+    .options TEMP = 25C
+    .options TNOM = 25C
+    .ic 
+    .tran 1us 1ms 0ms
+    .end
+    
+    [1;32m2021-02-21 13:55:21,716[0m - [1;34mPySpice.Spice.NgSpice.Shared.NgSpiceShared.exec_command[0m - [1;31mDEBUG[0m - Execute command: destroy all
+    [1;32m2021-02-21 13:55:21,718[0m - [1;34mPySpice.Spice.NgSpice.Shared.NgSpiceShared.load_circuit[0m - [1;31mDEBUG[0m - ngSpice_Circ
+    .title cmos buffer
+    .include /github/workspace/lib/spice/cmos/4069ub.lib
+    V1 +5V 0 DC 5
+    V2 IN 0 DC 5 AC 2.5V SIN(0 2.5V 1k)
+    X1 gate_in gate_out +5V 0 4069UB
+    R2 gate_out gate_in 175kOhm
+    C1 gate_in R1out 47nF
+    R1 R1out IN 100kOhm
+    C2 gate_out OUT 1uF
+    Rload OUT 0 100kOhm
+    .options TEMP = 25C
+    .options TNOM = 25C
+    .ic 
+    .tran 1us 1ms 0ms
+    .end
+    
+    [1;32m2021-02-21 13:55:21,719[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout Circuit: cmos buffer'
+    [1;32m2021-02-21 13:55:21,721[0m - [1;34mPySpice.Spice.NgSpice.Shared.NgSpiceShared.exec_command[0m - [1;31mDEBUG[0m - Execute command: run
+    [1;32m2021-02-21 13:55:21,723[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout Doing analysis at TEMP = 25.000000 and TNOM = 25.000000'
+    [1;32m2021-02-21 13:55:21,723[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout Initial Transient Solution'
+    [1;32m2021-02-21 13:55:21,724[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout --------------------------'
+    [1;32m2021-02-21 13:55:21,724[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout Node                                   Voltage'
+    [1;32m2021-02-21 13:55:21,725[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout ----                                   -------'
+    [1;32m2021-02-21 13:55:21,726[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout +5v                                          5'
+    [1;32m2021-02-21 13:55:21,726[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout in                                           0'
+    [1;32m2021-02-21 13:55:21,727[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout gate_out                               2.10156'
+    [1;32m2021-02-21 13:55:21,727[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout gate_in                                2.10156'
+    [1;32m2021-02-21 13:55:21,728[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout r1out                                        0'
+    [1;32m2021-02-21 13:55:21,728[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout out                                          0'
+    [1;32m2021-02-21 13:55:21,729[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout v2#branch                                    0'
+    [1;32m2021-02-21 13:55:21,729[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout v1#branch                         -2.92963e-12'
+    [1;32m2021-02-21 13:55:21,742[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout No. of Data Rows : 1008'
+    [1;32m2021-02-21 13:55:21,743[0m - [1;34mPySpice.Spice.NgSpice.Shared.NgSpiceShared.run[0m - [1;31mDEBUG[0m - Simulation is done
+    [1;32m2021-02-21 13:55:21,743[0m - [1;34mPySpice.Spice.NgSpice.Simulation.NgSpiceSharedCircuitSimulator._run[0m - [1;31mDEBUG[0m - ['tran1', 'const']
+    [1;32m2021-02-21 13:55:21,745[0m - [1;34mPySpice.Spice.NgSpice.Simulation.NgSpiceSharedCircuitSimulator._run[0m - [1;31mDEBUG[0m - desk
+    .title cmos buffer
+    .include /github/workspace/lib/spice/cmos/4069ub.lib
+    V1 +5V 0 DC 5
+    V2 IN 0 DC 5 AC 2.5V SIN(0 2.5V 1k)
+    X1 gate_in gate_out +5V 0 4069UB
+    R2 gate_out gate_in 200kOhm
+    C1 gate_in R1out 47nF
+    R1 R1out IN 100kOhm
+    C2 gate_out OUT 1uF
+    Rload OUT 0 100kOhm
+    .options TEMP = 25C
+    .options TNOM = 25C
+    .ic 
+    .ac dec 10 1Hz 100Hz
+    .end
+    
+    [1;32m2021-02-21 13:55:21,745[0m - [1;34mPySpice.Spice.NgSpice.Shared.NgSpiceShared.exec_command[0m - [1;31mDEBUG[0m - Execute command: destroy all
+    [1;32m2021-02-21 13:55:21,746[0m - [1;34mPySpice.Spice.NgSpice.Shared.NgSpiceShared.load_circuit[0m - [1;31mDEBUG[0m - ngSpice_Circ
+    .title cmos buffer
+    .include /github/workspace/lib/spice/cmos/4069ub.lib
+    V1 +5V 0 DC 5
+    V2 IN 0 DC 5 AC 2.5V SIN(0 2.5V 1k)
+    X1 gate_in gate_out +5V 0 4069UB
+    R2 gate_out gate_in 200kOhm
+    C1 gate_in R1out 47nF
+    R1 R1out IN 100kOhm
+    C2 gate_out OUT 1uF
+    Rload OUT 0 100kOhm
+    .options TEMP = 25C
+    .options TNOM = 25C
+    .ic 
+    .ac dec 10 1Hz 100Hz
+    .end
+    
+    [1;32m2021-02-21 13:55:21,747[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout Circuit: cmos buffer'
+    [1;32m2021-02-21 13:55:21,748[0m - [1;34mPySpice.Spice.NgSpice.Shared.NgSpiceShared.exec_command[0m - [1;31mDEBUG[0m - Execute command: run
+    [1;32m2021-02-21 13:55:21,748[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout Doing analysis at TEMP = 25.000000 and TNOM = 25.000000'
+    [1;32m2021-02-21 13:55:21,750[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout No. of Data Rows : 21'
+    [1;32m2021-02-21 13:55:21,752[0m - [1;34mPySpice.Spice.NgSpice.Shared.NgSpiceShared.run[0m - [1;31mDEBUG[0m - Simulation is done
+    [1;32m2021-02-21 13:55:21,753[0m - [1;34mPySpice.Spice.NgSpice.Simulation.NgSpiceSharedCircuitSimulator._run[0m - [1;31mDEBUG[0m - ['ac1', 'const']
+    [1;32m2021-02-21 13:55:21,754[0m - [1;34mPySpice.Spice.NgSpice.Simulation.NgSpiceSharedCircuitSimulator._run[0m - [1;31mDEBUG[0m - desk
+    .title cmos buffer
+    .include /github/workspace/lib/spice/cmos/4069ub.lib
+    V1 +5V 0 DC 5
+    V2 IN 0 DC 5 AC 2.5V SIN(0 2.5V 1k)
+    X1 gate_in gate_out +5V 0 4069UB
+    R2 gate_out gate_in 200kOhm
+    C1 gate_in R1out 47nF
+    R1 R1out IN 100kOhm
+    C2 gate_out OUT 1uF
+    Rload OUT 0 100kOhm
+    .options TEMP = 25C
+    .options TNOM = 25C
+    .ic 
+    .tran 1us 1ms 0ms
+    .end
+    
+    [1;32m2021-02-21 13:55:21,755[0m - [1;34mPySpice.Spice.NgSpice.Shared.NgSpiceShared.exec_command[0m - [1;31mDEBUG[0m - Execute command: destroy all
+    [1;32m2021-02-21 13:55:21,756[0m - [1;34mPySpice.Spice.NgSpice.Shared.NgSpiceShared.load_circuit[0m - [1;31mDEBUG[0m - ngSpice_Circ
+    .title cmos buffer
+    .include /github/workspace/lib/spice/cmos/4069ub.lib
+    V1 +5V 0 DC 5
+    V2 IN 0 DC 5 AC 2.5V SIN(0 2.5V 1k)
+    X1 gate_in gate_out +5V 0 4069UB
+    R2 gate_out gate_in 200kOhm
+    C1 gate_in R1out 47nF
+    R1 R1out IN 100kOhm
+    C2 gate_out OUT 1uF
+    Rload OUT 0 100kOhm
+    .options TEMP = 25C
+    .options TNOM = 25C
+    .ic 
+    .tran 1us 1ms 0ms
+    .end
+    
+    [1;32m2021-02-21 13:55:21,756[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout Circuit: cmos buffer'
+    [1;32m2021-02-21 13:55:21,757[0m - [1;34mPySpice.Spice.NgSpice.Shared.NgSpiceShared.exec_command[0m - [1;31mDEBUG[0m - Execute command: run
+    [1;32m2021-02-21 13:55:21,758[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout Doing analysis at TEMP = 25.000000 and TNOM = 25.000000'
+    [1;32m2021-02-21 13:55:21,758[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout Initial Transient Solution'
+    [1;32m2021-02-21 13:55:21,759[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout --------------------------'
+    [1;32m2021-02-21 13:55:21,759[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout Node                                   Voltage'
+    [1;32m2021-02-21 13:55:21,760[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout ----                                   -------'
+    [1;32m2021-02-21 13:55:21,761[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout +5v                                          5'
+    [1;32m2021-02-21 13:55:21,761[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout in                                           0'
+    [1;32m2021-02-21 13:55:21,762[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout gate_out                               2.10156'
+    [1;32m2021-02-21 13:55:21,762[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout gate_in                                2.10156'
+    [1;32m2021-02-21 13:55:21,762[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout r1out                                        0'
+    [1;32m2021-02-21 13:55:21,763[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout out                                          0'
+    [1;32m2021-02-21 13:55:21,763[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout v2#branch                                    0'
+    [1;32m2021-02-21 13:55:21,764[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout v1#branch                         -2.92963e-12'
+    [1;32m2021-02-21 13:55:21,778[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout No. of Data Rows : 1008'
+    [1;32m2021-02-21 13:55:21,778[0m - [1;34mPySpice.Spice.NgSpice.Shared.NgSpiceShared.run[0m - [1;31mDEBUG[0m - Simulation is done
+    [1;32m2021-02-21 13:55:21,779[0m - [1;34mPySpice.Spice.NgSpice.Simulation.NgSpiceSharedCircuitSimulator._run[0m - [1;31mDEBUG[0m - ['tran1', 'const']
+
+-->
+
+<div class="section">
+  <div class="container has-text-centered my-2">
+
+    <p><img src="/elektrophon/assets/cmos_buffer_files/cmos_buffer_8_0.svg" alt="svg" /></p>
+
+  </div>
+</div>
+
+<!-- mk scoped -->
+<div class="container my-2">
+  <p>The blue line is the input signal (5V p2p) and the red the output signal with 100kOhm resistors. The output is a little less then excpected. For the other signals the resistor R2 is replaced with 125kΩ, 150kΩ, 175kΩ and 200kΩ. With 150kΩ the gain is roughly one. We also see that the ouput is not symetrical. The clipping occures earlier for the negative part of the signal. With higher gain the signal is soft clipped.</p>
+</div>
+
+<!-- mk scoped -->
+<div class="container my-2">
+  <h1 class="subtitle is-lowercase" id="distortion">distortion</h1>
+
+  <p><img src="/elektrophon/assets/cmos_buffer_files/Way_Huge_Red_LLama.jpg" alt="Way Huge Red LLama" /></p>
+
+  <p>the soft clipping, which is the special characteristic of valves, adds harmonics to the signal. Here we want to analyse what harmonics are added. therefore we add a second stage to out circuit. the first stage is a voltage follower with the gain of one (or less as saw). the second stage is a high gain stage. the simulation is done with different values for R4.</p>
+</div>
+
+<!-- execute result -->
+
+<div class="section">
+  <div class="container has-text-centered my-2">
+
+    <p><img src="/elektrophon/assets/cmos_buffer_files/cmos_buffer_11_0.svg" alt="svg" /></p>
+
+  </div>
+</div>
+
+<!-- mk scoped -->
+<div class="container my-2">
+  <p>in the simulation R2 is unchanched. For R4 the simulation is done with 100kΩ, 500kΩ, 1MΩ and 10MΩ.</p>
+</div>
+
+<!-- 
+    [1;32m2021-02-21 13:55:22,741[0m - [1;34mPySpice.Spice.NgSpice.Simulation.NgSpiceSharedCircuitSimulator._run[0m - [1;31mDEBUG[0m - desk
+    .title cmos buffer with distortion
+    .include /github/workspace/lib/spice/cmos/4069ub.lib
+    V1 +5V 0 DC 5
+    V2 IN 0 DC 5 AC 2.5V SIN(0 1V 1k)
+    X1 gate_in_1 gate_out_1 +5V 0 4069UB
+    X2 gate_in_2 gate_out_2 +5V 0 4069UB
+    R1 IN 0 1MegOhm
+    R2 IN R2out 100kOhm
+    C1 R2out gate_in_1 68nF
+    C2 gate_in_1 gate_out_1 81pF
+    R3 gate_in_1 R3out 100kOhm
+    R6 R3out gate_out_1 10kOhm
+    C3 gate_out_1 gate_in_2 33nF
+    C4 gate_in_2 gate_out_2 100pF
+    R4 gate_in_2 gate_out_2 1MegOhm
+    C5 gate_out_2 C5out 1uF
+    R5 C5out OUT 100kOhm
+    Rload OUT 0 50kOhm
+    .options TEMP = 25C
+    .options TNOM = 25C
+    .ic 
+    .tran 1us 1ms 0ms
+    .end
+    
+    [1;32m2021-02-21 13:55:22,741[0m - [1;34mPySpice.Spice.NgSpice.Shared.NgSpiceShared.exec_command[0m - [1;31mDEBUG[0m - Execute command: destroy all
+    [1;32m2021-02-21 13:55:22,743[0m - [1;34mPySpice.Spice.NgSpice.Shared.NgSpiceShared.load_circuit[0m - [1;31mDEBUG[0m - ngSpice_Circ
+    .title cmos buffer with distortion
+    .include /github/workspace/lib/spice/cmos/4069ub.lib
+    V1 +5V 0 DC 5
+    V2 IN 0 DC 5 AC 2.5V SIN(0 1V 1k)
+    X1 gate_in_1 gate_out_1 +5V 0 4069UB
+    X2 gate_in_2 gate_out_2 +5V 0 4069UB
+    R1 IN 0 1MegOhm
+    R2 IN R2out 100kOhm
+    C1 R2out gate_in_1 68nF
+    C2 gate_in_1 gate_out_1 81pF
+    R3 gate_in_1 R3out 100kOhm
+    R6 R3out gate_out_1 10kOhm
+    C3 gate_out_1 gate_in_2 33nF
+    C4 gate_in_2 gate_out_2 100pF
+    R4 gate_in_2 gate_out_2 1MegOhm
+    C5 gate_out_2 C5out 1uF
+    R5 C5out OUT 100kOhm
+    Rload OUT 0 50kOhm
+    .options TEMP = 25C
+    .options TNOM = 25C
+    .ic 
+    .tran 1us 1ms 0ms
+    .end
+    
+    [1;32m2021-02-21 13:55:22,744[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout Circuit: cmos buffer with distortion'
+    [1;32m2021-02-21 13:55:22,745[0m - [1;34mPySpice.Spice.NgSpice.Shared.NgSpiceShared.exec_command[0m - [1;31mDEBUG[0m - Execute command: run
+    [1;32m2021-02-21 13:55:22,745[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout Doing analysis at TEMP = 25.000000 and TNOM = 25.000000'
+    [1;32m2021-02-21 13:55:22,746[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout Initial Transient Solution'
+    [1;32m2021-02-21 13:55:22,746[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout --------------------------'
+    [1;32m2021-02-21 13:55:22,747[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout Node                                   Voltage'
+    [1;32m2021-02-21 13:55:22,748[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout ----                                   -------'
+    [1;32m2021-02-21 13:55:22,749[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout +5v                                          5'
+    [1;32m2021-02-21 13:55:22,750[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout in                                           0'
+    [1;32m2021-02-21 13:55:22,756[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout gate_out_1                             2.10156'
+    [1;32m2021-02-21 13:55:22,756[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout gate_in_1                              2.10156'
+    [1;32m2021-02-21 13:55:22,757[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout gate_out_2                             2.10156'
+    [1;32m2021-02-21 13:55:22,758[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout gate_in_2                              2.10156'
+    [1;32m2021-02-21 13:55:22,758[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout r2out                                        0'
+    [1;32m2021-02-21 13:55:22,759[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout r3out                                  2.10156'
+    [1;32m2021-02-21 13:55:22,760[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout c5out                                        0'
+    [1;32m2021-02-21 13:55:22,761[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout out                                          0'
+    [1;32m2021-02-21 13:55:22,761[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout v2#branch                                    0'
+    [1;32m2021-02-21 13:55:22,762[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout v1#branch                         -5.85927e-12'
+    [1;32m2021-02-21 13:55:22,763[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b' Reference value :  0.00000e+00\r'
+    [1;32m2021-02-21 13:55:22,778[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout No. of Data Rows : 1008'
+    [1;32m2021-02-21 13:55:22,778[0m - [1;34mPySpice.Spice.NgSpice.Shared.NgSpiceShared.run[0m - [1;31mDEBUG[0m - Simulation is done
+    [1;32m2021-02-21 13:55:22,779[0m - [1;34mPySpice.Spice.NgSpice.Simulation.NgSpiceSharedCircuitSimulator._run[0m - [1;31mDEBUG[0m - ['tran1', 'const']
+    [1;32m2021-02-21 13:55:22,781[0m - [1;34mPySpice.Spice.NgSpice.Simulation.NgSpiceSharedCircuitSimulator._run[0m - [1;31mDEBUG[0m - desk
+    .title cmos buffer with distortion
+    .include /github/workspace/lib/spice/cmos/4069ub.lib
+    V1 +5V 0 DC 5
+    V2 IN 0 DC 5 AC 2.5V SIN(0 1V 1k)
+    X1 gate_in_1 gate_out_1 +5V 0 4069UB
+    X2 gate_in_2 gate_out_2 +5V 0 4069UB
+    R1 IN 0 1MegOhm
+    R2 IN R2out 100kOhm
+    C1 R2out gate_in_1 68nF
+    C2 gate_in_1 gate_out_1 81pF
+    R3 gate_in_1 R3out 100kOhm
+    R6 R3out gate_out_1 100kOhm
+    C3 gate_out_1 gate_in_2 33nF
+    C4 gate_in_2 gate_out_2 100pF
+    R4 gate_in_2 gate_out_2 1MegOhm
+    C5 gate_out_2 C5out 1uF
+    R5 C5out OUT 100kOhm
+    Rload OUT 0 50kOhm
+    .options TEMP = 25C
+    .options TNOM = 25C
+    .ic 
+    .tran 1us 1ms 0ms
+    .end
+    
+    [1;32m2021-02-21 13:55:22,782[0m - [1;34mPySpice.Spice.NgSpice.Shared.NgSpiceShared.exec_command[0m - [1;31mDEBUG[0m - Execute command: destroy all
+    [1;32m2021-02-21 13:55:22,783[0m - [1;34mPySpice.Spice.NgSpice.Shared.NgSpiceShared.load_circuit[0m - [1;31mDEBUG[0m - ngSpice_Circ
+    .title cmos buffer with distortion
+    .include /github/workspace/lib/spice/cmos/4069ub.lib
+    V1 +5V 0 DC 5
+    V2 IN 0 DC 5 AC 2.5V SIN(0 1V 1k)
+    X1 gate_in_1 gate_out_1 +5V 0 4069UB
+    X2 gate_in_2 gate_out_2 +5V 0 4069UB
+    R1 IN 0 1MegOhm
+    R2 IN R2out 100kOhm
+    C1 R2out gate_in_1 68nF
+    C2 gate_in_1 gate_out_1 81pF
+    R3 gate_in_1 R3out 100kOhm
+    R6 R3out gate_out_1 100kOhm
+    C3 gate_out_1 gate_in_2 33nF
+    C4 gate_in_2 gate_out_2 100pF
+    R4 gate_in_2 gate_out_2 1MegOhm
+    C5 gate_out_2 C5out 1uF
+    R5 C5out OUT 100kOhm
+    Rload OUT 0 50kOhm
+    .options TEMP = 25C
+    .options TNOM = 25C
+    .ic 
+    .tran 1us 1ms 0ms
+    .end
+    
+    [1;32m2021-02-21 13:55:22,784[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout Circuit: cmos buffer with distortion'
+    [1;32m2021-02-21 13:55:22,785[0m - [1;34mPySpice.Spice.NgSpice.Shared.NgSpiceShared.exec_command[0m - [1;31mDEBUG[0m - Execute command: run
+    [1;32m2021-02-21 13:55:22,785[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout Doing analysis at TEMP = 25.000000 and TNOM = 25.000000'
+    [1;32m2021-02-21 13:55:22,789[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout Initial Transient Solution'
+    [1;32m2021-02-21 13:55:22,790[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout --------------------------'
+    [1;32m2021-02-21 13:55:22,790[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout Node                                   Voltage'
+    [1;32m2021-02-21 13:55:22,791[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout ----                                   -------'
+    [1;32m2021-02-21 13:55:22,792[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout +5v                                          5'
+    [1;32m2021-02-21 13:55:22,792[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout in                                           0'
+    [1;32m2021-02-21 13:55:22,796[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout gate_out_1                             2.10156'
+    [1;32m2021-02-21 13:55:22,797[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout gate_in_1                              2.10156'
+    [1;32m2021-02-21 13:55:22,798[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout gate_out_2                             2.10156'
+    [1;32m2021-02-21 13:55:22,799[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout gate_in_2                              2.10156'
+    [1;32m2021-02-21 13:55:22,800[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout r2out                                        0'
+    [1;32m2021-02-21 13:55:22,801[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout r3out                                  2.10156'
+    [1;32m2021-02-21 13:55:22,801[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout c5out                                        0'
+    [1;32m2021-02-21 13:55:22,806[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout out                                          0'
+    [1;32m2021-02-21 13:55:22,806[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout v2#branch                                    0'
+    [1;32m2021-02-21 13:55:22,807[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout v1#branch                         -5.85927e-12'
+    [1;32m2021-02-21 13:55:22,826[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout No. of Data Rows : 1008'
+    [1;32m2021-02-21 13:55:22,826[0m - [1;34mPySpice.Spice.NgSpice.Shared.NgSpiceShared.run[0m - [1;31mDEBUG[0m - Simulation is done
+    [1;32m2021-02-21 13:55:22,827[0m - [1;34mPySpice.Spice.NgSpice.Simulation.NgSpiceSharedCircuitSimulator._run[0m - [1;31mDEBUG[0m - ['tran1', 'const']
+    [1;32m2021-02-21 13:55:22,829[0m - [1;34mPySpice.Spice.NgSpice.Simulation.NgSpiceSharedCircuitSimulator._run[0m - [1;31mDEBUG[0m - desk
+    .title cmos buffer with distortion
+    .include /github/workspace/lib/spice/cmos/4069ub.lib
+    V1 +5V 0 DC 5
+    V2 IN 0 DC 5 AC 2.5V SIN(0 1V 1k)
+    X1 gate_in_1 gate_out_1 +5V 0 4069UB
+    X2 gate_in_2 gate_out_2 +5V 0 4069UB
+    R1 IN 0 1MegOhm
+    R2 IN R2out 100kOhm
+    C1 R2out gate_in_1 68nF
+    C2 gate_in_1 gate_out_1 81pF
+    R3 gate_in_1 R3out 100kOhm
+    R6 R3out gate_out_1 500kOhm
+    C3 gate_out_1 gate_in_2 33nF
+    C4 gate_in_2 gate_out_2 100pF
+    R4 gate_in_2 gate_out_2 1MegOhm
+    C5 gate_out_2 C5out 1uF
+    R5 C5out OUT 100kOhm
+    Rload OUT 0 50kOhm
+    .options TEMP = 25C
+    .options TNOM = 25C
+    .ic 
+    .tran 1us 1ms 0ms
+    .end
+    
+    [1;32m2021-02-21 13:55:22,830[0m - [1;34mPySpice.Spice.NgSpice.Shared.NgSpiceShared.exec_command[0m - [1;31mDEBUG[0m - Execute command: destroy all
+    [1;32m2021-02-21 13:55:22,831[0m - [1;34mPySpice.Spice.NgSpice.Shared.NgSpiceShared.load_circuit[0m - [1;31mDEBUG[0m - ngSpice_Circ
+    .title cmos buffer with distortion
+    .include /github/workspace/lib/spice/cmos/4069ub.lib
+    V1 +5V 0 DC 5
+    V2 IN 0 DC 5 AC 2.5V SIN(0 1V 1k)
+    X1 gate_in_1 gate_out_1 +5V 0 4069UB
+    X2 gate_in_2 gate_out_2 +5V 0 4069UB
+    R1 IN 0 1MegOhm
+    R2 IN R2out 100kOhm
+    C1 R2out gate_in_1 68nF
+    C2 gate_in_1 gate_out_1 81pF
+    R3 gate_in_1 R3out 100kOhm
+    R6 R3out gate_out_1 500kOhm
+    C3 gate_out_1 gate_in_2 33nF
+    C4 gate_in_2 gate_out_2 100pF
+    R4 gate_in_2 gate_out_2 1MegOhm
+    C5 gate_out_2 C5out 1uF
+    R5 C5out OUT 100kOhm
+    Rload OUT 0 50kOhm
+    .options TEMP = 25C
+    .options TNOM = 25C
+    .ic 
+    .tran 1us 1ms 0ms
+    .end
+    
+    [1;32m2021-02-21 13:55:22,833[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout Circuit: cmos buffer with distortion'
+    [1;32m2021-02-21 13:55:22,834[0m - [1;34mPySpice.Spice.NgSpice.Shared.NgSpiceShared.exec_command[0m - [1;31mDEBUG[0m - Execute command: run
+    [1;32m2021-02-21 13:55:22,835[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout Doing analysis at TEMP = 25.000000 and TNOM = 25.000000'
+    [1;32m2021-02-21 13:55:22,836[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout Initial Transient Solution'
+    [1;32m2021-02-21 13:55:22,836[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout --------------------------'
+    [1;32m2021-02-21 13:55:22,837[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout Node                                   Voltage'
+    [1;32m2021-02-21 13:55:22,838[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout ----                                   -------'
+    [1;32m2021-02-21 13:55:22,843[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout +5v                                          5'
+    [1;32m2021-02-21 13:55:22,843[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout in                                           0'
+    [1;32m2021-02-21 13:55:22,845[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout gate_out_1                             2.10156'
+    [1;32m2021-02-21 13:55:22,846[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout gate_in_1                              2.10156'
+    [1;32m2021-02-21 13:55:22,846[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout gate_out_2                             2.10156'
+    [1;32m2021-02-21 13:55:22,847[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout gate_in_2                              2.10156'
+    [1;32m2021-02-21 13:55:22,847[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout r2out                                        0'
+    [1;32m2021-02-21 13:55:22,848[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout r3out                                  2.10156'
+    [1;32m2021-02-21 13:55:22,849[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout c5out                                        0'
+    [1;32m2021-02-21 13:55:22,854[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout out                                          0'
+    [1;32m2021-02-21 13:55:22,855[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout v2#branch                                    0'
+    [1;32m2021-02-21 13:55:22,855[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout v1#branch                         -5.85927e-12'
+    [1;32m2021-02-21 13:55:22,872[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout No. of Data Rows : 1008'
+    [1;32m2021-02-21 13:55:22,872[0m - [1;34mPySpice.Spice.NgSpice.Shared.NgSpiceShared.run[0m - [1;31mDEBUG[0m - Simulation is done
+    [1;32m2021-02-21 13:55:22,873[0m - [1;34mPySpice.Spice.NgSpice.Simulation.NgSpiceSharedCircuitSimulator._run[0m - [1;31mDEBUG[0m - ['tran1', 'const']
+    [1;32m2021-02-21 13:55:22,875[0m - [1;34mPySpice.Spice.NgSpice.Simulation.NgSpiceSharedCircuitSimulator._run[0m - [1;31mDEBUG[0m - desk
+    .title cmos buffer with distortion
+    .include /github/workspace/lib/spice/cmos/4069ub.lib
+    V1 +5V 0 DC 5
+    V2 IN 0 DC 5 AC 2.5V SIN(0 1V 1k)
+    X1 gate_in_1 gate_out_1 +5V 0 4069UB
+    X2 gate_in_2 gate_out_2 +5V 0 4069UB
+    R1 IN 0 1MegOhm
+    R2 IN R2out 100kOhm
+    C1 R2out gate_in_1 68nF
+    C2 gate_in_1 gate_out_1 81pF
+    R3 gate_in_1 R3out 100kOhm
+    R6 R3out gate_out_1 1MegOhm
+    C3 gate_out_1 gate_in_2 33nF
+    C4 gate_in_2 gate_out_2 100pF
+    R4 gate_in_2 gate_out_2 1MegOhm
+    C5 gate_out_2 C5out 1uF
+    R5 C5out OUT 100kOhm
+    Rload OUT 0 50kOhm
+    .options TEMP = 25C
+    .options TNOM = 25C
+    .ic 
+    .tran 1us 1ms 0ms
+    .end
+    
+    [1;32m2021-02-21 13:55:22,876[0m - [1;34mPySpice.Spice.NgSpice.Shared.NgSpiceShared.exec_command[0m - [1;31mDEBUG[0m - Execute command: destroy all
+    [1;32m2021-02-21 13:55:22,877[0m - [1;34mPySpice.Spice.NgSpice.Shared.NgSpiceShared.load_circuit[0m - [1;31mDEBUG[0m - ngSpice_Circ
+    .title cmos buffer with distortion
+    .include /github/workspace/lib/spice/cmos/4069ub.lib
+    V1 +5V 0 DC 5
+    V2 IN 0 DC 5 AC 2.5V SIN(0 1V 1k)
+    X1 gate_in_1 gate_out_1 +5V 0 4069UB
+    X2 gate_in_2 gate_out_2 +5V 0 4069UB
+    R1 IN 0 1MegOhm
+    R2 IN R2out 100kOhm
+    C1 R2out gate_in_1 68nF
+    C2 gate_in_1 gate_out_1 81pF
+    R3 gate_in_1 R3out 100kOhm
+    R6 R3out gate_out_1 1MegOhm
+    C3 gate_out_1 gate_in_2 33nF
+    C4 gate_in_2 gate_out_2 100pF
+    R4 gate_in_2 gate_out_2 1MegOhm
+    C5 gate_out_2 C5out 1uF
+    R5 C5out OUT 100kOhm
+    Rload OUT 0 50kOhm
+    .options TEMP = 25C
+    .options TNOM = 25C
+    .ic 
+    .tran 1us 1ms 0ms
+    .end
+    
+    [1;32m2021-02-21 13:55:22,878[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout Circuit: cmos buffer with distortion'
+    [1;32m2021-02-21 13:55:22,879[0m - [1;34mPySpice.Spice.NgSpice.Shared.NgSpiceShared.exec_command[0m - [1;31mDEBUG[0m - Execute command: run
+    [1;32m2021-02-21 13:55:22,879[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout Doing analysis at TEMP = 25.000000 and TNOM = 25.000000'
+    [1;32m2021-02-21 13:55:22,880[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout Initial Transient Solution'
+    [1;32m2021-02-21 13:55:22,881[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout --------------------------'
+    [1;32m2021-02-21 13:55:22,882[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout Node                                   Voltage'
+    [1;32m2021-02-21 13:55:22,882[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout ----                                   -------'
+    [1;32m2021-02-21 13:55:22,883[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout +5v                                          5'
+    [1;32m2021-02-21 13:55:22,889[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout in                                           0'
+    [1;32m2021-02-21 13:55:22,889[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout gate_out_1                             2.10156'
+    [1;32m2021-02-21 13:55:22,890[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout gate_in_1                              2.10156'
+    [1;32m2021-02-21 13:55:22,891[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout gate_out_2                             2.10156'
+    [1;32m2021-02-21 13:55:22,892[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout gate_in_2                              2.10156'
+    [1;32m2021-02-21 13:55:22,892[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout r2out                                        0'
+    [1;32m2021-02-21 13:55:22,893[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout r3out                                  2.10156'
+    [1;32m2021-02-21 13:55:22,894[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout c5out                                        0'
+    [1;32m2021-02-21 13:55:22,894[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout out                                          0'
+    [1;32m2021-02-21 13:55:22,895[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout v2#branch                                    0'
+    [1;32m2021-02-21 13:55:22,895[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout v1#branch                         -5.85927e-12'
+    [1;32m2021-02-21 13:55:22,917[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout No. of Data Rows : 1008'
+    [1;32m2021-02-21 13:55:22,917[0m - [1;34mPySpice.Spice.NgSpice.Shared.NgSpiceShared.run[0m - [1;31mDEBUG[0m - Simulation is done
+    [1;32m2021-02-21 13:55:22,918[0m - [1;34mPySpice.Spice.NgSpice.Simulation.NgSpiceSharedCircuitSimulator._run[0m - [1;31mDEBUG[0m - ['tran1', 'const']
+
+-->
+
+<div class="section">
+  <div class="container has-text-centered my-2">
+
+    <p><img src="/elektrophon/assets/cmos_buffer_files/cmos_buffer_15_0.svg" alt="svg" /></p>
+
+  </div>
+</div>
+
+<!-- mk scoped -->
+<div class="container my-2">
+  <p>the simulation looks similar to the first one. we can see that the signal is transforming into a square wave, but always with the soft clipping. next we want to analyse the harmonics that are added to the signal.</p>
+</div>
+
+<!-- 
+    [1;32m2021-02-21 13:55:23,192[0m - [1;34mPySpice.Spice.NgSpice.Shared.NgSpiceShared.load_circuit[0m - [1;31mDEBUG[0m - ngSpice_Circ
+    
+    .title cmos buffer with distortion
+    .include /home/etienne/Documents/elektrophon/lib/spice/cmos/4069ub.lib
+    V1 +5V 0 DC 5
+    V2 IN 0 DC 5 AC 2.5V SIN(0 2.5V 1k)
+    X1 gate_in_1 gate_out_1 +5V 0 4069UB
+    X2 gate_in_2 gate_out_2 +5V 0 4069UB
+    R2 gate_out_1 gate_in_1 100kOhm
+    C9 gate_out_1 gate_in_1 100pF
+    C1 gate_in_1 R1out 47nF
+    R1 R1out IN 100kOhm
+    R3 gate_out_1 r3_out 100kOhm
+    C2 r3_out gate_in_2 100nF
+    R4 gate_in_2 gate_out_2 100kOhm
+    C5 gate_in_2 gate_out_2 100pF
+    C3 gate_out_2 OUT 1uF
+    Rload OUT 0 100kOhm
+    .options TEMP = 25C
+    .options TNOM = 25C
+    .ic 
+    .tran 10ms 10s 0ms
+    .control
+    linearize v(OUT)
+    wrdata build/out.ssv v(OUT)
+    .endc
+    .end
+    
+    [1;32m2021-02-21 13:55:23,194[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stderr Error: Could not find include file /home/etienne/Documents/elektrophon/lib/spice/cmos/4069ub.lib'
+    [1;32m2021-02-21 13:55:23,195[0m - [1;34mPySpice.Spice.NgSpice.Shared.NgSpiceShared._send_char[0m - [1;31mERROR[0m - Error: Could not find include file /home/etienne/Documents/elektrophon/lib/spice/cmos/4069ub.lib
+    [1;32m2021-02-21 13:55:23,196[0m - [1;34mPySpice.Spice.NgSpice.Shared.NgSpiceShared.exec_command[0m - [1;31mDEBUG[0m - Execute command: run
+    [1;32m2021-02-21 13:55:23,198[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout Doing analysis at TEMP = 25.000000 and TNOM = 25.000000'
+    [1;32m2021-02-21 13:55:23,199[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout Initial Transient Solution'
+    [1;32m2021-02-21 13:55:23,201[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout --------------------------'
+    [1;32m2021-02-21 13:55:23,202[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout Node                                   Voltage'
+    [1;32m2021-02-21 13:55:23,203[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout ----                                   -------'
+    [1;32m2021-02-21 13:55:23,205[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout +5v                                          5'
+    [1;32m2021-02-21 13:55:23,206[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout in                                           0'
+    [1;32m2021-02-21 13:55:23,207[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout gate_out_1                             2.10156'
+    [1;32m2021-02-21 13:55:23,208[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout gate_in_1                              2.10156'
+    [1;32m2021-02-21 13:55:23,209[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout gate_out_2                             2.10156'
+    [1;32m2021-02-21 13:55:23,210[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout gate_in_2                              2.10156'
+    [1;32m2021-02-21 13:55:23,211[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout r2out                                        0'
+    [1;32m2021-02-21 13:55:23,212[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout r3out                                  2.10156'
+    [1;32m2021-02-21 13:55:23,214[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout c5out                                        0'
+    [1;32m2021-02-21 13:55:23,214[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout out                                          0'
+    [1;32m2021-02-21 13:55:23,215[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout v2#branch                                    0'
+    [1;32m2021-02-21 13:55:23,216[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout v1#branch                         -5.85927e-12'
+    [1;32m2021-02-21 13:55:23,216[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b' Reference value :  0.00000e+00\r'
+    [1;32m2021-02-21 13:55:23,231[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout No. of Data Rows : 1008'
+    [1;32m2021-02-21 13:55:23,232[0m - [1;34mPySpice.Spice.NgSpice.Shared.NgSpiceShared.run[0m - [1;31mDEBUG[0m - Simulation is done
+    Plots: ['tran2', 'tran1', 'const']
+
+-->
+
+<!-- mk scoped -->
+<div class="container my-2">
+  <h1 class="subtitle is-lowercase" id="references">references</h1>
+
+  <ol>
+    <li><a href="https://www.ti.com/lit/ds/schs054e/schs054e.pdf">CD4069</a> Datasheet</li>
+    <li><a href="http://www.runoffgroove.com/ubescreamer.html">UBE Screamer</a> TS-808 workalike built around the CD4049UBE logic IC</li>
+    <li><a href="https://www.schmitzbits.de/wasp.html">WASP Filter</a> Jürgen Haibles clone of the EDP Wasp VCF from René Schmitz.</li>
+  </ol>
+</div>
+
+        </div>        
+    </div>
+</div>
+
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    
+        <footer class="footer">
+    <div class="container">
+      <div class="content has-text-centered">
+        <div class="soc">
+          <a href="#"><i class="fa fa-github-alt fa-lg" aria-hidden="true"></i></a>
+          <a href="#"><i class="fa fa-youtube fa-lg" aria-hidden="true"></i></a>
+          <a href="#"><i class="fa fa-facebook fa-lg" aria-hidden="true"></i></a>
+          <a href="#"><i class="fa fa-twitter fa-lg" aria-hidden="true"></i></a>
+        </div>
+        <p>
+          <strong>Bulma</strong> by <a href="http://jgthms.com">Jeremy Thomas</a>.
+          The source code is licensed <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. <br>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+<!-- footer class="footer">
+<data class="u-url" href="/elektrophon/"></data>
+<div class="content has-text-centered">
+
+    <div class="footer-col-wrapper">
+    <div class="footer-col">
+        <p class="feed-subscribe">
+        <a href="/elektrophon/feed.xml">
+            <svg class="svg-icon orange">
+            <use xlink:href="/elektrophon/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+        </a>
+        </p>
+        <ul class="contact-list">
+        <li class="p-name">spielhuus</li>
+        <li><a class="u-email" href="mailto:spielhus@gmail.com">spielhus@gmail.com</a></li>
+        </ul>
+    </div>
+    <div class="footer-col">
+        <p>analog and digital modules for an electroacustic instrument.
+</p>
+    </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"></ul></div>
+</div>
+</footer -->
+<!-- script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script -->
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    
+    <script src="/elektrophon/assets/js/main.js" type="text/javascript"></script></body>
+</html>

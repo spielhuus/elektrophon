@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="170.876pt" height="51.621pt" viewBox="0 0 170.876 51.621" version="1.1">
+<defs>
+<clipPath id="clip1">
+  <path d="M 0 22 L 170.875 22 L 170.875 24 L 0 24 Z M 0 22 "/>
+</clipPath>
+<clipPath id="clip2">
+  <path d="M 0 22 L 1 22 L 1 51.621094 L 0 51.621094 Z M 0 22 "/>
+</clipPath>
+</defs>
+<g id="surface1">
+<g clip-path="url(#clip1)" clip-rule="nonzero">
+<path style="fill:none;stroke-width:0.79701;stroke-linecap:butt;stroke-linejoin:miter;stroke:rgb(0%,0%,0%);stroke-opacity:1;stroke-miterlimit:10;" d="M 0.0004375 0.001 L 170.082469 0.001 " transform="matrix(1,0,0,-1,0.398,22.876)"/>
+</g>
+<g clip-path="url(#clip2)" clip-rule="nonzero">
+<path style="fill:none;stroke-width:0.79701;stroke-linecap:butt;stroke-linejoin:miter;stroke:rgb(0%,0%,0%);stroke-opacity:1;stroke-miterlimit:10;" d="M 0.0004375 0.001 L 0.0004375 -28.346656 " transform="matrix(1,0,0,-1,0.398,22.876)"/>
+</g>
+<path style="fill:none;stroke-width:0.3985;stroke-linecap:butt;stroke-linejoin:miter;stroke:rgb(0%,0%,0%);stroke-opacity:1;stroke-miterlimit:10;" d="M 22.676219 14.172875 C 22.676219 18.872094 18.871531 22.676781 14.172313 22.676781 C 9.477 22.676781 5.668406 18.872094 5.668406 14.172875 C 5.668406 9.477563 9.477 5.668969 14.172313 5.668969 C 18.871531 5.668969 22.676219 9.477563 22.676219 14.172875 Z M 22.676219 14.172875 " transform="matrix(1,0,0,-1,0.398,22.876)"/>
+</g>
+</svg>

@@ -1,0 +1,1068 @@
+
+
+
+
+<!DOCTYPE html>
+<html  class="has-navbar-fixed-top" >
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content=#ffffff>
+    <link rel="stylesheet" href="/elektrophon/assets/css/main.css">
+    <link rel="shortcut icon" type="image/png"
+           href="/elektrophon/favicon.png" 
+    />
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.7.0/dist/alpine.min.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/fontawesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/brands.min.css">
+    
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-social@1/bin/bulma-social.min.css">
+    
+    <!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>summe | elektrophon</title>
+<meta name="generator" content="Jekyll v4.2.0" />
+<meta property="og:title" content="summe" />
+<meta name="author" content="spielhuus" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="audio and cv mixer that also can add offset or attenuvert a s" />
+<meta property="og:description" content="audio and cv mixer that also can add offset or attenuvert a s" />
+<link rel="canonical" href="https://spielhuus.github.io//elektrophon/module/2020/12/10/summe.html" />
+<meta property="og:url" content="https://spielhuus.github.io//elektrophon/module/2020/12/10/summe.html" />
+<meta property="og:site_name" content="elektrophon" />
+<meta property="og:image" content="https://spielhuus.github.io//elektrophon/assets/summe_files/summe-logo.jpg" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-12-10T00:00:00+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://spielhuus.github.io//elektrophon/assets/summe_files/summe-logo.jpg" />
+<meta property="twitter:title" content="summe" />
+<script type="application/ld+json">
+{"image":"https://spielhuus.github.io//elektrophon/assets/summe_files/summe-logo.jpg","@type":"BlogPosting","headline":"summe","dateModified":"2020-12-10T00:00:00+00:00","datePublished":"2020-12-10T00:00:00+00:00","url":"https://spielhuus.github.io//elektrophon/module/2020/12/10/summe.html","mainEntityOfPage":{"@type":"WebPage","@id":"https://spielhuus.github.io//elektrophon/module/2020/12/10/summe.html"},"author":{"@type":"Person","name":"spielhuus"},"description":"audio and cv mixer that also can add offset or attenuvert a s","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+</head>
+  <body>
+    <nav class="navbar is-light  is-fixed-top  has-shadow">
+  <div class="container">
+      <div class="navbar-brand">
+          <a href="/elektrophon/" class="navbar-item is-italic is-bold is-lowercase">
+              elektrophon
+          </a>
+          <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navMenu">
+              <span aria-hidden="true"></span>
+              <span aria-hidden="true"></span>
+              <span aria-hidden="true"></span>
+          </a>
+      </div>
+      <div class="navbar-menu" id="navMenu">
+          <div class="navbar-end">
+              
+              
+                  
+                  <a href="/elektrophon/article/" class="navbar-item ">articles</a>
+                  
+              
+                  
+                  <a href="/elektrophon/module/" class="navbar-item ">modules</a>
+                  
+              
+                  
+                  <a href="/elektrophon/about.html" class="navbar-item ">about</a>
+                  
+              
+              
+          </div>
+      </div>
+  </div>
+</nav>
+    
+        <section class="hero  is-medium  is-bold is-primary"  style="background: url('/elektrophon/assets/summe_files/summe-logo.jpg') no-repeat center center; background-size: cover;" >
+    <div class="hero-body ">
+        <div class="container">
+            <h1 class="title is-title is-bold is-size-1 is-lowercase is-italic has-text-white">summe</h1>
+            <p class="subtitle itle is-title is-bold is-size-2 is-lowercase is-italic has-text-white"></p>
+            
+        </div>
+    </div>
+</section>
+    
+    
+
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                
+                <div class="column is-12">
+                    
+                    
+                    
+                    
+                    
+
+ 
+
+
+
+
+<div class="field is-grouped">
+  <div class="control">
+    <div class="tags has-addons">
+      <span class="tag is-dark">version</span>
+      <span class="tag is-primary">0</span>
+    </div>
+  </div>
+  <div class="control">
+    <div class="tags has-addons">
+      <span class="tag is-dark">status</span>
+      <span class="tag is-info">draft</span>
+    </div>
+  </div>
+
+  
+  <div class="control">
+    <div class="tags has-addons">
+      <span class="tag is-dark">drc</span>
+      <span class="tag is-success">ok</span>
+    </div>
+  </div>
+  
+
+  
+  <div class="control">
+    <div class="tags has-addons">
+      <span class="tag is-dark">erc</span>
+      <span class="tag is-danger">2</span>
+    </div>
+  </div>
+  
+
+  
+  <div class="control">
+    <div class="tags has-addons">
+      <span class="tag is-dark">unconnected</span>
+      <span class="tag is-danger">24</span>
+    </div>
+  </div>
+  
+
+    <div class="control">
+      <a class="tags has-addons" href="https://mybinder.org/v2/gh/spielhuus/elektrophon/HEAD?filepath=content%2Fsumme_kibot_data%2Fsumme_kibot_data.ipynb">
+        <span class="tag is-dark">launch</span>
+        <span class="tag is-link">binder</span>
+      </a>
+    </div>
+
+    <div class="control">
+      <a class="tags has-addons" href="https://github.com/spielhuus/elektrophon/tree/master/content/summe">
+        <span class="tag is-dark"><i class="fab fa-github" aria-hidden="true"></i></span>
+        <span class="tag is-link">github</span>
+      </a>
+    </div>
+</div>
+
+
+<div class="columns is-full">"
+    <div class="column is-three-quarters"">
+        <!-- h1 class="is-title is-size-1 is-lowercase is-italic is-bold">summe</h1 -->
+        <div class="section is-bold">audio and cv mixer that also can add offset or attenuvert a s</div>
+        <div class="section"><ul id="toc" class="section-nav">
+<li class="toc-entry toc-h1"><a href="#about">about</a></li>
+<li class="toc-entry toc-h1"><a href="#construction">construction</a></li>
+<li class="toc-entry toc-h1"><a href="#bom">bom</a></li>
+<li class="toc-entry toc-h1"><a href="#calibration">calibration</a></li>
+<li class="toc-entry toc-h1"><a href="#usage">usage</a></li>
+<li class="toc-entry toc-h1"><a href="#references">references</a></li>
+</ul></div>
+    </div>
+    <div class="column">
+        <figure class="image is-128x128">
+            <img src="/elektrophon/assets/summe_files/summe-panel.jpg">
+          </figure>
+    </div>
+</div>
+
+<div clss="section">
+    <nav class="container">
+        <!-- 
+    ----------------------------------------------------------------------
+    Ran 1 test in 0.000s
+    
+    OK
+
+-->
+
+<!-- mk scoped -->
+<div class="container my-2">
+  <h1 class="subtitle is-lowercase" id="about">about</h1>
+
+  <p>long description: summe is a simple mixer utility module. it can be used as a <strong>mixer</strong>, <strong>attenuator</strong> or <strong>attenuverter</strong> for ac or dc signals. the function depends on the patching and settings of the potentiometers. an attenuverter is used in different modules like the  Serge VCS, Maths and also in the polivoks filter. while this module can be used as a simple mixer you can also adjust cv signals. such a signal can be simply attenuated or inverted. when feeding in a positive singal slope (for example from an adsr). the signal will be turned to a neagative dc singal. if the inpout signal is ac coupled the signal will be inverted. the function is the setting on the potentiometer of the channel. when the potentiometer is at center position. the output signal is attenuated to zero. no output singal is present. when turning to the right. the signal will be stronger until the output signal is equal to the input signal. when turning the potentiomenter to the left, the output signal will be phase shifted by 180°. when you turn the potentiometer to full left the output signal will be the inverted input signal. all the inputs are mixed to the output signal; unless you connect the output of a channel. then this output does not accure on the mixed signal.</p>
+</div>
+
+<!-- mk scoped -->
+<div class="container my-2">
+  <h1 class="subtitle is-lowercase" id="construction">construction</h1>
+
+  <p>the attenuverter is build around a differential amplifier with an opamp.</p>
+</div>
+
+<!-- execute result -->
+
+<div class="section">
+  <div class="container has-text-centered my-2">
+
+    <p><img src="/elektrophon/assets/summe_files/summe_7_0.svg" alt="svg" /></p>
+
+  </div>
+</div>
+
+<!-- execute result -->
+
+<div class="section">
+  <div class="container has-text-centered my-2">
+
+    <p><img src="/elektrophon/assets/summe_files/summe_8_0.svg" alt="svg" /></p>
+
+  </div>
+</div>
+
+<!-- mk scoped -->
+<div class="container my-2">
+  <p>\(\begin{array}{c}
+Vout = \Bigl(1 + \frac{R2}{R1}\Bigr) \Bigl(\frac{R4}{R3+R4}\Bigr) * V2 - \Bigl(\frac{R2}{R1}\Bigr) * V1
+\end{array}\)</p>
+</div>
+
+<div class="section">
+  <div class="container has-text-centered my-2">
+
+    <p><img src="/elektrophon/assets/summe_files/summe_10_0.svg" alt="svg" /></p>
+
+  </div>
+</div>
+
+<!-- mk scoped -->
+<div class="container my-2">
+  <p>the circuit of the attenuverter is based on the opamp dfferential amplifer. the two resistors at the non-inverting inputs are replaced with a potentiometer. the potentiometer is configured as a voltage divider and replace R3 and R4 from the differential amplifier. when the position of the potentiometer is adjusted, the output voltage will change or invert. at the center position  the output is zero volrs. the response to the potentiometer is linear. we can make it an centered s-curve by adding two parallel resistors (R5,R6) to the potentiometer [<a href="https://sound-au.com/pots.htm">2</a>].</p>
+</div>
+
+<!-- mk scoped -->
+<div class="container my-2">
+  <p>a simulation with the resistance at RV 1 changed from 0-100%. first run is the linear result. the second run is done with the resistors R5 and R6 added. This results in a s curve. the shape of the curve can be changed with the values of the resistors.</p>
+</div>
+
+<!-- mk scoped -->
+<div class="container my-2">
+  <h1 class="subtitle is-lowercase" id="bom">bom</h1>
+
+  <p>main circuit</p>
+
+  <table class="table is-striped is-hoverable is-narrow">
+<thead>
+    <tr>
+        <td> # </td>
+        <td> reference </td>
+        <td> value </td>
+        <td></td>
+        <td> description </td>
+    </tr>    
+</thead>
+<tbody>
+    
+    <tr>
+        <td> 6 </td>
+        <td> C3 C4 C5 C6 C7 C8 </td>
+        <td> 0.1u </td>
+        <td>
+            
+            
+        </td>
+        <td> Unpolarized capacitor </td>
+    </tr>
+    
+    <tr>
+        <td> 3 </td>
+        <td> C1 C2 C9 </td>
+        <td> 10u </td>
+        <td>
+            
+            
+        </td>
+        <td> Polarized capacitor </td>
+    </tr>
+    
+    <tr>
+        <td> 1 </td>
+        <td> D1 </td>
+        <td> LED </td>
+        <td>
+            
+            
+        </td>
+        <td> Light emitting diode </td>
+    </tr>
+    
+    <tr>
+        <td> 1 </td>
+        <td> J5 </td>
+        <td> IDC Header </td>
+        <td>
+            
+            
+        </td>
+        <td> Generic connector, double row, 02x05, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/) </td>
+    </tr>
+    
+    <tr>
+        <td> 9 </td>
+        <td> J1 J2 J3 J4 J6 J7 J8 J9 J10 </td>
+        <td> IN </td>
+        <td>
+            
+            
+        </td>
+        <td> Audio Jack, 2 Poles (Mono / TS), Switched T Pole (Normalling) </td>
+    </tr>
+    
+    <tr>
+        <td> 6 </td>
+        <td> R17 R18 R19 R20 R28 R29 </td>
+        <td> 1k </td>
+        <td>
+            
+            
+        </td>
+        <td> Resistor </td>
+    </tr>
+    
+    <tr>
+        <td> 8 </td>
+        <td> R1 R2 R3 R4 R5 R6 R7 R8 </td>
+        <td> 47k </td>
+        <td>
+            
+            
+        </td>
+        <td> Resistor </td>
+    </tr>
+    
+    <tr>
+        <td> 15 </td>
+        <td> R9 R10 R11 R12 R13 R14 R15 R16 R21 R22 R23 R24 R25 R26 R27 </td>
+        <td> 100k </td>
+        <td>
+            
+            
+        </td>
+        <td> Resistor </td>
+    </tr>
+    
+    <tr>
+        <td> 4 </td>
+        <td> RV1 RV2 RV3 RV4 </td>
+        <td> 100k </td>
+        <td>
+            
+            
+        </td>
+        <td> Potentiometer </td>
+    </tr>
+    
+    <tr>
+        <td> 3 </td>
+        <td> U1 U2 U3 </td>
+        <td> OPA2134 </td>
+        <td>
+            
+            
+            <a href="http://www.ti.com/lit/ds/symlink/opa134.pdf"><i class="fas fa-file-pdf"></i></a>
+            
+        </td>
+        <td> Dual SoundPlus High Performance Audio Operational Amplifiers, DIP-8/SOIC-8 </td>
+    </tr>
+    
+</tbody>
+</table>
+
+</div>
+
+<!-- mk scoped -->
+<div class="container my-2">
+  <p>project files:</p>
+
+  <ul>
+    <li><a href="/assets/summe_files/main-schematic.pdf">schematic pdf file</a></li>
+    <li><a href="/assets/summe_files/main-pcb.pdf">PCB pdf file</a></li>
+    <li><a href="/assets/summe_files/main-3D.step">3d file</a></li>
+  </ul>
+</div>
+
+<!-- mk scoped -->
+<div class="container my-2">
+  <div>
+    
+    <p>main</p>
+    
+    
+    
+    <p>
+        <div class="alert alert-success" role="alert">
+            drc check successfull.
+        </div>
+    </p>
+    
+
+    
+    
+    <p>
+        <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_main_unconnected" aria-expanded="false" aria-controls="collapse_main_unconnected">
+                found 24 errors in unconnected check.
+        </button>
+    </p>
+    <div class="collapse" id="collapse_main_unconnected">
+        <div class="card card-body">
+            <table class="report">
+                    
+                <tr>
+                    <td>2</td>
+                    <td></td>
+                    <td>Unconnected items</td>
+                </tr>
+                
+                <tr>
+                    <td>121.415</td>
+                    <td>118.745</td>
+                    <td>Pad 5 of U3 on F.Cu and others</td>
+                </tr>
+                
+                <tr>
+                    <td>116.465</td>
+                    <td>117.475</td>
+                    <td>Pad 3 of U3 on F.Cu and others</td>
+                </tr>
+                
+                
+                <tr>
+                    <td>2</td>
+                    <td></td>
+                    <td>Unconnected items</td>
+                </tr>
+                
+                <tr>
+                    <td>83.321</td>
+                    <td>117.602</td>
+                    <td>Pad 2 of R6 on B.Cu and others</td>
+                </tr>
+                
+                <tr>
+                    <td>116.465</td>
+                    <td>117.475</td>
+                    <td>Pad 3 of U3 on F.Cu and others</td>
+                </tr>
+                
+                
+                <tr>
+                    <td>2</td>
+                    <td></td>
+                    <td>Unconnected items</td>
+                </tr>
+                
+                <tr>
+                    <td>112.965</td>
+                    <td>121.385</td>
+                    <td>Pad 8 of U2 on F.Cu and others</td>
+                </tr>
+                
+                <tr>
+                    <td>112.965</td>
+                    <td>114.935</td>
+                    <td>Pad 8 of U1 on F.Cu and others</td>
+                </tr>
+                
+                
+                <tr>
+                    <td>2</td>
+                    <td></td>
+                    <td>Unconnected items</td>
+                </tr>
+                
+                <tr>
+                    <td>121.415</td>
+                    <td>114.935</td>
+                    <td>Pad 8 of U3 on F.Cu and others</td>
+                </tr>
+                
+                <tr>
+                    <td>112.965</td>
+                    <td>114.935</td>
+                    <td>Pad 8 of U1 on F.Cu and others</td>
+                </tr>
+                
+                
+                <tr>
+                    <td>2</td>
+                    <td></td>
+                    <td>Unconnected items</td>
+                </tr>
+                
+                <tr>
+                    <td>112.965</td>
+                    <td>121.385</td>
+                    <td>Pad 8 of U2 on F.Cu and others</td>
+                </tr>
+                
+                <tr>
+                    <td>65.024</td>
+                    <td>143.764</td>
+                    <td>Track 0.250 mm [+15V] on F.Cu, length: 3.048 mm</td>
+                </tr>
+                
+                
+                <tr>
+                    <td>2</td>
+                    <td></td>
+                    <td>Unconnected items</td>
+                </tr>
+                
+                <tr>
+                    <td>112.965</td>
+                    <td>117.475</td>
+                    <td>Pad 6 of U1 on F.Cu and others</td>
+                </tr>
+                
+                <tr>
+                    <td>64.008</td>
+                    <td>85.843</td>
+                    <td>Pad 2 of R14 on B.Cu and others</td>
+                </tr>
+                
+                
+                <tr>
+                    <td>2</td>
+                    <td></td>
+                    <td>Unconnected items</td>
+                </tr>
+                
+                <tr>
+                    <td>108.015</td>
+                    <td>118.745</td>
+                    <td>Pad 4 of U1 on F.Cu and others</td>
+                </tr>
+                
+                <tr>
+                    <td>108.015</td>
+                    <td>125.195</td>
+                    <td>Pad 4 of U2 on F.Cu and others</td>
+                </tr>
+                
+                
+                <tr>
+                    <td>2</td>
+                    <td></td>
+                    <td>Unconnected items</td>
+                </tr>
+                
+                <tr>
+                    <td>116.465</td>
+                    <td>118.745</td>
+                    <td>Pad 4 of U3 on F.Cu and others</td>
+                </tr>
+                
+                <tr>
+                    <td>108.015</td>
+                    <td>118.745</td>
+                    <td>Pad 4 of U1 on F.Cu and others</td>
+                </tr>
+                
+                
+                <tr>
+                    <td>2</td>
+                    <td></td>
+                    <td>Unconnected items</td>
+                </tr>
+                
+                <tr>
+                    <td>108.015</td>
+                    <td>118.745</td>
+                    <td>Pad 4 of U1 on F.Cu and others</td>
+                </tr>
+                
+                <tr>
+                    <td>90.424</td>
+                    <td>118.364</td>
+                    <td>Track 0.381 mm [-15V] on B.Cu, length: 6.930 mm</td>
+                </tr>
+                
+                
+                <tr>
+                    <td>2</td>
+                    <td></td>
+                    <td>Unconnected items</td>
+                </tr>
+                
+                <tr>
+                    <td>108.015</td>
+                    <td>117.475</td>
+                    <td>Pad 3 of U1 on F.Cu and others</td>
+                </tr>
+                
+                <tr>
+                    <td>81.271</td>
+                    <td>76.454</td>
+                    <td>Track 0.250 mm [Net-(R1-Pad2)] on B.Cu, length: 0.044 mm</td>
+                </tr>
+                
+                
+                <tr>
+                    <td>2</td>
+                    <td></td>
+                    <td>Unconnected items</td>
+                </tr>
+                
+                <tr>
+                    <td>112.965</td>
+                    <td>118.745</td>
+                    <td>Pad 5 of U1 on F.Cu and others</td>
+                </tr>
+                
+                <tr>
+                    <td>81.271</td>
+                    <td>93.829</td>
+                    <td>Track 0.250 mm [Net-(R3-Pad2)] on B.Cu, length: 0.044 mm</td>
+                </tr>
+                
+                
+                <tr>
+                    <td>2</td>
+                    <td></td>
+                    <td>Unconnected items</td>
+                </tr>
+                
+                <tr>
+                    <td>108.015</td>
+                    <td>123.925</td>
+                    <td>Pad 3 of U2 on F.Cu and others</td>
+                </tr>
+                
+                <tr>
+                    <td>81.271</td>
+                    <td>117.602</td>
+                    <td>Track 0.250 mm [Net-(R5-Pad2)] on B.Cu, length: 3.391 mm</td>
+                </tr>
+                
+                
+                <tr>
+                    <td>2</td>
+                    <td></td>
+                    <td>Unconnected items</td>
+                </tr>
+                
+                <tr>
+                    <td>112.965</td>
+                    <td>125.195</td>
+                    <td>Pad 5 of U2 on F.Cu and others</td>
+                </tr>
+                
+                <tr>
+                    <td>81.271</td>
+                    <td>129.188</td>
+                    <td>Track 0.250 mm [Net-(R7-Pad2)] on B.Cu, length: 5.133 mm</td>
+                </tr>
+                
+                
+                <tr>
+                    <td>2</td>
+                    <td></td>
+                    <td>Unconnected items</td>
+                </tr>
+                
+                <tr>
+                    <td>65.278</td>
+                    <td>75.447</td>
+                    <td>Track 0.250 mm [Net-(R13-Pad2)] on B.Cu, length: 3.048 mm</td>
+                </tr>
+                
+                <tr>
+                    <td>108.015</td>
+                    <td>116.205</td>
+                    <td>Pad 2 of U1 on F.Cu and others</td>
+                </tr>
+                
+                
+                <tr>
+                    <td>2</td>
+                    <td></td>
+                    <td>Unconnected items</td>
+                </tr>
+                
+                <tr>
+                    <td>65.532</td>
+                    <td>116.078</td>
+                    <td>Track 0.250 mm [Net-(R11-Pad1)] on B.Cu, length: 3.048 mm</td>
+                </tr>
+                
+                <tr>
+                    <td>108.015</td>
+                    <td>122.655</td>
+                    <td>Pad 2 of U2 on F.Cu and others</td>
+                </tr>
+                
+                
+                <tr>
+                    <td>2</td>
+                    <td></td>
+                    <td>Unconnected items</td>
+                </tr>
+                
+                <tr>
+                    <td>112.965</td>
+                    <td>123.925</td>
+                    <td>Pad 6 of U2 on F.Cu and others</td>
+                </tr>
+                
+                <tr>
+                    <td>64.262</td>
+                    <td>126.483</td>
+                    <td>Track 0.250 mm [Net-(R12-Pad1)] on B.Cu, length: 2.335 mm</td>
+                </tr>
+                
+                
+                <tr>
+                    <td>2</td>
+                    <td></td>
+                    <td>Unconnected items</td>
+                </tr>
+                
+                <tr>
+                    <td>108.015</td>
+                    <td>114.935</td>
+                    <td>Pad 1 of U1 on F.Cu and others</td>
+                </tr>
+                
+                <tr>
+                    <td>60.071</td>
+                    <td>78.043</td>
+                    <td>Track 0.250 mm [Net-(R13-Pad1)] on B.Cu, length: 1.257 mm</td>
+                </tr>
+                
+                
+                <tr>
+                    <td>2</td>
+                    <td></td>
+                    <td>Unconnected items</td>
+                </tr>
+                
+                <tr>
+                    <td>112.965</td>
+                    <td>116.205</td>
+                    <td>Pad 7 of U1 on F.Cu and others</td>
+                </tr>
+                
+                <tr>
+                    <td>64.008</td>
+                    <td>87.893</td>
+                    <td>Track 0.250 mm [Net-(R14-Pad1)] on B.Cu, length: 2.899 mm</td>
+                </tr>
+                
+                
+                <tr>
+                    <td>2</td>
+                    <td></td>
+                    <td>Unconnected items</td>
+                </tr>
+                
+                <tr>
+                    <td>62.484</td>
+                    <td>114.028</td>
+                    <td>Track 0.250 mm [Net-(R15-Pad1)] on B.Cu, length: 2.899 mm</td>
+                </tr>
+                
+                <tr>
+                    <td>108.015</td>
+                    <td>121.385</td>
+                    <td>Pad 1 of U2 on F.Cu and others</td>
+                </tr>
+                
+                
+                <tr>
+                    <td>2</td>
+                    <td></td>
+                    <td>Unconnected items</td>
+                </tr>
+                
+                <tr>
+                    <td>112.965</td>
+                    <td>122.655</td>
+                    <td>Pad 7 of U2 on F.Cu and others</td>
+                </tr>
+                
+                <tr>
+                    <td>64.262</td>
+                    <td>128.533</td>
+                    <td>Pad 1 of R16 on B.Cu and others</td>
+                </tr>
+                
+                
+                <tr>
+                    <td>2</td>
+                    <td></td>
+                    <td>Unconnected items</td>
+                </tr>
+                
+                <tr>
+                    <td>56.896</td>
+                    <td>116.078</td>
+                    <td>Pad 2 of R23 on B.Cu and others</td>
+                </tr>
+                
+                <tr>
+                    <td>116.465</td>
+                    <td>116.205</td>
+                    <td>Pad 2 of U3 on F.Cu and others</td>
+                </tr>
+                
+                
+                <tr>
+                    <td>2</td>
+                    <td></td>
+                    <td>Unconnected items</td>
+                </tr>
+                
+                <tr>
+                    <td>116.465</td>
+                    <td>114.935</td>
+                    <td>Pad 1 of U3 on F.Cu and others</td>
+                </tr>
+                
+                <tr>
+                    <td>63.500</td>
+                    <td>152.155</td>
+                    <td>Track 0.250 mm [Net-(R25-Pad2)] on B.Cu, length: 3.101 mm</td>
+                </tr>
+                
+                
+                <tr>
+                    <td>2</td>
+                    <td></td>
+                    <td>Unconnected items</td>
+                </tr>
+                
+                <tr>
+                    <td>121.415</td>
+                    <td>117.475</td>
+                    <td>Pad 6 of U3 on F.Cu and others</td>
+                </tr>
+                
+                <tr>
+                    <td>63.500</td>
+                    <td>150.105</td>
+                    <td>Track 0.250 mm [Net-(R26-Pad2)] on B.Cu, length: 3.716 mm</td>
+                </tr>
+                
+                
+                <tr>
+                    <td>2</td>
+                    <td></td>
+                    <td>Unconnected items</td>
+                </tr>
+                
+                <tr>
+                    <td>121.415</td>
+                    <td>116.205</td>
+                    <td>Pad 7 of U3 on F.Cu and others</td>
+                </tr>
+                
+                <tr>
+                    <td>75.429</td>
+                    <td>151.446</td>
+                    <td>Track 0.250 mm [Net-(R27-Pad2)] on B.Cu, length: 3.169 mm</td>
+                </tr>
+                
+                
+            </table>
+        </div>
+    </div>
+
+
+    
+    
+    <p>
+        <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_main_erc" aria-expanded="false" aria-controls="collapse_main_erc">
+                found 2 errors in erc check.
+        </button>
+    </p>
+    <div class="collapse" id="collapse_main_erc">
+        <div class="card card-body">
+            <table class="report">
+                    
+                <tr>
+                    <td>2</td>
+                    <td>/</td>
+                    <td>Pin not connected (use a "no connection" flag to suppress this error)</td>
+                </tr>
+                
+                <tr>
+                    <td>204.47</td>
+                    <td>134.62</td>
+                    <td>Pin 2 (Passive) of component D1 is unconnected.</td>
+                </tr>
+                
+                
+                <tr>
+                    <td>2</td>
+                    <td>/</td>
+                    <td>Pin not connected (use a "no connection" flag to suppress this error)</td>
+                </tr>
+                
+                <tr>
+                    <td>196.85</td>
+                    <td>134.62</td>
+                    <td>Pin 1 (Passive) of component D1 is unconnected.</td>
+                </tr>
+                
+                
+            </table>
+        </div>
+    </div>
+
+
+
+    <p>panel</p>
+    
+    
+    
+    <p>
+        <div class="alert alert-success" role="alert">
+            drc check successfull.
+        </div>
+    </p>
+    
+
+    
+    
+    <p>
+        <div class="alert alert-success" role="alert">
+            unconnected check successfull.
+        </div>
+    </p>
+    
+
+    
+    
+    <p>
+        <div class="alert alert-success" role="alert">
+            erc check successfull.
+        </div>
+    </p>
+    
+
+
+<div class="dropdown">
+    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+      Dropdown button
+    </button>
+    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+      <li><a class="dropdown-item" href="#">Action</a></li>
+      <li><a class="dropdown-item" href="#">Another action</a></li>
+      <li><a class="dropdown-item" href="#">Something else here</a></li>
+    </ul>
+  </div>
+</div>
+</div>
+
+<!-- mk scoped -->
+<div class="container my-2">
+  <h1 class="subtitle is-lowercase" id="calibration">calibration</h1>
+
+  <p>there is no calibration needed. but the potentiomenter knobs have to be aliged to center position.</p>
+</div>
+
+<!-- mk scoped -->
+<div class="container my-2">
+  <h1 class="subtitle is-lowercase" id="usage">usage</h1>
+
+  <p>the input jacks are wired to 5 volts when nothing is connected.</p>
+
+  <p>all channels are mixed to the out jack. when something is connected to the channel out, this channel is removed from the overall mix.</p>
+
+  <p><em>mixer</em></p>
+  <ul>
+    <li>connect the different channels from audio or cv sources to the in jacks.</li>
+    <li>connect the out jack to something</li>
+    <li>turn the pots clockwise to adjust the volume.</li>
+  </ul>
+
+  <p><em>attenuverter</em></p>
+  <ul>
+    <li>connect all or a single channel.</li>
+    <li>when you turn the pot knob counter clockwise the signal is inverted.</li>
+  </ul>
+
+</div>
+
+<!-- mk scoped -->
+<div class="container my-2">
+  <h1 class="subtitle is-lowercase" id="references">references</h1>
+
+  <ul>
+    <li><a href="http://www.ecircuitcenter.com/Circuits/opdif/opdif.htm">Op Amp Differential Amplifier</a> eCircuit  Center</li>
+    <li><a href="https://sound-au.com/pots.htm">Beginners’ Guide to Potentiometers</a>  Rod Elliott (ESP)</li>
+  </ul>
+
+</div>
+
+    </nav>
+</div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    
+        <footer class="footer">
+    <div class="container">
+      <div class="content has-text-centered">
+        <div class="soc">
+          <a href="#"><i class="fa fa-github-alt fa-lg" aria-hidden="true"></i></a>
+          <a href="#"><i class="fa fa-youtube fa-lg" aria-hidden="true"></i></a>
+          <a href="#"><i class="fa fa-facebook fa-lg" aria-hidden="true"></i></a>
+          <a href="#"><i class="fa fa-twitter fa-lg" aria-hidden="true"></i></a>
+        </div>
+        <p>
+          <strong>Bulma</strong> by <a href="http://jgthms.com">Jeremy Thomas</a>.
+          The source code is licensed <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. <br>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+<!-- footer class="footer">
+<data class="u-url" href="/elektrophon/"></data>
+<div class="content has-text-centered">
+
+    <div class="footer-col-wrapper">
+    <div class="footer-col">
+        <p class="feed-subscribe">
+        <a href="/elektrophon/feed.xml">
+            <svg class="svg-icon orange">
+            <use xlink:href="/elektrophon/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+        </a>
+        </p>
+        <ul class="contact-list">
+        <li class="p-name">spielhuus</li>
+        <li><a class="u-email" href="mailto:spielhus@gmail.com">spielhus@gmail.com</a></li>
+        </ul>
+    </div>
+    <div class="footer-col">
+        <p>analog and digital modules for an electroacustic instrument.
+</p>
+    </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"></ul></div>
+</div>
+</footer -->
+<!-- script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script -->
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    
+    <script src="/elektrophon/assets/js/main.js" type="text/javascript"></script></body>
+</html>
