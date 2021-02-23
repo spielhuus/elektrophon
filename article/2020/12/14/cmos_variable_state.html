@@ -182,6 +182,160 @@
 
 <!-- mk scoped -->
 <div class="container my-2">
+  <h2 id="wasp-like-filter">wasp like filter</h2>
+</div>
+
+<!-- 
+    .title cmos buffer
+    .include /github/workspace/lib/spice/cmos/4069ub.lib
+    V1 +5V 0 DC 5
+    V2 IN 0 DC 5 AC 1V SIN(0 1V 10)
+    X1 gate_in_1 gate_out_1 +5V 0 4069UB
+    X2 gate_in_2 gate_out_2 +5V 0 4069UB
+    X3 gate_in_3 gate_out_3 +5V 0 4069UB
+    R1 IN rv1_out 33kOhm
+    C1 rv1_out gate_in_1 220nF
+    R2 gate_in_1 gate_out_1 33kOhm
+    R3 gate_out_1 gate_in_2 1kOhm
+    C2 gate_in_2 gate_out_2 1nF
+    R4 gate_out_2 gate_in_3 1kOhm
+    C3 gate_in_3 gate_out_3 1nF
+    R5 gate_out_3 gate_in_1 33kOhm
+    C5 gate_out_3 gate_in_1 68pF
+    R6 gate_out_2 R5out 1kOhm
+    R7 R5out gate_in_1 33kOhm
+    
+
+-->
+
+<!-- 
+    /opt/conda/envs/elektrophon/lib/python3.9/site-packages/PySpice/Plot/BodeDiagram.py:36: MatplotlibDeprecationWarning: The 'basex' parameter of __init__() has been renamed 'base' since Matplotlib 3.3; support for the old name will be dropped two minor releases later.
+      axe.semilogx(frequency, gain, basex=10, **kwargs)
+    /opt/conda/envs/elektrophon/lib/python3.9/site-packages/numpy/core/_asarray.py:83: ComplexWarning: Casting complex values to real discards the imaginary part
+      return array(a, dtype, copy=False, order=order)
+    /opt/conda/envs/elektrophon/lib/python3.9/site-packages/PySpice/Plot/BodeDiagram.py:36: MatplotlibDeprecationWarning: The 'basex' parameter of __init__() has been renamed 'base' since Matplotlib 3.3; support for the old name will be dropped two minor releases later.
+      axe.semilogx(frequency, gain, basex=10, **kwargs)
+    /opt/conda/envs/elektrophon/lib/python3.9/site-packages/numpy/core/_asarray.py:83: ComplexWarning: Casting complex values to real discards the imaginary part
+      return array(a, dtype, copy=False, order=order)
+    /opt/conda/envs/elektrophon/lib/python3.9/site-packages/PySpice/Plot/BodeDiagram.py:36: MatplotlibDeprecationWarning: The 'basex' parameter of __init__() has been renamed 'base' since Matplotlib 3.3; support for the old name will be dropped two minor releases later.
+      axe.semilogx(frequency, gain, basex=10, **kwargs)
+    /opt/conda/envs/elektrophon/lib/python3.9/site-packages/numpy/core/_asarray.py:83: ComplexWarning: Casting complex values to real discards the imaginary part
+      return array(a, dtype, copy=False, order=order)
+
+-->
+
+<div class="section">
+  <div class="container has-text-centered my-2">
+
+    <p><img src="/elektrophon/assets/cmos_variable_state_files/cmos_variable_state_10_1.svg" alt="svg" /></p>
+
+  </div>
+</div>
+
+<!-- mk scoped -->
+<div class="container my-2">
+  <h2 id="opamp-svf">opamp svf</h2>
+</div>
+
+<!-- 
+    .title opamp svf
+    .include /github/workspace/lib/spice/opamp/TL072.lib
+    V1 +5V 0 DC 5
+    V2 +15V 0 DC 15
+    V3 -15V 0 DC -15
+    V4 IN 0 DC 5 AC 5V SIN(0 5V 1k)
+    X1 X1p X1n +15V -15V X1out TL072
+    X2 0 X2n +15V -15V X2out TL072
+    X3 0 X3n +15V -15V X3out TL072
+    R1 IN X1p 1kOhm
+    R2 X1p X2out 19kOhm
+    R3 X1n X1out 10kOhm
+    R4 X1n X3out 10kOhm
+    Rf1 X1out X2n 16kOhm
+    Rf2 X2out X3n 16kOhm
+    Cf1 X2n X2out 10nF
+    Cf2 X3n X3out 10nF
+    
+
+-->
+
+<!-- 
+    /opt/conda/envs/elektrophon/lib/python3.9/site-packages/PySpice/Plot/BodeDiagram.py:36: MatplotlibDeprecationWarning: The 'basex' parameter of __init__() has been renamed 'base' since Matplotlib 3.3; support for the old name will be dropped two minor releases later.
+      axe.semilogx(frequency, gain, basex=10, **kwargs)
+    /opt/conda/envs/elektrophon/lib/python3.9/site-packages/numpy/core/_asarray.py:83: ComplexWarning: Casting complex values to real discards the imaginary part
+      return array(a, dtype, copy=False, order=order)
+    /opt/conda/envs/elektrophon/lib/python3.9/site-packages/PySpice/Plot/BodeDiagram.py:36: MatplotlibDeprecationWarning: The 'basex' parameter of __init__() has been renamed 'base' since Matplotlib 3.3; support for the old name will be dropped two minor releases later.
+      axe.semilogx(frequency, gain, basex=10, **kwargs)
+    /opt/conda/envs/elektrophon/lib/python3.9/site-packages/numpy/core/_asarray.py:83: ComplexWarning: Casting complex values to real discards the imaginary part
+      return array(a, dtype, copy=False, order=order)
+    /opt/conda/envs/elektrophon/lib/python3.9/site-packages/PySpice/Plot/BodeDiagram.py:36: MatplotlibDeprecationWarning: The 'basex' parameter of __init__() has been renamed 'base' since Matplotlib 3.3; support for the old name will be dropped two minor releases later.
+      axe.semilogx(frequency, gain, basex=10, **kwargs)
+    /opt/conda/envs/elektrophon/lib/python3.9/site-packages/numpy/core/_asarray.py:83: ComplexWarning: Casting complex values to real discards the imaginary part
+      return array(a, dtype, copy=False, order=order)
+
+-->
+
+<div class="section">
+  <div class="container has-text-centered my-2">
+
+    <p><img src="/elektrophon/assets/cmos_variable_state_files/cmos_variable_state_14_1.svg" alt="svg" /></p>
+
+  </div>
+</div>
+
+<!-- mk scoped -->
+<div class="container my-2">
+  <h2 id="cmos-svf">cmos svf</h2>
+</div>
+
+<!-- 
+    .title cmos svf
+    .include /github/workspace/lib/spice/cmos/4069ub.lib
+    V1 +5V 0 DC 5
+    V2 IN 0 DC 5 AC 2.5V SIN(0 2.5V 1k)
+    X1 X1n X1out +5V 0 4069UB
+    X2 X2n X2out +5V 0 4069UB
+    X3 X3n X3out +5V 0 4069UB
+    R1 IN R1_out 10kOhm
+    C1 R1_out X1n 220nF
+    R2 X1p X2out 19kOhm
+    R3 X1n X1out 10kOhm
+    R4 X1n X3out 10kOhm
+    C4 X1n X3out 68pF
+    Rf1 X1out X2n 16kOhm
+    Rf2 X2out X3n 16kOhm
+    Cf1 X2n X2out 10nF
+    Cf2 X3n X3out 10nF
+    
+
+-->
+
+<!-- 
+    /opt/conda/envs/elektrophon/lib/python3.9/site-packages/PySpice/Plot/BodeDiagram.py:36: MatplotlibDeprecationWarning: The 'basex' parameter of __init__() has been renamed 'base' since Matplotlib 3.3; support for the old name will be dropped two minor releases later.
+      axe.semilogx(frequency, gain, basex=10, **kwargs)
+    /opt/conda/envs/elektrophon/lib/python3.9/site-packages/numpy/core/_asarray.py:83: ComplexWarning: Casting complex values to real discards the imaginary part
+      return array(a, dtype, copy=False, order=order)
+    /opt/conda/envs/elektrophon/lib/python3.9/site-packages/PySpice/Plot/BodeDiagram.py:36: MatplotlibDeprecationWarning: The 'basex' parameter of __init__() has been renamed 'base' since Matplotlib 3.3; support for the old name will be dropped two minor releases later.
+      axe.semilogx(frequency, gain, basex=10, **kwargs)
+    /opt/conda/envs/elektrophon/lib/python3.9/site-packages/numpy/core/_asarray.py:83: ComplexWarning: Casting complex values to real discards the imaginary part
+      return array(a, dtype, copy=False, order=order)
+    /opt/conda/envs/elektrophon/lib/python3.9/site-packages/PySpice/Plot/BodeDiagram.py:36: MatplotlibDeprecationWarning: The 'basex' parameter of __init__() has been renamed 'base' since Matplotlib 3.3; support for the old name will be dropped two minor releases later.
+      axe.semilogx(frequency, gain, basex=10, **kwargs)
+    /opt/conda/envs/elektrophon/lib/python3.9/site-packages/numpy/core/_asarray.py:83: ComplexWarning: Casting complex values to real discards the imaginary part
+      return array(a, dtype, copy=False, order=order)
+
+-->
+
+<div class="section">
+  <div class="container has-text-centered my-2">
+
+    <p><img src="/elektrophon/assets/cmos_variable_state_files/cmos_variable_state_18_1.svg" alt="svg" /></p>
+
+  </div>
+</div>
+
+<!-- mk scoped -->
+<div class="container my-2">
   <h2 id="references"><em>references</em></h2>
 
   <ul>
