@@ -29,7 +29,7 @@ for pcb in PCBS:
     res_pcb = {'name':pcb, 'reports':[]}
 
     # parse the drc and unconnected reports
-    file_drc = root_path.joinpath( pcb, 'drc_result.rpt')
+    file_drc = root_path.joinpath( pcb, '%s-drc.txt' % pcb)
 
     act_list = {}
     act_message = {}
@@ -55,10 +55,7 @@ for pcb in PCBS:
                 err = p_erc_err_entry.match(line)
                 act_message['con'].append( {'x':err.group(1), 'y':err.group(2), 'message':err.group(3)})
 
-            # else:
-            #     print(" >>> %s" % line)
-
-    file_drc = root_path.joinpath( pcb, '%s.erc' % pcb)
+    file_drc = root_path.joinpath( pcb, '%s-erc.txt' % pcb)
 
     sheet = ''
     act_list = {'name':'erc','messages':[]}
@@ -78,9 +75,6 @@ for pcb in PCBS:
             elif( p_erc_err_entry.match(line) ):
                 err = p_erc_err_entry.match(line)
                 act_message['con'].append( {'x':err.group(1), 'y':err.group(2), 'message':err.group(3)})
-
-#            else:
-#                print(" *** %s" % line)
 
     res.append(res_pcb)
 
