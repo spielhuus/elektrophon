@@ -15,6 +15,7 @@ dependencies:
   - ngspice-lib=32
   - pyspice=1.4.
   - pandas=1.2.*
+  - nodejs=*
   - pip:
     - schemdraw
     - itikz
