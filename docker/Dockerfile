@@ -41,10 +41,11 @@ RUN chmod 755 /entrypoint-user.sh
 ENTRYPOINT ["/entrypoint.sh"]
 
 #copy the kicad configuration files
-COPY docker/kicad/eeschema /home/jekyll/.config/kicad/eeschema 
-COPY docker/kicad/kicad /home/jekyll/.config/kicad/kicad
-COPY docker/kicad/kicad_common /home/jekyll/.config/kicad/kicad_common
-COPY docker/kicad/pcbnew /home/jekyll/.config/kicad/pcbnew
+#COPY docker/files/eeschema /home/jekyll/.config/kicad/eeschema 
+#COPY docker/files/kicad /home/jekyll/.config/kicad/kicad
+#COPY docker/files/kicad_common /home/jekyll/.config/kicad/kicad_common
+#COPY docker/files/pcbnew /home/jekyll/.config/kicad/pcbnew
+#COPY docker/files/.spiceinit /home/jekyll/.spiceinit
 
 ENV JEKYLL_DIR="/github/workspace"
 ENV WWW_DIR="/github/workspace/www"
