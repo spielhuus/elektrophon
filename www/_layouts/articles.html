@@ -4,11 +4,13 @@ layout: default
 
 <div class="is-section">
     <div class="container is-12">
-        <a href="/article/basics"><span class="tag is-link is-normal">basics</span></a>
-        <a href="/article/cmos"><span class="tag is-link is-normal">cmos</span></a>
-        <a href="/article/filter"><span class="tag is-link is-normal">filter</span></a>
-        <a href="/article/electronics"><span class="tag is-link is-normal">electronics</span></a>
-        <a href="/article/rack"><span class="tag is-link is-normal">rack</span></a>
+        {% assign sorted_tags = site.tags | sort %}
+        {% for tag in sorted_tags %}
+        {% assign zz = tag[1] | where: "category", "article" | sort %}
+        {% if zz != empty %}
+        <a href="{{ site.baseurl }}/article/{{ tag[0] }}/index.html"><span class="tag is-link is-normal">{{ tag[0] }}</span></a>
+        {% endif %}
+        {% endfor %}
     </div>
 </div>
 

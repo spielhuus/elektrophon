@@ -5,15 +5,22 @@
 $family-sans-serif: 'Montserrat', sans-serif;
 $family-serif: 'Newsreader', serif;
 $family-primary: $family-serif;
-// $body-size: 1.3rem;
+$body-size: 1.3rem;
 
 $title-family: $family-sans-serif;
-// $title-size: 2rem; 
-// $title-weight: 700;
+$title-size: 2rem; 
+$title-weight: 700;
 
 $subtitle-family: $family-sans-serif;
-// $subtitle-size: 1.5rem; 
-// $subtitle-weight: 700;
+$subtitle-size: 1.5rem; 
+$subtitle-weight: 700;
+
+$navbar-background-color: #555555;
+$navbar-item-color: #FFFFFF;
+
+$navbar-item-hover-color: Red;
+$navbar-item-hover-background-color: White;
+$navbar-item-active-background-color: DarkGrey;
 
 // @import "typography";
 
@@ -26,6 +33,8 @@ $subtitle-family: $family-sans-serif;
 @import "grid/_all";
 @import "helpers/_all";
 @import "layout/_all";
+
+$hero-darken: $dark !default;
 
 // $hero-darken: $dark !default;
 

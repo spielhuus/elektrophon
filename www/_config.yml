@@ -18,7 +18,8 @@ plugins:
   - jekyll-toc
   - jekyll-assets
 
-fixed_navbar: top
+#fixed_navbar: top
+fixed_navbar: false
       
 navigation:
   github: spielhuus/elektrophon

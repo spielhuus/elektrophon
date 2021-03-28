@@ -1,4 +1,4 @@
-<footer class="footer">
+<!--footer class="footer">
     <div class="container">
       <div class="content has-text-centered">
         <div class="soc">
@@ -13,14 +13,13 @@
         </p>
       </div>
     </div>
-  </footer>
+  </footer -->
 
 <!-- footer class="footer">
 <data class="u-url" href="{{ "/" | relative_url }}"></data>
 <div class="content has-text-centered">
-
-    <div class="footer-col-wrapper">
-    <div class="footer-col">
+    <div class="columns">
+    <div class="column is-half has-background-dark">
         <p class="feed-subscribe">
         <a href="{{ 'feed.xml' | relative_url }}">
             <svg class="svg-icon orange">
@@ -39,15 +38,62 @@
         </ul>
     {%- endif %}
     </div>
-    <div class="footer-col">
+    <div class="column is-primary">
         <p>{{ site.description | escape }}</p>
     </div>
     </div>
 
-    <div class="social-links">
+    <div class="column is-primary">
     {%- include social.html -%}
     </div>
 </div>
 </footer -->
-<!-- script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script -->
-<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+<hr>
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <p>
+        <a style="font-size: 2em; color: darkgrey;" href="//github.com/spielhuus/elektrophon" target="_blank">
+          <i class="far envelope"></i>
+        </a>
+        &nbsp;
+        <a style="font-size: 2em; color: darkgrey;" href="//github.com/spielhuus/elektrophon" target="_blank">
+          <i class="fab fa-github grey"></i>
+        </a>
+        &nbsp;
+        <a style="font-size: 2em; color: darkgrey;" href="//twitter.com" target="_blank">
+          <i class="fab fa-twitter"></i>
+        </a>
+        &nbsp;
+        <a style="font-size: 2em; color: darkgrey;" href="//twitter.com" target="_blank">
+          <i class="fab fa-youtube"></i>
+        </a>
+      </p>
+      <p>
+        <strong>{{ site.title }}</strong><span>{{ site.description }}</span>
+        {%- if site.author %}
+        <ul class="contact-list">
+        {% if site.author.name -%}
+            <li class="p-name">{{ site.author.name | escape }}</li>
+        {% endif -%}
+        {% if site.author.email -%}
+            <li><a class="u-email" href="mailto:{{ site.author.email }}">{{ site.author.email }}</a></li>
+        {%- endif %}
+        </ul>
+        {%- endif %}
+
+        <a href="https://jgog.in" target="_blank">Jenil Gogari</a>.
+        <br> Based on
+        <a href="https://bulma.io" target="_blank" onclick="ga('send', 'event', 'footer', 'click', 'bulma');">Bulma</a>.
+        Icons from
+        <a href="https://fontawesome.com/" target="_blank"
+          onclick="ga('send', 'event', 'footer', 'click', 'font-awesome');">Font Awesome</a>. Web Fonts from
+        <a href="https://fonts.google.com/" target="_blank"
+          onclick="ga('send', 'event', 'footer', 'click', 'google');">Google</a>.
+        <br> The source code is licensed
+        <a href="https://opensource.org/licenses/mit-license.php" target="_blank">MIT</a>.
+      </p>
+    </div>
+  </div>
+</footer>

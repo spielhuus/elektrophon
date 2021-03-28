@@ -5,6 +5,10 @@ layout: home
 callouts: home_callouts
 show_sidebar: true
 hero_image: /assets/elektrophon-logo.jpg
+hero_height: is-fullheight-with-navbar
+hero_darken: true
+hero_title: true
+hero_subtitle: true
 ---
 
 elektrophon is a collection of modular synthesizer modules i built. The module folders contain the schema and PCB files for kicad. You can find all the required files for changing the schemas and building gerber files in this project.  is a collection of modules for a modular analog electro acoustic noise machine. all modules are built on stripboards or pcb's and with 3d printed front plates.The goal is it to build the modules quickly.
