@@ -1,6 +1,0 @@
-.title KiCad schematic
-R2 +15V OUT 400k
-R3 OUT GND 49.3k
-R1 OUT Net-_C1-Pad1_ 100k
-C1 Net-_C1-Pad1_ IN 220n
-.end
