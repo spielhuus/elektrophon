@@ -3,7 +3,7 @@
 
 
 <!DOCTYPE html>
-<html  class="has-navbar-fixed-top" >
+<html >
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -36,14 +36,17 @@
 <meta property="twitter:image" content="https://spielhuus.github.io//elektrophon/assets/cmos_buffer_files/cd4069.jpg" />
 <meta property="twitter:title" content="cmos buffer" />
 <script type="application/ld+json">
-{"url":"https://spielhuus.github.io//elektrophon/article/2020/12/06/cmos_buffer.html","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://spielhuus.github.io//elektrophon/article/2020/12/06/cmos_buffer.html"},"author":{"@type":"Person","name":"spielhuus"},"headline":"cmos buffer","dateModified":"2020-12-06T00:00:00+00:00","datePublished":"2020-12-06T00:00:00+00:00","image":"https://spielhuus.github.io//elektrophon/assets/cmos_buffer_files/cd4069.jpg","description":"this is an article series about the CD4069UBE. in the first article the chip is ‘missused’ for linear amplification and the simulation is analyzed. it is importand that the chip is unbuffered (UBE), the buffered chip will do the inverse binary logic and can not be used for linear amplification.","@context":"https://schema.org"}</script>
+{"url":"https://spielhuus.github.io//elektrophon/article/2020/12/06/cmos_buffer.html","@type":"BlogPosting","image":"https://spielhuus.github.io//elektrophon/assets/cmos_buffer_files/cd4069.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://spielhuus.github.io//elektrophon/article/2020/12/06/cmos_buffer.html"},"author":{"@type":"Person","name":"spielhuus"},"headline":"cmos buffer","dateModified":"2020-12-06T00:00:00+00:00","datePublished":"2020-12-06T00:00:00+00:00","description":"this is an article series about the CD4069UBE. in the first article the chip is ‘missused’ for linear amplification and the simulation is analyzed. it is importand that the chip is unbuffered (UBE), the buffered chip will do the inverse binary logic and can not be used for linear amplification.","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 </head>
   <body>
-    <nav class="navbar is-light  is-fixed-top  has-shadow">
+    
+        <section class="hero  is-halfheight  is-bold is-primary"  style="background: url('/elektrophon/assets/cmos_buffer_files/cd4069.jpg') no-repeat center center; background-size: cover;" >
+    <div class="hero-head  hero-darken ">
+        <nav class="navbar ">
   <div class="container">
       <div class="navbar-brand">
-          <a href="/elektrophon/" class="navbar-item is-italic is-bold is-lowercase">
+          <a href="/elektrophon/" class="navbar-item">
               elektrophon
           </a>
           <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navMenu">
@@ -73,14 +76,11 @@
       </div>
   </div>
 </nav>
-    
-        <section class="hero  is-medium  is-bold is-primary"  style="background: url('/elektrophon/assets/cmos_buffer_files/cd4069.jpg') no-repeat center center; background-size: cover;" >
-    <div class="hero-body ">
-        <div class="container">
-            <h1 class="title is-title is-bold is-size-1 is-lowercase is-italic has-text-white">cmos buffer</h1>
-            <p class="subtitle itle is-title is-bold is-size-2 is-lowercase is-italic has-text-white"></p>
-            
-        </div>
+    </div>
+
+    <div class="hero-body is-full  hero-darken ">
+        </div><br/>
+        
     </div>
 </section>
     
@@ -97,16 +97,27 @@
                     
                     <div class="is-section">
     <div class="container is-12">
-        <p class="has-text-weight-semibold">this is an article series about the CD4069UBE. in the first article the chip is 'missused' for linear amplification and the simulation is analyzed. it is importand that the chip is unbuffered (UBE), the buffered chip will do the inverse binary logic and can not be used for linear amplification.</p>
+        <h1 class="title">cmos buffer</h1>
+        <p class="is-size-4 has-text-centered is-italic">the CD4069UB device consist of six CMOS inverter circuits. these devices are intended for all generalpurpose inverter applications where the mediumpower TTL-drive and logic-level-conversion. this device is not ideal for linear amplification, but can be used as such and will add a lot of soft-clipping. soft-clipping is expected from a valve. this makes this device special for musical usage and can be found in guitar distortion pedals [2] or the wasp filter [3]. in this article series i want to investigate this device and find out if new modules can be built with it.</p>
         <div class="container">
             <!-- mk scoped -->
 <div class="container my-2">
   <p>the CD4069UB device consist of six CMOS inverter circuits. these devices are intended for all generalpurpose inverter applications where the mediumpower TTL-drive and logic-level-conversion. this device is not ideal for linear amplification, but can be used as such and will add a lot of soft-clipping. soft-clipping is expected from a valve. this makes this device special for musical usage and can be found in guitar distortion pedals [<a href="http://www.runoffgroove.com/ubescreamer.html">2</a>] or the wasp filter [<a href="https://www.schmitzbits.de/wasp.html">3</a>]. in this article series i want to investigate this device and find out if new modules can be built with it.</p>
 </div>
 
+<!-- execute result -->
+
+<div class="section">
+  <div class="container has-text-centered my-2">
+
+    <p><img src="/elektrophon/assets/cmos_buffer_files/cmos_buffer_2_0.svg" alt="svg" /></p>
+
+  </div>
+</div>
+
 <!-- mk scoped -->
 <div class="container my-2">
-  <p><strong>the chip should be powered by +5V/GND. With higher voltage the heat dissipation will be to big and the chip will be damaged.</strong></p>
+  <p>the chip should be powered by +5V/GND. With higher voltage the heat dissipation will be to big and the chip will be damaged. the chip is powered on pin 7 and 14 with +5V and Ground. the other pins can be used as amplifier.</p>
 </div>
 
 <!-- mk scoped -->
@@ -121,7 +132,7 @@
 <div class="section">
   <div class="container has-text-centered my-2">
 
-    <p><img src="/elektrophon/assets/cmos_buffer_files/cmos_buffer_4_0.svg" alt="svg" /></p>
+    <p><img src="/elektrophon/assets/cmos_buffer_files/cmos_buffer_5_0.svg" alt="svg" /></p>
 
   </div>
 </div>
@@ -134,7 +145,7 @@
 <div class="section">
   <div class="container has-text-centered my-2">
 
-    <p><img src="/elektrophon/assets/cmos_buffer_files/cmos_buffer_8_0.svg" alt="svg" /></p>
+    <p><img src="/elektrophon/assets/cmos_buffer_files/cmos_buffer_9_0.svg" alt="svg" /></p>
 
   </div>
 </div>
@@ -146,38 +157,10 @@
 
 <!-- mk scoped -->
 <div class="container my-2">
-  <h2 id="summermixer">summer/mixer</h2>
+  <h1 class="subtitle is-lowercase" id="summermixer">summer/mixer</h1>
 
-</div>
+  <p>The cmos inverter can also be used as summing amplifier. In this example two sinudiol signals are added. The setup is the same as an Opamp summing amplifiert. The gain can be adjusted with the feeback resistor.</p>
 
-<div class="section">
-  <div class="container has-text-centered my-2">
-
-    <p><img src="/elektrophon/assets/cmos_buffer_files/cmos_buffer_14_0.svg" alt="svg" /></p>
-
-  </div>
-</div>
-
-<!-- mk scoped -->
-<div class="container my-2">
-  <h2 id="differential-amplifier">differential amplifier</h2>
-</div>
-
-<div class="section">
-  <div class="container has-text-centered my-2">
-
-    <p><img src="/elektrophon/assets/cmos_buffer_files/cmos_buffer_19_0.svg" alt="svg" /></p>
-
-  </div>
-</div>
-
-<!-- mk scoped -->
-<div class="container my-2">
-  <h1 class="subtitle is-lowercase" id="distortion">distortion</h1>
-
-  <p><img src="/elektrophon/assets/cmos_buffer_files/Way_Huge_Red_LLama.jpg" alt="Way Huge Red LLama" /></p>
-
-  <p>the soft clipping, which is the special characteristic of valves, adds harmonics to the signal. Here we want to analyse what harmonics are added. therefore we add a second stage to out circuit. the first stage is a voltage follower with the gain of one (or less as saw). the second stage is a high gain stage. the simulation is done with different values for R4.</p>
 </div>
 
 <!-- execute result -->
@@ -185,7 +168,72 @@
 <div class="section">
   <div class="container has-text-centered my-2">
 
-    <p><img src="/elektrophon/assets/cmos_buffer_files/cmos_buffer_21_0.svg" alt="svg" /></p>
+    <p><img src="/elektrophon/assets/cmos_buffer_files/cmos_buffer_12_0.svg" alt="svg" /></p>
+
+  </div>
+</div>
+
+<!-- 
+    <ipython-input-1-6bc943afa5fe>:11: UserWarning: Tight layout not applied. The left and right margins cannot be made large enough to accommodate all axes decorations. 
+      plt.tight_layout()
+
+-->
+
+<div class="section">
+  <div class="container has-text-centered my-2">
+
+    <p><img src="/elektrophon/assets/cmos_buffer_files/cmos_buffer_16_1.svg" alt="svg" /></p>
+
+  </div>
+</div>
+
+<!-- mk scoped -->
+<div class="container my-2">
+  <p>The grey line is the calculated result and the blue line the simulated result. The actual result is close to the calculated one. here the feedback resistor has about half of the input resistors.</p>
+</div>
+
+<!-- mk scoped -->
+<div class="container my-2">
+  <h1 class="subtitle is-lowercase" id="differential-amplifier">differential amplifier</h1>
+
+  <p>A differential amplifier can not be configured like an Opamp amplifier. But when the inverse is added the result is a substraction of the two signals. This is the same simulation but the second signal has a phase shift of 180°.</p>
+
+</div>
+
+<div class="section">
+  <div class="container has-text-centered my-2">
+
+    <p><img src="/elektrophon/assets/cmos_buffer_files/cmos_buffer_22_0.svg" alt="svg" /></p>
+
+  </div>
+</div>
+
+<!-- mk scoped -->
+<div class="container my-2">
+  <p>Again the simulation is close to the calculated values.</p>
+</div>
+
+<!-- mk scoped -->
+<div class="container my-2">
+  <h1 class="subtitle is-lowercase" id="distortion">distortion</h1>
+
+  <h2 class="subtitle is-lowercase" id="way-huge-red-llama">Way Huge Red LLama</h2>
+
+  <div class="col has-text-centered">
+    <p><img src="/elektrophon/assets/cmos_buffer_files/tmb_Way_Huge_Red_LLama.jpg" alt="Way Huge Red LLama" /></p>
+  </div>
+
+  <p>The Red Llama is actually a clone itself with some component changes. The original designer of the circuit is Craig Anderson. In an interview with Jeorge Tripps, creator of the way huge line, he said that he had bought this book called “Electronic Projects for Musicians” written by Craig Anderson. He also said that the first pedal he built was the Tube Sound Fuzz that was that book. Once I heard that this book existed, I quickly got it. In this book, Craig Anderson talks about the circuit. He explains how it works, why it works, and the reason it sounds so good.</p>
+
+  <p>The soft clipping, which is the special characteristic of valves, adds harmonics to the signal. Here we want to analyse what harmonics are added. therefore we add a second stage to out circuit. the first stage is a voltage follower with the gain of one (or less as saw). the second stage is a high gain stage. the simulation is done with different values for R4.</p>
+</div>
+
+<!-- execute result -->
+
+<div class="section">
+  <div class="container has-text-centered my-2">
+
+    <p><img src="/elektrophon/assets/cmos_buffer_files/cmos_buffer_25_0.svg" alt="svg" /></p>
 
   </div>
 </div>
@@ -198,7 +246,7 @@
 <div class="section">
   <div class="container has-text-centered my-2">
 
-    <p><img src="/elektrophon/assets/cmos_buffer_files/cmos_buffer_25_0.svg" alt="svg" /></p>
+    <p><img src="/elektrophon/assets/cmos_buffer_files/cmos_buffer_29_0.svg" alt="svg" /></p>
 
   </div>
 </div>
@@ -212,6 +260,16 @@
     Plots: ['tran2', 'tran1', 'const']
 
 -->
+
+<!-- mk scoped -->
+<div class="container my-2">
+  <h2 class="subtitle is-lowercase" id="tube-screamer">tube screamer</h2>
+
+  <div class="col has-text-centered">
+    <p><img src="/elektrophon/assets/cmos_buffer_files/tmb_ube_screamer.jpg" alt="Tube Screamer" /></p>
+  </div>
+
+</div>
 
 <!-- mk scoped -->
 <div class="container my-2">
@@ -234,7 +292,7 @@
         </div>
     </section>
     
-        <footer class="footer">
+        <!--footer class="footer">
     <div class="container">
       <div class="content has-text-centered">
         <div class="soc">
@@ -249,14 +307,13 @@
         </p>
       </div>
     </div>
-  </footer>
+  </footer -->
 
 <!-- footer class="footer">
 <data class="u-url" href="/elektrophon/"></data>
 <div class="content has-text-centered">
-
-    <div class="footer-col-wrapper">
-    <div class="footer-col">
+    <div class="columns">
+    <div class="column is-half has-background-dark">
         <p class="feed-subscribe">
         <a href="/elektrophon/feed.xml">
             <svg class="svg-icon orange">
@@ -269,18 +326,60 @@
         <li><a class="u-email" href="mailto:spielhus@gmail.com">spielhus@gmail.com</a></li>
         </ul>
     </div>
-    <div class="footer-col">
+    <div class="column is-primary">
         <p>analog and digital modules for an electroacustic instrument.
 </p>
     </div>
     </div>
 
-    <div class="social-links"><ul class="social-media-list"></ul></div>
+    <div class="column is-primary"><ul class="social-media-list"></ul></div>
 </div>
 </footer -->
-<!-- script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script -->
-<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
+<hr>
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <p>
+        <a style="font-size: 2em; color: darkgrey;" href="//github.com/spielhuus/elektrophon" target="_blank">
+          <i class="far envelope"></i>
+        </a>
+        &nbsp;
+        <a style="font-size: 2em; color: darkgrey;" href="//github.com/spielhuus/elektrophon" target="_blank">
+          <i class="fab fa-github grey"></i>
+        </a>
+        &nbsp;
+        <a style="font-size: 2em; color: darkgrey;" href="//twitter.com" target="_blank">
+          <i class="fab fa-twitter"></i>
+        </a>
+        &nbsp;
+        <a style="font-size: 2em; color: darkgrey;" href="//twitter.com" target="_blank">
+          <i class="fab fa-youtube"></i>
+        </a>
+      </p>
+      <p>
+        <strong>elektrophon</strong><span>analog and digital modules for an electroacustic instrument.
+</span>
+        <ul class="contact-list">
+        <li class="p-name">spielhuus</li>
+        <li><a class="u-email" href="mailto:spielhus@gmail.com">spielhus@gmail.com</a></li>
+        </ul>
+
+        <a href="https://jgog.in" target="_blank">Jenil Gogari</a>.
+        <br> Based on
+        <a href="https://bulma.io" target="_blank" onclick="ga('send', 'event', 'footer', 'click', 'bulma');">Bulma</a>.
+        Icons from
+        <a href="https://fontawesome.com/" target="_blank"
+          onclick="ga('send', 'event', 'footer', 'click', 'font-awesome');">Font Awesome</a>. Web Fonts from
+        <a href="https://fonts.google.com/" target="_blank"
+          onclick="ga('send', 'event', 'footer', 'click', 'google');">Google</a>.
+        <br> The source code is licensed
+        <a href="https://opensource.org/licenses/mit-license.php" target="_blank">MIT</a>.
+      </p>
+    </div>
+  </div>
+</footer>
     
-    <script src="/elektrophon/assets/js/main.js" type="text/javascript"></script></body>
+    <script src="/elektrophon/assets/js/main.js" type="text/javascript"></script><script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</body>
 </html>
