@@ -2,10 +2,11 @@
 layout: article
 title: vermarkung
 author: spielhuus
-tags: rack
+tags: grundlage
 category: article
 image: /assets/vermarkung_files/rails.jpg
-hero_image: /assets/vermarkung_files/rails.jpg
+hero_image: /assets/vermarkung_files/construction2.jpg
 excerpt: construction and measures of a synth rack.
+subtitle: mount modiles in an rack is kind of diffucult. find the rigjt rack and mounting setup is not that easy. ot is it? kets find out in this article on how to consturct a simple modular synth system,
 show_sidebar: false
 ---

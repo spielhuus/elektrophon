@@ -2,11 +2,13 @@
 layout: article
 title: arbeitsplatz
 author: spielhuus
-tags: development
+tag: grundlage
 category: article
-image: /assets/arbeitsplatz_files/arbeitsplatz.jpg 
-panel: /assets/arbeitsplatz_files/arbeitsplatz.jpg 
-hero_image: /assets/radio_hat.jpg 
+image: /assets/arbeitsplatz_files/python.jpg 
+panel: /assets/arbeitsplatz_files/python.jpg 
+hero_image: /assets/arbeitsplatz_files/python.jpg
+hero_height: is-halfheight
+hero_darken: true
 excerpt: install and setup of required software to develop modules.
 show_sidebar: false
 ---

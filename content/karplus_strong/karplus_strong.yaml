@@ -1,0 +1,11 @@
+---
+layout: article
+title: karplus strong
+author: spielhuus
+tags: klangsynthese
+category: article
+image: /assets/karplus_strong_files/karplus_strong.jpg
+hero_image: /assets/karplus_strong_files/karplus_strong.jpg
+excerpt: simulation of the karplus strong algorithm
+show_sidebar: false
+---

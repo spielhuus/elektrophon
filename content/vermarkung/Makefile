@@ -15,7 +15,7 @@ JUPITERFLAGS = nbconvert --ExecutePreprocessor.timeout=600 --execute --to markdo
 
 ARTICLE_TARGETS = $(OUTPUT)/_posts/$(DATE)-$(PROJECT).md
 DEST = build/$(PROJECT).md
-IMAGES = $(wildcard *.svg) $(wildcard *.jpg) $(wildcard *.png)
+IMAGES = $(wildcard *.svg) $(wildcard *.jpg) $(wildcard *.png) $(wildcard *.pdf) $(wildcard *.scad)
 IMAGE_TARGETS = $(addprefix $(OUTPUT)/assets/$(PROJECT)_files/,$(IMAGES))
 
 all: $(DOCS) deploy
@@ -28,7 +28,7 @@ deploy: $(DOCS)
 	echo "\n\n" >> $(ARTICLE_TARGETS)
 	cat $(DEST) >> $(ARTICLE_TARGETS)
 
-clean: 
+clean:
 	rm -rf build
 	rm -rf $(OUTPUT)/assets/$(PROJECT)_files/
 	rm -f $(ARTICLE_TARGETS)

@@ -1,0 +1,15 @@
+---
+layout: article
+title: cmos
+project: cmos
+author: spielhuus
+tags: cmos lunetta
+category: article
+image: /assets/cmos_files/cd40106.jpg
+hero_image: /assets/cmos_files/cd40106.jpg
+hero_height: is-halfheight
+hero_darken: true
+excerpt: Getting started with lunetta synthesizer.
+subtitle: the simplest way of building synthesizer circuits is the lunetta style. A lunetta synthesizer is built with simple cmos chips. the first circuit to build is a schmitt trigger oscillator.
+show_sidebar: false
+---

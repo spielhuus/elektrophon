@@ -2,11 +2,13 @@
 layout: article
 title: cmos variable state filter
 author: spielhuus
-tags: cmos
+tags: cmos lunetta
 category: article
 image: /assets/cmos_variable_state_files/cd4069.jpg
 panel: /assets/cmos_variable_state_files/cd4069.jpg
 hero_image: /assets/cmos_variable_state_files/cd4069.jpg
+hero_height: is-halfheight
+hero_darken: true
 excerpt: the cd4069 cmos chip is . there are already filter designs with the CD4069. the most popular one is the WASP filter clone from jürgen haible. this filter adds a lot of distortion to the sound.
 show_sidebar: false
 ---
