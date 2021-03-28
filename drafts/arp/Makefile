@@ -67,7 +67,7 @@ $(DOCS): $(KIBOT_REPORT) $(DEST)
 
 $(DEST): $(CIRCUITS) $(SRC)
 	$(JUPYTER) $(JUPITERFLAGS) $(SRC)
-	sed -r -i 's/\!\[(.*)\]\((.*)\)/\!\[\1\]\(\/assets\/\2\)/g' $(DEST)
+#	sed -r -i 's/\!\[(.*)\]\((.*)\)/\!\[\1\]\(\/assets\/\2\)/g' $(DEST)
 
 #run kibot and create data
 $(KIBOT_FILES): $(PCB_FILES)

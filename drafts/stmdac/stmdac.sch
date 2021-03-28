@@ -1183,11 +1183,7 @@ Wire Wire Line
 	9650 1300 9350 1300
 Text Label 10350 1600 3    50   ~ 0
 BOOT1
-Text Label 6000 5600 2    50   ~ 0
-RESET
 Text Label 9350 1600 3    50   ~ 0
-BOOT0
-Text Label 6000 5800 2    50   ~ 0
 BOOT0
 Text Label 5350 3300 2    50   ~ 0
 BOOT1
@@ -1268,50 +1264,6 @@ Entry Wire Line
 	6650 3100 6750 3200
 Entry Wire Line
 	6950 3150 7050 3250
-$Comp
-L MCU_ST_STM32F7:STM32F732RETx U?
-U 1 1 60248A5E
-P 6700 7200
-F 0 "U?" H 6650 9181 50  0000 C CNN
-F 1 "STM32F732RETx" H 6650 9090 50  0000 C CNN
-F 2 "Package_QFP:LQFP-64_10x10mm_P0.5mm" H 6100 5500 50  0001 R CNN
-F 3 "http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/DM00330507.pdf" H 6700 7200 50  0001 C CNN
-	1    6700 7200
-	1    0    0    -1  
-$EndComp
-NoConn ~ 6500 5400
-$Comp
-L power:+3.3V #PWR?
-U 1 1 60246551
-P 6900 5300
-AR Path="/60246551" Ref="#PWR?"  Part="1" 
-AR Path="/5E9FE2D3/60246551" Ref="#PWR?"  Part="1" 
-F 0 "#PWR?" H 6900 5150 50  0001 C CNN
-F 1 "+3.3V" H 6915 5473 50  0000 C CNN
-F 2 "" H 6900 5300 50  0001 C CNN
-F 3 "" H 6900 5300 50  0001 C CNN
-	1    6900 5300
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	6900 5400 6900 5350
-Wire Wire Line
-	6900 5350 6800 5350
-Wire Wire Line
-	6600 5350 6600 5400
-Connection ~ 6900 5350
-Wire Wire Line
-	6900 5350 6900 5300
-Wire Wire Line
-	6700 5400 6700 5350
-Connection ~ 6700 5350
-Wire Wire Line
-	6700 5350 6600 5350
-Wire Wire Line
-	6800 5400 6800 5350
 Wire Bus Line
 	6950 3100 6950 4300
-Connection ~ 6800 5350
-Wire Wire Line
-	6800 5350 6700 5350
 $EndSCHEMATC
