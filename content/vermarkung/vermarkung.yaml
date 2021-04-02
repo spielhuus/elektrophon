@@ -4,9 +4,9 @@ title: vermarkung
 author: spielhuus
 tags: grundlage
 category: article
-image: /assets/vermarkung_files/rails.jpg
-hero_image: /assets/vermarkung_files/construction2.jpg
+image: /assets/vermarkung_files/hero.jpg
+hero_image: /assets/vermarkung_files/hero.jpg
 excerpt: construction and measures of a synth rack.
-subtitle: mount modiles in an rack is kind of diffucult. find the rigjt rack and mounting setup is not that easy. ot is it? kets find out in this article on how to consturct a simple modular synth system,
-show_sidebar: false
+subtitle: Mount modules in an rack is kind of difficult. Find the right rack and mounting setup is not that easy. or is it? Lets find out in this article on how to construct a simple modular synthesizer system,
+hero_darken: true
 ---
