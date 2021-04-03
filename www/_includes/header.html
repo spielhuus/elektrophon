@@ -1,4 +1,4 @@
-<nav class="navbar {% if site.fixed_navbar %} is-fixed-{{ site.fixed_navbar }} {% endif %}">
+<nav class="navbar">
   <div class="container">
       <div class="navbar-brand">
           <a href="{{ site.baseurl }}/" class="navbar-item">
@@ -14,18 +14,11 @@
           <div class="navbar-end">
               {% if site.data.navigation %}
               {% for item in site.data.navigation %}
-                  {% if item.dropdown %}
-                  <div class="navbar-item has-dropdown is-hoverable {% if site.fixed_navbar == 'bottom' %} has-dropdown-up {% endif %}">
-                      <a href="{{ item.link | relative_url }}" class="navbar-link {% if item.link == page.url %}is-active{% endif %}">{{ item.name }}</a>
-                      <div class="navbar-dropdown">
-                          {% for subitem in item.dropdown %}
-                          <a href="{{ subitem.link | relative_url }}" class="navbar-item {% if subitem.link == page.url %}is-active{% endif %}">{{ subitem.name }}</a>
-                          {% endfor %}
-                      </div>
-                  </div>
-                  {% else %}
-                  <a href="{{ item.link | relative_url }}" class="navbar-item {% if item.link == page.url %}is-active{% endif %}">{{ item.name }}</a>
-                  {% endif %}
+                  <span class="navbar-item {% if item.link == page.url %}is-active{% endif %}">
+                    <a class="button is-small is-white is-outlined" href="{{ item.link | relative_url }}">
+                        <span>{{ item.name }}</span>
+                    </a>
+                </span>
               {% endfor %}
               {% endif %}
           </div>
