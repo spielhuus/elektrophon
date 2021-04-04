@@ -43,7 +43,7 @@
     
         <section class="hero  is-medium  is-bold is-primary"  style="background: url('/elektrophon/assets/ringmodulator_files/dalek.png') no-repeat center center; background-size: cover;" >
     <div class="hero-head ">
-        <nav class="navbar ">
+        <nav class="navbar">
   <div class="container">
       <div class="navbar-brand">
           <a href="/elektrophon/" class="navbar-item">
@@ -59,17 +59,23 @@
           <div class="navbar-end">
               
               
-                  
-                  <a href="/elektrophon/article/" class="navbar-item ">articles</a>
-                  
+                  <span class="navbar-item ">
+                    <a class="button is-small is-white is-outlined" href="/elektrophon/article/">
+                        <span>articles</span>
+                    </a>
+                </span>
               
-                  
-                  <a href="/elektrophon/module/" class="navbar-item ">modules</a>
-                  
+                  <span class="navbar-item ">
+                    <a class="button is-small is-white is-outlined" href="/elektrophon/module/">
+                        <span>modules</span>
+                    </a>
+                </span>
               
-                  
-                  <a href="/elektrophon/about.html" class="navbar-item ">about</a>
-                  
+                  <span class="navbar-item ">
+                    <a class="button is-small is-white is-outlined" href="/elektrophon/about.html">
+                        <span>about</span>
+                    </a>
+                </span>
               
               
           </div>
@@ -101,204 +107,204 @@
         <p class="is-size-4 has-text-centered is-italic">Amplitude Modulation has its origin in electronic communication technology. It is used in radio transmission where an audio signal is modulated on a carrier signal. Amplitude Modulation is also used in synthesizers. When both signals in a VCA are in the audio range, the resulting audio signal has added timbre. Amplitude Modulation is also used in a Ring Modulator. Ring modulation adds frequencies to the audio signal which gives it a different characteristic. The resulting audio signal has some 'metallic' sound. The popular usage of Ring Modulation is the [Dalek](https://de.wikipedia.org/wiki/Die_Daleks) voice from the BBC series [Doctor Who](https://de.wikipedia.org/wiki/Doctor_Who).</p>
         <div class="container">
             <!-- 
-    [1;32m2021-03-29 15:57:49,262[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - Element don't define a __pins__ attribute
-    [1;32m2021-03-29 15:57:49,264[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - FixedPinElement don't define a __pins__ attribute
-    [1;32m2021-03-29 15:57:49,264[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - SubCircuitElement don't define a __pins__ attribute
-    [1;32m2021-03-29 15:57:49,267[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - Resistor don't define a __pins__ attribute
-    [1;32m2021-03-29 15:57:49,268[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - SemiconductorResistor don't define a __pins__ attribute
-    [1;32m2021-03-29 15:57:49,269[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - BehavioralResistor don't define a __pins__ attribute
-    [1;32m2021-03-29 15:57:49,270[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - Capacitor don't define a __pins__ attribute
-    [1;32m2021-03-29 15:57:49,271[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - SemiconductorCapacitor don't define a __pins__ attribute
-    [1;32m2021-03-29 15:57:49,272[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - BehavioralCapacitor don't define a __pins__ attribute
-    [1;32m2021-03-29 15:57:49,274[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - Inductor don't define a __pins__ attribute
-    [1;32m2021-03-29 15:57:49,274[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - BehavioralInductor don't define a __pins__ attribute
-    [1;32m2021-03-29 15:57:49,275[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - CoupledInductor don't define a __pins__ attribute
-    [1;32m2021-03-29 15:57:49,276[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - VoltageControlledSwitch don't define a __pins__ attribute
-    [1;32m2021-03-29 15:57:49,279[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - CurrentControlledSwitch don't define a __pins__ attribute
-    [1;32m2021-03-29 15:57:49,279[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - VoltageSource don't define a __pins__ attribute
-    [1;32m2021-03-29 15:57:49,280[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - CurrentSource don't define a __pins__ attribute
-    [1;32m2021-03-29 15:57:49,281[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - VoltageControlledCurrentSource don't define a __pins__ attribute
-    [1;32m2021-03-29 15:57:49,281[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - VoltageControlledVoltageSource don't define a __pins__ attribute
-    [1;32m2021-03-29 15:57:49,282[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - CurrentControlledCurrentSource don't define a __pins__ attribute
-    [1;32m2021-03-29 15:57:49,283[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - CurrentControlledVoltageSource don't define a __pins__ attribute
-    [1;32m2021-03-29 15:57:49,283[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - BehavioralSource don't define a __pins__ attribute
-    [1;32m2021-03-29 15:57:49,284[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - NonLinearVoltageSource don't define a __pins__ attribute
-    [1;32m2021-03-29 15:57:49,285[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - NonLinearCurrentSource don't define a __pins__ attribute
-    [1;32m2021-03-29 15:57:49,285[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - JunctionFieldEffectTransistor don't define a __pins__ attribute
-    [1;32m2021-03-29 15:57:49,286[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - Mesfet don't define a __pins__ attribute
-    [1;32m2021-03-29 15:57:49,287[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - LosslessTransmissionLine don't define a __pins__ attribute
-    [1;32m2021-03-29 15:57:49,288[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - LossyTransmission don't define a __pins__ attribute
-    [1;32m2021-03-29 15:57:49,288[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - CoupledMulticonductorLine don't define a __pins__ attribute
-    [1;32m2021-03-29 15:57:49,289[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - SingleLossyTransmissionLine don't define a __pins__ attribute
-    [1;32m2021-03-29 15:57:49,289[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - XSpiceElement don't define a __pins__ attribute
-    [1;32m2021-03-29 15:57:49,290[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - GSSElement don't define a __pins__ attribute
-    [1;32m2021-03-29 15:57:49,297[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - SinusoidalVoltageSource don't define a __pins__ attribute
-    [1;32m2021-03-29 15:57:49,299[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - SinusoidalCurrentSource don't define a __pins__ attribute
-    [1;32m2021-03-29 15:57:49,299[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - AcLine don't define a __pins__ attribute
-    [1;32m2021-03-29 15:57:49,300[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - PulseVoltageSource don't define a __pins__ attribute
-    [1;32m2021-03-29 15:57:49,301[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - PulseCurrentSource don't define a __pins__ attribute
-    [1;32m2021-03-29 15:57:49,301[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - ExponentialVoltageSource don't define a __pins__ attribute
-    [1;32m2021-03-29 15:57:49,302[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - ExponentialCurrentSource don't define a __pins__ attribute
-    [1;32m2021-03-29 15:57:49,302[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - PieceWiseLinearVoltageSource don't define a __pins__ attribute
-    [1;32m2021-03-29 15:57:49,303[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - PieceWiseLinearCurrentSource don't define a __pins__ attribute
-    [1;32m2021-03-29 15:57:49,304[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - SingleFrequencyFMVoltageSource don't define a __pins__ attribute
-    [1;32m2021-03-29 15:57:49,304[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - SingleFrequencyFMCurrentSource don't define a __pins__ attribute
-    [1;32m2021-03-29 15:57:49,305[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - AmplitudeModulatedVoltageSource don't define a __pins__ attribute
-    [1;32m2021-03-29 15:57:49,306[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - AmplitudeModulatedCurrentSource don't define a __pins__ attribute
-    [1;32m2021-03-29 15:57:49,306[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - RandomVoltageSource don't define a __pins__ attribute
-    [1;32m2021-03-29 15:57:49,307[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - RandomCurrentSource don't define a __pins__ attribute
-    [1;32m2021-03-29 15:57:49,327[0m - [1;34mPySpice.Spice.Library.Library.__init__[0m - [1;31mDEBUG[0m - Parse /github/workspace/lib/spice/diode/1N4148.mod
-    [1;32m2021-03-29 15:57:49,328[0m - [1;34mPySpice.Spice.Library.Library.__init__[0m - [1;31mDEBUG[0m - Parse /github/workspace/lib/spice/diode/led.lib
-    [1;32m2021-03-29 15:57:49,329[0m - [1;34mPySpice.Spice.Library.Library.__init__[0m - [1;31mDEBUG[0m - Parse /github/workspace/lib/spice/opamp/ad633.lib
-    [1;32m2021-03-29 15:57:49,331[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - FSY 8 5 POLY(2) VZC1 VZC2 (2.8286E-3,1,1) 
-    [1;32m2021-03-29 15:57:49,332[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - FSY 8 5 POLY(2) VZC1 VZC2 (2.8286E-3,1,1) 
-    [1;32m2021-03-29 15:57:49,332[0m - [1;34mPySpice.Spice.Library.Library.__init__[0m - [1;31mDEBUG[0m - Parse /github/workspace/lib/spice/opamp/LM324.lib
-    [1;32m2021-03-29 15:57:49,334[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - FB    7 99 POLY(5) VB VC VE VLP VLN 0 15.91E6 -20E6 20E6 20E6 -20E6
-    [1;32m2021-03-29 15:57:49,334[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - FB    7 99 POLY(5) VB VC VE VLP VLN 0 15.91E6 -20E6 20E6 20E6 -20E6
-    [1;32m2021-03-29 15:57:49,335[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - FB    7 99 POLY(5) VB VC VE VLP VLN 0 15.91E6 -20E6 20E6 20E6 -20E6
-    [1;32m2021-03-29 15:57:49,335[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - FB    7 99 POLY(5) VB VC VE VLP VLN 0 15.91E6 -20E6 20E6 20E6 -20E6
-    [1;32m2021-03-29 15:57:49,336[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - FB    7 99 POLY(5) VB VC VE VLP VLN 0 15.91E6 -20E6 20E6 20E6 -20E6
-    [1;32m2021-03-29 15:57:49,336[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - FB    7 99 POLY(5) VB VC VE VLP VLN 0 15.91E6 -20E6 20E6 20E6 -20E6
-    [1;32m2021-03-29 15:57:49,337[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - FB    7 99 POLY(5) VB VC VE VLP VLN 0 15.91E6 -20E6 20E6 20E6 -20E6
-    [1;32m2021-03-29 15:57:49,337[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - FB    7 99 POLY(5) VB VC VE VLP VLN 0 15.91E6 -20E6 20E6 20E6 -20E6
-    [1;32m2021-03-29 15:57:49,338[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - FB    7 99 POLY(5) VB VC VE VLP VLN 0 15.91E6 -20E6 20E6 20E6 -20E6
-    [1;32m2021-03-29 15:57:49,339[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - FB    7 99 POLY(5) VB VC VE VLP VLN 0 15.91E6 -20E6 20E6 20E6 -20E6
-    [1;32m2021-03-29 15:57:49,344[0m - [1;34mPySpice.Spice.Library.Library.__init__[0m - [1;31mDEBUG[0m - Parse /github/workspace/lib/spice/opamp/LM324c.lib
-    [1;32m2021-03-29 15:57:49,346[0m - [1;34mPySpice.Spice.Library.Library.__init__[0m - [1;31mDEBUG[0m - Parse /github/workspace/lib/spice/opamp/LM13700.MOD
-    [1;32m2021-03-29 15:57:49,348[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - F1  4  3  POLY(1)   V6 1E-10 5.129E-2 -1.189E4 1.123E9 
-    [1;32m2021-03-29 15:57:49,348[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - F1  4  3  POLY(1)   V6 1E-10 5.129E-2 -1.189E4 1.123E9 
-    [1;32m2021-03-29 15:57:49,349[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - F1  4  3  POLY(1)   V6 1E-10 5.129E-2 -1.189E4 1.123E9 
-    [1;32m2021-03-29 15:57:49,349[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - F1  4  3  POLY(1)   V6 1E-10 5.129E-2 -1.189E4 1.123E9 
-    [1;32m2021-03-29 15:57:49,350[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - F5  5  0  POLY(2)   V3 V7 0 0 0 0 1                  
-    [1;32m2021-03-29 15:57:49,350[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - F5  5  0  POLY(2)   V3 V7 0 0 0 0 1                  
-    [1;32m2021-03-29 15:57:49,351[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - F5  5  0  POLY(2)   V3 V7 0 0 0 0 1                  
-    [1;32m2021-03-29 15:57:49,351[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - F5  5  0  POLY(2)   V3 V7 0 0 0 0 1                  
-    [1;32m2021-03-29 15:57:49,352[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - F5  5  0  POLY(2)   V3 V7 0 0 0 0 1                  
-    [1;32m2021-03-29 15:57:49,359[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - F5  5  0  POLY(2)   V3 V7 0 0 0 0 1                  
-    [1;32m2021-03-29 15:57:49,359[0m - [1;34mPySpice.Spice.Library.Library.__init__[0m - [1;31mDEBUG[0m - Parse /github/workspace/lib/spice/opamp/TL072-dual.lib
-    [1;32m2021-03-29 15:57:49,360[0m - [1;34mPySpice.Spice.Library.Library.__init__[0m - [1;31mDEBUG[0m - Parse /github/workspace/lib/spice/opamp/OPA2134.LIB
-    [1;32m2021-03-29 15:57:49,361[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - FB    7 99 POLY(5) VB VC VE VLP VLN 0 248.0E6 -250E6 250E6 250E6 -250E6
-    [1;32m2021-03-29 15:57:49,362[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - FB    7 99 POLY(5) VB VC VE VLP VLN 0 248.0E6 -250E6 250E6 250E6 -250E6
-    [1;32m2021-03-29 15:57:49,363[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - FB    7 99 POLY(5) VB VC VE VLP VLN 0 248.0E6 -250E6 250E6 250E6 -250E6
-    [1;32m2021-03-29 15:57:49,363[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - FB    7 99 POLY(5) VB VC VE VLP VLN 0 248.0E6 -250E6 250E6 250E6 -250E6
-    [1;32m2021-03-29 15:57:49,364[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - FB    7 99 POLY(5) VB VC VE VLP VLN 0 248.0E6 -250E6 250E6 250E6 -250E6
-    [1;32m2021-03-29 15:57:49,364[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - FB    7 99 POLY(5) VB VC VE VLP VLN 0 248.0E6 -250E6 250E6 250E6 -250E6
-    [1;32m2021-03-29 15:57:49,365[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - FB    7 99 POLY(5) VB VC VE VLP VLN 0 248.0E6 -250E6 250E6 250E6 -250E6
-    [1;32m2021-03-29 15:57:49,365[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - FB    7 99 POLY(5) VB VC VE VLP VLN 0 248.0E6 -250E6 250E6 250E6 -250E6
-    [1;32m2021-03-29 15:57:49,366[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - FB    7 99 POLY(5) VB VC VE VLP VLN 0 248.0E6 -250E6 250E6 250E6 -250E6
-    [1;32m2021-03-29 15:57:49,366[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - FB    7 99 POLY(5) VB VC VE VLP VLN 0 248.0E6 -250E6 250E6 250E6 -250E6
-    [1;32m2021-03-29 15:57:49,367[0m - [1;34mPySpice.Spice.Library.Library.__init__[0m - [1;31mDEBUG[0m - Parse /github/workspace/lib/spice/opamp/TL072.lib
-    [1;32m2021-03-29 15:57:49,368[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - FB    7 99 POLY(5) VB VC VE VLP VLN 0 4.715E6 -5E6 5E6 5E6 -5E6
-    [1;32m2021-03-29 15:57:49,368[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - FB    7 99 POLY(5) VB VC VE VLP VLN 0 4.715E6 -5E6 5E6 5E6 -5E6
-    [1;32m2021-03-29 15:57:49,369[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - FB    7 99 POLY(5) VB VC VE VLP VLN 0 4.715E6 -5E6 5E6 5E6 -5E6
-    [1;32m2021-03-29 15:57:49,369[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - FB    7 99 POLY(5) VB VC VE VLP VLN 0 4.715E6 -5E6 5E6 5E6 -5E6
-    [1;32m2021-03-29 15:57:49,370[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - FB    7 99 POLY(5) VB VC VE VLP VLN 0 4.715E6 -5E6 5E6 5E6 -5E6
-    [1;32m2021-03-29 15:57:49,370[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - FB    7 99 POLY(5) VB VC VE VLP VLN 0 4.715E6 -5E6 5E6 5E6 -5E6
-    [1;32m2021-03-29 15:57:49,371[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - FB    7 99 POLY(5) VB VC VE VLP VLN 0 4.715E6 -5E6 5E6 5E6 -5E6
-    [1;32m2021-03-29 15:57:49,371[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - FB    7 99 POLY(5) VB VC VE VLP VLN 0 4.715E6 -5E6 5E6 5E6 -5E6
-    [1;32m2021-03-29 15:57:49,372[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - FB    7 99 POLY(5) VB VC VE VLP VLN 0 4.715E6 -5E6 5E6 5E6 -5E6
-    [1;32m2021-03-29 15:57:49,372[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - FB    7 99 POLY(5) VB VC VE VLP VLN 0 4.715E6 -5E6 5E6 5E6 -5E6
-    [1;32m2021-03-29 15:57:49,373[0m - [1;34mPySpice.Spice.Library.Library.__init__[0m - [1;31mDEBUG[0m - Parse /github/workspace/lib/spice/opamp/LT1014x_30V.LIB
-    [1;32m2021-03-29 15:57:49,374[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - FB    7 99 POLY(5) VB VC VE VLP VLN 0 3.865E9 -4E9 4E9 4E9 -4E9
-    [1;32m2021-03-29 15:57:49,375[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - FB    7 99 POLY(5) VB VC VE VLP VLN 0 3.865E9 -4E9 4E9 4E9 -4E9
-    [1;32m2021-03-29 15:57:49,375[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - FB    7 99 POLY(5) VB VC VE VLP VLN 0 3.865E9 -4E9 4E9 4E9 -4E9
-    [1;32m2021-03-29 15:57:49,375[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - FB    7 99 POLY(5) VB VC VE VLP VLN 0 3.865E9 -4E9 4E9 4E9 -4E9
-    [1;32m2021-03-29 15:57:49,376[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - FB    7 99 POLY(5) VB VC VE VLP VLN 0 3.865E9 -4E9 4E9 4E9 -4E9
-    [1;32m2021-03-29 15:57:49,376[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - FB    7 99 POLY(5) VB VC VE VLP VLN 0 3.865E9 -4E9 4E9 4E9 -4E9
-    [1;32m2021-03-29 15:57:49,377[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - FB    7 99 POLY(5) VB VC VE VLP VLN 0 3.865E9 -4E9 4E9 4E9 -4E9
-    [1;32m2021-03-29 15:57:49,377[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - FB    7 99 POLY(5) VB VC VE VLP VLN 0 3.865E9 -4E9 4E9 4E9 -4E9
-    [1;32m2021-03-29 15:57:49,378[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - FB    7 99 POLY(5) VB VC VE VLP VLN 0 3.865E9 -4E9 4E9 4E9 -4E9
-    [1;32m2021-03-29 15:57:49,378[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - FB    7 99 POLY(5) VB VC VE VLP VLN 0 3.865E9 -4E9 4E9 4E9 -4E9
-    [1;32m2021-03-29 15:57:49,379[0m - [1;34mPySpice.Spice.Library.Library.__init__[0m - [1;31mDEBUG[0m - Parse /github/workspace/lib/spice/opamp/OPA2134-dual.lib
-    [1;32m2021-03-29 15:57:49,380[0m - [1;34mPySpice.Spice.Library.Library.__init__[0m - [1;31mDEBUG[0m - Parse /github/workspace/lib/spice/opamp/LM13700d.MOD
-    [1;32m2021-03-29 15:57:49,380[0m - [1;34mPySpice.Spice.Library.Library.__init__[0m - [1;31mDEBUG[0m - Parse /github/workspace/lib/spice/opamp/CA3080.lib
-    [1;32m2021-03-29 15:57:49,382[0m - [1;34mPySpice.Spice.Library.Library.__init__[0m - [1;31mDEBUG[0m - Parse /github/workspace/lib/spice/cmos/CD40106B.lib
-    [1;32m2021-03-29 15:57:49,383[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM VCC_ABS_MAX = 20 
-    [1;32m2021-03-29 15:57:49,383[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM VCC_MAX = 18 
-    [1;32m2021-03-29 15:57:49,384[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM RA = 720000000 
-    [1;32m2021-03-29 15:57:49,384[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM RB = 720000000 
-    [1;32m2021-03-29 15:57:49,385[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM CA = 4.5e-12 
-    [1;32m2021-03-29 15:57:49,385[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM CB = 4.5e-12 
-    [1;32m2021-03-29 15:57:49,386[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM ROEZ = 2000 
-    [1;32m2021-03-29 15:57:49,386[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM COEZ = 3e-12 
-    [1;32m2021-03-29 15:57:49,387[0m - [1;34mPySpice.Spice.Parser.Element.read_words[0m - [1;31mWARNING[0m - Bad element line, looking for word 1/2:
+    [1;32m2021-04-04 08:00:25,226[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - Element don't define a __pins__ attribute
+    [1;32m2021-04-04 08:00:25,227[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - FixedPinElement don't define a __pins__ attribute
+    [1;32m2021-04-04 08:00:25,228[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - SubCircuitElement don't define a __pins__ attribute
+    [1;32m2021-04-04 08:00:25,231[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - Resistor don't define a __pins__ attribute
+    [1;32m2021-04-04 08:00:25,232[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - SemiconductorResistor don't define a __pins__ attribute
+    [1;32m2021-04-04 08:00:25,233[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - BehavioralResistor don't define a __pins__ attribute
+    [1;32m2021-04-04 08:00:25,235[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - Capacitor don't define a __pins__ attribute
+    [1;32m2021-04-04 08:00:25,237[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - SemiconductorCapacitor don't define a __pins__ attribute
+    [1;32m2021-04-04 08:00:25,238[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - BehavioralCapacitor don't define a __pins__ attribute
+    [1;32m2021-04-04 08:00:25,239[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - Inductor don't define a __pins__ attribute
+    [1;32m2021-04-04 08:00:25,240[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - BehavioralInductor don't define a __pins__ attribute
+    [1;32m2021-04-04 08:00:25,242[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - CoupledInductor don't define a __pins__ attribute
+    [1;32m2021-04-04 08:00:25,243[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - VoltageControlledSwitch don't define a __pins__ attribute
+    [1;32m2021-04-04 08:00:25,243[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - CurrentControlledSwitch don't define a __pins__ attribute
+    [1;32m2021-04-04 08:00:25,244[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - VoltageSource don't define a __pins__ attribute
+    [1;32m2021-04-04 08:00:25,244[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - CurrentSource don't define a __pins__ attribute
+    [1;32m2021-04-04 08:00:25,245[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - VoltageControlledCurrentSource don't define a __pins__ attribute
+    [1;32m2021-04-04 08:00:25,246[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - VoltageControlledVoltageSource don't define a __pins__ attribute
+    [1;32m2021-04-04 08:00:25,246[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - CurrentControlledCurrentSource don't define a __pins__ attribute
+    [1;32m2021-04-04 08:00:25,247[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - CurrentControlledVoltageSource don't define a __pins__ attribute
+    [1;32m2021-04-04 08:00:25,249[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - BehavioralSource don't define a __pins__ attribute
+    [1;32m2021-04-04 08:00:25,250[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - NonLinearVoltageSource don't define a __pins__ attribute
+    [1;32m2021-04-04 08:00:25,250[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - NonLinearCurrentSource don't define a __pins__ attribute
+    [1;32m2021-04-04 08:00:25,251[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - JunctionFieldEffectTransistor don't define a __pins__ attribute
+    [1;32m2021-04-04 08:00:25,252[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - Mesfet don't define a __pins__ attribute
+    [1;32m2021-04-04 08:00:25,253[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - LosslessTransmissionLine don't define a __pins__ attribute
+    [1;32m2021-04-04 08:00:25,253[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - LossyTransmission don't define a __pins__ attribute
+    [1;32m2021-04-04 08:00:25,254[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - CoupledMulticonductorLine don't define a __pins__ attribute
+    [1;32m2021-04-04 08:00:25,255[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - SingleLossyTransmissionLine don't define a __pins__ attribute
+    [1;32m2021-04-04 08:00:25,255[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - XSpiceElement don't define a __pins__ attribute
+    [1;32m2021-04-04 08:00:25,256[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - GSSElement don't define a __pins__ attribute
+    [1;32m2021-04-04 08:00:25,261[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - SinusoidalVoltageSource don't define a __pins__ attribute
+    [1;32m2021-04-04 08:00:25,262[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - SinusoidalCurrentSource don't define a __pins__ attribute
+    [1;32m2021-04-04 08:00:25,263[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - AcLine don't define a __pins__ attribute
+    [1;32m2021-04-04 08:00:25,263[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - PulseVoltageSource don't define a __pins__ attribute
+    [1;32m2021-04-04 08:00:25,264[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - PulseCurrentSource don't define a __pins__ attribute
+    [1;32m2021-04-04 08:00:25,265[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - ExponentialVoltageSource don't define a __pins__ attribute
+    [1;32m2021-04-04 08:00:25,265[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - ExponentialCurrentSource don't define a __pins__ attribute
+    [1;32m2021-04-04 08:00:25,266[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - PieceWiseLinearVoltageSource don't define a __pins__ attribute
+    [1;32m2021-04-04 08:00:25,266[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - PieceWiseLinearCurrentSource don't define a __pins__ attribute
+    [1;32m2021-04-04 08:00:25,267[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - SingleFrequencyFMVoltageSource don't define a __pins__ attribute
+    [1;32m2021-04-04 08:00:25,268[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - SingleFrequencyFMCurrentSource don't define a __pins__ attribute
+    [1;32m2021-04-04 08:00:25,268[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - AmplitudeModulatedVoltageSource don't define a __pins__ attribute
+    [1;32m2021-04-04 08:00:25,269[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - AmplitudeModulatedCurrentSource don't define a __pins__ attribute
+    [1;32m2021-04-04 08:00:25,269[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - RandomVoltageSource don't define a __pins__ attribute
+    [1;32m2021-04-04 08:00:25,270[0m - [1;34mPySpice.Spice.Netlist.__new__[0m - [1;31mDEBUG[0m - RandomCurrentSource don't define a __pins__ attribute
+    [1;32m2021-04-04 08:00:25,289[0m - [1;34mPySpice.Spice.Library.Library.__init__[0m - [1;31mDEBUG[0m - Parse /github/workspace/lib/spice/diode/led.lib
+    [1;32m2021-04-04 08:00:25,290[0m - [1;34mPySpice.Spice.Library.Library.__init__[0m - [1;31mDEBUG[0m - Parse /github/workspace/lib/spice/diode/1N4148.mod
+    [1;32m2021-04-04 08:00:25,291[0m - [1;34mPySpice.Spice.Library.Library.__init__[0m - [1;31mDEBUG[0m - Parse /github/workspace/lib/spice/cmos/CD4069UB-hex.lib
+    [1;32m2021-04-04 08:00:25,292[0m - [1;34mPySpice.Spice.Library.Library.__init__[0m - [1;31mDEBUG[0m - Parse /github/workspace/lib/spice/cmos/CD40106B.lib
+    [1;32m2021-04-04 08:00:25,293[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM VCC_ABS_MAX = 20 
+    [1;32m2021-04-04 08:00:25,294[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM VCC_MAX = 18 
+    [1;32m2021-04-04 08:00:25,295[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM RA = 720000000 
+    [1;32m2021-04-04 08:00:25,296[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM RB = 720000000 
+    [1;32m2021-04-04 08:00:25,296[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM CA = 4.5e-12 
+    [1;32m2021-04-04 08:00:25,297[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM CB = 4.5e-12 
+    [1;32m2021-04-04 08:00:25,297[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM ROEZ = 2000 
+    [1;32m2021-04-04 08:00:25,298[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM COEZ = 3e-12 
+    [1;32m2021-04-04 08:00:25,299[0m - [1;34mPySpice.Spice.Parser.Element.read_words[0m - [1;31mWARNING[0m - Bad element line, looking for word 1/2:
     SICC VCC GND VCC GND SW1 
                              ^
-    [1;32m2021-03-29 15:57:49,387[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parse error on:
+    [1;32m2021-04-04 08:00:25,305[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parse error on:
     SICC VCC GND VCC GND SW1 
-    [1;32m2021-03-29 15:57:49,388[0m - [1;34mPySpice.Spice.Parser.Element.read_words[0m - [1;31mWARNING[0m - Bad element line, looking for word 1/2:
+    [1;32m2021-04-04 08:00:25,305[0m - [1;34mPySpice.Spice.Parser.Element.read_words[0m - [1;31mWARNING[0m - Bad element line, looking for word 1/2:
     SIOFF OUTsw OUT VCC GND SW2 
                                 ^
-    [1;32m2021-03-29 15:57:49,388[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parse error on:
+    [1;32m2021-04-04 08:00:25,306[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parse error on:
     SIOFF OUTsw OUT VCC GND SW2 
-    [1;32m2021-03-29 15:57:49,389[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM STANDARD_INPUT_SELECT = 0 
-    [1;32m2021-03-29 15:57:49,389[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM SCHMITT_TRIGGER_INPUT_SELECT = 1 
-    [1;32m2021-03-29 15:57:49,390[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM MAXICC = 0.0009 
-    [1;32m2021-03-29 15:57:49,391[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM VT = .7 
-    [1;32m2021-03-29 15:57:49,391[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM VCC_MIN = 3 
-    [1;32m2021-03-29 15:57:49,392[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM AND  = 0 
-    [1;32m2021-03-29 15:57:49,392[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM NAND = 1 
-    [1;32m2021-03-29 15:57:49,393[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM OR   = 0 
-    [1;32m2021-03-29 15:57:49,393[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM NOR  = 0 
-    [1;32m2021-03-29 15:57:49,394[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM XOR  = 0 
-    [1;32m2021-03-29 15:57:49,394[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM XNOR = 0 
-    [1;32m2021-03-29 15:57:49,395[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM TPDELAY1 = 1N 
-    [1;32m2021-03-29 15:57:49,395[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM RS = 10K 
-    [1;32m2021-03-29 15:57:49,396[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM CS = {-TPDELAY1/(RS*LOG(0.5))} 
-    [1;32m2021-03-29 15:57:49,396[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM VCC1 = 1.65 
-    [1;32m2021-03-29 15:57:49,397[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM VCC2 = 2.3 
-    [1;32m2021-03-29 15:57:49,397[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM VCC3 = 3 
-    [1;32m2021-03-29 15:57:49,398[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM VCC4 = 3 
-    [1;32m2021-03-29 15:57:49,398[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM VCC5 = 4.5 
-    [1;32m2021-03-29 15:57:49,399[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM VOL1 = 0.45 
-    [1;32m2021-03-29 15:57:49,399[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM VOL2 = 0.3 
-    [1;32m2021-03-29 15:57:49,400[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM VOL3 = 0.4 
-    [1;32m2021-03-29 15:57:49,400[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM VOL4 = 0.55 
-    [1;32m2021-03-29 15:57:49,400[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM VOL5 = 0.55 
-    [1;32m2021-03-29 15:57:49,401[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM IOL1 = 0.004 
-    [1;32m2021-03-29 15:57:49,401[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM IOL2 = 0.008 
-    [1;32m2021-03-29 15:57:49,402[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM IOL3 = 0.016 
-    [1;32m2021-03-29 15:57:49,402[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM IOL4 = 0.024 
-    [1;32m2021-03-29 15:57:49,403[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM IOL5 = 0.032 
-    [1;32m2021-03-29 15:57:49,404[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM ROL1 = {(VOL1)/IOL1} 
-    [1;32m2021-03-29 15:57:49,404[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM ROL2 = {(VOL2)/IOL2} 
-    [1;32m2021-03-29 15:57:49,405[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM ROL3 = {(VOL3)/IOL3} 
-    [1;32m2021-03-29 15:57:49,405[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM ROL4 = {(VOL4)/IOL4} 
-    [1;32m2021-03-29 15:57:49,405[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM ROL5 = {(VOL5)/IOL5} 
-    [1;32m2021-03-29 15:57:49,406[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM VCC1 = 4.5 
-    [1;32m2021-03-29 15:57:49,406[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM VCC2 = 5 
-    [1;32m2021-03-29 15:57:49,407[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM VCC3 = 5.5 
-    [1;32m2021-03-29 15:57:49,407[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM VOH1 = 4.4 
-    [1;32m2021-03-29 15:57:49,408[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM VOH2 = 4.8 
-    [1;32m2021-03-29 15:57:49,408[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM VOH3 = 5.2 
-    [1;32m2021-03-29 15:57:49,409[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM VOL1 = 0.1 
-    [1;32m2021-03-29 15:57:49,409[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM VOL2 = 0.44 
-    [1;32m2021-03-29 15:57:49,410[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM VOL3 = 0.8 
-    [1;32m2021-03-29 15:57:49,410[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM IOH1 = 0.00005 
-    [1;32m2021-03-29 15:57:49,411[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM IOH2 = 0.024 
-    [1;32m2021-03-29 15:57:49,411[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM IOH3 = 0.05 
-    [1;32m2021-03-29 15:57:49,412[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM IOL1 = 0.00005 
-    [1;32m2021-03-29 15:57:49,412[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM IOL2 = 0.024 
-    [1;32m2021-03-29 15:57:49,413[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM IOL3 = 0.05 
-    [1;32m2021-03-29 15:57:49,413[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM ROH1 = {(VCC1 - VOH1)/IOH1} 
-    [1;32m2021-03-29 15:57:49,414[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM ROH2 = {(VCC2 - VOH2)/IOH2} 
-    [1;32m2021-03-29 15:57:49,414[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM ROH3 = {(VCC3 - VOH3)/IOH3} 
-    [1;32m2021-03-29 15:57:49,414[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM ROH4 = {(VCC4 - VOH4)/IOH4} 
-    [1;32m2021-03-29 15:57:49,415[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM ROH5 = {(VCC5 - VOH5)/IOH5} 
-    [1;32m2021-03-29 15:57:49,415[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM ROL1 = {(VOL1)/IOL1} 
-    [1;32m2021-03-29 15:57:49,416[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM ROL2 = {(VOL2)/IOL2} 
-    [1;32m2021-03-29 15:57:49,416[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM ROL3 = {(VOL3)/IOL3} 
-    [1;32m2021-03-29 15:57:49,417[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM ROL4 = {(VOL4)/IOL4} 
-    [1;32m2021-03-29 15:57:49,417[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM ROL5 = {(VOL5)/IOL5} 
-    [1;32m2021-03-29 15:57:49,418[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM ICC = 5e-09 
-    [1;32m2021-03-29 15:57:49,418[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM VCC_MAX = 18 
-    [1;32m2021-03-29 15:57:49,419[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM VCC_MIN = 3 
-    [1;32m2021-03-29 15:57:49,421[0m - [1;34mPySpice.Spice.Library.Library.__init__[0m - [1;31mDEBUG[0m - Parse /github/workspace/lib/spice/cmos/CD4069UB-hex.lib
-    [1;32m2021-03-29 15:57:49,421[0m - [1;34mPySpice.Spice.Library.Library.__init__[0m - [1;31mDEBUG[0m - Parse /github/workspace/lib/spice/cmos/4069ub.lib
-    [1;32m2021-03-29 15:57:49,422[0m - [1;34mPySpice.Spice.Library.Library.__init__[0m - [1;31mDEBUG[0m - Parse /github/workspace/lib/spice/transistor/bc5x7.lib
-    [1;32m2021-03-29 15:57:49,423[0m - [1;34mPySpice.Spice.Library.Library.__init__[0m - [1;31mDEBUG[0m - Parse /github/workspace/lib/spice/transistor/BC547.mod
-    [1;32m2021-03-29 15:57:49,424[0m - [1;34mPySpice.Spice.Library.Library.__init__[0m - [1;31mDEBUG[0m - Parse /github/workspace/lib/spice/transistor/2N3906.LIB
-    [1;32m2021-03-29 15:57:49,424[0m - [1;34mPySpice.Spice.Library.Library.__init__[0m - [1;31mDEBUG[0m - Parse /github/workspace/lib/spice/transistor/BCV62C.lib
+    [1;32m2021-04-04 08:00:25,307[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM STANDARD_INPUT_SELECT = 0 
+    [1;32m2021-04-04 08:00:25,307[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM SCHMITT_TRIGGER_INPUT_SELECT = 1 
+    [1;32m2021-04-04 08:00:25,308[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM MAXICC = 0.0009 
+    [1;32m2021-04-04 08:00:25,308[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM VT = .7 
+    [1;32m2021-04-04 08:00:25,309[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM VCC_MIN = 3 
+    [1;32m2021-04-04 08:00:25,310[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM AND  = 0 
+    [1;32m2021-04-04 08:00:25,310[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM NAND = 1 
+    [1;32m2021-04-04 08:00:25,311[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM OR   = 0 
+    [1;32m2021-04-04 08:00:25,311[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM NOR  = 0 
+    [1;32m2021-04-04 08:00:25,312[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM XOR  = 0 
+    [1;32m2021-04-04 08:00:25,312[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM XNOR = 0 
+    [1;32m2021-04-04 08:00:25,313[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM TPDELAY1 = 1N 
+    [1;32m2021-04-04 08:00:25,321[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM RS = 10K 
+    [1;32m2021-04-04 08:00:25,321[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM CS = {-TPDELAY1/(RS*LOG(0.5))} 
+    [1;32m2021-04-04 08:00:25,322[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM VCC1 = 1.65 
+    [1;32m2021-04-04 08:00:25,323[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM VCC2 = 2.3 
+    [1;32m2021-04-04 08:00:25,323[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM VCC3 = 3 
+    [1;32m2021-04-04 08:00:25,324[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM VCC4 = 3 
+    [1;32m2021-04-04 08:00:25,324[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM VCC5 = 4.5 
+    [1;32m2021-04-04 08:00:25,324[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM VOL1 = 0.45 
+    [1;32m2021-04-04 08:00:25,325[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM VOL2 = 0.3 
+    [1;32m2021-04-04 08:00:25,325[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM VOL3 = 0.4 
+    [1;32m2021-04-04 08:00:25,326[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM VOL4 = 0.55 
+    [1;32m2021-04-04 08:00:25,327[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM VOL5 = 0.55 
+    [1;32m2021-04-04 08:00:25,327[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM IOL1 = 0.004 
+    [1;32m2021-04-04 08:00:25,328[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM IOL2 = 0.008 
+    [1;32m2021-04-04 08:00:25,328[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM IOL3 = 0.016 
+    [1;32m2021-04-04 08:00:25,329[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM IOL4 = 0.024 
+    [1;32m2021-04-04 08:00:25,329[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM IOL5 = 0.032 
+    [1;32m2021-04-04 08:00:25,330[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM ROL1 = {(VOL1)/IOL1} 
+    [1;32m2021-04-04 08:00:25,330[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM ROL2 = {(VOL2)/IOL2} 
+    [1;32m2021-04-04 08:00:25,330[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM ROL3 = {(VOL3)/IOL3} 
+    [1;32m2021-04-04 08:00:25,331[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM ROL4 = {(VOL4)/IOL4} 
+    [1;32m2021-04-04 08:00:25,331[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM ROL5 = {(VOL5)/IOL5} 
+    [1;32m2021-04-04 08:00:25,332[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM VCC1 = 4.5 
+    [1;32m2021-04-04 08:00:25,332[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM VCC2 = 5 
+    [1;32m2021-04-04 08:00:25,333[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM VCC3 = 5.5 
+    [1;32m2021-04-04 08:00:25,333[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM VOH1 = 4.4 
+    [1;32m2021-04-04 08:00:25,334[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM VOH2 = 4.8 
+    [1;32m2021-04-04 08:00:25,334[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM VOH3 = 5.2 
+    [1;32m2021-04-04 08:00:25,334[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM VOL1 = 0.1 
+    [1;32m2021-04-04 08:00:25,335[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM VOL2 = 0.44 
+    [1;32m2021-04-04 08:00:25,335[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM VOL3 = 0.8 
+    [1;32m2021-04-04 08:00:25,336[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM IOH1 = 0.00005 
+    [1;32m2021-04-04 08:00:25,336[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM IOH2 = 0.024 
+    [1;32m2021-04-04 08:00:25,337[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM IOH3 = 0.05 
+    [1;32m2021-04-04 08:00:25,337[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM IOL1 = 0.00005 
+    [1;32m2021-04-04 08:00:25,338[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM IOL2 = 0.024 
+    [1;32m2021-04-04 08:00:25,338[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM IOL3 = 0.05 
+    [1;32m2021-04-04 08:00:25,338[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM ROH1 = {(VCC1 - VOH1)/IOH1} 
+    [1;32m2021-04-04 08:00:25,339[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM ROH2 = {(VCC2 - VOH2)/IOH2} 
+    [1;32m2021-04-04 08:00:25,339[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM ROH3 = {(VCC3 - VOH3)/IOH3} 
+    [1;32m2021-04-04 08:00:25,340[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM ROH4 = {(VCC4 - VOH4)/IOH4} 
+    [1;32m2021-04-04 08:00:25,340[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM ROH5 = {(VCC5 - VOH5)/IOH5} 
+    [1;32m2021-04-04 08:00:25,341[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM ROL1 = {(VOL1)/IOL1} 
+    [1;32m2021-04-04 08:00:25,341[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM ROL2 = {(VOL2)/IOL2} 
+    [1;32m2021-04-04 08:00:25,342[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM ROL3 = {(VOL3)/IOL3} 
+    [1;32m2021-04-04 08:00:25,342[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM ROL4 = {(VOL4)/IOL4} 
+    [1;32m2021-04-04 08:00:25,343[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM ROL5 = {(VOL5)/IOL5} 
+    [1;32m2021-04-04 08:00:25,343[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM ICC = 5e-09 
+    [1;32m2021-04-04 08:00:25,344[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM VCC_MAX = 18 
+    [1;32m2021-04-04 08:00:25,344[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM VCC_MIN = 3 
+    [1;32m2021-04-04 08:00:25,345[0m - [1;34mPySpice.Spice.Library.Library.__init__[0m - [1;31mDEBUG[0m - Parse /github/workspace/lib/spice/cmos/4069ub.lib
+    [1;32m2021-04-04 08:00:25,345[0m - [1;34mPySpice.Spice.Library.Library.__init__[0m - [1;31mDEBUG[0m - Parse /github/workspace/lib/spice/transistor/BC547.mod
+    [1;32m2021-04-04 08:00:25,346[0m - [1;34mPySpice.Spice.Library.Library.__init__[0m - [1;31mDEBUG[0m - Parse /github/workspace/lib/spice/transistor/bc5x7.lib
+    [1;32m2021-04-04 08:00:25,347[0m - [1;34mPySpice.Spice.Library.Library.__init__[0m - [1;31mDEBUG[0m - Parse /github/workspace/lib/spice/transistor/2N3906.LIB
+    [1;32m2021-04-04 08:00:25,347[0m - [1;34mPySpice.Spice.Library.Library.__init__[0m - [1;31mDEBUG[0m - Parse /github/workspace/lib/spice/transistor/BCV62C.lib
+    [1;32m2021-04-04 08:00:25,348[0m - [1;34mPySpice.Spice.Library.Library.__init__[0m - [1;31mDEBUG[0m - Parse /github/workspace/lib/spice/opamp/LM13700d.MOD
+    [1;32m2021-04-04 08:00:25,349[0m - [1;34mPySpice.Spice.Library.Library.__init__[0m - [1;31mDEBUG[0m - Parse /github/workspace/lib/spice/opamp/OPA2134-dual.lib
+    [1;32m2021-04-04 08:00:25,350[0m - [1;34mPySpice.Spice.Library.Library.__init__[0m - [1;31mDEBUG[0m - Parse /github/workspace/lib/spice/opamp/LM324.lib
+    [1;32m2021-04-04 08:00:25,350[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - FB    7 99 POLY(5) VB VC VE VLP VLN 0 15.91E6 -20E6 20E6 20E6 -20E6
+    [1;32m2021-04-04 08:00:25,351[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - FB    7 99 POLY(5) VB VC VE VLP VLN 0 15.91E6 -20E6 20E6 20E6 -20E6
+    [1;32m2021-04-04 08:00:25,351[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - FB    7 99 POLY(5) VB VC VE VLP VLN 0 15.91E6 -20E6 20E6 20E6 -20E6
+    [1;32m2021-04-04 08:00:25,352[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - FB    7 99 POLY(5) VB VC VE VLP VLN 0 15.91E6 -20E6 20E6 20E6 -20E6
+    [1;32m2021-04-04 08:00:25,352[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - FB    7 99 POLY(5) VB VC VE VLP VLN 0 15.91E6 -20E6 20E6 20E6 -20E6
+    [1;32m2021-04-04 08:00:25,353[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - FB    7 99 POLY(5) VB VC VE VLP VLN 0 15.91E6 -20E6 20E6 20E6 -20E6
+    [1;32m2021-04-04 08:00:25,353[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - FB    7 99 POLY(5) VB VC VE VLP VLN 0 15.91E6 -20E6 20E6 20E6 -20E6
+    [1;32m2021-04-04 08:00:25,354[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - FB    7 99 POLY(5) VB VC VE VLP VLN 0 15.91E6 -20E6 20E6 20E6 -20E6
+    [1;32m2021-04-04 08:00:25,354[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - FB    7 99 POLY(5) VB VC VE VLP VLN 0 15.91E6 -20E6 20E6 20E6 -20E6
+    [1;32m2021-04-04 08:00:25,354[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - FB    7 99 POLY(5) VB VC VE VLP VLN 0 15.91E6 -20E6 20E6 20E6 -20E6
+    [1;32m2021-04-04 08:00:25,355[0m - [1;34mPySpice.Spice.Library.Library.__init__[0m - [1;31mDEBUG[0m - Parse /github/workspace/lib/spice/opamp/LM13700.MOD
+    [1;32m2021-04-04 08:00:25,356[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - F1  4  3  POLY(1)   V6 1E-10 5.129E-2 -1.189E4 1.123E9 
+    [1;32m2021-04-04 08:00:25,357[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - F1  4  3  POLY(1)   V6 1E-10 5.129E-2 -1.189E4 1.123E9 
+    [1;32m2021-04-04 08:00:25,357[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - F1  4  3  POLY(1)   V6 1E-10 5.129E-2 -1.189E4 1.123E9 
+    [1;32m2021-04-04 08:00:25,358[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - F1  4  3  POLY(1)   V6 1E-10 5.129E-2 -1.189E4 1.123E9 
+    [1;32m2021-04-04 08:00:25,358[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - F5  5  0  POLY(2)   V3 V7 0 0 0 0 1                  
+    [1;32m2021-04-04 08:00:25,359[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - F5  5  0  POLY(2)   V3 V7 0 0 0 0 1                  
+    [1;32m2021-04-04 08:00:25,359[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - F5  5  0  POLY(2)   V3 V7 0 0 0 0 1                  
+    [1;32m2021-04-04 08:00:25,359[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - F5  5  0  POLY(2)   V3 V7 0 0 0 0 1                  
+    [1;32m2021-04-04 08:00:25,360[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - F5  5  0  POLY(2)   V3 V7 0 0 0 0 1                  
+    [1;32m2021-04-04 08:00:25,360[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - F5  5  0  POLY(2)   V3 V7 0 0 0 0 1                  
+    [1;32m2021-04-04 08:00:25,361[0m - [1;34mPySpice.Spice.Library.Library.__init__[0m - [1;31mDEBUG[0m - Parse /github/workspace/lib/spice/opamp/CA3080.lib
+    [1;32m2021-04-04 08:00:25,362[0m - [1;34mPySpice.Spice.Library.Library.__init__[0m - [1;31mDEBUG[0m - Parse /github/workspace/lib/spice/opamp/ad633.lib
+    [1;32m2021-04-04 08:00:25,364[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - FSY 8 5 POLY(2) VZC1 VZC2 (2.8286E-3,1,1) 
+    [1;32m2021-04-04 08:00:25,364[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - FSY 8 5 POLY(2) VZC1 VZC2 (2.8286E-3,1,1) 
+    [1;32m2021-04-04 08:00:25,365[0m - [1;34mPySpice.Spice.Library.Library.__init__[0m - [1;31mDEBUG[0m - Parse /github/workspace/lib/spice/opamp/TL072-dual.lib
+    [1;32m2021-04-04 08:00:25,365[0m - [1;34mPySpice.Spice.Library.Library.__init__[0m - [1;31mDEBUG[0m - Parse /github/workspace/lib/spice/opamp/OPA2134.LIB
+    [1;32m2021-04-04 08:00:25,366[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - FB    7 99 POLY(5) VB VC VE VLP VLN 0 248.0E6 -250E6 250E6 250E6 -250E6
+    [1;32m2021-04-04 08:00:25,367[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - FB    7 99 POLY(5) VB VC VE VLP VLN 0 248.0E6 -250E6 250E6 250E6 -250E6
+    [1;32m2021-04-04 08:00:25,368[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - FB    7 99 POLY(5) VB VC VE VLP VLN 0 248.0E6 -250E6 250E6 250E6 -250E6
+    [1;32m2021-04-04 08:00:25,368[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - FB    7 99 POLY(5) VB VC VE VLP VLN 0 248.0E6 -250E6 250E6 250E6 -250E6
+    [1;32m2021-04-04 08:00:25,368[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - FB    7 99 POLY(5) VB VC VE VLP VLN 0 248.0E6 -250E6 250E6 250E6 -250E6
+    [1;32m2021-04-04 08:00:25,369[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - FB    7 99 POLY(5) VB VC VE VLP VLN 0 248.0E6 -250E6 250E6 250E6 -250E6
+    [1;32m2021-04-04 08:00:25,369[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - FB    7 99 POLY(5) VB VC VE VLP VLN 0 248.0E6 -250E6 250E6 250E6 -250E6
+    [1;32m2021-04-04 08:00:25,370[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - FB    7 99 POLY(5) VB VC VE VLP VLN 0 248.0E6 -250E6 250E6 250E6 -250E6
+    [1;32m2021-04-04 08:00:25,370[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - FB    7 99 POLY(5) VB VC VE VLP VLN 0 248.0E6 -250E6 250E6 250E6 -250E6
+    [1;32m2021-04-04 08:00:25,371[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - FB    7 99 POLY(5) VB VC VE VLP VLN 0 248.0E6 -250E6 250E6 250E6 -250E6
+    [1;32m2021-04-04 08:00:25,371[0m - [1;34mPySpice.Spice.Library.Library.__init__[0m - [1;31mDEBUG[0m - Parse /github/workspace/lib/spice/opamp/LM324c.lib
+    [1;32m2021-04-04 08:00:25,372[0m - [1;34mPySpice.Spice.Library.Library.__init__[0m - [1;31mDEBUG[0m - Parse /github/workspace/lib/spice/opamp/TL072.lib
+    [1;32m2021-04-04 08:00:25,373[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - FB    7 99 POLY(5) VB VC VE VLP VLN 0 4.715E6 -5E6 5E6 5E6 -5E6
+    [1;32m2021-04-04 08:00:25,373[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - FB    7 99 POLY(5) VB VC VE VLP VLN 0 4.715E6 -5E6 5E6 5E6 -5E6
+    [1;32m2021-04-04 08:00:25,374[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - FB    7 99 POLY(5) VB VC VE VLP VLN 0 4.715E6 -5E6 5E6 5E6 -5E6
+    [1;32m2021-04-04 08:00:25,374[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - FB    7 99 POLY(5) VB VC VE VLP VLN 0 4.715E6 -5E6 5E6 5E6 -5E6
+    [1;32m2021-04-04 08:00:25,375[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - FB    7 99 POLY(5) VB VC VE VLP VLN 0 4.715E6 -5E6 5E6 5E6 -5E6
+    [1;32m2021-04-04 08:00:25,375[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - FB    7 99 POLY(5) VB VC VE VLP VLN 0 4.715E6 -5E6 5E6 5E6 -5E6
+    [1;32m2021-04-04 08:00:25,376[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - FB    7 99 POLY(5) VB VC VE VLP VLN 0 4.715E6 -5E6 5E6 5E6 -5E6
+    [1;32m2021-04-04 08:00:25,376[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - FB    7 99 POLY(5) VB VC VE VLP VLN 0 4.715E6 -5E6 5E6 5E6 -5E6
+    [1;32m2021-04-04 08:00:25,376[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - FB    7 99 POLY(5) VB VC VE VLP VLN 0 4.715E6 -5E6 5E6 5E6 -5E6
+    [1;32m2021-04-04 08:00:25,377[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - FB    7 99 POLY(5) VB VC VE VLP VLN 0 4.715E6 -5E6 5E6 5E6 -5E6
+    [1;32m2021-04-04 08:00:25,378[0m - [1;34mPySpice.Spice.Library.Library.__init__[0m - [1;31mDEBUG[0m - Parse /github/workspace/lib/spice/opamp/LT1014x_30V.LIB
+    [1;32m2021-04-04 08:00:25,378[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - FB    7 99 POLY(5) VB VC VE VLP VLN 0 3.865E9 -4E9 4E9 4E9 -4E9
+    [1;32m2021-04-04 08:00:25,379[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - FB    7 99 POLY(5) VB VC VE VLP VLN 0 3.865E9 -4E9 4E9 4E9 -4E9
+    [1;32m2021-04-04 08:00:25,379[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - FB    7 99 POLY(5) VB VC VE VLP VLN 0 3.865E9 -4E9 4E9 4E9 -4E9
+    [1;32m2021-04-04 08:00:25,380[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - FB    7 99 POLY(5) VB VC VE VLP VLN 0 3.865E9 -4E9 4E9 4E9 -4E9
+    [1;32m2021-04-04 08:00:25,380[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - FB    7 99 POLY(5) VB VC VE VLP VLN 0 3.865E9 -4E9 4E9 4E9 -4E9
+    [1;32m2021-04-04 08:00:25,381[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - FB    7 99 POLY(5) VB VC VE VLP VLN 0 3.865E9 -4E9 4E9 4E9 -4E9
+    [1;32m2021-04-04 08:00:25,381[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - FB    7 99 POLY(5) VB VC VE VLP VLN 0 3.865E9 -4E9 4E9 4E9 -4E9
+    [1;32m2021-04-04 08:00:25,382[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - FB    7 99 POLY(5) VB VC VE VLP VLN 0 3.865E9 -4E9 4E9 4E9 -4E9
+    [1;32m2021-04-04 08:00:25,382[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - FB    7 99 POLY(5) VB VC VE VLP VLN 0 3.865E9 -4E9 4E9 4E9 -4E9
+    [1;32m2021-04-04 08:00:25,383[0m - [1;34mPySpice.Spice.Parser.Element.__init__[0m - [1;31mDEBUG[0m - FB    7 99 POLY(5) VB VC VE VLP VLN 0 3.865E9 -4E9 4E9 4E9 -4E9
 
 -->
 
@@ -375,33 +381,33 @@ c(t) = A \sin(2 \pi f_c t)\,
 </div>
 
 <!-- 
-    [1;32m2021-03-29 15:57:50,946[0m - [1;34mPySpice.Spice.NgSpice.Shared.NgSpiceShared.new_instance[0m - [1;31mDEBUG[0m - New instance for id 0
-    [1;32m2021-03-29 15:57:50,947[0m - [1;34mPySpice.Spice.NgSpice.Shared.NgSpiceShared._load_library[0m - [1;31mDEBUG[0m - Set locale LC_NUMERIC to C
-    [1;32m2021-03-29 15:57:50,973[0m - [1;34mPySpice.Spice.NgSpice.Shared.NgSpiceShared._load_library[0m - [1;31mDEBUG[0m - Load library libngspice.so
-    [1;32m2021-03-29 15:57:50,990[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout ******'
-    [1;32m2021-03-29 15:57:50,990[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout ** ngspice-32 shared library'
-    [1;32m2021-03-29 15:57:50,991[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout ** Creation Date: Tue Jun  9 21:35:26 UTC 2020'
-    [1;32m2021-03-29 15:57:50,991[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout ******'
-    [1;32m2021-03-29 15:57:50,995[0m - [1;34mPySpice.Spice.NgSpice.Shared.NgSpiceShared.exec_command[0m - [1;31mDEBUG[0m - Execute command: version -f
-    [1;32m2021-03-29 15:57:50,996[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout ******'
-    [1;32m2021-03-29 15:57:50,996[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout ** ngspice-32 : Circuit level simulation program'
-    [1;32m2021-03-29 15:57:50,997[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout ** The U. C. Berkeley CAD Group'
-    [1;32m2021-03-29 15:57:50,998[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout ** Copyright 1985-1994, Regents of the University of California.'
-    [1;32m2021-03-29 15:57:50,998[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout ** Copyright 2001-2020, The ngspice team.'
-    [1;32m2021-03-29 15:57:50,999[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout ** Please get your ngspice manual from http://ngspice.sourceforge.net/docs.html'
-    [1;32m2021-03-29 15:57:50,999[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout ** Please file your bug-reports at http://ngspice.sourceforge.net/bugrep.html'
-    [1;32m2021-03-29 15:57:51,007[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout ** Creation Date: Tue Jun  9 21:35:26 UTC 2020'
-    [1;32m2021-03-29 15:57:51,008[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout **'
-    [1;32m2021-03-29 15:57:51,008[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout ** CIDER 1.b1 (CODECS simulator) included'
-    [1;32m2021-03-29 15:57:51,009[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout ** XSPICE extensions included'
-    [1;32m2021-03-29 15:57:51,010[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b"stdout ** Relevant compilation options (refer to user's manual):"
-    [1;32m2021-03-29 15:57:51,011[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout ** OpenMP multithreading for BSIM3, BSIM4 enabled'
-    [1;32m2021-03-29 15:57:51,012[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout ** X11 interface not compiled into ngspice'
-    [1;32m2021-03-29 15:57:51,013[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout **'
-    [1;32m2021-03-29 15:57:51,018[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout ******'
-    [1;32m2021-03-29 15:57:51,019[0m - [1;34mPySpice.Spice.NgSpice.Shared.NgSpiceShared._get_version[0m - [1;31mDEBUG[0m - Ngspice version 32 with extensions: CIDER, XSPICE
-    [1;32m2021-03-29 15:57:51,019[0m - [1;34mPySpice.Spice.NgSpice.Shared.NgSpiceShared.exec_command[0m - [1;31mDEBUG[0m - Execute command: set nomoremode
-    [1;32m2021-03-29 15:57:51,021[0m - [1;34mPySpice.Spice.NgSpice.Simulation.NgSpiceSharedCircuitSimulator._run[0m - [1;31mDEBUG[0m - desk
+    [1;32m2021-04-04 08:00:26,821[0m - [1;34mPySpice.Spice.NgSpice.Shared.NgSpiceShared.new_instance[0m - [1;31mDEBUG[0m - New instance for id 0
+    [1;32m2021-04-04 08:00:26,822[0m - [1;34mPySpice.Spice.NgSpice.Shared.NgSpiceShared._load_library[0m - [1;31mDEBUG[0m - Set locale LC_NUMERIC to C
+    [1;32m2021-04-04 08:00:26,850[0m - [1;34mPySpice.Spice.NgSpice.Shared.NgSpiceShared._load_library[0m - [1;31mDEBUG[0m - Load library libngspice.so
+    [1;32m2021-04-04 08:00:26,869[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout ******'
+    [1;32m2021-04-04 08:00:26,869[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout ** ngspice-32 shared library'
+    [1;32m2021-04-04 08:00:26,870[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout ** Creation Date: Tue Jun  9 21:35:26 UTC 2020'
+    [1;32m2021-04-04 08:00:26,871[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout ******'
+    [1;32m2021-04-04 08:00:26,874[0m - [1;34mPySpice.Spice.NgSpice.Shared.NgSpiceShared.exec_command[0m - [1;31mDEBUG[0m - Execute command: version -f
+    [1;32m2021-04-04 08:00:26,875[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout ******'
+    [1;32m2021-04-04 08:00:26,876[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout ** ngspice-32 : Circuit level simulation program'
+    [1;32m2021-04-04 08:00:26,876[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout ** The U. C. Berkeley CAD Group'
+    [1;32m2021-04-04 08:00:26,877[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout ** Copyright 1985-1994, Regents of the University of California.'
+    [1;32m2021-04-04 08:00:26,878[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout ** Copyright 2001-2020, The ngspice team.'
+    [1;32m2021-04-04 08:00:26,878[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout ** Please get your ngspice manual from http://ngspice.sourceforge.net/docs.html'
+    [1;32m2021-04-04 08:00:26,879[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout ** Please file your bug-reports at http://ngspice.sourceforge.net/bugrep.html'
+    [1;32m2021-04-04 08:00:26,880[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout ** Creation Date: Tue Jun  9 21:35:26 UTC 2020'
+    [1;32m2021-04-04 08:00:26,886[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout **'
+    [1;32m2021-04-04 08:00:26,886[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout ** CIDER 1.b1 (CODECS simulator) included'
+    [1;32m2021-04-04 08:00:26,887[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout ** XSPICE extensions included'
+    [1;32m2021-04-04 08:00:26,888[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b"stdout ** Relevant compilation options (refer to user's manual):"
+    [1;32m2021-04-04 08:00:26,889[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout ** OpenMP multithreading for BSIM3, BSIM4 enabled'
+    [1;32m2021-04-04 08:00:26,889[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout ** X11 interface not compiled into ngspice'
+    [1;32m2021-04-04 08:00:26,891[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout **'
+    [1;32m2021-04-04 08:00:26,891[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout ******'
+    [1;32m2021-04-04 08:00:26,892[0m - [1;34mPySpice.Spice.NgSpice.Shared.NgSpiceShared._get_version[0m - [1;31mDEBUG[0m - Ngspice version 32 with extensions: CIDER, XSPICE
+    [1;32m2021-04-04 08:00:26,892[0m - [1;34mPySpice.Spice.NgSpice.Shared.NgSpiceShared.exec_command[0m - [1;31mDEBUG[0m - Execute command: set nomoremode
+    [1;32m2021-04-04 08:00:26,894[0m - [1;34mPySpice.Spice.NgSpice.Simulation.NgSpiceSharedCircuitSimulator._run[0m - [1;31mDEBUG[0m - desk
     .title differential pair
     .include /github/workspace/lib/spice/transistor/BC547.mod
     V1 +15V 0 DC 15
@@ -421,8 +427,8 @@ c(t) = A \sin(2 \pi f_c t)\,
     .tran 1us 20ms 0ms
     .end
     
-    [1;32m2021-03-29 15:57:51,021[0m - [1;34mPySpice.Spice.NgSpice.Shared.NgSpiceShared.exec_command[0m - [1;31mDEBUG[0m - Execute command: destroy all
-    [1;32m2021-03-29 15:57:51,024[0m - [1;34mPySpice.Spice.NgSpice.Shared.NgSpiceShared.load_circuit[0m - [1;31mDEBUG[0m - ngSpice_Circ
+    [1;32m2021-04-04 08:00:26,899[0m - [1;34mPySpice.Spice.NgSpice.Shared.NgSpiceShared.exec_command[0m - [1;31mDEBUG[0m - Execute command: destroy all
+    [1;32m2021-04-04 08:00:26,901[0m - [1;34mPySpice.Spice.NgSpice.Shared.NgSpiceShared.load_circuit[0m - [1;31mDEBUG[0m - ngSpice_Circ
     .title differential pair
     .include /github/workspace/lib/spice/transistor/BC547.mod
     V1 +15V 0 DC 15
@@ -442,36 +448,36 @@ c(t) = A \sin(2 \pi f_c t)\,
     .tran 1us 20ms 0ms
     .end
     
-    [1;32m2021-03-29 15:57:51,030[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout Circuit: differential pair'
-    [1;32m2021-03-29 15:57:51,032[0m - [1;34mPySpice.Spice.NgSpice.Shared.NgSpiceShared.exec_command[0m - [1;31mDEBUG[0m - Execute command: run
-    [1;32m2021-03-29 15:57:51,033[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout Doing analysis at TEMP = 25.000000 and TNOM = 25.000000'
-    [1;32m2021-03-29 15:57:51,034[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout Initial Transient Solution'
-    [1;32m2021-03-29 15:57:51,035[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout --------------------------'
-    [1;32m2021-03-29 15:57:51,037[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout Node                                   Voltage'
-    [1;32m2021-03-29 15:57:51,038[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout ----                                   -------'
-    [1;32m2021-03-29 15:57:51,039[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout +15v                                        15'
-    [1;32m2021-03-29 15:57:51,040[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout -15v                                       -15'
-    [1;32m2021-03-29 15:57:51,041[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout in_a                                         0'
-    [1;32m2021-03-29 15:57:51,043[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout in_b                                         0'
-    [1;32m2021-03-29 15:57:51,043[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout out_a                                  14.9632'
-    [1;32m2021-03-29 15:57:51,045[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout r3_in                                -0.472726'
-    [1;32m2021-03-29 15:57:51,046[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout out_b                                  14.9632'
-    [1;32m2021-03-29 15:57:51,050[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout r3_out                               -0.635594'
-    [1;32m2021-03-29 15:57:51,052[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout v4#branch                         -3.62234e-06'
-    [1;32m2021-03-29 15:57:51,053[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout v3#branch                         -1.72549e-08'
-    [1;32m2021-03-29 15:57:51,054[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout v2#branch                          0.000957627'
-    [1;32m2021-03-29 15:57:51,055[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout v1#branch                         -4.90089e-06'
-    [1;32m2021-03-29 15:57:51,057[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b' Reference value :  0.00000e+00\r'
-    [1;32m2021-03-29 15:57:51,305[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b' Reference value :  1.92173e-02\r'
-    [1;32m2021-03-29 15:57:51,316[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout No. of Data Rows : 20008'
-    [1;32m2021-03-29 15:57:51,317[0m - [1;34mPySpice.Spice.NgSpice.Shared.NgSpiceShared.run[0m - [1;31mDEBUG[0m - Simulation is done
-    [1;32m2021-03-29 15:57:51,317[0m - [1;34mPySpice.Spice.NgSpice.Simulation.NgSpiceSharedCircuitSimulator._run[0m - [1;31mDEBUG[0m - ['tran1', 'const']
+    [1;32m2021-04-04 08:00:26,907[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout Circuit: differential pair'
+    [1;32m2021-04-04 08:00:26,908[0m - [1;34mPySpice.Spice.NgSpice.Shared.NgSpiceShared.exec_command[0m - [1;31mDEBUG[0m - Execute command: run
+    [1;32m2021-04-04 08:00:26,910[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout Doing analysis at TEMP = 25.000000 and TNOM = 25.000000'
+    [1;32m2021-04-04 08:00:26,911[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout Initial Transient Solution'
+    [1;32m2021-04-04 08:00:26,912[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout --------------------------'
+    [1;32m2021-04-04 08:00:26,914[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout Node                                   Voltage'
+    [1;32m2021-04-04 08:00:26,915[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout ----                                   -------'
+    [1;32m2021-04-04 08:00:26,915[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout +15v                                        15'
+    [1;32m2021-04-04 08:00:26,917[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout -15v                                       -15'
+    [1;32m2021-04-04 08:00:26,917[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout in_a                                         0'
+    [1;32m2021-04-04 08:00:26,919[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout in_b                                         0'
+    [1;32m2021-04-04 08:00:26,921[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout out_a                                  14.9632'
+    [1;32m2021-04-04 08:00:26,923[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout r3_in                                -0.472726'
+    [1;32m2021-04-04 08:00:26,924[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout out_b                                  14.9632'
+    [1;32m2021-04-04 08:00:26,924[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout r3_out                               -0.635594'
+    [1;32m2021-04-04 08:00:26,926[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout v4#branch                         -3.62234e-06'
+    [1;32m2021-04-04 08:00:26,927[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout v3#branch                         -1.72549e-08'
+    [1;32m2021-04-04 08:00:26,927[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout v2#branch                          0.000957627'
+    [1;32m2021-04-04 08:00:26,928[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout v1#branch                         -4.90089e-06'
+    [1;32m2021-04-04 08:00:26,932[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b' Reference value :  0.00000e+00\r'
+    [1;32m2021-04-04 08:00:27,180[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b' Reference value :  1.91583e-02\r'
+    [1;32m2021-04-04 08:00:27,192[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout No. of Data Rows : 20008'
+    [1;32m2021-04-04 08:00:27,193[0m - [1;34mPySpice.Spice.NgSpice.Shared.NgSpiceShared.run[0m - [1;31mDEBUG[0m - Simulation is done
+    [1;32m2021-04-04 08:00:27,193[0m - [1;34mPySpice.Spice.NgSpice.Simulation.NgSpiceSharedCircuitSimulator._run[0m - [1;31mDEBUG[0m - ['tran1', 'const']
 
 -->
 
 <!-- 
-    [1;32m2021-03-29 15:57:51,349[0m - [1;34mPySpice.Probe.WaveForm.WaveForm.__array_ufunc__[0m - [1;31mDEBUG[0m - Conversion for <ufunc 'true_divide'> is NEW_UNIT
-    [1;32m2021-03-29 15:57:51,353[0m - [1;34mPySpice.Probe.WaveForm.WaveForm.__array_ufunc__[0m - [1;31mDEBUG[0m - Conversion for <ufunc 'subtract'> is UNIT_MATCH
+    [1;32m2021-04-04 08:00:27,224[0m - [1;34mPySpice.Probe.WaveForm.WaveForm.__array_ufunc__[0m - [1;31mDEBUG[0m - Conversion for <ufunc 'true_divide'> is NEW_UNIT
+    [1;32m2021-04-04 08:00:27,227[0m - [1;34mPySpice.Probe.WaveForm.WaveForm.__array_ufunc__[0m - [1;31mDEBUG[0m - Conversion for <ufunc 'subtract'> is UNIT_MATCH
 
 -->
 
@@ -511,7 +517,7 @@ c(t) = A \sin(2 \pi f_c t)\,
 </div>
 
 <!-- 
-    [1;32m2021-03-29 15:57:52,609[0m - [1;34mPySpice.Spice.NgSpice.Simulation.NgSpiceSharedCircuitSimulator._run[0m - [1;31mDEBUG[0m - desk
+    [1;32m2021-04-04 08:00:28,431[0m - [1;34mPySpice.Spice.NgSpice.Simulation.NgSpiceSharedCircuitSimulator._run[0m - [1;31mDEBUG[0m - desk
     .title gilbert cell
     .include /github/workspace/lib/spice/transistor/BC547.mod
     V1 +15V 0 DC 15
@@ -537,8 +543,8 @@ c(t) = A \sin(2 \pi f_c t)\,
     .tran 1us 20ms 0ms
     .end
     
-    [1;32m2021-03-29 15:57:52,610[0m - [1;34mPySpice.Spice.NgSpice.Shared.NgSpiceShared.exec_command[0m - [1;31mDEBUG[0m - Execute command: destroy all
-    [1;32m2021-03-29 15:57:52,611[0m - [1;34mPySpice.Spice.NgSpice.Shared.NgSpiceShared.load_circuit[0m - [1;31mDEBUG[0m - ngSpice_Circ
+    [1;32m2021-04-04 08:00:28,431[0m - [1;34mPySpice.Spice.NgSpice.Shared.NgSpiceShared.exec_command[0m - [1;31mDEBUG[0m - Execute command: destroy all
+    [1;32m2021-04-04 08:00:28,433[0m - [1;34mPySpice.Spice.NgSpice.Shared.NgSpiceShared.load_circuit[0m - [1;31mDEBUG[0m - ngSpice_Circ
     .title gilbert cell
     .include /github/workspace/lib/spice/transistor/BC547.mod
     V1 +15V 0 DC 15
@@ -564,41 +570,41 @@ c(t) = A \sin(2 \pi f_c t)\,
     .tran 1us 20ms 0ms
     .end
     
-    [1;32m2021-03-29 15:57:52,612[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout Circuit: gilbert cell'
-    [1;32m2021-03-29 15:57:52,614[0m - [1;34mPySpice.Spice.NgSpice.Shared.NgSpiceShared.exec_command[0m - [1;31mDEBUG[0m - Execute command: run
-    [1;32m2021-03-29 15:57:52,614[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout Doing analysis at TEMP = 25.000000 and TNOM = 25.000000'
-    [1;32m2021-03-29 15:57:52,620[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout Initial Transient Solution'
-    [1;32m2021-03-29 15:57:52,621[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout --------------------------'
-    [1;32m2021-03-29 15:57:52,622[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout Node                                   Voltage'
-    [1;32m2021-03-29 15:57:52,622[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout ----                                   -------'
-    [1;32m2021-03-29 15:57:52,623[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout +15v                                        15'
-    [1;32m2021-03-29 15:57:52,624[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout -15v                                       -15'
-    [1;32m2021-03-29 15:57:52,625[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout in_x                                         0'
-    [1;32m2021-03-29 15:57:52,625[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout in_y                                         0'
-    [1;32m2021-03-29 15:57:52,626[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout vbias                                     -7.5'
-    [1;32m2021-03-29 15:57:52,632[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout out_a                                  11.6261'
-    [1;32m2021-03-29 15:57:52,632[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout out_b                                  11.6261'
-    [1;32m2021-03-29 15:57:52,633[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout r3_in                                 -8.21224'
-    [1;32m2021-03-29 15:57:52,633[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout r4_out                                -7.53114'
-    [1;32m2021-03-29 15:57:52,634[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout r5_out                                -7.53114'
-    [1;32m2021-03-29 15:57:52,636[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout emitter_left                         -0.655766'
-    [1;32m2021-03-29 15:57:52,636[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout emitter_right                        -0.655766'
-    [1;32m2021-03-29 15:57:52,637[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout v5#branch                         -2.83079e-05'
-    [1;32m2021-03-29 15:57:52,638[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout v4#branch                         -1.35339e-05'
-    [1;32m2021-03-29 15:57:52,638[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout v3#branch                                    0'
-    [1;32m2021-03-29 15:57:52,639[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout v2#branch                           0.00942745'
-    [1;32m2021-03-29 15:57:52,640[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout v1#branch                          -0.00937207'
-    [1;32m2021-03-29 15:57:52,641[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b' Reference value :  0.00000e+00\r'
-    [1;32m2021-03-29 15:57:52,889[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b' Reference value :  1.37343e-02\r'
-    [1;32m2021-03-29 15:57:53,002[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout No. of Data Rows : 20008'
-    [1;32m2021-03-29 15:57:53,002[0m - [1;34mPySpice.Spice.NgSpice.Shared.NgSpiceShared.run[0m - [1;31mDEBUG[0m - Simulation is done
-    [1;32m2021-03-29 15:57:53,003[0m - [1;34mPySpice.Spice.NgSpice.Simulation.NgSpiceSharedCircuitSimulator._run[0m - [1;31mDEBUG[0m - ['tran1', 'const']
+    [1;32m2021-04-04 08:00:28,434[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout Circuit: gilbert cell'
+    [1;32m2021-04-04 08:00:28,436[0m - [1;34mPySpice.Spice.NgSpice.Shared.NgSpiceShared.exec_command[0m - [1;31mDEBUG[0m - Execute command: run
+    [1;32m2021-04-04 08:00:28,436[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout Doing analysis at TEMP = 25.000000 and TNOM = 25.000000'
+    [1;32m2021-04-04 08:00:28,437[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout Initial Transient Solution'
+    [1;32m2021-04-04 08:00:28,438[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout --------------------------'
+    [1;32m2021-04-04 08:00:28,442[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout Node                                   Voltage'
+    [1;32m2021-04-04 08:00:28,442[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout ----                                   -------'
+    [1;32m2021-04-04 08:00:28,443[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout +15v                                        15'
+    [1;32m2021-04-04 08:00:28,443[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout -15v                                       -15'
+    [1;32m2021-04-04 08:00:28,444[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout in_x                                         0'
+    [1;32m2021-04-04 08:00:28,445[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout in_y                                         0'
+    [1;32m2021-04-04 08:00:28,445[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout vbias                                     -7.5'
+    [1;32m2021-04-04 08:00:28,447[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout out_a                                  11.6261'
+    [1;32m2021-04-04 08:00:28,448[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout out_b                                  11.6261'
+    [1;32m2021-04-04 08:00:28,449[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout r3_in                                 -8.21224'
+    [1;32m2021-04-04 08:00:28,449[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout r4_out                                -7.53114'
+    [1;32m2021-04-04 08:00:28,450[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout r5_out                                -7.53114'
+    [1;32m2021-04-04 08:00:28,450[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout emitter_left                         -0.655766'
+    [1;32m2021-04-04 08:00:28,451[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout emitter_right                        -0.655766'
+    [1;32m2021-04-04 08:00:28,451[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout v5#branch                         -2.83079e-05'
+    [1;32m2021-04-04 08:00:28,452[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout v4#branch                         -1.35339e-05'
+    [1;32m2021-04-04 08:00:28,457[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout v3#branch                                    0'
+    [1;32m2021-04-04 08:00:28,457[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout v2#branch                           0.00942745'
+    [1;32m2021-04-04 08:00:28,457[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout v1#branch                          -0.00937207'
+    [1;32m2021-04-04 08:00:28,458[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b' Reference value :  0.00000e+00\r'
+    [1;32m2021-04-04 08:00:28,706[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b' Reference value :  1.32583e-02\r'
+    [1;32m2021-04-04 08:00:28,834[0m - [1;34mPySpice.Spice.NgSpice.Shared._send_char[0m - [1;31mDEBUG[0m - b'stdout No. of Data Rows : 20008'
+    [1;32m2021-04-04 08:00:28,835[0m - [1;34mPySpice.Spice.NgSpice.Shared.NgSpiceShared.run[0m - [1;31mDEBUG[0m - Simulation is done
+    [1;32m2021-04-04 08:00:28,837[0m - [1;34mPySpice.Spice.NgSpice.Simulation.NgSpiceSharedCircuitSimulator._run[0m - [1;31mDEBUG[0m - ['tran1', 'const']
 
 -->
 
 <!-- 
-    [1;32m2021-03-29 15:57:53,036[0m - [1;34mPySpice.Probe.WaveForm.WaveForm.__array_ufunc__[0m - [1;31mDEBUG[0m - Conversion for <ufunc 'multiply'> is NEW_UNIT
-    [1;32m2021-03-29 15:57:53,039[0m - [1;34mPySpice.Probe.WaveForm.WaveForm.__array_ufunc__[0m - [1;31mDEBUG[0m - Conversion for <ufunc 'subtract'> is UNIT_MATCH
+    [1;32m2021-04-04 08:00:28,869[0m - [1;34mPySpice.Probe.WaveForm.WaveForm.__array_ufunc__[0m - [1;31mDEBUG[0m - Conversion for <ufunc 'multiply'> is NEW_UNIT
+    [1;32m2021-04-04 08:00:28,873[0m - [1;34mPySpice.Probe.WaveForm.WaveForm.__array_ufunc__[0m - [1;31mDEBUG[0m - Conversion for <ufunc 'subtract'> is UNIT_MATCH
 
 -->
 
