@@ -65,6 +65,7 @@ case "$@" in
     serve)
         cd $JEKYLL_DIR
         make
+        make deploy
         cd $WWW_DIR
         installdeps_bundler_local
         bundle exec jekyll serve --drafts --host=$(hostname -i | awk '{print $1}')
@@ -73,6 +74,7 @@ case "$@" in
     build)
         cd $JEKYLL_DIR
         make
+        make deploy
         cd $WWW_DIR
         installdeps_bundler_local
         bundle exec jekyll build --trace
