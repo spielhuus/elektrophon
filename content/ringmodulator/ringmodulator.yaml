@@ -7,7 +7,8 @@ category: article
 image: /assets/ringmodulator_files/dalek.png
 panel: /assets/ringmodulator_files/dalek.png
 hero_image: /assets/ringmodulator_files/dalek.png
-excerpt: in this article different amplitude modulation techniques are explored and the relation to voltage controlled amplifierts is explained.
-subtitle: Amplitude Modulation has its origin in electronic communication technology. It is used in radio transmission where an audio signal is modulated on a carrier signal. Amplitude Modulation is also used in synthesizers. When both signals in a VCA are in the audio range, the resulting audio signal has added timbre. Amplitude Modulation is also used in a Ring Modulator. Ring modulation adds frequencies to the audio signal which gives it a different characteristic. The resulting audio signal has some 'metallic' sound. The popular usage of Ring Modulation is the [Dalek](https://de.wikipedia.org/wiki/Die_Daleks) voice from the BBC series [Doctor Who](https://de.wikipedia.org/wiki/Doctor_Who). 
+hide_hero: true
+excerpt: in this article different amplitude modulation techniques are explored and the relation to voltage controlled amplifiers is explained.
+subtitle: The Dalek Voice from Dr.Who is the result of ringmodulation. What is ringmodulation and what is the difference to amplitude modulation?
 show_sidebar: false
 ---

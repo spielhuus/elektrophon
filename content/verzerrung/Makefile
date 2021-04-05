@@ -17,6 +17,8 @@ JUPITERFLAGS = nbconvert --ExecutePreprocessor.timeout=600 --execute --to markdo
 
 all: $(DOCS)
 
+deploy: $(OUTPUT)/$(DEST)
+
 $(DOCS): $(OUTPUT)/$(DEST)
 #	$(MAKE) -C $(Overdrive250)
 #	$(MAKE) -C $(ShinEy)

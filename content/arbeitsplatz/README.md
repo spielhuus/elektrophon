@@ -2,4 +2,4 @@
 
 ## arbeitsplatz
 
-install and setup of required software to develop modules.
+Install and setup of the required software to develop modules.

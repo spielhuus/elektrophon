@@ -1,19 +1,12 @@
 PROJECT = adsr
 DATE = 2020-12-10
 PCB_PROJECTS = main panel
+TARGET = _posts
 
 JUPYTER = jupyter
 OUTPUT =  ../../www
 SRC = $(PROJECT).ipynb
 FRONT_MATTER = $(PROJECT).yaml
-DOCS = docs
-
-PCB_FILES = $(foreach prj, $(PCB_PROJECTS), $(prj)/$(prj).kicad_pcb $(prj)/$(prj).sch )
-KIBOT_FILES = $(foreach prj, $(PCB_PROJECTS), build/kibot/$(prj)/$(prj)-bom.csv build/kibot/$(prj)/$(prj)-schematic.pdf build/kibot/$(prj)/$(prj)-pcb.pdf )
-KIBOT_REPORT = build/kibot_dat.json
-KIBOT_REPORT_TARGET = $(OUTPUT)/_data/$(PROJECT)_kibot_data.json
-PCB_TARGETS = $(foreach prj, $(PCB_PROJECTS), $(OUTPUT)/assets/$(PROJECT)_files/$(prj)-bom.csv $(OUTPUT)/assets/$(PROJECT)_files/$(prj)-schematic.pdf $(OUTPUT)/assets/$(PROJECT)_files/$(prj)/$(prj)-pcb.pdf )
-PCB_BOM_TARGETS = $(foreach prj, $(PCB_PROJECTS), $(OUTPUT)/_data/$(PROJECT)-$(prj)-bom.csv )
 
 JUPITERFLAGS = nbconvert --ExecutePreprocessor.timeout=600 --execute --to markdown \
                --no-input --log-level=CRITICAL --ExecutePreprocessor.kernel_name=python3 \
@@ -21,59 +14,88 @@ JUPITERFLAGS = nbconvert --ExecutePreprocessor.timeout=600 --execute --to markdo
 			   --TemplateExporter.extra_template_basedirs=../../lib/templates \
 			   --template=elektrophon
 
-ARTICLE_TARGETS = $(OUTPUT)/_posts/$(DATE)-$(PROJECT).md
+ARTICLE_TARGETS = $(OUTPUT)/$(TARGET)/$(DATE)-$(PROJECT).md
 DEST = build/$(PROJECT).md
-CIRCUITS = $(shell find . -iname '*.cir' | sed 's/ /\\ /g')
+DEST_IMAGES = $(notdir $(wildcard build/$(PROJECT)_files/*.svg))
 IMAGES = $(wildcard *.svg) $(wildcard *.jpg) $(wildcard *.png)
 IMAGE_TARGETS = $(addprefix $(OUTPUT)/assets/$(PROJECT)_files/,$(IMAGES))
 
-all: $(DOCS) deploy
+PCB_FILES = $(foreach prj, $(PCB_PROJECTS), $(prj)/$(prj).kicad_pcb $(prj)/$(prj).sch)
+KIBOT_BOM = $(foreach prj, $(PCB_PROJECTS), build/kibot/$(prj)/$(prj).csv)
+KIBOT_SCHEMATIC = $(foreach prj, $(PCB_PROJECTS), build/kibot/$(prj)/$(prj)-schematic.pdf)
+KIBOT_REPORTS = $(foreach prj, $(PCB_PROJECTS), build/kibot/$(prj)/$(prj)-erc.txt build/kibot/$(prj)/$(prj)-drc.txt)
+KIBOT_GERBERS = $(foreach prj, $(PCB_PROJECTS), build/kibot/$(prj)/$(prj)-gerber_files.zip)
+KIBOT_PCBS = $(foreach prj, $(PCB_PROJECTS), build/kibot/$(prj)/$(prj)-pcb.pdf)
+KIBOT_DRAWING = $(foreach prj, $(PCB_PROJECTS), build/kibot/$(prj)/$(prj)-top.svg)
+KIBOT_REPORT = build/kibot_dat.json
+CIRCUITS = $(shell find . -iname '*.cir' | sed 's/ /\\ /g')
 
-deploy: $(DOCS) 
+DEST_REPORT = $(OUTPUT)/_data/$(PROJECT)_kibot_data.json
+DEST_BOM = $(foreach prj, $(PCB_PROJECTS), $(OUTPUT)/_data/$(PROJECT)-$(prj)-bom.csv)
+DEST_GERBERS = $(foreach prj, $(PCB_PROJECTS), $(OUTPUT)/assets/$(PROJECT)_files/$(prj)-gerber_files.zip)
+DEST_PCBS = $(foreach prj, $(PCB_PROJECTS), $(OUTPUT)/assets/$(PROJECT)_files/$(prj)-pcb.pdf)
+DEST_SCHEMATIC = $(foreach prj, $(PCB_PROJECTS), $(OUTPUT)/assets/$(PROJECT)_files/$(prj)-main-schematic.pdf)
+DEST_DRAWING = $(foreach prj, $(PCB_PROJECTS), $(OUTPUT)/assets/$(PROJECT)_files/$(prj)-top.svg)
+
+all: $(KIBOT_REPORT) $(KIBOT_PCBS) $(KIBOT_GERBERS) $(KIBOT_BOM) $(KIBOT_SCHEMATIC) $(KIBOT_DRAWING) $(DEST)
+deploy: $(IMAGE_TARGETS) $(ARTICLE_TARGETS) $(addprefix $(OUTPUT)/assets/$(PROJECT)_files/,$(DEST_IMAGES)) $(DEST_REPORT) $(DEST_GERBERS) $(DEST_PCBS) $(DEST_SCHEMATIC) $(DEST_BOM) $(DEST_DRAWING)
+
+$(DEST_REPORT):
+	cp $(KIBOT_REPORT) $(DEST_REPORT)
+
+$(DEST_GERBERS):
+	cp $(KIBOT_GERBERS) $(OUTPUT)/assets/$(PROJECT)_files/
+
+$(DEST_PCBS):
+	cp $(KIBOT_PCBS) $(OUTPUT)/assets/$(PROJECT)_files/
+
+$(DEST_SCHEMATIC):
+	cp $(KIBOT_SCHEMATIC) $(OUTPUT)/assets/$(PROJECT)_files/
+
+$(DEST_BOM):
+	$(foreach prj, $(PCB_PROJECTS), \
+		cp build/kibot/$(prj)/$(prj)-bom.csv $(OUTPUT)/_data/$(PROJECT)-$(prj)-bom.csv; )
+
+$(DEST_DRAWING):
+	cp $(KIBOT_DRAWING) $(OUTPUT)/assets/$(PROJECT)_files/
+
+$(IMAGE_TARGETS) : $(IMAGES)
 	mkdir -p $(OUTPUT)/assets/$(PROJECT)_files/
-
-	#copy the jupyter project files
-	if [ -d "build/$(PROJECT)_files" ]; then \
-	cp build/$(PROJECT)_files/* $(OUTPUT)/assets/$(PROJECT)_files/; \
-	fi
-
-	#copy images
 	$(foreach img, $(IMAGES), \
-	convert $(img) -resize 800 $(addprefix $(OUTPUT)/assets/$(PROJECT)_files/,$(img)) &&\
-	convert $(img) -resize 200 $(addprefix $(OUTPUT)/assets/$(PROJECT)_files/tmb_,$(img)) ;)
+	cp $(img) $(addprefix $(OUTPUT)/assets/$(PROJECT)_files/,$(img)) ;)
 
-	$(foreach prj, $(PCB_PROJECTS), \
-		cp build/kibot/$(prj)/$(prj)-schematic.pdf $(OUTPUT)/assets/$(PROJECT)_files/$(prj)-schematic.pdf &&\
-		cp build/kibot/$(prj)/$(prj)-pcb.pdf $(OUTPUT)/assets/$(PROJECT)_files/$(prj)-pcb.pdf ;)
-	mkdir -p $(OUTPUT)/_data
-	$(foreach prj, $(PCB_PROJECTS), \
-		cp build/kibot/$(prj)/$(prj)-bom.csv $(OUTPUT)/_data/$(PROJECT)-$(prj)-bom.csv;)
-	cp $(KIBOT_REPORT) $(KIBOT_REPORT_TARGET)
+$(ARTICLE_TARGETS) : $(FRONT_MATTER) $(DEST) 
+	mkdir -p $(OUTPUT)/assets/$(PROJECT)_files/
 	cp $(FRONT_MATTER) $(ARTICLE_TARGETS)
 	echo "\n\n" >> $(ARTICLE_TARGETS)
 	cat $(DEST) >> $(ARTICLE_TARGETS)
 
-clean: 
-	rm -rf build
-	rm -rf $(OUTPUT)/assets/$(PROJECT)_files/
-	rm -f $(PCB_BOM_TARGETS)
-	rm -f $(KIBOT_REPORT_TARGET)
-	rm -f $(ARTICLE_TARGETS)
-	$(foreach prj, $(PCB_PROJECTS), \
-		rm -f $(prj)/$(prj).xml;)
-
-$(DOCS): $(KIBOT_REPORT) $(DEST)
+$(addprefix $(OUTPUT)/assets/$(PROJECT)_files/,$(DEST_IMAGES)) :
+	if [ -d "build/$(PROJECT)_files" ]; then \
+		cp build/$(PROJECT)_files/* $(OUTPUT)/assets/$(PROJECT)_files/; \
+	fi
 
 $(DEST): $(CIRCUITS) $(SRC)
 	$(JUPYTER) $(JUPITERFLAGS) $(SRC)
 
 #run kibot and create data
-$(KIBOT_FILES): $(PCB_FILES)
+$(KIBOT_PCBS) $(KIBOT_GERBERS) $(KIBOT_BOM) $(KIBOT_REPORTS) $(KIBOT_SCHEMATIC) $(KIBOT_DRAWING) : $(PCB_FILES) 
 	$(foreach prj, $(PCB_PROJECTS), \
 		kibot -c ../../kibot.yaml -b $(prj)/$(prj).kicad_pcb \
 			-e $(prj)/$(prj).sch -d build/kibot/$(prj) && \
-		sed -r -i '1 s/ /_/g' build/kibot/$(prj)/$(prj)-bom.csv;)
+		sed -r -i '1 s/ /_/g' build/kibot/$(prj)/$(prj).csv;)
 
-$(KIBOT_REPORT): $(KIBOT_FILES)
+$(KIBOT_REPORT): $(KIBOT_REPORTS)
 	python3 ../../lib/python/kibot_parser/kibot_parser.py \
 		--kibot build/kibot/ --out $(KIBOT_REPORT) $(PCB_PROJECTS)
+
+clean: 
+	rm -rf build
+	rm -rf $(OUTPUT)/assets/$(PROJECT)_files/
+	rm -f $(ARTICLE_TARGETS)
+	rm -f $(IMAGE_TARGETS)
+	rm -f $(DEST_REPORT)
+	rm -f $(DEST_GERBERS)
+	rm -f $(DEST_SCHEMATIC)
+	echo $(DEST_BOM)
+	rm -f $(DEST_BOM)

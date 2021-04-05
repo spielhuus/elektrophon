@@ -11,6 +11,29 @@ toc: true
 image: /assets/summe_files/summe-logo.jpg
 panel: /assets/summe_files/summe-panel.jpg
 hero_image: /assets/summe_files/summe-logo.jpg
+hide_hero: true
 excerpt: audio and cv mixer that also can add offset or attenuvert a s
-show_sidebar: false
+callouts:
+  - title: schematics
+    subtitle: schematic files
+    icon: fas fa-file-download
+    files:
+      - href: /assets/resonanz_files/main-schematic.pdf
+        name: main
+  - title: PCB
+    subtitle: PCB files
+    icon: fas fa-code-branch
+    files:
+      - href: /assets/resonanz_files/main-pcb.pdf
+        name: main
+      - href: /assets/resonanz_files/panel-pcb.pdf
+        name: panel
+  - title: gerbers
+    subtitle: gerber files
+    icon: fas fa-industry
+    files:
+      - href: /assets/resonanz_files/main-gerber_files.zip
+        name: main
+      - href: /assets/resonanz_files/panel-gerber_files.zip
+        name: panel
 ---

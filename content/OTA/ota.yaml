@@ -1,0 +1,14 @@
+---
+layout: article
+title: Transkonduktanzverstärker
+project: ota
+author: spielhuus
+tags: elektronik
+category: article
+hero_image: /assets/cmos_files/ota.jpg
+hero_height: is-halfheight
+hero_darken: true
+excerpt: Getting started with lunetta synthesizer.
+subtitle: the simplest way of building synthesizer circuits is the lunetta style. A lunetta synthesizer is built with simple cmos chips. the first circuit to build is a schmitt trigger oscillator.
+show_sidebar: false
+---

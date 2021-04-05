@@ -1,0 +1,14 @@
+---
+layout: article
+title: 4069 oszillator
+project: 4069_oscillator
+author: spielhuus
+tags: elektronik
+category: article
+image: /assets/4069_oscillator_files/cd4069.jpg
+hero_image: /assets/4069_oscillator_files/hero.jpg
+hero_height: is-halfheight
+hero_darken: true
+excerpt: this is an article series about the CD4069UBE. in the first article the chip is 'missused' for linear amplification and the simulation is analyzed. it is importand that the chip is unbuffered (UBE), the buffered chip will do the inverse binary logic and can not be used for linear amplification.
+subtitle: the CD4069UB device consist of six CMOS inverter circuits. these devices are intended for all generalpurpose inverter applications where the mediumpower TTL-drive and logic-level-conversion. this device is not ideal for linear amplification, but can be used as such and will add a lot of soft-clipping. soft-clipping is expected from a valve. this makes this device special for musical usage and can be found in guitar distortion pedals [2] or the wasp filter [3]. in this article series i want to investigate this device and find out if new modules can be built with it.
+---

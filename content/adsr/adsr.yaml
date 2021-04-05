@@ -3,14 +3,36 @@ layout: module
 title: ADSR
 project: adsr
 author: spielhuus
-tags: fucntion
+tags: function
 category: module
 version: 0
 status: draft
 toc: true
 image: /assets/adsr_files/adsr-logo.jpg
-panel: /assets/adsr_files/adsr-logo.jpg
-hero_image: /assets/adsr_files/adsr-hero.jpg
-excerpt: the fastest ADSR of the universe. a fast and snappy ADSR built with the 555 timer chip.
-show_sidebar: false
+hero_image: /assets/adsr_files/adsr-logo.jpg
+excerpt: The Fastest Envelope in the West
+hide_hero: true
+callouts:
+  - title: schematics
+    subtitle: schematic files
+    icon: fas fa-file-download
+    files:
+      - href: /assets/resonanz_files/main-schematic.pdf
+        name: main
+  - title: PCB
+    subtitle: PCB files
+    icon: fas fa-code-branch
+    files:
+      - href: /assets/resonanz_files/main-pcb.pdf
+        name: main
+      - href: /assets/resonanz_files/panel-pcb.pdf
+        name: panel
+  - title: gerbers
+    subtitle: gerber files
+    icon: fas fa-industry
+    files:
+      - href: /assets/resonanz_files/main-gerber_files.zip
+        name: main
+      - href: /assets/resonanz_files/panel-gerber_files.zip
+        name: panel
 ---
