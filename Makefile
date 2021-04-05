@@ -1,6 +1,6 @@
-SUBDIRS = content drafts
+SUBDIRS = content
 
-all clean: $(SUBDIRS) FORCE
+all deploy clean: $(SUBDIRS) FORCE
 
 $(SUBDIRS): FORCE
 	mkdir -p www/_site
