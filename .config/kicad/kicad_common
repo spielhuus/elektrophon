@@ -1,3 +1,5 @@
+ShowEnvVarWarningDialog=0
+Editor=/bin/cat
 UseIconsInMenus=1
 IconScale=0
 MousewheelPAN=0
@@ -5,8 +7,7 @@ ZoomNoCenter=0
 AutoPAN=1
 OpenGLAntialiasingMode=0
 CairoAntialiasingMode=0
-WorkingDir=/github/workspace/drafts/arp
-ShowEnvVarWarningDialog=1
+WorkingDir=/github/workspace/content/summe
 [EnvironmentVariables]
 KICAD_SYMBOL_DIR=/usr/share/kicad/library
 KICAD_TEMPLATE_DIR=/usr/share/kicad/template

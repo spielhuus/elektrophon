@@ -93,16 +93,13 @@
 
 {% block data_latex %}
 <div class="section" markdown="1">
-<div class="container has-text-centered my-4" markdown="1">
-
+<div class="container has-text-centered my-4 is-size-3" markdown="1">
 {{ output.data['text/latex'] }}
-
 </div>
 </div>
 {% endblock data_latex %}
 
 {% block data_html scoped %}
-<p>html scoped</p>
 {{ output.data['text/html'] }}
 {% endblock data_html %}
 

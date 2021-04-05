@@ -9,8 +9,9 @@ preflight:
   ignore_unconnected: true
 
 outputs:
+
   - name: 'pdf_sch_print'
-    comment: 'Exports the PCB to the most common exhange format. Suitable for printing.'
+    comment: 'Exports the PCB to the most common exchange format. Suitable for printing.'
     type: 'pdf_sch_print'
 
   - name: 'pcbdraw_main'
@@ -24,13 +25,16 @@ outputs:
       # A short-cut to use for simple cases where a variant is an overkill
       #dnf_filter: ''
       # [number=300] [10,1200] dots per inch (resolution) of the generated image
-      dpi: 300
+      dpi: 600
       # [string='svg'] [svg,png,jpg] output format. Only used if no `output` is specified
       format: 'svg'
       # [list(string)=[]] list of components to highlight
       highlight: []
       # [list(string)=[]] list of libraries
-      libs: []
+      libs:
+        - default
+        - elektrophon
+        - other
       # [boolean=false] mirror the board
       mirror: false
       # [boolean=false] do not make holes transparent
@@ -47,7 +51,7 @@ outputs:
       # [string|dict] PCB style (colors). An internal name, the name of a JSON file or the style options
       style:
         # [string='#4ca06c'] color for the board without copper (covered by solder mask)
-        board: '#4ca06c'
+        board: '#f0f0f0'
         # [string='#9c6b28'] color for the PCB core (not covered by solder mask)
         clad: '#9c6b28'
         # [string='#417e5a'] color for the copper zones (covered by solder mask)
@@ -63,7 +67,7 @@ outputs:
         # [string='#b5ae30'] color for the exposed pads (metal finish)
         pads: '#b5ae30'
         # [string='#f0f0f0'] color for the silk screen
-        silk: '#f0f0f0'
+        silk: '#000000'
         # [string='#bf2600'] color for the V-CUTS
         vcut: '#bf2600'
       # [string=''] Board variant to apply
@@ -98,7 +102,7 @@ outputs:
       # [number=1.0] scale factor (0 means autoscaling)
       scaling: 1.0
       # [boolean=false] print layers in separated pages
-      separated: true
+      separated: false
       # [string=''] Board variant to apply
       variant: ''
     layers: 
@@ -110,131 +114,84 @@ outputs:
       - 'F.Mask'
 
   # BoM (Bill of Materials):
-  # Is compatible with KiBoM, but doesn't need to update the XML netlist because the components
-  # are loaded from the schematic.
-  # Important differences with KiBoM output:
-  # - All options are in the main `options` section, not in `conf` subsection.
-  # - The `Component` column is named `Row` and works just like any other column.
-  # This output is what you get from the 'Tools/Generate Bill of Materials' menu in eeschema.
   - name: 'bom'
     comment: 'Used to generate the BoM in CSV, HTML, TSV, TXT, XML or XLSX format using the internal BoM.'
     type: 'bom'
     #dir: 'Example/bom_dir'
     options:
-      # [list(dict)|list(string)] List of columns to display.
-      # Can be just the name of the field
-      #columns: [ 'Description','Part','References','Value','Quantity Per PCB','Datasheet']
-        # [string=''] Name of the field to use for this column
-#        field: 'ref'
-        # [list(string)|string=''] List of fields to join to this column
-#        join: ''
-        # [string=''] Name to display in the header. The field is used when empty
-#        name: 'ref'
-      # [list(list(string))] A series of values which are considered to be equivalent for the part name.
-      # Each entry is a list of equivalen names. Example: ['c', 'c_small', 'cap' ]
-      # will ensure the equivalent capacitor symbols can be grouped together.
-      # If empty the following aliases are used:
-      # - ['r', 'r_small', 'res', 'resistor']
-      # - ['l', 'l_small', 'inductor']
-      # - ['c', 'c_small', 'cap', 'capacitor']
-      # - ['sw', 'switch']
-      # - ['zener', 'zenersmall']
-      # - ['d', 'diode', 'd_small']
       component_aliases: [['r', 'r_small', 'res', 'resistor'], ['l', 'l_small', 'inductor'], ['c', 'c_small', 'cap', 'capacitor'], ['sw', 'switch'], ['zener', 'zenersmall'], ['d', 'diode', 'd_small']]
-      # [dict] Options for the CSV, TXT and TSV formats
       csv:
-        # [boolean=false] Hide project information
         hide_pcb_info: true
-        # [boolean=false] Hide statistics information
         hide_stats_info: true
-        # [boolean=false] Enclose all values using double quotes
         quote_all: false
-        # [string=','] CSV Separator. TXT and TSV always use tab as delimiter
         separator: ','
-      # [string|list(string)='_kibom_dnc'] Name of the filter to mark components as 'Do Not Change'.
-      # The default filter marks components with a DNC value or DNC in the Config field
-      dnc_filter: '_kibom_dnc'
-      # [string|list(string)='_kibom_dnf'] Name of the filter to mark components as 'Do Not Fit'.
-      # The default filter marks components with a DNF value or DNF in the Config field
-      dnf_filter: '_kibom_dnf'
-      # [string|list(string)='_mechanical'] Name of the filter to exclude components from BoM processing.
-      # The default filter excludes test points, fiducial marks, mounting holes, etc
+      # dnc_filter: '_kibom_dnc'
+      # dnf_filter: '_kibom_dnf'
       exclude_filter: '_mechanical'
-      # [string='Config'] Field name used for internal filters
       fit_field: 'Config'
-      # [string=''] [HTML,CSV,TXT,TSV,XML,XLSX] format for the BoM.
-      # If empty defaults to CSV or a guess according to the options.
       format: 'CSV'
-      # [boolean=true] Connectors with the same footprints will be grouped together, independent of the name of the connector
       group_connectors: true
-      # [list(string)] List of fields used for sorting individual components into groups.
-      # Components which match (comparing *all* fields) will be grouped together.
-      # Field names are case-insensitive.
-      # If empty: ['Part', 'Part Lib', 'Value', 'Footprint', 'Footprint Lib'] is used
       group_fields: ['part', 'part lib', 'value', 'footprint', 'footprint lib']
-      # [dict] Options for the HTML format
-      html:
-        # [boolean=true] Use colors to show the field type
-        col_colors: true
-        # [string=''] Column with links to the datasheet
-        datasheet_as_link: ''
-        # [string|list(string)=''] Column/s containing Digi-Key part numbers, will be linked to web page
-        digikey_link: ''
-        # [boolean=true] Generate a separated section for DNF (Do Not Fit) components
-        generate_dnf: true
-        # [boolean=false] Hide project information
-        hide_pcb_info: false
-        # [boolean=false] Hide statistics information
-        hide_stats_info: false
-        # [boolean=true] Use a color for empty cells. Applies only when `col_colors` is `true`
-        highlight_empty: true
-        # [string|boolean=''] PNG file to use as logo, use false to remove
-        logo: ''
-        # [string='modern-blue'] Page style. Internal styles: modern-blue, modern-green, modern-red and classic.
-        # Or you can provide a CSS file name. Please use .css as file extension.
-        style: 'modern-blue'
-        # [string='KiBot Bill of Materials'] BoM title
-        title: 'KiBot Bill of Materials'
-      # [boolean=true] Exclude DNF (Do Not Fit) components
-      ignore_dnf: true
-      # [boolean=true] Component groups with blank fields will be merged into the most compatible group, where possible
-      merge_blank_fields: true
-      # [boolean=false] When normalizing values use the locale decimal point
-      normalize_locale: false
-      # [boolean=false] Try to normalize the R, L and C values, producing uniform units and prefixes
-      normalize_values: false
-      # [number=1] Number of boards to build (components multiplier)
-      number: 1
-      # [string='%f-%i%v.%x'] filename for the output (%i=bom). Affected by global options
-      output: '%f-%i%v.%x'
-      # [string=' '] Separator used for the list of references
-      ref_separator: ' '
-      # [boolean=false] Print grouped references in the alternate compressed style eg: R1-R7,R18
-      use_alt: false
-      # [string=''] Board variant, used to determine which components
-      # are output to the BoM.
-      variant: ''
-      # [dict] Options for the XLSX format
-      xlsx:
-        # [boolean=true] Use colors to show the field type
-        col_colors: true
-        # [string=''] Column with links to the datasheet
-        datasheet_as_link: ''
-        # [string|list(string)=''] Column/s containing Digi-Key part numbers, will be linked to web page
-        digikey_link: ''
-        # [boolean=true] Generate a separated section for DNF (Do Not Fit) components
-        generate_dnf: true
-        # [boolean=false] Hide project information
-        hide_pcb_info: false
-        # [boolean=false] Hide statistics information
-        hide_stats_info: false
-        # [boolean=true] Use a color for empty cells. Applies only when `col_colors` is `true`
-        highlight_empty: true
-        # [string|boolean=''] PNG file to use as logo, use false to remove
-        logo: ''
-        # [number=60] [20,999] Maximum column width (characters)
-        max_col_width: 60
-        # [string='modern-blue'] Head style: modern-blue, modern-green, modern-red and classic.
-        style: 'modern-blue'
-        # [string='KiBot Bill of Materials'] BoM title
-        title: 'KiBot Bill of Materials'
+
+  # - name: excellon_drill
+  #   comment: "Excellon drill files"
+  #   type: excellon
+  #   dir: gerbers
+  #   options:
+  #     metric_units: true
+  #     pth_and_npth_single_file: false
+  #     use_aux_axis_as_origin: false
+  #     minimal_header: false
+  #     mirror_y_axis: false
+  #     report: '%f-%i.%x'
+  #     map: 'pdf'
+
+  - name: gerber_drills
+    comment: "Gerber drill files"
+    type: excellon
+    dir: gerbers
+    options:
+      use_aux_axis_as_origin: false
+      map: 'pdf'
+
+  - name: 'gerbers'
+    comment: "Gerbers for the Gerber god"
+    type: gerber
+    dir: gerbers
+    options:
+      # generic layer options
+      exclude_edge_layer: false
+      exclude_pads_from_silkscreen: false
+      use_aux_axis_as_origin: false
+      plot_sheet_reference: false
+      plot_footprint_refs: true
+      plot_footprint_values: true
+      force_plot_invisible_refs_vals: false
+      tent_vias: true
+
+      # gerber options
+      line_width: 0.15
+      subtract_mask_from_silk: true
+      use_protel_extensions: false
+      gerber_precision: 4.6
+      create_gerber_job_file: true
+      gerber_job_file: 'test-%f.%x'
+      use_gerber_x2_attributes: true
+      use_gerber_net_attributes: false
+      output: '%f_%i.%x'
+    layers:
+      - 'F.Cu'
+      - 'B.Cu'
+      - 'B.SilkS'
+      - 'F.SilkS'
+      - 'B.Mask'
+      - 'F.Mask'
+
+  - name: gerber_files
+    comment: Test rar compress
+    type: compress
+    options:
+      format: ZIP
+      files:
+        - from_output: gerbers
+        - from_output: gerber_drills
