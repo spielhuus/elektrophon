@@ -1,7 +1,3 @@
-
-
-
-
 <!DOCTYPE html>
 <html >
   <head>
@@ -13,8 +9,7 @@
            href="/elektrophon/favicon.png" 
     />
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.7.0/dist/alpine.min.js" defer></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/fontawesome.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/brands.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
     
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-social@1/bin/bulma-social.min.css">
     
@@ -36,12 +31,12 @@
 <meta property="twitter:image" content="https://spielhuus.github.io//elektrophon/assets/cmos_files/cd40106.jpg" />
 <meta property="twitter:title" content="cmos" />
 <script type="application/ld+json">
-{"url":"https://spielhuus.github.io//elektrophon/article/2020/12/06/cmos.html","@type":"BlogPosting","image":"https://spielhuus.github.io//elektrophon/assets/cmos_files/cd40106.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://spielhuus.github.io//elektrophon/article/2020/12/06/cmos.html"},"author":{"@type":"Person","name":"spielhuus"},"headline":"cmos","dateModified":"2020-12-06T00:00:00+00:00","datePublished":"2020-12-06T00:00:00+00:00","description":"Getting started with lunetta synthesizer.","@context":"https://schema.org"}</script>
+{"headline":"cmos","url":"https://spielhuus.github.io//elektrophon/article/2020/12/06/cmos.html","dateModified":"2020-12-06T00:00:00+00:00","datePublished":"2020-12-06T00:00:00+00:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://spielhuus.github.io//elektrophon/article/2020/12/06/cmos.html"},"image":"https://spielhuus.github.io//elektrophon/assets/cmos_files/cd40106.jpg","author":{"@type":"Person","name":"spielhuus"},"description":"Getting started with lunetta synthesizer.","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 </head>
   <body>
     
-        <section class="hero  is-halfheight  is-bold is-primary"  style="background: url('/elektrophon/assets/cmos_files/cd40106.jpg') no-repeat center center; background-size: cover;" >
+        <section class="hero  is-halfheight "  style="background: url('/elektrophon/assets/cmos_files/cd40106.jpg') no-repeat center center; background-size: cover; background-attachment: fixed;" >
     <div class="hero-head  hero-darken ">
         <nav class="navbar">
   <div class="container">
@@ -83,118 +78,25 @@
   </div>
 </nav>
     </div>
-
-    <div class="hero-body is-full  hero-darken ">
-        </div><br/>
-        
+    <div class="hero-body  hero-darken ">
+        <div class="content has-text-centered">
+            </div>
+            
+        </div>
     </div>
 </section>
     
-    
-
-    <section class="section">
-        <div class="container">
-            <div class="columns">
-                
-                <div class="column is-12">
-                    
-                    
-                    
-                    
-                    <div class="is-section">
-    <div class="container is-12">
-        <h1 class="title">cmos</h1>
-        <p class="is-size-4 has-text-centered is-italic">the simplest way of building synthesizer circuits is the lunetta style. A lunetta synthesizer is built with simple cmos chips. the first circuit to build is a schmitt trigger oscillator.</p>
-        <div class="container">
-            <!-- 
-    [1;32m2021-04-04 07:51:56,105[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM VCC_ABS_MAX = 20 
-    [1;32m2021-04-04 07:51:56,106[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM VCC_MAX = 18 
-    [1;32m2021-04-04 07:51:56,107[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM RA = 720000000 
-    [1;32m2021-04-04 07:51:56,109[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM RB = 720000000 
-    [1;32m2021-04-04 07:51:56,111[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM CA = 4.5e-12 
-    [1;32m2021-04-04 07:51:56,112[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM CB = 4.5e-12 
-    [1;32m2021-04-04 07:51:56,113[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM ROEZ = 2000 
-    [1;32m2021-04-04 07:51:56,113[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM COEZ = 3e-12 
-    [1;32m2021-04-04 07:51:56,114[0m - [1;34mPySpice.Spice.Parser.Element.read_words[0m - [1;31mWARNING[0m - Bad element line, looking for word 1/2:
-    SICC VCC GND VCC GND SW1 
-                             ^
-    [1;32m2021-04-04 07:51:56,115[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parse error on:
-    SICC VCC GND VCC GND SW1 
-    [1;32m2021-04-04 07:51:56,115[0m - [1;34mPySpice.Spice.Parser.Element.read_words[0m - [1;31mWARNING[0m - Bad element line, looking for word 1/2:
-    SIOFF OUTsw OUT VCC GND SW2 
-                                ^
-    [1;32m2021-04-04 07:51:56,116[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parse error on:
-    SIOFF OUTsw OUT VCC GND SW2 
-    [1;32m2021-04-04 07:51:56,117[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM STANDARD_INPUT_SELECT = 0 
-    [1;32m2021-04-04 07:51:56,117[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM SCHMITT_TRIGGER_INPUT_SELECT = 1 
-    [1;32m2021-04-04 07:51:56,118[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM MAXICC = 0.0009 
-    [1;32m2021-04-04 07:51:56,118[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM VT = .7 
-    [1;32m2021-04-04 07:51:56,119[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM VCC_MIN = 3 
-    [1;32m2021-04-04 07:51:56,120[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM AND  = 0 
-    [1;32m2021-04-04 07:51:56,120[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM NAND = 1 
-    [1;32m2021-04-04 07:51:56,121[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM OR   = 0 
-    [1;32m2021-04-04 07:51:56,122[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM NOR  = 0 
-    [1;32m2021-04-04 07:51:56,122[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM XOR  = 0 
-    [1;32m2021-04-04 07:51:56,123[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM XNOR = 0 
-    [1;32m2021-04-04 07:51:56,123[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM TPDELAY1 = 1N 
-    [1;32m2021-04-04 07:51:56,123[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM RS = 10K 
-    [1;32m2021-04-04 07:51:56,124[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM CS = {-TPDELAY1/(RS*LOG(0.5))} 
-    [1;32m2021-04-04 07:51:56,124[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM VCC1 = 1.65 
-    [1;32m2021-04-04 07:51:56,125[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM VCC2 = 2.3 
-    [1;32m2021-04-04 07:51:56,126[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM VCC3 = 3 
-    [1;32m2021-04-04 07:51:56,126[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM VCC4 = 3 
-    [1;32m2021-04-04 07:51:56,126[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM VCC5 = 4.5 
-    [1;32m2021-04-04 07:51:56,127[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM VOL1 = 0.45 
-    [1;32m2021-04-04 07:51:56,127[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM VOL2 = 0.3 
-    [1;32m2021-04-04 07:51:56,128[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM VOL3 = 0.4 
-    [1;32m2021-04-04 07:51:56,128[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM VOL4 = 0.55 
-    [1;32m2021-04-04 07:51:56,128[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM VOL5 = 0.55 
-    [1;32m2021-04-04 07:51:56,129[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM IOL1 = 0.004 
-    [1;32m2021-04-04 07:51:56,129[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM IOL2 = 0.008 
-    [1;32m2021-04-04 07:51:56,130[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM IOL3 = 0.016 
-    [1;32m2021-04-04 07:51:56,130[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM IOL4 = 0.024 
-    [1;32m2021-04-04 07:51:56,130[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM IOL5 = 0.032 
-    [1;32m2021-04-04 07:51:56,131[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM ROL1 = {(VOL1)/IOL1} 
-    [1;32m2021-04-04 07:51:56,131[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM ROL2 = {(VOL2)/IOL2} 
-    [1;32m2021-04-04 07:51:56,132[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM ROL3 = {(VOL3)/IOL3} 
-    [1;32m2021-04-04 07:51:56,132[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM ROL4 = {(VOL4)/IOL4} 
-    [1;32m2021-04-04 07:51:56,132[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM ROL5 = {(VOL5)/IOL5} 
-    [1;32m2021-04-04 07:51:56,133[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM VCC1 = 4.5 
-    [1;32m2021-04-04 07:51:56,133[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM VCC2 = 5 
-    [1;32m2021-04-04 07:51:56,134[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM VCC3 = 5.5 
-    [1;32m2021-04-04 07:51:56,134[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM VOH1 = 4.4 
-    [1;32m2021-04-04 07:51:56,134[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM VOH2 = 4.8 
-    [1;32m2021-04-04 07:51:56,135[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM VOH3 = 5.2 
-    [1;32m2021-04-04 07:51:56,135[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM VOL1 = 0.1 
-    [1;32m2021-04-04 07:51:56,136[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM VOL2 = 0.44 
-    [1;32m2021-04-04 07:51:56,136[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM VOL3 = 0.8 
-    [1;32m2021-04-04 07:51:56,137[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM IOH1 = 0.00005 
-    [1;32m2021-04-04 07:51:56,137[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM IOH2 = 0.024 
-    [1;32m2021-04-04 07:51:56,137[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM IOH3 = 0.05 
-    [1;32m2021-04-04 07:51:56,138[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM IOL1 = 0.00005 
-    [1;32m2021-04-04 07:51:56,138[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM IOL2 = 0.024 
-    [1;32m2021-04-04 07:51:56,138[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM IOL3 = 0.05 
-    [1;32m2021-04-04 07:51:56,139[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM ROH1 = {(VCC1 - VOH1)/IOH1} 
-    [1;32m2021-04-04 07:51:56,139[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM ROH2 = {(VCC2 - VOH2)/IOH2} 
-    [1;32m2021-04-04 07:51:56,140[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM ROH3 = {(VCC3 - VOH3)/IOH3} 
-    [1;32m2021-04-04 07:51:56,140[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM ROH4 = {(VCC4 - VOH4)/IOH4} 
-    [1;32m2021-04-04 07:51:56,140[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM ROH5 = {(VCC5 - VOH5)/IOH5} 
-    [1;32m2021-04-04 07:51:56,141[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM ROL1 = {(VOL1)/IOL1} 
-    [1;32m2021-04-04 07:51:56,141[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM ROL2 = {(VOL2)/IOL2} 
-    [1;32m2021-04-04 07:51:56,142[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM ROL3 = {(VOL3)/IOL3} 
-    [1;32m2021-04-04 07:51:56,142[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM ROL4 = {(VOL4)/IOL4} 
-    [1;32m2021-04-04 07:51:56,142[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM ROL5 = {(VOL5)/IOL5} 
-    [1;32m2021-04-04 07:51:56,143[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM ICC = 5e-09 
-    [1;32m2021-04-04 07:51:56,143[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM VCC_MAX = 18 
-    [1;32m2021-04-04 07:51:56,144[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM VCC_MIN = 3 
-
--->
+    <section class="hero is-halfheight is-black">
+    <div class="hero-body has-text-centered">
+        <div class="container is-size-5 has-text-weight-medium is-italic">
+            the simplest way of building synthesizer circuits is the lunetta style. A lunetta synthesizer is built with simple cmos chips. the first circuit to build is a schmitt trigger oscillator.
+        </div>
+    </div>
+</section>
 
 <!-- mk scoped -->
 <div class="container my-2">
-  <p>the CD4069UB device consist of six CMOS inverter circuits. these devices are intended for all generalpurpose inverter applications where the mediumpower TTL-drive and logic-level-conversion. this device is not ideal for linear amplification, but can be used as such and will add a lot of soft-clipping. soft-clipping is expected from a valve. this makes this device special for musical usage and can be found in guitar distortion pedals [<a href="http://www.runoffgroove.com/ubescreamer.html">2</a>] or the wasp filter [<a href="https://www.schmitzbits.de/wasp.html">3</a>]. in this article series i want to investigate this device and find out if new modules can be built with it.</p>
-
-  <p>the chip should be powered by +5V/GND. With higher voltage the heat dissipation will be to big and the chip will be damaged. the chip is powered on pin 7 and 14 with +5V and Ground. the other pins can be used as amplifier.</p>
+  <p class="mt-6">A schmitt-trigger is a comperator circuit with hysteris. a schmitt trigger produces a “digital’ output dependending on the input signal. The state is switched by two trigger points. when the signal is equal or bigger then the upper trigger point the output switches to high which is represented by the supply voltage. when the input voltage is equal or below the lower trigger point the output voltage goes to zero. this circuit is very useful if there is a unstable or noisy switch signal. the schmitt-trigger cam prodce a stable signal.</p>
 </div>
 
 <!-- execute result -->
@@ -209,14 +111,25 @@
 
 <!-- mk scoped -->
 <div class="container my-2">
+  <p>The CD40106 device consist of six CMOS inverting schmitt-trigger circuits. this device is typically used in luneta circuits as a VCO. There are very interesting drone synth built with this chip. It is also used a timers and low pass filter sources in various circuits, for example the cynare module from Ken Stone.</p>
 
+  <p>the chip can be powered with GND and any positive supply from 5V-15V. The output amplitude will change with the positive supply voltage. The trigger values are documented in the datasheet on page xxx. For this exmapes the device is powered with GND/+5V and the trigger points are 1.9V/2.9V.</p>
+
+</div>
+
+<div class="section">
+  <div class="container has-text-centered my-2">
+
+    <p><img src="/elektrophon/assets/cmos_files/cmos_4_0.svg" alt="svg" /></p>
+
+  </div>
 </div>
 
 <!-- mk scoped -->
 <div class="container my-2">
-  <h1 class="subtitle is-lowercase" id="voltage-follower">voltage follower</h1>
+  <h1 class="subtitle is-lowercase" id="oscillator">oscillator</h1>
 
-  <p>the simplest circuit to begin with is a voltage follower or buffer. the buffer confifuration looks similar to the opamp buffer. but there are some differences. the first important difference is that the feedback will also do the biasing of the input signal. when an ac signal is applied to the buffer the output will be a dc signal, as long as the chip is able to provide the needed biasing feedback. the gain can be calculated similar to the opamp configuration. but there will be less gain as we would excpect from the calculation.</p>
+  <p>To build an oscillator with the schmitt trigger we need a capacitor and a resistor. the capcitor is placed at the input pin and is charged through the resistor until the schmitt trigger threshold is reached. The the output of the Schmitt Trigger goes to zero and the capacitor is discharged until the lower threshold is reached. this creates a square wave at the output pin.</p>
 </div>
 
 <!-- execute result -->
@@ -224,39 +137,60 @@
 <div class="section">
   <div class="container has-text-centered my-2">
 
-    <p><img src="/elektrophon/assets/cmos_files/cmos_5_0.svg" alt="svg" /></p>
+    <p><img src="/elektrophon/assets/cmos_files/cmos_6_0.svg" alt="svg" /></p>
 
   </div>
 </div>
 
+<div class="section">
+  <div class="container has-text-centered my-2">
+
+    <p><img src="/elektrophon/assets/cmos_files/cmos_7_0.svg" alt="svg" /></p>
+
+  </div>
+</div>
+
+<div class="hero is-medium" style="background: url('/elektrophon/assets/cmos_files/breadboard.jpg') no-repeat center center; background-size: cover; background-attachment: fixed;">
+   <div class="hero-body">
+        <div class="content has-text-centered">
+        </div>
+    </div>
+</div>
+
 <!-- mk scoped -->
 <div class="container my-2">
-  <p>This is the first setup with the 4069 as voltage follower. C1 and C3 are the dc blocking capacitors. When we choose R1 and R2 as 100kOhm we would excpect a gain of one.</p>
+  <h1 class="subtitle is-lowercase" id="voltage-control">voltage control</h1>
+
 </div>
 
 <!-- execute result -->
 
-<!-- text scoped -->
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SubCircuitElement X1
-</code></pre></div></div>
-
 <div class="section">
   <div class="container has-text-centered my-2">
 
-    <p><img src="/elektrophon/assets/cmos_files/cmos_9_0.svg" alt="svg" /></p>
+    <p><img src="/elektrophon/assets/cmos_files/cmos_10_0.svg" alt="svg" /></p>
 
   </div>
 </div>
 
 <!-- mk scoped -->
 <div class="container my-2">
-  <p>The blue line is the input signal (5V p2p) and the red the output signal with 100kOhm resistors. The output is a little less then excpected. For the other signals the resistor R2 is replaced with 125kΩ, 150kΩ, 175kΩ and 200kΩ. With 150kΩ the gain is roughly one. We also see that the ouput is not symetrical. The clipping occures earlier for the negative part of the signal. With higher gain the signal is soft clipped.</p>
+  <h1 class="subtitle is-lowercase" id="ouput-buffer">ouput buffer</h1>
+
+  <p>of course we can just buffer the output with an opamp and adjust it to AC level. Ken Stone does a little bit more and at a first sight not so logical implemnetation of the output buffer.</p>
+
+</div>
+
+<!-- mk scoped -->
+<div class="container my-2">
+  <p>The first OPAMP is just an inverting amplifier/mixer. All the inputs are connected with a 470kOhm Reistor. The feedback is a potentiometer with 100kOhm. This gives the maximum gain of x. The second opamp is a simple voltage follower, just buffering the signal. The potentiometer and capacitor between the opamps is called glide. Lets see what that does.</p>
+
 </div>
 
 <div class="section">
   <div class="container has-text-centered my-2">
 
-    <p><img src="/elektrophon/assets/cmos_files/cmos_11_0.svg" alt="svg" /></p>
+    <p><img src="/elektrophon/assets/cmos_files/cmos_14_0.svg" alt="svg" /></p>
 
   </div>
 </div>
@@ -271,100 +205,76 @@
 
 </div>
 
-        </div>        
-    </div>
-</div>
 
-                </div>
-                
-            </div>
-        </div>
-    </section>
+<!-- div class="is-section">
+    <div class="container is-12">
+        <!-- h1 class="title">cmos</h1>
+        <p class="is-size-4 has-text-centered is-italic">the simplest way of building synthesizer circuits is the lunetta style. A lunetta synthesizer is built with simple cmos chips. the first circuit to build is a schmitt trigger oscillator.</p -->
+    <!-- /div>
+</div -->
+
     
-        <!--footer class="footer">
-    <div class="container">
-      <div class="content has-text-centered">
-        <div class="soc">
-          <a href="#"><i class="fa fa-github-alt fa-lg" aria-hidden="true"></i></a>
-          <a href="#"><i class="fa fa-youtube fa-lg" aria-hidden="true"></i></a>
-          <a href="#"><i class="fa fa-facebook fa-lg" aria-hidden="true"></i></a>
-          <a href="#"><i class="fa fa-twitter fa-lg" aria-hidden="true"></i></a>
-        </div>
-        <p>
-          <strong>Bulma</strong> by <a href="http://jgthms.com">Jeremy Thomas</a>.
-          The source code is licensed <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. <br>
-        </p>
+        <footer class="footer mt-6">
+  <div class="columns">
+    <div class="column is-one-third">
+      <div>
+        <h1 class="subtitle has-text-white is-10">elektrophon</h1>
       </div>
-    </div>
-  </footer -->
-
-<!-- footer class="footer">
-<data class="u-url" href="/elektrophon/"></data>
-<div class="content has-text-centered">
-    <div class="columns">
-    <div class="column is-half has-background-dark">
-        <p class="feed-subscribe">
-        <a href="/elektrophon/feed.xml">
-            <svg class="svg-icon orange">
-            <use xlink:href="/elektrophon/assets/minima-social-icons.svg#rss"></use>
-            </svg><span>Subscribe</span>
-        </a>
-        </p>
-        <ul class="contact-list">
-        <li class="p-name">spielhuus</li>
-        <li><a class="u-email" href="mailto:spielhus@gmail.com">spielhus@gmail.com</a></li>
+      
+      <div>
+        <ul>
+          
+          <li>
+            <a href="/elektrophon/article/" class="is-size-6 has-text-white">articles</a>
+          </li>
+          
+          <li>
+            <a href="/elektrophon/module/" class="is-size-6 has-text-white">modules</a>
+          </li>
+          
+          <li>
+            <a href="/elektrophon/about.html" class="is-size-6 has-text-white">about</a>
+          </li>
+          
         </ul>
+      </div>
+      
     </div>
-    <div class="column is-primary">
-        <p>analog and digital modules for an electroacustic instrument.
-</p>
-    </div>
-    </div>
-
-    <div class="column is-primary"><ul class="social-media-list"></ul></div>
-</div>
-</footer -->
-
-<hr>
-<footer class="footer">
-  <div class="container">
-    <div class="content has-text-centered">
-      <p>
-        <a style="font-size: 2em; color: darkgrey;" href="//github.com/spielhuus/elektrophon" target="_blank">
-          <i class="far envelope"></i>
+    <div class="column is-one-third">
+      <div class="content has-text-centered">
+        <a style="font-size: 2em; color: White;" href="/elektrophon/feed.xml" target="_blank">
+          <i class="fas fa-rss"></i>
         </a>
         &nbsp;
-        <a style="font-size: 2em; color: darkgrey;" href="//github.com/spielhuus/elektrophon" target="_blank">
+        <a style="font-size: 2em; color: White;" href="//github.com/spielhuus/elektrophon" target="_blank">
           <i class="fab fa-github grey"></i>
         </a>
         &nbsp;
-        <a style="font-size: 2em; color: darkgrey;" href="//twitter.com" target="_blank">
+        <a style="font-size: 2em; color: White;" href="//twitter.com" target="_blank">
           <i class="fab fa-twitter"></i>
         </a>
         &nbsp;
-        <a style="font-size: 2em; color: darkgrey;" href="//twitter.com" target="_blank">
+        <a style="font-size: 2em; color: White;" href="//twitter.com" target="_blank">
           <i class="fab fa-youtube"></i>
         </a>
-      </p>
-      <p>
-        <strong>elektrophon</strong><span>analog and digital modules for an electroacustic instrument.
-</span>
-        <ul class="contact-list">
-        <li class="p-name">spielhuus</li>
-        <li><a class="u-email" href="mailto:spielhus@gmail.com">spielhus@gmail.com</a></li>
-        </ul>
-
-        <a href="https://jgog.in" target="_blank">Jenil Gogari</a>.
-        <br> Based on
-        <a href="https://bulma.io" target="_blank" onclick="ga('send', 'event', 'footer', 'click', 'bulma');">Bulma</a>.
-        Icons from
-        <a href="https://fontawesome.com/" target="_blank"
-          onclick="ga('send', 'event', 'footer', 'click', 'font-awesome');">Font Awesome</a>. Web Fonts from
-        <a href="https://fonts.google.com/" target="_blank"
-          onclick="ga('send', 'event', 'footer', 'click', 'google');">Google</a>.
-        <br> The source code is licensed
-        <a href="https://opensource.org/licenses/mit-license.php" target="_blank">MIT</a>.
-      </p>
+      </div>
+      <p class="is-size-6 has-text-white has-text-centered">analog and digital modules for an electroacustic instrument.
+</p>
+    </div>
+    <div class="column is-one-third">
+      <div class="is-size-6 has-text-white has-text-right">
+        <a rel="license" href="https://creativecommons.org/licenses/by/4.0/"
+          title="Creative Commons Attribution 4.0 International license">
+          <i style="font-size: 2em; color: White;" class="fab fa-creative-commons"></i>
+          <i style="font-size: 2em; color: White;" class="fab fa-creative-commons-by"></i>
+        </a>
+      </div>
+      <div class="content is-size-7 has-text-white has-text-right mt-5">
+        <p>Except where otherwise <a href="https://creativecommons.org/policies#license">noted</a>,
+          content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/"
+            rel="license">Creative Commons Attribution 4.0
+            International license</a>.</p>
+      </div>
     </div>
   </div>
 </footer>

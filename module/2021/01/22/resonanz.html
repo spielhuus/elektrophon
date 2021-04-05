@@ -1,7 +1,3 @@
-
-
-
-
 <!DOCTYPE html>
 <html >
   <head>
@@ -13,8 +9,7 @@
            href="/elektrophon/favicon.png" 
     />
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.7.0/dist/alpine.min.js" defer></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/fontawesome.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/brands.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
     
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-social@1/bin/bulma-social.min.css">
     
@@ -24,8 +19,8 @@
 <meta property="og:title" content="resonanz" />
 <meta name="author" content="spielhuus" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="audio and cv mixer that also can add offset or attenuvert a s" />
-<meta property="og:description" content="audio and cv mixer that also can add offset or attenuvert a s" />
+<meta name="description" content="Resonanz is a fixed filter bank. This can be used to create artificial instruments or for simple percussions." />
+<meta property="og:description" content="Resonanz is a fixed filter bank. This can be used to create artificial instruments or for simple percussions." />
 <link rel="canonical" href="https://spielhuus.github.io//elektrophon/module/2021/01/22/resonanz.html" />
 <meta property="og:url" content="https://spielhuus.github.io//elektrophon/module/2021/01/22/resonanz.html" />
 <meta property="og:site_name" content="elektrophon" />
@@ -36,12 +31,13 @@
 <meta property="twitter:image" content="https://spielhuus.github.io//elektrophon/assets/resonanz_files/resonanz-logo.jpg" />
 <meta property="twitter:title" content="resonanz" />
 <script type="application/ld+json">
-{"url":"https://spielhuus.github.io//elektrophon/module/2021/01/22/resonanz.html","@type":"BlogPosting","image":"https://spielhuus.github.io//elektrophon/assets/resonanz_files/resonanz-logo.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://spielhuus.github.io//elektrophon/module/2021/01/22/resonanz.html"},"author":{"@type":"Person","name":"spielhuus"},"headline":"resonanz","dateModified":"2021-01-22T00:00:00+00:00","datePublished":"2021-01-22T00:00:00+00:00","description":"audio and cv mixer that also can add offset or attenuvert a s","@context":"https://schema.org"}</script>
+{"headline":"resonanz","url":"https://spielhuus.github.io//elektrophon/module/2021/01/22/resonanz.html","dateModified":"2021-01-22T00:00:00+00:00","datePublished":"2021-01-22T00:00:00+00:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://spielhuus.github.io//elektrophon/module/2021/01/22/resonanz.html"},"image":"https://spielhuus.github.io//elektrophon/assets/resonanz_files/resonanz-logo.jpg","author":{"@type":"Person","name":"spielhuus"},"description":"Resonanz is a fixed filter bank. This can be used to create artificial instruments or for simple percussions.","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 </head>
   <body>
     
-        <section class="hero  is-medium  is-bold is-primary"  style="background: url('/elektrophon/assets/resonanz_files/resonanz-hero.jpg') no-repeat center center; background-size: cover;" >
+    
+<section class="hero  is-fullheight "  style="background: url('/elektrophon/assets/resonanz_files/resonanz-hero.jpg') no-repeat center center; background-size: cover; background-attachment: fixed;" >
     <div class="hero-head ">
         <nav class="navbar">
   <div class="container">
@@ -83,26 +79,10 @@
   </div>
 </nav>
     </div>
-
-    <div class="hero-body is-full ">
-        </div><br/>
-        
-    </div>
-</section>
-    
-    
-
-    <section class="section">
-        <div class="container">
-            <div class="columns">
+    <div class="hero-body ">        
+        <div class="columns is-centered">
+            <div class="column is-two-thirds">
                 
-                <div class="column is-12">
-                    
-                    
-                    
-                    
-                    
-
  
 
 
@@ -110,13 +90,13 @@
 
 <div class="field is-grouped">
   <div class="control">
-    <div class="tags has-addons">
+    <div class="tags has-addons is-normal">
       <span class="tag is-dark">version</span>
       <span class="tag is-primary">0</span>
     </div>
   </div>
   <div class="control">
-    <div class="tags has-addons">
+    <div class="tags has-addons is-normal">
       <span class="tag is-dark">status</span>
       <span class="tag is-info">draft</span>
     </div>
@@ -124,7 +104,7 @@
 
   
   <div class="control">
-    <div class="tags has-addons">
+    <div class="tags has-addons is-normal">
       <span class="tag is-dark">drc</span>
       <span class="tag is-success">ok</span>
     </div>
@@ -133,7 +113,7 @@
 
   
   <div class="control">
-    <div class="tags has-addons">
+    <div class="tags has-addons is-normal">
       <span class="tag is-dark">erc</span>
       <span class="tag is-success">ok</span>
     </div>
@@ -142,7 +122,7 @@
 
   
   <div class="control">
-    <div class="tags has-addons">
+    <div class="tags has-addons is-normal">
       <span class="tag is-dark">unconnected</span>
       <span class="tag is-success">ok</span>
     </div>
@@ -150,47 +130,36 @@
   
 
     <div class="control">
-      <a class="tags has-addons" href="https://mybinder.org/v2/gh/spielhuus/elektrophon/HEAD?filepath=content%2Fresonanz_kibot_data%2Fresonanz_kibot_data.ipynb">
+      <a class="tags has-addons is-normal" href="https://mybinder.org/v2/gh/spielhuus/elektrophon/HEAD?filepath=content%2Fresonanz_kibot_data%2Fresonanz_kibot_data.ipynb">
         <span class="tag is-dark">launch</span>
         <span class="tag is-link">binder</span>
       </a>
     </div>
 
     <div class="control">
-      <a class="tags has-addons" href="https://github.com/spielhuus/elektrophon/tree/master/content/">
+      <a class="tags has-addons is-normal" href="https://github.com/spielhuus/elektrophon/tree/master/content/">
         <span class="tag is-dark"><i class="fab fa-github" aria-hidden="true"></i></span>
         <span class="tag is-link">github</span>
       </a>
     </div>
 </div>
 
-
-<div class="columns is-full">"
-    <div class="column is-three-quarters"">
-        <!-- h1 class="is-title is-size-1 is-lowercase is-italic is-bold">resonanz</h1 -->
-        <div class="section is-bold">audio and cv mixer that also can add offset or attenuvert a s</div>
-        <div class="section"><ul id="toc" class="section-nav">
-<li class="toc-entry toc-h2"><a href="#about">about</a></li>
-<li class="toc-entry toc-h2"><a href="#construction">construction</a>
-<ul>
-<li class="toc-entry toc-h3"><a href="#bom">bom</a></li>
-</ul>
-</li>
-<li class="toc-entry toc-h2"><a href="#calibration">calibration</a></li>
-<li class="toc-entry toc-h2"><a href="#usage">usage</a></li>
-<li class="toc-entry toc-h2"><a href="#references">references</a></li>
+                <h1 class="title has-text-white-ter">resonanz</h1>        
+                <p class="subtitlle has-text-white-ter">Resonanz is a fixed filter bank. This can be used to create artificial instruments or for simple percussions.</p>
+                <div class="has-text-white-ter"><ul id="toc" class="section-nav">
+<li class="toc-entry toc-h1"><a href="#about">about</a></li>
+<li class="toc-entry toc-h1"><a href="#construction">construction</a></li>
+<li class="toc-entry toc-h1"><a href="#bom">bom</a></li>
+<li class="toc-entry toc-h1"><a href="#calibration">calibration</a></li>
+<li class="toc-entry toc-h1"><a href="#usage">usage</a></li>
+<li class="toc-entry toc-h1"><a href="#references">references</a></li>
 </ul></div>
+            </div>
+        </div>
     </div>
-    <div class="column">
-        <figure class="image is-128x128">
-            <img src="/elektrophon/assets/resonanz_files/resonanz-panel.jpg">
-          </figure>
-    </div>
-</div>
+</section>
 
-<div clss="section">
-    <nav class="container">
-        <!-- 
+<!-- 
     ----------------------------------------------------------------------
     Ran 0 tests in 0.000s
     
@@ -200,14 +169,13 @@
 
 <!-- mk scoped -->
 <div class="container my-2">
-  <h2 class="is-subtitle is-size-2 is-lowercase is-italic" id="about">about</h2>
+  <p class="mt-6">long description: summe is a simple mixer utility module. it can be used as a <strong>mixer</strong>, <strong>attenuator</strong> or <strong>attenuverter</strong> for ac or dc signals. the function depends on the patching and settings of the potentiometers. an attenuverter is used in different modules like the  Serge VCS, Maths and also in the polivoks filter. while this module can be used as a simple mixer you can also adjust cv signals. such a signal can be simply attenuated or inverted. when feeding in a positive singal slope (for example from an adsr). the signal will be turned to a neagative dc singal. if the inpout signal is ac coupled the signal will be inverted. the function is the setting on the potentiometer of the channel. when the potentiometer is at center position. the output signal is attenuated to zero. no output singal is present. when turning to the right. the signal will be stronger until the output signal is equal to the input signal. when turning the potentiomenter to the left, the output signal will be phase shifted by 180°. when you turn the potentiometer to full left the output signal will be the inverted input signal. all the inputs are mixed to the output signal; unless you connect the output of a channel. then this output does not accure on the mixed signal.</p>
 
-  <p>long description: summe is a simple mixer utility module. it can be used as a <strong>mixer</strong>, <strong>attenuator</strong> or <strong>attenuverter</strong> for ac or dc signals. the function depends on the patching and settings of the potentiometers. an attenuverter is used in different modules like the  Serge VCS, Maths and also in the polivoks filter. while this module can be used as a simple mixer you can also adjust cv signals. such a signal can be simply attenuated or inverted. when feeding in a positive singal slope (for example from an adsr). the signal will be turned to a neagative dc singal. if the inpout signal is ac coupled the signal will be inverted. the function is the setting on the potentiometer of the channel. when the potentiometer is at center position. the output signal is attenuated to zero. no output singal is present. when turning to the right. the signal will be stronger until the output signal is equal to the input signal. when turning the potentiomenter to the left, the output signal will be phase shifted by 180°. when you turn the potentiometer to full left the output signal will be the inverted input signal. all the inputs are mixed to the output signal; unless you connect the output of a channel. then this output does not accure on the mixed signal.</p>
 </div>
 
 <!-- mk scoped -->
 <div class="container my-2">
-  <h2 class="is-subtitle is-size-2 is-lowercase is-italic" id="construction">construction</h2>
+  <h1 class="subtitle is-lowercase" id="about">about</h1>
 
   <p>the attenuverter is build around a differential amplifier with an opamp.</p>
 </div>
@@ -217,7 +185,7 @@
 <div class="section">
   <div class="container has-text-centered my-2">
 
-    <p><img src="/assets//elektrophon/assets/resonanz_files/resonanz_5_0.svg" alt="svg" /></p>
+    <p><img src="/elektrophon/assets/resonanz_files/resonanz_5_0.svg" alt="svg" /></p>
 
   </div>
 </div>
@@ -227,7 +195,7 @@
 <div class="section">
   <div class="container has-text-centered my-2">
 
-    <p><img src="/assets//elektrophon/assets/resonanz_files/resonanz_6_0.svg" alt="svg" /></p>
+    <p><img src="/elektrophon/assets/resonanz_files/resonanz_6_0.svg" alt="svg" /></p>
 
   </div>
 </div>
@@ -242,7 +210,7 @@ Vout = \Bigl(1 + \frac{R2}{R1}\Bigr) \Bigl(\frac{R4}{R3+R4}\Bigr) * V2 - \Bigl(\
 <div class="section">
   <div class="container has-text-centered my-2">
 
-    <p><img src="/assets//elektrophon/assets/resonanz_files/resonanz_8_0.svg" alt="svg" /></p>
+    <p><img src="/elektrophon/assets/resonanz_files/resonanz_8_0.svg" alt="svg" /></p>
 
   </div>
 </div>
@@ -259,7 +227,20 @@ Vout = \Bigl(1 + \frac{R2}{R1}\Bigr) \Bigl(\frac{R4}{R3+R4}\Bigr) * V2 - \Bigl(\
 
 <!-- mk scoped -->
 <div class="container my-2">
-  <h3 class="is-subtitle is-size-2 is-lowercase is-italic" id="bom">bom</h3>
+  <h1 class="subtitle is-lowercase" id="construction">construction</h1>
+
+</div>
+
+<div class="hero is-halfheight mb-4" style="background: url('/elektrophon/assets/resonanz_files/main-top.svg') no-repeat center center; background-size: cover; background-attachment: fixed;">
+   <div class="hero-body is-halfheight">
+        <div class="content">
+        </div>
+    </div>
+</div>
+
+<!-- mk scoped -->
+<div class="container my-2">
+  <h1 class="subtitle is-lowercase" id="bom">bom</h1>
 
   <p>main circuit</p>
 
@@ -276,7 +257,7 @@ Vout = \Bigl(1 + \frac{R2}{R1}\Bigr) \Bigl(\frac{R4}{R3+R4}\Bigr) * V2 - \Bigl(\
 <tbody>
     
     <tr>
-        <td> 6 </td>
+        <td>  </td>
         <td> C3 C4 C5 C6 C7 C8 </td>
         <td> 0.1u </td>
         <td>
@@ -287,7 +268,7 @@ Vout = \Bigl(1 + \frac{R2}{R1}\Bigr) \Bigl(\frac{R4}{R3+R4}\Bigr) * V2 - \Bigl(\
     </tr>
     
     <tr>
-        <td> 3 </td>
+        <td>  </td>
         <td> C1 C2 C9 </td>
         <td> 10u </td>
         <td>
@@ -298,7 +279,7 @@ Vout = \Bigl(1 + \frac{R2}{R1}\Bigr) \Bigl(\frac{R4}{R3+R4}\Bigr) * V2 - \Bigl(\
     </tr>
     
     <tr>
-        <td> 1 </td>
+        <td>  </td>
         <td> D1 </td>
         <td> LED </td>
         <td>
@@ -309,7 +290,7 @@ Vout = \Bigl(1 + \frac{R2}{R1}\Bigr) \Bigl(\frac{R4}{R3+R4}\Bigr) * V2 - \Bigl(\
     </tr>
     
     <tr>
-        <td> 1 </td>
+        <td>  </td>
         <td> J5 </td>
         <td> IDC Header </td>
         <td>
@@ -320,7 +301,7 @@ Vout = \Bigl(1 + \frac{R2}{R1}\Bigr) \Bigl(\frac{R4}{R3+R4}\Bigr) * V2 - \Bigl(\
     </tr>
     
     <tr>
-        <td> 9 </td>
+        <td>  </td>
         <td> J1 J2 J3 J4 J6 J7 J8 J9 J10 </td>
         <td> IN </td>
         <td>
@@ -331,7 +312,7 @@ Vout = \Bigl(1 + \frac{R2}{R1}\Bigr) \Bigl(\frac{R4}{R3+R4}\Bigr) * V2 - \Bigl(\
     </tr>
     
     <tr>
-        <td> 6 </td>
+        <td>  </td>
         <td> R17 R18 R19 R20 R28 R29 </td>
         <td> 1k </td>
         <td>
@@ -342,7 +323,7 @@ Vout = \Bigl(1 + \frac{R2}{R1}\Bigr) \Bigl(\frac{R4}{R3+R4}\Bigr) * V2 - \Bigl(\
     </tr>
     
     <tr>
-        <td> 8 </td>
+        <td>  </td>
         <td> R1 R2 R3 R4 R5 R6 R7 R8 </td>
         <td> 47k </td>
         <td>
@@ -353,7 +334,7 @@ Vout = \Bigl(1 + \frac{R2}{R1}\Bigr) \Bigl(\frac{R4}{R3+R4}\Bigr) * V2 - \Bigl(\
     </tr>
     
     <tr>
-        <td> 15 </td>
+        <td>  </td>
         <td> R9 R10 R11 R12 R13 R14 R15 R16 R21 R22 R23 R24 R25 R26 R27 </td>
         <td> 100k </td>
         <td>
@@ -364,7 +345,7 @@ Vout = \Bigl(1 + \frac{R2}{R1}\Bigr) \Bigl(\frac{R4}{R3+R4}\Bigr) * V2 - \Bigl(\
     </tr>
     
     <tr>
-        <td> 4 </td>
+        <td>  </td>
         <td> RV1 RV2 RV3 RV4 </td>
         <td> 100k </td>
         <td>
@@ -375,7 +356,7 @@ Vout = \Bigl(1 + \frac{R2}{R1}\Bigr) \Bigl(\frac{R4}{R3+R4}\Bigr) * V2 - \Bigl(\
     </tr>
     
     <tr>
-        <td> 3 </td>
+        <td>  </td>
         <td> U1 U2 U3 </td>
         <td> OPA2134 </td>
         <td>
@@ -394,255 +375,194 @@ Vout = \Bigl(1 + \frac{R2}{R1}\Bigr) \Bigl(\frac{R4}{R3+R4}\Bigr) * V2 - \Bigl(\
 
 <!-- mk scoped -->
 <div class="container my-2">
-  <p>project files:</p>
+  <section class="hero is-medium">
+    <div class="hero-body">
+        <div class="container">
+            <div class="columns is-multiline is-centered">
+                
+                    <div class="column is-4 has-text-centered">
+                        
+                        <div class="icon callout-icon">
+                            <i class="fas fa-file-download fa-4x"></i>
+                        </div>
+                        
+                        <p class="title is-5 mt-6">schematics</p>
+                        
+                        <a href="/elektrophon/assets/resonanz_files/main-schematic.pdf" class="button is-light">
+                            main
+                        </a>
+                        
+                        <a href="/elektrophon/assets/resonanz_files/mount-schematic.pdf" class="button is-light">
+                            mount
+                        </a>
+                        
+                    </div>
+                
+                    <div class="column is-4 has-text-centered">
+                        
+                        <div class="icon callout-icon">
+                            <i class="fas fa-code-branch fa-4x"></i>
+                        </div>
+                        
+                        <p class="title is-5 mt-6">PCB</p>
+                        
+                        <a href="/elektrophon/assets/resonanz_files/main-pcb.pdf" class="button is-light">
+                            main
+                        </a>
+                        
+                        <a href="/elektrophon/assets/resonanz_files/mount-pcb.pdf" class="button is-light">
+                            mount
+                        </a>
+                        
+                        <a href="/elektrophon/assets/resonanz_files/panel-pcb.pdf" class="button is-light">
+                            panel
+                        </a>
+                        
+                    </div>
+                
+                    <div class="column is-4 has-text-centered">
+                        
+                        <div class="icon callout-icon">
+                            <i class="fas fa-industry fa-4x"></i>
+                        </div>
+                        
+                        <p class="title is-5 mt-6">gerbers</p>
+                        
+                        <a href="/elektrophon/assets/resonanz_files/main-gerber_files.zip" class="button is-light">
+                            main
+                        </a>
+                        
+                        <a href="/elektrophon/assets/resonanz_files/mount-gerber_files.zip" class="button is-light">
+                            mount
+                        </a>
+                        
+                        <a href="/elektrophon/assets/resonanz_files/panel-gerber_files.zip" class="button is-light">
+                            panel
+                        </a>
+                        
+                    </div>
+                
+            </div>
+        </div>
+    </div>
+</section>
 
-  <ul>
-    <li><a href="/assets/summe_files/main-schematic.pdf">schematic pdf file</a></li>
-    <li><a href="/assets/summe_files/main-pcb.pdf">PCB pdf file</a></li>
-    <li><a href="/assets/summe_files/main-3D.step">3d file</a></li>
-  </ul>
 </div>
 
 <!-- mk scoped -->
 <div class="container my-2">
   <div>
     
-    <p>main</p>
-    
-    
-    
-    <p>
-        <div class="alert alert-success" role="alert">
-            drc check successfull.
-        </div>
-    </p>
-    
 
     
-    
-    <p>
-        <div class="alert alert-success" role="alert">
-            unconnected check successfull.
-        </div>
-    </p>
-    
 
-    
-    
-    <p>
-        <div class="alert alert-success" role="alert">
-            erc check successfull.
-        </div>
-    </p>
-    
+</div>
 
+  <!-- mk scoped -->
+  <div class="container my-2">
+    <h1 class="subtitle is-lowercase" id="calibration">calibration</h1>
 
-    <p>mount</p>
-    
-    
-    
-    <p>
-        <div class="alert alert-success" role="alert">
-            drc check successfull.
-        </div>
-    </p>
-    
+    <p>there is no calibration needed. but the potentiomenter knobs have to be aliged to center position.</p>
+  </div>
 
-    
-    
-    <p>
-        <div class="alert alert-success" role="alert">
-            unconnected check successfull.
-        </div>
-    </p>
-    
+  <!-- mk scoped -->
+  <div class="container my-2">
+    <h1 class="subtitle is-lowercase" id="usage">usage</h1>
 
-    
-    
-    <p>
-        <div class="alert alert-success" role="alert">
-            erc check successfull.
-        </div>
-    </p>
-    
+    <p>the input jacks are wired to 5 volts when nothing is connected.</p>
 
+    <p>all channels are mixed to the out jack. when something is connected to the channel out, this channel is removed from the overall mix.</p>
 
-    <p>panel</p>
-    
-    
-    
-    <p>
-        <div class="alert alert-success" role="alert">
-            drc check successfull.
-        </div>
-    </p>
-    
-
-    
-    
-    <p>
-        <div class="alert alert-success" role="alert">
-            unconnected check successfull.
-        </div>
-    </p>
-    
-
-    
-    
-    <p>
-        <div class="alert alert-success" role="alert">
-            erc check successfull.
-        </div>
-    </p>
-    
-
-
-<div class="dropdown">
-    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
-      Dropdown button
-    </button>
-    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-      <li><a class="dropdown-item" href="#">Action</a></li>
-      <li><a class="dropdown-item" href="#">Another action</a></li>
-      <li><a class="dropdown-item" href="#">Something else here</a></li>
+    <p><em>mixer</em></p>
+    <ul>
+      <li>connect the different channels from audio or cv sources to the in jacks.</li>
+      <li>connect the out jack to something</li>
+      <li>turn the pots clockwise to adjust the volume.</li>
     </ul>
+
+    <p><em>attenuverter</em></p>
+    <ul>
+      <li>connect all or a single channel.</li>
+      <li>when you turn the pot knob counter clockwise the signal is inverted.</li>
+    </ul>
+
+  </div>
+
+  <!-- mk scoped -->
+  <div class="container my-2">
+    <h1 class="subtitle is-lowercase" id="references"><em>references</em></h1>
+
+    <ul>
+      <li><a href="http://www.ecircuitcenter.com/Circuits/opdif/opdif.htm">Op Amp Differential Amplifier</a> eCircuit  Center</li>
+      <li><a href="https://sound-au.com/pots.htm">Beginners’ Guide to Potentiometers</a>  Rod Elliott (ESP)</li>
+    </ul>
+
   </div>
 </div>
-</div>
 
-<!-- mk scoped -->
-<div class="container my-2">
-  <h2 class="is-subtitle is-size-2 is-lowercase is-italic" id="calibration"><em>calibration</em></h2>
 
-  <p>there is no calibration needed. but the potentiomenter knobs have to be aliged to center position.</p>
-</div>
-
-<!-- mk scoped -->
-<div class="container my-2">
-  <h2 class="is-subtitle is-size-2 is-lowercase is-italic" id="usage"><em>usage</em></h2>
-
-  <p>the input jacks are wired to 5 volts when nothing is connected.</p>
-
-  <p>all channels are mixed to the out jack. when something is connected to the channel out, this channel is removed from the overall mix.</p>
-
-  <p><em>mixer</em></p>
-  <ul>
-    <li>connect the different channels from audio or cv sources to the in jacks.</li>
-    <li>connect the out jack to something</li>
-    <li>turn the pots clockwise to adjust the volume.</li>
-  </ul>
-
-  <p><em>attenuverter</em></p>
-  <ul>
-    <li>connect all or a single channel.</li>
-    <li>when you turn the pot knob counter clockwise the signal is inverted.</li>
-  </ul>
-
-</div>
-
-<!-- mk scoped -->
-<div class="container my-2">
-  <h2 class="is-subtitle is-size-2 is-lowercase is-italic" id="references"><em>references</em></h2>
-
-  <ul>
-    <li><a href="http://www.ecircuitcenter.com/Circuits/opdif/opdif.htm">Op Amp Differential Amplifier</a> eCircuit  Center</li>
-    <li><a href="https://sound-au.com/pots.htm">Beginners’ Guide to Potentiometers</a>  Rod Elliott (ESP)</li>
-  </ul>
-
-</div>
-
-    </nav>
-</div>
-                </div>
-                
-            </div>
-        </div>
-    </section>
     
-        <!--footer class="footer">
-    <div class="container">
-      <div class="content has-text-centered">
-        <div class="soc">
-          <a href="#"><i class="fa fa-github-alt fa-lg" aria-hidden="true"></i></a>
-          <a href="#"><i class="fa fa-youtube fa-lg" aria-hidden="true"></i></a>
-          <a href="#"><i class="fa fa-facebook fa-lg" aria-hidden="true"></i></a>
-          <a href="#"><i class="fa fa-twitter fa-lg" aria-hidden="true"></i></a>
-        </div>
-        <p>
-          <strong>Bulma</strong> by <a href="http://jgthms.com">Jeremy Thomas</a>.
-          The source code is licensed <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. <br>
-        </p>
+        <footer class="footer mt-6">
+  <div class="columns">
+    <div class="column is-one-third">
+      <div>
+        <h1 class="subtitle has-text-white is-10">elektrophon</h1>
       </div>
-    </div>
-  </footer -->
-
-<!-- footer class="footer">
-<data class="u-url" href="/elektrophon/"></data>
-<div class="content has-text-centered">
-    <div class="columns">
-    <div class="column is-half has-background-dark">
-        <p class="feed-subscribe">
-        <a href="/elektrophon/feed.xml">
-            <svg class="svg-icon orange">
-            <use xlink:href="/elektrophon/assets/minima-social-icons.svg#rss"></use>
-            </svg><span>Subscribe</span>
-        </a>
-        </p>
-        <ul class="contact-list">
-        <li class="p-name">spielhuus</li>
-        <li><a class="u-email" href="mailto:spielhus@gmail.com">spielhus@gmail.com</a></li>
+      
+      <div>
+        <ul>
+          
+          <li>
+            <a href="/elektrophon/article/" class="is-size-6 has-text-white">articles</a>
+          </li>
+          
+          <li>
+            <a href="/elektrophon/module/" class="is-size-6 has-text-white">modules</a>
+          </li>
+          
+          <li>
+            <a href="/elektrophon/about.html" class="is-size-6 has-text-white">about</a>
+          </li>
+          
         </ul>
+      </div>
+      
     </div>
-    <div class="column is-primary">
-        <p>analog and digital modules for an electroacustic instrument.
-</p>
-    </div>
-    </div>
-
-    <div class="column is-primary"><ul class="social-media-list"></ul></div>
-</div>
-</footer -->
-
-<hr>
-<footer class="footer">
-  <div class="container">
-    <div class="content has-text-centered">
-      <p>
-        <a style="font-size: 2em; color: darkgrey;" href="//github.com/spielhuus/elektrophon" target="_blank">
-          <i class="far envelope"></i>
+    <div class="column is-one-third">
+      <div class="content has-text-centered">
+        <a style="font-size: 2em; color: White;" href="/elektrophon/feed.xml" target="_blank">
+          <i class="fas fa-rss"></i>
         </a>
         &nbsp;
-        <a style="font-size: 2em; color: darkgrey;" href="//github.com/spielhuus/elektrophon" target="_blank">
+        <a style="font-size: 2em; color: White;" href="//github.com/spielhuus/elektrophon" target="_blank">
           <i class="fab fa-github grey"></i>
         </a>
         &nbsp;
-        <a style="font-size: 2em; color: darkgrey;" href="//twitter.com" target="_blank">
+        <a style="font-size: 2em; color: White;" href="//twitter.com" target="_blank">
           <i class="fab fa-twitter"></i>
         </a>
         &nbsp;
-        <a style="font-size: 2em; color: darkgrey;" href="//twitter.com" target="_blank">
+        <a style="font-size: 2em; color: White;" href="//twitter.com" target="_blank">
           <i class="fab fa-youtube"></i>
         </a>
-      </p>
-      <p>
-        <strong>elektrophon</strong><span>analog and digital modules for an electroacustic instrument.
-</span>
-        <ul class="contact-list">
-        <li class="p-name">spielhuus</li>
-        <li><a class="u-email" href="mailto:spielhus@gmail.com">spielhus@gmail.com</a></li>
-        </ul>
-
-        <a href="https://jgog.in" target="_blank">Jenil Gogari</a>.
-        <br> Based on
-        <a href="https://bulma.io" target="_blank" onclick="ga('send', 'event', 'footer', 'click', 'bulma');">Bulma</a>.
-        Icons from
-        <a href="https://fontawesome.com/" target="_blank"
-          onclick="ga('send', 'event', 'footer', 'click', 'font-awesome');">Font Awesome</a>. Web Fonts from
-        <a href="https://fonts.google.com/" target="_blank"
-          onclick="ga('send', 'event', 'footer', 'click', 'google');">Google</a>.
-        <br> The source code is licensed
-        <a href="https://opensource.org/licenses/mit-license.php" target="_blank">MIT</a>.
-      </p>
+      </div>
+      <p class="is-size-6 has-text-white has-text-centered">analog and digital modules for an electroacustic instrument.
+</p>
+    </div>
+    <div class="column is-one-third">
+      <div class="is-size-6 has-text-white has-text-right">
+        <a rel="license" href="https://creativecommons.org/licenses/by/4.0/"
+          title="Creative Commons Attribution 4.0 International license">
+          <i style="font-size: 2em; color: White;" class="fab fa-creative-commons"></i>
+          <i style="font-size: 2em; color: White;" class="fab fa-creative-commons-by"></i>
+        </a>
+      </div>
+      <div class="content is-size-7 has-text-white has-text-right mt-5">
+        <p>Except where otherwise <a href="https://creativecommons.org/policies#license">noted</a>,
+          content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/"
+            rel="license">Creative Commons Attribution 4.0
+            International license</a>.</p>
+      </div>
     </div>
   </div>
 </footer>
