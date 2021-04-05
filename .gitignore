@@ -40,3 +40,15 @@ www/_vendor
 www/.jekyll-cache
 www/_site
 www/Gemfile.lock
+
+.bash_history
+.bashrc
+.cache/
+.dbus/
+.ipython/
+.jupyter/
+
+**/main/main.xml
+**/mount/mount.xml
+**/panel/panel.xml
+
