@@ -1,99 +1,55 @@
-<!--footer class="footer">
-    <div class="container">
-      <div class="content has-text-centered">
-        <div class="soc">
-          <a href="#"><i class="fa fa-github-alt fa-lg" aria-hidden="true"></i></a>
-          <a href="#"><i class="fa fa-youtube fa-lg" aria-hidden="true"></i></a>
-          <a href="#"><i class="fa fa-facebook fa-lg" aria-hidden="true"></i></a>
-          <a href="#"><i class="fa fa-twitter fa-lg" aria-hidden="true"></i></a>
-        </div>
-        <p>
-          <strong>Bulma</strong> by <a href="http://jgthms.com">Jeremy Thomas</a>.
-          The source code is licensed <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. <br>
-        </p>
+<footer class="footer mt-6">
+  <div class="columns">
+    <div class="column is-one-third">
+      <div>
+        <h1 class="subtitle has-text-white is-10">{{ site.title}}</h1>
       </div>
-    </div>
-  </footer -->
-
-<!-- footer class="footer">
-<data class="u-url" href="{{ "/" | relative_url }}"></data>
-<div class="content has-text-centered">
-    <div class="columns">
-    <div class="column is-half has-background-dark">
-        <p class="feed-subscribe">
-        <a href="{{ 'feed.xml' | relative_url }}">
-            <svg class="svg-icon orange">
-            <use xlink:href="{{ 'assets/minima-social-icons.svg#rss' | relative_url }}"></use>
-            </svg><span>Subscribe</span>
-        </a>
-        </p>
-    {%- if site.author %}
-        <ul class="contact-list">
-        {% if site.author.name -%}
-            <li class="p-name">{{ site.author.name | escape }}</li>
-        {% endif -%}
-        {% if site.author.email -%}
-            <li><a class="u-email" href="mailto:{{ site.author.email }}">{{ site.author.email }}</a></li>
-        {%- endif %}
+      {% if site.data.navigation %}
+      <div>
+        <ul>
+          {% for item in site.data.navigation %}
+          <li>
+            <a href="{{ item.link | relative_url }}" class="is-size-6 has-text-white">{{ item.name }}</a>
+          </li>
+          {% endfor %}
         </ul>
-    {%- endif %}
+      </div>
+      {% endif %}
     </div>
-    <div class="column is-primary">
-        <p>{{ site.description | escape }}</p>
-    </div>
-    </div>
-
-    <div class="column is-primary">
-    {%- include social.html -%}
-    </div>
-</div>
-</footer -->
-
-<hr>
-<footer class="footer">
-  <div class="container">
-    <div class="content has-text-centered">
-      <p>
-        <a style="font-size: 2em; color: darkgrey;" href="//github.com/spielhuus/elektrophon" target="_blank">
-          <i class="far envelope"></i>
+    <div class="column is-one-third">
+      <div class="content has-text-centered">
+        <a style="font-size: 2em; color: White;" href="{{ site.baseurl }}/feed.xml" target="_blank">
+          <i class="fas fa-rss"></i>
         </a>
         &nbsp;
-        <a style="font-size: 2em; color: darkgrey;" href="//github.com/spielhuus/elektrophon" target="_blank">
+        <a style="font-size: 2em; color: White;" href="//github.com/spielhuus/elektrophon" target="_blank">
           <i class="fab fa-github grey"></i>
         </a>
         &nbsp;
-        <a style="font-size: 2em; color: darkgrey;" href="//twitter.com" target="_blank">
+        <a style="font-size: 2em; color: White;" href="//twitter.com" target="_blank">
           <i class="fab fa-twitter"></i>
         </a>
         &nbsp;
-        <a style="font-size: 2em; color: darkgrey;" href="//twitter.com" target="_blank">
+        <a style="font-size: 2em; color: White;" href="//twitter.com" target="_blank">
           <i class="fab fa-youtube"></i>
         </a>
-      </p>
-      <p>
-        <strong>{{ site.title }}</strong><span>{{ site.description }}</span>
-        {%- if site.author %}
-        <ul class="contact-list">
-        {% if site.author.name -%}
-            <li class="p-name">{{ site.author.name | escape }}</li>
-        {% endif -%}
-        {% if site.author.email -%}
-            <li><a class="u-email" href="mailto:{{ site.author.email }}">{{ site.author.email }}</a></li>
-        {%- endif %}
-        </ul>
-        {%- endif %}
-
-        <a href="https://jgog.in" target="_blank">Jenil Gogari</a>.
-        <br> Based on
-        <a href="https://bulma.io" target="_blank" onclick="ga('send', 'event', 'footer', 'click', 'bulma');">Bulma</a>.
-        Icons from
-        <a href="https://fontawesome.com/" target="_blank"
-          onclick="ga('send', 'event', 'footer', 'click', 'font-awesome');">Font Awesome</a>. Web Fonts from
-        <a href="https://fonts.google.com/" target="_blank"
-          onclick="ga('send', 'event', 'footer', 'click', 'google');">Google</a>.
-        <br> The source code is licensed
-        <a href="https://opensource.org/licenses/mit-license.php" target="_blank">MIT</a>.
-      </p>
+      </div>
+      <p class="is-size-6 has-text-white has-text-centered">{{ site.description }}</p>
+    </div>
+    <div class="column is-one-third">
+      <div class="is-size-6 has-text-white has-text-right">
+        <a rel="license" href="https://creativecommons.org/licenses/by/4.0/"
+          title="Creative Commons Attribution 4.0 International license">
+          <i style="font-size: 2em; color: White;" class="fab fa-creative-commons"></i>
+          <i style="font-size: 2em; color: White;" class="fab fa-creative-commons-by"></i>
+        </a>
+      </div>
+      <div class="content is-size-7 has-text-white has-text-right mt-5">
+        <p>Except where otherwise <a href="https://creativecommons.org/policies#license">noted</a>,
+          content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/"
+            rel="license">Creative Commons Attribution 4.0
+            International license</a>.</p>
+      </div>
     </div>
   </div>
 </footer>

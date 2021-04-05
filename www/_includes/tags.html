@@ -17,13 +17,13 @@
 
 <div class="field is-grouped">
   <div class="control">
-    <div class="tags has-addons">
+    <div class="tags has-addons is-normal">
       <span class="tag is-dark">version</span>
       <span class="tag is-primary">{{ page.version }}</span>
     </div>
   </div>
   <div class="control">
-    <div class="tags has-addons">
+    <div class="tags has-addons is-normal">
       <span class="tag is-dark">status</span>
       <span class="tag is-info">{{ page.status }}</span>
     </div>
@@ -31,14 +31,14 @@
 
   {% if drc_count == 0 %}
   <div class="control">
-    <div class="tags has-addons">
+    <div class="tags has-addons is-normal">
       <span class="tag is-dark">drc</span>
       <span class="tag is-success">ok</span>
     </div>
   </div>
   {% else %}
   <div class="control">
-    <div class="tags has-addons">
+    <div class="tags has-addons is-normal">
       <span class="tag is-dark">drc</span>
       <span class="tag is-danger">{{ drc_count }}</span>
     </div>
@@ -47,14 +47,14 @@
 
   {% if erc_count == 0 %}
   <div class="control">
-    <div class="tags has-addons">
+    <div class="tags has-addons is-normal">
       <span class="tag is-dark">erc</span>
       <span class="tag is-success">ok</span>
     </div>
   </div>
   {% else %}
   <div class="control">
-    <div class="tags has-addons">
+    <div class="tags has-addons is-normal">
       <span class="tag is-dark">erc</span>
       <span class="tag is-danger">{{ erc_count }}</span>
     </div>
@@ -63,14 +63,14 @@
 
   {% if unconnected_count == 0 %}
   <div class="control">
-    <div class="tags has-addons">
+    <div class="tags has-addons is-normal">
       <span class="tag is-dark">unconnected</span>
       <span class="tag is-success">ok</span>
     </div>
   </div>
   {% else %}
   <div class="control">
-    <div class="tags has-addons">
+    <div class="tags has-addons is-normal">
       <span class="tag is-dark">unconnected</span>
       <span class="tag is-danger">{{ unconnected_count }}</span>
     </div>
@@ -78,14 +78,14 @@
   {% endif %}
 
     <div class="control">
-      <a class="tags has-addons" href="https://mybinder.org/v2/gh/spielhuus/elektrophon/HEAD?filepath=content%2F{{ include.content }}%2F{{ include.content }}.ipynb">
+      <a class="tags has-addons is-normal" href="https://mybinder.org/v2/gh/spielhuus/elektrophon/HEAD?filepath=content%2F{{ include.content }}%2F{{ include.content }}.ipynb">
         <span class="tag is-dark">launch</span>
         <span class="tag is-link">binder</span>
       </a>
     </div>
 
     <div class="control">
-      <a class="tags has-addons" href="https://github.com/spielhuus/elektrophon/tree/master/content/{{ page.project }}">
+      <a class="tags has-addons is-normal" href="https://github.com/spielhuus/elektrophon/tree/master/content/{{ page.project }}">
         <span class="tag is-dark"><i class="fab fa-github" aria-hidden="true"></i></span>
         <span class="tag is-link">github</span>
       </a>

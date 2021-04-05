@@ -1,10 +1,11 @@
-<section class="hero {% if page.hero_height %} {{ page.hero_height }} {% else %} is-medium {% endif %} is-bold is-primary" {% if page.hero_image %} style="background: url('{{ page.hero_image | relative_url }}') no-repeat center center; background-size: cover;" {% endif %}>
+<section class="hero {% if page.hero_height %} {{ page.hero_height }} {% else %} is-medium {% endif %}" {% if page.hero_image %} style="background: url('{{ page.hero_image | relative_url }}') no-repeat center center; background-size: cover; background-attachment: fixed;" {% endif %}>
     <div class="hero-head {% if page.hero_darken %} hero-darken {% endif %}">
         {% include header.html %}
     </div>
-
-    <div class="hero-body is-full {% if page.hero_darken %} hero-darken {% endif %}">
-        {% if page.hero_title %} <div class="title is-lowercase has-text-centered">{{ page.title }} {% endif %}</div><br/>
-        {% if page.hero_subtitle %} <div class="is-subtitle has-text-centered">{{ page.subtitle }}</div> {% endif %}
+    <div class="hero-body {% if page.hero_darken %} hero-darken {% endif %}">
+        <div class="content has-text-centered">
+            {% if page.hero_title %} <div class="title is-lowercase has-text-white-ter">{{ page.title }} {% endif %}</div>
+            {% if page.hero_subtitle %}<div class="subtitle has-text-white-ter">{{ page.subtitle }}</div> {% endif %}
+        </div>
     </div>
 </section>

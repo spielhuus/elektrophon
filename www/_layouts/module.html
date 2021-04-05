@@ -3,23 +3,20 @@ layout: default
 ---
 
 {% assign project = page.title | append: "_kibot_data" %}
-{% include tags.html content=project %}
-
-<div class="columns is-full">"
-    <div class="column is-three-quarters"">
-        <!-- h1 class="is-title is-size-1 is-lowercase is-italic is-bold">{{ page.title }}</h1 -->
-        <div class="section is-bold">{{ page.excerpt }}</div>
-        <div class="section">{% toc %}</div>
+<section class="hero {% if page.hero_height %} {{ page.hero_height }} {% else %} is-fullheight {% endif %}" {% if page.hero_image %} style="background: url('{{ page.hero_image | relative_url }}') no-repeat center center; background-size: cover; background-attachment: fixed;" {% endif %}>
+    <div class="hero-head {% if page.hero_darken %} hero-darken {% endif %}">
+        {% include header.html %}
     </div>
-    <div class="column">
-        <figure class="image is-128x128">
-            <img src="{{ page.panel | relative_url }}">
-          </figure>
+    <div class="hero-body {% if page.hero_darken %} hero-darken {% endif %}">        
+        <div class="columns is-centered">
+            <div class="column is-two-thirds">
+                {% include tags.html content=project %}
+                <h1 class="title has-text-white-ter">{{ page.title }}</h1>        
+                <p class="subtitlle has-text-white-ter">{{ page.excerpt }}</p>
+                <div class="has-text-white-ter">{% toc %}</div>
+            </div>
+        </div>
     </div>
-</div>
+</section>
 
-<div clss="section">
-    <nav class="container">
-        {{ content }}
-    </nav>
-</div>
+{{ content }}

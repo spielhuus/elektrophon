@@ -1,26 +1,24 @@
 @charset "utf-8";
 @import url('https://fonts.googleapis.com/css?family=Newsreader');
-@import url('https://fonts.googleapis.com/css?family=Montserrat:ital');
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
 
 $family-sans-serif: 'Montserrat', sans-serif;
 $family-serif: 'Newsreader', serif;
-$family-primary: $family-serif;
-$body-size: 1.3rem;
+$family-primary: $family-sans-serif;
+$body-size: 1.1rem;
 
 $title-family: $family-sans-serif;
 $title-size: 2rem; 
 $title-weight: 700;
 
 $subtitle-family: $family-sans-serif;
-$subtitle-size: 1.5rem; 
+$subtitle-size: 1.6rem; 
 $subtitle-weight: 700;
 
-$navbar-background-color: #555555;
 $navbar-item-color: #FFFFFF;
-
-$navbar-item-hover-color: Red;
-$navbar-item-hover-background-color: White;
-$navbar-item-active-background-color: DarkGrey;
+$navbar-item-hover-color: #555555;
+$footer-background-color: Black;
+$footer-padding: 1rem 10rem 1rem;
 
 // @import "typography";
 

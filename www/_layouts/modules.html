@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<div class="is-section">
+<div class="is-section  mt-6">
     <div class="container is-12">
         {% assign sorted_tags = site.tags | sort %}
         {% for tag in sorted_tags %}
@@ -29,8 +29,5 @@ layout: default
     </div>
     <div class="column is-12">
         {% include pagination.html %}
-    </div>
-    <div class="column is-12">
-        {% include subscribe.html %}
     </div>
 </div>

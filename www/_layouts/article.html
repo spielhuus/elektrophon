@@ -2,12 +2,19 @@
 layout: default
 ---
 
-<div class="is-section">
-    <div class="container is-12">
-        <h1 class="title">{{ page.title }}</h1>
-        <p class="is-size-4 has-text-centered is-italic">{{ page.subtitle }}</p>
-        <div class="container">
-            {{ content }}
-        </div>        
+<section class="hero is-halfheight is-black">
+    <div class="hero-body has-text-centered">
+        <div class="container is-size-5 has-text-weight-medium is-italic">
+            {{ page.subtitle }}
+        </div>
     </div>
-</div>
+</section>
+
+{{ content }}
+
+<!-- div class="is-section">
+    <div class="container is-12">
+        <!-- h1 class="title">{{ page.title }}</h1>
+        <p class="is-size-4 has-text-centered is-italic">{{ page.subtitle }}</p -->
+    <!-- /div>
+</div -->
