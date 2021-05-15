@@ -10,10 +10,10 @@ layout: default
     <div class="hero-body {% if page.hero_darken %} hero-darken {% endif %}">        
         <div class="columns is-centered">
             <div class="column is-two-thirds">
-                {% include tags.html content=project %}
+                <div class="is-hidden-mobile">{% include tags.html content=project %}</div>
                 <h1 class="title has-text-white-ter">{{ page.title }}</h1>        
                 <p class="subtitlle has-text-white-ter">{{ page.excerpt }}</p>
-                <div class="has-text-white-ter">{% toc %}</div>
+                <div class="mt-4">{% toc %}</div>
             </div>
         </div>
     </div>
