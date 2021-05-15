@@ -3926,4 +3926,6 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus { color: #ee2049 !imp
 
 .hero-darken { background-color: rgba(54, 54, 54, 0.5); }
 
+.toc-entry a { color: white; }
+
 /*# sourceMappingURL=main.css.map */
