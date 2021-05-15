@@ -1,0 +1,44 @@
+---
+layout: module
+title: kraft
+author: spielhuus
+version: 0
+status: draft
+tags: misc
+category: module
+toc: true
+image: /assets/kraft_files/kontakt-logo.jpg
+panel: /assets/kraft_files/kontakt-panel.jpg
+hero_image: /assets/kraft_files/kraft.jpg
+hide_hero: true
+excerpt: Bipolar Wall-Wart Power Supply.
+callouts:
+  - title: schematics
+    subtitle: schematic files
+    icon: fas fa-file-download
+    files:
+      - href: /assets/kraft_files/kraft-schematic.pdf
+        name: main
+      - href: /assets/kraft_files/mount-schematic.pdf
+        name: mount
+  - title: PCB
+    subtitle: PCB files
+    icon: fas fa-code-branch
+    files:
+      - href: /assets/kraft_files/kraft-pcb.pdf
+        name: main
+      - href: /assets/kraft_files/mount-pcb.pdf
+        name: mount
+      - href: /assets/kraft_files/panel-pcb.pdf
+        name: panel
+  - title: gerbers
+    subtitle: gerber files
+    icon: fas fa-industry
+    files:
+      - href: /assets/kraft_files/kraft-gerber_files.zip
+        name: main
+      - href: /assets/kraft_files/mount-gerber_files.zip
+        name: mount
+      - href: /assets/kraft_files/panel-gerber_files.zip
+        name: panel
+---
