@@ -7,7 +7,7 @@ RUN apt-get update &&\
     apt-get -y upgrade &&\
     apt-get install -y curl apt-transport-https sudo ruby-full zlib1g-dev apt-utils build-essential \
                        texlive texlive-latex-extra texlive-pictures texlive-science imagemagick pdf2svg \
-                       kicad xvfb xdotool xclip xsltproc python3-pip locales sudo &&\
+                       librsvg2-bin kicad xvfb xdotool xclip xsltproc python3-pip locales sudo &&\
     apt-get clean && rm -rf /var/lib/apt/lists/*
 
 # install jupyter and required packages
