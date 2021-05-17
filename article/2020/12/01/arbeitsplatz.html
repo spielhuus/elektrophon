@@ -31,7 +31,7 @@
 <meta property="twitter:image" content="https://spielhuus.github.io//elektrophon/assets/arbeitsplatz_files/radio_helmet_hero.jpg" />
 <meta property="twitter:title" content="arbeitsplatz" />
 <script type="application/ld+json">
-{"url":"https://spielhuus.github.io//elektrophon/article/2020/12/01/arbeitsplatz.html","headline":"arbeitsplatz","dateModified":"2020-12-01T00:00:00+00:00","datePublished":"2020-12-01T00:00:00+00:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://spielhuus.github.io//elektrophon/article/2020/12/01/arbeitsplatz.html"},"image":"https://spielhuus.github.io//elektrophon/assets/arbeitsplatz_files/radio_helmet_hero.jpg","author":{"@type":"Person","name":"spielhuus"},"description":"Install and setup of the required software to develop modules.","@context":"https://schema.org"}</script>
+{"dateModified":"2020-12-01T00:00:00+00:00","@type":"BlogPosting","datePublished":"2020-12-01T00:00:00+00:00","image":"https://spielhuus.github.io//elektrophon/assets/arbeitsplatz_files/radio_helmet_hero.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://spielhuus.github.io//elektrophon/article/2020/12/01/arbeitsplatz.html"},"author":{"@type":"Person","name":"spielhuus"},"headline":"arbeitsplatz","url":"https://spielhuus.github.io//elektrophon/article/2020/12/01/arbeitsplatz.html","description":"Install and setup of the required software to develop modules.","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 </head>
   <body>
@@ -96,11 +96,11 @@
 
 <!-- mk scoped -->
 <div class="container my-2">
-  <p class="my-4">The elektrophon is developped with an continous development lifecycle. The circuits for the modules and articles are first simulated with spice. Jupyter notebooks are used to edit and run the simulations. In these notebooks also the images and other contend is created. To run this notebooks you need to install the required software. Here is a list of all the needed software and tools.</p>
+  <p class="mb-6 mt-6 is-size-5 has-text-centered">The elektrophon is developped with an continous development lifecycle. The circuits for the modules and articles are first simulated with spice. Jupyter notebooks are used to edit and run the simulations. In these notebooks also the images and other contend is created. To run this notebooks you need to install the required software. Here is a list of all the needed software and tools.</p>
 
   <h1 class="subtitle is-lowercase" id="essential-software">essential software</h1>
 
-  <p>The software used to create the notebooks, schematics and PCB’s.</p>
+  <p class="mb-4 mt-2">The software used to create the notebooks, schematics and PCB’s.</p>
 
   <ul>
     <li><a href="https://kicad-pcb.org/">KiCad EDA</a> A Cross Platform and Open Source Electronics Design Automation Suite.</li>
@@ -111,12 +111,14 @@
   </ul>
 
   <p>Install this sofware in ubuntu:</p>
-  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>apt get install xxxxxx
+  <div class="language-plaintext mb-4 mt-6 highlighter-rouge"><div class="highlight"><pre class="highlight"><code>apt get install xxxxxx
 </code></pre></div>  </div>
 
-  <h2 class="subtitle is-lowercase" id="kicad-installation">kicad installation</h2>
+  <h1 class="subtitle is-lowercase" id="kicad-installation">kicad installation</h1>
 
-  <p>In KiCad the libraries have to be added. the Symbol and Footprint library can be found in $(ELEKTROPHON)/lib/kicad</p>
+  <p class="mb-3">In KiCad the libraries have to be added. the Symbol and Footprint library can be found in $(ELEKTROPHON)/lib/kicad</p>
+
+  <p class="mb-6">There are templates for new modules. . the Symbol and Footprint library can be found in $(ELEKTROPHON)/lib/kicad</p>
 
 </div>
 
@@ -130,7 +132,7 @@
     <li><a href="https://www.anaconda.com/">miniconda</a> Manage python packages and environments.</li>
   </ul>
 
-  <p>To install conda on your operating systems follow the official guides.</p>
+  <p class="mt-6 mb-2">To install conda on your operating systems follow the official guides.</p>
 
   <ul>
     <li><a href="https://conda.io/projects/conda/en/latest/user-guide/install/windows.html">windows</a></li>
@@ -138,13 +140,13 @@
     <li><a href="https://conda.io/projects/conda/en/latest/user-guide/install/macos.html">macOS</a></li>
   </ul>
 
-  <p>For installing all the required packages create a conda environment with the <a href="https://github.com/spielhuus/elektrophon/blob/master/environment.yml">environment.yml</a> file in the root folder of the elektrophon github repository.</p>
+  <p class="mb-6 mt-4">For installing all the required packages create a conda environment with the <a href="https://github.com/spielhuus/elektrophon/blob/master/environment.yml">environment.yml</a> file in the root folder of the elektrophon github repository.</p>
 
-  <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>conda <span class="nb">env </span>create <span class="nt">-f</span> environment.yml
+  <div class="language-bash mb-6 mt-6 highlighter-rouge"><div class="highlight"><pre class="highlight"><code>conda <span class="nb">env </span>create <span class="nt">-f</span> environment.yml
 conda activate elektrophon
 </code></pre></div>  </div>
 
-  <p>The following packages will be installed:</p>
+  <p class="mb-2 mt-6">The following packages will be installed:</p>
 
   <ul>
     <li><a href="https://matplotlib.org/">Matplotlib</a> is a comprehensive library for creating static, animated, and interactive visualizations in Python.</li>
@@ -157,9 +159,9 @@ conda activate elektrophon
     <li><a href="https://github.com/jbn/itikz">itikz</a> Cell magic for PGF/TikZ-to-SVG rendering in Jupyter.</li>
   </ul>
 
-  <p>Itikz requires additional native packages (example in ubuntu)</p>
+  <p class="mb-6 mt-6">Itikz requires additional native packages (example in ubuntu)</p>
 
-  <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>apt-get <span class="nb">install </span>texlive texlive-latex-extra texlive-pictures texlive-science imagemagick pdf2svg
+  <div class="language-bash mb-6 mt-6 highlighter-rouge"><div class="highlight"><pre class="highlight"><code>apt-get <span class="nb">install </span>texlive texlive-latex-extra texlive-pictures texlive-science imagemagick pdf2svg
 </code></pre></div>  </div>
 
 </div>
@@ -168,7 +170,7 @@ conda activate elektrophon
 <div class="container my-2">
   <h2 class="subtitle is-lowercase" id="web-page">web page</h2>
 
-  <p>If you want to build the web page on your own you can use the <a href="https://github.com/spielhuus/elektrophon/tree/master/docker">docker image</a>.</p>
+  <p class="mb-2 mt-6">If you want to build the web page on your own you can use the <a href="https://github.com/spielhuus/elektrophon/tree/master/docker">docker image</a>.</p>
 
   <ul>
     <li><a href="https://jekyllrb.com/">Jekyll</a> Transform your plain text into static websites and blogs.</li>
@@ -179,7 +181,7 @@ conda activate elektrophon
 
 <!-- mk scoped -->
 <div class="container my-2">
-  <h2 class="subtitle is-lowercase" id="other-software">other software</h2>
+  <h2 class="subtitle is-lowercase class=&quot;mb-6 mt-6" id="other-software">other software</h2>
 
   <ul>
     <li><a href="https://www.audacityteam.org/">audacity</a> Free, open source, cross-platform audio software</li>
