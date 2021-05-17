@@ -1,5 +1,6 @@
 PROJECT = vermarkung
 DATE = 2020-12-01
+TARGET = _posts
 
 JUPYTER = jupyter
 OUTPUT =  ../../www
@@ -12,10 +13,10 @@ JUPITERFLAGS = nbconvert --ExecutePreprocessor.timeout=600 --execute --to markdo
 			   --TemplateExporter.extra_template_basedirs=../../lib/templates \
 			   --template=elektrophon
 
-ARTICLE_TARGETS = $(OUTPUT)/_posts/$(DATE)-$(PROJECT).md
+ARTICLE_TARGETS = $(OUTPUT)/$(TARGET)/$(DATE)-$(PROJECT).md
 DEST = build/$(PROJECT).md
 DEST_IMAGES = $(notdir $(wildcard build/$(PROJECT)_files/*.svg))
-IMAGES = $(wildcard *.svg) $(wildcard *.jpg) $(wildcard *.png)
+IMAGES = $(wildcard *.svg) $(wildcard *.jpg) $(wildcard *.png) $(wildcard *.pdf) $(wildcard *.scad)
 IMAGE_TARGETS = $(addprefix $(OUTPUT)/assets/$(PROJECT)_files/,$(IMAGES))
 
 all: $(DEST)

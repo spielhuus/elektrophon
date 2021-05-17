@@ -19,7 +19,7 @@ U 1 1 6097A217
 P 6150 7150
 F 0 "H1" H 6250 7196 50  0000 L CNN
 F 1 "MountingHole" H 6250 7105 50  0000 L CNN
-F 2 "MountingHole:MountingHole_3.2mm_M3_ISO14580" H 6150 7150 50  0001 C CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3_DIN965" H 6150 7150 50  0001 C CNN
 F 3 "~" H 6150 7150 50  0001 C CNN
 	1    6150 7150
 	1    0    0    -1  
@@ -30,7 +30,7 @@ U 1 1 6097A580
 P 6150 7450
 F 0 "H2" H 6250 7496 50  0000 L CNN
 F 1 "MountingHole" H 6250 7405 50  0000 L CNN
-F 2 "MountingHole:MountingHole_3.2mm_M3_ISO14580" H 6150 7450 50  0001 C CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3_DIN965" H 6150 7450 50  0001 C CNN
 F 3 "~" H 6150 7450 50  0001 C CNN
 	1    6150 7450
 	1    0    0    -1  

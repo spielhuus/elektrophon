@@ -1,12 +1,15 @@
 ---
 layout: article
 title: vermarkung
+excerpt: Construction and measures of a synthesizer rack.
+subtitle: PCB dimensions and positions of the mounting holes for installation in an eurorack.
 author: spielhuus
 tags: grundlage
 category: article
 image: /assets/vermarkung_files/rails.jpg
 hero_image: /assets/vermarkung_files/hero.jpg
+hero_height: is-halfheight
 hero_darken: true
-excerpt: construction and measures of a synthesizer rack.
-subtitle: Mount modules in an rack is kind of difficult. Find the right rack and mounting setup is not that easy. or is it? Lets find out in this article on how to construct a simple modular synthesizer system.
+hero_title: false
+hero_subtitle: false
 ---

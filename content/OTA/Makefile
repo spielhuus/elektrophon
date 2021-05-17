@@ -1,5 +1,6 @@
 PROJECT = ota
 DATE = 2021-04-01
+TARGET = _drafts
 
 JUPYTER = jupyter
 OUTPUT =  ../../www
@@ -12,7 +13,7 @@ JUPITERFLAGS = nbconvert --ExecutePreprocessor.timeout=600 --execute --to markdo
 			   --TemplateExporter.extra_template_basedirs=../../lib/templates \
 			   --template=elektrophon
 
-ARTICLE_TARGETS = $(OUTPUT)/_posts/$(DATE)-$(PROJECT).md
+ARTICLE_TARGETS = $(OUTPUT)/$(TARGET)/$(DATE)-$(PROJECT).md
 DEST = build/$(PROJECT).md
 DEST_IMAGES = $(notdir $(wildcard build/$(PROJECT)_files/*.svg))
 IMAGES = $(wildcard *.svg) $(wildcard *.jpg) $(wildcard *.png)

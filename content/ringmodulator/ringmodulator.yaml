@@ -1,14 +1,16 @@
 ---
 layout: article
 title: ringmodulation
+excerpt: in this article different amplitude modulation techniques are explored and the relation to voltage controlled amplifiers is explained.
+subtitle: The Dalek Voice from Dr.Who is the result of ringmodulation. What is ringmodulation and what is the difference to amplitude modulation?
 author: spielhuus
 tags: klangsynthese elektronik
 category: article
 image: /assets/ringmodulator_files/dalek.png
 panel: /assets/ringmodulator_files/dalek.png
 hero_image: /assets/ringmodulator_files/dalek.png
-hide_hero: true
-excerpt: in this article different amplitude modulation techniques are explored and the relation to voltage controlled amplifiers is explained.
-subtitle: The Dalek Voice from Dr.Who is the result of ringmodulation. What is ringmodulation and what is the difference to amplitude modulation?
-show_sidebar: false
+hero_height: is-halfheight
+hero_darken: true
+hero_title: false
+hero_subtitle: false
 ---

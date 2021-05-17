@@ -24,18 +24,18 @@ PCB_FILES = $(foreach prj, $(PCB_PROJECTS), $(prj)/$(prj).kicad_pcb $(prj)/$(prj
 KIBOT_BOM = $(foreach prj, $(PCB_PROJECTS), build/kibot/$(prj)/$(prj).csv)
 KIBOT_SCHEMATIC = $(foreach prj, $(PCB_PROJECTS), build/kibot/$(prj)/$(prj)-schematic.pdf)
 KIBOT_REPORTS = $(foreach prj, $(PCB_PROJECTS), build/kibot/$(prj)/$(prj)-erc.txt build/kibot/$(prj)/$(prj)-drc.txt)
-KIBOT_GERBERS = $(foreach prj, $(PCB_PROJECTS), build/kibot/$(prj)/$(prj)-gerber_files.zip)
+KIBOT_GERBERS = $(foreach prj, $(PCB_PROJECTS), build/kibot/$(prj)/JLCPCB/$(prj)-JLCPCB.zip)
 KIBOT_PCBS = $(foreach prj, $(PCB_PROJECTS), build/kibot/$(prj)/$(prj)-pcb.pdf)
-KIBOT_DRAWING = $(foreach prj, $(PCB_PROJECTS), build/kibot/$(prj)/$(prj)-top.svg)
+KIBOT_DRAWING = $(foreach prj, $(PCB_PROJECTS), build/kibot/$(prj)/$(prj)-top.png)
 KIBOT_REPORT = build/kibot_dat.json
 CIRCUITS = $(shell find . -iname '*.cir' | sed 's/ /\\ /g')
 
 DEST_REPORT = $(OUTPUT)/_data/$(PROJECT)_kibot_data.json
 DEST_BOM = $(foreach prj, $(PCB_PROJECTS), $(OUTPUT)/_data/$(PROJECT)-$(prj)-bom.csv)
-DEST_GERBERS = $(foreach prj, $(PCB_PROJECTS), $(OUTPUT)/assets/$(PROJECT)_files/$(prj)-gerber_files.zip)
+DEST_GERBERS = $(foreach prj, $(PCB_PROJECTS), $(OUTPUT)/assets/$(PROJECT)_files/$(prj)-JLCPCB.zip)
 DEST_PCBS = $(foreach prj, $(PCB_PROJECTS), $(OUTPUT)/assets/$(PROJECT)_files/$(prj)-pcb.pdf)
 DEST_SCHEMATIC = $(foreach prj, $(PCB_PROJECTS), $(OUTPUT)/assets/$(PROJECT)_files/$(prj)-main-schematic.pdf)
-DEST_DRAWING = $(foreach prj, $(PCB_PROJECTS), $(OUTPUT)/assets/$(PROJECT)_files/$(prj)-top.svg)
+DEST_DRAWING = $(foreach prj, $(PCB_PROJECTS), $(OUTPUT)/assets/$(PROJECT)_files/$(prj)-top.png)
 
 all: $(KIBOT_REPORT) $(KIBOT_PCBS) $(KIBOT_GERBERS) $(KIBOT_BOM) $(KIBOT_SCHEMATIC) $(KIBOT_DRAWING) $(DEST)
 deploy: $(IMAGE_TARGETS) $(ARTICLE_TARGETS) $(addprefix $(OUTPUT)/assets/$(PROJECT)_files/,$(DEST_IMAGES)) $(DEST_REPORT) $(DEST_GERBERS) $(DEST_PCBS) $(DEST_SCHEMATIC) $(DEST_BOM) $(DEST_DRAWING)
@@ -83,7 +83,9 @@ $(KIBOT_PCBS) $(KIBOT_GERBERS) $(KIBOT_BOM) $(KIBOT_REPORTS) $(KIBOT_SCHEMATIC) 
 	$(foreach prj, $(PCB_PROJECTS), \
 		kibot -c ../../kibot.yaml -b $(prj)/$(prj).kicad_pcb \
 			-e $(prj)/$(prj).sch -d build/kibot/$(prj) && \
-		sed -r -i '1 s/ /_/g' build/kibot/$(prj)/$(prj).csv;)
+		sed -r -i '1 s/ /_/g' build/kibot/$(prj)/$(prj)-bom.csv && \
+		convert build/kibot/$(prj)/$(prj)-top.png -rotate 90 build/kibot/$(prj)/$(prj)-top-rotate.png && \
+		mv build/kibot/$(prj)/$(prj)-top-rotate.png build/kibot/$(prj)/$(prj)-top.png;)
 
 $(KIBOT_REPORT): $(KIBOT_REPORTS)
 	python3 ../../lib/python/kibot_parser/kibot_parser.py \

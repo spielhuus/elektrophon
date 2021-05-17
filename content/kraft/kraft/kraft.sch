@@ -389,7 +389,7 @@ U 1 1 5C8E260C
 P 9400 1500
 F 0 "U3" H 9400 1742 50  0000 C CNN
 F 1 "L7805" H 9400 1651 50  0000 C CNN
-F 2 "elektrophon:to220_std_5772" H 9425 1350 50  0001 L CIN
+F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 9425 1350 50  0001 L CIN
 F 3 "http://www.st.com/content/ccc/resource/technical/document/datasheet/41/4f/b3/b0/12/d4/47/88/CD00000444.pdf/files/CD00000444.pdf/jcr:content/translations/en.CD00000444.pdf" H 9400 1450 50  0001 C CNN
 F 4 "Positive 1.5A 35V Linear Regulator, Fixed Output 5V" H 9400 1500 50  0001 C CNN "Description"
 	1    9400 1500
@@ -456,7 +456,7 @@ U 1 1 5C8C0BDB
 P 5250 1400
 F 0 "U1" H 5250 1642 50  0000 C CNN
 F 1 "L7815" H 5250 1551 50  0000 C CNN
-F 2 "elektrophon:to220_std_5772" H 5275 1250 50  0001 L CIN
+F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 5275 1250 50  0001 L CIN
 F 3 "http://www.st.com/content/ccc/resource/technical/document/datasheet/41/4f/b3/b0/12/d4/47/88/CD00000444.pdf/files/CD00000444.pdf/jcr:content/translations/en.CD00000444.pdf" H 5250 1350 50  0001 C CNN
 F 4 "Positive 1.5A 35V Linear Regulator, Fixed Output 15V, TO-220" H 5250 1400 50  0001 C CNN "Description"
 	1    5250 1400
@@ -468,7 +468,7 @@ U 1 1 5C8C0D03
 P 5250 3300
 F 0 "U2" H 5250 3150 50  0000 C CNN
 F 1 "L7915" H 5250 3059 50  0000 C CNN
-F 2 "elektrophon:to220_std_5772" H 5250 3100 50  0001 C CIN
+F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 5250 3100 50  0001 C CIN
 F 3 "http://www.st.com/content/ccc/resource/technical/document/datasheet/c9/16/86/41/c7/2b/45/f2/CD00000450.pdf/files/CD00000450.pdf/jcr:content/translations/en.CD00000450.pdf" H 5250 3300 50  0001 C CNN
 F 4 "Negative 1.5A 35V Linear Regulator, Fixed Output -15V, TO-220" H 5250 3300 50  0001 C CNN "Description"
 	1    5250 3300
