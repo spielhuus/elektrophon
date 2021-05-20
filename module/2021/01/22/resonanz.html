@@ -31,7 +31,7 @@
 <meta property="twitter:image" content="https://spielhuus.github.io//elektrophon/assets/resonanz_files/resonanz-logo.jpg" />
 <meta property="twitter:title" content="resonanz" />
 <script type="application/ld+json">
-{"dateModified":"2021-01-22T00:00:00+00:00","@type":"BlogPosting","datePublished":"2021-01-22T00:00:00+00:00","image":"https://spielhuus.github.io//elektrophon/assets/resonanz_files/resonanz-logo.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://spielhuus.github.io//elektrophon/module/2021/01/22/resonanz.html"},"author":{"@type":"Person","name":"spielhuus"},"headline":"resonanz","url":"https://spielhuus.github.io//elektrophon/module/2021/01/22/resonanz.html","description":"Resonanz is a fixed filter bank. This can be used to create artificial instruments or for simple percussions.","@context":"https://schema.org"}</script>
+{"datePublished":"2021-01-22T00:00:00+00:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://spielhuus.github.io//elektrophon/module/2021/01/22/resonanz.html"},"headline":"resonanz","image":"https://spielhuus.github.io//elektrophon/assets/resonanz_files/resonanz-logo.jpg","dateModified":"2021-01-22T00:00:00+00:00","author":{"@type":"Person","name":"spielhuus"},"url":"https://spielhuus.github.io//elektrophon/module/2021/01/22/resonanz.html","description":"Resonanz is a fixed filter bank. This can be used to create artificial instruments or for simple percussions.","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 </head>
   <body>
@@ -284,8 +284,21 @@ Vout = \Bigl(1 + \frac{R2}{R1}\Bigr) \Bigl(\frac{R4}{R3+R4}\Bigr) * V2 - \Bigl(\
     </tr>
     
     <tr>
-        <td> 1 </td>
-        <td> D1 </td>
+        <td> 5 </td>
+        <td> D2 D3 D5 D7 D9 </td>
+        <td> 1N4148W </td>
+        <td>
+            
+            
+            <a href="https://www.vishay.com/docs/85748/1n4148w.pdf"><i class="fas fa-file-pdf"></i></a>
+            
+        </td>
+        <td> 75V 0.15A Fast Switching Diode, SOD-123 </td>
+    </tr>
+    
+    <tr>
+        <td> 5 </td>
+        <td> D1 D4 D6 D8 D10 </td>
         <td> LED </td>
         <td>
             
@@ -317,9 +330,44 @@ Vout = \Bigl(1 + \frac{R2}{R1}\Bigr) \Bigl(\frac{R4}{R3+R4}\Bigr) * V2 - \Bigl(\
     </tr>
     
     <tr>
-        <td> 6 </td>
-        <td> R17 R18 R19 R20 R28 R29 </td>
+        <td> 5 </td>
+        <td> Q1 Q2 Q3 Q4 Q5 </td>
+        <td> MMBT3904 </td>
+        <td>
+            
+            
+            <a href="https://www.onsemi.com/pub/Collateral/2N3903-D.PDF"><i class="fas fa-file-pdf"></i></a>
+            
+        </td>
+        <td> 0.2A Ic, 40V Vce, Small Signal NPN Transistor, SOT-23 </td>
+    </tr>
+    
+    <tr>
+        <td> 5 </td>
+        <td> R17 R18 R19 R20 R28 </td>
         <td> 1k </td>
+        <td>
+            
+            
+        </td>
+        <td> Resistor </td>
+    </tr>
+    
+    <tr>
+        <td> 1 </td>
+        <td> R29 </td>
+        <td> 1k </td>
+        <td>
+            
+            
+        </td>
+        <td> Resistor </td>
+    </tr>
+    
+    <tr>
+        <td> 5 </td>
+        <td> R32 R33 R35 R37 R39 </td>
+        <td> 5k </td>
         <td>
             
             
@@ -341,6 +389,17 @@ Vout = \Bigl(1 + \frac{R2}{R1}\Bigr) \Bigl(\frac{R4}{R3+R4}\Bigr) * V2 - \Bigl(\
     <tr>
         <td> 15 </td>
         <td> R9 R10 R11 R12 R13 R14 R15 R16 R21 R22 R23 R24 R25 R26 R27 </td>
+        <td> 100k </td>
+        <td>
+            
+            
+        </td>
+        <td> Resistor </td>
+    </tr>
+    
+    <tr>
+        <td> 5 </td>
+        <td> R30 R31 R34 R36 R38 </td>
         <td> 100k </td>
         <td>
             
