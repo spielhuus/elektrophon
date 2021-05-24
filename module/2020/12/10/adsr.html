@@ -31,13 +31,12 @@
 <meta property="twitter:image" content="https://spielhuus.github.io//elektrophon/assets/adsr_files/adsr-logo.jpg" />
 <meta property="twitter:title" content="ADSR" />
 <script type="application/ld+json">
-{"datePublished":"2020-12-10T00:00:00+00:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://spielhuus.github.io//elektrophon/module/2020/12/10/adsr.html"},"headline":"ADSR","image":"https://spielhuus.github.io//elektrophon/assets/adsr_files/adsr-logo.jpg","dateModified":"2020-12-10T00:00:00+00:00","author":{"@type":"Person","name":"spielhuus"},"url":"https://spielhuus.github.io//elektrophon/module/2020/12/10/adsr.html","description":"The Fastest Envelope in the West","@context":"https://schema.org"}</script>
+{"headline":"ADSR","dateModified":"2020-12-10T00:00:00+00:00","datePublished":"2020-12-10T00:00:00+00:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://spielhuus.github.io//elektrophon/module/2020/12/10/adsr.html"},"image":"https://spielhuus.github.io//elektrophon/assets/adsr_files/adsr-logo.jpg","author":{"@type":"Person","name":"spielhuus"},"url":"https://spielhuus.github.io//elektrophon/module/2020/12/10/adsr.html","description":"The Fastest Envelope in the West","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 </head>
   <body>
     
-    
-<section class="hero  is-fullheight "  style="background: url('/elektrophon/assets/adsr_files/adsr-logo.jpg') no-repeat center center; background-size: cover; background-attachment: fixed;" >
+    <section class="hero  is-fullheight "  style="background: url('/elektrophon/assets/adsr_files/adsr-logo.jpg') no-repeat center center; background-size: cover; background-attachment: fixed;" >
     <div class="hero-head ">
         <nav class="navbar">
   <div class="container">
@@ -88,19 +87,23 @@
 
 
 
+
+
+
+
+
+
 <div class="field is-grouped">
   <div class="control">
     <div class="tags has-addons is-normal">
-      <span class="tag is-dark">version</span>
-      <span class="tag is-primary">0</span>
-    </div>
-  </div>
-  <div class="control">
-    <div class="tags has-addons is-normal">
+      
       <span class="tag is-dark">status</span>
-      <span class="tag is-info">draft</span>
+      <span class="tag is-warning">draft</span>
+          
     </div>
   </div>
+
+  
 
   
   <div class="control">
@@ -130,7 +133,7 @@
   
 
     <div class="control">
-      <a class="tags has-addons is-normal" href="https://mybinder.org/v2/gh/spielhuus/elektrophon/HEAD?filepath=content%2FADSR_kibot_data%2FADSR_kibot_data.ipynb">
+      <a class="tags has-addons is-normal" href="https://mybinder.org/v2/gh/spielhuus/elektrophon/HEAD?filepath=content%2F%2F.ipynb">
         <span class="tag is-dark">launch</span>
         <span class="tag is-link">binder</span>
       </a>
@@ -144,9 +147,8 @@
     </div>
 </div>
 </div>
-                <h1 class="title has-text-white-ter">ADSR</h1>        
-                <p class="subtitlle has-text-white-ter">The Fastest Envelope in the West</p>
-                <div class="mt-4"><ul id="toc" class="section-nav">
+                <h1 class="title has-text-white-ter is-size-3">ADSR</h1>        
+                <div class="mt-4 has-text-weight-semibold"><ul id="toc" class="section-nav">
 <li class="toc-entry toc-h2"><a href="#construction">construction</a></li>
 <li class="toc-entry toc-h1"><a href="#bom">bom</a></li>
 <li class="toc-entry toc-h1"><a href="#calibration">calibration</a></li>
@@ -157,6 +159,10 @@
         </div>
     </div>
 </section>
+
+<div class="container is-large mb-6 mt-6 is-size-5 has-text-centered has-text-weight-semibold">
+    
+</div>
 
 <!-- 
     ----------------------------------------------------------------------
@@ -532,53 +538,76 @@ Vout = \Bigl(1 + \frac{R2}{R1}\Bigr) \Bigl(\frac{R4}{R3+R4}\Bigr) * V2 - \Bigl(\
 
 <!-- mk scoped -->
 <div class="container my-2">
-  <div>
-    
 
+  <div class="container is-large mt-1 mb-0">
+    
+    
+        
+        
+        
+    
+        
+        
+    
+        
+        
+    
+    
+        
+        
+        
+    
+        
+        
+    
+        
+        
+    
     
 
 </div>
 
-  <!-- mk scoped -->
-  <div class="container my-2">
-    <h1 class="subtitle is-lowercase" id="calibration"><em>calibration</em></h1>
+</div>
 
-    <p>There is no calibration needed.</p>
-  </div>
+<!-- mk scoped -->
+<div class="container my-2">
+  <h1 class="subtitle is-lowercase" id="calibration"><em>calibration</em></h1>
 
-  <!-- mk scoped -->
-  <div class="container my-2">
-    <h1 class="subtitle is-lowercase" id="usage"><em>usage</em></h1>
+  <p>There is no calibration needed.</p>
+</div>
 
-    <p>the input jacks are wired to 5 volts when nothing is connected.</p>
+<!-- mk scoped -->
+<div class="container my-2">
+  <h1 class="subtitle is-lowercase" id="usage"><em>usage</em></h1>
 
-    <p>all channels are mixed to the out jack. when something is connected to the channel out, this channel is removed from the overall mix.</p>
+  <p>the input jacks are wired to 5 volts when nothing is connected.</p>
 
-    <p><em>mixer</em></p>
-    <ul>
-      <li>connect the different channels from audio or cv sources to the in jacks.</li>
-      <li>connect the out jack to something</li>
-      <li>turn the pots clockwise to adjust the volume.</li>
-    </ul>
+  <p>all channels are mixed to the out jack. when something is connected to the channel out, this channel is removed from the overall mix.</p>
 
-    <p><em>attenuverter</em></p>
-    <ul>
-      <li>connect all or a single channel.</li>
-      <li>when you turn the pot knob counter clockwise the signal is inverted.</li>
-    </ul>
+  <p><em>mixer</em></p>
+  <ul>
+    <li>connect the different channels from audio or cv sources to the in jacks.</li>
+    <li>connect the out jack to something</li>
+    <li>turn the pots clockwise to adjust the volume.</li>
+  </ul>
 
-  </div>
+  <p><em>attenuverter</em></p>
+  <ul>
+    <li>connect all or a single channel.</li>
+    <li>when you turn the pot knob counter clockwise the signal is inverted.</li>
+  </ul>
 
-  <!-- mk scoped -->
-  <div class="container my-2">
-    <h1 class="subtitle is-lowercase" id="references">references</h1>
+</div>
 
-    <ul>
-      <li><a href="http://www.ecircuitcenter.com/Circuits/opdif/opdif.htm">Op Amp Differential Amplifier</a> eCircuit  Center</li>
-      <li><a href="https://sound-au.com/pots.htm">Beginners’ Guide to Potentiometers</a>  Rod Elliott (ESP)</li>
-    </ul>
+<!-- mk scoped -->
+<div class="container my-2">
+  <h1 class="subtitle is-lowercase" id="references">references</h1>
 
-  </div>
+  <ul>
+    <li><a href="http://www.ecircuitcenter.com/Circuits/opdif/opdif.htm">Op Amp Differential Amplifier</a> eCircuit  Center</li>
+    <li><a href="https://sound-au.com/pots.htm">Beginners’ Guide to Potentiometers</a>  Rod Elliott (ESP)</li>
+  </ul>
+
 </div>
 
 

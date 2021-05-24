@@ -31,13 +31,12 @@
 <meta property="twitter:image" content="https://spielhuus.github.io//elektrophon/assets/summe_files/summe-logo.jpg" />
 <meta property="twitter:title" content="summe" />
 <script type="application/ld+json">
-{"datePublished":"2020-12-10T00:00:00+00:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://spielhuus.github.io//elektrophon/module/2020/12/10/summe.html"},"headline":"summe","image":"https://spielhuus.github.io//elektrophon/assets/summe_files/summe-logo.jpg","dateModified":"2020-12-10T00:00:00+00:00","author":{"@type":"Person","name":"spielhuus"},"url":"https://spielhuus.github.io//elektrophon/module/2020/12/10/summe.html","description":"audio and cv mixer that also can add offset or attenuvert a s","@context":"https://schema.org"}</script>
+{"headline":"summe","dateModified":"2020-12-10T00:00:00+00:00","datePublished":"2020-12-10T00:00:00+00:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://spielhuus.github.io//elektrophon/module/2020/12/10/summe.html"},"image":"https://spielhuus.github.io//elektrophon/assets/summe_files/summe-logo.jpg","author":{"@type":"Person","name":"spielhuus"},"url":"https://spielhuus.github.io//elektrophon/module/2020/12/10/summe.html","description":"audio and cv mixer that also can add offset or attenuvert a s","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 </head>
   <body>
     
-    
-<section class="hero  is-fullheight "  style="background: url('/elektrophon/assets/summe_files/summe-logo.jpg') no-repeat center center; background-size: cover; background-attachment: fixed;" >
+    <section class="hero  is-fullheight "  style="background: url('/elektrophon/assets/summe_files/summe-logo.jpg') no-repeat center center; background-size: cover; background-attachment: fixed;" >
     <div class="hero-head ">
         <nav class="navbar">
   <div class="container">
@@ -88,19 +87,23 @@
 
 
 
+
+
+
+
+
+
 <div class="field is-grouped">
   <div class="control">
     <div class="tags has-addons is-normal">
-      <span class="tag is-dark">version</span>
-      <span class="tag is-primary">0</span>
-    </div>
-  </div>
-  <div class="control">
-    <div class="tags has-addons is-normal">
+      
       <span class="tag is-dark">status</span>
-      <span class="tag is-info">draft</span>
+      <span class="tag is-warning">draft</span>
+          
     </div>
   </div>
+
+  
 
   
   <div class="control">
@@ -130,7 +133,7 @@
   
 
     <div class="control">
-      <a class="tags has-addons is-normal" href="https://mybinder.org/v2/gh/spielhuus/elektrophon/HEAD?filepath=content%2Fsumme_kibot_data%2Fsumme_kibot_data.ipynb">
+      <a class="tags has-addons is-normal" href="https://mybinder.org/v2/gh/spielhuus/elektrophon/HEAD?filepath=content%2F%2F.ipynb">
         <span class="tag is-dark">launch</span>
         <span class="tag is-link">binder</span>
       </a>
@@ -144,9 +147,8 @@
     </div>
 </div>
 </div>
-                <h1 class="title has-text-white-ter">summe</h1>        
-                <p class="subtitlle has-text-white-ter">audio and cv mixer that also can add offset or attenuvert a s</p>
-                <div class="mt-4"><ul id="toc" class="section-nav">
+                <h1 class="title has-text-white-ter is-size-3">summe</h1>        
+                <div class="mt-4 has-text-weight-semibold"><ul id="toc" class="section-nav">
 <li class="toc-entry toc-h1"><a href="#construction">construction</a></li>
 <li class="toc-entry toc-h1"><a href="#bom">bom</a></li>
 <li class="toc-entry toc-h1"><a href="#calibration">calibration</a></li>
@@ -157,6 +159,10 @@
         </div>
     </div>
 </section>
+
+<div class="container is-large mb-6 mt-6 is-size-5 has-text-centered has-text-weight-semibold">
+    
+</div>
 
 <!-- 
     ----------------------------------------------------------------------
@@ -489,1839 +495,1985 @@ Vout = \Bigl(1 + \frac{R2}{R1}\Bigr) \Bigl(\frac{R4}{R3+R4}\Bigr) * V2 - \Bigl(\
 
 <!-- mk scoped -->
 <div class="container my-2">
-  <div>
-    
 
+  <div class="container is-large mt-1 mb-0">
     
     
+        
+        
+        
     
-    
-    
+        
+        
+        <div class="has-background-danger pl-2 pt-2 pb-2">
+            <i class="fas fa-exclamation-circle has-text-white is-size-2"></i>
+            <span class="has-text-white is-size-4">&nbsp;&nbsp;Found 146 errors in unconnected check.</span>
+        </div>
+        <table class="table is-striped is-hoverable is-narrow nb-6">
+            <col style="width:20%" />
+            <col style="width:10%" />
+            <col style="width:70%" />
+                
+                <tr>
+                    <td>main</td>
 
-    
-    
-    <div class="is-2 has-text-danger">
-        <i class="fas fa-exclamation-circle"></i>
-        found 146 errors in unconnected check.
-    </div>
-    <div class="content">
-        <table class="report is-bordered has-background-danger-light">
-        
-            <tr>
-                <td>main</td>
-                <td>Unconnected items</td>
-                <td>
-                
-                    <p>Pad 6 of J5 on All copper layers</p>
-                
-                    <p>Pad 8 of J5 on All copper layers</p>
-                
-                </td>
-            </tr>
-        
-            <tr>
-                <td>main</td>
-                <td>Unconnected items</td>
-                <td>
-                
-                    <p>Pad 7 of J5 on All copper layers</p>
-                
-                    <p>Pad 8 of J5 on All copper layers</p>
-                
-                </td>
-            </tr>
-        
-            <tr>
-                <td>main</td>
-                <td>Unconnected items</td>
-                <td>
-                
-                    <p>Pad 5 of J5 on All copper layers</p>
-                
-                    <p>Pad 7 of J5 on All copper layers</p>
-                
-                </td>
-            </tr>
-        
-            <tr>
-                <td>main</td>
-                <td>Unconnected items</td>
-                <td>
-                
-                    <p>Pad 2 of C1 on All copper layers</p>
-                
-                    <p>Pad 1 of C2 on All copper layers</p>
-                
-                </td>
-            </tr>
-        
-            <tr>
-                <td>main</td>
-                <td>Unconnected items</td>
-                <td>
-                
-                    <p>Pad 2 of D5 on B.Cu and others</p>
-                
-                    <p>Pad 2 of D9 on B.Cu and others</p>
-                
-                </td>
-            </tr>
-        
-            <tr>
-                <td>main</td>
-                <td>Unconnected items</td>
-                <td>
-                
-                    <p>Pad 2 of D7 on B.Cu and others</p>
-                
-                    <p>Pad 2 of D3 on B.Cu and others</p>
-                
-                </td>
-            </tr>
-        
-            <tr>
-                <td>main</td>
-                <td>Unconnected items</td>
-                <td>
-                
-                    <p>Pad 2 of C3 on B.Cu and others</p>
-                
-                    <p>Pad S of J2 on All copper layers</p>
-                
-                </td>
-            </tr>
-        
-            <tr>
-                <td>main</td>
-                <td>Unconnected items</td>
-                <td>
-                
-                    <p>Pad 3 of U3 on B.Cu and others</p>
-                
-                    <p>Pad 5 of U3 on B.Cu and others</p>
-                
-                </td>
-            </tr>
-        
-            <tr>
-                <td>main</td>
-                <td>Unconnected items</td>
-                <td>
-                
-                    <p>Pad 2 of C5 on B.Cu and others</p>
-                
-                    <p>Pad S of J4 on All copper layers</p>
-                
-                </td>
-            </tr>
-        
-            <tr>
-                <td>main</td>
-                <td>Unconnected items</td>
-                <td>
-                
-                    <p>Pad S of J9 on All copper layers</p>
-                
-                    <p>Pad 2 of C5 on B.Cu and others</p>
-                
-                </td>
-            </tr>
-        
-            <tr>
-                <td>main</td>
-                <td>Unconnected items</td>
-                <td>
-                
-                    <p>Pad 2 of R2 on B.Cu and others</p>
-                
-                    <p>Pad 1 of RV1 on All copper layers</p>
-                
-                </td>
-            </tr>
-        
-            <tr>
-                <td>main</td>
-                <td>Unconnected items</td>
-                <td>
-                
-                    <p>Pad 1 of D6 on All copper layers</p>
-                
-                    <p>Pad 1 of D10 on All copper layers</p>
-                
-                </td>
-            </tr>
-        
-            <tr>
-                <td>main</td>
-                <td>Unconnected items</td>
-                <td>
-                
-                    <p>Pad 2 of R4 on B.Cu and others</p>
-                
-                    <p>Pad 1 of RV2 on All copper layers</p>
-                
-                </td>
-            </tr>
-        
-            <tr>
-                <td>main</td>
-                <td>Unconnected items</td>
-                <td>
-                
-                    <p>Pad 1 of RV4 on All copper layers</p>
-                
-                    <p>Pad 2 of R8 on B.Cu and others</p>
-                
-                </td>
-            </tr>
-        
-            <tr>
-                <td>main</td>
-                <td>Unconnected items</td>
-                <td>
-                
-                    <p>Pad S of J7 on All copper layers</p>
-                
-                    <p>Pad 2 of C3 on B.Cu and others</p>
-                
-                </td>
-            </tr>
-        
-            <tr>
-                <td>main</td>
-                <td>Unconnected items</td>
-                <td>
-                
-                    <p>Pad 2 of R6 on B.Cu and others</p>
-                
-                    <p>Pad 1 of RV3 on All copper layers</p>
-                
-                </td>
-            </tr>
-        
-            <tr>
-                <td>main</td>
-                <td>Unconnected items</td>
-                <td>
-                
-                    <p>Pad 2 of D9 on B.Cu and others</p>
-                
-                    <p>Pad 2 of D3 on B.Cu and others</p>
-                
-                </td>
-            </tr>
-        
-            <tr>
-                <td>main</td>
-                <td>Unconnected items</td>
-                <td>
-                
-                    <p>Pad 2 of D2 on B.Cu and others</p>
-                
-                    <p>Pad 1 of C2 on All copper layers</p>
-                
-                </td>
-            </tr>
-        
-            <tr>
-                <td>main</td>
-                <td>Unconnected items</td>
-                <td>
-                
-                    <p>Pad 2 of C9 on All copper layers</p>
-                
-                    <p>Pad 2 of C1 on All copper layers</p>
-                
-                </td>
-            </tr>
-        
-            <tr>
-                <td>main</td>
-                <td>Unconnected items</td>
-                <td>
-                
-                    <p>Pad S of J10 on All copper layers</p>
-                
-                    <p>Pad 1 of RV4 on All copper layers</p>
-                
-                </td>
-            </tr>
-        
-            <tr>
-                <td>main</td>
-                <td>Unconnected items</td>
-                <td>
-                
-                    <p>Pad S of J1 on All copper layers</p>
-                
-                    <p>Pad 2 of C9 on All copper layers</p>
-                
-                </td>
-            </tr>
-        
-            <tr>
-                <td>main</td>
-                <td>Unconnected items</td>
-                <td>
-                
-                    <p>Pad 1 of RV2 on All copper layers</p>
-                
-                    <p>Pad 1 of D4 on All copper layers</p>
-                
-                </td>
-            </tr>
-        
-            <tr>
-                <td>main</td>
-                <td>Unconnected items</td>
-                <td>
-                
-                    <p>Pad 2 of D2 on B.Cu and others</p>
-                
-                    <p>Pad 1 of D1 on All copper layers</p>
-                
-                </td>
-            </tr>
-        
-            <tr>
-                <td>main</td>
-                <td>Unconnected items</td>
-                <td>
-                
-                    <p>Pad S of J6 on All copper layers</p>
-                
-                    <p>Pad S of J1 on All copper layers</p>
-                
-                </td>
-            </tr>
-        
-            <tr>
-                <td>main</td>
-                <td>Unconnected items</td>
-                <td>
-                
-                    <p>Pad S of J2 on All copper layers</p>
-                
-                    <p>Pad S of J6 on All copper layers</p>
-                
-                </td>
-            </tr>
-        
-            <tr>
-                <td>main</td>
-                <td>Unconnected items</td>
-                <td>
-                
-                    <p>Pad S of J3 on All copper layers</p>
-                
-                    <p>Pad S of J7 on All copper layers</p>
-                
-                </td>
-            </tr>
-        
-            <tr>
-                <td>main</td>
-                <td>Unconnected items</td>
-                <td>
-                
-                    <p>Pad S of J8 on All copper layers</p>
-                
-                    <p>Pad S of J3 on All copper layers</p>
-                
-                </td>
-            </tr>
-        
-            <tr>
-                <td>main</td>
-                <td>Unconnected items</td>
-                <td>
-                
-                    <p>Pad S of J4 on All copper layers</p>
-                
-                    <p>Pad S of J8 on All copper layers</p>
-                
-                </td>
-            </tr>
-        
-            <tr>
-                <td>main</td>
-                <td>Unconnected items</td>
-                <td>
-                
-                    <p>Pad 1 of D6 on All copper layers</p>
-                
-                    <p>Pad 1 of D8 on All copper layers</p>
-                
-                </td>
-            </tr>
-        
-            <tr>
-                <td>main</td>
-                <td>Unconnected items</td>
-                <td>
-                
-                    <p>Pad 1 of C6 on B.Cu and others</p>
-                
-                    <p>Pad 1 of RV3 on All copper layers</p>
-                
-                </td>
-            </tr>
-        
-            <tr>
-                <td>main</td>
-                <td>Unconnected items</td>
-                <td>
-                
-                    <p>Pad 1 of RV1 on All copper layers</p>
-                
-                    <p>Pad 1 of D1 on All copper layers</p>
-                
-                </td>
-            </tr>
-        
-            <tr>
-                <td>main</td>
-                <td>Unconnected items</td>
-                <td>
-                
-                    <p>Pad 1 of C4 on B.Cu and others</p>
-                
-                    <p>Pad 1 of RV1 on All copper layers</p>
-                
-                </td>
-            </tr>
-        
-            <tr>
-                <td>main</td>
-                <td>Unconnected items</td>
-                <td>
-                
-                    <p>Pad 1 of D1 on All copper layers</p>
-                
-                    <p>Pad 7 of J5 on All copper layers</p>
-                
-                </td>
-            </tr>
-        
-            <tr>
-                <td>main</td>
-                <td>Unconnected items</td>
-                <td>
-                
-                    <p>Pad 1 of C8 on B.Cu and others</p>
-                
-                    <p>Pad 2 of C7 on B.Cu and others</p>
-                
-                </td>
-            </tr>
-        
-            <tr>
-                <td>main</td>
-                <td>Unconnected items</td>
-                <td>
-                
-                    <p>Pad 1 of D8 on All copper layers</p>
-                
-                    <p>Pad 2 of D9 on B.Cu and others</p>
-                
-                </td>
-            </tr>
-        
-            <tr>
-                <td>main</td>
-                <td>Unconnected items</td>
-                <td>
-                
-                    <p>Pad 2 of R8 on B.Cu and others</p>
-                
-                    <p>Pad 2 of R6 on B.Cu and others</p>
-                
-                </td>
-            </tr>
-        
-            <tr>
-                <td>main</td>
-                <td>Unconnected items</td>
-                <td>
-                
-                    <p>Pad S of J4 on All copper layers</p>
-                
-                    <p>Pad 1 of C6 on B.Cu and others</p>
-                
-                </td>
-            </tr>
-        
-            <tr>
-                <td>main</td>
-                <td>Unconnected items</td>
-                <td>
-                
-                    <p>Pad 2 of R4 on B.Cu and others</p>
-                
-                    <p>Pad 2 of R2 on B.Cu and others</p>
-                
-                </td>
-            </tr>
-        
-            <tr>
-                <td>main</td>
-                <td>Unconnected items</td>
-                <td>
-                
-                    <p>Pad 2 of C7 on B.Cu and others</p>
-                
-                    <p>Pad S of J9 on All copper layers</p>
-                
-                </td>
-            </tr>
-        
-            <tr>
-                <td>main</td>
-                <td>Unconnected items</td>
-                <td>
-                
-                    <p>Pad 3 of U3 on B.Cu and others</p>
-                
-                    <p>Pad 1 of D8 on All copper layers</p>
-                
-                </td>
-            </tr>
-        
-            <tr>
-                <td>main</td>
-                <td>Unconnected items</td>
-                <td>
-                
-                    <p>Pad 2 of R8 on B.Cu and others</p>
-                
-                    <p>Pad 2 of D3 on B.Cu and others</p>
-                
-                </td>
-            </tr>
-        
-            <tr>
-                <td>main</td>
-                <td>Unconnected items</td>
-                <td>
-                
-                    <p>Pad 3 of J5 on All copper layers</p>
-                
-                    <p>Pad 4 of J5 on All copper layers</p>
-                
-                </td>
-            </tr>
-        
-            <tr>
-                <td>main</td>
-                <td>Unconnected items</td>
-                <td>
-                
-                    <p>Pad 8 of U3 on B.Cu and others</p>
-                
-                    <p>Pad 8 of U2 on B.Cu and others</p>
-                
-                </td>
-            </tr>
-        
-            <tr>
-                <td>main</td>
-                <td>Unconnected items</td>
-                <td>
-                
-                    <p>Pad 1 of C3 on B.Cu and others</p>
-                
-                    <p>Pad 8 of U1 on B.Cu and others</p>
-                
-                </td>
-            </tr>
-        
-            <tr>
-                <td>main</td>
-                <td>Unconnected items</td>
-                <td>
-                
-                    <p>Pad 1 of C7 on B.Cu and others</p>
-                
-                    <p>Pad 1 of C5 on B.Cu and others</p>
-                
-                </td>
-            </tr>
-        
-            <tr>
-                <td>main</td>
-                <td>Unconnected items</td>
-                <td>
-                
-                    <p>Pad 1 of C1 on All copper layers</p>
-                
-                    <p>Pad 4 of J5 on All copper layers</p>
-                
-                </td>
-            </tr>
-        
-            <tr>
-                <td>main</td>
-                <td>Unconnected items</td>
-                <td>
-                
-                    <p>Pad 8 of U1 on B.Cu and others</p>
-                
-                    <p>Pad 3 of J5 on All copper layers</p>
-                
-                </td>
-            </tr>
-        
-            <tr>
-                <td>main</td>
-                <td>Unconnected items</td>
-                <td>
-                
-                    <p>Pad 1 of C5 on B.Cu and others</p>
-                
-                    <p>Pad 1 of C3 on B.Cu and others</p>
-                
-                </td>
-            </tr>
-        
-            <tr>
-                <td>main</td>
-                <td>Unconnected items</td>
-                <td>
-                
-                    <p>Pad 8 of U2 on B.Cu and others</p>
-                
-                    <p>Pad 8 of U1 on B.Cu and others</p>
-                
-                </td>
-            </tr>
-        
-            <tr>
-                <td>main</td>
-                <td>Unconnected items</td>
-                <td>
-                
-                    <p>Pad 2 of R14 on B.Cu and others</p>
-                
-                    <p>Pad 1 of R10 on B.Cu and others</p>
-                
-                </td>
-            </tr>
-        
-            <tr>
-                <td>main</td>
-                <td>Unconnected items</td>
-                <td>
-                
-                    <p>Pad 6 of U1 on B.Cu and others</p>
-                
-                    <p>Pad 2 of R14 on B.Cu and others</p>
-                
-                </td>
-            </tr>
-        
-            <tr>
-                <td>main</td>
-                <td>Unconnected items</td>
-                <td>
-                
-                    <p>Pad 1 of J5 on All copper layers</p>
-                
-                    <p>Pad 2 of J5 on All copper layers</p>
-                
-                </td>
-            </tr>
-        
-            <tr>
-                <td>main</td>
-                <td>Unconnected items</td>
-                <td>
-                
-                    <p>Pad 2 of C4 on B.Cu and others</p>
-                
-                    <p>Pad 4 of U1 on B.Cu and others</p>
-                
-                </td>
-            </tr>
-        
-            <tr>
-                <td>main</td>
-                <td>Unconnected items</td>
-                <td>
-                
-                    <p>Pad 4 of U3 on B.Cu and others</p>
-                
-                    <p>Pad 4 of U2 on B.Cu and others</p>
-                
-                </td>
-            </tr>
-        
-            <tr>
-                <td>main</td>
-                <td>Unconnected items</td>
-                <td>
-                
-                    <p>Pad 2 of C2 on All copper layers</p>
-                
-                    <p>Pad 2 of J5 on All copper layers</p>
-                
-                </td>
-            </tr>
-        
-            <tr>
-                <td>main</td>
-                <td>Unconnected items</td>
-                <td>
-                
-                    <p>Pad 2 of C2 on All copper layers</p>
-                
-                    <p>Pad 4 of U1 on B.Cu and others</p>
-                
-                </td>
-            </tr>
-        
-            <tr>
-                <td>main</td>
-                <td>Unconnected items</td>
-                <td>
-                
-                    <p>Pad 2 of C6 on B.Cu and others</p>
-                
-                    <p>Pad 2 of C8 on B.Cu and others</p>
-                
-                </td>
-            </tr>
-        
-            <tr>
-                <td>main</td>
-                <td>Unconnected items</td>
-                <td>
-                
-                    <p>Pad 1 of J5 on All copper layers</p>
-                
-                    <p>Pad 4 of U2 on B.Cu and others</p>
-                
-                </td>
-            </tr>
-        
-            <tr>
-                <td>main</td>
-                <td>Unconnected items</td>
-                <td>
-                
-                    <p>Pad 2 of C6 on B.Cu and others</p>
-                
-                    <p>Pad 2 of C4 on B.Cu and others</p>
-                
-                </td>
-            </tr>
-        
-            <tr>
-                <td>main</td>
-                <td>Unconnected items</td>
-                <td>
-                
-                    <p>Pad 9 of J5 on All copper layers</p>
-                
-                    <p>Pad 10 of J5 on All copper layers</p>
-                
-                </td>
-            </tr>
-        
-            <tr>
-                <td>main</td>
-                <td>Unconnected items</td>
-                <td>
-                
-                    <p>Pad 1 of R35 on B.Cu and others</p>
-                
-                    <p>Pad 1 of R37 on B.Cu and others</p>
-                
-                </td>
-            </tr>
-        
-            <tr>
-                <td>main</td>
-                <td>Unconnected items</td>
-                <td>
-                
-                    <p>Pad 1 of R37 on B.Cu and others</p>
-                
-                    <p>Pad 1 of R39 on B.Cu and others</p>
-                
-                </td>
-            </tr>
-        
-            <tr>
-                <td>main</td>
-                <td>Unconnected items</td>
-                <td>
-                
-                    <p>Pad 2 of R29 on B.Cu and others</p>
-                
-                    <p>Pad 1 of C9 on All copper layers</p>
-                
-                </td>
-            </tr>
-        
-            <tr>
-                <td>main</td>
-                <td>Unconnected items</td>
-                <td>
-                
-                    <p>Pad 2 of R29 on B.Cu and others</p>
-                
-                    <p>Pad 1 of R32 on B.Cu and others</p>
-                
-                </td>
-            </tr>
-        
-            <tr>
-                <td>main</td>
-                <td>Unconnected items</td>
-                <td>
-                
-                    <p>Pad 1 of R32 on B.Cu and others</p>
-                
-                    <p>Pad 9 of J5 on All copper layers</p>
-                
-                </td>
-            </tr>
-        
-            <tr>
-                <td>main</td>
-                <td>Unconnected items</td>
-                <td>
-                
-                    <p>Pad 1 of R32 on B.Cu and others</p>
-                
-                    <p>Pad 1 of R33 on B.Cu and others</p>
-                
-                </td>
-            </tr>
-        
-            <tr>
-                <td>main</td>
-                <td>Unconnected items</td>
-                <td>
-                
-                    <p>Pad 1 of R35 on B.Cu and others</p>
-                
-                    <p>Pad 1 of R33 on B.Cu and others</p>
-                
-                </td>
-            </tr>
-        
-            <tr>
-                <td>main</td>
-                <td>Unconnected items</td>
-                <td>
-                
-                    <p>Pad TN of J6 on All copper layers</p>
-                
-                    <p>Pad 1 of R21 on B.Cu and others</p>
-                
-                </td>
-            </tr>
-        
-            <tr>
-                <td>main</td>
-                <td>Unconnected items</td>
-                <td>
-                
-                    <p>Pad 2 of R17 on B.Cu and others</p>
-                
-                    <p>Pad T of J6 on All copper layers</p>
-                
-                </td>
-            </tr>
-        
-            <tr>
-                <td>main</td>
-                <td>Unconnected items</td>
-                <td>
-                
-                    <p>Pad 2 of RV1 on All copper layers</p>
-                
-                    <p>Pad 1 of R2 on B.Cu and others</p>
-                
-                </td>
-            </tr>
-        
-            <tr>
-                <td>main</td>
-                <td>Unconnected items</td>
-                <td>
-                
-                    <p>Pad 3 of U1 on B.Cu and others</p>
-                
-                    <p>Pad 2 of R1 on B.Cu and others</p>
-                
-                </td>
-            </tr>
-        
-            <tr>
-                <td>main</td>
-                <td>Unconnected items</td>
-                <td>
-                
-                    <p>Pad 1 of R2 on B.Cu and others</p>
-                
-                    <p>Pad 3 of U1 on B.Cu and others</p>
-                
-                </td>
-            </tr>
-        
-            <tr>
-                <td>main</td>
-                <td>Unconnected items</td>
-                <td>
-                
-                    <p>Pad 1 of R4 on B.Cu and others</p>
-                
-                    <p>Pad 2 of RV2 on All copper layers</p>
-                
-                </td>
-            </tr>
-        
-            <tr>
-                <td>main</td>
-                <td>Unconnected items</td>
-                <td>
-                
-                    <p>Pad 5 of U1 on B.Cu and others</p>
-                
-                    <p>Pad 1 of R4 on B.Cu and others</p>
-                
-                </td>
-            </tr>
-        
-            <tr>
-                <td>main</td>
-                <td>Unconnected items</td>
-                <td>
-                
-                    <p>Pad 2 of R3 on B.Cu and others</p>
-                
-                    <p>Pad 5 of U1 on B.Cu and others</p>
-                
-                </td>
-            </tr>
-        
-            <tr>
-                <td>main</td>
-                <td>Unconnected items</td>
-                <td>
-                
-                    <p>Pad 1 of R6 on B.Cu and others</p>
-                
-                    <p>Pad 2 of RV3 on All copper layers</p>
-                
-                </td>
-            </tr>
-        
-            <tr>
-                <td>main</td>
-                <td>Unconnected items</td>
-                <td>
-                
-                    <p>Pad 1 of R6 on B.Cu and others</p>
-                
-                    <p>Pad 2 of R5 on B.Cu and others</p>
-                
-                </td>
-            </tr>
-        
-            <tr>
-                <td>main</td>
-                <td>Unconnected items</td>
-                <td>
-                
-                    <p>Pad 3 of U2 on B.Cu and others</p>
-                
-                    <p>Pad 2 of RV3 on All copper layers</p>
-                
-                </td>
-            </tr>
-        
-            <tr>
-                <td>main</td>
-                <td>Unconnected items</td>
-                <td>
-                
-                    <p>Pad 1 of R8 on B.Cu and others</p>
-                
-                    <p>Pad 2 of RV4 on All copper layers</p>
-                
-                </td>
-            </tr>
-        
-            <tr>
-                <td>main</td>
-                <td>Unconnected items</td>
-                <td>
-                
-                    <p>Pad 1 of R8 on B.Cu and others</p>
-                
-                    <p>Pad 2 of R7 on B.Cu and others</p>
-                
-                </td>
-            </tr>
-        
-            <tr>
-                <td>main</td>
-                <td>Unconnected items</td>
-                <td>
-                
-                    <p>Pad 1 of R8 on B.Cu and others</p>
-                
-                    <p>Pad 5 of U2 on B.Cu and others</p>
-                
-                </td>
-            </tr>
-        
-            <tr>
-                <td>main</td>
-                <td>Unconnected items</td>
-                <td>
-                
-                    <p>Pad 2 of R13 on B.Cu and others</p>
-                
-                    <p>Pad 1 of R9 on B.Cu and others</p>
-                
-                </td>
-            </tr>
-        
-            <tr>
-                <td>main</td>
-                <td>Unconnected items</td>
-                <td>
-                
-                    <p>Pad 1 of R9 on B.Cu and others</p>
-                
-                    <p>Pad 2 of U1 on B.Cu and others</p>
-                
-                </td>
-            </tr>
-        
-            <tr>
-                <td>main</td>
-                <td>Unconnected items</td>
-                <td>
-                
-                    <p>Pad 1 of R11 on B.Cu and others</p>
-                
-                    <p>Pad 2 of R15 on B.Cu and others</p>
-                
-                </td>
-            </tr>
-        
-            <tr>
-                <td>main</td>
-                <td>Unconnected items</td>
-                <td>
-                
-                    <p>Pad 2 of U2 on B.Cu and others</p>
-                
-                    <p>Pad 1 of R11 on B.Cu and others</p>
-                
-                </td>
-            </tr>
-        
-            <tr>
-                <td>main</td>
-                <td>Unconnected items</td>
-                <td>
-                
-                    <p>Pad 2 of R16 on B.Cu and others</p>
-                
-                    <p>Pad 1 of R12 on B.Cu and others</p>
-                
-                </td>
-            </tr>
-        
-            <tr>
-                <td>main</td>
-                <td>Unconnected items</td>
-                <td>
-                
-                    <p>Pad 6 of U2 on B.Cu and others</p>
-                
-                    <p>Pad 2 of R16 on B.Cu and others</p>
-                
-                </td>
-            </tr>
-        
-            <tr>
-                <td>main</td>
-                <td>Unconnected items</td>
-                <td>
-                
-                    <p>Pad 1 of R17 on B.Cu and others</p>
-                
-                    <p>Pad 1 of R13 on B.Cu and others</p>
-                
-                </td>
-            </tr>
-        
-            <tr>
-                <td>main</td>
-                <td>Unconnected items</td>
-                <td>
-                
-                    <p>Pad 1 of R13 on B.Cu and others</p>
-                
-                    <p>Pad 1 of U1 on B.Cu and others</p>
-                
-                </td>
-            </tr>
-        
-            <tr>
-                <td>main</td>
-                <td>Unconnected items</td>
-                <td>
-                
-                    <p>Pad 1 of R14 on B.Cu and others</p>
-                
-                    <p>Pad 1 of R18 on B.Cu and others</p>
-                
-                </td>
-            </tr>
-        
-            <tr>
-                <td>main</td>
-                <td>Unconnected items</td>
-                <td>
-                
-                    <p>Pad 7 of U1 on B.Cu and others</p>
-                
-                    <p>Pad 1 of R14 on B.Cu and others</p>
-                
-                </td>
-            </tr>
-        
-            <tr>
-                <td>main</td>
-                <td>Unconnected items</td>
-                <td>
-                
-                    <p>Pad 1 of R19 on B.Cu and others</p>
-                
-                    <p>Pad 1 of R15 on B.Cu and others</p>
-                
-                </td>
-            </tr>
-        
-            <tr>
-                <td>main</td>
-                <td>Unconnected items</td>
-                <td>
-                
-                    <p>Pad 1 of R15 on B.Cu and others</p>
-                
-                    <p>Pad 1 of U2 on B.Cu and others</p>
-                
-                </td>
-            </tr>
-        
-            <tr>
-                <td>main</td>
-                <td>Unconnected items</td>
-                <td>
-                
-                    <p>Pad 1 of R16 on B.Cu and others</p>
-                
-                    <p>Pad 1 of R20 on B.Cu and others</p>
-                
-                </td>
-            </tr>
-        
-            <tr>
-                <td>main</td>
-                <td>Unconnected items</td>
-                <td>
-                
-                    <p>Pad 7 of U2 on B.Cu and others</p>
-                
-                    <p>Pad 1 of R16 on B.Cu and others</p>
-                
-                </td>
-            </tr>
-        
-            <tr>
-                <td>main</td>
-                <td>Unconnected items</td>
-                <td>
-                
-                    <p>Pad 1 of R25 on B.Cu and others</p>
-                
-                    <p>Pad 2 of R24 on B.Cu and others</p>
-                
-                </td>
-            </tr>
-        
-            <tr>
-                <td>main</td>
-                <td>Unconnected items</td>
-                <td>
-                
-                    <p>Pad 2 of R22 on B.Cu and others</p>
-                
-                    <p>Pad 2 of R23 on B.Cu and others</p>
-                
-                </td>
-            </tr>
-        
-            <tr>
-                <td>main</td>
-                <td>Unconnected items</td>
-                <td>
-                
-                    <p>Pad 2 of R24 on B.Cu and others</p>
-                
-                    <p>Pad 2 of R23 on B.Cu and others</p>
-                
-                </td>
-            </tr>
-        
-            <tr>
-                <td>main</td>
-                <td>Unconnected items</td>
-                <td>
-                
-                    <p>Pad 2 of R21 on B.Cu and others</p>
-                
-                    <p>Pad 2 of R22 on B.Cu and others</p>
-                
-                </td>
-            </tr>
-        
-            <tr>
-                <td>main</td>
-                <td>Unconnected items</td>
-                <td>
-                
-                    <p>Pad 2 of R22 on B.Cu and others</p>
-                
-                    <p>Pad 2 of U3 on B.Cu and others</p>
-                
-                </td>
-            </tr>
-        
-            <tr>
-                <td>main</td>
-                <td>Unconnected items</td>
-                <td>
-                
-                    <p>Pad 2 of R25 on B.Cu and others</p>
-                
-                    <p>Pad 1 of R26 on B.Cu and others</p>
-                
-                </td>
-            </tr>
-        
-            <tr>
-                <td>main</td>
-                <td>Unconnected items</td>
-                <td>
-                
-                    <p>Pad 1 of R26 on B.Cu and others</p>
-                
-                    <p>Pad 1 of U3 on B.Cu and others</p>
-                
-                </td>
-            </tr>
-        
-            <tr>
-                <td>main</td>
-                <td>Unconnected items</td>
-                <td>
-                
-                    <p>Pad 2 of R26 on B.Cu and others</p>
-                
-                    <p>Pad 1 of R27 on B.Cu and others</p>
-                
-                </td>
-            </tr>
-        
-            <tr>
-                <td>main</td>
-                <td>Unconnected items</td>
-                <td>
-                
-                    <p>Pad 6 of U3 on B.Cu and others</p>
-                
-                    <p>Pad 2 of R26 on B.Cu and others</p>
-                
-                </td>
-            </tr>
-        
-            <tr>
-                <td>main</td>
-                <td>Unconnected items</td>
-                <td>
-                
-                    <p>Pad 1 of R22 on B.Cu and others</p>
-                
-                    <p>Pad TN of J7 on All copper layers</p>
-                
-                </td>
-            </tr>
-        
-            <tr>
-                <td>main</td>
-                <td>Unconnected items</td>
-                <td>
-                
-                    <p>Pad T of J7 on All copper layers</p>
-                
-                    <p>Pad 2 of R18 on B.Cu and others</p>
-                
-                </td>
-            </tr>
-        
-            <tr>
-                <td>main</td>
-                <td>Unconnected items</td>
-                <td>
-                
-                    <p>Pad 1 of R23 on B.Cu and others</p>
-                
-                    <p>Pad TN of J8 on All copper layers</p>
-                
-                </td>
-            </tr>
-        
-            <tr>
-                <td>main</td>
-                <td>Unconnected items</td>
-                <td>
-                
-                    <p>Pad 2 of R19 on B.Cu and others</p>
-                
-                    <p>Pad T of J8 on All copper layers</p>
-                
-                </td>
-            </tr>
-        
-            <tr>
-                <td>main</td>
-                <td>Unconnected items</td>
-                <td>
-                
-                    <p>Pad 1 of R24 on B.Cu and others</p>
-                
-                    <p>Pad TN of J9 on All copper layers</p>
-                
-                </td>
-            </tr>
-        
-            <tr>
-                <td>main</td>
-                <td>Unconnected items</td>
-                <td>
-                
-                    <p>Pad T of J9 on All copper layers</p>
-                
-                    <p>Pad 2 of R20 on B.Cu and others</p>
-                
-                </td>
-            </tr>
-        
-            <tr>
-                <td>main</td>
-                <td>Unconnected items</td>
-                <td>
-                
-                    <p>Pad T of J10 on All copper layers</p>
-                
-                    <p>Pad 2 of R28 on B.Cu and others</p>
-                
-                </td>
-            </tr>
-        
-            <tr>
-                <td>main</td>
-                <td>Unconnected items</td>
-                <td>
-                
-                    <p>Pad TN of J1 on All copper layers</p>
-                
-                    <p>Pad 1 of R29 on B.Cu and others</p>
-                
-                </td>
-            </tr>
-        
-            <tr>
-                <td>main</td>
-                <td>Unconnected items</td>
-                <td>
-                
-                    <p>Pad 1 of Q2 on B.Cu and others</p>
-                
-                    <p>Pad 1 of D3 on B.Cu and others</p>
-                
-                </td>
-            </tr>
-        
-            <tr>
-                <td>main</td>
-                <td>Unconnected items</td>
-                <td>
-                
-                    <p>Pad 1 of D3 on B.Cu and others</p>
-                
-                    <p>Pad 1 of R31 on B.Cu and others</p>
-                
-                </td>
-            </tr>
-        
-            <tr>
-                <td>main</td>
-                <td>Unconnected items</td>
-                <td>
-                
-                    <p>Pad 2 of D4 on All copper layers</p>
-                
-                    <p>Pad 2 of Q2 on B.Cu and others</p>
-                
-                </td>
-            </tr>
-        
-            <tr>
-                <td>main</td>
-                <td>Unconnected items</td>
-                <td>
-                
-                    <p>Pad 1 of Q3 on B.Cu and others</p>
-                
-                    <p>Pad 1 of D5 on B.Cu and others</p>
-                
-                </td>
-            </tr>
-        
-            <tr>
-                <td>main</td>
-                <td>Unconnected items</td>
-                <td>
-                
-                    <p>Pad 1 of R34 on B.Cu and others</p>
-                
-                    <p>Pad 1 of Q3 on B.Cu and others</p>
-                
-                </td>
-            </tr>
-        
-            <tr>
-                <td>main</td>
-                <td>Unconnected items</td>
-                <td>
-                
-                    <p>Pad 2 of D6 on All copper layers</p>
-                
-                    <p>Pad 2 of Q3 on B.Cu and others</p>
-                
-                </td>
-            </tr>
-        
-            <tr>
-                <td>main</td>
-                <td>Unconnected items</td>
-                <td>
-                
-                    <p>Pad 1 of Q4 on B.Cu and others</p>
-                
-                    <p>Pad 1 of D7 on B.Cu and others</p>
-                
-                </td>
-            </tr>
-        
-            <tr>
-                <td>main</td>
-                <td>Unconnected items</td>
-                <td>
-                
-                    <p>Pad 1 of R36 on B.Cu and others</p>
-                
-                    <p>Pad 1 of Q4 on B.Cu and others</p>
-                
-                </td>
-            </tr>
-        
-            <tr>
-                <td>main</td>
-                <td>Unconnected items</td>
-                <td>
-                
-                    <p>Pad 2 of D8 on All copper layers</p>
-                
-                    <p>Pad 2 of Q4 on B.Cu and others</p>
-                
-                </td>
-            </tr>
-        
-            <tr>
-                <td>main</td>
-                <td>Unconnected items</td>
-                <td>
-                
-                    <p>Pad 1 of Q5 on B.Cu and others</p>
-                
-                    <p>Pad 1 of D9 on B.Cu and others</p>
-                
-                </td>
-            </tr>
-        
-            <tr>
-                <td>main</td>
-                <td>Unconnected items</td>
-                <td>
-                
-                    <p>Pad 1 of R38 on B.Cu and others</p>
-                
-                    <p>Pad 1 of Q5 on B.Cu and others</p>
-                
-                </td>
-            </tr>
-        
-            <tr>
-                <td>main</td>
-                <td>Unconnected items</td>
-                <td>
-                
-                    <p>Pad 2 of D10 on All copper layers</p>
-                
-                    <p>Pad 2 of Q5 on B.Cu and others</p>
-                
-                </td>
-            </tr>
-        
-            <tr>
-                <td>main</td>
-                <td>Unconnected items</td>
-                <td>
-                
-                    <p>Pad 2 of R33 on B.Cu and others</p>
-                
-                    <p>Pad 3 of Q2 on B.Cu and others</p>
-                
-                </td>
-            </tr>
-        
-            <tr>
-                <td>main</td>
-                <td>Unconnected items</td>
-                <td>
-                
-                    <p>Pad 2 of R35 on B.Cu and others</p>
-                
-                    <p>Pad 3 of Q3 on B.Cu and others</p>
-                
-                </td>
-            </tr>
-        
-            <tr>
-                <td>main</td>
-                <td>Unconnected items</td>
-                <td>
-                
-                    <p>Pad 3 of Q4 on B.Cu and others</p>
-                
-                    <p>Pad 2 of R37 on B.Cu and others</p>
-                
-                </td>
-            </tr>
-        
-            <tr>
-                <td>main</td>
-                <td>Unconnected items</td>
-                <td>
-                
-                    <p>Pad 2 of R39 on B.Cu and others</p>
-                
-                    <p>Pad 3 of Q5 on B.Cu and others</p>
-                
-                </td>
-            </tr>
-        
-            <tr>
-                <td>main</td>
-                <td>Unconnected items</td>
-                <td>
-                
-                    <p>Pad 1 of R1 on B.Cu and others</p>
-                
-                    <p>Pad 2 of R9 on B.Cu and others</p>
-                
-                </td>
-            </tr>
-        
-            <tr>
-                <td>main</td>
-                <td>Unconnected items</td>
-                <td>
-                
-                    <p>Pad 2 of R9 on B.Cu and others</p>
-                
-                    <p>Track 0.250 mm [/IN_1] on B.Cu, length: 1.626 mm</p>
-                
-                </td>
-            </tr>
-        
-            <tr>
-                <td>main</td>
-                <td>Unconnected items</td>
-                <td>
-                
-                    <p>Pad 3 of RV1 on All copper layers</p>
-                
-                    <p>Pad 1 of R1 on B.Cu and others</p>
-                
-                </td>
-            </tr>
-        
-            <tr>
-                <td>main</td>
-                <td>Unconnected items</td>
-                <td>
-                
-                    <p>Pad 2 of R12 on B.Cu and others</p>
-                
-                    <p>Pad 1 of R7 on B.Cu and others</p>
-                
-                </td>
-            </tr>
-        
-            <tr>
-                <td>main</td>
-                <td>Unconnected items</td>
-                <td>
-                
-                    <p>Pad 1 of R7 on B.Cu and others</p>
-                
-                    <p>Pad T of J4 on All copper layers</p>
-                
-                </td>
-            </tr>
-        
-            <tr>
-                <td>main</td>
-                <td>Unconnected items</td>
-                <td>
-                
-                    <p>Pad 3 of RV4 on All copper layers</p>
-                
-                    <p>Pad T of J4 on All copper layers</p>
-                
-                </td>
-            </tr>
-        
-            <tr>
-                <td>main</td>
-                <td>Unconnected items</td>
-                <td>
-                
-                    <p>Pad 1 of R7 on B.Cu and others</p>
-                
-                    <p>Pad 2 of R31 on B.Cu and others</p>
-                
-                </td>
-            </tr>
-        
-            <tr>
-                <td>main</td>
-                <td>Unconnected items</td>
-                <td>
-                
-                    <p>Pad 2 of R10 on B.Cu and others</p>
-                
-                    <p>Pad 1 of R3 on B.Cu and others</p>
-                
-                </td>
-            </tr>
-        
-            <tr>
-                <td>main</td>
-                <td>Unconnected items</td>
-                <td>
-                
-                    <p>Pad 1 of R3 on B.Cu and others</p>
-                
-                    <p>Pad T of J2 on All copper layers</p>
-                
-                </td>
-            </tr>
-        
-            <tr>
-                <td>main</td>
-                <td>Unconnected items</td>
-                <td>
-                
-                    <p>Pad T of J2 on All copper layers</p>
-                
-                    <p>Pad 3 of RV2 on All copper layers</p>
-                
-                </td>
-            </tr>
-        
-            <tr>
-                <td>main</td>
-                <td>Unconnected items</td>
-                <td>
-                
-                    <p>Pad 3 of RV2 on All copper layers</p>
-                
-                    <p>Pad 2 of R34 on B.Cu and others</p>
-                
-                </td>
-            </tr>
-        
-            <tr>
-                <td>main</td>
-                <td>Unconnected items</td>
-                <td>
-                
-                    <p>Pad 1 of R28 on B.Cu and others</p>
-                
-                    <p>Pad 2 of R27 on B.Cu and others</p>
-                
-                </td>
-            </tr>
-        
-            <tr>
-                <td>main</td>
-                <td>Unconnected items</td>
-                <td>
-                
-                    <p>Pad 7 of U3 on B.Cu and others</p>
-                
-                    <p>Pad 2 of R36 on B.Cu and others</p>
-                
-                </td>
-            </tr>
-        
-            <tr>
-                <td>main</td>
-                <td>Unconnected items</td>
-                <td>
-                
-                    <p>Pad 2 of R36 on B.Cu and others</p>
-                
-                    <p>Pad 1 of R28 on B.Cu and others</p>
-                
-                </td>
-            </tr>
-        
-            <tr>
-                <td>main</td>
-                <td>Unconnected items</td>
-                <td>
-                
-                    <p>Pad 2 of R11 on B.Cu and others</p>
-                
-                    <p>Pad 1 of R5 on B.Cu and others</p>
-                
-                </td>
-            </tr>
-        
-            <tr>
-                <td>main</td>
-                <td>Unconnected items</td>
-                <td>
-                
-                    <p>Pad 2 of R11 on B.Cu and others</p>
-                
-                    <p>Pad T of J3 on All copper layers</p>
-                
-                </td>
-            </tr>
-        
-            <tr>
-                <td>main</td>
-                <td>Unconnected items</td>
-                <td>
-                
-                    <p>Pad 3 of RV3 on All copper layers</p>
-                
-                    <p>Pad 1 of R5 on B.Cu and others</p>
-                
-                </td>
-            </tr>
-        
-            <tr>
-                <td>main</td>
-                <td>Unconnected items</td>
-                <td>
-                
-                    <p>Pad 2 of R38 on B.Cu and others</p>
-                
-                    <p>Pad 3 of RV3 on All copper layers</p>
-                
-                </td>
-            </tr>
-        
+                    <td>Unconnected items</td>
+                    <td>
+                    
+                        <p>Pad 6 of J5 on All copper layers</p>
+                    
+                        <p>Pad 8 of J5 on All copper layers</p>
+                    
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>main</td>
+
+                    <td>Unconnected items</td>
+                    <td>
+                    
+                        <p>Pad 7 of J5 on All copper layers</p>
+                    
+                        <p>Pad 8 of J5 on All copper layers</p>
+                    
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>main</td>
+
+                    <td>Unconnected items</td>
+                    <td>
+                    
+                        <p>Pad 5 of J5 on All copper layers</p>
+                    
+                        <p>Pad 7 of J5 on All copper layers</p>
+                    
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>main</td>
+
+                    <td>Unconnected items</td>
+                    <td>
+                    
+                        <p>Pad 2 of C1 on All copper layers</p>
+                    
+                        <p>Pad 1 of C2 on All copper layers</p>
+                    
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>main</td>
+
+                    <td>Unconnected items</td>
+                    <td>
+                    
+                        <p>Pad 2 of D5 on B.Cu and others</p>
+                    
+                        <p>Pad 2 of D9 on B.Cu and others</p>
+                    
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>main</td>
+
+                    <td>Unconnected items</td>
+                    <td>
+                    
+                        <p>Pad 2 of D7 on B.Cu and others</p>
+                    
+                        <p>Pad 2 of D3 on B.Cu and others</p>
+                    
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>main</td>
+
+                    <td>Unconnected items</td>
+                    <td>
+                    
+                        <p>Pad 2 of C3 on B.Cu and others</p>
+                    
+                        <p>Pad S of J2 on All copper layers</p>
+                    
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>main</td>
+
+                    <td>Unconnected items</td>
+                    <td>
+                    
+                        <p>Pad 3 of U3 on B.Cu and others</p>
+                    
+                        <p>Pad 5 of U3 on B.Cu and others</p>
+                    
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>main</td>
+
+                    <td>Unconnected items</td>
+                    <td>
+                    
+                        <p>Pad 2 of C5 on B.Cu and others</p>
+                    
+                        <p>Pad S of J4 on All copper layers</p>
+                    
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>main</td>
+
+                    <td>Unconnected items</td>
+                    <td>
+                    
+                        <p>Pad S of J9 on All copper layers</p>
+                    
+                        <p>Pad 2 of C5 on B.Cu and others</p>
+                    
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>main</td>
+
+                    <td>Unconnected items</td>
+                    <td>
+                    
+                        <p>Pad 2 of R2 on B.Cu and others</p>
+                    
+                        <p>Pad 1 of RV1 on All copper layers</p>
+                    
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>main</td>
+
+                    <td>Unconnected items</td>
+                    <td>
+                    
+                        <p>Pad 1 of D6 on All copper layers</p>
+                    
+                        <p>Pad 1 of D10 on All copper layers</p>
+                    
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>main</td>
+
+                    <td>Unconnected items</td>
+                    <td>
+                    
+                        <p>Pad 2 of R4 on B.Cu and others</p>
+                    
+                        <p>Pad 1 of RV2 on All copper layers</p>
+                    
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>main</td>
+
+                    <td>Unconnected items</td>
+                    <td>
+                    
+                        <p>Pad 1 of RV4 on All copper layers</p>
+                    
+                        <p>Pad 2 of R8 on B.Cu and others</p>
+                    
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>main</td>
+
+                    <td>Unconnected items</td>
+                    <td>
+                    
+                        <p>Pad S of J7 on All copper layers</p>
+                    
+                        <p>Pad 2 of C3 on B.Cu and others</p>
+                    
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>main</td>
+
+                    <td>Unconnected items</td>
+                    <td>
+                    
+                        <p>Pad 2 of R6 on B.Cu and others</p>
+                    
+                        <p>Pad 1 of RV3 on All copper layers</p>
+                    
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>main</td>
+
+                    <td>Unconnected items</td>
+                    <td>
+                    
+                        <p>Pad 2 of D9 on B.Cu and others</p>
+                    
+                        <p>Pad 2 of D3 on B.Cu and others</p>
+                    
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>main</td>
+
+                    <td>Unconnected items</td>
+                    <td>
+                    
+                        <p>Pad 2 of D2 on B.Cu and others</p>
+                    
+                        <p>Pad 1 of C2 on All copper layers</p>
+                    
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>main</td>
+
+                    <td>Unconnected items</td>
+                    <td>
+                    
+                        <p>Pad 2 of C9 on All copper layers</p>
+                    
+                        <p>Pad 2 of C1 on All copper layers</p>
+                    
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>main</td>
+
+                    <td>Unconnected items</td>
+                    <td>
+                    
+                        <p>Pad S of J10 on All copper layers</p>
+                    
+                        <p>Pad 1 of RV4 on All copper layers</p>
+                    
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>main</td>
+
+                    <td>Unconnected items</td>
+                    <td>
+                    
+                        <p>Pad S of J1 on All copper layers</p>
+                    
+                        <p>Pad 2 of C9 on All copper layers</p>
+                    
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>main</td>
+
+                    <td>Unconnected items</td>
+                    <td>
+                    
+                        <p>Pad 1 of RV2 on All copper layers</p>
+                    
+                        <p>Pad 1 of D4 on All copper layers</p>
+                    
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>main</td>
+
+                    <td>Unconnected items</td>
+                    <td>
+                    
+                        <p>Pad 2 of D2 on B.Cu and others</p>
+                    
+                        <p>Pad 1 of D1 on All copper layers</p>
+                    
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>main</td>
+
+                    <td>Unconnected items</td>
+                    <td>
+                    
+                        <p>Pad S of J6 on All copper layers</p>
+                    
+                        <p>Pad S of J1 on All copper layers</p>
+                    
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>main</td>
+
+                    <td>Unconnected items</td>
+                    <td>
+                    
+                        <p>Pad S of J2 on All copper layers</p>
+                    
+                        <p>Pad S of J6 on All copper layers</p>
+                    
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>main</td>
+
+                    <td>Unconnected items</td>
+                    <td>
+                    
+                        <p>Pad S of J3 on All copper layers</p>
+                    
+                        <p>Pad S of J7 on All copper layers</p>
+                    
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>main</td>
+
+                    <td>Unconnected items</td>
+                    <td>
+                    
+                        <p>Pad S of J8 on All copper layers</p>
+                    
+                        <p>Pad S of J3 on All copper layers</p>
+                    
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>main</td>
+
+                    <td>Unconnected items</td>
+                    <td>
+                    
+                        <p>Pad S of J4 on All copper layers</p>
+                    
+                        <p>Pad S of J8 on All copper layers</p>
+                    
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>main</td>
+
+                    <td>Unconnected items</td>
+                    <td>
+                    
+                        <p>Pad 1 of D6 on All copper layers</p>
+                    
+                        <p>Pad 1 of D8 on All copper layers</p>
+                    
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>main</td>
+
+                    <td>Unconnected items</td>
+                    <td>
+                    
+                        <p>Pad 1 of C6 on B.Cu and others</p>
+                    
+                        <p>Pad 1 of RV3 on All copper layers</p>
+                    
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>main</td>
+
+                    <td>Unconnected items</td>
+                    <td>
+                    
+                        <p>Pad 1 of RV1 on All copper layers</p>
+                    
+                        <p>Pad 1 of D1 on All copper layers</p>
+                    
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>main</td>
+
+                    <td>Unconnected items</td>
+                    <td>
+                    
+                        <p>Pad 1 of C4 on B.Cu and others</p>
+                    
+                        <p>Pad 1 of RV1 on All copper layers</p>
+                    
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>main</td>
+
+                    <td>Unconnected items</td>
+                    <td>
+                    
+                        <p>Pad 1 of D1 on All copper layers</p>
+                    
+                        <p>Pad 7 of J5 on All copper layers</p>
+                    
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>main</td>
+
+                    <td>Unconnected items</td>
+                    <td>
+                    
+                        <p>Pad 1 of C8 on B.Cu and others</p>
+                    
+                        <p>Pad 2 of C7 on B.Cu and others</p>
+                    
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>main</td>
+
+                    <td>Unconnected items</td>
+                    <td>
+                    
+                        <p>Pad 1 of D8 on All copper layers</p>
+                    
+                        <p>Pad 2 of D9 on B.Cu and others</p>
+                    
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>main</td>
+
+                    <td>Unconnected items</td>
+                    <td>
+                    
+                        <p>Pad 2 of R8 on B.Cu and others</p>
+                    
+                        <p>Pad 2 of R6 on B.Cu and others</p>
+                    
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>main</td>
+
+                    <td>Unconnected items</td>
+                    <td>
+                    
+                        <p>Pad S of J4 on All copper layers</p>
+                    
+                        <p>Pad 1 of C6 on B.Cu and others</p>
+                    
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>main</td>
+
+                    <td>Unconnected items</td>
+                    <td>
+                    
+                        <p>Pad 2 of R4 on B.Cu and others</p>
+                    
+                        <p>Pad 2 of R2 on B.Cu and others</p>
+                    
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>main</td>
+
+                    <td>Unconnected items</td>
+                    <td>
+                    
+                        <p>Pad 2 of C7 on B.Cu and others</p>
+                    
+                        <p>Pad S of J9 on All copper layers</p>
+                    
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>main</td>
+
+                    <td>Unconnected items</td>
+                    <td>
+                    
+                        <p>Pad 3 of U3 on B.Cu and others</p>
+                    
+                        <p>Pad 1 of D8 on All copper layers</p>
+                    
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>main</td>
+
+                    <td>Unconnected items</td>
+                    <td>
+                    
+                        <p>Pad 2 of R8 on B.Cu and others</p>
+                    
+                        <p>Pad 2 of D3 on B.Cu and others</p>
+                    
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>main</td>
+
+                    <td>Unconnected items</td>
+                    <td>
+                    
+                        <p>Pad 3 of J5 on All copper layers</p>
+                    
+                        <p>Pad 4 of J5 on All copper layers</p>
+                    
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>main</td>
+
+                    <td>Unconnected items</td>
+                    <td>
+                    
+                        <p>Pad 8 of U2 on B.Cu and others</p>
+                    
+                        <p>Pad 8 of U3 on B.Cu and others</p>
+                    
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>main</td>
+
+                    <td>Unconnected items</td>
+                    <td>
+                    
+                        <p>Pad 1 of C3 on B.Cu and others</p>
+                    
+                        <p>Pad 8 of U1 on B.Cu and others</p>
+                    
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>main</td>
+
+                    <td>Unconnected items</td>
+                    <td>
+                    
+                        <p>Pad 1 of C7 on B.Cu and others</p>
+                    
+                        <p>Pad 1 of C5 on B.Cu and others</p>
+                    
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>main</td>
+
+                    <td>Unconnected items</td>
+                    <td>
+                    
+                        <p>Pad 1 of C1 on All copper layers</p>
+                    
+                        <p>Pad 4 of J5 on All copper layers</p>
+                    
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>main</td>
+
+                    <td>Unconnected items</td>
+                    <td>
+                    
+                        <p>Pad 8 of U1 on B.Cu and others</p>
+                    
+                        <p>Pad 3 of J5 on All copper layers</p>
+                    
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>main</td>
+
+                    <td>Unconnected items</td>
+                    <td>
+                    
+                        <p>Pad 1 of C5 on B.Cu and others</p>
+                    
+                        <p>Pad 1 of C3 on B.Cu and others</p>
+                    
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>main</td>
+
+                    <td>Unconnected items</td>
+                    <td>
+                    
+                        <p>Pad 8 of U1 on B.Cu and others</p>
+                    
+                        <p>Pad 8 of U2 on B.Cu and others</p>
+                    
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>main</td>
+
+                    <td>Unconnected items</td>
+                    <td>
+                    
+                        <p>Pad 2 of R14 on B.Cu and others</p>
+                    
+                        <p>Pad 1 of R10 on B.Cu and others</p>
+                    
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>main</td>
+
+                    <td>Unconnected items</td>
+                    <td>
+                    
+                        <p>Pad 6 of U1 on B.Cu and others</p>
+                    
+                        <p>Pad 2 of R14 on B.Cu and others</p>
+                    
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>main</td>
+
+                    <td>Unconnected items</td>
+                    <td>
+                    
+                        <p>Pad 1 of J5 on All copper layers</p>
+                    
+                        <p>Pad 2 of J5 on All copper layers</p>
+                    
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>main</td>
+
+                    <td>Unconnected items</td>
+                    <td>
+                    
+                        <p>Pad 4 of U1 on B.Cu and others</p>
+                    
+                        <p>Pad 2 of C4 on B.Cu and others</p>
+                    
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>main</td>
+
+                    <td>Unconnected items</td>
+                    <td>
+                    
+                        <p>Pad 4 of U3 on B.Cu and others</p>
+                    
+                        <p>Pad 4 of U2 on B.Cu and others</p>
+                    
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>main</td>
+
+                    <td>Unconnected items</td>
+                    <td>
+                    
+                        <p>Pad 2 of C2 on All copper layers</p>
+                    
+                        <p>Pad 2 of J5 on All copper layers</p>
+                    
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>main</td>
+
+                    <td>Unconnected items</td>
+                    <td>
+                    
+                        <p>Pad 4 of U1 on B.Cu and others</p>
+                    
+                        <p>Pad 2 of C2 on All copper layers</p>
+                    
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>main</td>
+
+                    <td>Unconnected items</td>
+                    <td>
+                    
+                        <p>Pad 2 of C8 on B.Cu and others</p>
+                    
+                        <p>Pad 2 of C6 on B.Cu and others</p>
+                    
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>main</td>
+
+                    <td>Unconnected items</td>
+                    <td>
+                    
+                        <p>Pad 4 of U2 on B.Cu and others</p>
+                    
+                        <p>Pad 1 of J5 on All copper layers</p>
+                    
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>main</td>
+
+                    <td>Unconnected items</td>
+                    <td>
+                    
+                        <p>Pad 2 of C6 on B.Cu and others</p>
+                    
+                        <p>Pad 2 of C4 on B.Cu and others</p>
+                    
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>main</td>
+
+                    <td>Unconnected items</td>
+                    <td>
+                    
+                        <p>Pad 10 of J5 on All copper layers</p>
+                    
+                        <p>Pad 9 of J5 on All copper layers</p>
+                    
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>main</td>
+
+                    <td>Unconnected items</td>
+                    <td>
+                    
+                        <p>Pad 1 of R35 on B.Cu and others</p>
+                    
+                        <p>Pad 1 of R37 on B.Cu and others</p>
+                    
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>main</td>
+
+                    <td>Unconnected items</td>
+                    <td>
+                    
+                        <p>Pad 1 of R37 on B.Cu and others</p>
+                    
+                        <p>Pad 1 of R39 on B.Cu and others</p>
+                    
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>main</td>
+
+                    <td>Unconnected items</td>
+                    <td>
+                    
+                        <p>Pad 2 of R29 on B.Cu and others</p>
+                    
+                        <p>Pad 1 of C9 on All copper layers</p>
+                    
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>main</td>
+
+                    <td>Unconnected items</td>
+                    <td>
+                    
+                        <p>Pad 1 of R32 on B.Cu and others</p>
+                    
+                        <p>Pad 2 of R29 on B.Cu and others</p>
+                    
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>main</td>
+
+                    <td>Unconnected items</td>
+                    <td>
+                    
+                        <p>Pad 9 of J5 on All copper layers</p>
+                    
+                        <p>Pad 1 of R32 on B.Cu and others</p>
+                    
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>main</td>
+
+                    <td>Unconnected items</td>
+                    <td>
+                    
+                        <p>Pad 1 of R32 on B.Cu and others</p>
+                    
+                        <p>Pad 1 of R33 on B.Cu and others</p>
+                    
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>main</td>
+
+                    <td>Unconnected items</td>
+                    <td>
+                    
+                        <p>Pad 1 of R35 on B.Cu and others</p>
+                    
+                        <p>Pad 1 of R33 on B.Cu and others</p>
+                    
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>main</td>
+
+                    <td>Unconnected items</td>
+                    <td>
+                    
+                        <p>Pad TN of J6 on All copper layers</p>
+                    
+                        <p>Pad 1 of R21 on B.Cu and others</p>
+                    
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>main</td>
+
+                    <td>Unconnected items</td>
+                    <td>
+                    
+                        <p>Pad 2 of R17 on B.Cu and others</p>
+                    
+                        <p>Pad T of J6 on All copper layers</p>
+                    
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>main</td>
+
+                    <td>Unconnected items</td>
+                    <td>
+                    
+                        <p>Pad 2 of RV1 on All copper layers</p>
+                    
+                        <p>Pad 1 of R2 on B.Cu and others</p>
+                    
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>main</td>
+
+                    <td>Unconnected items</td>
+                    <td>
+                    
+                        <p>Pad 3 of U1 on B.Cu and others</p>
+                    
+                        <p>Pad 2 of R1 on B.Cu and others</p>
+                    
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>main</td>
+
+                    <td>Unconnected items</td>
+                    <td>
+                    
+                        <p>Pad 1 of R2 on B.Cu and others</p>
+                    
+                        <p>Pad 3 of U1 on B.Cu and others</p>
+                    
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>main</td>
+
+                    <td>Unconnected items</td>
+                    <td>
+                    
+                        <p>Pad 1 of R4 on B.Cu and others</p>
+                    
+                        <p>Pad 2 of RV2 on All copper layers</p>
+                    
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>main</td>
+
+                    <td>Unconnected items</td>
+                    <td>
+                    
+                        <p>Pad 5 of U1 on B.Cu and others</p>
+                    
+                        <p>Pad 1 of R4 on B.Cu and others</p>
+                    
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>main</td>
+
+                    <td>Unconnected items</td>
+                    <td>
+                    
+                        <p>Pad 2 of R3 on B.Cu and others</p>
+                    
+                        <p>Pad 5 of U1 on B.Cu and others</p>
+                    
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>main</td>
+
+                    <td>Unconnected items</td>
+                    <td>
+                    
+                        <p>Pad 2 of RV3 on All copper layers</p>
+                    
+                        <p>Pad 1 of R6 on B.Cu and others</p>
+                    
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>main</td>
+
+                    <td>Unconnected items</td>
+                    <td>
+                    
+                        <p>Pad 1 of R6 on B.Cu and others</p>
+                    
+                        <p>Pad 2 of R5 on B.Cu and others</p>
+                    
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>main</td>
+
+                    <td>Unconnected items</td>
+                    <td>
+                    
+                        <p>Pad 3 of U2 on B.Cu and others</p>
+                    
+                        <p>Pad 2 of RV3 on All copper layers</p>
+                    
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>main</td>
+
+                    <td>Unconnected items</td>
+                    <td>
+                    
+                        <p>Pad 1 of R8 on B.Cu and others</p>
+                    
+                        <p>Pad 2 of RV4 on All copper layers</p>
+                    
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>main</td>
+
+                    <td>Unconnected items</td>
+                    <td>
+                    
+                        <p>Pad 1 of R8 on B.Cu and others</p>
+                    
+                        <p>Pad 2 of R7 on B.Cu and others</p>
+                    
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>main</td>
+
+                    <td>Unconnected items</td>
+                    <td>
+                    
+                        <p>Pad 1 of R8 on B.Cu and others</p>
+                    
+                        <p>Pad 5 of U2 on B.Cu and others</p>
+                    
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>main</td>
+
+                    <td>Unconnected items</td>
+                    <td>
+                    
+                        <p>Pad 2 of R13 on B.Cu and others</p>
+                    
+                        <p>Pad 1 of R9 on B.Cu and others</p>
+                    
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>main</td>
+
+                    <td>Unconnected items</td>
+                    <td>
+                    
+                        <p>Pad 1 of R9 on B.Cu and others</p>
+                    
+                        <p>Pad 2 of U1 on B.Cu and others</p>
+                    
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>main</td>
+
+                    <td>Unconnected items</td>
+                    <td>
+                    
+                        <p>Pad 1 of R11 on B.Cu and others</p>
+                    
+                        <p>Pad 2 of R15 on B.Cu and others</p>
+                    
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>main</td>
+
+                    <td>Unconnected items</td>
+                    <td>
+                    
+                        <p>Pad 2 of U2 on B.Cu and others</p>
+                    
+                        <p>Pad 1 of R11 on B.Cu and others</p>
+                    
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>main</td>
+
+                    <td>Unconnected items</td>
+                    <td>
+                    
+                        <p>Pad 2 of R16 on B.Cu and others</p>
+                    
+                        <p>Pad 1 of R12 on B.Cu and others</p>
+                    
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>main</td>
+
+                    <td>Unconnected items</td>
+                    <td>
+                    
+                        <p>Pad 6 of U2 on B.Cu and others</p>
+                    
+                        <p>Pad 2 of R16 on B.Cu and others</p>
+                    
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>main</td>
+
+                    <td>Unconnected items</td>
+                    <td>
+                    
+                        <p>Pad 1 of R17 on B.Cu and others</p>
+                    
+                        <p>Pad 1 of R13 on B.Cu and others</p>
+                    
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>main</td>
+
+                    <td>Unconnected items</td>
+                    <td>
+                    
+                        <p>Pad 1 of R13 on B.Cu and others</p>
+                    
+                        <p>Pad 1 of U1 on B.Cu and others</p>
+                    
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>main</td>
+
+                    <td>Unconnected items</td>
+                    <td>
+                    
+                        <p>Pad 1 of R14 on B.Cu and others</p>
+                    
+                        <p>Pad 1 of R18 on B.Cu and others</p>
+                    
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>main</td>
+
+                    <td>Unconnected items</td>
+                    <td>
+                    
+                        <p>Pad 7 of U1 on B.Cu and others</p>
+                    
+                        <p>Pad 1 of R14 on B.Cu and others</p>
+                    
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>main</td>
+
+                    <td>Unconnected items</td>
+                    <td>
+                    
+                        <p>Pad 1 of R19 on B.Cu and others</p>
+                    
+                        <p>Pad 1 of R15 on B.Cu and others</p>
+                    
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>main</td>
+
+                    <td>Unconnected items</td>
+                    <td>
+                    
+                        <p>Pad 1 of R15 on B.Cu and others</p>
+                    
+                        <p>Pad 1 of U2 on B.Cu and others</p>
+                    
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>main</td>
+
+                    <td>Unconnected items</td>
+                    <td>
+                    
+                        <p>Pad 1 of R16 on B.Cu and others</p>
+                    
+                        <p>Pad 1 of R20 on B.Cu and others</p>
+                    
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>main</td>
+
+                    <td>Unconnected items</td>
+                    <td>
+                    
+                        <p>Pad 7 of U2 on B.Cu and others</p>
+                    
+                        <p>Pad 1 of R16 on B.Cu and others</p>
+                    
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>main</td>
+
+                    <td>Unconnected items</td>
+                    <td>
+                    
+                        <p>Pad 1 of R25 on B.Cu and others</p>
+                    
+                        <p>Pad 2 of R24 on B.Cu and others</p>
+                    
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>main</td>
+
+                    <td>Unconnected items</td>
+                    <td>
+                    
+                        <p>Pad 2 of R23 on B.Cu and others</p>
+                    
+                        <p>Pad 2 of R22 on B.Cu and others</p>
+                    
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>main</td>
+
+                    <td>Unconnected items</td>
+                    <td>
+                    
+                        <p>Pad 2 of R24 on B.Cu and others</p>
+                    
+                        <p>Pad 2 of R23 on B.Cu and others</p>
+                    
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>main</td>
+
+                    <td>Unconnected items</td>
+                    <td>
+                    
+                        <p>Pad 2 of R22 on B.Cu and others</p>
+                    
+                        <p>Pad 2 of R21 on B.Cu and others</p>
+                    
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>main</td>
+
+                    <td>Unconnected items</td>
+                    <td>
+                    
+                        <p>Pad 2 of R22 on B.Cu and others</p>
+                    
+                        <p>Pad 2 of U3 on B.Cu and others</p>
+                    
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>main</td>
+
+                    <td>Unconnected items</td>
+                    <td>
+                    
+                        <p>Pad 2 of R25 on B.Cu and others</p>
+                    
+                        <p>Pad 1 of R26 on B.Cu and others</p>
+                    
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>main</td>
+
+                    <td>Unconnected items</td>
+                    <td>
+                    
+                        <p>Pad 1 of R26 on B.Cu and others</p>
+                    
+                        <p>Pad 1 of U3 on B.Cu and others</p>
+                    
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>main</td>
+
+                    <td>Unconnected items</td>
+                    <td>
+                    
+                        <p>Pad 2 of R26 on B.Cu and others</p>
+                    
+                        <p>Pad 1 of R27 on B.Cu and others</p>
+                    
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>main</td>
+
+                    <td>Unconnected items</td>
+                    <td>
+                    
+                        <p>Pad 6 of U3 on B.Cu and others</p>
+                    
+                        <p>Pad 2 of R26 on B.Cu and others</p>
+                    
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>main</td>
+
+                    <td>Unconnected items</td>
+                    <td>
+                    
+                        <p>Pad 1 of R22 on B.Cu and others</p>
+                    
+                        <p>Pad TN of J7 on All copper layers</p>
+                    
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>main</td>
+
+                    <td>Unconnected items</td>
+                    <td>
+                    
+                        <p>Pad T of J7 on All copper layers</p>
+                    
+                        <p>Pad 2 of R18 on B.Cu and others</p>
+                    
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>main</td>
+
+                    <td>Unconnected items</td>
+                    <td>
+                    
+                        <p>Pad 1 of R23 on B.Cu and others</p>
+                    
+                        <p>Pad TN of J8 on All copper layers</p>
+                    
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>main</td>
+
+                    <td>Unconnected items</td>
+                    <td>
+                    
+                        <p>Pad 2 of R19 on B.Cu and others</p>
+                    
+                        <p>Pad T of J8 on All copper layers</p>
+                    
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>main</td>
+
+                    <td>Unconnected items</td>
+                    <td>
+                    
+                        <p>Pad 1 of R24 on B.Cu and others</p>
+                    
+                        <p>Pad TN of J9 on All copper layers</p>
+                    
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>main</td>
+
+                    <td>Unconnected items</td>
+                    <td>
+                    
+                        <p>Pad T of J9 on All copper layers</p>
+                    
+                        <p>Pad 2 of R20 on B.Cu and others</p>
+                    
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>main</td>
+
+                    <td>Unconnected items</td>
+                    <td>
+                    
+                        <p>Pad T of J10 on All copper layers</p>
+                    
+                        <p>Pad 2 of R28 on B.Cu and others</p>
+                    
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>main</td>
+
+                    <td>Unconnected items</td>
+                    <td>
+                    
+                        <p>Pad TN of J1 on All copper layers</p>
+                    
+                        <p>Pad 1 of R29 on B.Cu and others</p>
+                    
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>main</td>
+
+                    <td>Unconnected items</td>
+                    <td>
+                    
+                        <p>Pad 1 of Q2 on B.Cu and others</p>
+                    
+                        <p>Pad 1 of D3 on B.Cu and others</p>
+                    
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>main</td>
+
+                    <td>Unconnected items</td>
+                    <td>
+                    
+                        <p>Pad 1 of D3 on B.Cu and others</p>
+                    
+                        <p>Pad 1 of R31 on B.Cu and others</p>
+                    
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>main</td>
+
+                    <td>Unconnected items</td>
+                    <td>
+                    
+                        <p>Pad 2 of D4 on All copper layers</p>
+                    
+                        <p>Pad 2 of Q2 on B.Cu and others</p>
+                    
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>main</td>
+
+                    <td>Unconnected items</td>
+                    <td>
+                    
+                        <p>Pad 1 of Q3 on B.Cu and others</p>
+                    
+                        <p>Pad 1 of D5 on B.Cu and others</p>
+                    
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>main</td>
+
+                    <td>Unconnected items</td>
+                    <td>
+                    
+                        <p>Pad 1 of R34 on B.Cu and others</p>
+                    
+                        <p>Pad 1 of Q3 on B.Cu and others</p>
+                    
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>main</td>
+
+                    <td>Unconnected items</td>
+                    <td>
+                    
+                        <p>Pad 2 of D6 on All copper layers</p>
+                    
+                        <p>Pad 2 of Q3 on B.Cu and others</p>
+                    
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>main</td>
+
+                    <td>Unconnected items</td>
+                    <td>
+                    
+                        <p>Pad 1 of Q4 on B.Cu and others</p>
+                    
+                        <p>Pad 1 of D7 on B.Cu and others</p>
+                    
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>main</td>
+
+                    <td>Unconnected items</td>
+                    <td>
+                    
+                        <p>Pad 1 of R36 on B.Cu and others</p>
+                    
+                        <p>Pad 1 of Q4 on B.Cu and others</p>
+                    
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>main</td>
+
+                    <td>Unconnected items</td>
+                    <td>
+                    
+                        <p>Pad 2 of D8 on All copper layers</p>
+                    
+                        <p>Pad 2 of Q4 on B.Cu and others</p>
+                    
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>main</td>
+
+                    <td>Unconnected items</td>
+                    <td>
+                    
+                        <p>Pad 1 of Q5 on B.Cu and others</p>
+                    
+                        <p>Pad 1 of D9 on B.Cu and others</p>
+                    
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>main</td>
+
+                    <td>Unconnected items</td>
+                    <td>
+                    
+                        <p>Pad 1 of R38 on B.Cu and others</p>
+                    
+                        <p>Pad 1 of Q5 on B.Cu and others</p>
+                    
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>main</td>
+
+                    <td>Unconnected items</td>
+                    <td>
+                    
+                        <p>Pad 2 of D10 on All copper layers</p>
+                    
+                        <p>Pad 2 of Q5 on B.Cu and others</p>
+                    
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>main</td>
+
+                    <td>Unconnected items</td>
+                    <td>
+                    
+                        <p>Pad 2 of R33 on B.Cu and others</p>
+                    
+                        <p>Pad 3 of Q2 on B.Cu and others</p>
+                    
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>main</td>
+
+                    <td>Unconnected items</td>
+                    <td>
+                    
+                        <p>Pad 2 of R35 on B.Cu and others</p>
+                    
+                        <p>Pad 3 of Q3 on B.Cu and others</p>
+                    
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>main</td>
+
+                    <td>Unconnected items</td>
+                    <td>
+                    
+                        <p>Pad 3 of Q4 on B.Cu and others</p>
+                    
+                        <p>Pad 2 of R37 on B.Cu and others</p>
+                    
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>main</td>
+
+                    <td>Unconnected items</td>
+                    <td>
+                    
+                        <p>Pad 2 of R39 on B.Cu and others</p>
+                    
+                        <p>Pad 3 of Q5 on B.Cu and others</p>
+                    
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>main</td>
+
+                    <td>Unconnected items</td>
+                    <td>
+                    
+                        <p>Pad 1 of R1 on B.Cu and others</p>
+                    
+                        <p>Pad 2 of R9 on B.Cu and others</p>
+                    
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>main</td>
+
+                    <td>Unconnected items</td>
+                    <td>
+                    
+                        <p>Pad 2 of R9 on B.Cu and others</p>
+                    
+                        <p>Track 0.250 mm [/IN_1] on B.Cu, length: 1.626 mm</p>
+                    
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>main</td>
+
+                    <td>Unconnected items</td>
+                    <td>
+                    
+                        <p>Pad 3 of RV1 on All copper layers</p>
+                    
+                        <p>Pad 1 of R1 on B.Cu and others</p>
+                    
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>main</td>
+
+                    <td>Unconnected items</td>
+                    <td>
+                    
+                        <p>Pad 2 of R12 on B.Cu and others</p>
+                    
+                        <p>Pad 1 of R7 on B.Cu and others</p>
+                    
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>main</td>
+
+                    <td>Unconnected items</td>
+                    <td>
+                    
+                        <p>Pad T of J4 on All copper layers</p>
+                    
+                        <p>Pad 1 of R7 on B.Cu and others</p>
+                    
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>main</td>
+
+                    <td>Unconnected items</td>
+                    <td>
+                    
+                        <p>Pad T of J4 on All copper layers</p>
+                    
+                        <p>Pad 3 of RV4 on All copper layers</p>
+                    
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>main</td>
+
+                    <td>Unconnected items</td>
+                    <td>
+                    
+                        <p>Pad 1 of R7 on B.Cu and others</p>
+                    
+                        <p>Pad 2 of R31 on B.Cu and others</p>
+                    
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>main</td>
+
+                    <td>Unconnected items</td>
+                    <td>
+                    
+                        <p>Pad 2 of R10 on B.Cu and others</p>
+                    
+                        <p>Pad 1 of R3 on B.Cu and others</p>
+                    
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>main</td>
+
+                    <td>Unconnected items</td>
+                    <td>
+                    
+                        <p>Pad 1 of R3 on B.Cu and others</p>
+                    
+                        <p>Pad T of J2 on All copper layers</p>
+                    
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>main</td>
+
+                    <td>Unconnected items</td>
+                    <td>
+                    
+                        <p>Pad 3 of RV2 on All copper layers</p>
+                    
+                        <p>Pad T of J2 on All copper layers</p>
+                    
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>main</td>
+
+                    <td>Unconnected items</td>
+                    <td>
+                    
+                        <p>Pad 3 of RV2 on All copper layers</p>
+                    
+                        <p>Pad 2 of R34 on B.Cu and others</p>
+                    
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>main</td>
+
+                    <td>Unconnected items</td>
+                    <td>
+                    
+                        <p>Pad 1 of R28 on B.Cu and others</p>
+                    
+                        <p>Pad 2 of R27 on B.Cu and others</p>
+                    
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>main</td>
+
+                    <td>Unconnected items</td>
+                    <td>
+                    
+                        <p>Pad 7 of U3 on B.Cu and others</p>
+                    
+                        <p>Pad 2 of R36 on B.Cu and others</p>
+                    
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>main</td>
+
+                    <td>Unconnected items</td>
+                    <td>
+                    
+                        <p>Pad 2 of R36 on B.Cu and others</p>
+                    
+                        <p>Pad 1 of R28 on B.Cu and others</p>
+                    
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>main</td>
+
+                    <td>Unconnected items</td>
+                    <td>
+                    
+                        <p>Pad 1 of R5 on B.Cu and others</p>
+                    
+                        <p>Pad 2 of R11 on B.Cu and others</p>
+                    
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>main</td>
+
+                    <td>Unconnected items</td>
+                    <td>
+                    
+                        <p>Pad 2 of R11 on B.Cu and others</p>
+                    
+                        <p>Pad T of J3 on All copper layers</p>
+                    
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>main</td>
+
+                    <td>Unconnected items</td>
+                    <td>
+                    
+                        <p>Pad 1 of R5 on B.Cu and others</p>
+                    
+                        <p>Pad 3 of RV3 on All copper layers</p>
+                    
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>main</td>
+
+                    <td>Unconnected items</td>
+                    <td>
+                    
+                        <p>Pad 2 of R38 on B.Cu and others</p>
+                    
+                        <p>Pad 3 of RV3 on All copper layers</p>
+                    
+                    </td>
+                </tr>
+            
         </table>
-    </div>
-
-
     
     
-
-
+        
+        
     
     
+        
+        
+        
     
-
+        
+        
+    
+        
+        
     
     
-
-    
-    
-
-
-
 
 </div>
 
-  <!-- mk scoped -->
-  <div class="container my-2">
-    <h1 class="subtitle is-lowercase" id="calibration">calibration</h1>
+</div>
 
-    <p>there is no calibration needed. but the potentiomenter knobs have to be aliged to center position.</p>
-  </div>
+<!-- mk scoped -->
+<div class="container my-2">
+  <h1 class="subtitle is-lowercase" id="calibration">calibration</h1>
 
-  <!-- mk scoped -->
-  <div class="container my-2">
-    <h1 class="subtitle is-lowercase" id="usage">usage</h1>
+  <p>there is no calibration needed. but the potentiomenter knobs have to be aliged to center position.</p>
+</div>
 
-    <p>the input jacks are wired to 5 volts when nothing is connected.</p>
+<!-- mk scoped -->
+<div class="container my-2">
+  <h1 class="subtitle is-lowercase" id="usage">usage</h1>
 
-    <p>all channels are mixed to the out jack. when something is connected to the channel out, this channel is removed from the overall mix.</p>
+  <p>the input jacks are wired to 5 volts when nothing is connected.</p>
 
-    <p><em>mixer</em></p>
-    <ul>
-      <li>connect the different channels from audio or cv sources to the in jacks.</li>
-      <li>connect the out jack to something</li>
-      <li>turn the pots clockwise to adjust the volume.</li>
-    </ul>
+  <p>all channels are mixed to the out jack. when something is connected to the channel out, this channel is removed from the overall mix.</p>
 
-    <p><em>attenuverter</em></p>
-    <ul>
-      <li>connect all or a single channel.</li>
-      <li>when you turn the pot knob counter clockwise the signal is inverted.</li>
-    </ul>
+  <p><em>mixer</em></p>
+  <ul>
+    <li>connect the different channels from audio or cv sources to the in jacks.</li>
+    <li>connect the out jack to something</li>
+    <li>turn the pots clockwise to adjust the volume.</li>
+  </ul>
 
-  </div>
+  <p><em>attenuverter</em></p>
+  <ul>
+    <li>connect all or a single channel.</li>
+    <li>when you turn the pot knob counter clockwise the signal is inverted.</li>
+  </ul>
 
-  <!-- mk scoped -->
-  <div class="container my-2">
-    <h1 class="subtitle is-lowercase" id="references">references</h1>
+</div>
 
-    <ul>
-      <li><a href="http://www.ecircuitcenter.com/Circuits/opdif/opdif.htm">Op Amp Differential Amplifier</a> eCircuit  Center</li>
-      <li><a href="https://sound-au.com/pots.htm">Beginners’ Guide to Potentiometers</a>  Rod Elliott (ESP)</li>
-    </ul>
+<!-- mk scoped -->
+<div class="container my-2">
+  <h1 class="subtitle is-lowercase" id="references">references</h1>
 
-  </div>
+  <ul>
+    <li><a href="http://www.ecircuitcenter.com/Circuits/opdif/opdif.htm">Op Amp Differential Amplifier</a> eCircuit  Center</li>
+    <li><a href="https://sound-au.com/pots.htm">Beginners’ Guide to Potentiometers</a>  Rod Elliott (ESP)</li>
+  </ul>
+
 </div>
 
 
