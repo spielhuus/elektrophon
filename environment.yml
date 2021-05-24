@@ -16,6 +16,9 @@ dependencies:
   - pyspice=1.4.
   - pandas=1.2.*
   - nodejs=*
+  - pytest=6.*.*
+  - pytest-json=0.4.*
   - pip:
     - schemdraw
     - itikz
+    - ipytest
