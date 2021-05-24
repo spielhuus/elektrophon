@@ -1,8 +1,19 @@
 {% assign erc_count=0 %}
 {% assign drc_count=0 %} 
 {% assign unconnected_count=0 %}
+{% assign pytest_count=0 %}
+{% assign pytest_failed=0 %}
 
-{% for pcb in site.data[include.content] %}
+{% assign pytest = page.project | append: "-test" %}
+{% for reports_data in site.data[pytest] %}
+{% for report in reports_data %}
+{% assign pytest_failed = pytest_failed | plus:report["summary"]["failed"] %}
+{% assign pytest_count = pytest_count | plus:report["summary"]["num_tests"] %}
+{% endfor %}
+{% endfor %}
+
+{% assign kibot = page.project | append: "_kibot_data" %}
+{% for pcb in site.data[kibot] %}
   {% for report in pcb.reports %}
     {% assign report_count = report.messages | size %}
     {% if report.name == 'erc' %}
@@ -18,16 +29,33 @@
 <div class="field is-grouped">
   <div class="control">
     <div class="tags has-addons is-normal">
-      <span class="tag is-dark">version</span>
-      <span class="tag is-primary">{{ page.version }}</span>
+      {% if page.status == 'draft' %}
+      <span class="tag is-dark">status</span>
+      <span class="tag is-warning">{{ page.status }}</span>
+      {% else %}
+      <span class="tag is-dark">Version </span>
+      <span class="tag is-success">{{ page.version }}</span>
+      {% endif %}    
     </div>
   </div>
+
+  {% if pytest_count > 0 %}
+  {% if pytest_failed == 0 %}
   <div class="control">
     <div class="tags has-addons is-normal">
-      <span class="tag is-dark">status</span>
-      <span class="tag is-info">{{ page.status }}</span>
+      <span class="tag is-dark">test</span>
+      <span class="tag is-success">OK</span>
     </div>
   </div>
+  {% else %}
+  <div class="control">
+    <div class="tags has-addons is-normal">
+      <span class="tag is-dark">test</span>
+      <span class="tag is-danger">{{ pytest_failed }}/{{ pytest_count }}</span>
+    </div>
+  </div>
+  {% endif %}
+  {% endif %}
 
   {% if drc_count == 0 %}
   <div class="control">

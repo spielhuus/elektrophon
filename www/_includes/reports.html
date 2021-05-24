@@ -1,36 +1,91 @@
-<div>
-    {% for pcb in site.data[include.content] %}
-    {% for report in pcb.reports %}
-    {% assign report_count = report.messages | size %}
-    {% assign total_count = total_count | plus: report_count %}
-    {% endfor %}
-    {% endfor %}
+{% assign pytest = page.project | append: "-test" %}
+{% for reports_data in site.data[pytest] %}
+{% for report in reports_data %}
+{% assign pytest_failed = pytest_failed | plus:report["summary"]["failed"] %}
+{% assign pytest_count = pytest_count | plus:report["summary"]["num_tests"] %}
+{% endfor %}
+{% endfor %}
 
-    {% unless total_count == 0 %}
-    {% for pcb in site.data[include.content] %}
-    {% for report in pcb.reports %}
-    {% assign report_count = report.messages | size %}
-    {% unless report_count == 0 %}
-    <div class="is-2 has-text-danger">
-        <i class="fas fa-exclamation-circle"></i>
-        found {{ report.messages | size }} errors in {{ report.name }} check.
+{% assign kibot = page.project | append: "_kibot_data" %}
+{% for pcb in site.data[kibot] %}
+{% for report in pcb.reports %}
+{% assign report_count = report_count | size %}
+{% if report.name == 'erc' %}
+{% assign report_count = report_count | plus:report_count %}
+{% elsif report.name == 'drc' %}
+{% assign report_count = report_count | plus:report_count %}
+{% elsif report.name == 'unconnected' %}
+{% assign report_count = report_count | plus:report_count %}
+{% endif %}    
+{% endfor %}
+{% endfor %}
+
+
+{% if pytest_count > 0 %}
+<div class="container is-large mt-1 mb-0">
+    {% unless pytest_failed == 0 %}
+    <div class="has-background-danger pl-2 pt-2 pb-2">
+        <i class="fas fa-exclamation-circle has-text-white is-size-2"></i>
+        <span class="has-text-white is-size-4">&nbsp;&nbsp;Found {{ pytest_failed }} error(s) in pytest check.</span>
     </div>
-    <div class="content">
-        <table class="report is-bordered has-background-danger-light">
-        {% for message in report.messages %}
+    <table class="table is-striped is-hoverable is-narrow mb-6">
+        <col style="width:20%">
+        <col style="width:10%">
+        <col style="width:70%">
+        {% for reports_data in site.data[pytest] %}
+        {% for report in reports_data %}
+        {% for test in report.tests %}
             <tr>
-                <td>{{ pcb.name }}</td>
-                <td>{{ message.message | strip_newlines }}</td>
-                <td>
-                {% for con in message.con %}
-                    <p>{{ con.message | strip_newlines }}</p>
-                {% endfor %}
-                </td>
+                <td>{{ test.name | regex_replace: 'tmp.*\.py::', '' }}</td>
+                <td class="{% if test.outcome=='passed' %} is-success-dark {% else %} has-text-danger-dark {% endif %}">{{ test.outcome }}</td>
+                {% assign report_rep = '-' %}
+                {% if test.outcome == "failed" %}
+                {% assign report_rep = test["call"]["longrepr"] %}
+                {% assign report_rep = report_rep | regex_replace: '>', '&lt;' %}
+                {% assign report_rep = report_rep | regex_replace: '<', '&gt;' %}
+                {% assign report_rep = report_rep | regex_replace: '\n', '<br/>' %}
+                {% endif %}
+                <td>{{ report_rep }}</td>
             </tr>
         {% endfor %}
+        {% endfor %}
+        {% endfor %}
+    </table>
+    {% endunless %}
+</div>
+{% endif %}    
+
+<div class="container is-large mt-1 mb-0">
+    {% unless report_count == 0 %}
+    {% for pcb in site.data[kibot] %}
+        {% for report in pcb.reports %}
+        {% assign report_count = report.messages | size %}
+        {% unless report_count == 0 %}
+        <div class="has-background-danger pl-2 pt-2 pb-2">
+            <i class="fas fa-exclamation-circle has-text-white is-size-2"></i>
+            <span class="has-text-white is-size-4">&nbsp;&nbsp;Found {{ report.messages | size }} errors in {{ report.name }} check.</span>
+        </div>
+        <table class="table is-striped is-hoverable is-narrow nb-6">
+            <col style="width:20%">
+            <col style="width:10%">
+            <col style="width:70%">
+                {% for message in report.messages %}
+                <tr>
+                    <td>{{ pcb.name }}</td>
+
+                    <td>{{ message.message | strip_newlines }}</td>
+                    <td>
+                    {% for con in message.con %}
+                        <p>{{ con.message | strip_newlines }}</p>
+                    {% endfor %}
+                    </td>
+                </tr>
+            {% endfor %}
         </table>
-    </div>
+    {% endunless %}
+    {% endfor %}
+    {% endfor %}
 {% endunless %}
-{% endfor %}
-{% endfor %}
-{% endunless %}
+</div>
+
+

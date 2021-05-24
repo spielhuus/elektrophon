@@ -17,6 +17,7 @@ plugins:
   - jekyll-seo-tag
   - jekyll-toc
   - jekyll-assets
+  - jekyll-regex-replace
 
 #fixed_navbar: top
 fixed_navbar: false
