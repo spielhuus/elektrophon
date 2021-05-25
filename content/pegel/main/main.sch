@@ -5,982 +5,1153 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title "pegel"
-Date "2020-09-20"
-Rev "01"
+Date "2021-05-09"
+Rev "R01"
 Comp ""
-Comment1 "schema for main circuit"
-Comment2 "voltage controlled attenuator and ring modulator"
+Comment1 "schema for main pcb"
+Comment2 "(description)"
 Comment3 ""
 Comment4 "License CC BY 4.0 - Attribution 4.0 International"
 $EndDescr
 $Comp
-L power:+15V #PWR011
-U 1 1 5F502CF7
-P 3550 6900
-F 0 "#PWR011" H 3550 6750 50  0001 C CNN
-F 1 "+15V" H 3565 7073 50  0000 C CNN
-F 2 "" H 3550 6900 50  0001 C CNN
-F 3 "" H 3550 6900 50  0001 C CNN
-	1    3550 6900
+L Mechanical:MountingHole H1
+U 1 1 6097A217
+P 9600 5950
+F 0 "H1" H 9700 5996 50  0000 L CNN
+F 1 "MountingHole" H 9700 5905 50  0000 L CNN
+F 2 "MountingHole:MountingHole_2.2mm_M2" H 9600 5950 50  0001 C CNN
+F 3 "~" H 9600 5950 50  0001 C CNN
+	1    9600 5950
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:-15V #PWR012
-U 1 1 5F503CEA
-P 3550 7500
-F 0 "#PWR012" H 3550 7600 50  0001 C CNN
-F 1 "-15V" H 3565 7673 50  0000 C CNN
-F 2 "" H 3550 7500 50  0001 C CNN
-F 3 "" H 3550 7500 50  0001 C CNN
-	1    3550 7500
-	-1   0    0    1   
-$EndComp
-Wire Wire Line
-	4300 1950 4300 1550
-Wire Wire Line
-	4350 1950 4300 1950
-Wire Wire Line
-	4950 2050 5000 2050
-Wire Wire Line
-	5000 1550 5000 2050
-Wire Wire Line
-	5100 2050 5000 2050
-Connection ~ 5000 2050
-$Comp
-L Amplifier_Operational:TL072 U1
-U 3 1 5F50185F
-P 3650 7200
-F 0 "U1" H 3608 7246 50  0000 L CNN
-F 1 "TL072" H 3608 7155 50  0000 L CNN
-F 2 "Package_DIP:DIP-8_W7.62mm" H 3650 7200 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 3650 7200 50  0001 C CNN
-F 4 "X" H 3650 7200 50  0001 C CNN "Spice_Primitive"
-F 5 "TL072c" H 3650 7200 50  0001 C CNN "Spice_Model"
-F 6 "Y" H 3650 7200 50  0001 C CNN "Spice_Netlist_Enabled"
-F 7 "/home/etienne/Documents/elektrophon/lib/spice/opamp/TL072-dual.lib" H 3650 7200 50  0001 C CNN "Spice_Lib_File"
-	3    3650 7200
+L Mechanical:MountingHole H2
+U 1 1 609809FE
+P 9600 6250
+F 0 "H2" H 9700 6296 50  0000 L CNN
+F 1 "MountingHole" H 9700 6205 50  0000 L CNN
+F 2 "MountingHole:MountingHole_2.2mm_M2" H 9600 6250 50  0001 C CNN
+F 3 "~" H 9600 6250 50  0001 C CNN
+	1    9600 6250
 	1    0    0    -1  
 $EndComp
 $Comp
-L Amplifier_Operational:TL072 U1
-U 1 1 5F4FEC7E
-P 4650 2050
-F 0 "U1" H 4650 1800 50  0000 C CNN
-F 1 "TL072" H 4650 1700 50  0000 C CNN
-F 2 "Package_DIP:DIP-8_W7.62mm" H 4650 2050 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 4650 2050 50  0001 C CNN
-F 4 "X" H 4650 2050 50  0001 C CNN "Spice_Primitive"
-F 5 "TL072c" H 4650 2050 50  0001 C CNN "Spice_Model"
-F 6 "Y" H 4650 2050 50  0001 C CNN "Spice_Netlist_Enabled"
-F 7 "/home/etienne/Documents/elektrophon/lib/spice/opamp/TL072-dual.lib" H 4650 2050 50  0001 C CNN "Spice_Lib_File"
-	1    4650 2050
-	1    0    0    1   
+L Mechanical:MountingHole H3
+U 1 1 6098DECA
+P 10350 5950
+F 0 "H3" H 10450 5996 50  0000 L CNN
+F 1 "MountingHole" H 10450 5905 50  0000 L CNN
+F 2 "MountingHole:MountingHole_2.2mm_M2" H 10350 5950 50  0001 C CNN
+F 3 "~" H 10350 5950 50  0001 C CNN
+	1    10350 5950
+	1    0    0    -1  
 $EndComp
-Text GLabel 5100 2050 2    50   Input ~ 0
+$Comp
+L Mechanical:MountingHole H4
+U 1 1 6098DED0
+P 10350 6250
+F 0 "H4" H 10450 6296 50  0000 L CNN
+F 1 "MountingHole" H 10450 6205 50  0000 L CNN
+F 2 "MountingHole:MountingHole_2.2mm_M2" H 10350 6250 50  0001 C CNN
+F 3 "~" H 10350 6250 50  0001 C CNN
+	1    10350 6250
+	1    0    0    -1  
+$EndComp
+Text GLabel 8900 5750 2    50   Input ~ 0
 Xa
-Wire Wire Line
-	4300 3050 4300 2650
-Wire Wire Line
-	4350 3050 4300 3050
-Wire Wire Line
-	4950 3150 5000 3150
-Wire Wire Line
-	5000 2650 5000 3150
-Wire Wire Line
-	5100 3150 5000 3150
-Connection ~ 5000 3150
-Text GLabel 5100 3150 2    50   Input ~ 0
+Text GLabel 8900 5850 2    50   Input ~ 0
 Ya
+Text GLabel 8900 5950 2    50   Input ~ 0
+OUTa
+Text GLabel 8900 6050 2    50   Input ~ 0
+Xb
+Text GLabel 8900 6150 2    50   Input ~ 0
+Yb
+Text GLabel 8900 6250 2    50   Input ~ 0
+OUTb
 $Comp
-L power:+15V #PWR020
-U 1 1 5F63E167
-P 4450 6900
-F 0 "#PWR020" H 4450 6750 50  0001 C CNN
-F 1 "+15V" H 4465 7073 50  0000 C CNN
-F 2 "" H 4450 6900 50  0001 C CNN
-F 3 "" H 4450 6900 50  0001 C CNN
-	1    4450 6900
+L power:GND #PWR037
+U 1 1 609EFA41
+P 8900 5650
+F 0 "#PWR037" H 8900 5400 50  0001 C CNN
+F 1 "GND" V 8905 5522 50  0000 R CNN
+F 2 "" H 8900 5650 50  0001 C CNN
+F 3 "" H 8900 5650 50  0001 C CNN
+	1    8900 5650
+	0    -1   -1   0   
+$EndComp
+NoConn ~ 5500 4700
+Wire Wire Line
+	6650 4600 6800 4600
+Text GLabel 6800 4600 2    50   Input ~ 0
+OUTb
+Wire Wire Line
+	3550 3950 3850 3950
+Wire Wire Line
+	3850 4300 3850 3950
+Wire Wire Line
+	4500 4300 3850 4300
+Wire Wire Line
+	3550 5050 3900 5050
+Wire Wire Line
+	3900 4700 4500 4700
+Wire Wire Line
+	3900 5050 3900 4700
+Wire Wire Line
+	2700 5150 2900 5150
+Wire Wire Line
+	2700 4050 2900 4050
+Wire Wire Line
+	5900 5050 6000 5050
+Wire Wire Line
+	5550 5050 5600 5050
+Wire Wire Line
+	5550 5100 5550 5050
+$Comp
+L power:GND #PWR026
+U 1 1 609D21B0
+P 5550 5100
+F 0 "#PWR026" H 5550 4850 50  0001 C CNN
+F 1 "GND" H 5555 4927 50  0000 C CNN
+F 2 "" H 5550 5100 50  0001 C CNN
+F 3 "" H 5550 5100 50  0001 C CNN
+	1    5550 5100
 	1    0    0    -1  
 $EndComp
-$Comp
-L power:-15V #PWR021
-U 1 1 5F63E16D
-P 4450 7500
-F 0 "#PWR021" H 4450 7600 50  0001 C CNN
-F 1 "-15V" H 4465 7673 50  0000 C CNN
-F 2 "" H 4450 7500 50  0001 C CNN
-F 3 "" H 4450 7500 50  0001 C CNN
-	1    4450 7500
-	-1   0    0    1   
-$EndComp
-$Comp
-L Amplifier_Operational:TL072 U2
-U 3 1 5F63E178
-P 4550 7200
-F 0 "U2" H 4508 7246 50  0000 L CNN
-F 1 "TL072" H 4508 7155 50  0000 L CNN
-F 2 "Package_DIP:DIP-8_W7.62mm" H 4550 7200 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 4550 7200 50  0001 C CNN
-F 4 "X" H 4550 7200 50  0001 C CNN "Spice_Primitive"
-F 5 "TL072c" H 4550 7200 50  0001 C CNN "Spice_Model"
-F 6 "Y" H 4550 7200 50  0001 C CNN "Spice_Netlist_Enabled"
-F 7 "/home/etienne/Documents/elektrophon/lib/spice/opamp/TL072-dual.lib" H 4550 7200 50  0001 C CNN "Spice_Lib_File"
-	3    4550 7200
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:+15V #PWR026
-U 1 1 5F816C5C
-P 6050 7300
-F 0 "#PWR026" H 6050 7150 50  0001 C CNN
-F 1 "+15V" H 6065 7473 50  0000 C CNN
-F 2 "" H 6050 7300 50  0001 C CNN
-F 3 "" H 6050 7300 50  0001 C CNN
-	1    6050 7300
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:-15V #PWR029
-U 1 1 5F816FAE
-P 6300 7300
-F 0 "#PWR029" H 6300 7400 50  0001 C CNN
-F 1 "-15V" H 6315 7473 50  0000 C CNN
-F 2 "" H 6300 7300 50  0001 C CNN
-F 3 "" H 6300 7300 50  0001 C CNN
-	1    6300 7300
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR030
-U 1 1 5F817A91
-P 6550 7400
-F 0 "#PWR030" H 6550 7150 50  0001 C CNN
-F 1 "GND" H 6555 7227 50  0000 C CNN
-F 2 "" H 6550 7400 50  0001 C CNN
-F 3 "" H 6550 7400 50  0001 C CNN
-	1    6550 7400
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:C C3
-U 1 1 5F6F526B
-P 3250 7050
-F 0 "C3" H 3365 7096 50  0000 L CNN
-F 1 "0.1u" H 3365 7005 50  0000 L CNN
-F 2 "Capacitor_THT:C_Disc_D3.4mm_W2.1mm_P2.50mm" H 3288 6900 50  0001 C CNN
-F 3 "~" H 3250 7050 50  0001 C CNN
-F 4 "C" H 3250 7050 50  0001 C CNN "Spice_Primitive"
-F 5 "0.1u" H 3250 7050 50  0001 C CNN "Spice_Model"
-F 6 "N" H 3250 7050 50  0001 C CNN "Spice_Netlist_Enabled"
-	1    3250 7050
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:C C4
-U 1 1 5F6F586F
-P 3250 7350
-F 0 "C4" H 3365 7396 50  0000 L CNN
-F 1 "0.1u" H 3365 7305 50  0000 L CNN
-F 2 "Capacitor_THT:C_Disc_D3.4mm_W2.1mm_P2.50mm" H 3288 7200 50  0001 C CNN
-F 3 "~" H 3250 7350 50  0001 C CNN
-F 4 "C" H 3250 7350 50  0001 C CNN "Spice_Primitive"
-F 5 "0.1u" H 3250 7350 50  0001 C CNN "Spice_Model"
-F 6 "N" H 3250 7350 50  0001 C CNN "Spice_Netlist_Enabled"
-	1    3250 7350
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	3250 6900 3550 6900
-Wire Wire Line
-	3550 7500 3250 7500
-Connection ~ 3550 7500
-Connection ~ 3550 6900
-$Comp
-L power:GND #PWR010
-U 1 1 5F70ACFD
-P 3050 7250
-F 0 "#PWR010" H 3050 7000 50  0001 C CNN
-F 1 "GND" H 3055 7077 50  0000 C CNN
-F 2 "" H 3050 7250 50  0001 C CNN
-F 3 "" H 3050 7250 50  0001 C CNN
-	1    3050 7250
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	3050 7250 3050 7200
-Wire Wire Line
-	3050 7200 3250 7200
-Connection ~ 3250 7200
-$Comp
-L Device:C C5
-U 1 1 5F7116CC
-P 4150 7050
-F 0 "C5" H 4265 7096 50  0000 L CNN
-F 1 "0.1u" H 4265 7005 50  0000 L CNN
-F 2 "Capacitor_THT:C_Disc_D3.4mm_W2.1mm_P2.50mm" H 4188 6900 50  0001 C CNN
-F 3 "~" H 4150 7050 50  0001 C CNN
-F 4 "C" H 4150 7050 50  0001 C CNN "Spice_Primitive"
-F 5 "0.1u" H 4150 7050 50  0001 C CNN "Spice_Model"
-F 6 "N" H 4150 7050 50  0001 C CNN "Spice_Netlist_Enabled"
-	1    4150 7050
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:C C6
-U 1 1 5F7116D2
-P 4150 7350
-F 0 "C6" H 4265 7396 50  0000 L CNN
-F 1 "0.1u" H 4265 7305 50  0000 L CNN
-F 2 "Capacitor_THT:C_Disc_D3.4mm_W2.1mm_P2.50mm" H 4188 7200 50  0001 C CNN
-F 3 "~" H 4150 7350 50  0001 C CNN
-F 4 "C" H 4150 7350 50  0001 C CNN "Spice_Primitive"
-F 5 "0.1u" H 4150 7350 50  0001 C CNN "Spice_Model"
-F 6 "N" H 4150 7350 50  0001 C CNN "Spice_Netlist_Enabled"
-	1    4150 7350
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	4150 6900 4450 6900
-Wire Wire Line
-	4450 7500 4150 7500
-$Comp
-L power:GND #PWR016
-U 1 1 5F7116DA
-P 3950 7250
-F 0 "#PWR016" H 3950 7000 50  0001 C CNN
-F 1 "GND" H 3955 7077 50  0000 C CNN
-F 2 "" H 3950 7250 50  0001 C CNN
-F 3 "" H 3950 7250 50  0001 C CNN
-	1    3950 7250
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	3950 7250 3950 7200
-Wire Wire Line
-	3950 7200 4150 7200
-Connection ~ 4150 7200
-Connection ~ 4450 7500
-Connection ~ 4450 6900
-$Comp
-L Amplifier_Operational:TL072 U1
-U 2 1 5F693502
-P 4650 3150
-F 0 "U1" H 4650 2783 50  0000 C CNN
-F 1 "TL072" H 4650 2874 50  0000 C CNN
-F 2 "Package_DIP:DIP-8_W7.62mm" H 4650 3150 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 4650 3150 50  0001 C CNN
-F 4 "X" H 4650 3150 50  0001 C CNN "Spice_Primitive"
-F 5 "TL072c" H 4650 3150 50  0001 C CNN "Spice_Model"
-F 6 "Y" H 4650 3150 50  0001 C CNN "Spice_Netlist_Enabled"
-F 7 "/home/etienne/Documents/elektrophon/lib/spice/opamp/TL072-dual.lib" H 4650 3150 50  0001 C CNN "Spice_Lib_File"
-	2    4650 3150
-	1    0    0    1   
-$EndComp
-$Comp
-L power:PWR_FLAG #FLG02
-U 1 1 5F737716
-P 6050 7300
-F 0 "#FLG02" H 6050 7375 50  0001 C CNN
-F 1 "PWR_FLAG" H 6050 7473 50  0001 C CNN
-F 2 "" H 6050 7300 50  0001 C CNN
-F 3 "~" H 6050 7300 50  0001 C CNN
-	1    6050 7300
-	-1   0    0    1   
-$EndComp
-$Comp
-L power:PWR_FLAG #FLG03
-U 1 1 5F737C0D
-P 6300 7300
-F 0 "#FLG03" H 6300 7375 50  0001 C CNN
-F 1 "PWR_FLAG" H 6300 7473 50  0001 C CNN
-F 2 "" H 6300 7300 50  0001 C CNN
-F 3 "~" H 6300 7300 50  0001 C CNN
-	1    6300 7300
-	-1   0    0    1   
-$EndComp
-$Comp
-L power:PWR_FLAG #FLG04
-U 1 1 5F737FC5
-P 6550 7400
-F 0 "#FLG04" H 6550 7475 50  0001 C CNN
-F 1 "PWR_FLAG" H 6550 7573 50  0001 C CNN
-F 2 "" H 6550 7400 50  0001 C CNN
-F 3 "~" H 6550 7400 50  0001 C CNN
-	1    6550 7400
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	7300 3150 7250 3150
-$Comp
-L elektrophon:AD633 U3
-U 1 1 5F74D4F3
-P 6250 2950
-F 0 "U3" H 6450 3550 50  0000 C CNN
-F 1 "AD633" H 6450 3450 50  0000 C CNN
-F 2 "Package_DIP:DIP-8_W7.62mm" H 6850 2350 50  0001 C CNN
-F 3 "https://www.analog.com/media/en/technical-documentation/data-sheets/AD633.pdf" H 7100 2550 50  0001 C CNN
-F 4 "X" H 6250 2950 50  0001 C CNN "Spice_Primitive"
-F 5 "AD633" H 6250 2950 50  0001 C CNN "Spice_Model"
-F 6 "Y" H 6250 2950 50  0001 C CNN "Spice_Netlist_Enabled"
-F 7 "/home/etienne/Documents/elektrophon/lib/spice/opamp/ad633.lib" H 6250 2950 50  0001 C CNN "Spice_Lib_File"
-	1    6250 2950
-	1    0    0    -1  
-$EndComp
-Text GLabel 5750 2750 0    50   Input ~ 0
-Xa
-Text GLabel 5750 3150 0    50   Input ~ 0
-Ya
-Text GLabel 6750 3150 2    50   Input ~ 0
-Za
-$Comp
-L power:GND #PWR025
-U 1 1 5F755EA3
-P 5500 3450
-F 0 "#PWR025" H 5500 3200 50  0001 C CNN
-F 1 "GND" H 5505 3277 50  0000 C CNN
-F 2 "" H 5500 3450 50  0001 C CNN
-F 3 "" H 5500 3450 50  0001 C CNN
-	1    5500 3450
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	4300 4100 4300 3700
-Wire Wire Line
-	4350 4100 4300 4100
-Wire Wire Line
-	4950 4200 5000 4200
-Wire Wire Line
-	5000 3700 5000 4200
-Wire Wire Line
-	5100 4200 5000 4200
-Connection ~ 5000 4200
-Text GLabel 5100 4200 2    50   Input ~ 0
-Za
-$Comp
-L Amplifier_Operational:TL072 U2
-U 2 1 5F7BABD5
-P 4650 4200
-F 0 "U2" H 4650 3833 50  0000 C CNN
-F 1 "TL072" H 4650 3924 50  0000 C CNN
-F 2 "Package_DIP:DIP-8_W7.62mm" H 4650 4200 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 4650 4200 50  0001 C CNN
-F 4 "X" H 4650 4200 50  0001 C CNN "Spice_Primitive"
-F 5 "TL072c" H 4650 4200 50  0001 C CNN "Spice_Model"
-F 6 "Y" H 4650 4200 50  0001 C CNN "Spice_Netlist_Enabled"
-F 7 "/home/etienne/Documents/elektrophon/lib/spice/opamp/TL072-dual.lib" H 4650 4200 50  0001 C CNN "Spice_Lib_File"
-	2    4650 4200
-	1    0    0    1   
-$EndComp
-$Comp
-L Device:C C7
-U 1 1 5F7DF1DD
-P 5050 7050
-F 0 "C7" H 5300 7100 50  0000 R CNN
-F 1 "0.1u" H 5350 7000 50  0000 R CNN
-F 2 "Capacitor_THT:C_Disc_D3.4mm_W2.1mm_P2.50mm" H 5088 6900 50  0001 C CNN
-F 3 "~" H 5050 7050 50  0001 C CNN
-F 4 "C" H 5050 7050 50  0001 C CNN "Spice_Primitive"
-F 5 "0.1u" H 5050 7050 50  0001 C CNN "Spice_Model"
-F 6 "N" H 5050 7050 50  0001 C CNN "Spice_Netlist_Enabled"
-	1    5050 7050
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	6250 2250 6250 2550
-$Comp
-L Device:C C8
-U 1 1 5F7E6B68
-P 5050 7350
-F 0 "C8" H 5300 7400 50  0000 R CNN
-F 1 "0.1u" H 5350 7300 50  0000 R CNN
-F 2 "Capacitor_THT:C_Disc_D3.4mm_W2.1mm_P2.50mm" H 5088 7200 50  0001 C CNN
-F 3 "~" H 5050 7350 50  0001 C CNN
-F 4 "C" H 5050 7350 50  0001 C CNN "Spice_Primitive"
-F 5 "0.1u" H 5050 7350 50  0001 C CNN "Spice_Model"
-F 6 "N" H 5050 7350 50  0001 C CNN "Spice_Netlist_Enabled"
-	1    5050 7350
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	6250 3850 6250 3550
-$Comp
-L power:+15V #PWR027
-U 1 1 5F7EE1F9
-P 6250 2250
-F 0 "#PWR027" H 6250 2100 50  0001 C CNN
-F 1 "+15V" H 6265 2423 50  0000 C CNN
-F 2 "" H 6250 2250 50  0001 C CNN
-F 3 "" H 6250 2250 50  0001 C CNN
-	1    6250 2250
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:-15V #PWR028
-U 1 1 5F7F0FCE
-P 6250 3850
-F 0 "#PWR028" H 6250 3950 50  0001 C CNN
-F 1 "-15V" H 6265 4023 50  0000 C CNN
-F 2 "" H 6250 3850 50  0001 C CNN
-F 3 "" H 6250 3850 50  0001 C CNN
-	1    6250 3850
-	-1   0    0    1   
-$EndComp
-Wire Wire Line
-	5500 2950 5500 3350
-Wire Wire Line
-	5500 2950 5750 2950
-Wire Wire Line
-	5750 3350 5500 3350
-Connection ~ 5500 3350
-Wire Wire Line
-	5500 3350 5500 3450
-$Comp
-L Amplifier_Operational:TL072 U2
-U 1 1 5F7B8552
-P 7600 3050
-F 0 "U2" H 7600 3400 50  0000 C CNN
-F 1 "TL072" H 7600 3300 50  0000 C CNN
-F 2 "Package_DIP:DIP-8_W7.62mm" H 7600 3050 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 7600 3050 50  0001 C CNN
-F 4 "X" H 7600 3050 50  0001 C CNN "Spice_Primitive"
-F 5 "TL072c" H 7600 3050 50  0001 C CNN "Spice_Model"
-F 6 "Y" H 7600 3050 50  0001 C CNN "Spice_Netlist_Enabled"
-F 7 "/home/etienne/Documents/elektrophon/lib/spice/opamp/TL072-dual.lib" H 7600 3050 50  0001 C CNN "Spice_Lib_File"
-	1    7600 3050
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	4300 1550 5000 1550
-Wire Wire Line
-	4300 2650 5000 2650
-Wire Wire Line
-	4300 3700 5000 3700
-Wire Wire Line
-	6750 2950 7300 2950
 $Comp
 L Device:R R4
-U 1 1 5F78B0A7
-P 7600 3500
-F 0 "R4" V 7393 3500 50  0000 C CNN
-F 1 "10k" V 7484 3500 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 7530 3500 50  0001 C CNN
-F 3 "~" H 7600 3500 50  0001 C CNN
-	1    7600 3500
+U 1 1 609D21AA
+P 5750 5050
+F 0 "R4" V 5543 5050 50  0000 C CNN
+F 1 "10k" V 5634 5050 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 5680 5050 50  0001 C CNN
+F 3 "~" H 5750 5050 50  0001 C CNN
+	1    5750 5050
 	0    1    1    0   
 $EndComp
-Connection ~ 7900 3050
 Wire Wire Line
-	7750 3500 7900 3500
+	6000 5050 6000 4700
+Connection ~ 6000 5050
 Wire Wire Line
-	7900 3500 7900 3050
+	6200 5050 6000 5050
 Wire Wire Line
-	7450 3500 7250 3500
+	6650 5050 6650 4600
 Wire Wire Line
-	7250 3500 7250 3150
+	6500 5050 6650 5050
+$Comp
+L Device:R R6
+U 1 1 609D219F
+P 6350 5050
+F 0 "R6" V 6143 5050 50  0000 C CNN
+F 1 "10k" V 6234 5050 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 6280 5050 50  0001 C CNN
+F 3 "~" H 6350 5050 50  0001 C CNN
+	1    6350 5050
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5500 4500 6050 4500
+Wire Wire Line
+	2850 4550 3550 4550
+Wire Wire Line
+	2850 3450 3550 3450
+Wire Wire Line
+	4250 4900 4250 5000
+Wire Wire Line
+	4500 4900 4250 4900
+Wire Wire Line
+	4250 4500 4500 4500
+Connection ~ 4250 4900
+Wire Wire Line
+	4250 4500 4250 4900
+$Comp
+L power:-15V #PWR022
+U 1 1 609D2187
+P 5000 5400
+F 0 "#PWR022" H 5000 5500 50  0001 C CNN
+F 1 "-15V" H 5015 5573 50  0000 C CNN
+F 2 "" H 5000 5400 50  0001 C CNN
+F 3 "" H 5000 5400 50  0001 C CNN
+	1    5000 5400
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:+15V #PWR021
+U 1 1 609D2181
+P 5000 3800
+F 0 "#PWR021" H 5000 3650 50  0001 C CNN
+F 1 "+15V" H 5015 3973 50  0000 C CNN
+F 2 "" H 5000 3800 50  0001 C CNN
+F 3 "" H 5000 3800 50  0001 C CNN
+	1    5000 3800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5000 5400 5000 5100
+Wire Wire Line
+	5000 3800 5000 4100
+$Comp
+L power:GND #PWR015
+U 1 1 609D2179
+P 4250 5000
+F 0 "#PWR015" H 4250 4750 50  0001 C CNN
+F 1 "GND" H 4255 4827 50  0000 C CNN
+F 2 "" H 4250 5000 50  0001 C CNN
+F 3 "" H 4250 5000 50  0001 C CNN
+	1    4250 5000
+	1    0    0    -1  
+$EndComp
+$Comp
+L elektrophon:AD633 U4
+U 1 1 609D2173
+P 5000 4500
+F 0 "U4" H 5200 5100 50  0000 C CNN
+F 1 "AD633" H 5200 5000 50  0000 C CNN
+F 2 "Package_DIP:DIP-8_W7.62mm" H 5600 3900 50  0001 C CNN
+F 3 "https://www.analog.com/media/en/technical-documentation/data-sheets/AD633.pdf" H 5850 4100 50  0001 C CNN
+F 4 "X" H 5000 4500 50  0001 C CNN "Spice_Primitive"
+F 5 "AD633" H 5000 4500 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 5000 4500 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "/home/etienne/Documents/elektrophon/lib/spice/opamp/ad633.lib" H 5000 4500 50  0001 C CNN "Spice_Lib_File"
+	1    5000 4500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6050 4700 6000 4700
+Text GLabel 2700 5150 0    50   Input ~ 0
+Yb
+Wire Wire Line
+	3550 4550 3550 5050
+Connection ~ 3550 5050
+Wire Wire Line
+	3500 5050 3550 5050
+Wire Wire Line
+	2900 4950 2850 4950
+Wire Wire Line
+	2850 4950 2850 4550
+Text GLabel 2700 4050 0    50   Input ~ 0
+Xb
+Wire Wire Line
+	3550 3450 3550 3950
+Connection ~ 3550 3950
+Wire Wire Line
+	3500 3950 3550 3950
+Wire Wire Line
+	2900 3850 2850 3850
+Wire Wire Line
+	2850 3850 2850 3450
+NoConn ~ 5500 2250
+Wire Wire Line
+	6650 2150 6800 2150
+Text GLabel 6800 2150 2    50   Input ~ 0
+OUTa
+Wire Wire Line
+	3550 1500 3850 1500
+Wire Wire Line
+	3850 1850 3850 1500
+Wire Wire Line
+	4500 1850 3850 1850
+Wire Wire Line
+	3550 2600 3900 2600
+Wire Wire Line
+	3900 2250 4500 2250
+Wire Wire Line
+	3900 2600 3900 2250
+Wire Wire Line
+	2700 2700 2900 2700
+Wire Wire Line
+	2700 1600 2900 1600
+Wire Wire Line
+	5900 2600 6000 2600
+Wire Wire Line
+	5550 2600 5600 2600
+Wire Wire Line
+	5550 2650 5550 2600
+$Comp
+L power:GND #PWR025
+U 1 1 5F793DA6
+P 5550 2650
+F 0 "#PWR025" H 5550 2400 50  0001 C CNN
+F 1 "GND" H 5555 2477 50  0000 C CNN
+F 2 "" H 5550 2650 50  0001 C CNN
+F 3 "" H 5550 2650 50  0001 C CNN
+	1    5550 2650
+	1    0    0    -1  
+$EndComp
 $Comp
 L Device:R R3
 U 1 1 5F793822
-P 7000 3500
-F 0 "R3" V 6793 3500 50  0000 C CNN
-F 1 "10k" V 6884 3500 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 6930 3500 50  0001 C CNN
-F 3 "~" H 7000 3500 50  0001 C CNN
-	1    7000 3500
+P 5750 2600
+F 0 "R3" V 5543 2600 50  0000 C CNN
+F 1 "10k" V 5634 2600 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 5680 2600 50  0001 C CNN
+F 3 "~" H 5750 2600 50  0001 C CNN
+	1    5750 2600
 	0    1    1    0   
 $EndComp
-$Comp
-L power:GND #PWR031
-U 1 1 5F793DA6
-P 6800 3550
-F 0 "#PWR031" H 6800 3300 50  0001 C CNN
-F 1 "GND" H 6805 3377 50  0000 C CNN
-F 2 "" H 6800 3550 50  0001 C CNN
-F 3 "" H 6800 3550 50  0001 C CNN
-	1    6800 3550
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
-	6800 3550 6800 3500
+	6000 2600 6000 2250
+Connection ~ 6000 2600
 Wire Wire Line
-	6800 3500 6850 3500
+	6200 2600 6000 2600
 Wire Wire Line
-	7150 3500 7250 3500
-Connection ~ 7250 3500
+	6650 2600 6650 2150
 Wire Wire Line
-	4150 2150 4350 2150
-Wire Wire Line
-	4150 3250 4350 3250
-Wire Wire Line
-	4150 4300 4350 4300
-$Comp
-L power:GND #PWR013
-U 1 1 5F65BBA2
-P 3700 1750
-F 0 "#PWR013" H 3700 1500 50  0001 C CNN
-F 1 "GND" V 3705 1622 50  0000 R CNN
-F 2 "" H 3700 1750 50  0001 C CNN
-F 3 "" H 3700 1750 50  0001 C CNN
-	1    3700 1750
-	0    -1   -1   0   
-$EndComp
-NoConn ~ 3700 1950
-$Comp
-L Connector:AudioJack2_SwitchT J2
-U 1 1 5F658247
-P 3500 1850
-F 0 "J2" H 3532 2175 50  0000 C CNN
-F 1 "IN_X" H 3532 2084 50  0000 C CNN
-F 2 "elektrophon:Jack_3.5mm_WQP-PJ398SM_Vertical" H 3500 1850 50  0001 C CNN
-F 3 "~" H 3500 1850 50  0001 C CNN
-F 4 "X" H 3500 1850 50  0001 C CNN "Spice_Primitive"
-F 5 "IN_1" H 3500 1850 50  0001 C CNN "Spice_Model"
-F 6 "Y" H 3500 1850 50  0001 C CNN "Spice_Netlist_Enabled"
-F 7 "S T" H 3500 1850 50  0001 C CNN "Spice_Node_Sequence"
-	1    3500 1850
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R_POT RV1
-U 1 1 5F613554
-P 4000 2150
-F 0 "RV1" H 3931 2196 50  0000 R CNN
-F 1 "100k" H 3931 2105 50  0000 R CNN
-F 2 "elektrophon:Potentiometer_Alpha_RD901F-40-00D_Single_Vertical" H 4000 2150 50  0001 C CNN
-F 3 "~" H 4000 2150 50  0001 C CNN
-F 4 "X" H 4000 2150 50  0001 C CNN "Spice_Primitive"
-F 5 "RV1" H 4000 2150 50  0001 C CNN "Spice_Model"
-F 6 "Y" H 4000 2150 50  0001 C CNN "Spice_Netlist_Enabled"
-	1    4000 2150
-	1    0    0    1   
-$EndComp
-Wire Wire Line
-	3700 1850 4000 1850
-Wire Wire Line
-	4000 1850 4000 2000
-$Comp
-L power:GND #PWR017
-U 1 1 5F616FAE
-P 4000 2300
-F 0 "#PWR017" H 4000 2050 50  0001 C CNN
-F 1 "GND" H 4005 2127 50  0000 C CNN
-F 2 "" H 4000 2300 50  0001 C CNN
-F 3 "" H 4000 2300 50  0001 C CNN
-	1    4000 2300
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR015
-U 1 1 5F635024
-P 3700 3900
-F 0 "#PWR015" H 3700 3650 50  0001 C CNN
-F 1 "GND" V 3705 3772 50  0000 R CNN
-F 2 "" H 3700 3900 50  0001 C CNN
-F 3 "" H 3700 3900 50  0001 C CNN
-	1    3700 3900
-	0    -1   -1   0   
-$EndComp
-$Comp
-L Connector:AudioJack2_SwitchT J4
-U 1 1 5F63502F
-P 3500 4000
-F 0 "J4" H 3532 4325 50  0000 C CNN
-F 1 "IN_Z" H 3532 4234 50  0000 C CNN
-F 2 "elektrophon:Jack_3.5mm_WQP-PJ398SM_Vertical" H 3500 4000 50  0001 C CNN
-F 3 "~" H 3500 4000 50  0001 C CNN
-F 4 "X" H 3500 4000 50  0001 C CNN "Spice_Primitive"
-F 5 "IN_2" H 3500 4000 50  0001 C CNN "Spice_Model"
-F 6 "Y" H 3500 4000 50  0001 C CNN "Spice_Netlist_Enabled"
-F 7 "S T" H 3500 4000 50  0001 C CNN "Spice_Node_Sequence"
-	1    3500 4000
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R_POT RV3
-U 1 1 5F635038
-P 4000 4300
-F 0 "RV3" H 3931 4346 50  0000 R CNN
-F 1 "100k" H 3931 4255 50  0000 R CNN
-F 2 "elektrophon:Potentiometer_Alpha_RD901F-40-00D_Single_Vertical" H 4000 4300 50  0001 C CNN
-F 3 "~" H 4000 4300 50  0001 C CNN
-F 4 "X" H 4000 4300 50  0001 C CNN "Spice_Primitive"
-F 5 "RV2" H 4000 4300 50  0001 C CNN "Spice_Model"
-F 6 "Y" H 4000 4300 50  0001 C CNN "Spice_Netlist_Enabled"
-	1    4000 4300
-	1    0    0    1   
-$EndComp
-Wire Wire Line
-	3700 4000 4000 4000
-Wire Wire Line
-	4000 4000 4000 4150
-$Comp
-L power:GND #PWR019
-U 1 1 5F635041
-P 4000 4450
-F 0 "#PWR019" H 4000 4200 50  0001 C CNN
-F 1 "GND" H 4005 4277 50  0000 C CNN
-F 2 "" H 4000 4450 50  0001 C CNN
-F 3 "" H 4000 4450 50  0001 C CNN
-	1    4000 4450
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	8300 3050 8550 3050
-$Comp
-L power:GND #PWR032
-U 1 1 5F80AB42
-P 8550 2950
-F 0 "#PWR032" H 8550 2700 50  0001 C CNN
-F 1 "GND" V 8555 2822 50  0000 R CNN
-F 2 "" H 8550 2950 50  0001 C CNN
-F 3 "" H 8550 2950 50  0001 C CNN
-	1    8550 2950
-	0    1    1    0   
-$EndComp
-NoConn ~ 8550 3150
-$Comp
-L Connector:AudioJack2_SwitchT J5
-U 1 1 5F7FAFCA
-P 8750 3050
-F 0 "J5" H 8782 3375 50  0000 C CNN
-F 1 "OUT" H 8782 3284 50  0000 C CNN
-F 2 "elektrophon:Jack_3.5mm_WQP-PJ398SM_Vertical" H 8750 3050 50  0001 C CNN
-F 3 "~" H 8750 3050 50  0001 C CNN
-F 4 "X" H 8750 3050 50  0001 C CNN "Spice_Primitive"
-F 5 "OUT" H 8750 3050 50  0001 C CNN "Spice_Model"
-F 6 "Y" H 8750 3050 50  0001 C CNN "Spice_Netlist_Enabled"
-F 7 "S T" H 8750 3050 50  0001 C CNN "Spice_Node_Sequence"
-	1    8750 3050
-	-1   0    0    -1  
-$EndComp
+	6500 2600 6650 2600
 $Comp
 L Device:R R5
-U 1 1 5F7FA5E2
-P 8150 3050
-F 0 "R5" V 8357 3050 50  0000 C CNN
-F 1 "1k" V 8266 3050 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 8080 3050 50  0001 C CNN
-F 3 "~" H 8150 3050 50  0001 C CNN
-	1    8150 3050
-	0    -1   -1   0   
-$EndComp
-$Comp
-L power:GND #PWR014
-U 1 1 5F74A953
-P 3700 2850
-F 0 "#PWR014" H 3700 2600 50  0001 C CNN
-F 1 "GND" V 3705 2722 50  0000 R CNN
-F 2 "" H 3700 2850 50  0001 C CNN
-F 3 "" H 3700 2850 50  0001 C CNN
-	1    3700 2850
-	0    -1   -1   0   
-$EndComp
-NoConn ~ 3700 3050
-$Comp
-L Connector:AudioJack2_SwitchT J3
-U 1 1 5F74A95E
-P 3500 2950
-F 0 "J3" H 3532 3275 50  0000 C CNN
-F 1 "IN_Y" H 3532 3184 50  0000 C CNN
-F 2 "elektrophon:Jack_3.5mm_WQP-PJ398SM_Vertical" H 3500 2950 50  0001 C CNN
-F 3 "~" H 3500 2950 50  0001 C CNN
-F 4 "X" H 3500 2950 50  0001 C CNN "Spice_Primitive"
-F 5 "IN_1" H 3500 2950 50  0001 C CNN "Spice_Model"
-F 6 "Y" H 3500 2950 50  0001 C CNN "Spice_Netlist_Enabled"
-F 7 "S T" H 3500 2950 50  0001 C CNN "Spice_Node_Sequence"
-	1    3500 2950
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R_POT RV2
-U 1 1 5F74A967
-P 4000 3250
-F 0 "RV2" H 3931 3296 50  0000 R CNN
-F 1 "100k" H 3931 3205 50  0000 R CNN
-F 2 "elektrophon:Potentiometer_Alpha_RD901F-40-00D_Single_Vertical" H 4000 3250 50  0001 C CNN
-F 3 "~" H 4000 3250 50  0001 C CNN
-F 4 "X" H 4000 3250 50  0001 C CNN "Spice_Primitive"
-F 5 "RV1" H 4000 3250 50  0001 C CNN "Spice_Model"
-F 6 "Y" H 4000 3250 50  0001 C CNN "Spice_Netlist_Enabled"
-	1    4000 3250
-	1    0    0    1   
+U 1 1 5F78B0A7
+P 6350 2600
+F 0 "R5" V 6143 2600 50  0000 C CNN
+F 1 "10k" V 6234 2600 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 6280 2600 50  0001 C CNN
+F 3 "~" H 6350 2600 50  0001 C CNN
+	1    6350 2600
+	0    1    1    0   
 $EndComp
 Wire Wire Line
-	3700 2950 4000 2950
+	5500 2050 6050 2050
 Wire Wire Line
-	4000 2950 4000 3100
+	2850 2100 3550 2100
+Wire Wire Line
+	2850 1000 3550 1000
+Wire Wire Line
+	4250 2450 4250 2550
+Wire Wire Line
+	4500 2450 4250 2450
+Wire Wire Line
+	4250 2050 4500 2050
+Connection ~ 4250 2450
+Wire Wire Line
+	4250 2050 4250 2450
 $Comp
-L power:GND #PWR018
-U 1 1 5F74A96F
-P 4000 3400
-F 0 "#PWR018" H 4000 3150 50  0001 C CNN
-F 1 "GND" H 4005 3227 50  0000 C CNN
-F 2 "" H 4000 3400 50  0001 C CNN
-F 3 "" H 4000 3400 50  0001 C CNN
-	1    4000 3400
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	3700 4100 4200 4100
-Wire Wire Line
-	4200 4100 4200 2950
-Wire Wire Line
-	4200 2950 4000 2950
-Connection ~ 4000 2950
-Wire Wire Line
-	7900 3050 8000 3050
-$Comp
-L power:GND #PWR022
-U 1 1 5FD009DD
-P 4850 7250
-F 0 "#PWR022" H 4850 7000 50  0001 C CNN
-F 1 "GND" H 4855 7077 50  0000 C CNN
-F 2 "" H 4850 7250 50  0001 C CNN
-F 3 "" H 4850 7250 50  0001 C CNN
-	1    4850 7250
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	4850 7250 4850 7200
-Wire Wire Line
-	4850 7200 5050 7200
-Connection ~ 5050 7200
-$Comp
-L power:-15V #PWR024
-U 1 1 5FD03C19
-P 5050 7500
-F 0 "#PWR024" H 5050 7600 50  0001 C CNN
-F 1 "-15V" H 5065 7673 50  0000 C CNN
-F 2 "" H 5050 7500 50  0001 C CNN
-F 3 "" H 5050 7500 50  0001 C CNN
-	1    5050 7500
+L power:-15V #PWR020
+U 1 1 5F7F0FCE
+P 5000 2950
+F 0 "#PWR020" H 5000 3050 50  0001 C CNN
+F 1 "-15V" H 5015 3123 50  0000 C CNN
+F 2 "" H 5000 2950 50  0001 C CNN
+F 3 "" H 5000 2950 50  0001 C CNN
+	1    5000 2950
 	-1   0    0    1   
 $EndComp
 $Comp
-L power:+15V #PWR023
-U 1 1 5FD044D0
-P 5050 6900
-F 0 "#PWR023" H 5050 6750 50  0001 C CNN
-F 1 "+15V" H 5065 7073 50  0000 C CNN
-F 2 "" H 5050 6900 50  0001 C CNN
-F 3 "" H 5050 6900 50  0001 C CNN
-	1    5050 6900
+L power:+15V #PWR019
+U 1 1 5F7EE1F9
+P 5000 1350
+F 0 "#PWR019" H 5000 1200 50  0001 C CNN
+F 1 "+15V" H 5015 1523 50  0000 C CNN
+F 2 "" H 5000 1350 50  0001 C CNN
+F 3 "" H 5000 1350 50  0001 C CNN
+	1    5000 1350
 	1    0    0    -1  
 $EndComp
-$Comp
-L Device:CP C1
-U 1 1 5E180738
-P 2550 7050
-AR Path="/5E180738" Ref="C1"  Part="1" 
-AR Path="/5DD3665B/5E180738" Ref="C?"  Part="1" 
-F 0 "C1" H 2668 7096 50  0000 L CNN
-F 1 "22u" H 2668 7005 50  0000 L CNN
-F 2 "Capacitor_THT:CP_Radial_D6.3mm_P2.50mm" H 2588 6900 50  0001 C CNN
-F 3 "~" H 2550 7050 50  0001 C CNN
-	1    2550 7050
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:CP C2
-U 1 1 5E18070C
-P 2550 7350
-AR Path="/5E18070C" Ref="C2"  Part="1" 
-AR Path="/5DD3665B/5E18070C" Ref="C?"  Part="1" 
-F 0 "C2" H 2668 7396 50  0000 L CNN
-F 1 "22u" H 2668 7305 50  0000 L CNN
-F 2 "Capacitor_THT:CP_Radial_D6.3mm_P2.50mm" H 2588 7200 50  0001 C CNN
-F 3 "~" H 2550 7350 50  0001 C CNN
-	1    2550 7350
-	1    0    0    -1  
-$EndComp
-Connection ~ 2550 7200
 Wire Wire Line
-	2550 7200 2350 7200
+	5000 2950 5000 2650
 Wire Wire Line
-	2300 7500 2350 7500
-Connection ~ 900  6950
+	5000 1350 5000 1650
 $Comp
-L power:PWR_FLAG #FLG01
-U 1 1 5FCD1662
-P 900 6950
-AR Path="/5FCD1662" Ref="#FLG01"  Part="1" 
-AR Path="/5DD3665B/5FCD1662" Ref="#FLG?"  Part="1" 
-F 0 "#FLG01" H 900 7025 50  0001 C CNN
-F 1 "PWR_FLAG" H 900 7078 50  0001 L CNN
-F 2 "" H 900 6950 50  0001 C CNN
-F 3 "~" H 900 6950 50  0001 C CNN
-	1    900  6950
+L power:GND #PWR014
+U 1 1 5F755EA3
+P 4250 2550
+F 0 "#PWR014" H 4250 2300 50  0001 C CNN
+F 1 "GND" H 4255 2377 50  0000 C CNN
+F 2 "" H 4250 2550 50  0001 C CNN
+F 3 "" H 4250 2550 50  0001 C CNN
+	1    4250 2550
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:+5V #PWR01
-U 1 1 5FCD1661
-P 900 6950
-AR Path="/5FCD1661" Ref="#PWR01"  Part="1" 
-AR Path="/5DD3665B/5FCD1661" Ref="#PWR?"  Part="1" 
-F 0 "#PWR01" H 900 6800 50  0001 C CNN
-F 1 "+5V" V 915 7078 50  0000 L CNN
-F 2 "" H 900 6950 50  0001 C CNN
-F 3 "" H 900 6950 50  0001 C CNN
-	1    900  6950
-	0    -1   -1   0   
+L elektrophon:AD633 U3
+U 1 1 5F74D4F3
+P 5000 2050
+F 0 "U3" H 5200 2650 50  0000 C CNN
+F 1 "AD633" H 5200 2550 50  0000 C CNN
+F 2 "Package_DIP:DIP-8_W7.62mm" H 5600 1450 50  0001 C CNN
+F 3 "https://www.analog.com/media/en/technical-documentation/data-sheets/AD633.pdf" H 5850 1650 50  0001 C CNN
+F 4 "X" H 5000 2050 50  0001 C CNN "Spice_Primitive"
+F 5 "AD633" H 5000 2050 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 5000 2050 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "/home/etienne/Documents/elektrophon/lib/spice/opamp/ad633.lib" H 5000 2050 50  0001 C CNN "Spice_Lib_File"
+	1    5000 2050
+	1    0    0    -1  
 $EndComp
+Wire Wire Line
+	6050 2250 6000 2250
+Text GLabel 2700 2700 0    50   Input ~ 0
+Ya
+Wire Wire Line
+	3550 2100 3550 2600
+Connection ~ 3550 2600
+Wire Wire Line
+	3500 2600 3550 2600
+Wire Wire Line
+	2900 2500 2850 2500
+Wire Wire Line
+	2850 2500 2850 2100
+Text GLabel 2700 1600 0    50   Input ~ 0
+Xa
+Wire Wire Line
+	3550 1000 3550 1500
+Connection ~ 3550 1500
+Wire Wire Line
+	3500 1500 3550 1500
+Wire Wire Line
+	2900 1400 2850 1400
+Wire Wire Line
+	2850 1400 2850 1000
+Text GLabel 1050 7300 0    50   Input ~ 0
+VN
+Text GLabel 1550 7300 2    50   Input ~ 0
+VN
+Text GLabel 1050 7200 0    50   Input ~ 0
+VP
+Text GLabel 1550 7200 2    50   Input ~ 0
+VP
+Text GLabel 2150 7450 0    50   Input ~ 0
+VN
+Text GLabel 2150 6850 0    50   Input ~ 0
+VP
+Wire Wire Line
+	2500 7450 2700 7450
 $Comp
-L power:+5V #PWR04
-U 1 1 5FCD1660
-P 1400 6950
-AR Path="/5FCD1660" Ref="#PWR04"  Part="1" 
-AR Path="/5DD3665B/5FCD1660" Ref="#PWR?"  Part="1" 
-F 0 "#PWR04" H 1400 6800 50  0001 C CNN
-F 1 "+5V" V 1415 7078 50  0000 L CNN
-F 2 "" H 1400 6950 50  0001 C CNN
-F 3 "" H 1400 6950 50  0001 C CNN
-	1    1400 6950
+L Device:R R2
+U 1 1 60980ED8
+P 2300 7450
+F 0 "R2" V 2093 7450 50  0000 C CNN
+F 1 "10" V 2184 7450 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 2230 7450 50  0001 C CNN
+F 3 "~" H 2300 7450 50  0001 C CNN
+	1    2300 7450
 	0    1    1    0   
 $EndComp
 $Comp
-L power:GND #PWR06
-U 1 1 5FC69BA7
-P 1400 7150
-AR Path="/5FC69BA7" Ref="#PWR06"  Part="1" 
-AR Path="/5DD3665B/5FC69BA7" Ref="#PWR?"  Part="1" 
-F 0 "#PWR06" H 1400 6900 50  0001 C CNN
-F 1 "GND" V 1405 7022 50  0000 R CNN
-F 2 "" H 1400 7150 50  0001 C CNN
-F 3 "" H 1400 7150 50  0001 C CNN
-	1    1400 7150
-	0    -1   -1   0   
+L power:-15V #PWR09
+U 1 1 5FC69BA2
+P 2500 7450
+AR Path="/5FC69BA2" Ref="#PWR09"  Part="1" 
+AR Path="/5DD3665B/5FC69BA2" Ref="#PWR?"  Part="1" 
+F 0 "#PWR09" H 2500 7550 50  0001 C CNN
+F 1 "-15V" H 2400 7600 50  0000 L CNN
+F 2 "" H 2500 7450 50  0001 C CNN
+F 3 "" H 2500 7450 50  0001 C CNN
+	1    2500 7450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2500 6850 2700 6850
+Wire Wire Line
+	2450 6850 2500 6850
+Connection ~ 2500 6850
+$Comp
+L power:+15V #PWR07
+U 1 1 5FC69BA0
+P 2500 6850
+AR Path="/5FC69BA0" Ref="#PWR07"  Part="1" 
+AR Path="/5DD3665B/5FC69BA0" Ref="#PWR?"  Part="1" 
+F 0 "#PWR07" H 2500 6700 50  0001 C CNN
+F 1 "+15V" H 2400 7000 50  0000 L CNN
+F 2 "" H 2500 6850 50  0001 C CNN
+F 3 "" H 2500 6850 50  0001 C CNN
+	1    2500 6850
+	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR05
-U 1 1 5FCD165F
-P 1400 7050
-AR Path="/5FCD165F" Ref="#PWR05"  Part="1" 
-AR Path="/5DD3665B/5FCD165F" Ref="#PWR?"  Part="1" 
-F 0 "#PWR05" H 1400 6800 50  0001 C CNN
-F 1 "GND" V 1405 6922 50  0000 R CNN
-F 2 "" H 1400 7050 50  0001 C CNN
-F 3 "" H 1400 7050 50  0001 C CNN
-	1    1400 7050
-	0    -1   -1   0   
-$EndComp
-$Comp
-L power:GND #PWR02
-U 1 1 5E18076B
-P 900 7050
-AR Path="/5E18076B" Ref="#PWR02"  Part="1" 
-AR Path="/5DD3665B/5E18076B" Ref="#PWR?"  Part="1" 
-F 0 "#PWR02" H 900 6800 50  0001 C CNN
-F 1 "GND" V 905 6922 50  0000 R CNN
-F 2 "" H 900 7050 50  0001 C CNN
-F 3 "" H 900 7050 50  0001 C CNN
-	1    900  7050
+L Device:R R1
+U 1 1 609809F6
+P 2300 6850
+F 0 "R1" V 2093 6850 50  0000 C CNN
+F 1 "10" V 2184 6850 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 2230 6850 50  0001 C CNN
+F 3 "~" H 2300 6850 50  0001 C CNN
+	1    2300 6850
 	0    1    1    0   
 $EndComp
 $Comp
-L power:GND #PWR03
-U 1 1 5E180765
-P 900 7150
-AR Path="/5E180765" Ref="#PWR03"  Part="1" 
-AR Path="/5DD3665B/5E180765" Ref="#PWR?"  Part="1" 
-F 0 "#PWR03" H 900 6900 50  0001 C CNN
-F 1 "GND" V 905 7022 50  0000 R CNN
-F 2 "" H 900 7150 50  0001 C CNN
-F 3 "" H 900 7150 50  0001 C CNN
-	1    900  7150
+L power:GND #PWR08
+U 1 1 60980ECA
+P 2500 7150
+AR Path="/60980ECA" Ref="#PWR08"  Part="1" 
+AR Path="/5DD3665B/60980ECA" Ref="#PWR?"  Part="1" 
+F 0 "#PWR08" H 2500 6900 50  0001 C CNN
+F 1 "GND" V 2500 6950 50  0000 C CNN
+F 2 "" H 2500 7150 50  0001 C CNN
+F 3 "" H 2500 7150 50  0001 C CNN
+	1    2500 7150
 	0    1    1    0   
 $EndComp
 $Comp
 L Connector_Generic:Conn_02x05_Odd_Even J1
 U 1 1 5FCD165C
-P 1200 7150
+P 1350 7100
 AR Path="/5FCD165C" Ref="J1"  Part="1" 
 AR Path="/5DD3665B/5FCD165C" Ref="J?"  Part="1" 
-F 0 "J1" H 1250 7567 50  0000 C CNN
-F 1 "IDC Header" H 1250 7476 50  0000 C CNN
-F 2 "Connector_IDC:IDC-Header_2x05_P2.54mm_Vertical" H 1200 7150 50  0001 C CNN
-F 3 "~" H 1200 7150 50  0001 C CNN
-	1    1200 7150
+F 0 "J1" H 1400 7517 50  0000 C CNN
+F 1 "IDC Header" H 1400 7426 50  0000 C CNN
+F 2 "Connector_IDC:IDC-Header_2x05_P2.54mm_Vertical" H 1350 7100 50  0001 C CNN
+F 3 "~" H 1350 7100 50  0001 C CNN
+	1    1350 7100
 	-1   0    0    1   
 $EndComp
 $Comp
-L power:GND #PWR08
-U 1 1 5E180712
-P 2350 7200
-AR Path="/5E180712" Ref="#PWR08"  Part="1" 
-AR Path="/5DD3665B/5E180712" Ref="#PWR?"  Part="1" 
-F 0 "#PWR08" H 2350 6950 50  0001 C CNN
-F 1 "GND" V 2350 7000 50  0000 C CNN
-F 2 "" H 2350 7200 50  0001 C CNN
-F 3 "" H 2350 7200 50  0001 C CNN
-	1    2350 7200
+L power:GND #PWR03
+U 1 1 609809F1
+P 1050 7100
+AR Path="/609809F1" Ref="#PWR03"  Part="1" 
+AR Path="/5DD3665B/609809F1" Ref="#PWR?"  Part="1" 
+F 0 "#PWR03" H 1050 6850 50  0001 C CNN
+F 1 "GND" V 1055 6972 50  0000 R CNN
+F 2 "" H 1050 7100 50  0001 C CNN
+F 3 "" H 1050 7100 50  0001 C CNN
+	1    1050 7100
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:R R1
-U 1 1 5FB443E6
-P 2150 6900
-F 0 "R1" V 1943 6900 50  0000 C CNN
-F 1 "10" V 2034 6900 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 2080 6900 50  0001 C CNN
-F 3 "~" H 2150 6900 50  0001 C CNN
-	1    2150 6900
+L power:GND #PWR02
+U 1 1 60980ECD
+P 1050 7000
+AR Path="/60980ECD" Ref="#PWR02"  Part="1" 
+AR Path="/5DD3665B/60980ECD" Ref="#PWR?"  Part="1" 
+F 0 "#PWR02" H 1050 6750 50  0001 C CNN
+F 1 "GND" V 1055 6872 50  0000 R CNN
+F 2 "" H 1050 7000 50  0001 C CNN
+F 3 "" H 1050 7000 50  0001 C CNN
+	1    1050 7000
 	0    1    1    0   
 $EndComp
 $Comp
-L power:+15V #PWR07
-U 1 1 5FC69BA0
-P 2350 6900
-AR Path="/5FC69BA0" Ref="#PWR07"  Part="1" 
-AR Path="/5DD3665B/5FC69BA0" Ref="#PWR?"  Part="1" 
-F 0 "#PWR07" H 2350 6750 50  0001 C CNN
-F 1 "+15V" H 2250 7050 50  0000 L CNN
-F 2 "" H 2350 6900 50  0001 C CNN
-F 3 "" H 2350 6900 50  0001 C CNN
-	1    2350 6900
+L power:GND #PWR05
+U 1 1 60980EDA
+P 1550 7000
+AR Path="/60980EDA" Ref="#PWR05"  Part="1" 
+AR Path="/5DD3665B/60980EDA" Ref="#PWR?"  Part="1" 
+F 0 "#PWR05" H 1550 6750 50  0001 C CNN
+F 1 "GND" V 1555 6872 50  0000 R CNN
+F 2 "" H 1550 7000 50  0001 C CNN
+F 3 "" H 1550 7000 50  0001 C CNN
+	1    1550 7000
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR06
+U 1 1 60980ED7
+P 1550 7100
+AR Path="/60980ED7" Ref="#PWR06"  Part="1" 
+AR Path="/5DD3665B/60980ED7" Ref="#PWR?"  Part="1" 
+F 0 "#PWR06" H 1550 6850 50  0001 C CNN
+F 1 "GND" V 1555 6972 50  0000 R CNN
+F 2 "" H 1550 7100 50  0001 C CNN
+F 3 "" H 1550 7100 50  0001 C CNN
+	1    1550 7100
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:+5V #PWR04
+U 1 1 5FCD1660
+P 1550 6900
+AR Path="/5FCD1660" Ref="#PWR04"  Part="1" 
+AR Path="/5DD3665B/5FCD1660" Ref="#PWR?"  Part="1" 
+F 0 "#PWR04" H 1550 6750 50  0001 C CNN
+F 1 "+5V" V 1565 7028 50  0000 L CNN
+F 2 "" H 1550 6900 50  0001 C CNN
+F 3 "" H 1550 6900 50  0001 C CNN
+	1    1550 6900
+	0    1    1    0   
+$EndComp
+$Comp
+L power:+5V #PWR01
+U 1 1 5FCD1661
+P 1050 6900
+AR Path="/5FCD1661" Ref="#PWR01"  Part="1" 
+AR Path="/5DD3665B/5FCD1661" Ref="#PWR?"  Part="1" 
+F 0 "#PWR01" H 1050 6750 50  0001 C CNN
+F 1 "+5V" V 1065 7028 50  0000 L CNN
+F 2 "" H 1050 6900 50  0001 C CNN
+F 3 "" H 1050 6900 50  0001 C CNN
+	1    1050 6900
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:PWR_FLAG #FLG01
+U 1 1 609809FC
+P 1050 6900
+AR Path="/609809FC" Ref="#FLG01"  Part="1" 
+AR Path="/5DD3665B/609809FC" Ref="#FLG?"  Part="1" 
+F 0 "#FLG01" H 1050 6975 50  0001 C CNN
+F 1 "PWR_FLAG" H 1050 7028 50  0001 L CNN
+F 2 "" H 1050 6900 50  0001 C CNN
+F 3 "~" H 1050 6900 50  0001 C CNN
+	1    1050 6900
+	1    0    0    -1  
+$EndComp
+Connection ~ 1050 6900
+Connection ~ 2500 7450
+Wire Wire Line
+	2450 7450 2500 7450
+Wire Wire Line
+	2700 7150 2500 7150
+$Comp
+L Device:CP C2
+U 1 1 60980EC9
+P 2700 7300
+AR Path="/60980EC9" Ref="C2"  Part="1" 
+AR Path="/5DD3665B/60980EC9" Ref="C?"  Part="1" 
+F 0 "C2" H 2818 7346 50  0000 L CNN
+F 1 "22u" H 2818 7255 50  0000 L CNN
+F 2 "Capacitor_THT:CP_Radial_D5.0mm_P2.00mm" H 2738 7150 50  0001 C CNN
+F 3 "~" H 2700 7300 50  0001 C CNN
+	1    2700 7300
+	1    0    0    -1  
+$EndComp
+Connection ~ 2700 7150
+$Comp
+L Device:CP C1
+U 1 1 60980ECB
+P 2700 7000
+AR Path="/60980ECB" Ref="C1"  Part="1" 
+AR Path="/5DD3665B/60980ECB" Ref="C?"  Part="1" 
+F 0 "C1" H 2818 7046 50  0000 L CNN
+F 1 "22u" H 2818 6955 50  0000 L CNN
+F 2 "Capacitor_THT:CP_Radial_D5.0mm_P2.00mm" H 2738 6850 50  0001 C CNN
+F 3 "~" H 2700 7000 50  0001 C CNN
+	1    2700 7000
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:-15V #PWR09
-U 1 1 5FC69BA2
-P 2350 7500
-AR Path="/5FC69BA2" Ref="#PWR09"  Part="1" 
-AR Path="/5DD3665B/5FC69BA2" Ref="#PWR?"  Part="1" 
-F 0 "#PWR09" H 2350 7600 50  0001 C CNN
-F 1 "-15V" H 2250 7650 50  0000 L CNN
-F 2 "" H 2350 7500 50  0001 C CNN
-F 3 "" H 2350 7500 50  0001 C CNN
-	1    2350 7500
+L power:+15V #PWR028
+U 1 1 5FD044D0
+P 5900 6850
+F 0 "#PWR028" H 5900 6700 50  0001 C CNN
+F 1 "+15V" H 5915 7023 50  0000 C CNN
+F 2 "" H 5900 6850 50  0001 C CNN
+F 3 "" H 5900 6850 50  0001 C CNN
+	1    5900 6850
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R R2
-U 1 1 5FC69BB1
-P 2150 7500
-F 0 "R2" V 1943 7500 50  0000 C CNN
-F 1 "10" V 2034 7500 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 2080 7500 50  0001 C CNN
-F 3 "~" H 2150 7500 50  0001 C CNN
-	1    2150 7500
-	0    1    1    0   
+L power:-15V #PWR029
+U 1 1 5FD03C19
+P 5900 7450
+F 0 "#PWR029" H 5900 7550 50  0001 C CNN
+F 1 "-15V" H 5915 7623 50  0000 C CNN
+F 2 "" H 5900 7450 50  0001 C CNN
+F 3 "" H 5900 7450 50  0001 C CNN
+	1    5900 7450
+	-1   0    0    1   
 $EndComp
 Wire Wire Line
-	2300 6900 2350 6900
-Connection ~ 2350 6900
+	5700 7150 5900 7150
 Wire Wire Line
-	2350 6900 2550 6900
-Connection ~ 2350 7500
+	5700 7200 5700 7150
+$Comp
+L power:GND #PWR027
+U 1 1 5FD009DD
+P 5700 7200
+F 0 "#PWR027" H 5700 6950 50  0001 C CNN
+F 1 "GND" H 5705 7027 50  0000 C CNN
+F 2 "" H 5700 7200 50  0001 C CNN
+F 3 "" H 5700 7200 50  0001 C CNN
+	1    5700 7200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C10
+U 1 1 5F7E6B68
+P 5900 7300
+F 0 "C10" H 6150 7350 50  0000 R CNN
+F 1 "0.1u" H 6200 7250 50  0000 R CNN
+F 2 "Capacitor_THT:C_Disc_D3.4mm_W2.1mm_P2.50mm" H 5938 7150 50  0001 C CNN
+F 3 "~" H 5900 7300 50  0001 C CNN
+F 4 "C" H 5900 7300 50  0001 C CNN "Spice_Primitive"
+F 5 "0.1u" H 5900 7300 50  0001 C CNN "Spice_Model"
+F 6 "N" H 5900 7300 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    5900 7300
+	1    0    0    -1  
+$EndComp
+Connection ~ 5900 7150
+$Comp
+L Device:C C9
+U 1 1 5F7DF1DD
+P 5900 7000
+F 0 "C9" H 6150 7050 50  0000 R CNN
+F 1 "0.1u" H 6200 6950 50  0000 R CNN
+F 2 "Capacitor_THT:C_Disc_D3.4mm_W2.1mm_P2.50mm" H 5938 6850 50  0001 C CNN
+F 3 "~" H 5900 7000 50  0001 C CNN
+F 4 "C" H 5900 7000 50  0001 C CNN "Spice_Primitive"
+F 5 "0.1u" H 5900 7000 50  0001 C CNN "Spice_Model"
+F 6 "N" H 5900 7000 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    5900 7000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:PWR_FLAG #FLG04
+U 1 1 60A25246
+P 8150 6000
+F 0 "#FLG04" H 8150 6075 50  0001 C CNN
+F 1 "PWR_FLAG" H 8150 6173 50  0001 C CNN
+F 2 "" H 8150 6000 50  0001 C CNN
+F 3 "~" H 8150 6000 50  0001 C CNN
+	1    8150 6000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:PWR_FLAG #FLG03
+U 1 1 5F737C0D
+P 7900 5900
+F 0 "#FLG03" H 7900 5975 50  0001 C CNN
+F 1 "PWR_FLAG" H 7900 6073 50  0001 C CNN
+F 2 "" H 7900 5900 50  0001 C CNN
+F 3 "~" H 7900 5900 50  0001 C CNN
+	1    7900 5900
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:PWR_FLAG #FLG02
+U 1 1 5F737716
+P 7650 5900
+F 0 "#FLG02" H 7650 5975 50  0001 C CNN
+F 1 "PWR_FLAG" H 7650 6073 50  0001 C CNN
+F 2 "" H 7650 5900 50  0001 C CNN
+F 3 "~" H 7650 5900 50  0001 C CNN
+	1    7650 5900
+	-1   0    0    1   
+$EndComp
 Wire Wire Line
-	2350 7500 2550 7500
-Text GLabel 2000 6900 0    50   Input ~ 0
-VP
-Text GLabel 2000 7500 0    50   Input ~ 0
-VN
-Text GLabel 1400 7250 2    50   Input ~ 0
-VP
-Text GLabel 900  7250 0    50   Input ~ 0
-VP
-Text GLabel 1400 7350 2    50   Input ~ 0
-VN
-Text GLabel 900  7350 0    50   Input ~ 0
-VN
+	4000 7150 4200 7150
+Wire Wire Line
+	4000 7200 4000 7150
+$Comp
+L power:GND #PWR013
+U 1 1 5F7116DA
+P 4000 7200
+F 0 "#PWR013" H 4000 6950 50  0001 C CNN
+F 1 "GND" H 4005 7027 50  0000 C CNN
+F 2 "" H 4000 7200 50  0001 C CNN
+F 3 "" H 4000 7200 50  0001 C CNN
+	1    4000 7200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4500 7450 4200 7450
+Wire Wire Line
+	4200 6850 4500 6850
+$Comp
+L Device:C C6
+U 1 1 5F7116D2
+P 4200 7300
+F 0 "C6" H 4315 7346 50  0000 L CNN
+F 1 "0.1u" H 4315 7255 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D3.4mm_W2.1mm_P2.50mm" H 4238 7150 50  0001 C CNN
+F 3 "~" H 4200 7300 50  0001 C CNN
+F 4 "C" H 4200 7300 50  0001 C CNN "Spice_Primitive"
+F 5 "0.1u" H 4200 7300 50  0001 C CNN "Spice_Model"
+F 6 "N" H 4200 7300 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    4200 7300
+	1    0    0    -1  
+$EndComp
+Connection ~ 4200 7150
+$Comp
+L Device:C C5
+U 1 1 5F7116CC
+P 4200 7000
+F 0 "C5" H 4315 7046 50  0000 L CNN
+F 1 "0.1u" H 4315 6955 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D3.4mm_W2.1mm_P2.50mm" H 4238 6850 50  0001 C CNN
+F 3 "~" H 4200 7000 50  0001 C CNN
+F 4 "C" H 4200 7000 50  0001 C CNN "Spice_Primitive"
+F 5 "0.1u" H 4200 7000 50  0001 C CNN "Spice_Model"
+F 6 "N" H 4200 7000 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    4200 7000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3100 7150 3300 7150
+Wire Wire Line
+	3100 7200 3100 7150
+$Comp
+L power:GND #PWR010
+U 1 1 5F70ACFD
+P 3100 7200
+F 0 "#PWR010" H 3100 6950 50  0001 C CNN
+F 1 "GND" H 3105 7027 50  0000 C CNN
+F 2 "" H 3100 7200 50  0001 C CNN
+F 3 "" H 3100 7200 50  0001 C CNN
+	1    3100 7200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3600 7450 3300 7450
+Wire Wire Line
+	3300 6850 3600 6850
+$Comp
+L Device:C C4
+U 1 1 5F6F586F
+P 3300 7300
+F 0 "C4" H 3415 7346 50  0000 L CNN
+F 1 "0.1u" H 3415 7255 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D3.4mm_W2.1mm_P2.50mm" H 3338 7150 50  0001 C CNN
+F 3 "~" H 3300 7300 50  0001 C CNN
+F 4 "C" H 3300 7300 50  0001 C CNN "Spice_Primitive"
+F 5 "0.1u" H 3300 7300 50  0001 C CNN "Spice_Model"
+F 6 "N" H 3300 7300 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    3300 7300
+	1    0    0    -1  
+$EndComp
+Connection ~ 3300 7150
+$Comp
+L Device:C C3
+U 1 1 5F6F526B
+P 3300 7000
+F 0 "C3" H 3415 7046 50  0000 L CNN
+F 1 "0.1u" H 3415 6955 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D3.4mm_W2.1mm_P2.50mm" H 3338 6850 50  0001 C CNN
+F 3 "~" H 3300 7000 50  0001 C CNN
+F 4 "C" H 3300 7000 50  0001 C CNN "Spice_Primitive"
+F 5 "0.1u" H 3300 7000 50  0001 C CNN "Spice_Model"
+F 6 "N" H 3300 7000 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    3300 7000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR035
+U 1 1 609809F5
+P 8150 6000
+F 0 "#PWR035" H 8150 5750 50  0001 C CNN
+F 1 "GND" H 8155 5827 50  0000 C CNN
+F 2 "" H 8150 6000 50  0001 C CNN
+F 3 "" H 8150 6000 50  0001 C CNN
+	1    8150 6000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:-15V #PWR034
+U 1 1 60980ED2
+P 7900 5900
+F 0 "#PWR034" H 7900 6000 50  0001 C CNN
+F 1 "-15V" H 7915 6073 50  0000 C CNN
+F 2 "" H 7900 5900 50  0001 C CNN
+F 3 "" H 7900 5900 50  0001 C CNN
+	1    7900 5900
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+15V #PWR033
+U 1 1 609809F4
+P 7650 5900
+F 0 "#PWR033" H 7650 5750 50  0001 C CNN
+F 1 "+15V" H 7665 6073 50  0000 C CNN
+F 2 "" H 7650 5900 50  0001 C CNN
+F 3 "" H 7650 5900 50  0001 C CNN
+	1    7650 5900
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:-15V #PWR017
+U 1 1 5F63E16D
+P 4500 7450
+F 0 "#PWR017" H 4500 7550 50  0001 C CNN
+F 1 "-15V" H 4515 7623 50  0000 C CNN
+F 2 "" H 4500 7450 50  0001 C CNN
+F 3 "" H 4500 7450 50  0001 C CNN
+	1    4500 7450
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:+15V #PWR016
+U 1 1 5F63E167
+P 4500 6850
+F 0 "#PWR016" H 4500 6700 50  0001 C CNN
+F 1 "+15V" H 4515 7023 50  0000 C CNN
+F 2 "" H 4500 6850 50  0001 C CNN
+F 3 "" H 4500 6850 50  0001 C CNN
+	1    4500 6850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:-15V #PWR012
+U 1 1 5F503CEA
+P 3600 7450
+F 0 "#PWR012" H 3600 7550 50  0001 C CNN
+F 1 "-15V" H 3615 7623 50  0000 C CNN
+F 2 "" H 3600 7450 50  0001 C CNN
+F 3 "" H 3600 7450 50  0001 C CNN
+	1    3600 7450
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:+15V #PWR011
+U 1 1 5F502CF7
+P 3600 6850
+F 0 "#PWR011" H 3600 6700 50  0001 C CNN
+F 1 "+15V" H 3615 7023 50  0000 C CNN
+F 2 "" H 3600 6850 50  0001 C CNN
+F 3 "" H 3600 6850 50  0001 C CNN
+	1    3600 6850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+15V #PWR031
+U 1 1 609EEDB3
+P 6550 6850
+F 0 "#PWR031" H 6550 6700 50  0001 C CNN
+F 1 "+15V" H 6565 7023 50  0000 C CNN
+F 2 "" H 6550 6850 50  0001 C CNN
+F 3 "" H 6550 6850 50  0001 C CNN
+	1    6550 6850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:-15V #PWR032
+U 1 1 609EEDB9
+P 6550 7450
+F 0 "#PWR032" H 6550 7550 50  0001 C CNN
+F 1 "-15V" H 6565 7623 50  0000 C CNN
+F 2 "" H 6550 7450 50  0001 C CNN
+F 3 "" H 6550 7450 50  0001 C CNN
+	1    6550 7450
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	6350 7150 6550 7150
+Wire Wire Line
+	6350 7200 6350 7150
+$Comp
+L power:GND #PWR030
+U 1 1 609EEDC1
+P 6350 7200
+F 0 "#PWR030" H 6350 6950 50  0001 C CNN
+F 1 "GND" H 6355 7027 50  0000 C CNN
+F 2 "" H 6350 7200 50  0001 C CNN
+F 3 "" H 6350 7200 50  0001 C CNN
+	1    6350 7200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C12
+U 1 1 609EEDCA
+P 6550 7300
+F 0 "C12" H 6800 7350 50  0000 R CNN
+F 1 "0.1u" H 6850 7250 50  0000 R CNN
+F 2 "Capacitor_THT:C_Disc_D3.4mm_W2.1mm_P2.50mm" H 6588 7150 50  0001 C CNN
+F 3 "~" H 6550 7300 50  0001 C CNN
+F 4 "C" H 6550 7300 50  0001 C CNN "Spice_Primitive"
+F 5 "0.1u" H 6550 7300 50  0001 C CNN "Spice_Model"
+F 6 "N" H 6550 7300 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    6550 7300
+	1    0    0    -1  
+$EndComp
+Connection ~ 6550 7150
+$Comp
+L Device:C C11
+U 1 1 609EEDD4
+P 6550 7000
+F 0 "C11" H 6800 7050 50  0000 R CNN
+F 1 "0.1u" H 6850 6950 50  0000 R CNN
+F 2 "Capacitor_THT:C_Disc_D3.4mm_W2.1mm_P2.50mm" H 6588 6850 50  0001 C CNN
+F 3 "~" H 6550 7000 50  0001 C CNN
+F 4 "C" H 6550 7000 50  0001 C CNN "Spice_Primitive"
+F 5 "0.1u" H 6550 7000 50  0001 C CNN "Spice_Model"
+F 6 "N" H 6550 7000 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    6550 7000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4800 7150 5000 7150
+Wire Wire Line
+	4800 7200 4800 7150
+$Comp
+L power:GND #PWR018
+U 1 1 609FD0F4
+P 4800 7200
+F 0 "#PWR018" H 4800 6950 50  0001 C CNN
+F 1 "GND" H 4805 7027 50  0000 C CNN
+F 2 "" H 4800 7200 50  0001 C CNN
+F 3 "" H 4800 7200 50  0001 C CNN
+	1    4800 7200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5300 7450 5000 7450
+Wire Wire Line
+	5000 6850 5300 6850
+$Comp
+L Device:C C8
+U 1 1 609FD0FF
+P 5000 7300
+F 0 "C8" H 5115 7346 50  0000 L CNN
+F 1 "0.1u" H 5115 7255 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D3.4mm_W2.1mm_P2.50mm" H 5038 7150 50  0001 C CNN
+F 3 "~" H 5000 7300 50  0001 C CNN
+F 4 "C" H 5000 7300 50  0001 C CNN "Spice_Primitive"
+F 5 "0.1u" H 5000 7300 50  0001 C CNN "Spice_Model"
+F 6 "N" H 5000 7300 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    5000 7300
+	1    0    0    -1  
+$EndComp
+Connection ~ 5000 7150
+$Comp
+L Device:C C7
+U 1 1 609FD109
+P 5000 7000
+F 0 "C7" H 5115 7046 50  0000 L CNN
+F 1 "0.1u" H 5115 6955 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D3.4mm_W2.1mm_P2.50mm" H 5038 6850 50  0001 C CNN
+F 3 "~" H 5000 7000 50  0001 C CNN
+F 4 "C" H 5000 7000 50  0001 C CNN "Spice_Primitive"
+F 5 "0.1u" H 5000 7000 50  0001 C CNN "Spice_Model"
+F 6 "N" H 5000 7000 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    5000 7000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:-15V #PWR024
+U 1 1 609FD11A
+P 5300 7450
+F 0 "#PWR024" H 5300 7550 50  0001 C CNN
+F 1 "-15V" H 5315 7623 50  0000 C CNN
+F 2 "" H 5300 7450 50  0001 C CNN
+F 3 "" H 5300 7450 50  0001 C CNN
+	1    5300 7450
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:+15V #PWR023
+U 1 1 609FD121
+P 5300 6850
+F 0 "#PWR023" H 5300 6700 50  0001 C CNN
+F 1 "+15V" H 5315 7023 50  0000 C CNN
+F 2 "" H 5300 6850 50  0001 C CNN
+F 3 "" H 5300 6850 50  0001 C CNN
+	1    5300 6850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Amplifier_Operational:OPA2134 U1
+U 1 1 609E8C6C
+P 3200 1500
+F 0 "U1" H 3200 1133 50  0000 C CNN
+F 1 "OPA2134" H 3200 1224 50  0000 C CNN
+F 2 "Package_DIP:DIP-8_W7.62mm_Socket" H 3200 1500 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/opa134.pdf" H 3200 1500 50  0001 C CNN
+	1    3200 1500
+	1    0    0    1   
+$EndComp
+$Comp
+L Amplifier_Operational:OPA2134 U1
+U 2 1 609EBDB0
+P 3200 2600
+F 0 "U1" H 3200 2233 50  0000 C CNN
+F 1 "OPA2134" H 3200 2324 50  0000 C CNN
+F 2 "Package_DIP:DIP-8_W7.62mm_Socket" H 3200 2600 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/opa134.pdf" H 3200 2600 50  0001 C CNN
+	2    3200 2600
+	1    0    0    1   
+$EndComp
+$Comp
+L Amplifier_Operational:OPA2134 U2
+U 2 1 609EDF93
+P 3200 5050
+F 0 "U2" H 3200 4683 50  0000 C CNN
+F 1 "OPA2134" H 3200 4774 50  0000 C CNN
+F 2 "Package_DIP:DIP-8_W7.62mm_Socket" H 3200 5050 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/opa134.pdf" H 3200 5050 50  0001 C CNN
+	2    3200 5050
+	1    0    0    1   
+$EndComp
+$Comp
+L Amplifier_Operational:OPA2134 U5
+U 1 1 609F2329
+P 6350 2150
+F 0 "U5" H 6350 2517 50  0000 C CNN
+F 1 "OPA2134" H 6350 2426 50  0000 C CNN
+F 2 "Package_DIP:DIP-8_W7.62mm_Socket" H 6350 2150 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/opa134.pdf" H 6350 2150 50  0001 C CNN
+	1    6350 2150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Amplifier_Operational:OPA2134 U1
+U 3 1 60A03E3B
+P 3700 7150
+F 0 "U1" H 3658 7196 50  0000 L CNN
+F 1 "OPA2134" H 3658 7105 50  0000 L CNN
+F 2 "Package_DIP:DIP-8_W7.62mm_Socket" H 3700 7150 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/opa134.pdf" H 3700 7150 50  0001 C CNN
+	3    3700 7150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Amplifier_Operational:OPA2134 U2
+U 3 1 60A064ED
+P 4600 7150
+F 0 "U2" H 4558 7196 50  0000 L CNN
+F 1 "OPA2134" H 4558 7105 50  0000 L CNN
+F 2 "Package_DIP:DIP-8_W7.62mm_Socket" H 4600 7150 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/opa134.pdf" H 4600 7150 50  0001 C CNN
+	3    4600 7150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Amplifier_Operational:OPA2134 U5
+U 3 1 60A08FF5
+P 5400 7150
+F 0 "U5" H 5358 7196 50  0000 L CNN
+F 1 "OPA2134" H 5358 7105 50  0000 L CNN
+F 2 "Package_DIP:DIP-8_W7.62mm_Socket" H 5400 7150 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/opa134.pdf" H 5400 7150 50  0001 C CNN
+	3    5400 7150
+	1    0    0    -1  
+$EndComp
+Connection ~ 3600 7450
+Connection ~ 3600 6850
+Connection ~ 4500 7450
+Connection ~ 4500 6850
+Connection ~ 5300 7450
+Connection ~ 5300 6850
+Connection ~ 6650 2150
+$Comp
+L Connector:Conn_01x08_Female J2
+U 1 1 60AE5993
+P 8700 5850
+F 0 "J2" H 8592 6335 50  0000 C CNN
+F 1 "Conn_01x08_Female" H 8592 6244 50  0000 C CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x08_P2.54mm_Vertical" H 8700 5850 50  0001 C CNN
+F 3 "~" H 8700 5850 50  0001 C CNN
+	1    8700 5850
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR036
+U 1 1 60AF4BE1
+P 8900 5550
+F 0 "#PWR036" H 8900 5400 50  0001 C CNN
+F 1 "+5V" V 8915 5678 50  0000 L CNN
+F 2 "" H 8900 5550 50  0001 C CNN
+F 3 "" H 8900 5550 50  0001 C CNN
+	1    8900 5550
+	0    1    1    0   
+$EndComp
+$Comp
+L Amplifier_Operational:OPA2134 U2
+U 1 1 60B36BF3
+P 3200 3950
+F 0 "U2" H 3200 3583 50  0000 C CNN
+F 1 "OPA2134" H 3200 3674 50  0000 C CNN
+F 2 "Package_DIP:DIP-8_W7.62mm_Socket" H 3200 3950 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/opa134.pdf" H 3200 3950 50  0001 C CNN
+	1    3200 3950
+	1    0    0    1   
+$EndComp
+$Comp
+L Amplifier_Operational:OPA2134 U5
+U 2 1 60B392EF
+P 6350 4600
+F 0 "U5" H 6350 4900 50  0000 C CNN
+F 1 "OPA2134" H 6350 5000 50  0000 C CNN
+F 2 "Package_DIP:DIP-8_W7.62mm_Socket" H 6350 4600 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/opa134.pdf" H 6350 4600 50  0001 C CNN
+	2    6350 4600
+	1    0    0    -1  
+$EndComp
+Connection ~ 6650 4600
 $EndSCHEMATC

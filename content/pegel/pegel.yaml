@@ -1,6 +1,7 @@
 ---
 layout: module
 title: pegel
+project: pegel
 author: spielhuus
 tags: VCA
 category: module
@@ -12,4 +13,34 @@ panel: /assets/pegel_files/pegel-panel.jpg
 hero_image: /assets/pegel_files/pegel-hero.jpg
 hide_hero: true
 excerpt: audio and cv mixer that also can add offset or attenuvert a s
+subtitle: Pegel is a voltage controlled amplifier (VCA). There are various designs to implement a VCA. rod elliott (ESP) has an article on VCA techniques [[1][1]]. diy synthesizer modules are usualy designed with an integrated VCA chip [[2][2]] or with a differential amplifier [[3][3]]. The integrated VCA chips are either obsolete or rather expensive. The differential amplifier can be built with transistors only. the design has some downsides. Even in the simulation the result is not symetryc and has a dc offset from the control voltage. This needs a lot of trimming to get an accurate result. but the biggest downside is, that this design can not do proper amplitude modulation (am). when the carrier signal goes below zero the base signal is completely muted.
+callouts:
+  - title: schematics
+    subtitle: schematic files
+    icon: fas fa-file-download
+    files:
+      - href: /assets/pegel_files/main-schematic.pdf
+        name: main
+      - href: /assets/pegel_files/mount-schematic.pdf
+        name: mount
+  - title: PCB
+    subtitle: PCB files
+    icon: fas fa-code-branch
+    files:
+      - href: /assets/pegel_files/main-pcb.pdf
+        name: main
+      - href: /assets/pegel_files/mount-pcb.pdf
+        name: mount
+      - href: /assets/pegel_files/panel-pcb.pdf
+        name: panel
+  - title: gerbers
+    subtitle: gerber files
+    icon: fas fa-industry
+    files:
+      - href: /assets/pegel_files/main-gerber_files.zip
+        name: main
+      - href: /assets/pegel_files/mount-gerber_files.zip
+        name: mount
+      - href: /assets/pegel_files/panel-gerber_files.zip
+        name: panel
 ---

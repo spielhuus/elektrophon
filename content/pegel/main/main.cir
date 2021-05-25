@@ -1,20 +1,22 @@
 .title KiCad schematic
-XU1 Xa Xa Net-_RV1-Pad2_ -15V Net-_RV2-Pad2_ Ya Ya +15V TL072c
-XU2 Net-_R4-Pad1_ Net-_R3-Pad1_ Net-_U2-Pad3_ -15V Net-_RV3-Pad2_ Za Za +15V TL072c
-XU3 Xa GND Ya GND -15V Za Net-_U2-Pad3_ +15V AD633
-R4 Net-_R4-Pad1_ Net-_R3-Pad1_ 10k
+.include "/home/etienne/Documents/elektrophon/lib/spice/opamp/ad633.lib"
+H1 MountingHole
+H2 MountingHole
+H3 MountingHole
+H4 MountingHole
+R4 Net-_R4-Pad1_ GND 10k
+R6 OUTb Net-_R4-Pad1_ 10k
+XU4 Net-_U2-Pad1_ GND Net-_U2-Pad6_ GND -15V NC_01 Net-_U4-Pad7_ +15V AD633
 R3 Net-_R3-Pad1_ GND 10k
-XJ2 GND Net-_J2-PadT_ IN_1
-XRV1 GND Net-_RV1-Pad2_ Net-_J2-PadT_ RV1
-XJ4 GND Net-_J4-PadT_ IN_2
-XRV3 GND Net-_RV3-Pad2_ Net-_J4-PadT_ RV2
-XJ5 GND Net-_J5-PadT_ OUT
-R5 Net-_R4-Pad1_ Net-_J5-PadT_ 1k
-XJ3 GND Net-_J3-PadT_ IN_1
-XRV2 GND Net-_RV2-Pad2_ Net-_J3-PadT_ RV1
-C1 +15V GND 22u
-C2 GND -15V 22u
-J1 VN VN VP VP GND GND GND GND +5V +5V IDC Header
-R1 +15V VP 10
+R5 OUTa Net-_R3-Pad1_ 10k
+XU3 Net-_U1-Pad1_ GND Net-_U1-Pad6_ GND -15V NC_02 Net-_U3-Pad7_ +15V AD633
 R2 -15V VN 10
+R1 +15V VP 10
+J1 VN VN VP VP GND GND GND GND +5V +5V IDC Header
+C2 GND -15V 22u
+C1 +15V GND 22u
+U1 Net-_U1-Pad1_ Net-_U1-Pad1_ Xa -15V Ya Net-_U1-Pad6_ Net-_U1-Pad6_ +15V OPA2134
+U2 Net-_U2-Pad1_ Net-_U2-Pad1_ Xb -15V Yb Net-_U2-Pad6_ Net-_U2-Pad6_ +15V OPA2134
+U5 OUTa Net-_R3-Pad1_ Net-_U3-Pad7_ -15V Net-_U4-Pad7_ Net-_R4-Pad1_ OUTb +15V OPA2134
+J2 +5V GND Xa Ya OUTa Xb Yb OUTb Conn_01x08_Female
 .end

@@ -1,6 +1,6 @@
 PROJECT = pegel
 DATE = 2021-01-20
-PCB_PROJECTS = main panel
+PCB_PROJECTS = main mount panel
 TARGET = _posts
 
 JUPYTER = jupyter
@@ -28,9 +28,11 @@ KIBOT_GERBERS = $(foreach prj, $(PCB_PROJECTS), build/kibot/$(prj)/JLCPCB/$(prj)
 KIBOT_PCBS = $(foreach prj, $(PCB_PROJECTS), build/kibot/$(prj)/$(prj)-pcb.pdf)
 KIBOT_DRAWING = $(foreach prj, $(PCB_PROJECTS), build/kibot/$(prj)/$(prj)-top.png)
 KIBOT_REPORT = build/kibot_dat.json
+PYUNIT_REPORT = build/$(PROJECT)-test.json
 CIRCUITS = $(shell find . -iname '*.cir' | sed 's/ /\\ /g')
 
 DEST_REPORT = $(OUTPUT)/_data/$(PROJECT)_kibot_data.json
+DEST_PYUNIT_REPORT = $(OUTPUT)/_data/$(PROJECT)-test.json
 DEST_BOM = $(foreach prj, $(PCB_PROJECTS), $(OUTPUT)/_data/$(PROJECT)-$(prj)-bom.csv)
 DEST_GERBERS = $(foreach prj, $(PCB_PROJECTS), $(OUTPUT)/assets/$(PROJECT)_files/$(prj)-JLCPCB.zip)
 DEST_PCBS = $(foreach prj, $(PCB_PROJECTS), $(OUTPUT)/assets/$(PROJECT)_files/$(prj)-pcb.pdf)
@@ -38,10 +40,13 @@ DEST_SCHEMATIC = $(foreach prj, $(PCB_PROJECTS), $(OUTPUT)/assets/$(PROJECT)_fil
 DEST_DRAWING = $(foreach prj, $(PCB_PROJECTS), $(OUTPUT)/assets/$(PROJECT)_files/$(prj)-top.png)
 
 all: $(KIBOT_REPORT) $(KIBOT_PCBS) $(KIBOT_GERBERS) $(KIBOT_BOM) $(KIBOT_SCHEMATIC) $(KIBOT_DRAWING) $(DEST)
-deploy: $(IMAGE_TARGETS) $(ARTICLE_TARGETS) $(addprefix $(OUTPUT)/assets/$(PROJECT)_files/,$(DEST_IMAGES)) $(DEST_REPORT) $(DEST_GERBERS) $(DEST_PCBS) $(DEST_SCHEMATIC) $(DEST_BOM) $(DEST_DRAWING)
+deploy: $(IMAGE_TARGETS) $(ARTICLE_TARGETS) $(addprefix $(OUTPUT)/assets/$(PROJECT)_files/,$(DEST_IMAGES)) $(DEST_REPORT) $(DEST_PYUNIT_REPORT) $(DEST_GERBERS) $(DEST_PCBS) $(DEST_SCHEMATIC) $(DEST_BOM) $(DEST_DRAWING)
 
 $(DEST_REPORT):
 	cp $(KIBOT_REPORT) $(DEST_REPORT)
+
+$(DEST_PYUNIT_REPORT):
+	cp $(PYUNIT_REPORT) $(DEST_PYUNIT_REPORT)
 
 $(DEST_GERBERS):
 	cp $(KIBOT_GERBERS) $(OUTPUT)/assets/$(PROJECT)_files/
@@ -97,6 +102,7 @@ clean:
 	rm -f $(ARTICLE_TARGETS)
 	rm -f $(IMAGE_TARGETS)
 	rm -f $(DEST_REPORT)
+	rm -f $(DEST_PYUNIT_REPORT)
 	rm -f $(DEST_GERBERS)
 	rm -f $(DEST_SCHEMATIC)
 	echo $(DEST_BOM)

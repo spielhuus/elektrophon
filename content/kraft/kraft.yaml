@@ -35,10 +35,10 @@ callouts:
     subtitle: gerber files
     icon: fas fa-industry
     files:
-      - href: /assets/kraft_files/kraft-gerber_files.zip
+      - href: /assets/kraft_files/kraft-JLCPCB.zip
         name: main
-      - href: /assets/kraft_files/mount-gerber_files.zip
+      - href: /assets/kraft_files/mount-JLCPCB.zip
         name: mount
-      - href: /assets/kraft_files/panel-gerber_files.zip
+      - href: /assets/kraft_files/panel-JLCPCB.zip
         name: panel
 ---

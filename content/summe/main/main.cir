@@ -1,47 +1,71 @@
 .title KiCad schematic
-R29 Net-_J1-PadTN_ +5V 1k
-R27 Net-_R26-Pad2_ Net-_R27-Pad2_ 100k
-R26 Net-_R25-Pad2_ Net-_R26-Pad2_ 100k
-XU3 Net-_R25-Pad2_ Net-_R21-Pad2_ GND -15V GND Net-_R26-Pad2_ Net-_R27-Pad2_ +15V OPA2134d
-XU2 Net-_R15-Pad1_ Net-_R11-Pad1_ Net-_R5-Pad2_ -15V Net-_R7-Pad2_ Net-_R12-Pad1_ Net-_R16-Pad1_ +15V OPA2134d
-XU1 Net-_R13-Pad1_ Net-_R13-Pad2_ Net-_R1-Pad2_ -15V Net-_R3-Pad2_ Net-_R10-Pad1_ Net-_R14-Pad1_ +15V OPA2134d
-R28 Net-_R27-Pad2_ Net-_J10-PadT_ 1k
+R36 Net-_R33-Pad2_ /OUT 100k
+R33 Net-_R31-Pad2_ Net-_R33-Pad2_ 100k
+XU3 Net-_R31-Pad2_ Net-_R24-Pad2_ GND -15V GND Net-_R33-Pad2_ /OUT +15V OPA2134d
+XU2 Net-_R17-Pad1_ Net-_R13-Pad1_ Net-_R7-Pad2_ -15V Net-_R10-Pad1_ Net-_R14-Pad1_ Net-_R18-Pad1_ +15V OPA2134d
+XU1 Net-_R15-Pad1_ Net-_R11-Pad1_ Net-_R3-Pad2_ -15V Net-_R5-Pad2_ Net-_R12-Pad1_ Net-_R16-Pad1_ +15V OPA2134d
+R39 /OUT Net-_J10-PadT_ 1k
 XJ10 GND Net-_J10-PadT_ NC_01 OUT
-R25 Net-_R21-Pad2_ Net-_R25-Pad2_ 100k
-R21 /MIX_1 Net-_R21-Pad2_ 100k
-R22 /MIX_2 Net-_R21-Pad2_ 100k
-R23 /MIX_3 Net-_R21-Pad2_ 100k
-R24 /MIX_4 Net-_R21-Pad2_ 100k
-R20 Net-_R16-Pad1_ Net-_J9-PadT_ 1k
+R31 Net-_R24-Pad2_ Net-_R31-Pad2_ 100k
+R24 /MIX_1 Net-_R24-Pad2_ 100k
+R25 /MIX_2 Net-_R24-Pad2_ 100k
+R26 /MIX_3 Net-_R24-Pad2_ 100k
+R27 /MIX_4 Net-_R24-Pad2_ 100k
+R22 Net-_R18-Pad1_ Net-_J9-PadT_ 1k
 XJ9 GND Net-_J9-PadT_ /MIX_4 OUT_4
-R19 Net-_R15-Pad1_ Net-_J8-PadT_ 1k
+R21 Net-_R17-Pad1_ Net-_J8-PadT_ 1k
 XJ8 GND Net-_J8-PadT_ /MIX_3 OUT_3
-R18 Net-_R14-Pad1_ Net-_J7-PadT_ 1k
+R20 Net-_R16-Pad1_ Net-_J7-PadT_ 1k
 XJ7 GND Net-_J7-PadT_ /MIX_2 OUT_2
-R16 Net-_R16-Pad1_ Net-_R12-Pad1_ 100k
+R18 Net-_R18-Pad1_ Net-_R14-Pad1_ 100k
+R10 Net-_R10-Pad1_ GND 47k
+R9 /IN_4 Net-_R10-Pad1_ 47k
+R14 Net-_R14-Pad1_ /IN_4 100k
+XRV4 GND Net-_R10-Pad1_ /IN_4 voltage_divider_4
+XJ5 GND /IN_4 NC_02 IN_4
+R17 Net-_R17-Pad1_ Net-_R13-Pad1_ 100k
 R8 Net-_R7-Pad2_ GND 47k
-R7 Net-_J4-PadT_ Net-_R7-Pad2_ 47k
-R12 Net-_R12-Pad1_ Net-_J4-PadT_ 100k
-XRV4 GND Net-_R7-Pad2_ Net-_J4-PadT_ voltage_divider_4
-XJ4 GND Net-_J4-PadT_ NC_02 IN_4
-R15 Net-_R15-Pad1_ Net-_R11-Pad1_ 100k
+R7 /IN_3 Net-_R7-Pad2_ 47k
+R13 Net-_R13-Pad1_ /IN_3 100k
+XRV3 GND Net-_R7-Pad2_ /IN_3 voltage_divider_3
+XJ4 GND /IN_3 NC_03 IN_3
+R16 Net-_R16-Pad1_ Net-_R12-Pad1_ 100k
 R6 Net-_R5-Pad2_ GND 47k
-R5 Net-_J3-PadT_ Net-_R5-Pad2_ 47k
-R11 Net-_R11-Pad1_ Net-_J3-PadT_ 100k
-XRV3 GND Net-_R5-Pad2_ Net-_J3-PadT_ voltage_divider_3
-XJ3 GND Net-_J3-PadT_ NC_03 IN_3
-R14 Net-_R14-Pad1_ Net-_R10-Pad1_ 100k
+R5 /IN_2 Net-_R5-Pad2_ 47k
+R12 Net-_R12-Pad1_ /IN_2 100k
+XRV2 GND Net-_R5-Pad2_ /IN_2 voltage_divider_2
+XJ3 GND /IN_2 NC_04 IN_2
+R15 Net-_R15-Pad1_ Net-_R11-Pad1_ 100k
 R4 Net-_R3-Pad2_ GND 47k
-R3 Net-_J2-PadT_ Net-_R3-Pad2_ 47k
-R10 Net-_R10-Pad1_ Net-_J2-PadT_ 100k
-XRV2 GND Net-_R3-Pad2_ Net-_J2-PadT_ voltage_divider_2
-XJ2 GND Net-_J2-PadT_ NC_04 IN_2
-R13 Net-_R13-Pad1_ Net-_R13-Pad2_ 100k
-R2 Net-_R1-Pad2_ GND 47k
-R1 Net-_J1-PadT_ Net-_R1-Pad2_ 47k
-R9 Net-_R13-Pad2_ Net-_J1-PadT_ 100k
-XRV1 GND Net-_R1-Pad2_ Net-_J1-PadT_ voltage_divider_1
-R17 Net-_R13-Pad1_ Net-_J6-PadT_ 1k
+R3 /IN_1 Net-_R3-Pad2_ 47k
+R11 Net-_R11-Pad1_ /IN_1 100k
+XRV1 GND Net-_R3-Pad2_ /IN_1 voltage_divider_1
+R19 Net-_R15-Pad1_ Net-_J6-PadT_ 1k
 XJ6 GND Net-_J6-PadT_ /MIX_1 OUT_1
-XJ1 GND Net-_J1-PadT_ Net-_J1-PadTN_ IN_1
+XJ2 GND /IN_1 NC_05 IN_1
+D2 GND Net-_D2-Pad2_ LED2
+R29 +5V Net-_Q1-Pad3_ 5k
+R23 Net-_D1-Pad1_ /IN_1 100k
+D6 GND Net-_D6-Pad2_ LED2
+R34 +5V Net-_Q3-Pad3_ 5k
+R32 Net-_D5-Pad1_ /IN_2 100k
+D10 GND Net-_D10-Pad2_ LED2
+R40 +5V Net-_Q5-Pad3_ 5k
+R38 Net-_D9-Pad1_ /IN_3 100k
+D4 GND Net-_D4-Pad2_ LED2
+R30 +5V Net-_Q2-Pad3_ 5k
+R28 Net-_D3-Pad1_ /IN_4 100k
+D8 GND Net-_D8-Pad2_ LED1
+R37 +5V Net-_Q4-Pad3_ 5k
+R35 Net-_D7-Pad1_ /OUT 100k
+D9 Net-_D9-Pad1_ GND D1N4148
+D5 Net-_D5-Pad1_ GND D1N4148
+D1 Net-_D1-Pad1_ GND D1N4148
+D3 Net-_D3-Pad1_ GND D1N4148
+D7 Net-_D7-Pad1_ GND D1N4148
+Q1 Net-_Q1-Pad3_ Net-_D1-Pad1_ Net-_D2-Pad2_ BC846B
+Q3 Net-_Q3-Pad3_ Net-_D5-Pad1_ Net-_D6-Pad2_ BC846B
+Q5 Net-_Q5-Pad3_ Net-_D9-Pad1_ Net-_D10-Pad2_ BC846B
+Q2 Net-_Q2-Pad3_ Net-_D4-Pad2_ Net-_D3-Pad1_ BC846B
+Q4 Net-_Q4-Pad3_ Net-_D7-Pad1_ Net-_D8-Pad2_ BC846B
 .end

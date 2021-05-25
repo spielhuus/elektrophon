@@ -7,9 +7,10 @@ author: spielhuus
 tag: grundlage
 category: article
 image: /assets/arbeitsplatz_files/radio_helmet_hero.jpg 
-hero_image: /assets/arbeitsplatz_files/radio_helmet_hero.jpg
-hero_height: is-halfheight
+hero_image: /assets/arbeitsplatz_files/hero_landscape.jpg
+hero_mobile: /assets/arbeitsplatz_files/hero_portrait.jpg
+hero_height: is-fullheight
 hero_darken: true
-hero_title: false
-hero_subtitle: false
+hero_title: true
+hero_subtitle: true
 ---

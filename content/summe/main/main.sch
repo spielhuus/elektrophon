@@ -4,127 +4,357 @@ EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
-Title "summe"
-Date "2020-12-29"
-Rev "01"
+Title "(title)"
+Date ""
+Rev "R01"
 Comp ""
-Comment1 "schema for main circuit"
-Comment2 "mixer and attenuverter"
+Comment1 "schema for pcb"
+Comment2 "(description)"
 Comment3 ""
 Comment4 "License CC BY 4.0 - Attribution 4.0 International"
 $EndDescr
-NoConn ~ 2200 5000
-NoConn ~ 2150 3950
-NoConn ~ 2100 2900
-Wire Wire Line
-	2100 1900 2100 1800
-Wire Wire Line
-	2100 2250 2100 2200
-Wire Wire Line
-	2050 2250 2100 2250
 $Comp
-L power:+5V #PWR08
-U 1 1 5F698C8B
-P 2050 2250
-AR Path="/5F698C8B" Ref="#PWR08"  Part="1" 
-AR Path="/5DD3665B/5F698C8B" Ref="#PWR?"  Part="1" 
-F 0 "#PWR08" H 2050 2100 50  0001 C CNN
-F 1 "+5V" H 1950 2450 50  0000 L CNN
-F 2 "" H 2050 2250 50  0001 C CNN
-F 3 "" H 2050 2250 50  0001 C CNN
-	1    2050 2250
+L power:+15V #PWR04
+U 1 1 5F816C5C
+P 1000 6400
+F 0 "#PWR04" H 1000 6250 50  0001 C CNN
+F 1 "+15V" H 1015 6573 50  0000 C CNN
+F 2 "" H 1000 6400 50  0001 C CNN
+F 3 "" H 1000 6400 50  0001 C CNN
+	1    1000 6400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:-15V #PWR05
+U 1 1 5F816FAE
+P 1250 6400
+F 0 "#PWR05" H 1250 6500 50  0001 C CNN
+F 1 "-15V" H 1265 6573 50  0000 C CNN
+F 2 "" H 1250 6400 50  0001 C CNN
+F 3 "" H 1250 6400 50  0001 C CNN
+	1    1250 6400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR09
+U 1 1 5F817A91
+P 1500 6500
+F 0 "#PWR09" H 1500 6250 50  0001 C CNN
+F 1 "GND" H 1505 6327 50  0000 C CNN
+F 2 "" H 1500 6500 50  0001 C CNN
+F 3 "" H 1500 6500 50  0001 C CNN
+	1    1500 6500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:PWR_FLAG #FLG02
+U 1 1 5F737716
+P 1000 6400
+F 0 "#FLG02" H 1000 6475 50  0001 C CNN
+F 1 "PWR_FLAG" H 1000 6573 50  0001 C CNN
+F 2 "" H 1000 6400 50  0001 C CNN
+F 3 "~" H 1000 6400 50  0001 C CNN
+	1    1000 6400
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:PWR_FLAG #FLG03
+U 1 1 5F737C0D
+P 1250 6400
+F 0 "#FLG03" H 1250 6475 50  0001 C CNN
+F 1 "PWR_FLAG" H 1250 6573 50  0001 C CNN
+F 2 "" H 1250 6400 50  0001 C CNN
+F 3 "~" H 1250 6400 50  0001 C CNN
+	1    1250 6400
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:PWR_FLAG #FLG04
+U 1 1 5F737FC5
+P 1500 6500
+F 0 "#FLG04" H 1500 6575 50  0001 C CNN
+F 1 "PWR_FLAG" H 1500 6673 50  0001 C CNN
+F 2 "" H 1500 6500 50  0001 C CNN
+F 3 "~" H 1500 6500 50  0001 C CNN
+	1    1500 6500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:CP C1
+U 1 1 60A97241
+P 2600 7100
+AR Path="/60A97241" Ref="C1"  Part="1" 
+AR Path="/5DD3665B/60A97241" Ref="C?"  Part="1" 
+F 0 "C1" H 2718 7146 50  0000 L CNN
+F 1 "22u" H 2718 7055 50  0000 L CNN
+F 2 "Capacitor_THT:CP_Radial_D5.0mm_P2.00mm" H 2638 6950 50  0001 C CNN
+F 3 "~" H 2600 7100 50  0001 C CNN
+F 4 "C" H 2600 7100 50  0001 C CNN "Spice_Primitive"
+F 5 "22u" H 2600 7100 50  0001 C CNN "Spice_Model"
+F 6 "N" H 2600 7100 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    2600 7100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:CP C2
+U 1 1 60A9723F
+P 2600 7400
+AR Path="/60A9723F" Ref="C2"  Part="1" 
+AR Path="/5DD3665B/60A9723F" Ref="C?"  Part="1" 
+F 0 "C2" H 2718 7446 50  0000 L CNN
+F 1 "22u" H 2718 7355 50  0000 L CNN
+F 2 "Capacitor_THT:CP_Radial_D5.0mm_P2.00mm" H 2638 7250 50  0001 C CNN
+F 3 "~" H 2600 7400 50  0001 C CNN
+F 4 "C" H 2600 7400 50  0001 C CNN "Spice_Primitive"
+F 5 "22u" H 2600 7400 50  0001 C CNN "Spice_Model"
+F 6 "N" H 2600 7400 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    2600 7400
+	1    0    0    -1  
+$EndComp
+Connection ~ 2600 7250
+Wire Wire Line
+	2600 7250 2400 7250
+Wire Wire Line
+	2350 7550 2400 7550
+Connection ~ 950  7000
+$Comp
+L power:PWR_FLAG #FLG01
+U 1 1 5FCD1662
+P 950 7000
+AR Path="/5FCD1662" Ref="#FLG01"  Part="1" 
+AR Path="/5DD3665B/5FCD1662" Ref="#FLG?"  Part="1" 
+F 0 "#FLG01" H 950 7075 50  0001 C CNN
+F 1 "PWR_FLAG" H 950 7128 50  0001 L CNN
+F 2 "" H 950 7000 50  0001 C CNN
+F 3 "~" H 950 7000 50  0001 C CNN
+	1    950  7000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR01
+U 1 1 5FCD1661
+P 950 7000
+AR Path="/5FCD1661" Ref="#PWR01"  Part="1" 
+AR Path="/5DD3665B/5FCD1661" Ref="#PWR?"  Part="1" 
+F 0 "#PWR01" H 950 6850 50  0001 C CNN
+F 1 "+5V" V 965 7128 50  0000 L CNN
+F 2 "" H 950 7000 50  0001 C CNN
+F 3 "" H 950 7000 50  0001 C CNN
+	1    950  7000
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Device:R R29
-U 1 1 5F6983BE
-P 2100 2050
-F 0 "R29" H 1900 2100 50  0000 L CNN
-F 1 "1k" H 1900 2000 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 2030 2050 50  0001 C CNN
-F 3 "~" H 2100 2050 50  0001 C CNN
-	1    2100 2050
+L power:+5V #PWR06
+U 1 1 5FCD1660
+P 1450 7000
+AR Path="/5FCD1660" Ref="#PWR06"  Part="1" 
+AR Path="/5DD3665B/5FCD1660" Ref="#PWR?"  Part="1" 
+F 0 "#PWR06" H 1450 6850 50  0001 C CNN
+F 1 "+5V" V 1465 7128 50  0000 L CNN
+F 2 "" H 1450 7000 50  0001 C CNN
+F 3 "" H 1450 7000 50  0001 C CNN
+	1    1450 7000
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR08
+U 1 1 5FC69BA7
+P 1450 7200
+AR Path="/5FC69BA7" Ref="#PWR08"  Part="1" 
+AR Path="/5DD3665B/5FC69BA7" Ref="#PWR?"  Part="1" 
+F 0 "#PWR08" H 1450 6950 50  0001 C CNN
+F 1 "GND" V 1455 7072 50  0000 R CNN
+F 2 "" H 1450 7200 50  0001 C CNN
+F 3 "" H 1450 7200 50  0001 C CNN
+	1    1450 7200
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR07
+U 1 1 5FCD165F
+P 1450 7100
+AR Path="/5FCD165F" Ref="#PWR07"  Part="1" 
+AR Path="/5DD3665B/5FCD165F" Ref="#PWR?"  Part="1" 
+F 0 "#PWR07" H 1450 6850 50  0001 C CNN
+F 1 "GND" V 1455 6972 50  0000 R CNN
+F 2 "" H 1450 7100 50  0001 C CNN
+F 3 "" H 1450 7100 50  0001 C CNN
+	1    1450 7100
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR02
+U 1 1 60A97243
+P 950 7100
+AR Path="/60A97243" Ref="#PWR02"  Part="1" 
+AR Path="/5DD3665B/60A97243" Ref="#PWR?"  Part="1" 
+F 0 "#PWR02" H 950 6850 50  0001 C CNN
+F 1 "GND" V 955 6972 50  0000 R CNN
+F 2 "" H 950 7100 50  0001 C CNN
+F 3 "" H 950 7100 50  0001 C CNN
+	1    950  7100
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR03
+U 1 1 5E180765
+P 950 7200
+AR Path="/5E180765" Ref="#PWR03"  Part="1" 
+AR Path="/5DD3665B/5E180765" Ref="#PWR?"  Part="1" 
+F 0 "#PWR03" H 950 6950 50  0001 C CNN
+F 1 "GND" V 955 7072 50  0000 R CNN
+F 2 "" H 950 7200 50  0001 C CNN
+F 3 "" H 950 7200 50  0001 C CNN
+	1    950  7200
+	0    1    1    0   
+$EndComp
+$Comp
+L Connector_Generic:Conn_02x05_Odd_Even J1
+U 1 1 5FCD165C
+P 1250 7200
+AR Path="/5FCD165C" Ref="J1"  Part="1" 
+AR Path="/5DD3665B/5FCD165C" Ref="J?"  Part="1" 
+F 0 "J1" H 1300 7617 50  0000 C CNN
+F 1 "IDC Header" H 1300 7526 50  0000 C CNN
+F 2 "Connector_IDC:IDC-Header_2x05_P2.54mm_Vertical" H 1250 7200 50  0001 C CNN
+F 3 "~" H 1250 7200 50  0001 C CNN
+F 4 "J" H 1250 7200 50  0001 C CNN "Spice_Primitive"
+F 5 "IDC Header" H 1250 7200 50  0001 C CNN "Spice_Model"
+F 6 "N" H 1250 7200 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    1250 7200
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR015
+U 1 1 5E180712
+P 2400 7250
+AR Path="/5E180712" Ref="#PWR015"  Part="1" 
+AR Path="/5DD3665B/5E180712" Ref="#PWR?"  Part="1" 
+F 0 "#PWR015" H 2400 7000 50  0001 C CNN
+F 1 "GND" V 2400 7050 50  0000 C CNN
+F 2 "" H 2400 7250 50  0001 C CNN
+F 3 "" H 2400 7250 50  0001 C CNN
+	1    2400 7250
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R1
+U 1 1 5FB443E6
+P 2200 6950
+F 0 "R1" V 1993 6950 50  0000 C CNN
+F 1 "10" V 2084 6950 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P2.54mm_Vertical" V 2130 6950 50  0001 C CNN
+F 3 "~" H 2200 6950 50  0001 C CNN
+F 4 "R" H 2200 6950 50  0001 C CNN "Spice_Primitive"
+F 5 "10" H 2200 6950 50  0001 C CNN "Spice_Model"
+F 6 "N" H 2200 6950 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    2200 6950
+	0    1    1    0   
+$EndComp
+$Comp
+L power:+15V #PWR014
+U 1 1 5FC69BA0
+P 2400 6950
+AR Path="/5FC69BA0" Ref="#PWR014"  Part="1" 
+AR Path="/5DD3665B/5FC69BA0" Ref="#PWR?"  Part="1" 
+F 0 "#PWR014" H 2400 6800 50  0001 C CNN
+F 1 "+15V" H 2300 7100 50  0000 L CNN
+F 2 "" H 2400 6950 50  0001 C CNN
+F 3 "" H 2400 6950 50  0001 C CNN
+	1    2400 6950
 	1    0    0    -1  
 $EndComp
+$Comp
+L power:-15V #PWR016
+U 1 1 5FC69BA2
+P 2400 7550
+AR Path="/5FC69BA2" Ref="#PWR016"  Part="1" 
+AR Path="/5DD3665B/5FC69BA2" Ref="#PWR?"  Part="1" 
+F 0 "#PWR016" H 2400 7650 50  0001 C CNN
+F 1 "-15V" H 2300 7700 50  0000 L CNN
+F 2 "" H 2400 7550 50  0001 C CNN
+F 3 "" H 2400 7550 50  0001 C CNN
+	1    2400 7550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 5FC69BB1
+P 2200 7550
+F 0 "R2" V 1993 7550 50  0000 C CNN
+F 1 "10" V 2084 7550 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P2.54mm_Vertical" V 2130 7550 50  0001 C CNN
+F 3 "~" H 2200 7550 50  0001 C CNN
+F 4 "R" H 2200 7550 50  0001 C CNN "Spice_Primitive"
+F 5 "10" H 2200 7550 50  0001 C CNN "Spice_Model"
+F 6 "N" H 2200 7550 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    2200 7550
+	0    1    1    0   
+$EndComp
 Wire Wire Line
-	2700 6750 3500 6750
-Connection ~ 2700 6750
-Connection ~ 3500 6750
+	2350 6950 2400 6950
+Connection ~ 2400 6950
 Wire Wire Line
-	1900 6750 2700 6750
+	2400 6950 2600 6950
+Connection ~ 2400 7550
 Wire Wire Line
-	3050 7050 2700 7050
-Connection ~ 3050 7050
-Connection ~ 2700 7050
-Wire Wire Line
-	3500 7050 3050 7050
-Wire Wire Line
-	3050 6450 2700 6450
-Connection ~ 3050 6450
-Connection ~ 2700 6450
-Wire Wire Line
-	3500 6450 3050 6450
-Wire Wire Line
-	2250 6450 2700 6450
-Connection ~ 2250 6450
-Wire Wire Line
-	2250 7050 2700 7050
-Connection ~ 2250 7050
-Wire Wire Line
-	1450 6450 1900 6450
-Connection ~ 1450 6450
-Wire Wire Line
-	1450 7050 1900 7050
-Connection ~ 1450 7050
+	2400 7550 2600 7550
+Text GLabel 2050 6950 0    50   Input ~ 0
+VP
+Text GLabel 2050 7550 0    50   Input ~ 0
+VN
+Text GLabel 1450 7300 2    50   Input ~ 0
+VP
+Text GLabel 950  7300 0    50   Input ~ 0
+VP
+Text GLabel 1450 7400 2    50   Input ~ 0
+VN
+Text GLabel 950  7400 0    50   Input ~ 0
+VN
+NoConn ~ 2200 5000
+NoConn ~ 2150 3950
+NoConn ~ 2100 2900
 $Comp
 L Device:C C8
 U 1 1 5EC3E5CE
-P 3500 6900
+P 5700 7400
 AR Path="/5EC3E5CE" Ref="C8"  Part="1" 
 AR Path="/5DD3665B/5EC3E5CE" Ref="C?"  Part="1" 
-F 0 "C8" H 3615 6946 50  0000 L CNN
-F 1 "0.1u" H 3615 6855 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 3538 6750 50  0001 C CNN
-F 3 "~" H 3500 6900 50  0001 C CNN
-F 4 "C" H 3500 6900 50  0001 C CNN "Spice_Primitive"
-F 5 "0.1u" H 3500 6900 50  0001 C CNN "Spice_Model"
-F 6 "N" H 3500 6900 50  0001 C CNN "Spice_Netlist_Enabled"
-	1    3500 6900
+F 0 "C8" H 5815 7446 50  0000 L CNN
+F 1 "0.1u" H 5815 7355 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" H 5738 7250 50  0001 C CNN
+F 3 "~" H 5700 7400 50  0001 C CNN
+F 4 "C" H 5700 7400 50  0001 C CNN "Spice_Primitive"
+F 5 "0.1u" H 5700 7400 50  0001 C CNN "Spice_Model"
+F 6 "N" H 5700 7400 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    5700 7400
 	1    0    0    -1  
 $EndComp
 $Comp
 L Device:C C7
 U 1 1 5EC3E5C8
-P 3500 6600
+P 5700 7100
 AR Path="/5EC3E5C8" Ref="C7"  Part="1" 
 AR Path="/5DD3665B/5EC3E5C8" Ref="C?"  Part="1" 
-F 0 "C7" H 3615 6646 50  0000 L CNN
-F 1 "0.1u" H 3615 6555 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 3538 6450 50  0001 C CNN
-F 3 "~" H 3500 6600 50  0001 C CNN
-F 4 "C" H 3500 6600 50  0001 C CNN "Spice_Primitive"
-F 5 "0.1u" H 3500 6600 50  0001 C CNN "Spice_Model"
-F 6 "N" H 3500 6600 50  0001 C CNN "Spice_Netlist_Enabled"
-	1    3500 6600
+F 0 "C7" H 5815 7146 50  0000 L CNN
+F 1 "0.1u" H 5815 7055 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" H 5738 6950 50  0001 C CNN
+F 3 "~" H 5700 7100 50  0001 C CNN
+F 4 "C" H 5700 7100 50  0001 C CNN "Spice_Primitive"
+F 5 "0.1u" H 5700 7100 50  0001 C CNN "Spice_Model"
+F 6 "N" H 5700 7100 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    5700 7100
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	1900 6450 2250 6450
-Wire Wire Line
-	1900 7050 2250 7050
-Wire Wire Line
-	1150 6450 1450 6450
-Wire Wire Line
-	1150 7050 1450 7050
 Wire Wire Line
 	8200 2000 8200 2050
 Wire Wire Line
 	8250 2000 8200 2000
 $Comp
-L power:GND #PWR040
+L power:GND #PWR045
 U 1 1 5EC0592E
 P 8200 2050
-F 0 "#PWR040" H 8200 1800 50  0001 C CNN
+F 0 "#PWR045" H 8200 1800 50  0001 C CNN
 F 1 "GND" H 8205 1877 50  0000 C CNN
 F 2 "" H 8200 2050 50  0001 C CNN
 F 3 "" H 8200 2050 50  0001 C CNN
@@ -153,23 +383,23 @@ Wire Wire Line
 Wire Wire Line
 	8450 1200 8200 1200
 $Comp
-L Device:R R27
+L Device:R R36
 U 1 1 5EBEEF1C
 P 8600 1200
-F 0 "R27" H 8530 1154 50  0000 R CNN
+F 0 "R36" H 8530 1154 50  0000 R CNN
 F 1 "100k" H 8530 1245 50  0000 R CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 8530 1200 50  0001 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 8530 1200 50  0001 C CNN
 F 3 "~" H 8600 1200 50  0001 C CNN
 	1    8600 1200
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Device:R R26
+L Device:R R33
 U 1 1 5EBE3954
 P 8000 1800
-F 0 "R26" H 7930 1754 50  0000 R CNN
+F 0 "R33" H 7930 1754 50  0000 R CNN
 F 1 "100k" H 7930 1845 50  0000 R CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 7930 1800 50  0001 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 7930 1800 50  0001 C CNN
 F 3 "~" H 8000 1800 50  0001 C CNN
 	1    8000 1800
 	0    -1   -1   0   
@@ -181,15 +411,15 @@ Connection ~ 3150 1700
 $Comp
 L Amplifier_Operational:OPA2134 U3
 U 3 1 5EB84906
-P 3150 6750
-F 0 "U3" H 3108 6796 50  0000 L CNN
-F 1 "OPA2134" H 3108 6705 50  0000 L CNN
-F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 3150 6750 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/opa134.pdf" H 3150 6750 50  0001 C CNN
-F 4 "X" H 3150 6750 50  0001 C CNN "Spice_Primitive"
-F 5 "OPA2134d" H 3150 6750 50  0001 C CNN "Spice_Model"
-F 6 "Y" H 3150 6750 50  0001 C CNN "Spice_Netlist_Enabled"
-	3    3150 6750
+P 6200 7250
+F 0 "U3" H 6158 7296 50  0000 L CNN
+F 1 "OPA2134" H 6158 7205 50  0000 L CNN
+F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 6200 7250 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/opa134.pdf" H 6200 7250 50  0001 C CNN
+F 4 "X" H 6200 7250 50  0001 C CNN "Spice_Primitive"
+F 5 "OPA2134d" H 6200 7250 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 6200 7250 50  0001 C CNN "Spice_Netlist_Enabled"
+	3    6200 7250
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -223,15 +453,15 @@ $EndComp
 $Comp
 L Amplifier_Operational:OPA2134 U2
 U 3 1 5EB7FAE8
-P 2350 6750
-F 0 "U2" H 2308 6796 50  0000 L CNN
-F 1 "OPA2134" H 2308 6705 50  0000 L CNN
-F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 2350 6750 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/opa134.pdf" H 2350 6750 50  0001 C CNN
-F 4 "X" H 2350 6750 50  0001 C CNN "Spice_Primitive"
-F 5 "OPA2134d" H 2350 6750 50  0001 C CNN "Spice_Model"
-F 6 "Y" H 2350 6750 50  0001 C CNN "Spice_Netlist_Enabled"
-	3    2350 6750
+P 5050 7250
+F 0 "U2" H 5008 7296 50  0000 L CNN
+F 1 "OPA2134" H 5008 7205 50  0000 L CNN
+F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 5050 7250 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/opa134.pdf" H 5050 7250 50  0001 C CNN
+F 4 "X" H 5050 7250 50  0001 C CNN "Spice_Primitive"
+F 5 "OPA2134d" H 5050 7250 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 5050 7250 50  0001 C CNN "Spice_Netlist_Enabled"
+	3    5050 7250
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -265,15 +495,15 @@ $EndComp
 $Comp
 L Amplifier_Operational:OPA2134 U1
 U 3 1 5EB7BA39
-P 1550 6750
-F 0 "U1" H 1508 6796 50  0000 L CNN
-F 1 "OPA2134" H 1508 6705 50  0000 L CNN
-F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 1550 6750 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/opa134.pdf" H 1550 6750 50  0001 C CNN
-F 4 "X" H 1550 6750 50  0001 C CNN "Spice_Primitive"
-F 5 "OPA2134d" H 1550 6750 50  0001 C CNN "Spice_Model"
-F 6 "Y" H 1550 6750 50  0001 C CNN "Spice_Netlist_Enabled"
-	3    1550 6750
+P 3850 7250
+F 0 "U1" H 3808 7296 50  0000 L CNN
+F 1 "OPA2134" H 3808 7205 50  0000 L CNN
+F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 3850 7250 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/opa134.pdf" H 3850 7250 50  0001 C CNN
+F 4 "X" H 3850 7250 50  0001 C CNN "Spice_Primitive"
+F 5 "OPA2134d" H 3850 7250 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 3850 7250 50  0001 C CNN "Spice_Netlist_Enabled"
+	3    3850 7250
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -305,435 +535,68 @@ F 6 "Y" H 3450 1800 50  0001 C CNN "Spice_Netlist_Enabled"
 	1    0    0    1   
 $EndComp
 $Comp
-L power:GND #PWR06
-U 1 1 5E18079D
-P 1650 7550
-AR Path="/5E18079D" Ref="#PWR06"  Part="1" 
-AR Path="/5DD3665B/5E18079D" Ref="#PWR?"  Part="1" 
-F 0 "#PWR06" H 1650 7300 50  0001 C CNN
-F 1 "GND" V 1650 7350 50  0000 C CNN
-F 2 "" H 1650 7550 50  0001 C CNN
-F 3 "" H 1650 7550 50  0001 C CNN
-	1    1650 7550
-	0    -1   -1   0   
-$EndComp
-$Comp
-L power:PWR_FLAG #FLG03
-U 1 1 5E1807A9
-P 1650 7550
-AR Path="/5E1807A9" Ref="#FLG03"  Part="1" 
-AR Path="/5DD3665B/5E1807A9" Ref="#FLG?"  Part="1" 
-F 0 "#FLG03" H 1650 7625 50  0001 C CNN
-F 1 "PWR_FLAG" V 1650 7678 50  0000 L CNN
-F 2 "" H 1650 7550 50  0001 C CNN
-F 3 "~" H 1650 7550 50  0001 C CNN
-	1    1650 7550
-	0    -1   -1   0   
-$EndComp
-$Comp
-L Device:CP C1
-U 1 1 5E180738
-P 1150 6600
-AR Path="/5E180738" Ref="C1"  Part="1" 
-AR Path="/5DD3665B/5E180738" Ref="C?"  Part="1" 
-F 0 "C1" H 1268 6646 50  0000 L CNN
-F 1 "10u" H 1268 6555 50  0000 L CNN
-F 2 "Capacitor_THT:CP_Radial_D5.0mm_P2.50mm" H 1188 6450 50  0001 C CNN
-F 3 "~" H 1150 6600 50  0001 C CNN
-F 4 "C" H 1150 6600 50  0001 C CNN "Spice_Primitive"
-F 5 "10u" H 1150 6600 50  0001 C CNN "Spice_Model"
-F 6 "N" H 1150 6600 50  0001 C CNN "Spice_Netlist_Enabled"
-	1    1150 6600
-	1    0    0    -1  
-$EndComp
-Connection ~ 1150 6450
-Wire Wire Line
-	1150 6450 950  6450
-$Comp
-L Device:CP C2
-U 1 1 5E18070C
-P 1150 6900
-AR Path="/5E18070C" Ref="C2"  Part="1" 
-AR Path="/5DD3665B/5E18070C" Ref="C?"  Part="1" 
-F 0 "C2" H 1268 6946 50  0000 L CNN
-F 1 "10u" H 1268 6855 50  0000 L CNN
-F 2 "Capacitor_THT:CP_Radial_D5.0mm_P2.50mm" H 1188 6750 50  0001 C CNN
-F 3 "~" H 1150 6900 50  0001 C CNN
-F 4 "C" H 1150 6900 50  0001 C CNN "Spice_Primitive"
-F 5 "10u" H 1150 6900 50  0001 C CNN "Spice_Model"
-F 6 "N" H 1150 6900 50  0001 C CNN "Spice_Netlist_Enabled"
-	1    1150 6900
-	1    0    0    -1  
-$EndComp
-Connection ~ 1150 6750
-Wire Wire Line
-	1150 6750 950  6750
-Wire Wire Line
-	1150 6750 1900 6750
-Connection ~ 1150 7050
-Wire Wire Line
-	900  7050 1150 7050
-$Comp
-L power:GND #PWR024
-U 1 1 5EB47301
-P 4100 6900
-AR Path="/5EB47301" Ref="#PWR024"  Part="1" 
-AR Path="/5DD3665B/5EB47301" Ref="#PWR?"  Part="1" 
-F 0 "#PWR024" H 4100 6650 50  0001 C CNN
-F 1 "GND" H 4105 6727 50  0000 C CNN
-F 2 "" H 4100 6900 50  0001 C CNN
-F 3 "" H 4100 6900 50  0001 C CNN
-	1    4100 6900
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:CP C9
-U 1 1 5EB46C3A
-P 4100 6750
-AR Path="/5EB46C3A" Ref="C9"  Part="1" 
-AR Path="/5DD3665B/5EB46C3A" Ref="C?"  Part="1" 
-F 0 "C9" H 4218 6796 50  0000 L CNN
-F 1 "10u" H 4218 6705 50  0000 L CNN
-F 2 "Capacitor_THT:CP_Radial_D5.0mm_P2.50mm" H 4138 6600 50  0001 C CNN
-F 3 "~" H 4100 6750 50  0001 C CNN
-F 4 "C" H 4100 6750 50  0001 C CNN "Spice_Primitive"
-F 5 "10u" H 4100 6750 50  0001 C CNN "Spice_Model"
-F 6 "N" H 4100 6750 50  0001 C CNN "Spice_Netlist_Enabled"
-	1    4100 6750
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:+5V #PWR023
-U 1 1 5EB459F4
-P 4100 6600
-AR Path="/5EB459F4" Ref="#PWR023"  Part="1" 
-AR Path="/5DD3665B/5EB459F4" Ref="#PWR?"  Part="1" 
-F 0 "#PWR023" H 4100 6450 50  0001 C CNN
-F 1 "+5V" H 4000 6800 50  0000 L CNN
-F 2 "" H 4100 6600 50  0001 C CNN
-F 3 "" H 4100 6600 50  0001 C CNN
-	1    4100 6600
-	1    0    0    -1  
-$EndComp
-Connection ~ 1900 7050
-Connection ~ 1900 6450
-$Comp
 L Device:C C6
 U 1 1 5E180806
-P 2700 6900
+P 4500 7400
 AR Path="/5E180806" Ref="C6"  Part="1" 
 AR Path="/5DD3665B/5E180806" Ref="C?"  Part="1" 
-F 0 "C6" H 2815 6946 50  0000 L CNN
-F 1 "0.1u" H 2815 6855 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 2738 6750 50  0001 C CNN
-F 3 "~" H 2700 6900 50  0001 C CNN
-F 4 "C" H 2700 6900 50  0001 C CNN "Spice_Primitive"
-F 5 "0.1u" H 2700 6900 50  0001 C CNN "Spice_Model"
-F 6 "N" H 2700 6900 50  0001 C CNN "Spice_Netlist_Enabled"
-	1    2700 6900
+F 0 "C6" H 4615 7446 50  0000 L CNN
+F 1 "0.1u" H 4615 7355 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" H 4538 7250 50  0001 C CNN
+F 3 "~" H 4500 7400 50  0001 C CNN
+F 4 "C" H 4500 7400 50  0001 C CNN "Spice_Primitive"
+F 5 "0.1u" H 4500 7400 50  0001 C CNN "Spice_Model"
+F 6 "N" H 4500 7400 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    4500 7400
 	1    0    0    -1  
 $EndComp
 $Comp
 L Device:C C5
 U 1 1 5E180800
-P 2700 6600
+P 4500 7100
 AR Path="/5E180800" Ref="C5"  Part="1" 
 AR Path="/5DD3665B/5E180800" Ref="C?"  Part="1" 
-F 0 "C5" H 2815 6646 50  0000 L CNN
-F 1 "0.1u" H 2815 6555 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 2738 6450 50  0001 C CNN
-F 3 "~" H 2700 6600 50  0001 C CNN
-F 4 "C" H 2700 6600 50  0001 C CNN "Spice_Primitive"
-F 5 "0.1u" H 2700 6600 50  0001 C CNN "Spice_Model"
-F 6 "N" H 2700 6600 50  0001 C CNN "Spice_Netlist_Enabled"
-	1    2700 6600
+F 0 "C5" H 4615 7146 50  0000 L CNN
+F 1 "0.1u" H 4615 7055 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" H 4538 6950 50  0001 C CNN
+F 3 "~" H 4500 7100 50  0001 C CNN
+F 4 "C" H 4500 7100 50  0001 C CNN "Spice_Primitive"
+F 5 "0.1u" H 4500 7100 50  0001 C CNN "Spice_Model"
+F 6 "N" H 4500 7100 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    4500 7100
 	1    0    0    -1  
 $EndComp
-Connection ~ 1900 6750
 $Comp
 L Device:C C4
 U 1 1 5E1807EC
-P 1900 6900
+P 3350 7400
 AR Path="/5E1807EC" Ref="C4"  Part="1" 
 AR Path="/5DD3665B/5E1807EC" Ref="C?"  Part="1" 
-F 0 "C4" H 2015 6946 50  0000 L CNN
-F 1 "0.1u" H 2015 6855 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 1938 6750 50  0001 C CNN
-F 3 "~" H 1900 6900 50  0001 C CNN
-F 4 "C" H 1900 6900 50  0001 C CNN "Spice_Primitive"
-F 5 "0.1u" H 1900 6900 50  0001 C CNN "Spice_Model"
-F 6 "N" H 1900 6900 50  0001 C CNN "Spice_Netlist_Enabled"
-	1    1900 6900
+F 0 "C4" H 3465 7446 50  0000 L CNN
+F 1 "0.1u" H 3465 7355 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" H 3388 7250 50  0001 C CNN
+F 3 "~" H 3350 7400 50  0001 C CNN
+F 4 "C" H 3350 7400 50  0001 C CNN "Spice_Primitive"
+F 5 "0.1u" H 3350 7400 50  0001 C CNN "Spice_Model"
+F 6 "N" H 3350 7400 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    3350 7400
 	1    0    0    -1  
 $EndComp
 $Comp
 L Device:C C3
 U 1 1 5E1807E6
-P 1900 6600
+P 3350 7100
 AR Path="/5E1807E6" Ref="C3"  Part="1" 
 AR Path="/5DD3665B/5E1807E6" Ref="C?"  Part="1" 
-F 0 "C3" H 2015 6646 50  0000 L CNN
-F 1 "0.1u" H 2015 6555 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 1938 6450 50  0001 C CNN
-F 3 "~" H 1900 6600 50  0001 C CNN
-F 4 "C" H 1900 6600 50  0001 C CNN "Spice_Primitive"
-F 5 "0.1u" H 1900 6600 50  0001 C CNN "Spice_Model"
-F 6 "N" H 1900 6600 50  0001 C CNN "Spice_Netlist_Enabled"
-	1    1900 6600
+F 0 "C3" H 3465 7146 50  0000 L CNN
+F 1 "0.1u" H 3465 7055 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" H 3388 6950 50  0001 C CNN
+F 3 "~" H 3350 7100 50  0001 C CNN
+F 4 "C" H 3350 7100 50  0001 C CNN "Spice_Primitive"
+F 5 "0.1u" H 3350 7100 50  0001 C CNN "Spice_Model"
+F 6 "N" H 3350 7100 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    3350 7100
 	1    0    0    -1  
-$EndComp
-$Comp
-L power:PWR_FLAG #FLG02
-U 1 1 5E1807A3
-P 1650 7450
-AR Path="/5E1807A3" Ref="#FLG02"  Part="1" 
-AR Path="/5DD3665B/5E1807A3" Ref="#FLG?"  Part="1" 
-F 0 "#FLG02" H 1650 7525 50  0001 C CNN
-F 1 "PWR_FLAG" V 1650 7578 50  0000 L CNN
-F 2 "" H 1650 7450 50  0001 C CNN
-F 3 "~" H 1650 7450 50  0001 C CNN
-	1    1650 7450
-	0    -1   -1   0   
-$EndComp
-$Comp
-L power:-15V #PWR05
-U 1 1 5E180797
-P 1650 7450
-AR Path="/5E180797" Ref="#PWR05"  Part="1" 
-AR Path="/5DD3665B/5E180797" Ref="#PWR?"  Part="1" 
-F 0 "#PWR05" H 1650 7550 50  0001 C CNN
-F 1 "-15V" V 1665 7578 50  0000 L CNN
-F 2 "" H 1650 7450 50  0001 C CNN
-F 3 "" H 1650 7450 50  0001 C CNN
-	1    1650 7450
-	0    1    1    0   
-$EndComp
-$Comp
-L power:+15V #PWR04
-U 1 1 5F6BBF92
-P 1650 7350
-AR Path="/5F6BBF92" Ref="#PWR04"  Part="1" 
-AR Path="/5DD3665B/5F6BBF92" Ref="#PWR?"  Part="1" 
-F 0 "#PWR04" H 1650 7200 50  0001 C CNN
-F 1 "+15V" V 1665 7478 50  0000 L CNN
-F 2 "" H 1650 7350 50  0001 C CNN
-F 3 "" H 1650 7350 50  0001 C CNN
-	1    1650 7350
-	0    1    1    0   
-$EndComp
-Text Notes 5050 7350 0    50   ~ 0
-Power
-Connection ~ 4900 6550
-$Comp
-L power:PWR_FLAG #FLG04
-U 1 1 5E180789
-P 4900 6550
-AR Path="/5E180789" Ref="#FLG04"  Part="1" 
-AR Path="/5DD3665B/5E180789" Ref="#FLG?"  Part="1" 
-F 0 "#FLG04" H 4900 6625 50  0001 C CNN
-F 1 "PWR_FLAG" H 4900 6678 50  0001 L CNN
-F 2 "" H 4900 6550 50  0001 C CNN
-F 3 "~" H 4900 6550 50  0001 C CNN
-	1    4900 6550
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:+5V #PWR025
-U 1 1 5E180783
-P 4900 6550
-AR Path="/5E180783" Ref="#PWR025"  Part="1" 
-AR Path="/5DD3665B/5E180783" Ref="#PWR?"  Part="1" 
-F 0 "#PWR025" H 4900 6400 50  0001 C CNN
-F 1 "+5V" V 4915 6678 50  0000 L CNN
-F 2 "" H 4900 6550 50  0001 C CNN
-F 3 "" H 4900 6550 50  0001 C CNN
-	1    4900 6550
-	0    -1   -1   0   
-$EndComp
-$Comp
-L power:+5V #PWR034
-U 1 1 5E18077D
-P 5400 6550
-AR Path="/5E18077D" Ref="#PWR034"  Part="1" 
-AR Path="/5DD3665B/5E18077D" Ref="#PWR?"  Part="1" 
-F 0 "#PWR034" H 5400 6400 50  0001 C CNN
-F 1 "+5V" V 5415 6678 50  0000 L CNN
-F 2 "" H 5400 6550 50  0001 C CNN
-F 3 "" H 5400 6550 50  0001 C CNN
-	1    5400 6550
-	0    1    1    0   
-$EndComp
-$Comp
-L power:GND #PWR036
-U 1 1 5E180777
-P 5400 6750
-AR Path="/5E180777" Ref="#PWR036"  Part="1" 
-AR Path="/5DD3665B/5E180777" Ref="#PWR?"  Part="1" 
-F 0 "#PWR036" H 5400 6500 50  0001 C CNN
-F 1 "GND" V 5405 6622 50  0000 R CNN
-F 2 "" H 5400 6750 50  0001 C CNN
-F 3 "" H 5400 6750 50  0001 C CNN
-	1    5400 6750
-	0    -1   -1   0   
-$EndComp
-$Comp
-L power:GND #PWR035
-U 1 1 5E180771
-P 5400 6650
-AR Path="/5E180771" Ref="#PWR035"  Part="1" 
-AR Path="/5DD3665B/5E180771" Ref="#PWR?"  Part="1" 
-F 0 "#PWR035" H 5400 6400 50  0001 C CNN
-F 1 "GND" V 5405 6522 50  0000 R CNN
-F 2 "" H 5400 6650 50  0001 C CNN
-F 3 "" H 5400 6650 50  0001 C CNN
-	1    5400 6650
-	0    -1   -1   0   
-$EndComp
-$Comp
-L power:GND #PWR026
-U 1 1 5E18076B
-P 4900 6650
-AR Path="/5E18076B" Ref="#PWR026"  Part="1" 
-AR Path="/5DD3665B/5E18076B" Ref="#PWR?"  Part="1" 
-F 0 "#PWR026" H 4900 6400 50  0001 C CNN
-F 1 "GND" V 4905 6522 50  0000 R CNN
-F 2 "" H 4900 6650 50  0001 C CNN
-F 3 "" H 4900 6650 50  0001 C CNN
-	1    4900 6650
-	0    1    1    0   
-$EndComp
-$Comp
-L power:GND #PWR027
-U 1 1 5E180765
-P 4900 6750
-AR Path="/5E180765" Ref="#PWR027"  Part="1" 
-AR Path="/5DD3665B/5E180765" Ref="#PWR?"  Part="1" 
-F 0 "#PWR027" H 4900 6500 50  0001 C CNN
-F 1 "GND" V 4905 6622 50  0000 R CNN
-F 2 "" H 4900 6750 50  0001 C CNN
-F 3 "" H 4900 6750 50  0001 C CNN
-	1    4900 6750
-	0    1    1    0   
-$EndComp
-$Comp
-L power:-15V #PWR038
-U 1 1 5E18075F
-P 5400 6950
-AR Path="/5E18075F" Ref="#PWR038"  Part="1" 
-AR Path="/5DD3665B/5E18075F" Ref="#PWR?"  Part="1" 
-F 0 "#PWR038" H 5400 7050 50  0001 C CNN
-F 1 "-15V" V 5415 7078 50  0000 L CNN
-F 2 "" H 5400 6950 50  0001 C CNN
-F 3 "" H 5400 6950 50  0001 C CNN
-	1    5400 6950
-	0    1    1    0   
-$EndComp
-$Comp
-L power:-15V #PWR029
-U 1 1 5E180759
-P 4900 6950
-AR Path="/5E180759" Ref="#PWR029"  Part="1" 
-AR Path="/5DD3665B/5E180759" Ref="#PWR?"  Part="1" 
-F 0 "#PWR029" H 4900 7050 50  0001 C CNN
-F 1 "-15V" V 4915 7078 50  0000 L CNN
-F 2 "" H 4900 6950 50  0001 C CNN
-F 3 "" H 4900 6950 50  0001 C CNN
-	1    4900 6950
-	0    -1   -1   0   
-$EndComp
-$Comp
-L power:+15V #PWR037
-U 1 1 5E180753
-P 5400 6850
-AR Path="/5E180753" Ref="#PWR037"  Part="1" 
-AR Path="/5DD3665B/5E180753" Ref="#PWR?"  Part="1" 
-F 0 "#PWR037" H 5400 6700 50  0001 C CNN
-F 1 "+15V" V 5415 6978 50  0000 L CNN
-F 2 "" H 5400 6850 50  0001 C CNN
-F 3 "" H 5400 6850 50  0001 C CNN
-	1    5400 6850
-	0    1    1    0   
-$EndComp
-$Comp
-L power:+15V #PWR028
-U 1 1 5E18074D
-P 4900 6850
-AR Path="/5E18074D" Ref="#PWR028"  Part="1" 
-AR Path="/5DD3665B/5E18074D" Ref="#PWR?"  Part="1" 
-F 0 "#PWR028" H 4900 6700 50  0001 C CNN
-F 1 "+15V" V 4915 6978 50  0000 L CNN
-F 2 "" H 4900 6850 50  0001 C CNN
-F 3 "" H 4900 6850 50  0001 C CNN
-	1    4900 6850
-	0    -1   -1   0   
-$EndComp
-$Comp
-L Connector_Generic:Conn_02x05_Odd_Even J5
-U 1 1 5E180747
-P 5200 6750
-AR Path="/5E180747" Ref="J5"  Part="1" 
-AR Path="/5DD3665B/5E180747" Ref="J?"  Part="1" 
-F 0 "J5" H 5250 7167 50  0000 C CNN
-F 1 "IDC Header" H 5250 7076 50  0000 C CNN
-F 2 "Connector_IDC:IDC-Header_2x05_P2.54mm_Vertical" H 5200 6750 50  0001 C CNN
-F 3 "~" H 5200 6750 50  0001 C CNN
-F 4 "J" H 5200 6750 50  0001 C CNN "Spice_Primitive"
-F 5 "IDC Header" H 5200 6750 50  0001 C CNN "Spice_Model"
-F 6 "N" H 5200 6750 50  0001 C CNN "Spice_Netlist_Enabled"
-	1    5200 6750
-	-1   0    0    1   
-$EndComp
-$Comp
-L power:-15V #PWR01
-U 1 1 5E18073E
-P 900 7050
-AR Path="/5E18073E" Ref="#PWR01"  Part="1" 
-AR Path="/5DD3665B/5E18073E" Ref="#PWR?"  Part="1" 
-F 0 "#PWR01" H 900 7150 50  0001 C CNN
-F 1 "-15V" V 915 7178 50  0000 L CNN
-F 2 "" H 900 7050 50  0001 C CNN
-F 3 "" H 900 7050 50  0001 C CNN
-	1    900  7050
-	0    -1   -1   0   
-$EndComp
-$Comp
-L power:PWR_FLAG #FLG01
-U 1 1 5E180731
-P 1650 7350
-AR Path="/5E180731" Ref="#FLG01"  Part="1" 
-AR Path="/5DD3665B/5E180731" Ref="#FLG?"  Part="1" 
-F 0 "#FLG01" H 1650 7425 50  0001 C CNN
-F 1 "PWR_FLAG" V 1650 7478 50  0000 L CNN
-F 2 "" H 1650 7350 50  0001 C CNN
-F 3 "~" H 1650 7350 50  0001 C CNN
-	1    1650 7350
-	0    -1   -1   0   
-$EndComp
-$Comp
-L power:GND #PWR03
-U 1 1 5E180712
-P 950 6750
-AR Path="/5E180712" Ref="#PWR03"  Part="1" 
-AR Path="/5DD3665B/5E180712" Ref="#PWR?"  Part="1" 
-F 0 "#PWR03" H 950 6500 50  0001 C CNN
-F 1 "GND" H 955 6577 50  0000 C CNN
-F 2 "" H 950 6750 50  0001 C CNN
-F 3 "" H 950 6750 50  0001 C CNN
-	1    950  6750
-	0    1    1    0   
-$EndComp
-$Comp
-L power:+15V #PWR02
-U 1 1 5E180706
-P 950 6450
-AR Path="/5E180706" Ref="#PWR02"  Part="1" 
-AR Path="/5DD3665B/5E180706" Ref="#PWR?"  Part="1" 
-F 0 "#PWR02" H 950 6300 50  0001 C CNN
-F 1 "+15V" V 965 6578 50  0000 L CNN
-F 2 "" H 950 6450 50  0001 C CNN
-F 3 "" H 950 6450 50  0001 C CNN
-	1    950  6450
-	0    -1   -1   0   
 $EndComp
 Wire Wire Line
 	3900 5000 4050 5000
@@ -747,10 +610,10 @@ Wire Wire Line
 Wire Wire Line
 	7100 1900 7050 1900
 $Comp
-L power:GND #PWR039
+L power:GND #PWR040
 U 1 1 5EA9646E
 P 7050 1950
-F 0 "#PWR039" H 7050 1700 50  0001 C CNN
+F 0 "#PWR040" H 7050 1700 50  0001 C CNN
 F 1 "GND" H 7055 1777 50  0000 C CNN
 F 2 "" H 7050 1950 50  0001 C CNN
 F 3 "" H 7050 1950 50  0001 C CNN
@@ -761,21 +624,21 @@ NoConn ~ 9550 2000
 Wire Wire Line
 	9300 1900 9550 1900
 $Comp
-L Device:R R28
+L Device:R R39
 U 1 1 5EA91EE2
 P 9150 1900
-F 0 "R28" H 9080 1854 50  0000 R CNN
+F 0 "R39" H 9080 1854 50  0000 R CNN
 F 1 "1k" H 9080 1945 50  0000 R CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 9080 1900 50  0001 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 9080 1900 50  0001 C CNN
 F 3 "~" H 9150 1900 50  0001 C CNN
 	1    9150 1900
 	0    -1   -1   0   
 $EndComp
 $Comp
-L power:GND #PWR041
+L power:GND #PWR050
 U 1 1 5EA91EDC
 P 9550 1800
-F 0 "#PWR041" H 9550 1550 50  0001 C CNN
+F 0 "#PWR050" H 9550 1550 50  0001 C CNN
 F 1 "GND" H 9555 1627 50  0000 C CNN
 F 2 "" H 9550 1800 50  0001 C CNN
 F 3 "" H 9550 1800 50  0001 C CNN
@@ -810,12 +673,12 @@ Wire Wire Line
 Wire Wire Line
 	7300 1100 7050 1100
 $Comp
-L Device:R R25
+L Device:R R31
 U 1 1 5EA8BEB9
 P 7450 1100
-F 0 "R25" H 7380 1054 50  0000 R CNN
+F 0 "R31" H 7380 1054 50  0000 R CNN
 F 1 "100k" H 7380 1145 50  0000 R CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 7380 1100 50  0001 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 7380 1100 50  0001 C CNN
 F 3 "~" H 7450 1100 50  0001 C CNN
 	1    7450 1100
 	0    -1   -1   0   
@@ -848,45 +711,45 @@ MIX_2
 Text Label 6250 800  2    50   ~ 0
 MIX_1
 $Comp
-L Device:R R21
+L Device:R R24
 U 1 1 5EA80356
 P 6400 800
-F 0 "R21" H 6330 754 50  0000 R CNN
+F 0 "R24" H 6330 754 50  0000 R CNN
 F 1 "100k" H 6330 845 50  0000 R CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 6330 800 50  0001 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 6330 800 50  0001 C CNN
 F 3 "~" H 6400 800 50  0001 C CNN
 	1    6400 800 
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Device:R R22
+L Device:R R25
 U 1 1 5EA801E7
 P 6400 1100
-F 0 "R22" H 6330 1054 50  0000 R CNN
+F 0 "R25" H 6330 1054 50  0000 R CNN
 F 1 "100k" H 6330 1145 50  0000 R CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 6330 1100 50  0001 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 6330 1100 50  0001 C CNN
 F 3 "~" H 6400 1100 50  0001 C CNN
 	1    6400 1100
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Device:R R23
+L Device:R R26
 U 1 1 5EA7FF72
 P 6400 1400
-F 0 "R23" H 6330 1354 50  0000 R CNN
+F 0 "R26" H 6330 1354 50  0000 R CNN
 F 1 "100k" H 6330 1445 50  0000 R CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 6330 1400 50  0001 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 6330 1400 50  0001 C CNN
 F 3 "~" H 6400 1400 50  0001 C CNN
 	1    6400 1400
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Device:R R24
+L Device:R R27
 U 1 1 5EA7FB33
 P 6400 1700
-F 0 "R24" H 6330 1654 50  0000 R CNN
+F 0 "R27" H 6330 1654 50  0000 R CNN
 F 1 "100k" H 6330 1745 50  0000 R CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 6330 1700 50  0001 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 6330 1700 50  0001 C CNN
 F 3 "~" H 6400 1700 50  0001 C CNN
 	1    6400 1700
 	0    -1   -1   0   
@@ -898,21 +761,21 @@ MIX_4
 Wire Wire Line
 	4350 5000 4600 5000
 $Comp
-L Device:R R20
+L Device:R R22
 U 1 1 5EA71FC0
 P 4200 5000
-F 0 "R20" H 4130 4954 50  0000 R CNN
+F 0 "R22" H 4130 4954 50  0000 R CNN
 F 1 "1k" H 4130 5045 50  0000 R CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 4130 5000 50  0001 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 4130 5000 50  0001 C CNN
 F 3 "~" H 4200 5000 50  0001 C CNN
 	1    4200 5000
 	0    -1   -1   0   
 $EndComp
 $Comp
-L power:GND #PWR033
+L power:GND #PWR034
 U 1 1 5EA71FBA
 P 4600 4900
-F 0 "#PWR033" H 4600 4650 50  0001 C CNN
+F 0 "#PWR034" H 4600 4650 50  0001 C CNN
 F 1 "GND" H 4605 4727 50  0000 C CNN
 F 2 "" H 4600 4900 50  0001 C CNN
 F 3 "" H 4600 4900 50  0001 C CNN
@@ -940,21 +803,21 @@ MIX_3
 Wire Wire Line
 	4300 3950 4550 3950
 $Comp
-L Device:R R19
+L Device:R R21
 U 1 1 5EA70009
 P 4150 3950
-F 0 "R19" H 4080 3904 50  0000 R CNN
+F 0 "R21" H 4080 3904 50  0000 R CNN
 F 1 "1k" H 4080 3995 50  0000 R CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 4080 3950 50  0001 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 4080 3950 50  0001 C CNN
 F 3 "~" H 4150 3950 50  0001 C CNN
 	1    4150 3950
 	0    -1   -1   0   
 $EndComp
 $Comp
-L power:GND #PWR032
+L power:GND #PWR033
 U 1 1 5EA70003
 P 4550 3850
-F 0 "#PWR032" H 4550 3600 50  0001 C CNN
+F 0 "#PWR033" H 4550 3600 50  0001 C CNN
 F 1 "GND" H 4555 3677 50  0000 C CNN
 F 2 "" H 4550 3850 50  0001 C CNN
 F 3 "" H 4550 3850 50  0001 C CNN
@@ -982,21 +845,21 @@ MIX_2
 Wire Wire Line
 	4300 2900 4550 2900
 $Comp
-L Device:R R18
+L Device:R R20
 U 1 1 5EA6DFA9
 P 4150 2900
-F 0 "R18" H 4080 2854 50  0000 R CNN
+F 0 "R20" H 4080 2854 50  0000 R CNN
 F 1 "1k" H 4080 2945 50  0000 R CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 4080 2900 50  0001 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 4080 2900 50  0001 C CNN
 F 3 "~" H 4150 2900 50  0001 C CNN
 	1    4150 2900
 	0    -1   -1   0   
 $EndComp
 $Comp
-L power:GND #PWR031
+L power:GND #PWR032
 U 1 1 5EA6DFA3
 P 4550 2800
-F 0 "#PWR031" H 4550 2550 50  0001 C CNN
+F 0 "#PWR032" H 4550 2550 50  0001 C CNN
 F 1 "GND" H 4555 2627 50  0000 C CNN
 F 2 "" H 4550 2800 50  0001 C CNN
 F 3 "" H 4550 2800 50  0001 C CNN
@@ -1031,12 +894,12 @@ Wire Wire Line
 Wire Wire Line
 	3450 4500 3250 4500
 $Comp
-L Device:R R16
+L Device:R R18
 U 1 1 5EA5732B
 P 3600 4500
-F 0 "R16" V 3393 4500 50  0000 C CNN
+F 0 "R18" V 3393 4500 50  0000 C CNN
 F 1 "100k" V 3484 4500 50  0000 C CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 3530 4500 50  0001 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 3530 4500 50  0001 C CNN
 F 3 "~" H 3600 4500 50  0001 C CNN
 	1    3600 4500
 	0    1    1    0   
@@ -1054,10 +917,10 @@ Connection ~ 2800 5200
 Wire Wire Line
 	2700 5200 2800 5200
 $Comp
-L power:GND #PWR022
+L power:GND #PWR024
 U 1 1 5EA5731E
 P 2800 5500
-F 0 "#PWR022" H 2800 5250 50  0001 C CNN
+F 0 "#PWR024" H 2800 5250 50  0001 C CNN
 F 1 "GND" H 2805 5327 50  0000 C CNN
 F 2 "" H 2800 5500 50  0001 C CNN
 F 3 "" H 2800 5500 50  0001 C CNN
@@ -1065,23 +928,23 @@ F 3 "" H 2800 5500 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R R8
+L Device:R R10
 U 1 1 5EA57318
 P 2800 5350
-F 0 "R8" H 2870 5396 50  0000 L CNN
+F 0 "R10" H 2870 5396 50  0000 L CNN
 F 1 "47k" H 2870 5305 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 2730 5350 50  0001 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 2730 5350 50  0001 C CNN
 F 3 "~" H 2800 5350 50  0001 C CNN
 	1    2800 5350
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R R7
+L Device:R R9
 U 1 1 5EA57312
 P 2800 5050
-F 0 "R7" H 2870 5096 50  0000 L CNN
+F 0 "R9" H 2870 5096 50  0000 L CNN
 F 1 "47k" H 2870 5005 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 2730 5050 50  0001 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 2730 5050 50  0001 C CNN
 F 3 "~" H 2800 5050 50  0001 C CNN
 	1    2800 5050
 	1    0    0    -1  
@@ -1094,21 +957,21 @@ Wire Wire Line
 Wire Wire Line
 	2550 5050 2550 4900
 $Comp
-L Device:R R12
+L Device:R R14
 U 1 1 5EA57308
 P 3000 4900
-F 0 "R12" V 2793 4900 50  0000 C CNN
+F 0 "R14" V 2793 4900 50  0000 C CNN
 F 1 "100k" V 2884 4900 50  0000 C CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 2930 4900 50  0001 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 2930 4900 50  0001 C CNN
 F 3 "~" H 3000 4900 50  0001 C CNN
 	1    3000 4900
 	0    1    1    0   
 $EndComp
 $Comp
-L power:GND #PWR018
+L power:GND #PWR020
 U 1 1 5EA57302
 P 2550 5350
-F 0 "#PWR018" H 2550 5100 50  0001 C CNN
+F 0 "#PWR020" H 2550 5100 50  0001 C CNN
 F 1 "GND" H 2555 5177 50  0000 C CNN
 F 2 "" H 2550 5350 50  0001 C CNN
 F 3 "" H 2550 5350 50  0001 C CNN
@@ -1141,10 +1004,10 @@ F 3 "" H 2200 4800 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Connector:AudioJack2_SwitchT J4
+L Connector:AudioJack2_SwitchT J5
 U 1 1 5EA572E9
 P 2000 4900
-F 0 "J4" H 2032 5225 50  0000 C CNN
+F 0 "J5" H 2032 5225 50  0000 C CNN
 F 1 "IN" H 2032 5134 50  0000 C CNN
 F 2 "elektrophon:Jack_3.5mm_WQP-PJ398SM_Vertical" H 2000 4900 50  0001 C CNN
 F 3 "~" H 2000 4900 50  0001 C CNN
@@ -1163,12 +1026,12 @@ Wire Wire Line
 Wire Wire Line
 	3400 3450 3200 3450
 $Comp
-L Device:R R15
+L Device:R R17
 U 1 1 5EA53418
 P 3550 3450
-F 0 "R15" V 3343 3450 50  0000 C CNN
+F 0 "R17" V 3343 3450 50  0000 C CNN
 F 1 "100k" V 3434 3450 50  0000 C CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 3480 3450 50  0001 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 3480 3450 50  0001 C CNN
 F 3 "~" H 3550 3450 50  0001 C CNN
 	1    3550 3450
 	0    1    1    0   
@@ -1186,10 +1049,10 @@ Connection ~ 2750 4150
 Wire Wire Line
 	2650 4150 2750 4150
 $Comp
-L power:GND #PWR021
+L power:GND #PWR023
 U 1 1 5EA5340B
 P 2750 4450
-F 0 "#PWR021" H 2750 4200 50  0001 C CNN
+F 0 "#PWR023" H 2750 4200 50  0001 C CNN
 F 1 "GND" H 2755 4277 50  0000 C CNN
 F 2 "" H 2750 4450 50  0001 C CNN
 F 3 "" H 2750 4450 50  0001 C CNN
@@ -1197,23 +1060,23 @@ F 3 "" H 2750 4450 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R R6
+L Device:R R8
 U 1 1 5EA53405
 P 2750 4300
-F 0 "R6" H 2820 4346 50  0000 L CNN
+F 0 "R8" H 2820 4346 50  0000 L CNN
 F 1 "47k" H 2820 4255 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 2680 4300 50  0001 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 2680 4300 50  0001 C CNN
 F 3 "~" H 2750 4300 50  0001 C CNN
 	1    2750 4300
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R R5
+L Device:R R7
 U 1 1 5EA533FF
 P 2750 4000
-F 0 "R5" H 2820 4046 50  0000 L CNN
+F 0 "R7" H 2820 4046 50  0000 L CNN
 F 1 "47k" H 2820 3955 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 2680 4000 50  0001 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 2680 4000 50  0001 C CNN
 F 3 "~" H 2750 4000 50  0001 C CNN
 	1    2750 4000
 	1    0    0    -1  
@@ -1226,21 +1089,21 @@ Wire Wire Line
 Wire Wire Line
 	2500 4000 2500 3850
 $Comp
-L Device:R R11
+L Device:R R13
 U 1 1 5EA533F5
 P 2950 3850
-F 0 "R11" V 2743 3850 50  0000 C CNN
+F 0 "R13" V 2743 3850 50  0000 C CNN
 F 1 "100k" V 2834 3850 50  0000 C CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 2880 3850 50  0001 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 2880 3850 50  0001 C CNN
 F 3 "~" H 2950 3850 50  0001 C CNN
 	1    2950 3850
 	0    1    1    0   
 $EndComp
 $Comp
-L power:GND #PWR017
+L power:GND #PWR019
 U 1 1 5EA533EF
 P 2500 4300
-F 0 "#PWR017" H 2500 4050 50  0001 C CNN
+F 0 "#PWR019" H 2500 4050 50  0001 C CNN
 F 1 "GND" H 2505 4127 50  0000 C CNN
 F 2 "" H 2500 4300 50  0001 C CNN
 F 3 "" H 2500 4300 50  0001 C CNN
@@ -1262,10 +1125,10 @@ F 6 "Y" H 2500 4150 50  0001 C CNN "Spice_Netlist_Enabled"
 	1    0    0    1   
 $EndComp
 $Comp
-L power:GND #PWR011
+L power:GND #PWR012
 U 1 1 5EA533DC
 P 2150 3750
-F 0 "#PWR011" H 2150 3500 50  0001 C CNN
+F 0 "#PWR012" H 2150 3500 50  0001 C CNN
 F 1 "GND" H 2155 3577 50  0000 C CNN
 F 2 "" H 2150 3750 50  0001 C CNN
 F 3 "" H 2150 3750 50  0001 C CNN
@@ -1273,10 +1136,10 @@ F 3 "" H 2150 3750 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Connector:AudioJack2_SwitchT J3
+L Connector:AudioJack2_SwitchT J4
 U 1 1 5EA533D6
 P 1950 3850
-F 0 "J3" H 1982 4175 50  0000 C CNN
+F 0 "J4" H 1982 4175 50  0000 C CNN
 F 1 "IN" H 1982 4084 50  0000 C CNN
 F 2 "elektrophon:Jack_3.5mm_WQP-PJ398SM_Vertical" H 1950 3850 50  0001 C CNN
 F 3 "~" H 1950 3850 50  0001 C CNN
@@ -1297,12 +1160,12 @@ Wire Wire Line
 Wire Wire Line
 	3350 2400 3150 2400
 $Comp
-L Device:R R14
+L Device:R R16
 U 1 1 5EA4ED5E
 P 3500 2400
-F 0 "R14" V 3293 2400 50  0000 C CNN
+F 0 "R16" V 3293 2400 50  0000 C CNN
 F 1 "100k" V 3384 2400 50  0000 C CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 3430 2400 50  0001 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 3430 2400 50  0001 C CNN
 F 3 "~" H 3500 2400 50  0001 C CNN
 	1    3500 2400
 	0    1    1    0   
@@ -1320,10 +1183,10 @@ Connection ~ 2700 3100
 Wire Wire Line
 	2600 3100 2700 3100
 $Comp
-L power:GND #PWR020
+L power:GND #PWR022
 U 1 1 5EA4ED51
 P 2700 3400
-F 0 "#PWR020" H 2700 3150 50  0001 C CNN
+F 0 "#PWR022" H 2700 3150 50  0001 C CNN
 F 1 "GND" H 2705 3227 50  0000 C CNN
 F 2 "" H 2700 3400 50  0001 C CNN
 F 3 "" H 2700 3400 50  0001 C CNN
@@ -1331,23 +1194,23 @@ F 3 "" H 2700 3400 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R R4
+L Device:R R6
 U 1 1 5EA4ED4B
 P 2700 3250
-F 0 "R4" H 2770 3296 50  0000 L CNN
+F 0 "R6" H 2770 3296 50  0000 L CNN
 F 1 "47k" H 2770 3205 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 2630 3250 50  0001 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 2630 3250 50  0001 C CNN
 F 3 "~" H 2700 3250 50  0001 C CNN
 	1    2700 3250
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R R3
+L Device:R R5
 U 1 1 5EA4ED45
 P 2700 2950
-F 0 "R3" H 2770 2996 50  0000 L CNN
+F 0 "R5" H 2770 2996 50  0000 L CNN
 F 1 "47k" H 2770 2905 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 2630 2950 50  0001 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 2630 2950 50  0001 C CNN
 F 3 "~" H 2700 2950 50  0001 C CNN
 	1    2700 2950
 	1    0    0    -1  
@@ -1360,21 +1223,21 @@ Wire Wire Line
 Wire Wire Line
 	2450 2950 2450 2800
 $Comp
-L Device:R R10
+L Device:R R12
 U 1 1 5EA4ED3B
 P 2900 2800
-F 0 "R10" V 2693 2800 50  0000 C CNN
+F 0 "R12" V 2693 2800 50  0000 C CNN
 F 1 "100k" V 2784 2800 50  0000 C CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 2830 2800 50  0001 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 2830 2800 50  0001 C CNN
 F 3 "~" H 2900 2800 50  0001 C CNN
 	1    2900 2800
 	0    1    1    0   
 $EndComp
 $Comp
-L power:GND #PWR016
+L power:GND #PWR018
 U 1 1 5EA4ED35
 P 2450 3250
-F 0 "#PWR016" H 2450 3000 50  0001 C CNN
+F 0 "#PWR018" H 2450 3000 50  0001 C CNN
 F 1 "GND" H 2455 3077 50  0000 C CNN
 F 2 "" H 2450 3250 50  0001 C CNN
 F 3 "" H 2450 3250 50  0001 C CNN
@@ -1396,10 +1259,10 @@ F 6 "Y" H 2450 3100 50  0001 C CNN "Spice_Netlist_Enabled"
 	1    0    0    1   
 $EndComp
 $Comp
-L power:GND #PWR09
+L power:GND #PWR011
 U 1 1 5EA4ED22
 P 2100 2700
-F 0 "#PWR09" H 2100 2450 50  0001 C CNN
+F 0 "#PWR011" H 2100 2450 50  0001 C CNN
 F 1 "GND" H 2105 2527 50  0000 C CNN
 F 2 "" H 2100 2700 50  0001 C CNN
 F 3 "" H 2100 2700 50  0001 C CNN
@@ -1407,10 +1270,10 @@ F 3 "" H 2100 2700 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Connector:AudioJack2_SwitchT J2
+L Connector:AudioJack2_SwitchT J3
 U 1 1 5EA4ED1C
 P 1900 2800
-F 0 "J2" H 1932 3125 50  0000 C CNN
+F 0 "J3" H 1932 3125 50  0000 C CNN
 F 1 "IN" H 1932 3034 50  0000 C CNN
 F 2 "elektrophon:Jack_3.5mm_WQP-PJ398SM_Vertical" H 1900 2800 50  0001 C CNN
 F 3 "~" H 1900 2800 50  0001 C CNN
@@ -1431,12 +1294,12 @@ Wire Wire Line
 Wire Wire Line
 	3350 1300 3150 1300
 $Comp
-L Device:R R13
+L Device:R R15
 U 1 1 5EA43020
 P 3500 1300
-F 0 "R13" V 3293 1300 50  0000 C CNN
+F 0 "R15" V 3293 1300 50  0000 C CNN
 F 1 "100k" V 3384 1300 50  0000 C CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 3430 1300 50  0001 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 3430 1300 50  0001 C CNN
 F 3 "~" H 3500 1300 50  0001 C CNN
 	1    3500 1300
 	0    1    1    0   
@@ -1454,10 +1317,10 @@ Connection ~ 2700 2000
 Wire Wire Line
 	2600 2000 2700 2000
 $Comp
-L power:GND #PWR019
+L power:GND #PWR021
 U 1 1 5EA41C2D
 P 2700 2300
-F 0 "#PWR019" H 2700 2050 50  0001 C CNN
+F 0 "#PWR021" H 2700 2050 50  0001 C CNN
 F 1 "GND" H 2705 2127 50  0000 C CNN
 F 2 "" H 2700 2300 50  0001 C CNN
 F 3 "" H 2700 2300 50  0001 C CNN
@@ -1465,23 +1328,23 @@ F 3 "" H 2700 2300 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R R2
+L Device:R R4
 U 1 1 5EA41944
 P 2700 2150
-F 0 "R2" H 2770 2196 50  0000 L CNN
+F 0 "R4" H 2770 2196 50  0000 L CNN
 F 1 "47k" H 2770 2105 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 2630 2150 50  0001 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 2630 2150 50  0001 C CNN
 F 3 "~" H 2700 2150 50  0001 C CNN
 	1    2700 2150
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R R1
+L Device:R R3
 U 1 1 5EA413FF
 P 2700 1850
-F 0 "R1" H 2770 1896 50  0000 L CNN
+F 0 "R3" H 2770 1896 50  0000 L CNN
 F 1 "47k" H 2770 1805 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 2630 1850 50  0001 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 2630 1850 50  0001 C CNN
 F 3 "~" H 2700 1850 50  0001 C CNN
 	1    2700 1850
 	1    0    0    -1  
@@ -1494,21 +1357,21 @@ Wire Wire Line
 Wire Wire Line
 	2450 1850 2450 1700
 $Comp
-L Device:R R9
+L Device:R R11
 U 1 1 5EA3C7CD
 P 2900 1700
-F 0 "R9" V 2693 1700 50  0000 C CNN
+F 0 "R11" V 2693 1700 50  0000 C CNN
 F 1 "100k" V 2784 1700 50  0000 C CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 2830 1700 50  0001 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 2830 1700 50  0001 C CNN
 F 3 "~" H 2900 1700 50  0001 C CNN
 	1    2900 1700
 	0    1    1    0   
 $EndComp
 $Comp
-L power:GND #PWR015
+L power:GND #PWR017
 U 1 1 5F6BBF95
 P 2450 2150
-F 0 "#PWR015" H 2450 1900 50  0001 C CNN
+F 0 "#PWR017" H 2450 1900 50  0001 C CNN
 F 1 "GND" H 2455 1977 50  0000 C CNN
 F 2 "" H 2450 2150 50  0001 C CNN
 F 3 "" H 2450 2150 50  0001 C CNN
@@ -1532,21 +1395,21 @@ $EndComp
 Wire Wire Line
 	4300 1800 4550 1800
 $Comp
-L Device:R R17
+L Device:R R19
 U 1 1 5D7BF067
 P 4150 1800
-F 0 "R17" H 4080 1754 50  0000 R CNN
+F 0 "R19" H 4080 1754 50  0000 R CNN
 F 1 "1k" H 4080 1845 50  0000 R CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 4080 1800 50  0001 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 4080 1800 50  0001 C CNN
 F 3 "~" H 4150 1800 50  0001 C CNN
 	1    4150 1800
 	0    -1   -1   0   
 $EndComp
 $Comp
-L power:GND #PWR030
+L power:GND #PWR031
 U 1 1 5D7582F3
 P 4550 1700
-F 0 "#PWR030" H 4550 1450 50  0001 C CNN
+F 0 "#PWR031" H 4550 1450 50  0001 C CNN
 F 1 "GND" H 4555 1527 50  0000 C CNN
 F 2 "" H 4550 1700 50  0001 C CNN
 F 3 "" H 4550 1700 50  0001 C CNN
@@ -1554,10 +1417,10 @@ F 3 "" H 4550 1700 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L power:GND #PWR07
+L power:GND #PWR010
 U 1 1 5D667130
 P 2100 1600
-F 0 "#PWR07" H 2100 1350 50  0001 C CNN
+F 0 "#PWR010" H 2100 1350 50  0001 C CNN
 F 1 "GND" H 2105 1427 50  0000 C CNN
 F 2 "" H 2100 1600 50  0001 C CNN
 F 3 "" H 2100 1600 50  0001 C CNN
@@ -1579,10 +1442,10 @@ F 6 "Y" H 4750 1800 50  0001 C CNN "Spice_Netlist_Enabled"
 	-1   0    0    -1  
 $EndComp
 $Comp
-L Connector:AudioJack2_SwitchT J1
+L Connector:AudioJack2_SwitchT J2
 U 1 1 5D64A5B4
 P 1900 1700
-F 0 "J1" H 1932 2025 50  0000 C CNN
+F 0 "J2" H 1932 2025 50  0000 C CNN
 F 1 "IN" H 1932 1934 50  0000 C CNN
 F 2 "elektrophon:Jack_3.5mm_WQP-PJ398SM_Vertical" H 1900 1700 50  0001 C CNN
 F 3 "~" H 1900 1700 50  0001 C CNN
@@ -1593,21 +1456,24 @@ F 6 "Y" H 1900 1700 50  0001 C CNN "Spice_Netlist_Enabled"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:LED D1
+L Device:LED D2
 U 1 1 5FEF7875
 P 6650 3700
-F 0 "D1" V 6750 3450 50  0000 C CNN
+F 0 "D2" V 6750 3450 50  0000 C CNN
 F 1 "LED" V 6650 3450 50  0000 C CNN
 F 2 "LED_THT:LED_D3.0mm" H 6650 3700 50  0001 C CNN
 F 3 "~" H 6650 3700 50  0001 C CNN
+F 4 "D" H 6650 3700 50  0001 C CNN "Spice_Primitive"
+F 5 "LED2" H 6650 3700 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 6650 3700 50  0001 C CNN "Spice_Netlist_Enabled"
 	1    6650 3700
 	0    -1   -1   0   
 $EndComp
 $Comp
-L power:GND #PWR0101
+L power:GND #PWR039
 U 1 1 60A735B0
 P 6650 4000
-F 0 "#PWR0101" H 6650 3750 50  0001 C CNN
+F 0 "#PWR039" H 6650 3750 50  0001 C CNN
 F 1 "GND" H 6655 3827 50  0000 C CNN
 F 2 "" H 6650 4000 50  0001 C CNN
 F 3 "" H 6650 4000 50  0001 C CNN
@@ -1615,10 +1481,10 @@ F 3 "" H 6650 4000 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R R32
+L Device:R R29
 U 1 1 60A7522A
 P 6650 3000
-F 0 "R32" H 6720 3046 50  0000 L CNN
+F 0 "R29" H 6720 3046 50  0000 L CNN
 F 1 "5k" H 6720 2955 50  0000 L CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 6580 3000 50  0001 C CNN
 F 3 "~" H 6650 3000 50  0001 C CNN
@@ -1626,10 +1492,10 @@ F 3 "~" H 6650 3000 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:+5V #PWR0102
+L power:+5V #PWR038
 U 1 1 60A866E8
 P 6650 2850
-F 0 "#PWR0102" H 6650 2700 50  0001 C CNN
+F 0 "#PWR038" H 6650 2700 50  0001 C CNN
 F 1 "+5V" H 6665 3023 50  0000 C CNN
 F 2 "" H 6650 2850 50  0001 C CNN
 F 3 "" H 6650 2850 50  0001 C CNN
@@ -1637,10 +1503,10 @@ F 3 "" H 6650 2850 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R R30
+L Device:R R23
 U 1 1 60A86F88
 P 6100 3350
-F 0 "R30" V 5893 3350 50  0000 C CNN
+F 0 "R23" V 5893 3350 50  0000 C CNN
 F 1 "100k" V 5984 3350 50  0000 C CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 6030 3350 50  0001 C CNN
 F 3 "~" H 6100 3350 50  0001 C CNN
@@ -1670,14 +1536,17 @@ F 0 "D6" V 8100 3450 50  0000 C CNN
 F 1 "LED" V 8000 3450 50  0000 C CNN
 F 2 "LED_THT:LED_D3.0mm" H 8000 3700 50  0001 C CNN
 F 3 "~" H 8000 3700 50  0001 C CNN
+F 4 "D" H 8000 3700 50  0001 C CNN "Spice_Primitive"
+F 5 "LED2" H 8000 3700 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 8000 3700 50  0001 C CNN "Spice_Netlist_Enabled"
 	1    8000 3700
 	0    -1   -1   0   
 $EndComp
 $Comp
-L power:GND #PWR0103
+L power:GND #PWR044
 U 1 1 60AE9449
 P 8000 4000
-F 0 "#PWR0103" H 8000 3750 50  0001 C CNN
+F 0 "#PWR044" H 8000 3750 50  0001 C CNN
 F 1 "GND" H 8005 3827 50  0000 C CNN
 F 2 "" H 8000 4000 50  0001 C CNN
 F 3 "" H 8000 4000 50  0001 C CNN
@@ -1685,10 +1554,10 @@ F 3 "" H 8000 4000 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R R35
+L Device:R R34
 U 1 1 60AE944F
 P 8000 3000
-F 0 "R35" H 8070 3046 50  0000 L CNN
+F 0 "R34" H 8070 3046 50  0000 L CNN
 F 1 "5k" H 8070 2955 50  0000 L CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 7930 3000 50  0001 C CNN
 F 3 "~" H 8000 3000 50  0001 C CNN
@@ -1696,10 +1565,10 @@ F 3 "~" H 8000 3000 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:+5V #PWR0104
+L power:+5V #PWR043
 U 1 1 60AE9455
 P 8000 2850
-F 0 "#PWR0104" H 8000 2700 50  0001 C CNN
+F 0 "#PWR043" H 8000 2700 50  0001 C CNN
 F 1 "+5V" H 8015 3023 50  0000 C CNN
 F 2 "" H 8000 2850 50  0001 C CNN
 F 3 "" H 8000 2850 50  0001 C CNN
@@ -1707,10 +1576,10 @@ F 3 "" H 8000 2850 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R R34
+L Device:R R32
 U 1 1 60AE945B
 P 7450 3350
-F 0 "R34" V 7243 3350 50  0000 C CNN
+F 0 "R32" V 7243 3350 50  0000 C CNN
 F 1 "100k" V 7334 3350 50  0000 C CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 7380 3350 50  0001 C CNN
 F 3 "~" H 7450 3350 50  0001 C CNN
@@ -1740,14 +1609,17 @@ F 0 "D10" V 9400 3450 50  0000 C CNN
 F 1 "LED" V 9300 3450 50  0000 C CNN
 F 2 "LED_THT:LED_D3.0mm" H 9300 3700 50  0001 C CNN
 F 3 "~" H 9300 3700 50  0001 C CNN
+F 4 "D" H 9300 3700 50  0001 C CNN "Spice_Primitive"
+F 5 "LED2" H 9300 3700 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 9300 3700 50  0001 C CNN "Spice_Netlist_Enabled"
 	1    9300 3700
 	0    -1   -1   0   
 $EndComp
 $Comp
-L power:GND #PWR0105
+L power:GND #PWR049
 U 1 1 60AF093B
 P 9300 4000
-F 0 "#PWR0105" H 9300 3750 50  0001 C CNN
+F 0 "#PWR049" H 9300 3750 50  0001 C CNN
 F 1 "GND" H 9305 3827 50  0000 C CNN
 F 2 "" H 9300 4000 50  0001 C CNN
 F 3 "" H 9300 4000 50  0001 C CNN
@@ -1755,10 +1627,10 @@ F 3 "" H 9300 4000 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R R39
+L Device:R R40
 U 1 1 60AF0941
 P 9300 3000
-F 0 "R39" H 9370 3046 50  0000 L CNN
+F 0 "R40" H 9370 3046 50  0000 L CNN
 F 1 "5k" H 9370 2955 50  0000 L CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 9230 3000 50  0001 C CNN
 F 3 "~" H 9300 3000 50  0001 C CNN
@@ -1766,10 +1638,10 @@ F 3 "~" H 9300 3000 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:+5V #PWR0106
+L power:+5V #PWR048
 U 1 1 60AF0947
 P 9300 2850
-F 0 "#PWR0106" H 9300 2700 50  0001 C CNN
+F 0 "#PWR048" H 9300 2700 50  0001 C CNN
 F 1 "+5V" H 9315 3023 50  0000 C CNN
 F 2 "" H 9300 2850 50  0001 C CNN
 F 3 "" H 9300 2850 50  0001 C CNN
@@ -1810,14 +1682,17 @@ F 0 "D4" V 7200 5350 50  0000 C CNN
 F 1 "LED" V 7100 5350 50  0000 C CNN
 F 2 "LED_THT:LED_D3.0mm" H 7100 5600 50  0001 C CNN
 F 3 "~" H 7100 5600 50  0001 C CNN
+F 4 "D" H 7100 5600 50  0001 C CNN "Spice_Primitive"
+F 5 "LED2" H 7100 5600 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 7100 5600 50  0001 C CNN "Spice_Netlist_Enabled"
 	1    7100 5600
 	0    -1   -1   0   
 $EndComp
 $Comp
-L power:GND #PWR0107
+L power:GND #PWR042
 U 1 1 60AF923D
 P 7100 5900
-F 0 "#PWR0107" H 7100 5650 50  0001 C CNN
+F 0 "#PWR042" H 7100 5650 50  0001 C CNN
 F 1 "GND" H 7105 5727 50  0000 C CNN
 F 2 "" H 7100 5900 50  0001 C CNN
 F 3 "" H 7100 5900 50  0001 C CNN
@@ -1825,10 +1700,10 @@ F 3 "" H 7100 5900 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R R33
+L Device:R R30
 U 1 1 60AF9243
 P 7100 4900
-F 0 "R33" H 7170 4946 50  0000 L CNN
+F 0 "R30" H 7170 4946 50  0000 L CNN
 F 1 "5k" H 7170 4855 50  0000 L CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 7030 4900 50  0001 C CNN
 F 3 "~" H 7100 4900 50  0001 C CNN
@@ -1836,10 +1711,10 @@ F 3 "~" H 7100 4900 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:+5V #PWR0108
+L power:+5V #PWR041
 U 1 1 60AF9249
 P 7100 4750
-F 0 "#PWR0108" H 7100 4600 50  0001 C CNN
+F 0 "#PWR041" H 7100 4600 50  0001 C CNN
 F 1 "+5V" H 7115 4923 50  0000 C CNN
 F 2 "" H 7100 4750 50  0001 C CNN
 F 3 "" H 7100 4750 50  0001 C CNN
@@ -1847,10 +1722,10 @@ F 3 "" H 7100 4750 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R R31
+L Device:R R28
 U 1 1 60AF924F
 P 6550 5250
-F 0 "R31" V 6343 5250 50  0000 C CNN
+F 0 "R28" V 6343 5250 50  0000 C CNN
 F 1 "100k" V 6434 5250 50  0000 C CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 6480 5250 50  0001 C CNN
 F 3 "~" H 6550 5250 50  0001 C CNN
@@ -1880,14 +1755,17 @@ F 0 "D8" V 8750 5400 50  0000 C CNN
 F 1 "LED" V 8650 5400 50  0000 C CNN
 F 2 "LED_THT:LED_D3.0mm" H 8650 5650 50  0001 C CNN
 F 3 "~" H 8650 5650 50  0001 C CNN
+F 4 "D" H 8650 5650 50  0001 C CNN "Spice_Primitive"
+F 5 "LED1" H 8650 5650 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 8650 5650 50  0001 C CNN "Spice_Netlist_Enabled"
 	1    8650 5650
 	0    -1   -1   0   
 $EndComp
 $Comp
-L power:GND #PWR0109
+L power:GND #PWR047
 U 1 1 60B0104B
 P 8650 5950
-F 0 "#PWR0109" H 8650 5700 50  0001 C CNN
+F 0 "#PWR047" H 8650 5700 50  0001 C CNN
 F 1 "GND" H 8655 5777 50  0000 C CNN
 F 2 "" H 8650 5950 50  0001 C CNN
 F 3 "" H 8650 5950 50  0001 C CNN
@@ -1906,10 +1784,10 @@ F 3 "~" H 8650 4950 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:+5V #PWR0110
+L power:+5V #PWR046
 U 1 1 60B01057
 P 8650 4800
-F 0 "#PWR0110" H 8650 4650 50  0001 C CNN
+F 0 "#PWR046" H 8650 4650 50  0001 C CNN
 F 1 "+5V" H 8665 4973 50  0000 C CNN
 F 2 "" H 8650 4800 50  0001 C CNN
 F 3 "" H 8650 4800 50  0001 C CNN
@@ -1917,10 +1795,10 @@ F 3 "" H 8650 4800 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R R36
+L Device:R R35
 U 1 1 60B0105D
 P 8100 5300
-F 0 "R36" V 7893 5300 50  0000 C CNN
+F 0 "R35" V 7893 5300 50  0000 C CNN
 F 1 "100k" V 7984 5300 50  0000 C CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 8030 5300 50  0001 C CNN
 F 3 "~" H 8100 5300 50  0001 C CNN
@@ -1946,10 +1824,13 @@ $Comp
 L Diode:1N4148W D9
 U 1 1 60AACD5E
 P 9000 3700
-F 0 "D9" V 8954 3780 50  0000 L CNN
-F 1 "1N4148W" V 9045 3780 50  0000 L CNN
+F 0 "D9" V 8900 3350 50  0000 L CNN
+F 1 "1N4148W" V 9000 3250 50  0000 L CNN
 F 2 "Diode_SMD:D_SOD-123" H 9000 3525 50  0001 C CNN
 F 3 "https://www.vishay.com/docs/85748/1n4148w.pdf" H 9000 3700 50  0001 C CNN
+F 4 "D" H 9000 3700 50  0001 C CNN "Spice_Primitive"
+F 5 "D1N4148" H 9000 3700 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 9000 3700 50  0001 C CNN "Spice_Netlist_Enabled"
 	1    9000 3700
 	0    1    1    0   
 $EndComp
@@ -1957,21 +1838,27 @@ $Comp
 L Diode:1N4148W D5
 U 1 1 60AB3CED
 P 7700 3700
-F 0 "D5" V 7654 3780 50  0000 L CNN
-F 1 "1N4148W" V 7745 3780 50  0000 L CNN
+F 0 "D5" V 7600 3350 50  0000 L CNN
+F 1 "1N4148W" V 7700 3250 50  0000 L CNN
 F 2 "Diode_SMD:D_SOD-123" H 7700 3525 50  0001 C CNN
 F 3 "https://www.vishay.com/docs/85748/1n4148w.pdf" H 7700 3700 50  0001 C CNN
+F 4 "D" H 7700 3700 50  0001 C CNN "Spice_Primitive"
+F 5 "D1N4148" H 7700 3700 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 7700 3700 50  0001 C CNN "Spice_Netlist_Enabled"
 	1    7700 3700
 	0    1    1    0   
 $EndComp
 $Comp
-L Diode:1N4148W D2
+L Diode:1N4148W D1
 U 1 1 60AB44D3
 P 6350 3700
-F 0 "D2" V 6304 3780 50  0000 L CNN
-F 1 "1N4148W" V 6395 3780 50  0000 L CNN
+F 0 "D1" V 6250 3350 50  0000 L CNN
+F 1 "1N4148W" V 6350 3250 50  0000 L CNN
 F 2 "Diode_SMD:D_SOD-123" H 6350 3525 50  0001 C CNN
 F 3 "https://www.vishay.com/docs/85748/1n4148w.pdf" H 6350 3700 50  0001 C CNN
+F 4 "D" H 6350 3700 50  0001 C CNN "Spice_Primitive"
+F 5 "D1N4148" H 6350 3700 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 6350 3700 50  0001 C CNN "Spice_Netlist_Enabled"
 	1    6350 3700
 	0    1    1    0   
 $EndComp
@@ -1979,10 +1866,13 @@ $Comp
 L Diode:1N4148W D3
 U 1 1 60AB8812
 P 6800 5600
-F 0 "D3" V 6754 5680 50  0000 L CNN
-F 1 "1N4148W" V 6845 5680 50  0000 L CNN
+F 0 "D3" V 6700 5250 50  0000 L CNN
+F 1 "1N4148W" V 6800 5150 50  0000 L CNN
 F 2 "Diode_SMD:D_SOD-123" H 6800 5425 50  0001 C CNN
 F 3 "https://www.vishay.com/docs/85748/1n4148w.pdf" H 6800 5600 50  0001 C CNN
+F 4 "D" H 6800 5600 50  0001 C CNN "Spice_Primitive"
+F 5 "D1N4148" H 6800 5600 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 6800 5600 50  0001 C CNN "Spice_Netlist_Enabled"
 	1    6800 5600
 	0    1    1    0   
 $EndComp
@@ -1990,10 +1880,13 @@ $Comp
 L Diode:1N4148W D7
 U 1 1 60AB9215
 P 8350 5650
-F 0 "D7" V 8304 5730 50  0000 L CNN
-F 1 "1N4148W" V 8395 5730 50  0000 L CNN
+F 0 "D7" V 8250 5300 50  0000 L CNN
+F 1 "1N4148W" V 8350 5200 50  0000 L CNN
 F 2 "Diode_SMD:D_SOD-123" H 8350 5475 50  0001 C CNN
 F 3 "https://www.vishay.com/docs/85748/1n4148w.pdf" H 8350 5650 50  0001 C CNN
+F 4 "D" H 8350 5650 50  0001 C CNN "Spice_Primitive"
+F 5 "D1N4148" H 8350 5650 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 8350 5650 50  0001 C CNN "Spice_Netlist_Enabled"
 	1    8350 5650
 	0    1    1    0   
 $EndComp
@@ -2005,6 +1898,10 @@ F 0 "Q1" H 6741 3396 50  0000 L CNN
 F 1 "MMBT3904" H 6741 3305 50  0000 L CNN
 F 2 "Package_TO_SOT_SMD:SOT-23" H 6750 3275 50  0001 L CIN
 F 3 "https://www.onsemi.com/pub/Collateral/2N3903-D.PDF" H 6550 3350 50  0001 L CNN
+F 4 "Q" H 6550 3350 50  0001 C CNN "Spice_Primitive"
+F 5 "BC846B" H 6550 3350 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 6550 3350 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "3 1 2" H 6550 3350 50  0001 C CNN "Spice_Node_Sequence"
 	1    6550 3350
 	1    0    0    -1  
 $EndComp
@@ -2017,6 +1914,10 @@ F 0 "Q3" H 8091 3396 50  0000 L CNN
 F 1 "MMBT3904" H 8091 3305 50  0000 L CNN
 F 2 "Package_TO_SOT_SMD:SOT-23" H 8100 3275 50  0001 L CIN
 F 3 "https://www.onsemi.com/pub/Collateral/2N3903-D.PDF" H 7900 3350 50  0001 L CNN
+F 4 "Q" H 7900 3350 50  0001 C CNN "Spice_Primitive"
+F 5 "BC846B" H 7900 3350 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 7900 3350 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "3 1 2" H 7900 3350 50  0001 C CNN "Spice_Node_Sequence"
 	1    7900 3350
 	1    0    0    -1  
 $EndComp
@@ -2029,6 +1930,10 @@ F 0 "Q5" H 9391 3396 50  0000 L CNN
 F 1 "MMBT3904" H 9391 3305 50  0000 L CNN
 F 2 "Package_TO_SOT_SMD:SOT-23" H 9400 3275 50  0001 L CIN
 F 3 "https://www.onsemi.com/pub/Collateral/2N3903-D.PDF" H 9200 3350 50  0001 L CNN
+F 4 "Q" H 9200 3350 50  0001 C CNN "Spice_Primitive"
+F 5 "BC846B" H 9200 3350 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 9200 3350 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "3 1 2" H 9200 3350 50  0001 C CNN "Spice_Node_Sequence"
 	1    9200 3350
 	1    0    0    -1  
 $EndComp
@@ -2041,6 +1946,10 @@ F 0 "Q2" H 7191 5296 50  0000 L CNN
 F 1 "MMBT3904" H 7191 5205 50  0000 L CNN
 F 2 "Package_TO_SOT_SMD:SOT-23" H 7200 5175 50  0001 L CIN
 F 3 "https://www.onsemi.com/pub/Collateral/2N3903-D.PDF" H 7000 5250 50  0001 L CNN
+F 4 "Q" H 7000 5250 50  0001 C CNN "Spice_Primitive"
+F 5 "BC846B" H 7000 5250 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 7000 5250 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "3 2 1" H 7000 5250 50  0001 C CNN "Spice_Node_Sequence"
 	1    7000 5250
 	1    0    0    -1  
 $EndComp
@@ -2053,6 +1962,10 @@ F 0 "Q4" H 8741 5346 50  0000 L CNN
 F 1 "MMBT3904" H 8741 5255 50  0000 L CNN
 F 2 "Package_TO_SOT_SMD:SOT-23" H 8750 5225 50  0001 L CIN
 F 3 "https://www.onsemi.com/pub/Collateral/2N3903-D.PDF" H 8550 5300 50  0001 L CNN
+F 4 "Q" H 8550 5300 50  0001 C CNN "Spice_Primitive"
+F 5 "BC846B" H 8550 5300 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 8550 5300 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "3 1 2" H 8550 5300 50  0001 C CNN "Spice_Node_Sequence"
 	1    8550 5300
 	1    0    0    -1  
 $EndComp
@@ -2067,4 +1980,154 @@ Text Label 2450 4900 3    50   ~ 0
 IN_4
 Text Label 8900 1900 3    50   ~ 0
 OUT
+$Comp
+L power:+15V #PWR026
+U 1 1 60B273A0
+P 3350 6950
+AR Path="/60B273A0" Ref="#PWR026"  Part="1" 
+AR Path="/5DD3665B/60B273A0" Ref="#PWR?"  Part="1" 
+F 0 "#PWR026" H 3350 6800 50  0001 C CNN
+F 1 "+15V" H 3250 7100 50  0000 L CNN
+F 2 "" H 3350 6950 50  0001 C CNN
+F 3 "" H 3350 6950 50  0001 C CNN
+	1    3350 6950
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:-15V #PWR027
+U 1 1 60B27DE4
+P 3350 7550
+AR Path="/60B27DE4" Ref="#PWR027"  Part="1" 
+AR Path="/5DD3665B/60B27DE4" Ref="#PWR?"  Part="1" 
+F 0 "#PWR027" H 3350 7650 50  0001 C CNN
+F 1 "-15V" H 3250 7700 50  0000 L CNN
+F 2 "" H 3350 7550 50  0001 C CNN
+F 3 "" H 3350 7550 50  0001 C CNN
+	1    3350 7550
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	5700 6950 6100 6950
+Wire Wire Line
+	6100 7550 5700 7550
+$Comp
+L power:+15V #PWR036
+U 1 1 60B746FE
+P 5700 6950
+AR Path="/60B746FE" Ref="#PWR036"  Part="1" 
+AR Path="/5DD3665B/60B746FE" Ref="#PWR?"  Part="1" 
+F 0 "#PWR036" H 5700 6800 50  0001 C CNN
+F 1 "+15V" H 5600 7100 50  0000 L CNN
+F 2 "" H 5700 6950 50  0001 C CNN
+F 3 "" H 5700 6950 50  0001 C CNN
+	1    5700 6950
+	1    0    0    -1  
+$EndComp
+Connection ~ 5700 6950
+$Comp
+L power:-15V #PWR037
+U 1 1 60B7514B
+P 5700 7550
+AR Path="/60B7514B" Ref="#PWR037"  Part="1" 
+AR Path="/5DD3665B/60B7514B" Ref="#PWR?"  Part="1" 
+F 0 "#PWR037" H 5700 7650 50  0001 C CNN
+F 1 "-15V" H 5600 7700 50  0000 L CNN
+F 2 "" H 5700 7550 50  0001 C CNN
+F 3 "" H 5700 7550 50  0001 C CNN
+	1    5700 7550
+	-1   0    0    1   
+$EndComp
+Connection ~ 5700 7550
+$Comp
+L power:GND #PWR035
+U 1 1 60B75ADF
+P 5450 7350
+AR Path="/60B75ADF" Ref="#PWR035"  Part="1" 
+AR Path="/5DD3665B/60B75ADF" Ref="#PWR?"  Part="1" 
+F 0 "#PWR035" H 5450 7100 50  0001 C CNN
+F 1 "GND" V 5450 7150 50  0000 C CNN
+F 2 "" H 5450 7350 50  0001 C CNN
+F 3 "" H 5450 7350 50  0001 C CNN
+	1    5450 7350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5700 7250 5450 7250
+Wire Wire Line
+	5450 7250 5450 7350
+Connection ~ 5700 7250
+$Comp
+L power:+15V #PWR029
+U 1 1 60B8CDD7
+P 4500 6950
+AR Path="/60B8CDD7" Ref="#PWR029"  Part="1" 
+AR Path="/5DD3665B/60B8CDD7" Ref="#PWR?"  Part="1" 
+F 0 "#PWR029" H 4500 6800 50  0001 C CNN
+F 1 "+15V" H 4400 7100 50  0000 L CNN
+F 2 "" H 4500 6950 50  0001 C CNN
+F 3 "" H 4500 6950 50  0001 C CNN
+	1    4500 6950
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:-15V #PWR030
+U 1 1 60B8D515
+P 4500 7550
+AR Path="/60B8D515" Ref="#PWR030"  Part="1" 
+AR Path="/5DD3665B/60B8D515" Ref="#PWR?"  Part="1" 
+F 0 "#PWR030" H 4500 7650 50  0001 C CNN
+F 1 "-15V" H 4400 7700 50  0000 L CNN
+F 2 "" H 4500 7550 50  0001 C CNN
+F 3 "" H 4500 7550 50  0001 C CNN
+	1    4500 7550
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR028
+U 1 1 60B8DACC
+P 4250 7350
+AR Path="/60B8DACC" Ref="#PWR028"  Part="1" 
+AR Path="/5DD3665B/60B8DACC" Ref="#PWR?"  Part="1" 
+F 0 "#PWR028" H 4250 7100 50  0001 C CNN
+F 1 "GND" V 4250 7150 50  0000 C CNN
+F 2 "" H 4250 7350 50  0001 C CNN
+F 3 "" H 4250 7350 50  0001 C CNN
+	1    4250 7350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4500 7250 4250 7250
+Wire Wire Line
+	4250 7250 4250 7350
+Connection ~ 4500 7250
+Wire Wire Line
+	4950 6950 4500 6950
+Connection ~ 4500 6950
+Wire Wire Line
+	4950 7550 4500 7550
+Connection ~ 4500 7550
+$Comp
+L power:GND #PWR025
+U 1 1 60BC50AF
+P 3100 7350
+AR Path="/60BC50AF" Ref="#PWR025"  Part="1" 
+AR Path="/5DD3665B/60BC50AF" Ref="#PWR?"  Part="1" 
+F 0 "#PWR025" H 3100 7100 50  0001 C CNN
+F 1 "GND" V 3100 7150 50  0000 C CNN
+F 2 "" H 3100 7350 50  0001 C CNN
+F 3 "" H 3100 7350 50  0001 C CNN
+	1    3100 7350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3350 7250 3100 7250
+Wire Wire Line
+	3100 7250 3100 7350
+Connection ~ 3350 7250
+Wire Wire Line
+	3750 6950 3350 6950
+Connection ~ 3350 6950
+Wire Wire Line
+	3750 7550 3350 7550
+Connection ~ 3350 7550
 $EndSCHEMATC
