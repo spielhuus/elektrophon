@@ -36,7 +36,23 @@
 </head>
   <body>
     
-        <section class="hero  is-halfheight "  style="background: url('/elektrophon/assets/4069_oscillator_files/hero.jpg') no-repeat center center; background-size: cover; background-attachment: fixed;" >
+        
+<style scoped>
+.hero {
+    no-repeat center center; 
+    background-size: cover; 
+    background-attachment: fixed;
+    background-image: url(/elektrophon/assets/4069_oscillator_files/hero.jpg); 
+}
+@media (max-width: 980px) {
+    .hero {
+        background-image: url();
+    }
+}
+</style>
+
+
+<section class="hero  is-halfheight ">
     <div class="hero-head  hero-darken ">
         <nav class="navbar">
   <div class="container">
@@ -86,100 +102,100 @@
     </div>
 </section>
     
-    <section class="hero is-halfheight is-black">
+    <!-- section class="hero is-halfheight is-black">
     <div class="hero-body has-text-centered">
         <div class="container is-size-5 has-text-weight-medium is-italic">
             the CD4069UB device consist of six CMOS inverter circuits. these devices are intended for all generalpurpose inverter applications where the mediumpower TTL-drive and logic-level-conversion. this device is not ideal for linear amplification, but can be used as such and will add a lot of soft-clipping. soft-clipping is expected from a valve. this makes this device special for musical usage and can be found in guitar distortion pedals [2] or the wasp filter [3]. in this article series i want to investigate this device and find out if new modules can be built with it.
         </div>
     </div>
-</section>
+</section -->
 
 <!-- 
-    [1;32m2021-05-24 10:11:23,609[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM VCC_ABS_MAX = 20 
-    [1;32m2021-05-24 10:11:23,610[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM VCC_MAX = 18 
-    [1;32m2021-05-24 10:11:23,611[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM RA = 720000000 
-    [1;32m2021-05-24 10:11:23,614[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM RB = 720000000 
-    [1;32m2021-05-24 10:11:23,616[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM CA = 4.5e-12 
-    [1;32m2021-05-24 10:11:23,617[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM CB = 4.5e-12 
-    [1;32m2021-05-24 10:11:23,617[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM ROEZ = 2000 
-    [1;32m2021-05-24 10:11:23,618[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM COEZ = 3e-12 
-    [1;32m2021-05-24 10:11:23,619[0m - [1;34mPySpice.Spice.Parser.Element.read_words[0m - [1;31mWARNING[0m - Bad element line, looking for word 1/2:
+    [1;32m2021-05-25 06:39:30,029[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM VCC_ABS_MAX = 20 
+    [1;32m2021-05-25 06:39:30,030[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM VCC_MAX = 18 
+    [1;32m2021-05-25 06:39:30,031[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM RA = 720000000 
+    [1;32m2021-05-25 06:39:30,034[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM RB = 720000000 
+    [1;32m2021-05-25 06:39:30,035[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM CA = 4.5e-12 
+    [1;32m2021-05-25 06:39:30,039[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM CB = 4.5e-12 
+    [1;32m2021-05-25 06:39:30,040[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM ROEZ = 2000 
+    [1;32m2021-05-25 06:39:30,041[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM COEZ = 3e-12 
+    [1;32m2021-05-25 06:39:30,043[0m - [1;34mPySpice.Spice.Parser.Element.read_words[0m - [1;31mWARNING[0m - Bad element line, looking for word 1/2:
     SICC VCC GND VCC GND SW1 
                              ^
-    [1;32m2021-05-24 10:11:23,620[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parse error on:
+    [1;32m2021-05-25 06:39:30,044[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parse error on:
     SICC VCC GND VCC GND SW1 
-    [1;32m2021-05-24 10:11:23,620[0m - [1;34mPySpice.Spice.Parser.Element.read_words[0m - [1;31mWARNING[0m - Bad element line, looking for word 1/2:
+    [1;32m2021-05-25 06:39:30,045[0m - [1;34mPySpice.Spice.Parser.Element.read_words[0m - [1;31mWARNING[0m - Bad element line, looking for word 1/2:
     SIOFF OUTsw OUT VCC GND SW2 
                                 ^
-    [1;32m2021-05-24 10:11:23,621[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parse error on:
+    [1;32m2021-05-25 06:39:30,046[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parse error on:
     SIOFF OUTsw OUT VCC GND SW2 
-    [1;32m2021-05-24 10:11:23,622[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM STANDARD_INPUT_SELECT = 0 
-    [1;32m2021-05-24 10:11:23,622[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM SCHMITT_TRIGGER_INPUT_SELECT = 1 
-    [1;32m2021-05-24 10:11:23,623[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM MAXICC = 0.0009 
-    [1;32m2021-05-24 10:11:23,624[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM VT = .7 
-    [1;32m2021-05-24 10:11:23,625[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM VCC_MIN = 3 
-    [1;32m2021-05-24 10:11:23,625[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM AND  = 0 
-    [1;32m2021-05-24 10:11:23,626[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM NAND = 1 
-    [1;32m2021-05-24 10:11:23,626[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM OR   = 0 
-    [1;32m2021-05-24 10:11:23,627[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM NOR  = 0 
-    [1;32m2021-05-24 10:11:23,627[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM XOR  = 0 
-    [1;32m2021-05-24 10:11:23,628[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM XNOR = 0 
-    [1;32m2021-05-24 10:11:23,628[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM TPDELAY1 = 1N 
-    [1;32m2021-05-24 10:11:23,629[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM RS = 10K 
-    [1;32m2021-05-24 10:11:23,629[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM CS = {-TPDELAY1/(RS*LOG(0.5))} 
-    [1;32m2021-05-24 10:11:23,630[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM VCC1 = 1.65 
-    [1;32m2021-05-24 10:11:23,631[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM VCC2 = 2.3 
-    [1;32m2021-05-24 10:11:23,631[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM VCC3 = 3 
-    [1;32m2021-05-24 10:11:23,632[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM VCC4 = 3 
-    [1;32m2021-05-24 10:11:23,632[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM VCC5 = 4.5 
-    [1;32m2021-05-24 10:11:23,633[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM VOL1 = 0.45 
-    [1;32m2021-05-24 10:11:23,633[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM VOL2 = 0.3 
-    [1;32m2021-05-24 10:11:23,634[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM VOL3 = 0.4 
-    [1;32m2021-05-24 10:11:23,634[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM VOL4 = 0.55 
-    [1;32m2021-05-24 10:11:23,635[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM VOL5 = 0.55 
-    [1;32m2021-05-24 10:11:23,635[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM IOL1 = 0.004 
-    [1;32m2021-05-24 10:11:23,636[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM IOL2 = 0.008 
-    [1;32m2021-05-24 10:11:23,636[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM IOL3 = 0.016 
-    [1;32m2021-05-24 10:11:23,636[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM IOL4 = 0.024 
-    [1;32m2021-05-24 10:11:23,637[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM IOL5 = 0.032 
-    [1;32m2021-05-24 10:11:23,637[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM ROL1 = {(VOL1)/IOL1} 
-    [1;32m2021-05-24 10:11:23,638[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM ROL2 = {(VOL2)/IOL2} 
-    [1;32m2021-05-24 10:11:23,638[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM ROL3 = {(VOL3)/IOL3} 
-    [1;32m2021-05-24 10:11:23,638[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM ROL4 = {(VOL4)/IOL4} 
-    [1;32m2021-05-24 10:11:23,639[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM ROL5 = {(VOL5)/IOL5} 
-    [1;32m2021-05-24 10:11:23,639[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM VCC1 = 4.5 
-    [1;32m2021-05-24 10:11:23,640[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM VCC2 = 5 
-    [1;32m2021-05-24 10:11:23,640[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM VCC3 = 5.5 
-    [1;32m2021-05-24 10:11:23,641[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM VOH1 = 4.4 
-    [1;32m2021-05-24 10:11:23,641[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM VOH2 = 4.8 
-    [1;32m2021-05-24 10:11:23,642[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM VOH3 = 5.2 
-    [1;32m2021-05-24 10:11:23,642[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM VOL1 = 0.1 
-    [1;32m2021-05-24 10:11:23,643[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM VOL2 = 0.44 
-    [1;32m2021-05-24 10:11:23,643[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM VOL3 = 0.8 
-    [1;32m2021-05-24 10:11:23,644[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM IOH1 = 0.00005 
-    [1;32m2021-05-24 10:11:23,644[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM IOH2 = 0.024 
-    [1;32m2021-05-24 10:11:23,645[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM IOH3 = 0.05 
-    [1;32m2021-05-24 10:11:23,645[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM IOL1 = 0.00005 
-    [1;32m2021-05-24 10:11:23,645[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM IOL2 = 0.024 
-    [1;32m2021-05-24 10:11:23,646[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM IOL3 = 0.05 
-    [1;32m2021-05-24 10:11:23,647[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM ROH1 = {(VCC1 - VOH1)/IOH1} 
-    [1;32m2021-05-24 10:11:23,647[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM ROH2 = {(VCC2 - VOH2)/IOH2} 
-    [1;32m2021-05-24 10:11:23,648[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM ROH3 = {(VCC3 - VOH3)/IOH3} 
-    [1;32m2021-05-24 10:11:23,648[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM ROH4 = {(VCC4 - VOH4)/IOH4} 
-    [1;32m2021-05-24 10:11:23,649[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM ROH5 = {(VCC5 - VOH5)/IOH5} 
-    [1;32m2021-05-24 10:11:23,649[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM ROL1 = {(VOL1)/IOL1} 
-    [1;32m2021-05-24 10:11:23,650[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM ROL2 = {(VOL2)/IOL2} 
-    [1;32m2021-05-24 10:11:23,650[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM ROL3 = {(VOL3)/IOL3} 
-    [1;32m2021-05-24 10:11:23,651[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM ROL4 = {(VOL4)/IOL4} 
-    [1;32m2021-05-24 10:11:23,651[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM ROL5 = {(VOL5)/IOL5} 
-    [1;32m2021-05-24 10:11:23,652[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM ICC = 5e-09 
-    [1;32m2021-05-24 10:11:23,652[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM VCC_MAX = 18 
-    [1;32m2021-05-24 10:11:23,653[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM VCC_MIN = 3 
+    [1;32m2021-05-25 06:39:30,047[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM STANDARD_INPUT_SELECT = 0 
+    [1;32m2021-05-25 06:39:30,047[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM SCHMITT_TRIGGER_INPUT_SELECT = 1 
+    [1;32m2021-05-25 06:39:30,050[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM MAXICC = 0.0009 
+    [1;32m2021-05-25 06:39:30,052[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM VT = .7 
+    [1;32m2021-05-25 06:39:30,052[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM VCC_MIN = 3 
+    [1;32m2021-05-25 06:39:30,054[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM AND  = 0 
+    [1;32m2021-05-25 06:39:30,055[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM NAND = 1 
+    [1;32m2021-05-25 06:39:30,055[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM OR   = 0 
+    [1;32m2021-05-25 06:39:30,056[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM NOR  = 0 
+    [1;32m2021-05-25 06:39:30,059[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM XOR  = 0 
+    [1;32m2021-05-25 06:39:30,059[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM XNOR = 0 
+    [1;32m2021-05-25 06:39:30,060[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM TPDELAY1 = 1N 
+    [1;32m2021-05-25 06:39:30,061[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM RS = 10K 
+    [1;32m2021-05-25 06:39:30,062[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM CS = {-TPDELAY1/(RS*LOG(0.5))} 
+    [1;32m2021-05-25 06:39:30,062[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM VCC1 = 1.65 
+    [1;32m2021-05-25 06:39:30,063[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM VCC2 = 2.3 
+    [1;32m2021-05-25 06:39:30,068[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM VCC3 = 3 
+    [1;32m2021-05-25 06:39:30,069[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM VCC4 = 3 
+    [1;32m2021-05-25 06:39:30,069[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM VCC5 = 4.5 
+    [1;32m2021-05-25 06:39:30,070[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM VOL1 = 0.45 
+    [1;32m2021-05-25 06:39:30,071[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM VOL2 = 0.3 
+    [1;32m2021-05-25 06:39:30,072[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM VOL3 = 0.4 
+    [1;32m2021-05-25 06:39:30,072[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM VOL4 = 0.55 
+    [1;32m2021-05-25 06:39:30,072[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM VOL5 = 0.55 
+    [1;32m2021-05-25 06:39:30,073[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM IOL1 = 0.004 
+    [1;32m2021-05-25 06:39:30,073[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM IOL2 = 0.008 
+    [1;32m2021-05-25 06:39:30,074[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM IOL3 = 0.016 
+    [1;32m2021-05-25 06:39:30,074[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM IOL4 = 0.024 
+    [1;32m2021-05-25 06:39:30,075[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM IOL5 = 0.032 
+    [1;32m2021-05-25 06:39:30,084[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM ROL1 = {(VOL1)/IOL1} 
+    [1;32m2021-05-25 06:39:30,086[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM ROL2 = {(VOL2)/IOL2} 
+    [1;32m2021-05-25 06:39:30,087[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM ROL3 = {(VOL3)/IOL3} 
+    [1;32m2021-05-25 06:39:30,088[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM ROL4 = {(VOL4)/IOL4} 
+    [1;32m2021-05-25 06:39:30,089[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM ROL5 = {(VOL5)/IOL5} 
+    [1;32m2021-05-25 06:39:30,091[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM VCC1 = 4.5 
+    [1;32m2021-05-25 06:39:30,091[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM VCC2 = 5 
+    [1;32m2021-05-25 06:39:30,093[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM VCC3 = 5.5 
+    [1;32m2021-05-25 06:39:30,093[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM VOH1 = 4.4 
+    [1;32m2021-05-25 06:39:30,094[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM VOH2 = 4.8 
+    [1;32m2021-05-25 06:39:30,097[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM VOH3 = 5.2 
+    [1;32m2021-05-25 06:39:30,100[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM VOL1 = 0.1 
+    [1;32m2021-05-25 06:39:30,100[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM VOL2 = 0.44 
+    [1;32m2021-05-25 06:39:30,100[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM VOL3 = 0.8 
+    [1;32m2021-05-25 06:39:30,101[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM IOH1 = 0.00005 
+    [1;32m2021-05-25 06:39:30,102[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM IOH2 = 0.024 
+    [1;32m2021-05-25 06:39:30,105[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM IOH3 = 0.05 
+    [1;32m2021-05-25 06:39:30,105[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM IOL1 = 0.00005 
+    [1;32m2021-05-25 06:39:30,106[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM IOL2 = 0.024 
+    [1;32m2021-05-25 06:39:30,106[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM IOL3 = 0.05 
+    [1;32m2021-05-25 06:39:30,108[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM ROH1 = {(VCC1 - VOH1)/IOH1} 
+    [1;32m2021-05-25 06:39:30,108[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM ROH2 = {(VCC2 - VOH2)/IOH2} 
+    [1;32m2021-05-25 06:39:30,109[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM ROH3 = {(VCC3 - VOH3)/IOH3} 
+    [1;32m2021-05-25 06:39:30,109[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM ROH4 = {(VCC4 - VOH4)/IOH4} 
+    [1;32m2021-05-25 06:39:30,113[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM ROH5 = {(VCC5 - VOH5)/IOH5} 
+    [1;32m2021-05-25 06:39:30,114[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM ROL1 = {(VOL1)/IOL1} 
+    [1;32m2021-05-25 06:39:30,115[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM ROL2 = {(VOL2)/IOL2} 
+    [1;32m2021-05-25 06:39:30,116[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM ROL3 = {(VOL3)/IOL3} 
+    [1;32m2021-05-25 06:39:30,116[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM ROL4 = {(VOL4)/IOL4} 
+    [1;32m2021-05-25 06:39:30,117[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM ROL5 = {(VOL5)/IOL5} 
+    [1;32m2021-05-25 06:39:30,118[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM ICC = 5e-09 
+    [1;32m2021-05-25 06:39:30,118[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM VCC_MAX = 18 
+    [1;32m2021-05-25 06:39:30,119[0m - [1;34mPySpice.Spice.Parser.SpiceParser._parse[0m - [1;31mWARNING[0m - Parser ignored: .PARAM VCC_MIN = 3 
 
 -->
 
 <!-- mk scoped -->
-<div class="container my-2">
+<div class="container mb-2 mt-2">
   <p class="mt-6">The CD4069UB device consist of six CMOS inverter circuits. These devices are intended for all generalpurpose inverter applications where the mediumpower TTL-drive and logic-level-conversion. This device is not ideal for linear amplification, but can be used as such and will add a lot of soft-clipping. Soft-clipping is expected from a valve. This makes this device special for musical usage and can be found in guitar distortion pedals [<a href="http://www.runoffgroove.com/ubescreamer.html">2</a>] or the wasp filter [<a href="https://www.schmitzbits.de/wasp.html">3</a>].</p>
 </div>
 
@@ -194,12 +210,12 @@
 </div>
 
 <!-- mk scoped -->
-<div class="container my-2">
+<div class="container mb-2 mt-2">
   <p>the chip should be powered by +5V/GND. With higher voltage the heat dissipation will be to big and the chip will be damaged. the chip is powered on pin 7 and 14 with +5V and Ground. the other pins can be used as amplifier.</p>
 </div>
 
 <!-- mk scoped -->
-<div class="container my-2">
+<div class="container mb-2 mt-2">
   <h1 class="subtitle is-lowercase" id="triangle-oszillator">triangle oszillator</h1>
 
   <p>the simplest circuit to begin with is a voltage follower or buffer. the buffer confifuration looks similar to the opamp buffer. but there are some differences. the first important difference is that the feedback will also do the biasing of the input signal. when an ac signal is applied to the buffer the output will be a dc signal, as long as the chip is able to provide the needed biasing feedback. the gain can be calculated similar to the opamp configuration. but there will be less gain as we would excpect from the calculation.</p>
@@ -216,7 +232,7 @@
 </div>
 
 <!-- mk scoped -->
-<div class="container my-2">
+<div class="container mb-2 mt-2">
   <p>This is the first setup with the 4069 as voltage follower. C1 and C3 are the dc blocking capacitors. When we choose R1 and R2 as 100kOhm we would excpect a gain of one.</p>
 </div>
 
@@ -244,7 +260,7 @@
 </div>
 
 <!-- mk scoped -->
-<div class="container my-2">
+<div class="container mb-2 mt-2">
   <p>The blue line is the input signal (5V p2p) and the red the output signal with 100kOhm resistors. The output is a little less then excpected. For the other signals the resistor R2 is replaced with 125kΩ, 150kΩ, 175kΩ and 200kΩ. With 150kΩ the gain is roughly one. We also see that the ouput is not symetrical. The clipping occures earlier for the negative part of the signal. With higher gain the signal is soft clipped.</p>
 </div>
 
@@ -259,7 +275,7 @@
 </div>
 
 <!-- 
-    [1;32m2021-05-24 10:11:27,093[0m - [1;34mPySpice.Spice.NgSpice.Shared.NgSpiceShared._send_char[0m - [1;31mWARNING[0m - Warning: v4: no DC value, transient time 0 value used
+    [1;32m2021-05-25 06:39:33,289[0m - [1;34mPySpice.Spice.NgSpice.Shared.NgSpiceShared._send_char[0m - [1;31mWARNING[0m - Warning: v4: no DC value, transient time 0 value used
 
 -->
 
@@ -272,7 +288,7 @@
 </div>
 
 <!-- mk scoped -->
-<div class="container my-2">
+<div class="container mb-2 mt-2">
   <h1 class="subtitle is-lowercase" id="summermixer">summer/mixer</h1>
 
   <p>The cmos inverter can also be used as summing amplifier. In this example two sinudiol signals are added. The setup is the same as an Opamp summing amplifiert. The gain can be adjusted with the feeback resistor.</p>
@@ -295,7 +311,7 @@
 </div>
 
 <!-- mk scoped -->
-<div class="container my-2">
+<div class="container mb-2 mt-2">
   <h1 class="subtitle is-lowercase" id="references">references</h1>
 
   <ol>

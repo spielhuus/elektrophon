@@ -36,7 +36,23 @@
 </head>
   <body>
     
-        <section class="hero  is-halfheight "  style="background: url('/elektrophon/assets/cmos_files/cd40106.jpg') no-repeat center center; background-size: cover; background-attachment: fixed;" >
+        
+<style scoped>
+.hero {
+    no-repeat center center; 
+    background-size: cover; 
+    background-attachment: fixed;
+    background-image: url(/elektrophon/assets/cmos_files/cd40106.jpg); 
+}
+@media (max-width: 980px) {
+    .hero {
+        background-image: url();
+    }
+}
+</style>
+
+
+<section class="hero  is-halfheight ">
     <div class="hero-head  hero-darken ">
         <nav class="navbar">
   <div class="container">
@@ -86,16 +102,16 @@
     </div>
 </section>
     
-    <section class="hero is-halfheight is-black">
+    <!-- section class="hero is-halfheight is-black">
     <div class="hero-body has-text-centered">
         <div class="container is-size-5 has-text-weight-medium is-italic">
             the simplest way of building synthesizer circuits is the lunetta style. A lunetta synthesizer is built with simple cmos chips. the first circuit to build is a schmitt trigger oscillator.
         </div>
     </div>
-</section>
+</section -->
 
 <!-- mk scoped -->
-<div class="container my-2">
+<div class="container mb-2 mt-2">
   <p class="mt-6">A schmitt-trigger is a comperator circuit with hysteris. a schmitt trigger produces a “digital’ output dependending on the input signal. The state is switched by two trigger points. when the signal is equal or bigger then the upper trigger point the output switches to high which is represented by the supply voltage. when the input voltage is equal or below the lower trigger point the output voltage goes to zero. this circuit is very useful if there is a unstable or noisy switch signal. the schmitt-trigger cam prodce a stable signal.</p>
 </div>
 
@@ -110,7 +126,7 @@
 </div>
 
 <!-- mk scoped -->
-<div class="container my-2">
+<div class="container mb-2 mt-2">
   <p>The CD40106 device consist of six CMOS inverting schmitt-trigger circuits. this device is typically used in luneta circuits as a VCO. There are very interesting drone synth built with this chip. It is also used a timers and low pass filter sources in various circuits, for example the cynare module from Ken Stone.</p>
 
   <p>the chip can be powered with GND and any positive supply from 5V-15V. The output amplitude will change with the positive supply voltage. The trigger values are documented in the datasheet on page xxx. For this exmapes the device is powered with GND/+5V and the trigger points are 1.9V/2.9V.</p>
@@ -126,7 +142,7 @@
 </div>
 
 <!-- mk scoped -->
-<div class="container my-2">
+<div class="container mb-2 mt-2">
   <h1 class="subtitle is-lowercase" id="oscillator">oscillator</h1>
 
   <p>To build an oscillator with the schmitt trigger we need a capacitor and a resistor. the capcitor is placed at the input pin and is charged through the resistor until the schmitt trigger threshold is reached. The the output of the Schmitt Trigger goes to zero and the capacitor is discharged until the lower threshold is reached. this creates a square wave at the output pin.</p>
@@ -158,7 +174,7 @@
 </div>
 
 <!-- mk scoped -->
-<div class="container my-2">
+<div class="container mb-2 mt-2">
   <h1 class="subtitle is-lowercase" id="voltage-control">voltage control</h1>
 
 </div>
@@ -174,7 +190,7 @@
 </div>
 
 <!-- mk scoped -->
-<div class="container my-2">
+<div class="container mb-2 mt-2">
   <h1 class="subtitle is-lowercase" id="ouput-buffer">ouput buffer</h1>
 
   <p>of course we can just buffer the output with an opamp and adjust it to AC level. Ken Stone does a little bit more and at a first sight not so logical implemnetation of the output buffer.</p>
@@ -182,7 +198,7 @@
 </div>
 
 <!-- mk scoped -->
-<div class="container my-2">
+<div class="container mb-2 mt-2">
   <p>The first OPAMP is just an inverting amplifier/mixer. All the inputs are connected with a 470kOhm Reistor. The feedback is a potentiometer with 100kOhm. This gives the maximum gain of x. The second opamp is a simple voltage follower, just buffering the signal. The potentiometer and capacitor between the opamps is called glide. Lets see what that does.</p>
 
 </div>
@@ -196,7 +212,7 @@
 </div>
 
 <!-- mk scoped -->
-<div class="container my-2">
+<div class="container mb-2 mt-2">
   <h1 class="subtitle is-lowercase" id="references">references</h1>
 
   <ol>

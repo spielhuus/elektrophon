@@ -32,7 +32,23 @@
 </head>
   <body>
     
-        <section class="hero  is-halfheight "  style="background: url('/elektrophon/assets/electronics.jpg') no-repeat center center; background-size: cover; background-attachment: fixed;" >
+        
+<style scoped>
+.hero {
+    no-repeat center center; 
+    background-size: cover; 
+    background-attachment: fixed;
+    background-image: url(/elektrophon/assets/electronics.jpg); 
+}
+@media (max-width: 980px) {
+    .hero {
+        background-image: url();
+    }
+}
+</style>
+
+
+<section class="hero  is-halfheight ">
     <div class="hero-head  hero-darken ">
         <nav class="navbar">
   <div class="container">

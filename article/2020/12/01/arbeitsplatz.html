@@ -36,7 +36,23 @@
 </head>
   <body>
     
-        <section class="hero  is-halfheight "  style="background: url('/elektrophon/assets/arbeitsplatz_files/radio_helmet_hero.jpg') no-repeat center center; background-size: cover; background-attachment: fixed;" >
+        
+<style scoped>
+.hero {
+    no-repeat center center; 
+    background-size: cover; 
+    background-attachment: fixed;
+    background-image: url(/elektrophon/assets/arbeitsplatz_files/hero_landscape.jpg); 
+}
+@media (max-width: 980px) {
+    .hero {
+        background-image: url(/elektrophon/assets/arbeitsplatz_files/hero_portrait.jpg);
+    }
+}
+</style>
+
+
+<section class="hero  is-fullheight ">
     <div class="hero-head  hero-darken ">
         <nav class="navbar">
   <div class="container">
@@ -80,22 +96,22 @@
     </div>
     <div class="hero-body  hero-darken ">
         <div class="content has-text-centered">
-            </div>
-            
+             <div class="title is-lowercase has-text-white-ter">arbeitsplatz </div>
+            <div class="subtitle has-text-white-ter">All the necessary applications for developing the elektrophon.</div> 
         </div>
     </div>
 </section>
     
-    <section class="hero is-halfheight is-black">
+    <!-- section class="hero is-halfheight is-black">
     <div class="hero-body has-text-centered">
         <div class="container is-size-5 has-text-weight-medium is-italic">
             All the necessary applications for developing the elektrophon.
         </div>
     </div>
-</section>
+</section -->
 
 <!-- mk scoped -->
-<div class="container my-2">
+<div class="container mb-2 mt-2">
   <p class="mb-6 mt-6 is-size-5 has-text-centered">The elektrophon is developped with an continous development lifecycle. The circuits for the modules and articles are first simulated with spice. Jupyter notebooks are used to edit and run the simulations. In these notebooks also the images and other contend is created. To run this notebooks you need to install the required software. Here is a list of all the needed software and tools.</p>
 
   <h1 class="subtitle is-lowercase" id="essential-software">essential software</h1>
@@ -123,7 +139,7 @@
 </div>
 
 <!-- mk scoped -->
-<div class="container my-2">
+<div class="container mb-2 mt-2">
   <h2 class="subtitle is-lowercase" id="python-packages">python packages</h2>
 
   <p>The notebooks and simulations require some python packages. These packages can be installed with conda.</p>
@@ -167,7 +183,7 @@ conda activate elektrophon
 </div>
 
 <!-- mk scoped -->
-<div class="container my-2">
+<div class="container mb-2 mt-2">
   <h2 class="subtitle is-lowercase" id="web-page">web page</h2>
 
   <p class="mb-2 mt-6">If you want to build the web page on your own you can use the <a href="https://github.com/spielhuus/elektrophon/tree/master/docker">docker image</a>.</p>
@@ -180,7 +196,7 @@ conda activate elektrophon
 </div>
 
 <!-- mk scoped -->
-<div class="container my-2">
+<div class="container mb-2 mt-2">
   <h2 class="subtitle is-lowercase class=&quot;mb-6 mt-6" id="other-software">other software</h2>
 
   <ul>

@@ -104,6 +104,15 @@
   </div>
 
   
+  
+  <div class="control">
+    <div class="tags has-addons is-normal">
+      <span class="tag is-dark">test</span>
+      <span class="tag is-danger">1/1</span>
+    </div>
+  </div>
+  
+  
 
   
   <div class="control">
@@ -140,7 +149,7 @@
     </div>
 
     <div class="control">
-      <a class="tags has-addons is-normal" href="https://github.com/spielhuus/elektrophon/tree/master/content/">
+      <a class="tags has-addons is-normal" href="https://github.com/spielhuus/elektrophon/tree/master/content/pegel">
         <span class="tag is-dark"><i class="fab fa-github" aria-hidden="true"></i></span>
         <span class="tag is-link">github</span>
       </a>
@@ -152,11 +161,8 @@
 <li class="toc-entry toc-h1"><a href="#construction">construction</a></li>
 <li class="toc-entry toc-h1"><a href="#bom">bom</a></li>
 <li class="toc-entry toc-h1"><a href="#calibration">calibration</a></li>
-<li class="toc-entry toc-h1"><a href="#usage">usage</a>
-<ul>
-<li class="toc-entry toc-h2"><a href="#references">references</a></li>
-</ul>
-</li>
+<li class="toc-entry toc-h1"><a href="#usage">usage</a></li>
+<li class="toc-entry toc-h1"><a href="#references">references</a></li>
 </ul></div>
             </div>
         </div>
@@ -164,46 +170,51 @@
 </section>
 
 <div class="container is-large mb-6 mt-6 is-size-5 has-text-centered has-text-weight-semibold">
+    Pegel is a voltage controlled amplifier (VCA). There are various designs to implement a VCA. rod elliott (ESP) has an article on VCA techniques [[1][1]]. diy synthesizer modules are usualy designed with an integrated VCA chip [[2][2]] or with a differential amplifier [[3][3]]. The integrated VCA chips are either obsolete or rather expensive. The differential amplifier can be built with transistors only. the design has some downsides. Even in the simulation the result is not symetryc and has a dc offset from the control voltage. This needs a lot of trimming to get an accurate result. but the biggest downside is, that this design can not do proper amplitude modulation (am). when the carrier signal goes below zero the base signal is completely muted.
+</div>
+
+<!-- 
+    F                                                                        [100%]
+    =================================== FAILURES ===================================
+    _________________________________ test_my_func _________________________________
     
+        def test_my_func():
+            assert 0 == 0
+    >       assert 1 == 0
+    E       assert 1 == 0
+    
+    <ipython-input-1-93fd88d6b78a>:5: AssertionError
+    - generated json report: /github/workspace/content/pegel/build/pegel-test.json -
+    =========================== short test summary info ============================
+    FAILED tmp5je2vx7h.py::test_my_func - assert 1 == 0
+
+-->
+
+<!-- mk scoped -->
+<div class="container mb-2 mt-2">
+  <p class="mt-6">Pegel is a voltage controlled amplifier (VCA). There are various designs to implement a VCA. rod elliott (ESP) has an article on VCA techniques [[1][1]]. diy synthesizer modules are usualy designed with an integrated VCA chip [[2][2]] or with a differential amplifier [[3][3]]. The integrated VCA chips are either obsolete or rather expensive. The differential amplifier can be built with transistors only. the design has some downsides. Even in the simulation the result is not symetryc and has a dc offset from the control voltage. This needs a lot of trimming to get an accurate result. but the biggest downside is, that this design can not do proper amplitude modulation (am). when the carrier signal goes below zero the base signal is completely muted.</p>
 </div>
 
 <!-- mk scoped -->
-<div class="container my-2">
-  <p class="mt-6">Pegel is a voltage controlled amplifier (VCA). There are various designs to implement a VCA. rod elliott (ESP) has an article on VCA techniques [<a href="https://sound-au.com/articles/vca-techniques.html">1</a>]. diy synthesizer modules are usualy designed with an integrated VCA chip [<a href="https://tinaja.com/glib/pop_elec/mus_keying_vca_1+2_75.pdf">2</a>] or with a differential amplifier [<a href="https://www.birthofasynth.com/Thomas_Henry/Pages/VCA-1.html">3</a>]. The integrated VCA chips are either obsolete or rather expensive. The differential amplifier can be built with transistors only. the design has some downsides. Even in the simulation the result is not symetryc and has a dc offset from the control voltage. This needs a lot of trimming to get an accurate result. but the biggest downside is, that this design can not do proper amplitude modulation (am). when the carrier signal goes below zero the base signal is completely muted.</p>
-</div>
-
-<div class="section">
-  <div class="container has-text-centered my-2">
-
-    <p><img src="/elektrophon/assets/pegel_files/pegel_2_0.svg" alt="svg" /></p>
-
-  </div>
-</div>
-
-<div class="section">
-  <div class="container has-text-centered my-2">
-
-    <p><img src="/elektrophon/assets/pegel_files/pegel_3_0.svg" alt="svg" /></p>
-
-  </div>
-</div>
-
-<!-- mk scoped -->
-<div class="container my-2">
-  <p>this is not real amplitude modulation. when the signal is negative the phase of the output is inverted. this can be adjusted by the bias voltage of the control voltage. the control voltage has to be positive at all time.</p>
-
-</div>
-
-<!-- mk scoped -->
-<div class="container my-2">
+<div class="container mb-2 mt-2">
   <h1 class="subtitle is-lowercase" id="construction">construction</h1>
 
   <p>for the final circuit input and output buffering and biasing is needed. the buffering is done with opamps.</p>
 
 </div>
 
+<!-- execute result -->
+
+<div class="section">
+  <div class="container has-text-centered my-2">
+
+    <p><img src="/elektrophon/assets/pegel_files/pegel_4_0.svg" alt="svg" /></p>
+
+  </div>
+</div>
+
 <!-- mk scoped -->
-<div class="container my-2">
+<div class="container mb-2 mt-2">
   <p>first we design the input stage. the input voltage for the X signal should be 10mV and 20mV for the control voltage.</p>
 
 </div>
@@ -226,25 +237,11 @@
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>VoltageSource V5
 </code></pre></div></div>
 
-<!-- 
-    ----------------------------------------------------------------------
-    Ran 0 tests in 0.000s
-    
-    OK
-
--->
-
-<!-- execute result -->
-
-<!-- text scoped -->
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;unittest.main.TestProgram at 0x7f98a0880b20&gt;
-</code></pre></div></div>
-
 <!-- mk scoped -->
-<div class="container my-2">
-  <h1 class="subtitle is-lowercase" id="bom">bom</h1>
+<div class="container mb-2 mt-2">
+  <h1 class="subtitle is-lowercase mt-6" id="bom">bom</h1>
 
-  <p>main circuit</p>
+  <p class="is-size-6 has-text-weight-semibold mt-6">main circuit</p>
 
   <table class="table is-striped is-hoverable is-narrow bom">
         <col style="width:10%" />
@@ -275,9 +272,9 @@
     </tr>
     
     <tr>
-        <td> 3 </td>
-        <td> C1 C2 C9 </td>
-        <td> 10u </td>
+        <td> 2 </td>
+        <td> C1 C2 </td>
+        <td> 22u </td>
         <td>
             
             
@@ -287,7 +284,7 @@
     
     <tr>
         <td> 5 </td>
-        <td> D2 D3 D5 D7 D9 </td>
+        <td> D1 D3 D5 D7 D9 </td>
         <td> 1N4148W </td>
         <td>
             
@@ -300,7 +297,7 @@
     
     <tr>
         <td> 5 </td>
-        <td> D1 D4 D6 D8 D10 </td>
+        <td> D2 D4 D6 D8 D10 </td>
         <td> LED </td>
         <td>
             
@@ -311,7 +308,7 @@
     
     <tr>
         <td> 1 </td>
-        <td> J5 </td>
+        <td> J1 </td>
         <td> IDC Header </td>
         <td>
             
@@ -322,7 +319,7 @@
     
     <tr>
         <td> 9 </td>
-        <td> J1 J2 J3 J4 J6 J7 J8 J9 J10 </td>
+        <td> J2 J3 J4 J5 J6 J7 J8 J9 J10 </td>
         <td> IN </td>
         <td>
             
@@ -345,20 +342,9 @@
     </tr>
     
     <tr>
-        <td> 5 </td>
-        <td> R17 R18 R19 R20 R28 </td>
-        <td> 1k </td>
-        <td>
-            
-            
-        </td>
-        <td> Resistor </td>
-    </tr>
-    
-    <tr>
-        <td> 1 </td>
-        <td> R29 </td>
-        <td> 1k </td>
+        <td> 2 </td>
+        <td> R1 R2 </td>
+        <td> 10 </td>
         <td>
             
             
@@ -368,7 +354,18 @@
     
     <tr>
         <td> 5 </td>
-        <td> R32 R33 R35 R37 R39 </td>
+        <td> R19 R20 R21 R22 R39 </td>
+        <td> 1k </td>
+        <td>
+            
+            
+        </td>
+        <td> Resistor </td>
+    </tr>
+    
+    <tr>
+        <td> 5 </td>
+        <td> R29 R30 R34 R37 R40 </td>
         <td> 5k </td>
         <td>
             
@@ -379,7 +376,7 @@
     
     <tr>
         <td> 8 </td>
-        <td> R1 R2 R3 R4 R5 R6 R7 R8 </td>
+        <td> R3 R4 R5 R6 R7 R8 R9 R10 </td>
         <td> 47k </td>
         <td>
             
@@ -389,19 +386,8 @@
     </tr>
     
     <tr>
-        <td> 15 </td>
-        <td> R9 R10 R11 R12 R13 R14 R15 R16 R21 R22 R23 R24 R25 R26 R27 </td>
-        <td> 100k </td>
-        <td>
-            
-            
-        </td>
-        <td> Resistor </td>
-    </tr>
-    
-    <tr>
-        <td> 5 </td>
-        <td> R30 R31 R34 R36 R38 </td>
+        <td> 20 </td>
+        <td> R11 R12 R13 R14 R15 R16 R17 R18 R23 R24 R25 R26 R27 R28 R31 R32 R33 R35 R36 R38 </td>
         <td> 100k </td>
         <td>
             
@@ -436,43 +422,157 @@
     
 </tbody>
 </table>
-
-</div>
-
-<!-- mk scoped -->
-<div class="container my-2">
   <section class="hero is-medium">
     <div class="hero-body">
         <div class="container">
             <div class="columns is-multiline is-centered">
+                
+                    <div class="column is-4 has-text-centered">
+                        
+                        <div class="icon callout-icon">
+                            <i class="fas fa-file-download fa-4x"></i>
+                        </div>
+                        
+                        <p class="title is-5 mt-6">schematics</p>
+                        
+                        <a href="/elektrophon/assets/pegel_files/main-schematic.pdf" class="button is-light">
+                            main
+                        </a>
+                        
+                        <a href="/elektrophon/assets/pegel_files/mount-schematic.pdf" class="button is-light">
+                            mount
+                        </a>
+                        
+                    </div>
+                
+                    <div class="column is-4 has-text-centered">
+                        
+                        <div class="icon callout-icon">
+                            <i class="fas fa-code-branch fa-4x"></i>
+                        </div>
+                        
+                        <p class="title is-5 mt-6">PCB</p>
+                        
+                        <a href="/elektrophon/assets/pegel_files/main-pcb.pdf" class="button is-light">
+                            main
+                        </a>
+                        
+                        <a href="/elektrophon/assets/pegel_files/mount-pcb.pdf" class="button is-light">
+                            mount
+                        </a>
+                        
+                        <a href="/elektrophon/assets/pegel_files/panel-pcb.pdf" class="button is-light">
+                            panel
+                        </a>
+                        
+                    </div>
+                
+                    <div class="column is-4 has-text-centered">
+                        
+                        <div class="icon callout-icon">
+                            <i class="fas fa-industry fa-4x"></i>
+                        </div>
+                        
+                        <p class="title is-5 mt-6">gerbers</p>
+                        
+                        <a href="/elektrophon/assets/pegel_files/main-gerber_files.zip" class="button is-light">
+                            main
+                        </a>
+                        
+                        <a href="/elektrophon/assets/pegel_files/mount-gerber_files.zip" class="button is-light">
+                            mount
+                        </a>
+                        
+                        <a href="/elektrophon/assets/pegel_files/panel-gerber_files.zip" class="button is-light">
+                            panel
+                        </a>
+                        
+                    </div>
                 
             </div>
         </div>
     </div>
 </section>
 
+  <div class="container is-large mt-1 mb-0">
+    
+    <div class="has-background-danger pl-2 pt-2 pb-2">
+        <i class="fas fa-exclamation-circle has-text-white is-size-2"></i>
+        <span class="has-text-white is-size-4">&nbsp;&nbsp;Found 1 error(s) in pytest check.</span>
+    </div>
+    <table class="table is-striped is-hoverable is-narrow mb-6">
+        <col style="width:20%" />
+        <col style="width:10%" />
+        <col style="width:70%" />
+        
+        
+        
+        
+        
+            <tr>
+                <td>test_my_func</td>
+                <td class=" has-text-danger-dark ">failed</td>
+                
+                
+                <td>def test_my_func():<br />        assert 0 == 0<br />&lt;       assert 1 == 0<br />E       assert 1 == 0<br /><br />&gt;ipython-input-1-93fd88d6b78a&lt;:5: AssertionError</td>
+            </tr>
+        
+        
+        
+    </table>
+    
 </div>
-
-<!-- mk scoped -->
-<div class="container my-2">
 
   <div class="container is-large mt-1 mb-0">
     
     
+        
+        
+        
+    
+        
+        
+    
+        
+        
+    
+    
+        
+        
+        
+    
+        
+        
+    
+        
+        
+    
+    
+        
+        
+        
+    
+        
+        
+    
+        
+        
+    
+    
 
 </div>
 
 </div>
 
 <!-- mk scoped -->
-<div class="container my-2">
+<div class="container mb-2 mt-2">
   <h1 class="subtitle is-lowercase" id="calibration">calibration</h1>
 
   <p>there is no calibration needed. but the potentiomenter knobs have to be aliged to center position.</p>
 </div>
 
 <!-- mk scoped -->
-<div class="container my-2">
+<div class="container mb-2 mt-2">
   <h1 class="subtitle is-lowercase" id="usage">usage</h1>
 
   <p>the input jacks are wired to 5 volts when nothing is connected.</p>
@@ -495,14 +595,14 @@
 </div>
 
 <!-- mk scoped -->
-<div class="container my-2">
-  <h2 class="is-subtitle is-size-2 is-lowercase is-italic" id="references"><em>references</em></h2>
+<div class="container mb-2 mt-2">
+  <h1 class="subtitle is-lowercase" id="references"><em>references</em></h1>
 
-  <ul>
-    <li><a href="https://sound-au.com/articles/vca-techniques.html">VCA Techniques Investigated</a> Rod Elliott (ESP)</li>
-    <li><a href="https://tinaja.com/glib/pop_elec/mus_keying_vca_1+2_75.pdf">Popular Electronics</a> Keyiing and VCA citcuits for electronic music instruments</li>
-    <li><a href="https://www.birthofasynth.com/Thomas_Henry/Pages/VCA-1.html">VCA-1</a> Thomas Henry CA3080 vca</li>
-    <li><a href="https://www.schmitzbits.de/vca3.png">VCA-3</a> René Schmitz differential pair vca</li>
+  <ul class="mb-6">
+    <li><a href="https://sound-au.com/articles/vca-techniques.html">VCA Techniques Investigated</a> Rod Elliott (ESP).</li>
+    <li><a href="https://tinaja.com/glib/pop_elec/mus_keying_vca_1+2_75.pdf">Popular Electronics</a> Keyiing and VCA citcuits for electronic music instruments.</li>
+    <li><a href="https://www.birthofasynth.com/Thomas_Henry/Pages/VCA-1.html">VCA-1</a> Thomas Henry CA3080 VCA.</li>
+    <li><a href="https://www.schmitzbits.de/vca3.png">VCA-3</a> René Schmitz differential pair VCA.</li>
     <li>
       <table>
         <tbody>

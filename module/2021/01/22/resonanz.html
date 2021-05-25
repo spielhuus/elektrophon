@@ -174,13 +174,13 @@
 -->
 
 <!-- mk scoped -->
-<div class="container my-2">
+<div class="container mb-2 mt-2">
   <p class="mt-6">long description: summe is a simple mixer utility module. it can be used as a <strong>mixer</strong>, <strong>attenuator</strong> or <strong>attenuverter</strong> for ac or dc signals. the function depends on the patching and settings of the potentiometers. an attenuverter is used in different modules like the  Serge VCS, Maths and also in the polivoks filter. while this module can be used as a simple mixer you can also adjust cv signals. such a signal can be simply attenuated or inverted. when feeding in a positive singal slope (for example from an adsr). the signal will be turned to a neagative dc singal. if the inpout signal is ac coupled the signal will be inverted. the function is the setting on the potentiometer of the channel. when the potentiometer is at center position. the output signal is attenuated to zero. no output singal is present. when turning to the right. the signal will be stronger until the output signal is equal to the input signal. when turning the potentiomenter to the left, the output signal will be phase shifted by 180°. when you turn the potentiometer to full left the output signal will be the inverted input signal. all the inputs are mixed to the output signal; unless you connect the output of a channel. then this output does not accure on the mixed signal.</p>
 
 </div>
 
 <!-- mk scoped -->
-<div class="container my-2">
+<div class="container mb-2 mt-2">
   <h1 class="subtitle is-lowercase" id="about">about</h1>
 
   <p>the attenuverter is build around a differential amplifier with an opamp.</p>
@@ -207,7 +207,7 @@
 </div>
 
 <!-- mk scoped -->
-<div class="container my-2">
+<div class="container mb-2 mt-2">
   <p>\(\begin{array}{c}
 Vout = \Bigl(1 + \frac{R2}{R1}\Bigr) \Bigl(\frac{R4}{R3+R4}\Bigr) * V2 - \Bigl(\frac{R2}{R1}\Bigr) * V1
 \end{array}\)</p>
@@ -222,17 +222,17 @@ Vout = \Bigl(1 + \frac{R2}{R1}\Bigr) \Bigl(\frac{R4}{R3+R4}\Bigr) * V2 - \Bigl(\
 </div>
 
 <!-- mk scoped -->
-<div class="container my-2">
+<div class="container mb-2 mt-2">
   <p>the circuit of the attenuverter is based on the opamp dfferential amplifer. the two resistors at the non-inverting inputs are replaced with a potentiometer. the potentiometer is configured as a voltage divider and replace R3 and R4 from the differential amplifier. when the position of the potentiometer is adjusted, the output voltage will change or invert. at the center position  the output is zero volrs. the response to the potentiometer is linear. we can make it an centered s-curve by adding two parallel resistors (R5,R6) to the potentiometer [<a href="https://sound-au.com/pots.htm">2</a>].</p>
 </div>
 
 <!-- mk scoped -->
-<div class="container my-2">
+<div class="container mb-2 mt-2">
   <p>a simulation with the resistance at RV 1 changed from 0-100%. first run is the linear result. the second run is done with the resistors R5 and R6 added. This results in a s curve. the shape of the curve can be changed with the values of the resistors.</p>
 </div>
 
 <!-- mk scoped -->
-<div class="container my-2">
+<div class="container mb-2 mt-2">
   <h1 class="subtitle is-lowercase" id="construction">construction</h1>
 
 </div>
@@ -245,7 +245,7 @@ Vout = \Bigl(1 + \frac{R2}{R1}\Bigr) \Bigl(\frac{R4}{R3+R4}\Bigr) * V2 - \Bigl(\
 </div>
 
 <!-- mk scoped -->
-<div class="container my-2">
+<div class="container mb-2 mt-2">
   <h1 class="subtitle is-lowercase" id="bom">bom</h1>
 
   <p>main circuit</p>
@@ -279,9 +279,9 @@ Vout = \Bigl(1 + \frac{R2}{R1}\Bigr) \Bigl(\frac{R4}{R3+R4}\Bigr) * V2 - \Bigl(\
     </tr>
     
     <tr>
-        <td> 3 </td>
-        <td> C1 C2 C9 </td>
-        <td> 10u </td>
+        <td> 2 </td>
+        <td> C1 C2 </td>
+        <td> 22u </td>
         <td>
             
             
@@ -291,7 +291,7 @@ Vout = \Bigl(1 + \frac{R2}{R1}\Bigr) \Bigl(\frac{R4}{R3+R4}\Bigr) * V2 - \Bigl(\
     
     <tr>
         <td> 5 </td>
-        <td> D2 D3 D5 D7 D9 </td>
+        <td> D1 D3 D5 D7 D9 </td>
         <td> 1N4148W </td>
         <td>
             
@@ -304,7 +304,7 @@ Vout = \Bigl(1 + \frac{R2}{R1}\Bigr) \Bigl(\frac{R4}{R3+R4}\Bigr) * V2 - \Bigl(\
     
     <tr>
         <td> 5 </td>
-        <td> D1 D4 D6 D8 D10 </td>
+        <td> D2 D4 D6 D8 D10 </td>
         <td> LED </td>
         <td>
             
@@ -315,7 +315,7 @@ Vout = \Bigl(1 + \frac{R2}{R1}\Bigr) \Bigl(\frac{R4}{R3+R4}\Bigr) * V2 - \Bigl(\
     
     <tr>
         <td> 1 </td>
-        <td> J5 </td>
+        <td> J1 </td>
         <td> IDC Header </td>
         <td>
             
@@ -326,7 +326,7 @@ Vout = \Bigl(1 + \frac{R2}{R1}\Bigr) \Bigl(\frac{R4}{R3+R4}\Bigr) * V2 - \Bigl(\
     
     <tr>
         <td> 9 </td>
-        <td> J1 J2 J3 J4 J6 J7 J8 J9 J10 </td>
+        <td> J2 J3 J4 J5 J6 J7 J8 J9 J10 </td>
         <td> IN </td>
         <td>
             
@@ -349,20 +349,9 @@ Vout = \Bigl(1 + \frac{R2}{R1}\Bigr) \Bigl(\frac{R4}{R3+R4}\Bigr) * V2 - \Bigl(\
     </tr>
     
     <tr>
-        <td> 5 </td>
-        <td> R17 R18 R19 R20 R28 </td>
-        <td> 1k </td>
-        <td>
-            
-            
-        </td>
-        <td> Resistor </td>
-    </tr>
-    
-    <tr>
-        <td> 1 </td>
-        <td> R29 </td>
-        <td> 1k </td>
+        <td> 2 </td>
+        <td> R1 R2 </td>
+        <td> 10 </td>
         <td>
             
             
@@ -372,7 +361,18 @@ Vout = \Bigl(1 + \frac{R2}{R1}\Bigr) \Bigl(\frac{R4}{R3+R4}\Bigr) * V2 - \Bigl(\
     
     <tr>
         <td> 5 </td>
-        <td> R32 R33 R35 R37 R39 </td>
+        <td> R19 R20 R21 R22 R39 </td>
+        <td> 1k </td>
+        <td>
+            
+            
+        </td>
+        <td> Resistor </td>
+    </tr>
+    
+    <tr>
+        <td> 5 </td>
+        <td> R29 R30 R34 R37 R40 </td>
         <td> 5k </td>
         <td>
             
@@ -383,7 +383,7 @@ Vout = \Bigl(1 + \frac{R2}{R1}\Bigr) \Bigl(\frac{R4}{R3+R4}\Bigr) * V2 - \Bigl(\
     
     <tr>
         <td> 8 </td>
-        <td> R1 R2 R3 R4 R5 R6 R7 R8 </td>
+        <td> R3 R4 R5 R6 R7 R8 R9 R10 </td>
         <td> 47k </td>
         <td>
             
@@ -393,19 +393,8 @@ Vout = \Bigl(1 + \frac{R2}{R1}\Bigr) \Bigl(\frac{R4}{R3+R4}\Bigr) * V2 - \Bigl(\
     </tr>
     
     <tr>
-        <td> 15 </td>
-        <td> R9 R10 R11 R12 R13 R14 R15 R16 R21 R22 R23 R24 R25 R26 R27 </td>
-        <td> 100k </td>
-        <td>
-            
-            
-        </td>
-        <td> Resistor </td>
-    </tr>
-    
-    <tr>
-        <td> 5 </td>
-        <td> R30 R31 R34 R36 R38 </td>
+        <td> 20 </td>
+        <td> R11 R12 R13 R14 R15 R16 R17 R18 R23 R24 R25 R26 R27 R28 R31 R32 R33 R35 R36 R38 </td>
         <td> 100k </td>
         <td>
             
@@ -444,7 +433,7 @@ Vout = \Bigl(1 + \frac{R2}{R1}\Bigr) \Bigl(\frac{R4}{R3+R4}\Bigr) * V2 - \Bigl(\
 </div>
 
 <!-- mk scoped -->
-<div class="container my-2">
+<div class="container mb-2 mt-2">
   <section class="hero is-medium">
     <div class="hero-body">
         <div class="container">
@@ -520,7 +509,7 @@ Vout = \Bigl(1 + \frac{R2}{R1}\Bigr) \Bigl(\frac{R4}{R3+R4}\Bigr) * V2 - \Bigl(\
 </div>
 
 <!-- mk scoped -->
-<div class="container my-2">
+<div class="container mb-2 mt-2">
 
   <div class="container is-large mt-1 mb-0">
     
@@ -531,14 +520,14 @@ Vout = \Bigl(1 + \frac{R2}{R1}\Bigr) \Bigl(\frac{R4}{R3+R4}\Bigr) * V2 - \Bigl(\
 </div>
 
 <!-- mk scoped -->
-<div class="container my-2">
+<div class="container mb-2 mt-2">
   <h1 class="subtitle is-lowercase" id="calibration">calibration</h1>
 
   <p>there is no calibration needed. but the potentiomenter knobs have to be aliged to center position.</p>
 </div>
 
 <!-- mk scoped -->
-<div class="container my-2">
+<div class="container mb-2 mt-2">
   <h1 class="subtitle is-lowercase" id="usage">usage</h1>
 
   <p>the input jacks are wired to 5 volts when nothing is connected.</p>
@@ -561,7 +550,7 @@ Vout = \Bigl(1 + \frac{R2}{R1}\Bigr) \Bigl(\frac{R4}{R3+R4}\Bigr) * V2 - \Bigl(\
 </div>
 
 <!-- mk scoped -->
-<div class="container my-2">
+<div class="container mb-2 mt-2">
   <h1 class="subtitle is-lowercase" id="references"><em>references</em></h1>
 
   <ul>
