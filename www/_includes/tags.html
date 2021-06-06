@@ -15,12 +15,16 @@
 {% assign kibot = page.project | append: "_kibot_data" %}
 {% for pcb in site.data[kibot] %}
   {% for report in pcb.reports %}
-    {% assign report_count = report.messages | size %}
     {% if report.name == 'erc' %}
-    {% assign erc_count = erc_count | plus:report_count %}
+      {% for sheet in report.sheets %}
+        {% assign report_count = sheet.messages | size %}
+        {% assign erc_count = erc_count | plus:report_count %}
+      {% endfor %}
     {% elsif report.name == 'drc' %}
-    {% assign drc_count = drc_count | plus:report_count %}
+      {% assign report_count = report.messages | size %}
+      {% assign drc_count = drc_count | plus:report_count %}
     {% elsif report.name == 'unconnected' %}
+      {% assign report_count = report.messages | size %}
       {% assign unconnected_count = unconnected_count | plus:report_count %}
     {% endif %}    
   {% endfor %}
