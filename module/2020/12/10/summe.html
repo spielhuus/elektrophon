@@ -31,7 +31,7 @@
 <meta property="twitter:image" content="https://spielhuus.github.io//elektrophon/assets/summe_files/summe-logo.jpg" />
 <meta property="twitter:title" content="summe" />
 <script type="application/ld+json">
-{"headline":"summe","dateModified":"2020-12-10T00:00:00+00:00","datePublished":"2020-12-10T00:00:00+00:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://spielhuus.github.io//elektrophon/module/2020/12/10/summe.html"},"image":"https://spielhuus.github.io//elektrophon/assets/summe_files/summe-logo.jpg","author":{"@type":"Person","name":"spielhuus"},"url":"https://spielhuus.github.io//elektrophon/module/2020/12/10/summe.html","description":"Summe is a simple mixer utility module. It can be used as a mixer, attenuator or attenuverter for AC and DC signals.","@context":"https://schema.org"}</script>
+{"@type":"BlogPosting","headline":"summe","dateModified":"2020-12-10T00:00:00+00:00","datePublished":"2020-12-10T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://spielhuus.github.io//elektrophon/module/2020/12/10/summe.html"},"image":"https://spielhuus.github.io//elektrophon/assets/summe_files/summe-logo.jpg","author":{"@type":"Person","name":"spielhuus"},"url":"https://spielhuus.github.io//elektrophon/module/2020/12/10/summe.html","description":"Summe is a simple mixer utility module. It can be used as a mixer, attenuator or attenuverter for AC and DC signals.","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 </head>
   <body>
@@ -136,7 +136,7 @@
   <div class="control">
     <div class="tags has-addons is-normal">
       <span class="tag is-dark">unconnected</span>
-      <span class="tag is-danger">3</span>
+      <span class="tag is-success">ok</span>
     </div>
   </div>
   
@@ -199,19 +199,19 @@
     
     <ipython-input-1-c34c4d107bff>:25: AssertionError
     =============================== warnings summary ===============================
-    tmps2gjv_3h.py::test_inverting_input
-    tmps2gjv_3h.py::test_non_inverting_input
-    tmps2gjv_3h.py::test_inverting_output
-    tmps2gjv_3h.py::test_non_inverting_output
+    tmpco1fspgl.py::test_inverting_input
+    tmpco1fspgl.py::test_non_inverting_input
+    tmpco1fspgl.py::test_inverting_output
+    tmpco1fspgl.py::test_non_inverting_output
       /opt/conda/envs/elektrophon/lib/python3.9/site-packages/PySpice/Spice/Netlist.py:1221: DeprecationWarning: The 'warn' method is deprecated, use 'warning' instead
         self._logger.warn("Duplicated include")
     
     -- Docs: https://docs.pytest.org/en/stable/warnings.html
     - generated json report: /github/workspace/content/summe/build/summe-test.json -
     =========================== short test summary info ============================
-    FAILED tmps2gjv_3h.py::test_inverting_output - assert 5.06288495752405e-06 ==...
-    FAILED tmps2gjv_3h.py::test_non_inverting_output - assert 5.0628849575379276e...
-    2 failed, 2 passed, 4 warnings in 0.31s
+    FAILED tmpco1fspgl.py::test_inverting_output - assert 5.06288495752405e-06 ==...
+    FAILED tmpco1fspgl.py::test_non_inverting_output - assert 5.0628849575379276e...
+    2 failed, 2 passed, 4 warnings in 0.23s
 
 -->
 
@@ -304,6 +304,17 @@ Vout = \Bigl(1 + \frac{R2}{R1}\Bigr) \Bigl(\frac{R4}{R3+R4}\Bigr) * V2 - \Bigl(\
             
             
         </td>
+        <td> Multilayer Ceramic Capacitors MLCC </td>
+    </tr>
+    
+    <tr>
+        <td> 1 </td>
+        <td> C9 </td>
+        <td> 10u </td>
+        <td>
+            
+            
+        </td>
         <td> Unpolarized capacitor </td>
     </tr>
     
@@ -315,7 +326,7 @@ Vout = \Bigl(1 + \frac{R2}{R1}\Bigr) \Bigl(\frac{R4}{R3+R4}\Bigr) * V2 - \Bigl(\
             
             
         </td>
-        <td> Polarized capacitor </td>
+        <td> Aluminium Electrolytic Capacitor, 35V, D=5 mm, LS=2 mm </td>
     </tr>
     
     <tr>
@@ -339,7 +350,7 @@ Vout = \Bigl(1 + \frac{R2}{R1}\Bigr) \Bigl(\frac{R4}{R3+R4}\Bigr) * V2 - \Bigl(\
             
             
         </td>
-        <td> Light emitting diode </td>
+        <td> LED 3mm low current </td>
     </tr>
     
     <tr>
@@ -350,7 +361,7 @@ Vout = \Bigl(1 + \frac{R2}{R1}\Bigr) \Bigl(\frac{R4}{R3+R4}\Bigr) * V2 - \Bigl(\
             
             
         </td>
-        <td> Generic connector, double row, 02x05, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/) </td>
+        <td> Pin Header IDC, 10 Pos, 2.54mm </td>
     </tr>
     
     <tr>
@@ -400,9 +411,20 @@ Vout = \Bigl(1 + \frac{R2}{R1}\Bigr) \Bigl(\frac{R4}{R3+R4}\Bigr) * V2 - \Bigl(\
     </tr>
     
     <tr>
-        <td> 5 </td>
-        <td> R29 R30 R34 R37 R40 </td>
+        <td> 2 </td>
+        <td> R30 R37 </td>
         <td> 5k </td>
+        <td>
+            
+            
+        </td>
+        <td> Resistor </td>
+    </tr>
+    
+    <tr>
+        <td> 3 </td>
+        <td> R29 R34 R40 </td>
+        <td> 5.1k </td>
         <td>
             
             
@@ -573,80 +595,6 @@ Vout = \Bigl(1 + \frac{R2}{R1}\Bigr) \Bigl(\frac{R4}{R3+R4}\Bigr) * V2 - \Bigl(\
 
   <div class="container is-large mt-1 mb-0">
     
-    
-        
-        
-        
-    
-        
-        
-        <div class="has-background-danger pl-2 pt-2 pb-2">
-            <i class="fas fa-exclamation-circle has-text-white is-size-2"></i>
-            <span class="has-text-white is-size-4">&nbsp;&nbsp;Found 3 errors in unconnected check.</span>
-        </div>
-        <table class="table is-striped is-hoverable is-narrow nb-6">
-            <col style="width:20%" />
-            <col style="width:10%" />
-            <col style="width:70%" />
-                
-                <tr>
-                    <td>main</td>
-
-                    <td>Unconnected items</td>
-                    <td>
-                    
-                        <p>Pad 1 of D8 on All copper layers</p>
-                    
-                        <p>Track 0.250 mm [GND] on B.Cu, length: 15.040 mm</p>
-                    
-                    </td>
-                </tr>
-            
-                <tr>
-                    <td>main</td>
-
-                    <td>Unconnected items</td>
-                    <td>
-                    
-                        <p>Pad 2 of C7 on B.Cu and others</p>
-                    
-                        <p>Track 0.250 mm [GND] on B.Cu, length: 1.796 mm</p>
-                    
-                    </td>
-                </tr>
-            
-                <tr>
-                    <td>main</td>
-
-                    <td>Unconnected items</td>
-                    <td>
-                    
-                        <p>Pad 2 of D8 on All copper layers</p>
-                    
-                        <p>Track 0.250 mm [Net-(D8-Pad2)] on B.Cu, length: 1.871 mm</p>
-                    
-                    </td>
-                </tr>
-            
-        </table>
-    
-    
-        
-        
-    
-    
-        
-        
-        
-    
-        
-        
-    
-        
-        
-    
-    
-
 </div>
 
 </div>
