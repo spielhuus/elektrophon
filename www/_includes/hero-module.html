@@ -1,0 +1,30 @@
+{% if page.hero_image %}
+<style scoped>
+.hero {
+    no-repeat center center; 
+    background-size: cover; 
+    background-attachment: fixed;
+    background-image: url({{ page.hero_image | relative_url }}); 
+}
+@media (max-width: 980px) {
+    .hero {
+        background-image: url({{ page.hero_mobile | relative_url }});
+    }
+}
+</style>
+{% endif %}
+
+<section class="hero {% if page.hero_height %} {{ page.hero_height }} {% else %} is-medium {% endif %}>
+    <div class="hero-head {% if page.hero_darken %} hero-darken {% endif %}">
+        {% include header.html %}
+    </div>
+    <div class="hero-body {% if page.hero_darken %} hero-darken {% endif %}">        
+        <div class="columns is-centered">
+            <div class="column is-two-thirds">
+                <div class="is-hidden-mobile mb-6">{% include tags.html%}</div>
+                <h1 class="title has-text-white-ter is-size-3">{{ page.title }}</h1>        
+                <div class="mt-4 has-text-weight-semibold">{% toc %}</div>
+            </div>
+        </div>
+    </div>
+</section>
