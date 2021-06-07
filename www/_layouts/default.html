@@ -3,7 +3,13 @@
   {% include head.html %}
   <body>
     {% unless page.hide_hero %}
+      {% if page.category == 'article' %}
         {% include hero.html %}
+      {% elsif page.category == 'module' %}
+        {% include hero-module.html %}
+      {% else %}
+        {% include hero.html %}
+      {% endif %}
     {% endunless %}
     {{ content }}
     {% unless page.hide_footer %}

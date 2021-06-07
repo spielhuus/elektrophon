@@ -2,21 +2,6 @@
 layout: default
 ---
 
-<section class="hero {% if page.hero_height %} {{ page.hero_height }} {% else %} is-fullheight {% endif %}" {% if page.hero_image %} style="background: url('{{ page.hero_image | relative_url }}') no-repeat center center; background-size: cover; background-attachment: fixed;" {% endif %}>
-    <div class="hero-head {% if page.hero_darken %} hero-darken {% endif %}">
-        {% include header.html %}
-    </div>
-    <div class="hero-body {% if page.hero_darken %} hero-darken {% endif %}">        
-        <div class="columns is-centered">
-            <div class="column is-two-thirds">
-                <div class="is-hidden-mobile mb-6">{% include tags.html%}</div>
-                <h1 class="title has-text-white-ter is-size-3">{{ page.title }}</h1>        
-                <div class="mt-4 has-text-weight-semibold">{% toc %}</div>
-            </div>
-        </div>
-    </div>
-</section>
-
 <div class="container is-large mb-6 mt-6 is-size-5 has-text-centered has-text-weight-semibold">
     {{ page.subtitle }}
 </div>
