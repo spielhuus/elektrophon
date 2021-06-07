@@ -36,8 +36,25 @@
 </head>
   <body>
     
-    <section class="hero  is-fullheight "  style="background: url('/elektrophon/assets/summe_files/summe-logo.jpg') no-repeat center center; background-size: cover; background-attachment: fixed;" >
-    <div class="hero-head ">
+      
+        
+<style scoped>
+.hero {
+    no-repeat center center; 
+    background-size: cover; 
+    background-attachment: fixed;
+    background-image: url(/elektrophon/assets/summe_files/summe-logo.jpg); 
+}
+@media (max-width: 980px) {
+    .hero {
+        background-image: url(/elektrophon/assets/summe_files/summe-logo.jpg);
+    }
+}
+</style>
+
+
+<section class="hero  is-fullheight >
+    <div class="hero-head  hero-darken ">
         <nav class="navbar">
   <div class="container">
       <div class="navbar-brand">
@@ -78,7 +95,7 @@
   </div>
 </nav>
     </div>
-    <div class="hero-body ">        
+    <div class="hero-body  hero-darken ">        
         <div class="columns is-centered">
             <div class="column is-two-thirds">
                 <div class="is-hidden-mobile mb-6">
@@ -169,7 +186,9 @@
     </div>
 </section>
 
-<div class="container is-large mb-6 mt-6 is-size-5 has-text-centered has-text-weight-semibold">
+      
+    
+    <div class="container is-large mb-6 mt-6 is-size-5 has-text-centered has-text-weight-semibold">
     the function depends on the patching and settings of the potentiometers. an attenuverter is used in different modules like the Serge VCS, Maths and also in the polivoks filter. while this module can be used as a simple mixer you can also adjust cv signals. such a signal can be simply attenuated or inverted. when feeding in a positive singal slope (for example from an adsr). the signal will be turned to a neagative dc singal. if the inpout signal is ac coupled the signal will be inverted. the function is the setting on the potentiometer of the channel. when the potentiometer is at center position. the output signal is attenuated to zero. no output singal is present.
 </div>
 
@@ -199,19 +218,19 @@
     
     <ipython-input-1-c34c4d107bff>:25: AssertionError
     =============================== warnings summary ===============================
-    tmpco1fspgl.py::test_inverting_input
-    tmpco1fspgl.py::test_non_inverting_input
-    tmpco1fspgl.py::test_inverting_output
-    tmpco1fspgl.py::test_non_inverting_output
+    tmpsu5oc_7i.py::test_inverting_input
+    tmpsu5oc_7i.py::test_non_inverting_input
+    tmpsu5oc_7i.py::test_inverting_output
+    tmpsu5oc_7i.py::test_non_inverting_output
       /opt/conda/envs/elektrophon/lib/python3.9/site-packages/PySpice/Spice/Netlist.py:1221: DeprecationWarning: The 'warn' method is deprecated, use 'warning' instead
         self._logger.warn("Duplicated include")
     
     -- Docs: https://docs.pytest.org/en/stable/warnings.html
     - generated json report: /github/workspace/content/summe/build/summe-test.json -
     =========================== short test summary info ============================
-    FAILED tmpco1fspgl.py::test_inverting_output - assert 5.06288495752405e-06 ==...
-    FAILED tmpco1fspgl.py::test_non_inverting_output - assert 5.0628849575379276e...
-    2 failed, 2 passed, 4 warnings in 0.23s
+    FAILED tmpsu5oc_7i.py::test_inverting_output - assert 5.06288495752405e-06 ==...
+    FAILED tmpsu5oc_7i.py::test_non_inverting_output - assert 5.0628849575379276e...
+    2 failed, 2 passed, 4 warnings in 0.28s
 
 -->
 
@@ -525,11 +544,11 @@ Vout = \Bigl(1 + \frac{R2}{R1}\Bigr) \Bigl(\frac{R4}{R3+R4}\Bigr) * V2 - \Bigl(\
                         
                         <p class="title is-5 mt-6">gerbers</p>
                         
-                        <a href="/elektrophon/assets/summe_files/main-gerber_files.zip" class="button is-light">
+                        <a href="/elektrophon/assets/summe_files/main-JLCPCB.zip" class="button is-light">
                             main
                         </a>
                         
-                        <a href="/elektrophon/assets/summe_files/panel-gerber_files.zip" class="button is-light">
+                        <a href="/elektrophon/assets/summe_files/panel-JLCPCB.zip" class="button is-light">
                             panel
                         </a>
                         
