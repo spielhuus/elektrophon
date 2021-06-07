@@ -9,9 +9,12 @@ version: 0
 status: draft
 toc: true
 image: /assets/summe_files/summe-logo.jpg
-panel: /assets/summe_files/summe-panel.jpg
 hero_image: /assets/summe_files/summe-logo.jpg
-hide_hero: true
+hero_mobile: /assets/summe_files/summe-logo.jpg
+hero_height: is-fullheight
+hero_darken: true
+hero_title: true
+hero_subtitle: true
 excerpt: Summe is a simple mixer utility module. It can be used as a mixer, attenuator or attenuverter for AC and DC signals.
 subtitle: the function depends on the patching and settings of the potentiometers. an attenuverter is used in different modules like the Serge VCS, Maths and also in the polivoks filter. while this module can be used as a simple mixer you can also adjust cv signals. such a signal can be simply attenuated or inverted. when feeding in a positive singal slope (for example from an adsr). the signal will be turned to a neagative dc singal. if the inpout signal is ac coupled the signal will be inverted. the function is the setting on the potentiometer of the channel. when the potentiometer is at center position. the output signal is attenuated to zero. no output singal is present.
 callouts:
@@ -33,8 +36,8 @@ callouts:
     subtitle: gerber files
     icon: fas fa-industry
     files:
-      - href: /assets/summe_files/main-gerber_files.zip
+      - href: /assets/summe_files/main-JLCPCB.zip
         name: main
-      - href: /assets/summe_files/panel-gerber_files.zip
+      - href: /assets/summe_files/panel-JLCPCB.zip
         name: panel
 ---
