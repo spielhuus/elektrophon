@@ -7,10 +7,14 @@ status: draft
 tags: misc
 category: module
 toc: true
-image: /assets/kraft_files/IMG20210606130037.jpg
+image: /assets/kraft_files/kraft-card.jpg
 panel: /assets/kraft_files/kontakt-panel.jpg
-hero_image: /assets/kraft_files/IMG20210606130037.jpg
-hide_hero: true
+hero_image: /assets/kraft_files/kraft-landscape.jpg
+hero_mobile: /assets/kraft_files/kraft-portrait.jpg
+hero_height: is-fullheight
+hero_darken: true
+hero_title: true
+hero_subtitle: true
 excerpt: Bipolar Wall-Wart Power Supply.
 callouts:
   - title: schematics
