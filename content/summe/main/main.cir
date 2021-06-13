@@ -45,7 +45,7 @@ XJ6 GND Net-_J6-PadT_ /MIX_1 OUT_1
 XJ2 GND /IN_1 NC_05 IN_1
 D2 GND Net-_D2-Pad2_ LED2
 R29 +5V Net-_Q1-Pad3_ 5k
-R23 Net-_D1-Pad1_ /IN_1 100k
+R23 Net-_D1-Pad1_ /IN_1 100
 D6 GND Net-_D6-Pad2_ LED2
 R34 +5V Net-_Q3-Pad3_ 5k
 R32 Net-_D5-Pad1_ /IN_2 100k
