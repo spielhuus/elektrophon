@@ -1,22 +1,17 @@
 .title KiCad schematic
-.include "/home/etienne/Documents/elektrophon/lib/spice/opamp/ad633.lib"
-H1 MountingHole
-H2 MountingHole
-H3 MountingHole
-H4 MountingHole
-R4 Net-_R4-Pad1_ GND 10k
-R6 OUTb Net-_R4-Pad1_ 10k
-XU4 Net-_U2-Pad1_ GND Net-_U2-Pad6_ GND -15V NC_01 Net-_U4-Pad7_ +15V AD633
 R3 Net-_R3-Pad1_ GND 10k
 R5 OUTa Net-_R3-Pad1_ 10k
-XU3 Net-_U1-Pad1_ GND Net-_U1-Pad6_ GND -15V NC_02 Net-_U3-Pad7_ +15V AD633
-R2 -15V VN 10
-R1 +15V VP 10
-J1 VN VN VP VP GND GND GND GND +5V +5V IDC Header
-C2 GND -15V 22u
-C1 +15V GND 22u
-U1 Net-_U1-Pad1_ Net-_U1-Pad1_ Xa -15V Ya Net-_U1-Pad6_ Net-_U1-Pad6_ +15V OPA2134
-U2 Net-_U2-Pad1_ Net-_U2-Pad1_ Xb -15V Yb Net-_U2-Pad6_ Net-_U2-Pad6_ +15V OPA2134
-U5 OUTa Net-_R3-Pad1_ Net-_U3-Pad7_ -15V Net-_U4-Pad7_ Net-_R4-Pad1_ OUTb +15V OPA2134
-J2 +5V GND Xa Ya OUTa Xb Yb OUTb Conn_01x08_Female
+XU3 Net-_U1-Pad1_ GND Net-_U1-Pad6_ Net-_R7-Pad1_ -15V GND Net-_U3-Pad7_ +15V AD633
+XU1 Net-_U1-Pad1_ Net-_U1-Pad1_ Xa -15V Ya Net-_U1-Pad6_ Net-_U1-Pad6_ +15V OPA2134d
+XU5 OUTa Net-_R3-Pad1_ Net-_U3-Pad7_ -15V Net-_U4-Pad7_ Net-_R4-Pad1_ OUTb +15V OPA2134d
+XU2 Net-_U2-Pad1_ Net-_U2-Pad1_ Xb -15V Yb Net-_U2-Pad6_ Net-_U2-Pad6_ +15V OPA2134d
+XU4 Net-_U2-Pad1_ GND Net-_U2-Pad6_ Net-_R10-Pad2_ -15V GND Net-_U4-Pad7_ +15V AD633
+R6 OUTb Net-_R4-Pad1_ 10k
+R4 Net-_R4-Pad1_ GND 10k
+R10 GND Net-_R10-Pad2_ 100
+R8 Net-_R10-Pad2_ Net-_R8-Pad2_ 330k
+XRV2 +15V Net-_R8-Pad2_ -15V voltage_divider_2
+R9 GND Net-_R7-Pad1_ 100
+R7 Net-_R7-Pad1_ Net-_R7-Pad2_ 330k
+XRV1 +15V Net-_R7-Pad2_ -15V voltage_divider_1
 .end
