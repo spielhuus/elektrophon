@@ -19,7 +19,7 @@ U 1 1 6097A217
 P 5900 6800
 F 0 "H14" H 6000 6846 50  0000 L CNN
 F 1 "MountingHole" H 6000 6755 50  0000 L CNN
-F 2 "MountingHole:MountingHole_3.2mm_M3_ISO14580" H 5900 6800 50  0001 C CNN
+F 2 "elektrophon:MountingHole_Panel_3.2mm_M3" H 5900 6800 50  0001 C CNN
 F 3 "~" H 5900 6800 50  0001 C CNN
 	1    5900 6800
 	1    0    0    -1  
@@ -30,7 +30,7 @@ U 1 1 6097A580
 P 5900 7100
 F 0 "H15" H 6000 7146 50  0000 L CNN
 F 1 "MountingHole" H 6000 7055 50  0000 L CNN
-F 2 "MountingHole:MountingHole_3.2mm_M3_ISO14580" H 5900 7100 50  0001 C CNN
+F 2 "elektrophon:MountingHole_Panel_3.2mm_M3" H 5900 7100 50  0001 C CNN
 F 3 "~" H 5900 7100 50  0001 C CNN
 	1    5900 7100
 	1    0    0    -1  
