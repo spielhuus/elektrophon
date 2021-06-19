@@ -79,7 +79,7 @@ $(DEST): $(CIRCUITS) $(SRC)
 	$(JUPYTER) $(JUPITERFLAGS) $(SRC)
 
 #run kibot and create data
-$(KIBOT_PCBS) $(KIBOT_GERBERS) $(KIBOT_BOM) $(KIBOT_REPORTS) $(KIBOT_SCHEMATIC) $(KIBOT_DRAWING) : $(PCB_FILES) 
+$(KIBOT_PCBS) $(KIBOT_BOM) $(KIBOT_REPORTS) $(KIBOT_SCHEMATIC) $(KIBOT_DRAWING) $(KIBOT_GERBERS) : $(PCB_FILES) 
 	$(foreach prj, $(PCB_PROJECTS), \
 		kibot -c ../../kibot.yaml -b $(prj)/$(prj).kicad_pcb \
 			-e $(prj)/$(prj).sch -d build/kibot/$(prj) && \
