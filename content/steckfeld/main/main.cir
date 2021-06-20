@@ -1,0 +1,36 @@
+.title KiCad schematic
+XJ2 GND Net-_C3-Pad1_ NC_01 IN_1
+XJ3 GND Net-_C8-Pad1_ NC_02 IN_2
+XRV1 Net-_C3-Pad2_ Net-_R3-Pad2_ GND voltage_divider_1
+XRV2 Net-_C8-Pad2_ Net-_R4-Pad2_ GND voltage_divider_2
+XU1 IN_1 Net-_R3-Pad1_ GND -15V GND Net-_R5-Pad1_ IN_2 +15V TL072c
+R3 Net-_R3-Pad1_ Net-_R3-Pad2_ 100k
+R4 Net-_R3-Pad1_ Net-_R4-Pad2_ 100k
+R7 IN_1 Net-_R3-Pad1_ 100k
+XU2 Net-_C11-Pad1_ Net-_R10-Pad1_ /U2a -15V /U2b Net-_R11-Pad1_ Net-_C12-Pad1_ +15V TL072c
+XJ9 GND Net-_C11-Pad2_ NC_03 OUT_1
+XJ4 GND Net-_C9-Pad1_ NC_04 IN_3
+XJ5 GND Net-_C10-Pad1_ NC_05 IN_4
+XRV3 Net-_C9-Pad2_ Net-_R5-Pad2_ GND voltage_divider_3
+XRV4 Net-_C10-Pad2_ Net-_R6-Pad2_ GND voltage_divider_4
+R5 Net-_R5-Pad1_ Net-_R5-Pad2_ 100k
+R6 Net-_R5-Pad1_ Net-_R6-Pad2_ 100k
+R8 IN_2 Net-_R5-Pad1_ 100k
+XJ10 GND Net-_C12-Pad2_ NC_06 OUT_2
+XRV5 +15V /V1 -15V Vref1
+XRV6 +15V /V2 -15V Vref2
+R9 Net-_R10-Pad1_ OUT_1a 100k
+R10 Net-_R10-Pad1_ OUT_1b 100k
+R13 Net-_C11-Pad1_ Net-_R10-Pad1_ 100k
+R11 Net-_R11-Pad1_ OUT_2a 100k
+R12 Net-_R11-Pad1_ OUT_2b 100k
+R14 Net-_C12-Pad1_ Net-_R11-Pad1_ 100k
+XJ11 /U2b /V2 GND PATCH2
+XJ8 /U2a /V1 GND PATCH1
+C8 Net-_C8-Pad1_ Net-_C8-Pad2_ 47u
+C9 Net-_C9-Pad1_ Net-_C9-Pad2_ 47u
+C10 Net-_C10-Pad1_ Net-_C10-Pad2_ 47u
+C3 Net-_C3-Pad1_ Net-_C3-Pad2_ 47u
+C11 Net-_C11-Pad1_ Net-_C11-Pad2_ 47u
+C12 Net-_C12-Pad1_ Net-_C12-Pad2_ 47u
+.end
