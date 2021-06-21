@@ -1,4 +1,4 @@
-PROJECT = vco
+PROJECT = 555
 DATE = 2021-05-25
 PCB_PROJECTS = main mount panel
 TARGET = _posts
