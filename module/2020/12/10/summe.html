@@ -125,7 +125,7 @@
   <div class="control">
     <div class="tags has-addons is-normal">
       <span class="tag is-dark">test</span>
-      <span class="tag is-danger">2/4</span>
+      <span class="tag is-success">OK</span>
     </div>
   </div>
   
@@ -193,44 +193,158 @@
 </div>
 
 <!-- 
-    ..FF                                                                     [100%]
-    =================================== FAILURES ===================================
-    ____________________________ test_inverting_output _____________________________
+    .title KiCad schematic
+    .include /github/workspace/lib/spice/opamp/OPA2134.LIB
+    .include /github/workspace/lib/spice/opamp/OPA2134-dual.lib
+    .include /github/workspace/lib/spice/diode/led.lib
+    .include /github/workspace/lib/spice/diode/1N4148.mod
+    .include /github/workspace/lib/spice/transistor/bc5x7.lib
+    .subckt voltage_divider_1 n1 n2 n3
+    R1 n1 n2 9.999999999999999e-10kOhm
+    R2 n2 n3 99.999999999kOhm
+    .ends voltage_divider_1
     
-        def test_inverting_output():
-            simulator = load().simulator(temperature=25, nominal_temperature=25)
-            analysis_op = simulator.operating_point()
-            result = float(analysis_op["/OUT"])
-    >       assert result == approx( 5., rel=1e-3 )
-    E       assert 5.06288495752405e-06 == 5.0 ± 5.0e-03
-    E        +  where 5.0 ± 5.0e-03 = approx(5.0, rel=0.001)
+    .subckt voltage_divider_2 n1 n2 n3
+    R1 n1 n2 9.999999999999999e-10kOhm
+    R2 n2 n3 99.999999999kOhm
+    .ends voltage_divider_2
     
-    <ipython-input-1-c34c4d107bff>:19: AssertionError
-    __________________________ test_non_inverting_output ___________________________
+    .subckt voltage_divider_3 n1 n2 n3
+    R1 n1 n2 9.999999999999999e-10kOhm
+    R2 n2 n3 99.999999999kOhm
+    .ends voltage_divider_3
     
-        def test_non_inverting_output():
-            simulator = load(0.999999).simulator(temperature=25, nominal_temperature=25)
-            analysis_op = simulator.operating_point()
-            result = float(analysis_op["/OUT"])
-    >       assert result == approx( -5., rel=1e-3 )
-    E       assert 5.0628849575379276e-06 == -5.0 ± 5.0e-03
-    E        +  where -5.0 ± 5.0e-03 = approx(-5.0, rel=0.001)
+    .subckt voltage_divider_4 n1 n2 n3
+    R1 n1 n2 9.999999999999999e-10kOhm
+    R2 n2 n3 99.999999999kOhm
+    .ends voltage_divider_4
     
-    <ipython-input-1-c34c4d107bff>:25: AssertionError
+    .subckt IN_1 n1 n2 n3
+    V1 n2 0 AC 5 DC 5 SINE(0 5 1k)
+    .ends IN_1
+    
+    .subckt IN_2 n1 n2 n3
+    V1 n2 0 AC 5 DC 0 SINE(0 5 2k)
+    .ends IN_2
+    
+    .subckt IN_3 n1 n2 n3
+    V1 n2 0 AC 5 DC 0 SINE(0 5 3k)
+    .ends IN_3
+    
+    .subckt IN_4 n1 n2 n3
+    V1 n2 0 AC 5 DC 0 SINE(0 5 4k)
+    .ends IN_4
+    
+    .subckt OUT_1 n1 n2 n3
+    R1 n2 n3 0kOhm
+    .ends OUT_1
+    
+    .subckt OUT_2 n1 n2 n3
+    R1 n2 n3 0kOhm
+    .ends OUT_2
+    
+    .subckt OUT_3 n1 n2 n3
+    R1 n2 n3 0kOhm
+    .ends OUT_3
+    
+    .subckt OUT_4 n1 n2 n3
+    R1 n2 n3 0kOhm
+    .ends OUT_4
+    
+    .subckt OUT n1 n2 n3
+    R1 n2 n3 0kOhm
+    .ends OUT
+    R36 Net-_R33-Pad2_ /OUT 100k
+    R33 Net-_R31-Pad2_ Net-_R33-Pad2_ 100k
+    XU3 Net-_R31-Pad2_ Net-_R24-Pad2_ GND -15V GND Net-_R33-Pad2_ /OUT +15V OPA2134d
+    XU2 Net-_R17-Pad1_ Net-_R13-Pad1_ Net-_R7-Pad2_ -15V Net-_R10-Pad1_ Net-_R14-Pad1_ Net-_R18-Pad1_ +15V OPA2134d
+    XU1 Net-_R15-Pad1_ Net-_R11-Pad1_ Net-_R3-Pad2_ -15V Net-_R5-Pad2_ Net-_R12-Pad1_ Net-_R16-Pad1_ +15V OPA2134d
+    R39 /OUT Net-_J10-PadT_ 1k
+    XJ10 GND Net-_J10-PadT_ NC_01 OUT
+    R31 Net-_R24-Pad2_ Net-_R31-Pad2_ 100k
+    R24 /MIX_1 Net-_R24-Pad2_ 100k
+    R25 /MIX_2 Net-_R24-Pad2_ 100k
+    R26 /MIX_3 Net-_R24-Pad2_ 100k
+    R27 /MIX_4 Net-_R24-Pad2_ 100k
+    R22 Net-_R18-Pad1_ Net-_J9-PadT_ 1k
+    XJ9 GND Net-_J9-PadT_ /MIX_4 OUT_4
+    R21 Net-_R17-Pad1_ Net-_J8-PadT_ 1k
+    XJ8 GND Net-_J8-PadT_ /MIX_3 OUT_3
+    R20 Net-_R16-Pad1_ Net-_J7-PadT_ 1k
+    XJ7 GND Net-_J7-PadT_ /MIX_2 OUT_2
+    R18 Net-_R18-Pad1_ Net-_R14-Pad1_ 100k
+    R10 Net-_R10-Pad1_ GND 47k
+    R9 /IN_4 Net-_R10-Pad1_ 47k
+    R14 Net-_R14-Pad1_ /IN_4 100k
+    XRV4 GND Net-_R10-Pad1_ /IN_4 voltage_divider_4
+    XJ5 GND /IN_4 NC_02 IN_4
+    R17 Net-_R17-Pad1_ Net-_R13-Pad1_ 100k
+    R8 Net-_R7-Pad2_ GND 47k
+    R7 /IN_3 Net-_R7-Pad2_ 47k
+    R13 Net-_R13-Pad1_ /IN_3 100k
+    XRV3 GND Net-_R7-Pad2_ /IN_3 voltage_divider_3
+    XJ4 GND /IN_3 NC_03 IN_3
+    R16 Net-_R16-Pad1_ Net-_R12-Pad1_ 100k
+    R6 Net-_R5-Pad2_ GND 47k
+    R5 /IN_2 Net-_R5-Pad2_ 47k
+    R12 Net-_R12-Pad1_ /IN_2 100k
+    XRV2 GND Net-_R5-Pad2_ /IN_2 voltage_divider_2
+    XJ3 GND /IN_2 NC_04 IN_2
+    R15 Net-_R15-Pad1_ Net-_R11-Pad1_ 100k
+    R4 Net-_R3-Pad2_ GND 47k
+    R3 /IN_1 Net-_R3-Pad2_ 47k
+    R11 Net-_R11-Pad1_ /IN_1 100k
+    XRV1 GND Net-_R3-Pad2_ /IN_1 voltage_divider_1
+    R19 Net-_R15-Pad1_ Net-_J6-PadT_ 1k
+    XJ6 GND Net-_J6-PadT_ /MIX_1 OUT_1
+    XJ2 GND /IN_1 NC_05 IN_1
+    D2 GND Net-_D2-Pad2_ LED2
+    R29 +5V Net-_Q1-Pad3_ 5k
+    R23 Net-_D1-Pad1_ /IN_1 100
+    D6 GND Net-_D6-Pad2_ LED2
+    R34 +5V Net-_Q3-Pad3_ 5k
+    R32 Net-_D5-Pad1_ /IN_2 100k
+    D10 GND Net-_D10-Pad2_ LED2
+    R40 +5V Net-_Q5-Pad3_ 5k
+    R38 Net-_D9-Pad1_ /IN_3 100k
+    D4 GND Net-_D4-Pad2_ LED2
+    R30 +5V Net-_Q2-Pad3_ 5k
+    R28 Net-_D3-Pad1_ /IN_4 100k
+    D8 GND Net-_D8-Pad2_ LED1
+    R37 +5V Net-_Q4-Pad3_ 5k
+    R35 Net-_D7-Pad1_ /OUT 100k
+    D9 Net-_D9-Pad1_ GND D1N4148
+    D5 Net-_D5-Pad1_ GND D1N4148
+    D1 Net-_D1-Pad1_ GND D1N4148
+    D3 Net-_D3-Pad1_ GND D1N4148
+    D7 Net-_D7-Pad1_ GND D1N4148
+    Q1 Net-_Q1-Pad3_ Net-_D1-Pad1_ Net-_D2-Pad2_ BC846B
+    Q3 Net-_Q3-Pad3_ Net-_D5-Pad1_ Net-_D6-Pad2_ BC846B
+    Q5 Net-_Q5-Pad3_ Net-_D9-Pad1_ Net-_D10-Pad2_ BC846B
+    Q2 Net-_Q2-Pad3_ Net-_D4-Pad2_ Net-_D3-Pad1_ BC846B
+    Q4 Net-_Q4-Pad3_ Net-_D7-Pad1_ Net-_D8-Pad2_ BC846B
+    V1 +15V 0 DC 15
+    V2 -15V 0 DC -15
+    V3 +5V 0 DC 5
+    
+    out: -4.950480 
+
+-->
+
+<!-- 
+    .....                                                                    [100%]
     =============================== warnings summary ===============================
-    tmp357nysxd.py::test_inverting_input
-    tmp357nysxd.py::test_non_inverting_input
-    tmp357nysxd.py::test_inverting_output
-    tmp357nysxd.py::test_non_inverting_output
+    tmpk1_ipnaf.py::test_inverting_input
+    tmpk1_ipnaf.py::test_non_inverting_input
+    tmpk1_ipnaf.py::test_inverting_output_single
+    tmpk1_ipnaf.py::test_inverting_output
+    tmpk1_ipnaf.py::test_non_inverting_output
       /opt/conda/envs/elektrophon/lib/python3.9/site-packages/PySpice/Spice/Netlist.py:1221: DeprecationWarning: The 'warn' method is deprecated, use 'warning' instead
         self._logger.warn("Duplicated include")
     
     -- Docs: https://docs.pytest.org/en/stable/warnings.html
     - generated json report: /github/workspace/content/summe/build/summe-test.json -
-    =========================== short test summary info ============================
-    FAILED tmp357nysxd.py::test_inverting_output - assert 5.06288495752405e-06 ==...
-    FAILED tmp357nysxd.py::test_non_inverting_output - assert 5.0628849575379276e...
-    2 failed, 2 passed, 4 warnings in 0.23s
+    5 passed, 5 warnings in 0.13s
 
 -->
 
@@ -248,7 +362,7 @@ the attenuverter is build around a differential amplifier with an opamp.</p>
 <div class="section">
   <div class="container has-text-centered my-2">
 
-    <p><img src="/elektrophon/assets/summe_files/summe_4_0.svg" alt="svg" /></p>
+    <p><img src="/elektrophon/assets/summe_files/summe_5_0.svg" alt="svg" /></p>
 
   </div>
 </div>
@@ -258,7 +372,7 @@ the attenuverter is build around a differential amplifier with an opamp.</p>
 <div class="section">
   <div class="container has-text-centered my-2">
 
-    <p><img src="/elektrophon/assets/summe_files/summe_5_0.svg" alt="svg" /></p>
+    <p><img src="/elektrophon/assets/summe_files/summe_6_0.svg" alt="svg" /></p>
 
   </div>
 </div>
@@ -275,7 +389,7 @@ Vout = \Bigl(1 + \frac{R2}{R1}\Bigr) \Bigl(\frac{R4}{R3+R4}\Bigr) * V2 - \Bigl(\
 <div class="section">
   <div class="container has-text-centered my-2">
 
-    <p><img src="/elektrophon/assets/summe_files/summe_7_0.svg" alt="svg" /></p>
+    <p><img src="/elektrophon/assets/summe_files/summe_8_0.svg" alt="svg" /></p>
 
   </div>
 </div>
@@ -560,55 +674,6 @@ Vout = \Bigl(1 + \frac{R2}{R1}\Bigr) \Bigl(\frac{R4}{R3+R4}\Bigr) * V2 - \Bigl(\
 </section>
 
   <div class="container is-large mt-1 mb-0">
-    
-    <div class="has-background-danger pl-2 pt-2 pb-2">
-        <i class="fas fa-exclamation-circle has-text-white is-size-2"></i>
-        <span class="has-text-white is-size-4">&nbsp;&nbsp;Found 2 error(s) in pytest check.</span>
-    </div>
-    <table class="table is-striped is-hoverable is-narrow mb-6">
-        <col style="width:20%" />
-        <col style="width:10%" />
-        <col style="width:70%" />
-        
-        
-        
-        
-        
-            <tr>
-                <td>test_inverting_input</td>
-                <td class=" is-success-dark ">passed</td>
-                
-                
-                <td>-</td>
-            </tr>
-        
-            <tr>
-                <td>test_non_inverting_input</td>
-                <td class=" is-success-dark ">passed</td>
-                
-                
-                <td>-</td>
-            </tr>
-        
-            <tr>
-                <td>test_inverting_output</td>
-                <td class=" has-text-danger-dark ">failed</td>
-                
-                
-                <td>def test_inverting_output():<br />        simulator = load().simulator(temperature=25, nominal_temperature=25)<br />        analysis_op = simulator.operating_point()<br />        result = float(analysis_op["/OUT"])<br />&lt;       assert result == approx( 5., rel=1e-3 )<br />E       assert 5.06288495752405e-06 == 5.0 ± 5.0e-03<br />E        +  where 5.0 ± 5.0e-03 = approx(5.0, rel=0.001)<br /><br />&gt;ipython-input-1-c34c4d107bff&lt;:19: AssertionError</td>
-            </tr>
-        
-            <tr>
-                <td>test_non_inverting_output</td>
-                <td class=" has-text-danger-dark ">failed</td>
-                
-                
-                <td>def test_non_inverting_output():<br />        simulator = load(0.999999).simulator(temperature=25, nominal_temperature=25)<br />        analysis_op = simulator.operating_point()<br />        result = float(analysis_op["/OUT"])<br />&lt;       assert result == approx( -5., rel=1e-3 )<br />E       assert 5.0628849575379276e-06 == -5.0 ± 5.0e-03<br />E        +  where -5.0 ± 5.0e-03 = approx(-5.0, rel=0.001)<br /><br />&gt;ipython-input-1-c34c4d107bff&lt;:25: AssertionError</td>
-            </tr>
-        
-        
-        
-    </table>
     
 </div>
 

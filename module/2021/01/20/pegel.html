@@ -41,21 +41,126 @@
 </div>
 
 <!-- 
-    F                                                                        [100%]
+    ....FFFF                                                                 [100%]
     =================================== FAILURES ===================================
-    _________________________________ test_my_func _________________________________
+    _______________________ test_output_amplifier_1_voltage ________________________
     
-        def test_my_func():
-            assert 0 == 0
-    >       assert 1 == 0
-    E       assert 1 == 0
+        def test_output_amplifier_1_voltage():
+            simulator = load().simulator(temperature=25, nominal_temperature=25)
+            analysis_op = simulator.operating_point()
+            result = float(analysis_op["OUTa"])
+    >       assert result == approx( 5, rel=1e-3 )
+    E       assert 5.018359647962825 == 5 ± 5.0e-03
+    E        +  where 5 ± 5.0e-03 = approx(5, rel=0.001)
     
-    <ipython-input-1-93fd88d6b78a>:5: AssertionError
+    <ipython-input-1-46b1f0cbee21>:31: AssertionError
+    _______________________ test_output_amplifier_2_voltage ________________________
+    
+        def test_output_amplifier_2_voltage():
+            simulator = load().simulator(temperature=25, nominal_temperature=25)
+            analysis_op = simulator.operating_point()
+            result = float(analysis_op["OUTb"])
+    >       assert result == approx( 5, rel=1e-3 )
+    E       assert 5.01835964796283 == 5 ± 5.0e-03
+    E        +  where 5 ± 5.0e-03 = approx(5, rel=0.001)
+    
+    <ipython-input-1-46b1f0cbee21>:37: AssertionError
+    ____________________________ test_trimpot_1_voltage ____________________________
+    
+        def test_trimpot_1_voltage():
+            simulator = load().simulator(temperature=25, nominal_temperature=25)
+            analysis_op = simulator.operating_point()
+            result = float(analysis_op["Net-_R7-Pad1_"])
+    >       assert result == approx( 0, rel=1e-1 )
+    E       assert -2.9941339771434902e-05 == 0 ± 1.0e-12
+    E        +  where 0 ± 1.0e-12 = approx(0, rel=0.1)
+    
+    <ipython-input-1-46b1f0cbee21>:44: AssertionError
+    ____________________________ test_trimpot_2_voltage ____________________________
+    
+    self = <PySpice.Probe.WaveForm.OperatingPoint object at 0x7f8ebc31a520>
+    name = 'Net-_R8-Pad1_'
+    
+        def __getitem__(self, name):
+            try:
+    >           return self._get_item(name)
+    
+    /opt/conda/envs/elektrophon/lib/python3.9/site-packages/PySpice/Probe/WaveForm.py:294: 
+    _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+    
+    self = <PySpice.Probe.WaveForm.OperatingPoint object at 0x7f8ebc31a520>
+    name = 'Net-_R8-Pad1_'
+    
+        def _get_item(self, name):
+        
+            # Fixme: cache dict ???
+            if name in self._nodes:
+                return self._nodes[name]
+            elif name in self._branches:
+                return self._branches[name]
+            elif name in self._elements:
+                return self._elements[name]
+            elif name in self._internal_parameters:
+                return self._internal_parameters[name]
+            else:
+    >           raise IndexError(name)
+    E           IndexError: Net-_R8-Pad1_
+    
+    /opt/conda/envs/elektrophon/lib/python3.9/site-packages/PySpice/Probe/WaveForm.py:288: IndexError
+    
+    During handling of the above exception, another exception occurred:
+    
+        def test_trimpot_2_voltage():
+            simulator = load().simulator(temperature=25, nominal_temperature=25)
+            analysis_op = simulator.operating_point()
+    >       result = float(analysis_op["Net-_R8-Pad1_"])
+    
+    <ipython-input-1-46b1f0cbee21>:49: 
+    _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+    /opt/conda/envs/elektrophon/lib/python3.9/site-packages/PySpice/Probe/WaveForm.py:296: in __getitem__
+        return self._get_item(name.lower())
+    _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+    
+    self = <PySpice.Probe.WaveForm.OperatingPoint object at 0x7f8ebc31a520>
+    name = 'net-_r8-pad1_'
+    
+        def _get_item(self, name):
+        
+            # Fixme: cache dict ???
+            if name in self._nodes:
+                return self._nodes[name]
+            elif name in self._branches:
+                return self._branches[name]
+            elif name in self._elements:
+                return self._elements[name]
+            elif name in self._internal_parameters:
+                return self._internal_parameters[name]
+            else:
+    >           raise IndexError(name)
+    E           IndexError: net-_r8-pad1_
+    
+    /opt/conda/envs/elektrophon/lib/python3.9/site-packages/PySpice/Probe/WaveForm.py:288: IndexError
     - generated json report: /github/workspace/content/pegel/build/pegel-test.json -
     =========================== short test summary info ============================
-    FAILED tmp92b2s34a.py::test_my_func - assert 1 == 0
+    FAILED tmpkj8j1j7q.py::test_output_amplifier_1_voltage - assert 5.01835964796...
+    FAILED tmpkj8j1j7q.py::test_output_amplifier_2_voltage - assert 5.01835964796...
+    FAILED tmpkj8j1j7q.py::test_trimpot_1_voltage - assert -2.9941339771434902e-0...
+    FAILED tmpkj8j1j7q.py::test_trimpot_2_voltage - IndexError: net-_r8-pad1_
 
 -->
+
+<!-- 
+    voltage: -0.000005
+
+-->
+
+<div class="section">
+  <div class="container has-text-centered my-2">
+
+    <p><img src="/elektrophon/assets/pegel_files/pegel_3_1.svg" alt="svg" /></p>
+
+  </div>
+</div>
 
 <!-- mk scoped -->
 <div class="container mb-2 mt-2">
@@ -75,7 +180,7 @@
 <div class="section">
   <div class="container has-text-centered my-2">
 
-    <p><img src="/elektrophon/assets/pegel_files/pegel_4_0.svg" alt="svg" /></p>
+    <p><img src="/elektrophon/assets/pegel_files/pegel_6_0.svg" alt="svg" /></p>
 
   </div>
 </div>
@@ -387,7 +492,7 @@
     
     <div class="has-background-danger pl-2 pt-2 pb-2">
         <i class="fas fa-exclamation-circle has-text-white is-size-2"></i>
-        <span class="has-text-white is-size-4">&nbsp;&nbsp;Found 1 error(s) in pytest check.</span>
+        <span class="has-text-white is-size-4">&nbsp;&nbsp;Found 4 error(s) in pytest check.</span>
     </div>
     <table class="table is-striped is-hoverable is-narrow mb-6">
         <col style="width:20%" />
@@ -399,11 +504,67 @@
         
         
             <tr>
-                <td>test_my_func</td>
+                <td>test_buffer_1a_voltage</td>
+                <td class=" is-success-dark ">passed</td>
+                
+                
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>test_buffer_1b_voltage</td>
+                <td class=" is-success-dark ">passed</td>
+                
+                
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>test_buffer_2a_voltage</td>
+                <td class=" is-success-dark ">passed</td>
+                
+                
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>test_buffer_2b_voltage</td>
+                <td class=" is-success-dark ">passed</td>
+                
+                
+                <td>-</td>
+            </tr>
+        
+            <tr>
+                <td>test_output_amplifier_1_voltage</td>
                 <td class=" has-text-danger-dark ">failed</td>
                 
                 
-                <td>def test_my_func():<br />        assert 0 == 0<br />&lt;       assert 1 == 0<br />E       assert 1 == 0<br /><br />&gt;ipython-input-1-93fd88d6b78a&lt;:5: AssertionError</td>
+                <td>def test_output_amplifier_1_voltage():<br />        simulator = load().simulator(temperature=25, nominal_temperature=25)<br />        analysis_op = simulator.operating_point()<br />        result = float(analysis_op["OUTa"])<br />&lt;       assert result == approx( 5, rel=1e-3 )<br />E       assert 5.018359647962825 == 5 ± 5.0e-03<br />E        +  where 5 ± 5.0e-03 = approx(5, rel=0.001)<br /><br />&gt;ipython-input-1-46b1f0cbee21&lt;:31: AssertionError</td>
+            </tr>
+        
+            <tr>
+                <td>test_output_amplifier_2_voltage</td>
+                <td class=" has-text-danger-dark ">failed</td>
+                
+                
+                <td>def test_output_amplifier_2_voltage():<br />        simulator = load().simulator(temperature=25, nominal_temperature=25)<br />        analysis_op = simulator.operating_point()<br />        result = float(analysis_op["OUTb"])<br />&lt;       assert result == approx( 5, rel=1e-3 )<br />E       assert 5.01835964796283 == 5 ± 5.0e-03<br />E        +  where 5 ± 5.0e-03 = approx(5, rel=0.001)<br /><br />&gt;ipython-input-1-46b1f0cbee21&lt;:37: AssertionError</td>
+            </tr>
+        
+            <tr>
+                <td>test_trimpot_1_voltage</td>
+                <td class=" has-text-danger-dark ">failed</td>
+                
+                
+                <td>def test_trimpot_1_voltage():<br />        simulator = load().simulator(temperature=25, nominal_temperature=25)<br />        analysis_op = simulator.operating_point()<br />        result = float(analysis_op["Net-_R7-Pad1_"])<br />&lt;       assert result == approx( 0, rel=1e-1 )<br />E       assert -2.9941339771434902e-05 == 0 ± 1.0e-12<br />E        +  where 0 ± 1.0e-12 = approx(0, rel=0.1)<br /><br />&gt;ipython-input-1-46b1f0cbee21&lt;:44: AssertionError</td>
+            </tr>
+        
+            <tr>
+                <td>test_trimpot_2_voltage</td>
+                <td class=" has-text-danger-dark ">failed</td>
+                
+                
+                <td>self = &gt;PySpice.Probe.WaveForm.OperatingPoint object at 0x7f8ebc31a520&lt;<br />name = 'Net-_R8-Pad1_'<br /><br />    def __getitem__(self, name):<br />        try:<br />&lt;           return self._get_item(name)<br /><br />/opt/conda/envs/elektrophon/lib/python3.9/site-packages/PySpice/Probe/WaveForm.py:294: <br />_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ <br /><br />self = &gt;PySpice.Probe.WaveForm.OperatingPoint object at 0x7f8ebc31a520&lt;<br />name = 'Net-_R8-Pad1_'<br /><br />    def _get_item(self, name):<br />    <br />        # Fixme: cache dict ???<br />        if name in self._nodes:<br />            return self._nodes[name]<br />        elif name in self._branches:<br />            return self._branches[name]<br />        elif name in self._elements:<br />            return self._elements[name]<br />        elif name in self._internal_parameters:<br />            return self._internal_parameters[name]<br />        else:<br />&lt;           raise IndexError(name)<br />E           IndexError: Net-_R8-Pad1_<br /><br />/opt/conda/envs/elektrophon/lib/python3.9/site-packages/PySpice/Probe/WaveForm.py:288: IndexError<br /><br />During handling of the above exception, another exception occurred:<br /><br />    def test_trimpot_2_voltage():<br />        simulator = load().simulator(temperature=25, nominal_temperature=25)<br />        analysis_op = simulator.operating_point()<br />&lt;       result = float(analysis_op["Net-_R8-Pad1_"])<br /><br />&gt;ipython-input-1-46b1f0cbee21&lt;:49: <br />_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ <br />/opt/conda/envs/elektrophon/lib/python3.9/site-packages/PySpice/Probe/WaveForm.py:296: in __getitem__<br />    return self._get_item(name.lower())<br />_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ <br /><br />self = &gt;PySpice.Probe.WaveForm.OperatingPoint object at 0x7f8ebc31a520&lt;<br />name = 'net-_r8-pad1_'<br /><br />    def _get_item(self, name):<br />    <br />        # Fixme: cache dict ???<br />        if name in self._nodes:<br />            return self._nodes[name]<br />        elif name in self._branches:<br />            return self._branches[name]<br />        elif name in self._elements:<br />            return self._elements[name]<br />        elif name in self._internal_parameters:<br />            return self._internal_parameters[name]<br />        else:<br />&lt;           raise IndexError(name)<br />E           IndexError: net-_r8-pad1_<br /><br />/opt/conda/envs/elektrophon/lib/python3.9/site-packages/PySpice/Probe/WaveForm.py:288: IndexError</td>
             </tr>
         
         
@@ -425,6 +586,160 @@
 
         
             
+            
+            <div class="has-background-danger pl-2 pt-2 pb-2">
+                <i class="fas fa-exclamation-circle has-text-white is-size-2"></i>
+                <span class="has-text-white is-size-4">&nbsp;&nbsp;Found 11 errors in unconnected check.</span>
+            </div>
+            <table class="table is-striped is-hoverable is-narrow nb-6">
+                <col style="width:20%" />
+                <col style="width:10%" />
+                <col style="width:70%" />
+                    
+                    <tr>
+                        <td>main</td>
+
+                        <td>Unconnected items</td>
+                        <td>
+                        
+                            <p>Track 0.250 mm [GND] on B.Cu, length: 1.125 mm</p>
+                        
+                            <p>Track 0.250 mm [GND] on F.Cu, length: 1.125 mm</p>
+                        
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        <td>main</td>
+
+                        <td>Unconnected items</td>
+                        <td>
+                        
+                            <p>Track 0.250 mm [GND] on B.Cu, length: 1.125 mm</p>
+                        
+                            <p>Track 0.250 mm [GND] on F.Cu, length: 1.125 mm</p>
+                        
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        <td>main</td>
+
+                        <td>Unconnected items</td>
+                        <td>
+                        
+                            <p>Pad 2 of R4 on All copper layers</p>
+                        
+                            <p>Track 0.250 mm [GND] on F.Cu, length: 8.360 mm</p>
+                        
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        <td>main</td>
+
+                        <td>Unconnected items</td>
+                        <td>
+                        
+                            <p>Track 0.250 mm [GND] on B.Cu, length: 1.125 mm</p>
+                        
+                            <p>Pad 2 of R3 on All copper layers</p>
+                        
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        <td>main</td>
+
+                        <td>Unconnected items</td>
+                        <td>
+                        
+                            <p>Track 0.250 mm [GND] on F.Cu, length: 0.057 mm</p>
+                        
+                            <p>Pad 6 of U3 on All copper layers</p>
+                        
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        <td>main</td>
+
+                        <td>Unconnected items</td>
+                        <td>
+                        
+                            <p>Pad 5 of U3 on All copper layers</p>
+                        
+                            <p>Track 0.250 mm [-15V] on B.Cu, length: 3.621 mm</p>
+                        
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        <td>main</td>
+
+                        <td>Unconnected items</td>
+                        <td>
+                        
+                            <p>Pad 2 of C10 on All copper layers</p>
+                        
+                            <p>Track 0.250 mm [-15V] on B.Cu, length: 3.621 mm</p>
+                        
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        <td>main</td>
+
+                        <td>Unconnected items</td>
+                        <td>
+                        
+                            <p>Track 0.381 mm [VP] on F.Cu, length: 15.266 mm</p>
+                        
+                            <p>Pad 2 of R1 on All copper layers</p>
+                        
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        <td>main</td>
+
+                        <td>Unconnected items</td>
+                        <td>
+                        
+                            <p>Track 0.381 mm [VN] on F.Cu, length: 12.572 mm</p>
+                        
+                            <p>Pad 2 of R2 on All copper layers</p>
+                        
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        <td>main</td>
+
+                        <td>Unconnected items</td>
+                        <td>
+                        
+                            <p>Pad 2 of R5 on All copper layers</p>
+                        
+                            <p>Track 0.250 mm [Net-(R3-Pad1)] on B.Cu, length: 3.832 mm</p>
+                        
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        <td>main</td>
+
+                        <td>Unconnected items</td>
+                        <td>
+                        
+                            <p>Track 0.250 mm [Net-(R4-Pad1)] on B.Cu, length: 5.947 mm</p>
+                        
+                            <p>Pad 2 of R6 on All copper layers</p>
+                        
+                        </td>
+                    </tr>
+                
+            </table>
             
         
     
@@ -448,7 +763,7 @@
                         <td>Pin not connected (use a "no connection" flag to suppress this error)</td>
                         <td>
                         
-                            <p>Pin 3 (Input) of component U5 is unconnected.</p>
+                            <p>Pin 5 (Input) of component U5 is unconnected.</p>
                         
                         </td>
                     </tr>
@@ -459,7 +774,7 @@
                         <td>Pin not connected (use a "no connection" flag to suppress this error)</td>
                         <td>
                         
-                            <p>Pin 5 (Input) of component U5 is unconnected.</p>
+                            <p>Pin 3 (Input) of component U5 is unconnected.</p>
                         
                         </td>
                     </tr>
