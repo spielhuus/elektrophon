@@ -85,7 +85,9 @@
 {% endblock output %}
 
 {% block markdowncell scoped %}
-<div class="section mb-6">
+<section class="section mb-6">
+<div class="container">
+<div class="columns is-multiline">
 {%- if resources.global_content_filter.include_input_prompt-%}
     {{ self.empty_in_prompt() }}
 {%- endif -%}
@@ -93,6 +95,8 @@
 {{ cell.source  | markdown2html | strip_files_prefix }}
 </div>
 </div>
+</div>
+</section>
 {%- endblock markdowncell %}
 
 {% block unknowncell scoped %}
