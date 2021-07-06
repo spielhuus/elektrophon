@@ -13,6 +13,8 @@ jobs:
         uses: docker://spielhuus/elektrophon
         with:
           args: build
+          env:
+            USER_UID: 1001
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@3.7.1
