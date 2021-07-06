@@ -3,14 +3,11 @@
   {% include head.html %}
   <body>
     {% unless page.hide_hero %}
-      {% if page.category == 'article' %}
-        {% include hero.html %}
-      {% elsif page.category == 'module' %}
-        {% include hero-module.html %}
-      {% else %}
-        {% include hero.html %}
-      {% endif %}
+      {% include hero-module.html %}
     {% endunless %}
+    <div class="content is-size-5 is-size-6-tablet is-italic has-text-weight-semibold mt-6 mb-6">
+        <div class="content has-text-centered">{{ page.excerpt }}</div>    
+    </div>
     {{ content }}
     {% unless page.hide_footer %}
         {% include footer.html %}

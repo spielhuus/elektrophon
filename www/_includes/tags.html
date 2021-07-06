@@ -4,30 +4,26 @@
 {% assign pytest_count=0 %}
 {% assign pytest_failed=0 %}
 
-{% assign pytest = page.project | append: "-test" %}
-{% for reports_data in site.data[pytest] %}
-{% for report in reports_data %}
-{% assign pytest_failed = pytest_failed | plus:report["summary"]["failed"] %}
-{% assign pytest_count = pytest_count | plus:report["summary"]["num_tests"] %}
-{% endfor %}
+{% for project in site.data.elektrophon[page.title] %}
+{% if project[0] == 'test' %}
+{% assign pytest_failed = pytest_failed | plus:project[1]['report']["summary"]["passed"] %}
+{% assign pytest_count = pytest_count | plus:project[1]['report']["summary"]["num_tests"] %}
+{% endif %}
 {% endfor %}
 
-{% assign kibot = page.project | append: "_kibot_data" %}
-{% for pcb in site.data[kibot] %}
-  {% for report in pcb.reports %}
-    {% if report.name == 'erc' %}
-      {% for sheet in report.sheets %}
-        {% assign report_count = sheet.messages | size %}
-        {% assign erc_count = erc_count | plus:report_count %}
-      {% endfor %}
-    {% elsif report.name == 'drc' %}
-      {% assign report_count = report.messages | size %}
-      {% assign drc_count = drc_count | plus:report_count %}
-    {% elsif report.name == 'unconnected' %}
-      {% assign report_count = report.messages | size %}
-      {% assign unconnected_count = unconnected_count | plus:report_count %}
-    {% endif %}    
-  {% endfor %}
+{% for project in site.data.elektrophon[page.title] %}
+{% if project[1]['erc'] %}
+{% assign report_count = project[1]['erc'] | size %}
+{% assign erc_count = erc_count | plus:report_count %}
+{% endif %}
+{% if project[1]['drc'] %}
+{% assign report_count = project[1]['drc'] | size %}
+{% assign drc_count = drc_count | plus:report_count %}
+{% endif %}
+{% if project[1]['unconnected'] %}
+{% assign report_count = project[1]['unconnected'] | size %}
+{% assign unconnected_count = unconnected_count | plus:report_count %}
+{% endif %}
 {% endfor %}
 
 <div class="field is-grouped">
@@ -44,11 +40,11 @@
   </div>
 
   {% if pytest_count > 0 %}
-  {% if pytest_failed == 0 %}
+  {% if pytest_failed == pytest_count %}
   <div class="control">
     <div class="tags has-addons is-normal">
       <span class="tag is-dark">test</span>
-      <span class="tag is-success">OK</span>
+      <span class="tag is-success">{{ pytest_failed }}/{{ pytest_count }}</span>
     </div>
   </div>
   {% else %}
@@ -108,13 +104,6 @@
     </div>
   </div>
   {% endif %}
-
-    <div class="control">
-      <a class="tags has-addons is-normal" href="https://mybinder.org/v2/gh/spielhuus/elektrophon/HEAD?filepath=content%2F{{ include.content }}%2F{{ include.content }}.ipynb">
-        <span class="tag is-dark">launch</span>
-        <span class="tag is-link">binder</span>
-      </a>
-    </div>
 
     <div class="control">
       <a class="tags has-addons is-normal" href="https://github.com/spielhuus/elektrophon/tree/master/content/{{ page.project }}">

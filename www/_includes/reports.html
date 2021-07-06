@@ -1,32 +1,35 @@
-{% assign pytest = page.project | append: "-test" %}
-{% for reports_data in site.data[pytest] %}
-{% for report in reports_data %}
-{% assign pytest_failed = pytest_failed | plus:report["summary"]["failed"] %}
-{% assign pytest_count = pytest_count | plus:report["summary"]["num_tests"] %}
-{% endfor %}
+{% assign erc_count=0 %}
+{% assign drc_count=0 %} 
+{% assign unconnected_count=0 %}
+{% assign pytest_count=0 %}
+{% assign pytest_failed=0 %}
+
+{% for project in site.data.elektrophon[page.title] %}
+{% if project[0] == 'test' %}
+{% assign pytest_failed = pytest_failed | plus:project[1]['report']["summary"]["passed"] %}
+{% assign pytest_count = pytest_count | plus:project[1]['report']["summary"]["num_tests"] %}
+{% endif %}
 {% endfor %}
 
-{% assign kibot = page.project | append: "_kibot_data" %}
-{% for pcb in site.data[kibot] %}
-  {% for report in pcb.reports %}
-    {% if report.name == 'erc' %}
-      {% for sheet in report.sheets %}
-        {% assign _report_count = sheet.messages | size %}
-        {% assign report_count = report_count | plus:_report_count %}
-      {% endfor %}
-    {% elsif report.name == 'drc' %}
-      {% assign _report_count = report.messages | size %}
-      {% assign report_count = report_count | plus:_report_count %}
-    {% elsif report.name == 'unconnected' %}
-      {% assign _report_count = report.messages | size %}
-      {% assign report_count = report_count | plus:_report_count %}
-    {% endif %}    
-  {% endfor %}
+{% for project in site.data.elektrophon[page.title] %}
+{% if project[1]['erc'] %}
+{% assign report_count = project[1]['erc'] | size %}
+{% assign erc_count = erc_count | plus:report_count %}
+{% endif %}
+{% if project[1]['drc'] %}
+{% assign report_count = project[1]['drc'] | size %}
+{% assign drc_count = drc_count | plus:report_count %}
+{% endif %}
+{% if project[1]['unconnected'] %}
+{% assign report_count = project[1]['unconnected'] | size %}
+{% assign unconnected_count = unconnected_count | plus:report_count %}
+{% endif %}
 {% endfor %}
+
 
 {% if pytest_count > 0 %}
 <div class="container is-large mt-1 mb-0">
-    {% unless pytest_failed == 0 %}
+    {% unless pytest_failed == pytest_count %}
     <div class="has-background-danger pl-2 pt-2 pb-2">
         <i class="fas fa-exclamation-circle has-text-white is-size-2"></i>
         <span class="has-text-white is-size-4">&nbsp;&nbsp;Found {{ pytest_failed }} error(s) in pytest check.</span>
@@ -58,68 +61,90 @@
 </div>
 {% endif %}    
 
-<div class="container is-large mt-1 mb-0">
-    {% unless report_count == 0 %}
-    {% for pcb in site.data[kibot] %}
-        {% for report in pcb.reports %}
-
-        {% if report.name == 'erc' %}
-            {% for sheet in report.sheets %}
-            {% assign erc_count = sheet.messages | size %}
-            {% unless erc_count == 0 %}
-            <div class="has-background-danger pl-2 pt-2 pb-2">
-                <i class="fas fa-exclamation-circle has-text-white is-size-2"></i>
-                <span class="has-text-white is-size-4">&nbsp;&nbsp;Found {{ sheet.messages | size }} errors in {{ report.name }} check.</span>
-            </div>
-            <table class="table is-striped is-hoverable is-narrow nb-6">
-                <col style="width:20%">
-                <col style="width:10%">
-                <col style="width:70%">
-                    {% for message in sheet.messages %}
-                    <tr>
-                        <td>{{ pcb.name }}</td>
-
-                        <td>{{ message.message | strip_newlines }}</td>
-                        <td>
-                        {% for con in message.con %}
-                            <p>{{ con.message | strip_newlines }}</p>
-                        {% endfor %}
-                        </td>
-                    </tr>
-                {% endfor %}
-            </table>
-            {% endunless %}
-            {% endfor %}
-
-        {% else %}
-            {% assign report_count = report.messages | size %}
-            {% unless report_count == 0 %}
-            <div class="has-background-danger pl-2 pt-2 pb-2">
-                <i class="fas fa-exclamation-circle has-text-white is-size-2"></i>
-                <span class="has-text-white is-size-4">&nbsp;&nbsp;Found {{ report.messages | size }} errors in {{ report.name }} check.</span>
-            </div>
-            <table class="table is-striped is-hoverable is-narrow nb-6">
-                <col style="width:20%">
-                <col style="width:10%">
-                <col style="width:70%">
-                    {% for message in report.messages %}
-                    <tr>
-                        <td>{{ pcb.name }}</td>
-
-                        <td>{{ message.message | strip_newlines }}</td>
-                        <td>
-                        {% for con in message.con %}
-                            <p>{{ con.message | strip_newlines }}</p>
-                        {% endfor %}
-                        </td>
-                    </tr>
-                {% endfor %}
-            </table>
-            {% endunless %}
-        {% endif %}
-    {% endfor %}
-    {% endfor %}
-{% endunless %}
+{% unless erc_count == 0 %}
+<div class="has-background-danger pl-2 pt-2 pb-2">
+    <i class="fas fa-exclamation-circle has-text-white is-size-2"></i>
+    <span class="has-text-white is-size-4">&nbsp;&nbsp;Found {{ erc_count }} errors in erc check.</span>
 </div>
+<div class="container is-large mt-1 mb-0">
+    {% for project in site.data.elektrophon[page.title] %}
+    {% if project[1]['erc'] %}
+    <table class="table is-striped is-hoverable is-narrow nb-6">
+        <col style="width:20%">
+        <col style="width:10%">
+        <col style="width:70%">
+        {% for err in project[1]['erc'] %}
+        <tr>
+            <td>{{ project[0] }}</td>
 
+            <td>{{ err.message | strip_newlines }}</td>
+            <td>
+            {% for con in err.con %}
+                <p>{{ con.message | strip_newlines }}</p>
+            {% endfor %}
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+    {% endif %}
+    {% endfor %}    
+</div>
+{% endunless %}
 
+{% unless drc_count == 0 %}
+<div class="has-background-danger pl-2 pt-2 pb-2">
+    <i class="fas fa-exclamation-circle has-text-white is-size-2"></i>
+    <span class="has-text-white is-size-4">&nbsp;&nbsp;Found {{ drc_count }} errors in drc check.</span>
+</div>
+<div class="container is-large mt-1 mb-0">
+    {% for project in site.data.elektrophon[page.title] %}
+    {% if project[1]['drc'] %}
+    <table class="table is-striped is-hoverable is-narrow nb-6">
+        <col style="width:20%">
+        <col style="width:10%">
+        <col style="width:70%">
+        {% for err in project[1]['drc'] %}
+        <tr>
+            <td>{{ project[0] }}</td>
+
+            <td>{{ err.message | strip_newlines }}</td>
+            <td>
+            {% for con in err.con %}
+                <p>{{ con.message | strip_newlines }}</p>
+            {% endfor %}
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+    {% endif %}
+    {% endfor %}    
+{% endunless %}
+
+{% unless unconnected_count == 0 %}
+<div class="has-background-danger pl-2 pt-2 pb-2">
+    <i class="fas fa-exclamation-circle has-text-white is-size-2"></i>
+    <span class="has-text-white is-size-4">&nbsp;&nbsp;Found {{ erc_count }} errors in unconnected check.</span>
+</div>
+<div class="container is-large mt-1 mb-0">
+    {% for project in site.data.elektrophon[page.title] %}
+    {% if project[1]['unconnected'] %}
+    <table class="table is-striped is-hoverable is-narrow nb-6">
+        <col style="width:20%">
+        <col style="width:10%">
+        <col style="width:70%">
+        {% for err in project[1]['unconnected'] %}
+        <tr>
+            <td>{{ project[0] }}</td>
+
+            <td>{{ err.message | strip_newlines }}</td>
+            <td>
+            {% for con in err.con %}
+                <p>{{ con.message | strip_newlines }}</p>
+            {% endfor %}
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+    {% endif %}
+    {% endfor %}    
+{% endunless %}
