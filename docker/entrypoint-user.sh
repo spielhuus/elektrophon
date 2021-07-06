@@ -64,8 +64,7 @@ case "$@" in
         ;;
     serve)
         cd $JEKYLL_DIR
-        make
-        make deploy
+        scons
         cd $WWW_DIR
         installdeps_bundler_local
         bundle exec jekyll serve --drafts --host=$(hostname -i | awk '{print $1}')
@@ -73,16 +72,21 @@ case "$@" in
         ;;
     build)
         cd $JEKYLL_DIR
-        make
-        make deploy
+        scons
         cd $WWW_DIR
         installdeps_bundler_local
         bundle exec jekyll build --trace
         cd - &>/dev/null
         ;;
+    notebook)
+        cd $JEKYLL_DIR
+        IP=`awk 'END{print $1}' /etc/hosts`
+        jupyter lab --ip $IP --notebook-dir /github/workspace/content/
+        cd - &>/dev/null
+        ;;
     clean)
         cd $JEKYLL_DIR
-        make clean
+        scons -c
         ;;
     *)
         # Execute command from CMD

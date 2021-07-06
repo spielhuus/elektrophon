@@ -13,10 +13,8 @@ function create_user()
     groupadd -f -g $USER_GID $USERNAME 2> /dev/null # group
     useradd -d $JEKYLL_DIR -M -s /bin/bash -g $USERNAME $USERNAME  2> /dev/null # user
     echo "$USERNAME ALL=NOPASSWD:ALL" >> /etc/sudoers
-    chown -R $USERNAME:$USERNAME $JEKYLL_DIR
-    chown -R $USERNAME:$USERNAME $GEM_HOME
-#    chown -R $USERNAME:$USERNAME /home/jekyll
-#    chown -R $USERNAME:$USERNAME /home/jekyll/.config
+    # mkdir -p $WWW_DIR
+    # chown -R $USERNAME:$USERNAME $JEKYLL_DIR/build
 }
 
 # Create the user
@@ -24,5 +22,3 @@ create_user
 
 # Execute the rest of the script with the new user
 su -c "/entrypoint-user.sh \"$@\"" $USERNAME
-
-chown -R $OLD_USER:$OLD_GROUP $JEKYLL_DIR
