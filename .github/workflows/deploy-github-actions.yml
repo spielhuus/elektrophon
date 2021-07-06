@@ -10,7 +10,7 @@ jobs:
           persist-credentials: false
 
       - name: build notebooks and jekyll page
-        uses: docker://spielhuus/elektrophon-jekyll
+        uses: docker://spielhuus/elektrophon
         with:
           args: build
 
