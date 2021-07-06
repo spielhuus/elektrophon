@@ -1,14 +1,16 @@
 #!/bin/bash
 set -e
 
+echo "user uid $USERNAME"
 USER_UID=${USER_UID:-1000}
 USER_GID=${USER_GID:-1000}
 USERNAME=${USERNAME:-jekyll}
+echo "user uid $USER_UID"
 
 OLD_USER=$(stat -c '%u' $JEKYLL_DIR/Makefile)
 OLD_GROUP=$(stat -c '%g' $JEKYLL_DIR/Makefile)
 
-ls -la /
+ls -la $JEKYLL_DIR
 
 function create_user()
 {
