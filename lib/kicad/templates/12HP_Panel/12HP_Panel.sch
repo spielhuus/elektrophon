@@ -19,7 +19,7 @@ U 1 1 6097A217
 P 6050 6650
 F 0 "H1" H 6150 6696 50  0000 L CNN
 F 1 "MountingHole" H 6150 6605 50  0000 L CNN
-F 2 "MountingHole:MountingHole_3.2mm_M3_ISO14580" H 6050 6650 50  0001 C CNN
+F 2 "elektrophon:MountingHole_Panel_3.2mm_M3" H 6050 6650 50  0001 C CNN
 F 3 "~" H 6050 6650 50  0001 C CNN
 	1    6050 6650
 	1    0    0    -1  
@@ -30,7 +30,7 @@ U 1 1 6097A580
 P 6050 6950
 F 0 "H2" H 6150 6996 50  0000 L CNN
 F 1 "MountingHole" H 6150 6905 50  0000 L CNN
-F 2 "MountingHole:MountingHole_3.2mm_M3_ISO14580" H 6050 6950 50  0001 C CNN
+F 2 "elektrophon:MountingHole_Panel_3.2mm_M3" H 6050 6950 50  0001 C CNN
 F 3 "~" H 6050 6950 50  0001 C CNN
 	1    6050 6950
 	1    0    0    -1  
@@ -41,7 +41,7 @@ U 1 1 60AD6346
 P 6050 7250
 F 0 "H3" H 6150 7296 50  0000 L CNN
 F 1 "MountingHole" H 6150 7205 50  0000 L CNN
-F 2 "MountingHole:MountingHole_3.2mm_M3_ISO14580" H 6050 7250 50  0001 C CNN
+F 2 "elektrophon:MountingHole_Panel_3.2mm_M3" H 6050 7250 50  0001 C CNN
 F 3 "~" H 6050 7250 50  0001 C CNN
 	1    6050 7250
 	1    0    0    -1  
@@ -52,7 +52,7 @@ U 1 1 60AD634C
 P 6050 7550
 F 0 "H4" H 6150 7596 50  0000 L CNN
 F 1 "MountingHole" H 6150 7505 50  0000 L CNN
-F 2 "MountingHole:MountingHole_3.2mm_M3_ISO14580" H 6050 7550 50  0001 C CNN
+F 2 "elektrophon:MountingHole_Panel_3.2mm_M3" H 6050 7550 50  0001 C CNN
 F 3 "~" H 6050 7550 50  0001 C CNN
 	1    6050 7550
 	1    0    0    -1  
