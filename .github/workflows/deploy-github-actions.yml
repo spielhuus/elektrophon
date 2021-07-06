@@ -11,10 +11,10 @@ jobs:
 
       - name: build notebooks and jekyll page
         uses: docker://spielhuus/elektrophon
+        env:
+          USER_UID: 1001
         with:
           args: build
-          env:
-            USER_UID: 1001
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@3.7.1
