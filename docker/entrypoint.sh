@@ -8,6 +8,8 @@ USERNAME=${USERNAME:-jekyll}
 OLD_USER=$(stat -c '%u' $JEKYLL_DIR/Makefile)
 OLD_GROUP=$(stat -c '%g' $JEKYLL_DIR/Makefile)
 
+ls -la /
+
 function create_user()
 {
     groupadd -f -g $USER_GID $USERNAME 2> /dev/null # group
