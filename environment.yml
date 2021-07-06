@@ -8,6 +8,7 @@ dependencies:
   - numpy=1.19.*
   - ipykernel
   - jupyter=*
+  - jupyterlab=*
   - notebook=6.2.*
   - nbconvert=6.*
   - scipy=1.6.*
@@ -18,7 +19,9 @@ dependencies:
   - nodejs=*
   - pytest=6.*.*
   - pytest-json=0.4.*
+  - scons=4.1.*
   - pip:
     - schemdraw
     - itikz
     - ipytest
+    - nbflow
