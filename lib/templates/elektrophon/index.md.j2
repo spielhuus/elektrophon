@@ -1,6 +1,14 @@
 {% extends 'base/display_priority.j2' %}
 
 
+{%- block header -%}
+---
+{% for key, value in nb.metadata.FrontMatter.items() %}{{key}}: {{value}}
+{% endfor %}
+---
+
+{% endblock header%}
+
 {% block in_prompt %}
 {% endblock in_prompt %}
 
@@ -41,18 +49,15 @@
 {% endblock stream %}
 
 {% block data_svg %}
-<div class="section" markdown="1">
-<div class="container has-text-centered my-2" markdown="1">
-    {% if "filenames" in output.metadata %}
-
+<div class="column is-full" markdown="1">
+<div class="content has-text-centered my-2" markdown="1">
+{% if "filenames" in output.metadata %}
 ![svg]({{ '{{ \'/assets/' }}{{ output.metadata.filenames['image/svg+xml'] | path2url }}' | relative_url {{ ' }}' }})
-
-    {% else %}
-
+<p class="has-text-weight-bold">{{ cell.metadata.caption }}</p>
+{% else %}
 ![svg](data:image/svg;base64,{{ output.data['image/svg+xml'] }})
-
-    {% endif %}
-
+<p class="has-text-weight-bold">* {{ cell.metadata.caption }} *</p>
+{% endif %}
 </div>
 </div>
 {% endblock data_svg %}
