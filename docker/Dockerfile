@@ -6,7 +6,7 @@ ENV DEBIAN_FRONTEND noninteractive
 RUN apt-get update &&\
     apt-get -y upgrade &&\
     apt-get install -y curl apt-transport-https sudo ruby-full zlib1g-dev apt-utils build-essential \
-                       texlive texlive-latex-extra texlive-pictures texlive-science imagemagick pdf2svg \
+                       texlive texlive-latex-extra texlive-pictures texlive-science imagemagick dvisvgm \
                        librsvg2-bin kicad xvfb xdotool xclip xsltproc python3-pip locales sudo &&\
     apt-get clean && rm -rf /var/lib/apt/lists/*
 
@@ -35,9 +35,11 @@ EXPOSE 4000
 # Setup an entrypoint script
 COPY docker/entrypoint.sh /entrypoint.sh
 COPY docker/entrypoint-user.sh /entrypoint-user.sh
+COPY docker/pdf2svg /usr/bin/pdf2svg
 
 RUN chmod 755 /entrypoint.sh
 RUN chmod 755 /entrypoint-user.sh
+RUN chmod 755 /usr/bin/pdf2svg
 ENTRYPOINT ["/entrypoint.sh"]
 
 ENV JEKYLL_DIR="/github/workspace"

@@ -1,0 +1,3 @@
+#!/bin/bash
+
+dvisvgm --pdf --output=$2 $1
