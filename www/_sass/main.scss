@@ -7,9 +7,7 @@ $family-serif: 'Newsreader', serif;
 $family-primary: $family-sans-serif;
 $body-size: 1.1rem;
 
-$title-family: $family-sans-serif;
-$title-size: 2rem; 
-$title-weight: 700;
+$modal-content-width: 800px;
 
 $subtitle-family: $family-sans-serif;
 $subtitle-size: 1.6rem; 
@@ -33,6 +31,7 @@ $footer-padding: 1rem 10rem 1rem;
 @import "layout/_all";
 
 $hero-darken: $dark !default;
+$section-padding: 12rem 12rem !default;
 
 // $hero-darken: $dark !default;
 

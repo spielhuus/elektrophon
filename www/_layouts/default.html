@@ -3,11 +3,12 @@
   {% include head.html %}
   <body>
     {% unless page.hide_hero %}
-      {% include hero-module.html %}
+      {% include hero.html %}
     {% endunless %}
-    <div class="content is-size-5 is-size-6-tablet is-italic has-text-weight-semibold mt-6 mb-6">
-        <div class="content has-text-centered">{{ page.excerpt }}</div>    
-    </div>
+    {% unless page.excerpt == '' %}
+    <!-- div class="column has-text-centered" -->
+    <!-- /div -->
+    {% endunless %}
     {{ content }}
     {% unless page.hide_footer %}
         {% include footer.html %}

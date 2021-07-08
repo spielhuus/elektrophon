@@ -72,6 +72,7 @@ def build_notebook(target, source, env):
     jupyter = 'jupyter nbconvert --ExecutePreprocessor.timeout=600 --execute --to html \
             --no-input --log-level=CRITICAL --ExecutePreprocessor.kernel_name=python3 \
             --output=%s \
+            --HTMLExporter.exclude_anchor_links=True \
             --TemplateExporter.extra_template_basedirs=lib/templates \
             --template=elektrophon %s' % (target[0].get_abspath(), source[0].get_path())
     env.Execute(jupyter)
