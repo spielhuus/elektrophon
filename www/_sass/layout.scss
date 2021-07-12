@@ -49,14 +49,14 @@
     position: relative;
     background-color: rgba(0,0,0,0);
     width: 90%;
-    max-width: 1200px;
-    max-height: 700px;
+    /* max-width: 1200px; */
+    /* max-height: 700px; */
     overflow: hidden;
     text-align: center;
   }
   
   .modal img {
-    height: 100vh;
+/*    height: 100vh; */
   }
   
   .item-slide{
@@ -99,7 +99,7 @@
   }
   
   .item-slide img {
-    max-width: 1200px;
+/*    max-width: 1200px; */
   }
   
   .caption-container {
