@@ -107,6 +107,12 @@ K N-Channel FET Transistor Low Voltage
 F http://www.fairchildsemi.com/ds/BF/BF244A.pdf
 $ENDCMP
 #
+$CMP LF353
+D Dual Operational Amplifiers, DIP-8/SOIC-8/TSSOP-8/VSSOP-8
+K dual opamp
+F https://www.ti.com/lit/ds/symlink/lf353-n.pdf
+$ENDCMP
+#
 $CMP LM1458
 D Dual Operational Amplifiers, DIP-8/SOIC-8/TSSOP-8/VSSOP-8
 K dual opamp
