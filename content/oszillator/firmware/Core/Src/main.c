@@ -35,6 +35,7 @@ extern USBD_HandleTypeDef hUsbDeviceFS;
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
+
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -73,8 +74,11 @@ void write_dac(float _freq) {
   word[0] = value;
   word[0] |= 0x1000;
 
+  // write data to register
   HAL_GPIO_WritePin (SPI_SELECT_GPIO_Port, SPI_SELECT_Pin, GPIO_PIN_RESET);  // pull the cs pin low
-  HAL_SPI_Transmit (&hspi1, (uint8_t *)word, 2, 100);  // write data to register
+  if (HAL_SPI_Transmit (&hspi1, (uint8_t *)word, 2, 100) != HAL_OK) {
+    Error_Handler();
+  }
   HAL_GPIO_WritePin (SPI_SELECT_GPIO_Port, SPI_SELECT_Pin, GPIO_PIN_SET);  // pull the cs pin high
 }
 void note_on(uint8_t channel, uint8_t note, uint8_t velocity) {
@@ -141,6 +145,7 @@ int main(void)
   HAL_Delay(1000);
   HAL_GPIO_TogglePin(SQUARE_GPIO_Port, SQUARE_Pin);
   HAL_GPIO_WritePin(MIDI_GPIO_Port, MIDI_Pin, RESET);
+
   mimuz_init();
 
   //register the MIDI call backs
@@ -280,7 +285,7 @@ static void MX_SPI1_Init(void)
   hspi1.Init.CLKPolarity = SPI_POLARITY_LOW;
   hspi1.Init.CLKPhase = SPI_PHASE_1EDGE;
   hspi1.Init.NSS = SPI_NSS_SOFT;
-  hspi1.Init.BaudRatePrescaler = SPI_BAUDRATEPRESCALER_4;
+  hspi1.Init.BaudRatePrescaler = SPI_BAUDRATEPRESCALER_64;
   hspi1.Init.FirstBit = SPI_FIRSTBIT_MSB;
   hspi1.Init.TIMode = SPI_TIMODE_DISABLE;
   hspi1.Init.CRCCalculation = SPI_CRCCALCULATION_DISABLE;
@@ -318,7 +323,7 @@ static void MX_TIM2_Init(void)
   htim2.Init.CounterMode = TIM_COUNTERMODE_UP;
   htim2.Init.Period = 1000;
   htim2.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
-  htim2.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
+  htim2.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_ENABLE;
   if (HAL_TIM_Base_Init(&htim2) != HAL_OK)
   {
     Error_Handler();
