@@ -6,8 +6,13 @@
       {% include hero.html %}
     {% endunless %}
     {% unless page.excerpt == '' %}
-    <!-- div class="column has-text-centered" -->
-    <!-- /div -->
+    <div class="section">
+      <div class="container">
+        <div class="content has-text-centered is-size-5 is-italic has-text-weight-medium">
+          {{ page.excerpt }}
+        </div>
+      </div>
+    </div>
     {% endunless %}
     {{ content }}
     {% unless page.hide_footer %}
