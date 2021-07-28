@@ -734,4 +734,14 @@ F 3 "" H 1700 2550 50  0001 C CNN
 	1    1700 2550
 	0    1    1    0   
 $EndComp
+Text Notes 3800 2400 0    50   ~ 0
+61Hz
+Text Notes 4650 2400 0    50   ~ 0
+218Hz
+Text Notes 5500 2400 0    50   ~ 0
+777Hz
+Text Notes 6350 2400 0    50   ~ 0
+2.8KHz
+Text Notes 7200 2400 0    50   ~ 0
+11kHz
 $EndSCHEMATC
