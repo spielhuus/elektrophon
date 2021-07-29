@@ -21,6 +21,7 @@ dependencies:
   - pytest-json=0.4.*
   - scons=4.1.*
   - pylint=2.9.*
+  - junit-xml=1.9
   - pip:
     - schemdraw
     - itikz
