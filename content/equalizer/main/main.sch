@@ -357,7 +357,7 @@ U 1 1 60EC55C2
 P 4450 8400
 F 0 "C10" V 4198 8400 50  0000 C CNN
 F 1 "22n" V 4289 8400 50  0000 C CNN
-F 2 "Capacitor_THT:C_Disc_D3.8mm_W2.6mm_P2.50mm" H 4488 8250 50  0001 C CNN
+F 2 "Capacitor_THT:C_Disc_D7.5mm_W2.5mm_P5.00mm" H 4488 8250 50  0001 C CNN
 F 3 "~" H 4450 8400 50  0001 C CNN
 	1    4450 8400
 	0    1    1    0   
@@ -368,7 +368,7 @@ U 1 1 60EC5B76
 P 4450 8000
 F 0 "C9" V 4198 8000 50  0000 C CNN
 F 1 "22n" V 4289 8000 50  0000 C CNN
-F 2 "Capacitor_THT:C_Disc_D3.8mm_W2.6mm_P2.50mm" H 4488 7850 50  0001 C CNN
+F 2 "Capacitor_THT:C_Disc_D7.5mm_W2.5mm_P5.00mm" H 4488 7850 50  0001 C CNN
 F 3 "~" H 4450 8000 50  0001 C CNN
 	1    4450 8000
 	0    1    1    0   
@@ -1539,23 +1539,23 @@ Wire Wire Line
 $Comp
 L elektrophon:LF353 U1
 U 1 1 6128773B
-P 3000 3400
-F 0 "U1" H 3000 3033 50  0000 C CNN
-F 1 "LF353" H 3000 3124 50  0000 C CNN
-F 2 "Package_DIP:DIP-8_W7.62mm_Socket" H 3000 3400 50  0001 C CNN
-F 3 "https://www.ti.com/lit/ds/symlink/lf353-n.pdf" H 3000 3400 50  0001 C CNN
-	1    3000 3400
-	1    0    0    1   
-$EndComp
-$Comp
-L elektrophon:LF353 U1
-U 2 1 612882D4
 P 5050 5500
 F 0 "U1" H 5050 5133 50  0000 C CNN
 F 1 "LF353" H 5050 5224 50  0000 C CNN
 F 2 "Package_DIP:DIP-8_W7.62mm_Socket" H 5050 5500 50  0001 C CNN
 F 3 "https://www.ti.com/lit/ds/symlink/lf353-n.pdf" H 5050 5500 50  0001 C CNN
-	2    5050 5500
+	1    5050 5500
+	1    0    0    1   
+$EndComp
+$Comp
+L elektrophon:LF353 U1
+U 2 1 612882D4
+P 5050 8950
+F 0 "U1" H 5050 8583 50  0000 C CNN
+F 1 "LF353" H 5050 8674 50  0000 C CNN
+F 2 "Package_DIP:DIP-8_W7.62mm_Socket" H 5050 8950 50  0001 C CNN
+F 3 "https://www.ti.com/lit/ds/symlink/lf353-n.pdf" H 5050 8950 50  0001 C CNN
+	2    5050 8950
 	1    0    0    1   
 $EndComp
 $Comp
@@ -1617,78 +1617,78 @@ Wire Wire Line
 $Comp
 L elektrophon:LF353 U2
 U 2 1 61417169
-P 6700 5500
-F 0 "U2" H 6700 5133 50  0000 C CNN
-F 1 "LF353" H 6700 5224 50  0000 C CNN
-F 2 "Package_DIP:DIP-8_W7.62mm_Socket" H 6700 5500 50  0001 C CNN
-F 3 "https://www.ti.com/lit/ds/symlink/lf353-n.pdf" H 6700 5500 50  0001 C CNN
-	2    6700 5500
+P 6700 8950
+F 0 "U2" H 6700 8583 50  0000 C CNN
+F 1 "LF353" H 6700 8674 50  0000 C CNN
+F 2 "Package_DIP:DIP-8_W7.62mm_Socket" H 6700 8950 50  0001 C CNN
+F 3 "https://www.ti.com/lit/ds/symlink/lf353-n.pdf" H 6700 8950 50  0001 C CNN
+	2    6700 8950
 	1    0    0    1   
 $EndComp
 $Comp
 L elektrophon:LF353 U3
 U 2 1 61419059
-P 8300 5500
-F 0 "U3" H 8300 5133 50  0000 C CNN
-F 1 "LF353" H 8300 5224 50  0000 C CNN
-F 2 "Package_DIP:DIP-8_W7.62mm_Socket" H 8300 5500 50  0001 C CNN
-F 3 "https://www.ti.com/lit/ds/symlink/lf353-n.pdf" H 8300 5500 50  0001 C CNN
-	2    8300 5500
+P 8300 8950
+F 0 "U3" H 8300 8583 50  0000 C CNN
+F 1 "LF353" H 8300 8674 50  0000 C CNN
+F 2 "Package_DIP:DIP-8_W7.62mm_Socket" H 8300 8950 50  0001 C CNN
+F 3 "https://www.ti.com/lit/ds/symlink/lf353-n.pdf" H 8300 8950 50  0001 C CNN
+	2    8300 8950
 	1    0    0    1   
 $EndComp
 $Comp
 L elektrophon:LF353 U4
 U 2 1 6141AD62
-P 9950 5500
-F 0 "U4" H 9950 5133 50  0000 C CNN
-F 1 "LF353" H 9950 5224 50  0000 C CNN
-F 2 "Package_DIP:DIP-8_W7.62mm_Socket" H 9950 5500 50  0001 C CNN
-F 3 "https://www.ti.com/lit/ds/symlink/lf353-n.pdf" H 9950 5500 50  0001 C CNN
-	2    9950 5500
+P 9750 8500
+F 0 "U4" H 9750 8133 50  0000 C CNN
+F 1 "LF353" H 9750 8224 50  0000 C CNN
+F 2 "Package_DIP:DIP-8_W7.62mm_Socket" H 9750 8500 50  0001 C CNN
+F 3 "https://www.ti.com/lit/ds/symlink/lf353-n.pdf" H 9750 8500 50  0001 C CNN
+	2    9750 8500
 	1    0    0    1   
 $EndComp
 $Comp
 L elektrophon:LF353 U2
 U 1 1 614243CC
-P 5050 8950
-F 0 "U2" H 5050 8583 50  0000 C CNN
-F 1 "LF353" H 5050 8674 50  0000 C CNN
-F 2 "Package_DIP:DIP-8_W7.62mm_Socket" H 5050 8950 50  0001 C CNN
-F 3 "https://www.ti.com/lit/ds/symlink/lf353-n.pdf" H 5050 8950 50  0001 C CNN
-	1    5050 8950
+P 6700 5500
+F 0 "U2" H 6700 5133 50  0000 C CNN
+F 1 "LF353" H 6700 5224 50  0000 C CNN
+F 2 "Package_DIP:DIP-8_W7.62mm_Socket" H 6700 5500 50  0001 C CNN
+F 3 "https://www.ti.com/lit/ds/symlink/lf353-n.pdf" H 6700 5500 50  0001 C CNN
+	1    6700 5500
 	1    0    0    1   
 $EndComp
 $Comp
 L elektrophon:LF353 U3
 U 1 1 6142CDAF
-P 6700 8950
-F 0 "U3" H 6700 8583 50  0000 C CNN
-F 1 "LF353" H 6700 8674 50  0000 C CNN
-F 2 "Package_DIP:DIP-8_W7.62mm_Socket" H 6700 8950 50  0001 C CNN
-F 3 "https://www.ti.com/lit/ds/symlink/lf353-n.pdf" H 6700 8950 50  0001 C CNN
-	1    6700 8950
+P 8300 5500
+F 0 "U3" H 8300 5133 50  0000 C CNN
+F 1 "LF353" H 8300 5224 50  0000 C CNN
+F 2 "Package_DIP:DIP-8_W7.62mm_Socket" H 8300 5500 50  0001 C CNN
+F 3 "https://www.ti.com/lit/ds/symlink/lf353-n.pdf" H 8300 5500 50  0001 C CNN
+	1    8300 5500
 	1    0    0    1   
 $EndComp
 $Comp
 L elektrophon:LF353 U4
 U 1 1 6142DA51
-P 8300 8950
-F 0 "U4" H 8300 8583 50  0000 C CNN
-F 1 "LF353" H 8300 8674 50  0000 C CNN
-F 2 "Package_DIP:DIP-8_W7.62mm_Socket" H 8300 8950 50  0001 C CNN
-F 3 "https://www.ti.com/lit/ds/symlink/lf353-n.pdf" H 8300 8950 50  0001 C CNN
-	1    8300 8950
+P 9950 5500
+F 0 "U4" H 9950 5133 50  0000 C CNN
+F 1 "LF353" H 9950 5224 50  0000 C CNN
+F 2 "Package_DIP:DIP-8_W7.62mm_Socket" H 9950 5500 50  0001 C CNN
+F 3 "https://www.ti.com/lit/ds/symlink/lf353-n.pdf" H 9950 5500 50  0001 C CNN
+	1    9950 5500
 	1    0    0    1   
 $EndComp
 $Comp
 L elektrophon:LF353 U9
 U 1 1 61431E3A
-P 10550 7900
-F 0 "U9" H 10550 7533 50  0000 C CNN
-F 1 "LF353" H 10550 7624 50  0000 C CNN
-F 2 "Package_DIP:DIP-8_W7.62mm_Socket" H 10550 7900 50  0001 C CNN
-F 3 "https://www.ti.com/lit/ds/symlink/lf353-n.pdf" H 10550 7900 50  0001 C CNN
-	1    10550 7900
+P 8450 2500
+F 0 "U9" H 8450 2133 50  0000 C CNN
+F 1 "LF353" H 8450 2224 50  0000 C CNN
+F 2 "Package_DIP:DIP-8_W7.62mm_Socket" H 8450 2500 50  0001 C CNN
+F 3 "https://www.ti.com/lit/ds/symlink/lf353-n.pdf" H 8450 2500 50  0001 C CNN
+	1    8450 2500
 	1    0    0    1   
 $EndComp
 $Comp
@@ -1705,23 +1705,23 @@ $EndComp
 $Comp
 L elektrophon:LF353 U9
 U 2 1 61435445
-P 9750 8500
-F 0 "U9" H 9750 8133 50  0000 C CNN
-F 1 "LF353" H 9750 8224 50  0000 C CNN
-F 2 "Package_DIP:DIP-8_W7.62mm_Socket" H 9750 8500 50  0001 C CNN
-F 3 "https://www.ti.com/lit/ds/symlink/lf353-n.pdf" H 9750 8500 50  0001 C CNN
-	2    9750 8500
+P 8450 1400
+F 0 "U9" H 8450 1033 50  0000 C CNN
+F 1 "LF353" H 8450 1124 50  0000 C CNN
+F 2 "Package_DIP:DIP-8_W7.62mm_Socket" H 8450 1400 50  0001 C CNN
+F 3 "https://www.ti.com/lit/ds/symlink/lf353-n.pdf" H 8450 1400 50  0001 C CNN
+	2    8450 1400
 	1    0    0    1   
 $EndComp
 $Comp
 L elektrophon:LF353 U10
 U 2 1 61437628
-P 11950 8500
-F 0 "U10" H 11950 8133 50  0000 C CNN
-F 1 "LF353" H 11950 8224 50  0000 C CNN
-F 2 "Package_DIP:DIP-8_W7.62mm_Socket" H 11950 8500 50  0001 C CNN
-F 3 "https://www.ti.com/lit/ds/symlink/lf353-n.pdf" H 11950 8500 50  0001 C CNN
-	2    11950 8500
+P 3000 3400
+F 0 "U10" H 3000 3033 50  0000 C CNN
+F 1 "LF353" H 3000 3124 50  0000 C CNN
+F 2 "Package_DIP:DIP-8_W7.62mm_Socket" H 3000 3400 50  0001 C CNN
+F 3 "https://www.ti.com/lit/ds/symlink/lf353-n.pdf" H 3000 3400 50  0001 C CNN
+	2    3000 3400
 	1    0    0    1   
 $EndComp
 Wire Wire Line
@@ -1734,45 +1734,34 @@ Wire Wire Line
 $Comp
 L elektrophon:LF353 U5
 U 2 1 614F7294
-P 7400 1500
-F 0 "U5" H 7400 1133 50  0000 C CNN
-F 1 "LF353" H 7400 1224 50  0000 C CNN
-F 2 "Package_DIP:DIP-8_W7.62mm_Socket" H 7400 1500 50  0001 C CNN
-F 3 "https://www.ti.com/lit/ds/symlink/lf353-n.pdf" H 7400 1500 50  0001 C CNN
-	2    7400 1500
-	1    0    0    1   
-$EndComp
-$Comp
-L elektrophon:LF353 U5
-U 1 1 614F8488
-P 7400 2600
-F 0 "U5" H 7400 2233 50  0000 C CNN
-F 1 "LF353" H 7400 2324 50  0000 C CNN
-F 2 "Package_DIP:DIP-8_W7.62mm_Socket" H 7400 2600 50  0001 C CNN
-F 3 "https://www.ti.com/lit/ds/symlink/lf353-n.pdf" H 7400 2600 50  0001 C CNN
-	1    7400 2600
+P 10550 7900
+F 0 "U5" H 10550 7533 50  0000 C CNN
+F 1 "LF353" H 10550 7624 50  0000 C CNN
+F 2 "Package_DIP:DIP-8_W7.62mm_Socket" H 10550 7900 50  0001 C CNN
+F 3 "https://www.ti.com/lit/ds/symlink/lf353-n.pdf" H 10550 7900 50  0001 C CNN
+	2    10550 7900
 	1    0    0    1   
 $EndComp
 $Comp
 L elektrophon:LF353 U6
 U 2 1 614FD353
-P 8450 1400
-F 0 "U6" H 8450 1033 50  0000 C CNN
-F 1 "LF353" H 8450 1124 50  0000 C CNN
-F 2 "Package_DIP:DIP-8_W7.62mm_Socket" H 8450 1400 50  0001 C CNN
-F 3 "https://www.ti.com/lit/ds/symlink/lf353-n.pdf" H 8450 1400 50  0001 C CNN
-	2    8450 1400
+P 11950 8500
+F 0 "U6" H 11950 8133 50  0000 C CNN
+F 1 "LF353" H 11950 8224 50  0000 C CNN
+F 2 "Package_DIP:DIP-8_W7.62mm_Socket" H 11950 8500 50  0001 C CNN
+F 3 "https://www.ti.com/lit/ds/symlink/lf353-n.pdf" H 11950 8500 50  0001 C CNN
+	2    11950 8500
 	1    0    0    1   
 $EndComp
 $Comp
 L elektrophon:LF353 U6
 U 1 1 614FD359
-P 8450 2500
-F 0 "U6" H 8450 2133 50  0000 C CNN
-F 1 "LF353" H 8450 2224 50  0000 C CNN
-F 2 "Package_DIP:DIP-8_W7.62mm_Socket" H 8450 2500 50  0001 C CNN
-F 3 "https://www.ti.com/lit/ds/symlink/lf353-n.pdf" H 8450 2500 50  0001 C CNN
-	1    8450 2500
+P 12050 4550
+F 0 "U6" H 12050 4183 50  0000 C CNN
+F 1 "LF353" H 12050 4274 50  0000 C CNN
+F 2 "Package_DIP:DIP-8_W7.62mm_Socket" H 12050 4550 50  0001 C CNN
+F 3 "https://www.ti.com/lit/ds/symlink/lf353-n.pdf" H 12050 4550 50  0001 C CNN
+	1    12050 4550
 	1    0    0    1   
 $EndComp
 $Comp
@@ -1905,39 +1894,13 @@ Wire Wire Line
 	8850 2050 8850 2500
 Wire Wire Line
 	8850 2500 8750 2500
-$Comp
-L Device:R R31
-U 1 1 616C898C
-P 9100 1400
-F 0 "R31" V 8893 1400 50  0000 C CNN
-F 1 "330" V 8984 1400 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" V 9030 1400 50  0001 C CNN
-F 3 "~" H 9100 1400 50  0001 C CNN
-	1    9100 1400
-	0    1    1    0   
-$EndComp
-$Comp
-L Device:R R32
-U 1 1 616C8D63
-P 9100 2050
-F 0 "R32" V 8893 2050 50  0000 C CNN
-F 1 "330" V 8984 2050 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" V 9030 2050 50  0001 C CNN
-F 3 "~" H 9100 2050 50  0001 C CNN
-	1    9100 2050
-	0    1    1    0   
-$EndComp
-Text GLabel 9300 1400 2    50   Input ~ 0
+Text GLabel 8950 1400 2    50   Input ~ 0
 COM_OUT_A
-Wire Wire Line
-	9300 1400 9250 1400
 Wire Wire Line
 	8950 1400 8850 1400
 Connection ~ 8850 1400
-Text GLabel 9300 2050 2    50   Input ~ 0
+Text GLabel 8950 2050 2    50   Input ~ 0
 COM_OUT_B
-Wire Wire Line
-	9300 2050 9250 2050
 Wire Wire Line
 	8950 2050 8850 2050
 Connection ~ 8850 2050
@@ -2170,23 +2133,23 @@ Connection ~ 5350 3300
 $Comp
 L elektrophon:LF353 U8
 U 2 1 61994624
-P 11250 5150
-F 0 "U8" H 11250 4783 50  0000 C CNN
-F 1 "LF353" H 11250 4874 50  0000 C CNN
-F 2 "Package_DIP:DIP-8_W7.62mm_Socket" H 11250 5150 50  0001 C CNN
-F 3 "https://www.ti.com/lit/ds/symlink/lf353-n.pdf" H 11250 5150 50  0001 C CNN
-	2    11250 5150
+P 7400 1500
+F 0 "U8" H 7400 1133 50  0000 C CNN
+F 1 "LF353" H 7400 1224 50  0000 C CNN
+F 2 "Package_DIP:DIP-8_W7.62mm_Socket" H 7400 1500 50  0001 C CNN
+F 3 "https://www.ti.com/lit/ds/symlink/lf353-n.pdf" H 7400 1500 50  0001 C CNN
+	2    7400 1500
 	1    0    0    1   
 $EndComp
 $Comp
 L elektrophon:LF353 U8
 U 1 1 61995252
-P 12050 4550
-F 0 "U8" H 12050 4183 50  0000 C CNN
-F 1 "LF353" H 12050 4274 50  0000 C CNN
-F 2 "Package_DIP:DIP-8_W7.62mm_Socket" H 12050 4550 50  0001 C CNN
-F 3 "https://www.ti.com/lit/ds/symlink/lf353-n.pdf" H 12050 4550 50  0001 C CNN
-	1    12050 4550
+P 7400 2600
+F 0 "U8" H 7400 2233 50  0000 C CNN
+F 1 "LF353" H 7400 2324 50  0000 C CNN
+F 2 "Package_DIP:DIP-8_W7.62mm_Socket" H 7400 2600 50  0001 C CNN
+F 3 "https://www.ti.com/lit/ds/symlink/lf353-n.pdf" H 7400 2600 50  0001 C CNN
+	1    7400 2600
 	1    0    0    1   
 $EndComp
 $Comp
@@ -3055,4 +3018,58 @@ Wire Wire Line
 	4200 6850 3600 6850
 Text GLabel 2050 3500 0    50   Input ~ 0
 IN
+$Comp
+L elektrophon:LF353 U5
+U 1 1 614F8488
+P 11250 5150
+F 0 "U5" H 11250 4783 50  0000 C CNN
+F 1 "LF353" H 11250 4874 50  0000 C CNN
+F 2 "Package_DIP:DIP-8_W7.62mm_Socket" H 11250 5150 50  0001 C CNN
+F 3 "https://www.ti.com/lit/ds/symlink/lf353-n.pdf" H 11250 5150 50  0001 C CNN
+	1    11250 5150
+	1    0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 6118106A
+P 3200 10400
+F 0 "#PWR?" H 3200 10150 50  0001 C CNN
+F 1 "GND" H 3205 10227 50  0000 C CNN
+F 2 "" H 3200 10400 50  0001 C CNN
+F 3 "" H 3200 10400 50  0001 C CNN
+	1    3200 10400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3200 10400 3200 10350
+Wire Wire Line
+	3200 10350 3450 10350
+Connection ~ 3450 10350
+Wire Wire Line
+	3450 10350 4250 10350
+Connection ~ 4250 10350
+Wire Wire Line
+	4250 10350 5050 10350
+Connection ~ 5050 10350
+Wire Wire Line
+	5050 10350 5850 10350
+Connection ~ 5850 10350
+Wire Wire Line
+	5850 10350 6650 10350
+Connection ~ 6650 10350
+Wire Wire Line
+	6650 10350 7450 10350
+Connection ~ 7450 10350
+Wire Wire Line
+	7450 10350 8250 10350
+Connection ~ 8250 10350
+Wire Wire Line
+	8250 10350 9050 10350
+Connection ~ 9050 10350
+Wire Wire Line
+	9050 10350 9850 10350
+Connection ~ 9850 10350
+Wire Wire Line
+	9850 10350 10650 10350
+Connection ~ 10650 10350
 $EndSCHEMATC
