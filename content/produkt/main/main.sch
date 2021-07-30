@@ -1350,9 +1350,10 @@ L Connector:Conn_01x03_Female J3
 U 1 1 6105072E
 P 8750 5650
 F 0 "J3" H 8600 5950 50  0000 C CNN
-F 1 "Conn_01x03_Female" H 8642 5844 50  0001 C CNN
+F 1 "01x03 Female" H 8642 5844 50  0001 C CNN
 F 2 "Connector_PinSocket_2.54mm:PinSocket_1x03_P2.54mm_Vertical" H 8750 5650 50  0001 C CNN
 F 3 "~" H 8750 5650 50  0001 C CNN
+F 4 "Board to Board Connectors (2.54 mm)" H 8750 5650 50  0001 C CNN "Description"
 	1    8750 5650
 	-1   0    0    -1  
 $EndComp
@@ -1361,9 +1362,10 @@ L Connector:Conn_01x05_Female J2
 U 1 1 61044027
 P 8000 5750
 F 0 "J2" H 7850 6150 50  0000 C CNN
-F 1 "Conn_01x05_Female" H 7892 6044 50  0001 C CNN
+F 1 "01x05 Female" H 7892 6044 50  0001 C CNN
 F 2 "Connector_PinSocket_2.54mm:PinSocket_1x05_P2.54mm_Vertical" H 8000 5750 50  0001 C CNN
 F 3 "~" H 8000 5750 50  0001 C CNN
+F 4 "Board to Board Connectors (2.54 mm)" H 8000 5750 50  0001 C CNN "Description"
 	1    8000 5750
 	-1   0    0    -1  
 $EndComp

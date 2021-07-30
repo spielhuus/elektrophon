@@ -121,6 +121,7 @@ F 3 "~" H 2550 2500 50  0001 C CNN
 F 4 "X" H 2550 2500 50  0001 C CNN "Spice_Primitive"
 F 5 "RV1" H 2550 2500 50  0001 C CNN "Spice_Model"
 F 6 "Y" H 2550 2500 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "Alpha 9 mm Pots – Vertical" H 2550 2500 50  0001 C CNN "Description"
 	1    2550 2500
 	1    0    0    1   
 $EndComp
@@ -174,8 +175,9 @@ U 1 1 5F7FA5E2
 P 2050 4600
 F 0 "R1" V 2257 4600 50  0000 C CNN
 F 1 "1k" V 2166 4600 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 1980 4600 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" V 1980 4600 50  0001 C CNN
 F 3 "~" H 2050 4600 50  0001 C CNN
+F 4 "Metal Film Resistors - Through Hole (L=3.6 mm, D=1.6 mm, 1%)" V 2050 4600 50  0001 C CNN "Description"
 	1    2050 4600
 	0    -1   -1   0   
 $EndComp
@@ -217,6 +219,7 @@ F 3 "~" H 2550 3600 50  0001 C CNN
 F 4 "X" H 2550 3600 50  0001 C CNN "Spice_Primitive"
 F 5 "RV1" H 2550 3600 50  0001 C CNN "Spice_Model"
 F 6 "Y" H 2550 3600 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "Alpha 9 mm Pots – Vertical" H 2550 3600 50  0001 C CNN "Description"
 	1    2550 3600
 	1    0    0    1   
 $EndComp
@@ -278,6 +281,7 @@ F 3 "~" H 4850 2500 50  0001 C CNN
 F 4 "X" H 4850 2500 50  0001 C CNN "Spice_Primitive"
 F 5 "RV1" H 4850 2500 50  0001 C CNN "Spice_Model"
 F 6 "Y" H 4850 2500 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "Alpha 9 mm Pots – Vertical" H 4850 2500 50  0001 C CNN "Description"
 	1    4850 2500
 	1    0    0    1   
 $EndComp
@@ -331,8 +335,9 @@ U 1 1 609D4414
 P 4350 4600
 F 0 "R2" V 4557 4600 50  0000 C CNN
 F 1 "1k" V 4466 4600 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 4280 4600 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" V 4280 4600 50  0001 C CNN
 F 3 "~" H 4350 4600 50  0001 C CNN
+F 4 "Metal Film Resistors - Through Hole (L=3.6 mm, D=1.6 mm, 1%)" V 4350 4600 50  0001 C CNN "Description"
 	1    4350 4600
 	0    -1   -1   0   
 $EndComp
@@ -374,6 +379,7 @@ F 3 "~" H 4850 3600 50  0001 C CNN
 F 4 "X" H 4850 3600 50  0001 C CNN "Spice_Primitive"
 F 5 "RV1" H 4850 3600 50  0001 C CNN "Spice_Model"
 F 6 "Y" H 4850 3600 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "Alpha 9 mm Pots – Vertical" H 4850 3600 50  0001 C CNN "Description"
 	1    4850 3600
 	1    0    0    1   
 $EndComp
@@ -434,10 +440,11 @@ $Comp
 L Device:LED D3
 U 1 1 5FEF7875
 P 7500 2750
-F 0 "D3" V 7600 2500 50  0000 C CNN
-F 1 "LED" V 7500 2500 50  0000 C CNN
+F 0 "D3" V 7600 2350 50  0000 C CNN
+F 1 "LED (Green)" V 7500 2350 50  0000 C CNN
 F 2 "LED_THT:LED_D3.0mm" H 7500 2750 50  0001 C CNN
-F 3 "~" H 7500 2750 50  0001 C CNN
+F 3 "https://www.mouser.ch/datasheet/2/216/WP710A10LZGCK-535717.pdf" H 7500 2750 50  0001 C CNN
+F 4 "LED 3mm low current" V 7500 2750 50  0001 C CNN "Description"
 	1    7500 2750
 	0    -1   -1   0   
 $EndComp
@@ -460,6 +467,7 @@ F 0 "R5" H 7570 2096 50  0000 L CNN
 F 1 "5k" H 7570 2005 50  0000 L CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 7430 2050 50  0001 C CNN
 F 3 "~" H 7500 2050 50  0001 C CNN
+F 4 "Thick Film Resistors - SMD (0805)" H 7500 2050 50  0001 C CNN "Description"
 	1    7500 2050
 	1    0    0    -1  
 $EndComp
@@ -482,6 +490,7 @@ F 0 "R3" V 6743 2400 50  0000 C CNN
 F 1 "100k" V 6834 2400 50  0000 C CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 6880 2400 50  0001 C CNN
 F 3 "~" H 6950 2400 50  0001 C CNN
+F 4 "Thick Film Resistors - SMD (0805)" V 6950 2400 50  0001 C CNN "Description"
 	1    6950 2400
 	0    1    1    0   
 $EndComp
@@ -504,10 +513,11 @@ $Comp
 L Device:LED D7
 U 1 1 60AE943D
 P 8850 2750
-F 0 "D7" V 8950 2500 50  0000 C CNN
-F 1 "LED" V 8850 2500 50  0000 C CNN
+F 0 "D7" V 8950 2350 50  0000 C CNN
+F 1 "LED (Green)" V 8850 2350 50  0000 C CNN
 F 2 "LED_THT:LED_D3.0mm" H 8850 2750 50  0001 C CNN
-F 3 "~" H 8850 2750 50  0001 C CNN
+F 3 "https://www.mouser.ch/datasheet/2/216/WP710A10LZGCK-535717.pdf" H 8850 2750 50  0001 C CNN
+F 4 "LED 3mm low current" V 8850 2750 50  0001 C CNN "Description"
 	1    8850 2750
 	0    -1   -1   0   
 $EndComp
@@ -530,6 +540,7 @@ F 0 "R9" H 8920 2096 50  0000 L CNN
 F 1 "5k" H 8920 2005 50  0000 L CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 8780 2050 50  0001 C CNN
 F 3 "~" H 8850 2050 50  0001 C CNN
+F 4 "Thick Film Resistors - SMD (0805)" H 8850 2050 50  0001 C CNN "Description"
 	1    8850 2050
 	1    0    0    -1  
 $EndComp
@@ -552,6 +563,7 @@ F 0 "R7" V 8093 2400 50  0000 C CNN
 F 1 "100k" V 8184 2400 50  0000 C CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 8230 2400 50  0001 C CNN
 F 3 "~" H 8300 2400 50  0001 C CNN
+F 4 "Thick Film Resistors - SMD (0805)" V 8300 2400 50  0001 C CNN "Description"
 	1    8300 2400
 	0    1    1    0   
 $EndComp
@@ -574,10 +586,11 @@ $Comp
 L Device:LED D11
 U 1 1 60AF092F
 P 10400 2750
-F 0 "D11" V 10500 2500 50  0000 C CNN
-F 1 "LED" V 10400 2500 50  0000 C CNN
+F 0 "D11" V 10500 2400 50  0000 C CNN
+F 1 "LED (Red)" V 10400 2400 50  0000 C CNN
 F 2 "LED_THT:LED_D3.0mm" H 10400 2750 50  0001 C CNN
-F 3 "~" H 10400 2750 50  0001 C CNN
+F 3 "https://www.mouser.ch/datasheet/2/216/WP710A10LSECK-J3-535625.pdf" H 10400 2750 50  0001 C CNN
+F 4 "LED 3mm low current" V 10400 2750 50  0001 C CNN "Description"
 	1    10400 2750
 	0    -1   -1   0   
 $EndComp
@@ -600,6 +613,7 @@ F 0 "R13" H 10470 2096 50  0000 L CNN
 F 1 "5k" H 10470 2005 50  0000 L CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 10330 2050 50  0001 C CNN
 F 3 "~" H 10400 2050 50  0001 C CNN
+F 4 "Thick Film Resistors - SMD (0805)" H 10400 2050 50  0001 C CNN "Description"
 	1    10400 2050
 	1    0    0    -1  
 $EndComp
@@ -622,6 +636,7 @@ F 0 "R11" V 9643 2400 50  0000 C CNN
 F 1 "100k" V 9734 2400 50  0000 C CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 9780 2400 50  0001 C CNN
 F 3 "~" H 9850 2400 50  0001 C CNN
+F 4 "Thick Film Resistors - SMD (0805)" V 9850 2400 50  0001 C CNN "Description"
 	1    9850 2400
 	0    1    1    0   
 $EndComp
@@ -642,10 +657,11 @@ $Comp
 L Device:LED D4
 U 1 1 60AF9231
 P 7500 4650
-F 0 "D4" V 7600 4400 50  0000 C CNN
-F 1 "LED" V 7500 4400 50  0000 C CNN
+F 0 "D4" V 7600 4250 50  0000 C CNN
+F 1 "LED (Green)" V 7500 4250 50  0000 C CNN
 F 2 "LED_THT:LED_D3.0mm" H 7500 4650 50  0001 C CNN
-F 3 "~" H 7500 4650 50  0001 C CNN
+F 3 "https://www.mouser.ch/datasheet/2/216/WP710A10LZGCK-535717.pdf" H 7500 4650 50  0001 C CNN
+F 4 "LED 3mm low current" V 7500 4650 50  0001 C CNN "Description"
 	1    7500 4650
 	0    -1   -1   0   
 $EndComp
@@ -668,6 +684,7 @@ F 0 "R6" H 7570 3996 50  0000 L CNN
 F 1 "5k" H 7570 3905 50  0000 L CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 7430 3950 50  0001 C CNN
 F 3 "~" H 7500 3950 50  0001 C CNN
+F 4 "Thick Film Resistors - SMD (0805)" H 7500 3950 50  0001 C CNN "Description"
 	1    7500 3950
 	1    0    0    -1  
 $EndComp
@@ -690,6 +707,7 @@ F 0 "R4" V 6743 4300 50  0000 C CNN
 F 1 "100k" V 6834 4300 50  0000 C CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 6880 4300 50  0001 C CNN
 F 3 "~" H 6950 4300 50  0001 C CNN
+F 4 "Thick Film Resistors - SMD (0805)" V 6950 4300 50  0001 C CNN "Description"
 	1    6950 4300
 	0    1    1    0   
 $EndComp
@@ -712,10 +730,11 @@ $Comp
 L Device:LED D8
 U 1 1 60B0103F
 P 8850 4700
-F 0 "D8" V 8950 4450 50  0000 C CNN
-F 1 "LED" V 8850 4450 50  0000 C CNN
+F 0 "D8" V 8950 4300 50  0000 C CNN
+F 1 "LED (Green)" V 8850 4300 50  0000 C CNN
 F 2 "LED_THT:LED_D3.0mm" H 8850 4700 50  0001 C CNN
-F 3 "~" H 8850 4700 50  0001 C CNN
+F 3 "https://www.mouser.ch/datasheet/2/216/WP710A10LZGCK-535717.pdf" H 8850 4700 50  0001 C CNN
+F 4 "LED 3mm low current" V 8850 4700 50  0001 C CNN "Description"
 	1    8850 4700
 	0    -1   -1   0   
 $EndComp
@@ -738,6 +757,7 @@ F 0 "R10" H 8920 4046 50  0000 L CNN
 F 1 "5k" H 8920 3955 50  0000 L CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 8780 4000 50  0001 C CNN
 F 3 "~" H 8850 4000 50  0001 C CNN
+F 4 "Thick Film Resistors - SMD (0805)" H 8850 4000 50  0001 C CNN "Description"
 	1    8850 4000
 	1    0    0    -1  
 $EndComp
@@ -760,6 +780,7 @@ F 0 "R8" V 8093 4350 50  0000 C CNN
 F 1 "100k" V 8184 4350 50  0000 C CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 8230 4350 50  0001 C CNN
 F 3 "~" H 8300 4350 50  0001 C CNN
+F 4 "Thick Film Resistors - SMD (0805)" V 8300 4350 50  0001 C CNN "Description"
 	1    8300 4350
 	0    1    1    0   
 $EndComp
@@ -782,8 +803,8 @@ $Comp
 L Diode:1N4148W D9
 U 1 1 60AACD5E
 P 10100 2750
-F 0 "D9" V 10054 2830 50  0000 L CNN
-F 1 "1N4148W" V 10145 2830 50  0000 L CNN
+F 0 "D9" V 10050 2400 50  0000 L CNN
+F 1 "1N4148W" V 10150 2300 50  0000 L CNN
 F 2 "Diode_SMD:D_SOD-123" H 10100 2575 50  0001 C CNN
 F 3 "https://www.vishay.com/docs/85748/1n4148w.pdf" H 10100 2750 50  0001 C CNN
 	1    10100 2750
@@ -804,8 +825,8 @@ $Comp
 L Diode:1N4148W D1
 U 1 1 60AB44D3
 P 7200 2750
-F 0 "D1" V 7154 2830 50  0000 L CNN
-F 1 "1N4148W" V 7245 2830 50  0000 L CNN
+F 0 "D1" V 7150 2400 50  0000 L CNN
+F 1 "1N4148W" V 7250 2250 50  0000 L CNN
 F 2 "Diode_SMD:D_SOD-123" H 7200 2575 50  0001 C CNN
 F 3 "https://www.vishay.com/docs/85748/1n4148w.pdf" H 7200 2750 50  0001 C CNN
 	1    7200 2750
@@ -815,8 +836,8 @@ $Comp
 L Diode:1N4148W D2
 U 1 1 60AB8812
 P 7200 4650
-F 0 "D2" V 7154 4730 50  0000 L CNN
-F 1 "1N4148W" V 7245 4730 50  0000 L CNN
+F 0 "D2" V 7150 4300 50  0000 L CNN
+F 1 "1N4148W" V 7250 4150 50  0000 L CNN
 F 2 "Diode_SMD:D_SOD-123" H 7200 4475 50  0001 C CNN
 F 3 "https://www.vishay.com/docs/85748/1n4148w.pdf" H 7200 4650 50  0001 C CNN
 	1    7200 4650
@@ -898,9 +919,10 @@ L Device:LED D12
 U 1 1 60AC9EF5
 P 10450 4700
 F 0 "D12" V 10550 4450 50  0000 C CNN
-F 1 "LED" V 10450 4450 50  0000 C CNN
+F 1 "LED (Red)" V 10450 4450 50  0000 C CNN
 F 2 "LED_THT:LED_D3.0mm" H 10450 4700 50  0001 C CNN
-F 3 "~" H 10450 4700 50  0001 C CNN
+F 3 "https://www.mouser.ch/datasheet/2/216/WP710A10LSECK-J3-535625.pdf" H 10450 4700 50  0001 C CNN
+F 4 "LED 3mm low current" V 10450 4700 50  0001 C CNN "Description"
 	1    10450 4700
 	0    -1   -1   0   
 $EndComp
@@ -923,6 +945,7 @@ F 0 "R14" H 10520 4046 50  0000 L CNN
 F 1 "5k" H 10520 3955 50  0000 L CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 10380 4000 50  0001 C CNN
 F 3 "~" H 10450 4000 50  0001 C CNN
+F 4 "Thick Film Resistors - SMD (0805)" H 10450 4000 50  0001 C CNN "Description"
 	1    10450 4000
 	1    0    0    -1  
 $EndComp
@@ -945,6 +968,7 @@ F 0 "R12" V 9693 4350 50  0000 C CNN
 F 1 "100k" V 9784 4350 50  0000 C CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 9830 4350 50  0001 C CNN
 F 3 "~" H 9900 4350 50  0001 C CNN
+F 4 "" V 9900 4350 50  0001 C CNN "Description"
 	1    9900 4350
 	0    1    1    0   
 $EndComp
@@ -965,8 +989,8 @@ $Comp
 L Diode:1N4148W D10
 U 1 1 60AC9F1B
 P 10150 4700
-F 0 "D10" V 10104 4780 50  0000 L CNN
-F 1 "1N4148W" V 10195 4780 50  0000 L CNN
+F 0 "D10" V 10100 4350 50  0000 L CNN
+F 1 "1N4148W" V 10200 4250 50  0000 L CNN
 F 2 "Diode_SMD:D_SOD-123" H 10150 4525 50  0001 C CNN
 F 3 "https://www.vishay.com/docs/85748/1n4148w.pdf" H 10150 4700 50  0001 C CNN
 	1    10150 4700
@@ -1037,6 +1061,7 @@ F 0 "J8" H 3508 6981 50  0000 C CNN
 F 1 "Conn_01x03_Male" H 3508 6890 50  0000 C CNN
 F 2 "Connector_PinSocket_2.54mm:PinSocket_1x03_P2.54mm_Vertical" H 3400 6700 50  0001 C CNN
 F 3 "~" H 3400 6700 50  0001 C CNN
+F 4 "Board to Board Connectors (2.54 mm)" H 3400 6700 50  0001 C CNN "Description"
 	1    3400 6700
 	1    0    0    -1  
 $EndComp
@@ -1045,9 +1070,10 @@ L Connector:Conn_01x05_Male J4
 U 1 1 61041BCA
 P 2550 6800
 F 0 "J4" H 2658 7181 50  0000 C CNN
-F 1 "Conn_01x05_Male" H 2658 7090 50  0000 C CNN
+F 1 "01x05 Male" H 2658 7090 50  0000 C CNN
 F 2 "Connector_PinSocket_2.54mm:PinSocket_1x05_P2.54mm_Vertical" H 2550 6800 50  0001 C CNN
 F 3 "~" H 2550 6800 50  0001 C CNN
+F 4 "Board to Board Connectors (2.54 mm)" H 2550 6800 50  0001 C CNN "Description"
 	1    2550 6800
 	1    0    0    -1  
 $EndComp
