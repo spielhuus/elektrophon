@@ -34,7 +34,8 @@ def create_report(input, output) :
                             out = ''
                             for con in item['con'] :
                                 out += con['x'] + '-' + con['y'] + ": " + con['message'] + "\n"
-                            test_case = TestCase(item['sheet'], key2, (int)(item['code']), item['message'], out)
+                            testname = key + "::" + key2 + "::" + item['sheet']
+                            test_case = TestCase(testname, key3, (int)(item['code']), item['message'], "ERC")
                             test_case.add_failure_info( 'ERC Error' )
                             test_cases.append( test_case )
 
@@ -43,7 +44,8 @@ def create_report(input, output) :
                             out = ''
                             for con in item['con'] :
                                 out += con['x'] + '-' + con['y'] + ": " + con['message'] + "\n"
-                            test_case = TestCase(item['sheet'], key2, (int)(item['code']), item['message'], out)
+                            testname = key + "::" + key2 + "::" + item['sheet']
+                            test_case = TestCase(testname, key3, (int)(item['code']), item['message'], "DRC")
                             test_case.add_failure_info( 'DRC Error' )
                             test_cases.append( test_case )
                         
