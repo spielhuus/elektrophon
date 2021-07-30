@@ -407,27 +407,27 @@ Wire Wire Line
 	2300 4600 2450 4600
 Wire Wire Line
 	3550 2750 3550 5100
-Text GLabel 4000 6750 2    50   Input ~ 0
+Text GLabel 2750 6800 2    50   Input ~ 0
 Xa
-Text GLabel 4000 6850 2    50   Input ~ 0
+Text GLabel 2750 6900 2    50   Input ~ 0
 Ya
-Text GLabel 4000 6950 2    50   Input ~ 0
+Text GLabel 2750 7000 2    50   Input ~ 0
 OUTa
-Text GLabel 4000 7050 2    50   Input ~ 0
+Text GLabel 3600 6600 2    50   Input ~ 0
 Xb
-Text GLabel 4000 7150 2    50   Input ~ 0
+Text GLabel 3600 6700 2    50   Input ~ 0
 Yb
-Text GLabel 4000 7250 2    50   Input ~ 0
+Text GLabel 3600 6800 2    50   Input ~ 0
 OUTb
 $Comp
 L power:GND #PWR09
 U 1 1 609EFA41
-P 4000 6650
-F 0 "#PWR09" H 4000 6400 50  0001 C CNN
-F 1 "GND" V 4005 6522 50  0000 R CNN
-F 2 "" H 4000 6650 50  0001 C CNN
-F 3 "" H 4000 6650 50  0001 C CNN
-	1    4000 6650
+P 2750 6700
+F 0 "#PWR09" H 2750 6450 50  0001 C CNN
+F 1 "GND" V 2755 6572 50  0000 R CNN
+F 2 "" H 2750 6700 50  0001 C CNN
+F 3 "" H 2750 6700 50  0001 C CNN
+	1    2750 6700
 	0    -1   -1   0   
 $EndComp
 $Comp
@@ -993,25 +993,14 @@ IN2y
 Text Label 2350 3300 3    50   ~ 0
 IN1y
 $Comp
-L Connector:Conn_01x08_Male J4
-U 1 1 60B12938
-P 3800 6850
-F 0 "J4" H 3908 7331 50  0000 C CNN
-F 1 "Conn_01x08_Male" H 3908 7240 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x08_P2.54mm_Vertical" H 3800 6850 50  0001 C CNN
-F 3 "~" H 3800 6850 50  0001 C CNN
-	1    3800 6850
-	1    0    0    -1  
-$EndComp
-$Comp
 L power:+5V #PWR08
 U 1 1 60B139A0
-P 4000 6550
-F 0 "#PWR08" H 4000 6400 50  0001 C CNN
-F 1 "+5V" V 4015 6678 50  0000 L CNN
-F 2 "" H 4000 6550 50  0001 C CNN
-F 3 "" H 4000 6550 50  0001 C CNN
-	1    4000 6550
+P 2750 6600
+F 0 "#PWR08" H 2750 6450 50  0001 C CNN
+F 1 "+5V" V 2765 6728 50  0000 L CNN
+F 2 "" H 2750 6600 50  0001 C CNN
+F 3 "" H 2750 6600 50  0001 C CNN
+	1    2750 6600
 	0    1    1    0   
 $EndComp
 $Comp
@@ -1040,4 +1029,26 @@ Text GLabel 9700 2400 0    50   Input ~ 0
 OUTb
 Text GLabel 9750 4350 0    50   Input ~ 0
 OUTa
+$Comp
+L Connector:Conn_01x03_Male J8
+U 1 1 610423AA
+P 3400 6700
+F 0 "J8" H 3508 6981 50  0000 C CNN
+F 1 "Conn_01x03_Male" H 3508 6890 50  0000 C CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x03_P2.54mm_Vertical" H 3400 6700 50  0001 C CNN
+F 3 "~" H 3400 6700 50  0001 C CNN
+	1    3400 6700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x05_Male J4
+U 1 1 61041BCA
+P 2550 6800
+F 0 "J4" H 2658 7181 50  0000 C CNN
+F 1 "Conn_01x05_Male" H 2658 7090 50  0000 C CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x05_P2.54mm_Vertical" H 2550 6800 50  0001 C CNN
+F 3 "~" H 2550 6800 50  0001 C CNN
+	1    2550 6800
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
