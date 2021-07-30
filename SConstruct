@@ -20,10 +20,12 @@ def create_report(input, output) :
                 continue
             elif( key2 == 'test' ) :
                 for item in value2['report']['tests'] :
-                    test_cases.append( TestCase('TEST', item['name'], (int)(item['duration']), item['outcome'], 'I am stderr!') )
+                    test_case = TestCase('TEST', item['name'], (int)(item['duration']), item['outcome'], 'I am stderr!')
+                    if item['outcome'] == "failed" :
+                        test_case.add_failure_info( item['call']['longrepr'])
+                    test_cases.append( test_case )
 
             else : 
-                print( "\tPCB %s " % key2)
                 for key3, value3 in value2.items():
                     if( key3 == 'bom' ) :
                         continue
@@ -32,21 +34,27 @@ def create_report(input, output) :
                             out = ''
                             for con in item['con'] :
                                 out += con['x'] + '-' + con['y'] + ": " + con['message'] + "\n"
-                            test_cases.append( TestCase('ERC', item['sheet'], (int)(item['code']), item['message'], out) )
+                            test_case = TestCase(item['sheet'], key2, (int)(item['code']), item['message'], out)
+                            test_case.add_failure_info( 'ERC Error' )
+                            test_cases.append( test_case )
 
                     elif( key3 == 'drc' ) :
                         for item in value3 :
                             out = ''
                             for con in item['con'] :
                                 out += con['x'] + '-' + con['y'] + ": " + con['message'] + "\n"
-                            test_cases.append( TestCase('DRC', item['sheet'], (int)(item['code']), item['message'], out) )
+                            test_case = TestCase(item['sheet'], key2, (int)(item['code']), item['message'], out)
+                            test_case.add_failure_info( 'DRC Error' )
+                            test_cases.append( test_case )
                         
                     elif( key3 == 'unconnected' ) :
                         for item in value3 :
                             out = ''
                             for con in item['con'] :
                                 out += con['x'] + '-' + con['y'] + ": " + con['message'] + "\n"
-                            test_cases.append( TestCase('Unconnected', item['sheet'], (int)(item['code']), item['message'], out) )
+                            test_case = TestCase(item['sheet'], key2, (int)(item['code']), item['message'], out)
+                            test_case.add_failure_info( 'Unconnected Error' )
+                            test_cases.append( test_case )
 
             test_suites.append( TestSuite( key, test_cases ) )
 
