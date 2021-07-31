@@ -19,8 +19,8 @@
         {% include header.html %}
     </div>
     <div class="hero-body {% if page.hero_darken %} hero-darken {% endif %}">        
-        <!-- div class="columns is-centered">
-            <div class="column is-two-thirds" -->
+        <div class="container">
+            <div class="content">
                 {% if page.hero_tags %}
                 <div class="is-hidden-mobile mb-6">{% include tags.html%}</div>
                 {% endif %}
@@ -33,7 +33,7 @@
                 {% if page.toc == true %}
                     <div class="mt-4 has-text-weight-semibold">{% toc %}</div>
                 {% endif %}          
-            <!-- /div>
-        </div -->
+            </div>
+        </div>
     </div>
 </section>
