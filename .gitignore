@@ -27,10 +27,7 @@ _autosave-*
 #*.csv
 
 fp-info-cache
-fp-lib-table
-sym-lib-table
 *-rescue.dcm
-sym-lib-table
 .~lock.*
 Debug
 debug-out*.txt
