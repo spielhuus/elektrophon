@@ -1,0 +1,604 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "(title)"
+Date ""
+Rev "R01"
+Comp ""
+Comment1 "schema for pcb"
+Comment2 "(description)"
+Comment3 ""
+Comment4 "License CC BY 4.0 - Attribution 4.0 International"
+$EndDescr
+NoConn ~ 1350 1550
+$Comp
+L power:GND #PWR01
+U 1 1 5D78B0AA
+P 1350 1350
+F 0 "#PWR01" H 1350 1100 50  0001 C CNN
+F 1 "GND" H 1355 1177 50  0000 C CNN
+F 2 "" H 1350 1350 50  0001 C CNN
+F 3 "" H 1350 1350 50  0001 C CNN
+	1    1350 1350
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Connector:AudioJack2_SwitchT J1
+U 1 1 5D78B0A3
+P 1150 1450
+F 0 "J1" H 1182 1775 50  0000 C CNN
+F 1 "INPUT" H 1182 1684 50  0000 C CNN
+F 2 "elektrophon:Jack_3.5mm_WQP-PJ398SM_Vertical" H 1150 1450 50  0001 C CNN
+F 3 "~" H 1150 1450 50  0001 C CNN
+	1    1150 1450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1600 1450 1350 1450
+NoConn ~ 2950 1550
+$Comp
+L power:GND #PWR06
+U 1 1 5EA64E8E
+P 2950 1350
+F 0 "#PWR06" H 2950 1100 50  0001 C CNN
+F 1 "GND" H 2955 1177 50  0000 C CNN
+F 2 "" H 2950 1350 50  0001 C CNN
+F 3 "" H 2950 1350 50  0001 C CNN
+	1    2950 1350
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Connector:AudioJack2_SwitchT J6
+U 1 1 5EA64E94
+P 2750 1450
+F 0 "J6" H 2782 1775 50  0000 C CNN
+F 1 "INPUT" H 2782 1684 50  0000 C CNN
+F 2 "elektrophon:Jack_3.5mm_WQP-PJ398SM_Vertical" H 2750 1450 50  0001 C CNN
+F 3 "~" H 2750 1450 50  0001 C CNN
+	1    2750 1450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3200 1450 2950 1450
+NoConn ~ 4550 1550
+$Comp
+L power:GND #PWR010
+U 1 1 5EA65617
+P 4550 1350
+F 0 "#PWR010" H 4550 1100 50  0001 C CNN
+F 1 "GND" H 4555 1177 50  0000 C CNN
+F 2 "" H 4550 1350 50  0001 C CNN
+F 3 "" H 4550 1350 50  0001 C CNN
+	1    4550 1350
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Connector:AudioJack2_SwitchT J10
+U 1 1 5EA6561D
+P 4350 1450
+F 0 "J10" H 4382 1775 50  0000 C CNN
+F 1 "INPUT" H 4382 1684 50  0000 C CNN
+F 2 "elektrophon:Jack_3.5mm_WQP-PJ398SM_Vertical" H 4350 1450 50  0001 C CNN
+F 3 "~" H 4350 1450 50  0001 C CNN
+	1    4350 1450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4800 1450 4550 1450
+NoConn ~ 1350 2350
+$Comp
+L power:GND #PWR02
+U 1 1 5EA6905C
+P 1350 2150
+F 0 "#PWR02" H 1350 1900 50  0001 C CNN
+F 1 "GND" H 1355 1977 50  0000 C CNN
+F 2 "" H 1350 2150 50  0001 C CNN
+F 3 "" H 1350 2150 50  0001 C CNN
+	1    1350 2150
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Connector:AudioJack2_SwitchT J2
+U 1 1 5EA69062
+P 1150 2250
+F 0 "J2" H 1182 2575 50  0000 C CNN
+F 1 "INPUT" H 1182 2484 50  0000 C CNN
+F 2 "elektrophon:Jack_3.5mm_WQP-PJ398SM_Vertical" H 1150 2250 50  0001 C CNN
+F 3 "~" H 1150 2250 50  0001 C CNN
+	1    1150 2250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1600 2250 1350 2250
+NoConn ~ 2950 2350
+$Comp
+L power:GND #PWR07
+U 1 1 5EA6906B
+P 2950 2150
+F 0 "#PWR07" H 2950 1900 50  0001 C CNN
+F 1 "GND" H 2955 1977 50  0000 C CNN
+F 2 "" H 2950 2150 50  0001 C CNN
+F 3 "" H 2950 2150 50  0001 C CNN
+	1    2950 2150
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Connector:AudioJack2_SwitchT J7
+U 1 1 5EA69071
+P 2750 2250
+F 0 "J7" H 2782 2575 50  0000 C CNN
+F 1 "INPUT" H 2782 2484 50  0000 C CNN
+F 2 "elektrophon:Jack_3.5mm_WQP-PJ398SM_Vertical" H 2750 2250 50  0001 C CNN
+F 3 "~" H 2750 2250 50  0001 C CNN
+	1    2750 2250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3200 2250 2950 2250
+NoConn ~ 4550 2350
+$Comp
+L power:GND #PWR011
+U 1 1 5EA6907A
+P 4550 2150
+F 0 "#PWR011" H 4550 1900 50  0001 C CNN
+F 1 "GND" H 4555 1977 50  0000 C CNN
+F 2 "" H 4550 2150 50  0001 C CNN
+F 3 "" H 4550 2150 50  0001 C CNN
+	1    4550 2150
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Connector:AudioJack2_SwitchT J11
+U 1 1 5EA69080
+P 4350 2250
+F 0 "J11" H 4382 2575 50  0000 C CNN
+F 1 "INPUT" H 4382 2484 50  0000 C CNN
+F 2 "elektrophon:Jack_3.5mm_WQP-PJ398SM_Vertical" H 4350 2250 50  0001 C CNN
+F 3 "~" H 4350 2250 50  0001 C CNN
+	1    4350 2250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4800 2250 4550 2250
+NoConn ~ 1350 3200
+$Comp
+L power:GND #PWR03
+U 1 1 5EA69F65
+P 1350 3000
+F 0 "#PWR03" H 1350 2750 50  0001 C CNN
+F 1 "GND" H 1355 2827 50  0000 C CNN
+F 2 "" H 1350 3000 50  0001 C CNN
+F 3 "" H 1350 3000 50  0001 C CNN
+	1    1350 3000
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Connector:AudioJack2_SwitchT J3
+U 1 1 5EA69F6B
+P 1150 3100
+F 0 "J3" H 1182 3425 50  0000 C CNN
+F 1 "INPUT" H 1182 3334 50  0000 C CNN
+F 2 "elektrophon:Jack_3.5mm_WQP-PJ398SM_Vertical" H 1150 3100 50  0001 C CNN
+F 3 "~" H 1150 3100 50  0001 C CNN
+	1    1150 3100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1600 3100 1350 3100
+NoConn ~ 2950 3200
+$Comp
+L power:GND #PWR08
+U 1 1 5EA69F74
+P 2950 3000
+F 0 "#PWR08" H 2950 2750 50  0001 C CNN
+F 1 "GND" H 2955 2827 50  0000 C CNN
+F 2 "" H 2950 3000 50  0001 C CNN
+F 3 "" H 2950 3000 50  0001 C CNN
+	1    2950 3000
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Connector:AudioJack2_SwitchT J8
+U 1 1 5EA69F7A
+P 2750 3100
+F 0 "J8" H 2782 3425 50  0000 C CNN
+F 1 "INPUT" H 2782 3334 50  0000 C CNN
+F 2 "elektrophon:Jack_3.5mm_WQP-PJ398SM_Vertical" H 2750 3100 50  0001 C CNN
+F 3 "~" H 2750 3100 50  0001 C CNN
+	1    2750 3100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3200 3100 2950 3100
+NoConn ~ 4550 3200
+$Comp
+L power:GND #PWR012
+U 1 1 5EA69F83
+P 4550 3000
+F 0 "#PWR012" H 4550 2750 50  0001 C CNN
+F 1 "GND" H 4555 2827 50  0000 C CNN
+F 2 "" H 4550 3000 50  0001 C CNN
+F 3 "" H 4550 3000 50  0001 C CNN
+	1    4550 3000
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Connector:AudioJack2_SwitchT J12
+U 1 1 5EA69F89
+P 4350 3100
+F 0 "J12" H 4382 3425 50  0000 C CNN
+F 1 "INPUT" H 4382 3334 50  0000 C CNN
+F 2 "elektrophon:Jack_3.5mm_WQP-PJ398SM_Vertical" H 4350 3100 50  0001 C CNN
+F 3 "~" H 4350 3100 50  0001 C CNN
+	1    4350 3100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4800 3100 4550 3100
+NoConn ~ 1350 4100
+$Comp
+L power:GND #PWR04
+U 1 1 5EA6B6C3
+P 1350 3900
+F 0 "#PWR04" H 1350 3650 50  0001 C CNN
+F 1 "GND" H 1355 3727 50  0000 C CNN
+F 2 "" H 1350 3900 50  0001 C CNN
+F 3 "" H 1350 3900 50  0001 C CNN
+	1    1350 3900
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Connector:AudioJack2_SwitchT J4
+U 1 1 5EA6B6C9
+P 1150 4000
+F 0 "J4" H 1182 4325 50  0000 C CNN
+F 1 "INPUT" H 1182 4234 50  0000 C CNN
+F 2 "elektrophon:Jack_3.5mm_WQP-PJ398SM_Vertical" H 1150 4000 50  0001 C CNN
+F 3 "~" H 1150 4000 50  0001 C CNN
+	1    1150 4000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1600 4000 1350 4000
+NoConn ~ 2950 4100
+$Comp
+L power:GND #PWR09
+U 1 1 5EA6B6D2
+P 2950 3900
+F 0 "#PWR09" H 2950 3650 50  0001 C CNN
+F 1 "GND" H 2955 3727 50  0000 C CNN
+F 2 "" H 2950 3900 50  0001 C CNN
+F 3 "" H 2950 3900 50  0001 C CNN
+	1    2950 3900
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Connector:AudioJack2_SwitchT J9
+U 1 1 5EA6B6D8
+P 2750 4000
+F 0 "J9" H 2782 4325 50  0000 C CNN
+F 1 "INPUT" H 2782 4234 50  0000 C CNN
+F 2 "elektrophon:Jack_3.5mm_WQP-PJ398SM_Vertical" H 2750 4000 50  0001 C CNN
+F 3 "~" H 2750 4000 50  0001 C CNN
+	1    2750 4000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3200 4000 2950 4000
+NoConn ~ 4550 4100
+$Comp
+L power:GND #PWR013
+U 1 1 5EA6B6E1
+P 4550 3900
+F 0 "#PWR013" H 4550 3650 50  0001 C CNN
+F 1 "GND" H 4555 3727 50  0000 C CNN
+F 2 "" H 4550 3900 50  0001 C CNN
+F 3 "" H 4550 3900 50  0001 C CNN
+	1    4550 3900
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Connector:AudioJack2_SwitchT J13
+U 1 1 5EA6B6E7
+P 4350 4000
+F 0 "J13" H 4382 4325 50  0000 C CNN
+F 1 "INPUT" H 4382 4234 50  0000 C CNN
+F 2 "elektrophon:Jack_3.5mm_WQP-PJ398SM_Vertical" H 4350 4000 50  0001 C CNN
+F 3 "~" H 4350 4000 50  0001 C CNN
+	1    4350 4000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4800 4000 4550 4000
+NoConn ~ 1350 5000
+$Comp
+L power:GND #PWR05
+U 1 1 5EA6BFEA
+P 1350 4800
+F 0 "#PWR05" H 1350 4550 50  0001 C CNN
+F 1 "GND" H 1355 4627 50  0000 C CNN
+F 2 "" H 1350 4800 50  0001 C CNN
+F 3 "" H 1350 4800 50  0001 C CNN
+	1    1350 4800
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Connector:AudioJack2_SwitchT J5
+U 1 1 5EA6BFF0
+P 1150 4900
+F 0 "J5" H 1182 5225 50  0000 C CNN
+F 1 "INPUT" H 1182 5134 50  0000 C CNN
+F 2 "elektrophon:Jack_3.5mm_WQP-PJ398SM_Vertical" H 1150 4900 50  0001 C CNN
+F 3 "~" H 1150 4900 50  0001 C CNN
+	1    1150 4900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1600 4900 1350 4900
+$Comp
+L Device:LED D1
+U 1 1 5EA86E79
+P 6900 4100
+F 0 "D1" H 6893 3845 50  0000 C CNN
+F 1 "LED" H 6893 3936 50  0000 C CNN
+F 2 "LED_THT:LED_D5.0mm" H 6900 4100 50  0001 C CNN
+F 3 "~" H 6900 4100 50  0001 C CNN
+	1    6900 4100
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:LED D2
+U 1 1 5EA87AA1
+P 8300 4100
+F 0 "D2" H 8293 3845 50  0000 C CNN
+F 1 "LED" H 8293 3936 50  0000 C CNN
+F 2 "LED_THT:LED_D5.0mm" H 8300 4100 50  0001 C CNN
+F 3 "~" H 8300 4100 50  0001 C CNN
+	1    8300 4100
+	-1   0    0    1   
+$EndComp
+Text GLabel 1600 1450 2    50   Input ~ 0
+Note_1
+Text GLabel 3200 1450 2    50   Input ~ 0
+Note_2
+Text GLabel 4800 1450 2    50   Input ~ 0
+Note_3
+Text GLabel 1600 2250 2    50   Input ~ 0
+Velocity_1
+Text GLabel 3200 2250 2    50   Input ~ 0
+Velocity_2
+Text GLabel 4800 2250 2    50   Input ~ 0
+Velocity_3
+Text GLabel 1600 3100 2    50   Input ~ 0
+PITCH_BEND_1
+Text GLabel 4800 3100 2    50   Input ~ 0
+PITCH_BEND_3
+Text GLabel 3200 3100 2    50   Input ~ 0
+PITCH_BEND_2
+Text GLabel 1600 4000 2    50   Input ~ 0
+OUT_TRIGGER_1
+Text GLabel 3200 4000 2    50   Input ~ 0
+OUT_TRIGGER_2
+Text GLabel 4800 4000 2    50   Input ~ 0
+OUT_TRIGGER_3
+Text GLabel 1600 4900 2    50   Input ~ 0
+OUT_CLOCK
+Text GLabel 6750 4100 0    50   Input ~ 0
+LED_ACTIVITY
+Text GLabel 8150 4100 0    50   Input ~ 0
+LED_CONNECT
+$Comp
+L Device:R R1
+U 1 1 5EA9DD0A
+P 7100 4300
+F 0 "R1" H 7170 4346 50  0000 L CNN
+F 1 "56" H 7170 4255 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 7030 4300 50  0001 C CNN
+F 3 "~" H 7100 4300 50  0001 C CNN
+	1    7100 4300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR017
+U 1 1 5EA9E2A8
+P 7100 4450
+AR Path="/5EA9E2A8" Ref="#PWR017"  Part="1" 
+AR Path="/5E9FE2D3/5EA9E2A8" Ref="#PWR?"  Part="1" 
+F 0 "#PWR017" H 7100 4200 50  0001 C CNN
+F 1 "GND" H 7105 4277 50  0000 C CNN
+F 2 "" H 7100 4450 50  0001 C CNN
+F 3 "" H 7100 4450 50  0001 C CNN
+	1    7100 4450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7050 4100 7100 4100
+Wire Wire Line
+	7100 4100 7100 4150
+$Comp
+L Device:R R2
+U 1 1 5EAA04C4
+P 8500 4300
+F 0 "R2" H 8570 4346 50  0000 L CNN
+F 1 "56" H 8570 4255 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 8430 4300 50  0001 C CNN
+F 3 "~" H 8500 4300 50  0001 C CNN
+	1    8500 4300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR018
+U 1 1 5EAA04CA
+P 8500 4450
+AR Path="/5EAA04CA" Ref="#PWR018"  Part="1" 
+AR Path="/5E9FE2D3/5EAA04CA" Ref="#PWR?"  Part="1" 
+F 0 "#PWR018" H 8500 4200 50  0001 C CNN
+F 1 "GND" H 8505 4277 50  0000 C CNN
+F 2 "" H 8500 4450 50  0001 C CNN
+F 3 "" H 8500 4450 50  0001 C CNN
+	1    8500 4450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8450 4100 8500 4100
+Wire Wire Line
+	8500 4100 8500 4150
+$Comp
+L Mechanical:MountingHole H1
+U 1 1 6097A217
+P 9650 6000
+F 0 "H1" H 9750 6046 50  0000 L CNN
+F 1 "MountingHole" H 9750 5955 50  0000 L CNN
+F 2 "MountingHole:MountingHole_2.2mm_M2" H 9650 6000 50  0001 C CNN
+F 3 "~" H 9650 6000 50  0001 C CNN
+	1    9650 6000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H2
+U 1 1 6097A580
+P 9650 6300
+F 0 "H2" H 9750 6346 50  0000 L CNN
+F 1 "MountingHole" H 9750 6255 50  0000 L CNN
+F 2 "MountingHole:MountingHole_2.2mm_M2" H 9650 6300 50  0001 C CNN
+F 3 "~" H 9650 6300 50  0001 C CNN
+	1    9650 6300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+15V #PWR014
+U 1 1 5F816C5C
+P 6050 7300
+F 0 "#PWR014" H 6050 7150 50  0001 C CNN
+F 1 "+15V" H 6065 7473 50  0000 C CNN
+F 2 "" H 6050 7300 50  0001 C CNN
+F 3 "" H 6050 7300 50  0001 C CNN
+	1    6050 7300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:-15V #PWR015
+U 1 1 5F816FAE
+P 6300 7300
+F 0 "#PWR015" H 6300 7400 50  0001 C CNN
+F 1 "-15V" H 6315 7473 50  0000 C CNN
+F 2 "" H 6300 7300 50  0001 C CNN
+F 3 "" H 6300 7300 50  0001 C CNN
+	1    6300 7300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR016
+U 1 1 5F817A91
+P 6550 7400
+F 0 "#PWR016" H 6550 7150 50  0001 C CNN
+F 1 "GND" H 6555 7227 50  0000 C CNN
+F 2 "" H 6550 7400 50  0001 C CNN
+F 3 "" H 6550 7400 50  0001 C CNN
+	1    6550 7400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:PWR_FLAG #FLG01
+U 1 1 5F737716
+P 6050 7300
+F 0 "#FLG01" H 6050 7375 50  0001 C CNN
+F 1 "PWR_FLAG" H 6050 7473 50  0001 C CNN
+F 2 "" H 6050 7300 50  0001 C CNN
+F 3 "~" H 6050 7300 50  0001 C CNN
+	1    6050 7300
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:PWR_FLAG #FLG02
+U 1 1 5F737C0D
+P 6300 7300
+F 0 "#FLG02" H 6300 7375 50  0001 C CNN
+F 1 "PWR_FLAG" H 6300 7473 50  0001 C CNN
+F 2 "" H 6300 7300 50  0001 C CNN
+F 3 "~" H 6300 7300 50  0001 C CNN
+	1    6300 7300
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:PWR_FLAG #FLG03
+U 1 1 5F737FC5
+P 6550 7400
+F 0 "#FLG03" H 6550 7475 50  0001 C CNN
+F 1 "PWR_FLAG" H 6550 7573 50  0001 C CNN
+F 2 "" H 6550 7400 50  0001 C CNN
+F 3 "~" H 6550 7400 50  0001 C CNN
+	1    6550 7400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H3
+U 1 1 6098DECA
+P 10400 6000
+F 0 "H3" H 10500 6046 50  0000 L CNN
+F 1 "MountingHole" H 10500 5955 50  0000 L CNN
+F 2 "MountingHole:MountingHole_2.2mm_M2" H 10400 6000 50  0001 C CNN
+F 3 "~" H 10400 6000 50  0001 C CNN
+	1    10400 6000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H4
+U 1 1 6098DED0
+P 10400 6300
+F 0 "H4" H 10500 6346 50  0000 L CNN
+F 1 "MountingHole" H 10500 6255 50  0000 L CNN
+F 2 "MountingHole:MountingHole_2.2mm_M2" H 10400 6300 50  0001 C CNN
+F 3 "~" H 10400 6300 50  0001 C CNN
+	1    10400 6300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x19_Female J14
+U 1 1 6104856A
+P 10100 2100
+F 0 "J14" H 10128 2126 50  0000 L CNN
+F 1 "Conn_01x19_Female" H 10128 2035 50  0000 L CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x19_P2.54mm_Vertical" H 10100 2100 50  0001 C CNN
+F 3 "~" H 10100 2100 50  0001 C CNN
+	1    10100 2100
+	1    0    0    -1  
+$EndComp
+Text GLabel 9900 3000 0    50   Input ~ 0
+LED_CONNECT
+Text GLabel 9900 2900 0    50   Input ~ 0
+LED_ACTIVITY
+Text GLabel 9900 2500 0    50   Input ~ 0
+OUT_TRIGGER_1
+Text GLabel 9900 2600 0    50   Input ~ 0
+OUT_TRIGGER_2
+Text GLabel 9900 2700 0    50   Input ~ 0
+OUT_TRIGGER_3
+Text GLabel 9900 2800 0    50   Input ~ 0
+OUT_CLOCK
+Text GLabel 9900 1200 0    50   Input ~ 0
+Note_1
+Text GLabel 9900 1300 0    50   Input ~ 0
+Velocity_1
+Text GLabel 9900 1400 0    50   Input ~ 0
+Note_2
+Text GLabel 9900 1500 0    50   Input ~ 0
+Velocity_2
+Text GLabel 9900 1600 0    50   Input ~ 0
+Note_3
+Text GLabel 9900 1700 0    50   Input ~ 0
+Velocity_3
+Text GLabel 9900 1800 0    50   Input ~ 0
+PITCH_BEND_1
+Text GLabel 9900 1900 0    50   Input ~ 0
+PITCH_BEND_2
+Text GLabel 9900 2000 0    50   Input ~ 0
+PITCH_BEND_3
+NoConn ~ 9900 2100
+NoConn ~ 9900 2200
+NoConn ~ 9900 2300
+NoConn ~ 9900 2400
+$EndSCHEMATC

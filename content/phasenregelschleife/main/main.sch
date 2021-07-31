@@ -1,0 +1,92 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L 4xxx:4046 U1
+U 1 1 607C3690
+P 2250 2400
+F 0 "U1" H 2550 3300 50  0000 C CNN
+F 1 "4046" H 2550 3200 50  0000 C CNN
+F 2 "Package_DIP:DIP-16_W7.62mm_Socket" H 2250 2400 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/HEF4046B.pdf" H 2250 2400 50  0001 C CNN
+	1    2250 2400
+	1    0    0    -1  
+$EndComp
+$Comp
+L 4xxx:4046 U2
+U 1 1 607C39AE
+P 4300 2400
+F 0 "U2" H 4600 3300 50  0000 C CNN
+F 1 "4046" H 4600 3200 50  0000 C CNN
+F 2 "Package_DIP:DIP-16_W7.62mm_Socket" H 4300 2400 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/HEF4046B.pdf" H 4300 2400 50  0001 C CNN
+	1    4300 2400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+15V #PWR0101
+U 1 1 607C5E0E
+P 2250 1700
+F 0 "#PWR0101" H 2250 1550 50  0001 C CNN
+F 1 "+15V" H 2265 1873 50  0000 C CNN
+F 2 "" H 2250 1700 50  0001 C CNN
+F 3 "" H 2250 1700 50  0001 C CNN
+	1    2250 1700
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0102
+U 1 1 607C63BD
+P 2250 3200
+F 0 "#PWR0102" H 2250 2950 50  0001 C CNN
+F 1 "GND" H 2255 3027 50  0000 C CNN
+F 2 "" H 2250 3200 50  0001 C CNN
+F 3 "" H 2250 3200 50  0001 C CNN
+	1    2250 3200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C1
+U 1 1 607C6852
+P 1300 2300
+F 0 "C1" V 1048 2300 50  0000 C CNN
+F 1 "0.01u" V 1139 2300 50  0000 C CNN
+F 2 "Capacitor_THT:C_Disc_D3.8mm_W2.6mm_P2.50mm" H 1338 2150 50  0001 C CNN
+F 3 "~" H 1300 2300 50  0001 C CNN
+	1    1300 2300
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1750 2300 1450 2300
+Wire Wire Line
+	1050 2300 1050 2400
+Wire Wire Line
+	1050 2400 1750 2400
+Wire Wire Line
+	1150 2300 1050 2300
+$Comp
+L power:GND #PWR0103
+U 1 1 607C700A
+P 1750 2900
+F 0 "#PWR0103" H 1750 2650 50  0001 C CNN
+F 1 "GND" H 1755 2727 50  0000 C CNN
+F 2 "" H 1750 2900 50  0001 C CNN
+F 3 "" H 1750 2900 50  0001 C CNN
+	1    1750 2900
+	1    0    0    -1  
+$EndComp
+Text Label 2750 2000 0    50   ~ 0
+VCO_1
+$EndSCHEMATC

@@ -1,0 +1,44 @@
+---
+layout: module
+title: phasenregelschleife
+author: spielhuus
+version: 0
+status: draft
+tags: vco
+category: module
+toc: true
+image: /assets/polivoks_files/polivoks-logo.jpg
+panel: /assets/polivoks_files/polivoks-panel.jpg
+hero_image: /assets/polivoks_files/polivoks-logo.jpg
+hide_hero: true
+excerpt: the polivoks filter has very unusual design. It is a filter without capacitors and also does not need to be trimmed. but it is a very screaming filter.
+callouts:
+  - title: schematics
+    subtitle: schematic files
+    icon: fas fa-file-download
+    files:
+      - href: /assets/phasenregelschleife_files/main-schematic.pdf
+        name: main
+      - href: /assets/phasenregelschleife_files/mount-schematic.pdf
+        name: mount
+  - title: PCB
+    subtitle: PCB files
+    icon: fas fa-code-branch
+    files:
+      - href: /assets/phasenregelschleife_files/main-pcb.pdf
+        name: main
+      - href: /assets/phasenregelschleife_files/mount-pcb.pdf
+        name: mount
+      - href: /assets/phasenregelschleife_files/panel-pcb.pdf
+        name: panel
+  - title: gerbers
+    subtitle: gerber files
+    icon: fas fa-industry
+    files:
+      - href: /assets/phasenregelschleife_files/main-gerber_files.zip
+        name: main
+      - href: /assets/phasenregelschleife_files/mount-gerber_files.zip
+        name: mount
+      - href: /assets/phasenregelschleife_files/panel-gerber_files.zip
+        name: panel
+---
