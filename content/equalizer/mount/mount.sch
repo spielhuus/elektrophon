@@ -21,6 +21,7 @@ F 0 "RV3" V 3543 2750 50  0000 C CNN
 F 1 "50k" V 3634 2750 50  0000 C CNN
 F 2 "elektrophon:Potentiometer_Alpha_RD901F-40-00D_Single_Vertical" H 3750 2750 50  0001 C CNN
 F 3 "~" H 3750 2750 50  0001 C CNN
+F 4 "Alpha 9 mm Pots – Vertical" V 3750 2750 50  0001 C CNN "Description"
 	1    3750 2750
 	0    1    1    0   
 $EndComp
@@ -32,6 +33,7 @@ F 0 "RV5" V 4393 2750 50  0000 C CNN
 F 1 "50k" V 4484 2750 50  0000 C CNN
 F 2 "elektrophon:Potentiometer_Alpha_RD901F-40-00D_Single_Vertical" H 4600 2750 50  0001 C CNN
 F 3 "~" H 4600 2750 50  0001 C CNN
+F 4 "Alpha 9 mm Pots – Vertical" V 4600 2750 50  0001 C CNN "Description"
 	1    4600 2750
 	0    1    1    0   
 $EndComp
@@ -43,6 +45,7 @@ F 0 "RV7" V 5243 2750 50  0000 C CNN
 F 1 "50k" V 5334 2750 50  0000 C CNN
 F 2 "elektrophon:Potentiometer_Alpha_RD901F-40-00D_Single_Vertical" H 5450 2750 50  0001 C CNN
 F 3 "~" H 5450 2750 50  0001 C CNN
+F 4 "Alpha 9 mm Pots – Vertical" V 5450 2750 50  0001 C CNN "Description"
 	1    5450 2750
 	0    1    1    0   
 $EndComp
@@ -54,6 +57,7 @@ F 0 "RV2" V 3543 1300 50  0000 C CNN
 F 1 "50k" V 3634 1300 50  0000 C CNN
 F 2 "elektrophon:Potentiometer_Alpha_RD901F-40-00D_Single_Vertical" H 3750 1300 50  0001 C CNN
 F 3 "~" H 3750 1300 50  0001 C CNN
+F 4 "Alpha 9 mm Pots – Vertical" V 3750 1300 50  0001 C CNN "Description"
 	1    3750 1300
 	0    1    1    0   
 $EndComp
@@ -65,6 +69,7 @@ F 0 "RV4" V 4393 1300 50  0000 C CNN
 F 1 "50k" V 4484 1300 50  0000 C CNN
 F 2 "elektrophon:Potentiometer_Alpha_RD901F-40-00D_Single_Vertical" H 4600 1300 50  0001 C CNN
 F 3 "~" H 4600 1300 50  0001 C CNN
+F 4 "Alpha 9 mm Pots – Vertical" V 4600 1300 50  0001 C CNN "Description"
 	1    4600 1300
 	0    1    1    0   
 $EndComp
@@ -76,6 +81,7 @@ F 0 "RV6" V 5243 1300 50  0000 C CNN
 F 1 "50k" V 5334 1300 50  0000 C CNN
 F 2 "elektrophon:Potentiometer_Alpha_RD901F-40-00D_Single_Vertical" H 5450 1300 50  0001 C CNN
 F 3 "~" H 5450 1300 50  0001 C CNN
+F 4 "Alpha 9 mm Pots – Vertical" V 5450 1300 50  0001 C CNN "Description"
 	1    5450 1300
 	0    1    1    0   
 $EndComp
@@ -87,6 +93,7 @@ F 0 "RV8" V 6093 1300 50  0000 C CNN
 F 1 "50k" V 6184 1300 50  0000 C CNN
 F 2 "elektrophon:Potentiometer_Alpha_RD901F-40-00D_Single_Vertical" H 6300 1300 50  0001 C CNN
 F 3 "~" H 6300 1300 50  0001 C CNN
+F 4 "Alpha 9 mm Pots – Vertical" V 6300 1300 50  0001 C CNN "Description"
 	1    6300 1300
 	0    1    1    0   
 $EndComp
@@ -98,6 +105,7 @@ F 0 "RV10" V 6943 1300 50  0000 C CNN
 F 1 "50k" V 7034 1300 50  0000 C CNN
 F 2 "elektrophon:Potentiometer_Alpha_RD901F-40-00D_Single_Vertical" H 7150 1300 50  0001 C CNN
 F 3 "~" H 7150 1300 50  0001 C CNN
+F 4 "Alpha 9 mm Pots – Vertical" V 7150 1300 50  0001 C CNN "Description"
 	1    7150 1300
 	0    1    1    0   
 $EndComp
@@ -109,6 +117,7 @@ F 0 "RV9" V 6093 2750 50  0000 C CNN
 F 1 "50k" V 6184 2750 50  0000 C CNN
 F 2 "elektrophon:Potentiometer_Alpha_RD901F-40-00D_Single_Vertical" H 6300 2750 50  0001 C CNN
 F 3 "~" H 6300 2750 50  0001 C CNN
+F 4 "Alpha 9 mm Pots – Vertical" V 6300 2750 50  0001 C CNN "Description"
 	1    6300 2750
 	0    1    1    0   
 $EndComp
@@ -120,6 +129,7 @@ F 0 "RV11" V 6943 2750 50  0000 C CNN
 F 1 "50k" V 7034 2750 50  0000 C CNN
 F 2 "elektrophon:Potentiometer_Alpha_RD901F-40-00D_Single_Vertical" H 7150 2750 50  0001 C CNN
 F 3 "~" H 7150 2750 50  0001 C CNN
+F 4 "Alpha 9 mm Pots – Vertical" V 7150 2750 50  0001 C CNN "Description"
 	1    7150 2750
 	0    1    1    0   
 $EndComp
@@ -142,6 +152,7 @@ F 0 "RV1" V 1543 1300 50  0000 C CNN
 F 1 "50k" V 1634 1300 50  0000 C CNN
 F 2 "elektrophon:Potentiometer_Alpha_RD901F-40-00D_Single_Vertical" H 1750 1300 50  0001 C CNN
 F 3 "~" H 1750 1300 50  0001 C CNN
+F 4 "Alpha 9 mm Pots – Vertical" V 1750 1300 50  0001 C CNN "Description"
 	1    1750 1300
 	1    0    0    -1  
 $EndComp
@@ -324,6 +335,7 @@ F 0 "R1" H 3820 1646 50  0000 L CNN
 F 1 "39k" H 3820 1555 50  0000 L CNN
 F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" V 3680 1600 50  0001 C CNN
 F 3 "~" H 3750 1600 50  0001 C CNN
+F 4 "Metal Film Resistors - Through Hole (L=3.6 mm, D=1.6 mm, 1%)" H 3750 1600 50  0001 C CNN "Description"
 	1    3750 1600
 	1    0    0    -1  
 $EndComp
@@ -335,6 +347,7 @@ F 0 "R2" H 4670 1646 50  0000 L CNN
 F 1 "62k" H 4670 1555 50  0000 L CNN
 F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" V 4530 1600 50  0001 C CNN
 F 3 "~" H 4600 1600 50  0001 C CNN
+F 4 "Metal Film Resistors - Through Hole (L=3.6 mm, D=1.6 mm, 1%)" H 4600 1600 50  0001 C CNN "Description"
 	1    4600 1600
 	1    0    0    -1  
 $EndComp
@@ -346,6 +359,7 @@ F 0 "R3" H 5520 1646 50  0000 L CNN
 F 1 "36k" H 5520 1555 50  0000 L CNN
 F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" V 5380 1600 50  0001 C CNN
 F 3 "~" H 5450 1600 50  0001 C CNN
+F 4 "Metal Film Resistors - Through Hole (L=3.6 mm, D=1.6 mm, 1%)" H 5450 1600 50  0001 C CNN "Description"
 	1    5450 1600
 	1    0    0    -1  
 $EndComp
@@ -357,18 +371,8 @@ F 0 "R4" H 6370 1646 50  0000 L CNN
 F 1 "47k" H 6370 1555 50  0000 L CNN
 F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" V 6230 1600 50  0001 C CNN
 F 3 "~" H 6300 1600 50  0001 C CNN
+F 4 "Metal Film Resistors - Through Hole (L=3.6 mm, D=1.6 mm, 1%)" H 6300 1600 50  0001 C CNN "Description"
 	1    6300 1600
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R R5
-U 1 1 60F30DD3
-P 7150 1900
-F 0 "R5" H 7220 1946 50  0000 L CNN
-F 1 "130k" H 7220 1855 50  0000 L CNN
-F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" V 7080 1900 50  0001 C CNN
-F 3 "~" H 7150 1900 50  0001 C CNN
-	1    7150 1900
 	1    0    0    -1  
 $EndComp
 Text GLabel 3750 1750 3    50   Input ~ 0
@@ -387,7 +391,7 @@ Text GLabel 5450 1750 3    50   Input ~ 0
 C_B
 Text GLabel 6300 1750 3    50   Input ~ 0
 D_B
-Text GLabel 7150 2050 3    50   Input ~ 0
+Text GLabel 7150 1450 3    50   Input ~ 0
 E_B
 Wire Wire Line
 	4350 1350 4350 1300
@@ -421,17 +425,6 @@ Wire Wire Line
 	7300 1300 7400 1300
 Wire Wire Line
 	7400 1300 7400 1350
-$Comp
-L Device:C C1
-U 1 1 60F3B9E8
-P 7150 1600
-F 0 "C1" H 7265 1646 50  0000 L CNN
-F 1 "C" H 7265 1555 50  0000 L CNN
-F 2 "Capacitor_THT:C_Disc_D3.8mm_W2.6mm_P2.50mm" H 7188 1450 50  0001 C CNN
-F 3 "~" H 7150 1600 50  0001 C CNN
-	1    7150 1600
-	1    0    0    -1  
-$EndComp
 Text GLabel 7950 1650 0    50   Input ~ 0
 A_B
 Text GLabel 7950 1750 0    50   Input ~ 0
@@ -464,6 +457,7 @@ F 0 "R6" H 3820 3096 50  0000 L CNN
 F 1 "51k" H 3820 3005 50  0000 L CNN
 F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" V 3680 3050 50  0001 C CNN
 F 3 "~" H 3750 3050 50  0001 C CNN
+F 4 "Metal Film Resistors - Through Hole (L=3.6 mm, D=1.6 mm, 1%)" H 3750 3050 50  0001 C CNN "Description"
 	1    3750 3050
 	1    0    0    -1  
 $EndComp
@@ -475,6 +469,7 @@ F 0 "R7" H 4670 3096 50  0000 L CNN
 F 1 "68k" H 4670 3005 50  0000 L CNN
 F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" V 4530 3050 50  0001 C CNN
 F 3 "~" H 4600 3050 50  0001 C CNN
+F 4 "Metal Film Resistors - Through Hole (L=3.6 mm, D=1.6 mm, 1%)" H 4600 3050 50  0001 C CNN "Description"
 	1    4600 3050
 	1    0    0    -1  
 $EndComp
@@ -486,29 +481,8 @@ F 0 "R8" H 5520 3096 50  0000 L CNN
 F 1 "43k" H 5520 3005 50  0000 L CNN
 F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" V 5380 3050 50  0001 C CNN
 F 3 "~" H 5450 3050 50  0001 C CNN
+F 4 "Metal Film Resistors - Through Hole (L=3.6 mm, D=1.6 mm, 1%)" H 5450 3050 50  0001 C CNN "Description"
 	1    5450 3050
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R R10
-U 1 1 60F5A527
-P 7150 3350
-F 0 "R10" H 7220 3396 50  0000 L CNN
-F 1 "68k" H 7220 3305 50  0000 L CNN
-F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" V 7080 3350 50  0001 C CNN
-F 3 "~" H 7150 3350 50  0001 C CNN
-	1    7150 3350
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:C C3
-U 1 1 60F5A532
-P 7150 3050
-F 0 "C3" H 7265 3096 50  0000 L CNN
-F 1 "220p" H 7265 3005 50  0000 L CNN
-F 2 "Capacitor_THT:C_Disc_D3.8mm_W2.6mm_P2.50mm" H 7188 2900 50  0001 C CNN
-F 3 "~" H 7150 3050 50  0001 C CNN
-	1    7150 3050
 	1    0    0    -1  
 $EndComp
 Text GLabel 3500 2800 3    50   Input ~ 0
@@ -577,32 +551,10 @@ Text GLabel 4600 3200 3    50   Input ~ 0
 G_B
 Text GLabel 5450 3200 3    50   Input ~ 0
 H_B
-Text GLabel 6300 3500 3    50   Input ~ 0
+Text GLabel 6300 2900 3    50   Input ~ 0
 I_B
-Text GLabel 7150 3500 3    50   Input ~ 0
+Text GLabel 7150 2900 3    50   Input ~ 0
 J_B
-$Comp
-L Device:R R9
-U 1 1 60F6D1CE
-P 6300 3350
-F 0 "R9" H 6370 3396 50  0000 L CNN
-F 1 "82k" H 6370 3305 50  0000 L CNN
-F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" V 6230 3350 50  0001 C CNN
-F 3 "~" H 6300 3350 50  0001 C CNN
-	1    6300 3350
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:C C2
-U 1 1 60F6D1D4
-P 6300 3050
-F 0 "C2" H 6415 3096 50  0000 L CNN
-F 1 "680p" H 6415 3005 50  0000 L CNN
-F 2 "Capacitor_THT:C_Disc_D3.8mm_W2.6mm_P2.50mm" H 6338 2900 50  0001 C CNN
-F 3 "~" H 6300 3050 50  0001 C CNN
-	1    6300 3050
-	1    0    0    -1  
-$EndComp
 Text GLabel 1550 2700 0    50   Input ~ 0
 IN
 Text GLabel 1900 1300 2    50   Input ~ 0
@@ -680,8 +632,8 @@ $Comp
 L Device:LED D2
 U 1 1 5FEF7875
 P 1950 4850
-F 0 "D2" V 2050 4600 50  0000 C CNN
-F 1 "LED" V 1950 4600 50  0000 C CNN
+F 0 "D2" V 2050 4500 50  0000 C CNN
+F 1 "LED (Green)" V 1950 4500 50  0000 C CNN
 F 2 "LED_THT:LED_D3.0mm" H 1950 4850 50  0001 C CNN
 F 3 "~" H 1950 4850 50  0001 C CNN
 F 4 "D" H 1950 4850 50  0001 C CNN "Spice_Primitive"
@@ -707,9 +659,10 @@ L Device:R R29
 U 1 1 60A7522A
 P 1950 4150
 F 0 "R29" H 2020 4196 50  0000 L CNN
-F 1 "5.1k" H 2020 4105 50  0000 L CNN
+F 1 "5k" H 2020 4105 50  0000 L CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 1880 4150 50  0001 C CNN
 F 3 "~" H 1950 4150 50  0001 C CNN
+F 4 "Thick Film Resistors - SMD (0805)" H 1950 4150 50  0001 C CNN "Description"
 	1    1950 4150
 	1    0    0    -1  
 $EndComp
@@ -732,6 +685,7 @@ F 0 "R23" V 1193 4500 50  0000 C CNN
 F 1 "100k" V 1284 4500 50  0000 C CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 1330 4500 50  0001 C CNN
 F 3 "~" H 1400 4500 50  0001 C CNN
+F 4 "Thick Film Resistors - SMD (0805)" V 1400 4500 50  0001 C CNN "Description"
 	1    1400 4500
 	0    1    1    0   
 $EndComp
@@ -753,7 +707,7 @@ L Device:LED D6
 U 1 1 60AE943D
 P 3750 4850
 F 0 "D6" V 3850 4600 50  0000 C CNN
-F 1 "LED" V 3750 4600 50  0000 C CNN
+F 1 "LED (Red)" V 3750 4600 50  0000 C CNN
 F 2 "LED_THT:LED_D3.0mm" H 3750 4850 50  0001 C CNN
 F 3 "~" H 3750 4850 50  0001 C CNN
 F 4 "D" H 3750 4850 50  0001 C CNN "Spice_Primitive"
@@ -779,9 +733,10 @@ L Device:R R34
 U 1 1 60AE944F
 P 3750 4150
 F 0 "R34" H 3820 4196 50  0000 L CNN
-F 1 "5.1k" H 3820 4105 50  0000 L CNN
+F 1 "5k" H 3820 4105 50  0000 L CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 3680 4150 50  0001 C CNN
 F 3 "~" H 3750 4150 50  0001 C CNN
+F 4 "Thick Film Resistors - SMD (0805)" H 3750 4150 50  0001 C CNN "Description"
 	1    3750 4150
 	1    0    0    -1  
 $EndComp
@@ -804,6 +759,7 @@ F 0 "R32" V 2993 4500 50  0000 C CNN
 F 1 "100k" V 3084 4500 50  0000 C CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 3130 4500 50  0001 C CNN
 F 3 "~" H 3200 4500 50  0001 C CNN
+F 4 "Thick Film Resistors - SMD (0805)" V 3200 4500 50  0001 C CNN "Description"
 	1    3200 4500
 	0    1    1    0   
 $EndComp
@@ -825,7 +781,7 @@ L Device:LED D10
 U 1 1 60AF092F
 P 5650 4850
 F 0 "D10" V 5750 4600 50  0000 C CNN
-F 1 "LED" V 5650 4600 50  0000 C CNN
+F 1 "LED (Red)" V 5650 4600 50  0000 C CNN
 F 2 "LED_THT:LED_D3.0mm" H 5650 4850 50  0001 C CNN
 F 3 "~" H 5650 4850 50  0001 C CNN
 F 4 "D" H 5650 4850 50  0001 C CNN "Spice_Primitive"
@@ -851,9 +807,10 @@ L Device:R R40
 U 1 1 60AF0941
 P 5650 4150
 F 0 "R40" H 5720 4196 50  0000 L CNN
-F 1 "5.1k" H 5720 4105 50  0000 L CNN
+F 1 "5k" H 5720 4105 50  0000 L CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 5580 4150 50  0001 C CNN
 F 3 "~" H 5650 4150 50  0001 C CNN
+F 4 "Thick Film Resistors - SMD (0805)" H 5650 4150 50  0001 C CNN "Description"
 	1    5650 4150
 	1    0    0    -1  
 $EndComp
@@ -876,6 +833,7 @@ F 0 "R38" V 4893 4500 50  0000 C CNN
 F 1 "100k" V 4984 4500 50  0000 C CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 5030 4500 50  0001 C CNN
 F 3 "~" H 5100 4500 50  0001 C CNN
+F 4 "Thick Film Resistors - SMD (0805)" V 5100 4500 50  0001 C CNN "Description"
 	1    5100 4500
 	0    1    1    0   
 $EndComp
@@ -897,7 +855,7 @@ L Device:LED D4
 U 1 1 60AF9231
 P 2550 6750
 F 0 "D4" V 2650 6500 50  0000 C CNN
-F 1 "LED" V 2550 6500 50  0000 C CNN
+F 1 "LED (Red)" V 2550 6500 50  0000 C CNN
 F 2 "LED_THT:LED_D3.0mm" H 2550 6750 50  0001 C CNN
 F 3 "~" H 2550 6750 50  0001 C CNN
 F 4 "D" H 2550 6750 50  0001 C CNN "Spice_Primitive"
@@ -1131,6 +1089,7 @@ F 0 "R11" V 9450 1350 50  0000 L CNN
 F 1 "330" V 9550 1300 50  0000 L CNN
 F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" V 9280 1400 50  0001 C CNN
 F 3 "~" H 9350 1400 50  0001 C CNN
+F 4 "Metal Film Resistors - Through Hole (L=3.6 mm, D=1.6 mm, 1%)" V 9350 1400 50  0001 C CNN "Description"
 	1    9350 1400
 	0    1    1    0   
 $EndComp
@@ -1142,6 +1101,7 @@ F 0 "R12" V 9450 1950 50  0000 L CNN
 F 1 "330" V 9550 1900 50  0000 L CNN
 F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" V 9280 2000 50  0001 C CNN
 F 3 "~" H 9350 2000 50  0001 C CNN
+F 4 "Metal Film Resistors - Through Hole (L=3.6 mm, D=1.6 mm, 1%)" V 9350 2000 50  0001 C CNN "Description"
 	1    9350 2000
 	0    1    1    0   
 $EndComp
@@ -1150,9 +1110,10 @@ L Connector:Conn_01x06_Male J6
 U 1 1 6118CDE5
 P 8150 1750
 F 0 "J6" H 8122 1724 50  0000 R CNN
-F 1 "Conn_01x06_Male" H 8122 1633 50  0000 R CNN
+F 1 "01x06 Male" H 8122 1633 50  0000 R CNN
 F 2 "Connector_PinSocket_2.54mm:PinSocket_1x06_P2.54mm_Vertical" H 8150 1750 50  0001 C CNN
 F 3 "~" H 8150 1750 50  0001 C CNN
+F 4 "Board to Board Connectors (2.54 mm)" H 8150 1750 50  0001 C CNN "Description"
 	1    8150 1750
 	-1   0    0    -1  
 $EndComp
@@ -1161,9 +1122,10 @@ L Connector:Conn_01x07_Male J7
 U 1 1 61195C91
 P 8150 2700
 F 0 "J7" H 8122 2724 50  0000 R CNN
-F 1 "Conn_01x07_Male" H 8122 2633 50  0000 R CNN
+F 1 "01x07 Male" H 8122 2633 50  0000 R CNN
 F 2 "Connector_PinSocket_2.54mm:PinSocket_1x07_P2.54mm_Vertical" H 8150 2700 50  0001 C CNN
 F 3 "~" H 8150 2700 50  0001 C CNN
+F 4 "Board to Board Connectors (2.54 mm)" H 8150 2700 50  0001 C CNN "Description"
 	1    8150 2700
 	-1   0    0    -1  
 $EndComp
@@ -1172,9 +1134,10 @@ L Connector:Conn_01x05_Male J3
 U 1 1 6119902B
 P 1750 2800
 F 0 "J3" H 1722 2824 50  0000 R CNN
-F 1 "Conn_01x05_Male" H 1722 2733 50  0000 R CNN
+F 1 "01x05 Male" H 1722 2733 50  0000 R CNN
 F 2 "Connector_PinSocket_2.54mm:PinSocket_1x05_P2.54mm_Vertical" H 1750 2800 50  0001 C CNN
 F 3 "~" H 1750 2800 50  0001 C CNN
+F 4 "Board to Board Connectors (2.54 mm)" H 1750 2800 50  0001 C CNN "Description"
 	1    1750 2800
 	-1   0    0    -1  
 $EndComp

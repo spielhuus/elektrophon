@@ -111,6 +111,7 @@ F 0 "C1" H 2868 10296 50  0000 L CNN
 F 1 "22u" H 2868 10205 50  0000 L CNN
 F 2 "Capacitor_THT:CP_Radial_D6.3mm_P2.50mm" H 2788 10100 50  0001 C CNN
 F 3 "~" H 2750 10250 50  0001 C CNN
+F 4 "Aluminium Electrolytic Capacitors (50V, D=6.3 mm, LS=2.5 mm)" H 2750 10250 50  0001 C CNN "Description"
 	1    2750 10250
 	1    0    0    -1  
 $EndComp
@@ -124,6 +125,7 @@ F 0 "C2" H 2868 10596 50  0000 L CNN
 F 1 "22u" H 2868 10505 50  0000 L CNN
 F 2 "Capacitor_THT:CP_Radial_D6.3mm_P2.50mm" H 2788 10400 50  0001 C CNN
 F 3 "~" H 2750 10550 50  0001 C CNN
+F 4 "Aluminium Electrolytic Capacitors (50V, D=6.3 mm, LS=2.5 mm)" H 2750 10550 50  0001 C CNN "Description"
 	1    2750 10550
 	1    0    0    -1  
 $EndComp
@@ -231,9 +233,10 @@ P 1400 10350
 AR Path="/5FCD165C" Ref="J1"  Part="1" 
 AR Path="/5DD3665B/5FCD165C" Ref="J?"  Part="1" 
 F 0 "J1" H 1450 10767 50  0000 C CNN
-F 1 "IDC Header" H 1450 10676 50  0000 C CNN
+F 1 "10 Pos" H 1450 10676 50  0000 C CNN
 F 2 "Connector_IDC:IDC-Header_2x05_P2.54mm_Vertical" H 1400 10350 50  0001 C CNN
 F 3 "~" H 1400 10350 50  0001 C CNN
+F 4 "Pin Header IDC (2.54mm)" H 1400 10350 50  0001 C CNN "Description"
 	1    1400 10350
 	-1   0    0    1   
 $EndComp
@@ -258,6 +261,7 @@ F 0 "R1" V 2143 10100 50  0000 C CNN
 F 1 "10" V 2234 10100 50  0000 C CNN
 F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" V 2280 10100 50  0001 C CNN
 F 3 "~" H 2350 10100 50  0001 C CNN
+F 4 "Metal Film Resistors - Through Hole (L=3.6 mm, D=1.6 mm, 1%)" V 2350 10100 50  0001 C CNN "Description"
 	1    2350 10100
 	0    1    1    0   
 $EndComp
@@ -295,6 +299,7 @@ F 0 "R2" V 2143 10700 50  0000 C CNN
 F 1 "10" V 2234 10700 50  0000 C CNN
 F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" V 2280 10700 50  0001 C CNN
 F 3 "~" H 2350 10700 50  0001 C CNN
+F 4 "Metal Film Resistors - Through Hole (L=3.6 mm, D=1.6 mm, 1%)" V 2350 10700 50  0001 C CNN "Description"
 	1    2350 10700
 	0    1    1    0   
 $EndComp
@@ -348,6 +353,7 @@ F 0 "R10" V 4843 8400 50  0000 C CNN
 F 1 "680k" V 4934 8400 50  0000 C CNN
 F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P2.54mm_Vertical" V 4980 8400 50  0001 C CNN
 F 3 "~" H 5050 8400 50  0001 C CNN
+F 4 "Metal Film Resistors - Through Hole (L=3.6 mm, D=1.6 mm, 1%)" V 2350 10100 50  0001 C CNN "Description"
 	1    5050 8400
 	0    1    1    0   
 $EndComp
@@ -358,7 +364,8 @@ P 4450 8400
 F 0 "C10" V 4198 8400 50  0000 C CNN
 F 1 "22n" V 4289 8400 50  0000 C CNN
 F 2 "Capacitor_THT:C_Rect_L7.2mm_W3.0mm_P5.00mm_FKS2_FKP2_MKS2_MKP2" H 4488 8250 50  0001 C CNN
-F 3 "~" H 4450 8400 50  0001 C CNN
+F 3 "https://www.mouser.ch/datasheet/2/440/e_WIMA_MKP_2-1139746.pdf" H 4450 8400 50  0001 C CNN
+F 4 "Film Capacitors Polypropylene (L=7.2 mm W=3  mm, P=5 mm )" V 4450 8400 50  0001 C CNN "Description"
 	1    4450 8400
 	0    1    1    0   
 $EndComp
@@ -369,7 +376,8 @@ P 4450 8000
 F 0 "C9" V 4198 8000 50  0000 C CNN
 F 1 "22n" V 4289 8000 50  0000 C CNN
 F 2 "Capacitor_THT:C_Rect_L7.2mm_W3.0mm_P5.00mm_FKS2_FKP2_MKS2_MKP2" H 4488 7850 50  0001 C CNN
-F 3 "~" H 4450 8000 50  0001 C CNN
+F 3 "https://www.mouser.ch/datasheet/2/440/e_WIMA_MKP_2-1139746.pdf" H 4450 8000 50  0001 C CNN
+F 4 "Film Capacitors Polypropylene (L=7.2 mm W=3  mm, P=5 mm )" V 4450 8000 50  0001 C CNN "Description"
 	1    4450 8000
 	0    1    1    0   
 $EndComp
@@ -397,6 +405,7 @@ F 0 "R8" H 4130 8854 50  0000 R CNN
 F 1 "30k" H 4130 8945 50  0000 R CNN
 F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" V 4130 8900 50  0001 C CNN
 F 3 "~" H 4200 8900 50  0001 C CNN
+F 4 "Metal Film Resistors - Through Hole (L=3.6 mm, D=1.6 mm, 1%)" V 2350 10100 50  0001 C CNN "Description"
 	1    4200 8900
 	-1   0    0    1   
 $EndComp
@@ -446,6 +455,7 @@ F 0 "R12" H 5280 7554 50  0000 R CNN
 F 1 "47k" H 5280 7645 50  0000 R CNN
 F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" V 5280 7600 50  0001 C CNN
 F 3 "~" H 5350 7600 50  0001 C CNN
+F 4 "Metal Film Resistors - Through Hole (L=3.6 mm, D=1.6 mm, 1%)" V 2350 10100 50  0001 C CNN "Description"
 	1    5350 7600
 	-1   0    0    1   
 $EndComp
@@ -460,6 +470,7 @@ F 0 "R18" V 6493 8400 50  0000 C CNN
 F 1 "910k" V 6584 8400 50  0000 C CNN
 F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P2.54mm_Vertical" V 6630 8400 50  0001 C CNN
 F 3 "~" H 6700 8400 50  0001 C CNN
+F 4 "Metal Film Resistors - Through Hole (L=3.6 mm, D=1.6 mm, 1%)" V 2350 10100 50  0001 C CNN "Description"
 	1    6700 8400
 	0    1    1    0   
 $EndComp
@@ -470,7 +481,8 @@ P 6100 8400
 F 0 "C18" V 5848 8400 50  0000 C CNN
 F 1 "4n7" V 5939 8400 50  0000 C CNN
 F 2 "Capacitor_THT:C_Rect_L7.2mm_W4.5mm_P5.00mm_FKS2_FKP2_MKS2_MKP2" H 6138 8250 50  0001 C CNN
-F 3 "~" H 6100 8400 50  0001 C CNN
+F 3 "https://www.mouser.ch/datasheet/2/440/e_WIMA_FKP_2-1139852.pdf" H 6100 8400 50  0001 C CNN
+F 4 "Film Capacitors Polypropylene (L=7.2 mm W=4.5 mm, P=5 mm )" V 6100 8400 50  0001 C CNN "Description"
 	1    6100 8400
 	0    1    1    0   
 $EndComp
@@ -481,7 +493,8 @@ P 6100 8000
 F 0 "C17" V 5848 8000 50  0000 C CNN
 F 1 "4n7" V 5939 8000 50  0000 C CNN
 F 2 "Capacitor_THT:C_Rect_L7.2mm_W4.5mm_P5.00mm_FKS2_FKP2_MKS2_MKP2" H 6138 7850 50  0001 C CNN
-F 3 "~" H 6100 8000 50  0001 C CNN
+F 3 "https://www.mouser.ch/datasheet/2/440/e_WIMA_FKP_2-1139852.pdf" H 6100 8000 50  0001 C CNN
+F 4 "Film Capacitors Polypropylene (L=7.2 mm W=4.5 mm, P=5 mm )" V 6100 8000 50  0001 C CNN "Description"
 	1    6100 8000
 	0    1    1    0   
 $EndComp
@@ -509,6 +522,7 @@ F 0 "R16" H 5780 8854 50  0000 R CNN
 F 1 "43k" H 5780 8945 50  0000 R CNN
 F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" V 5780 8900 50  0001 C CNN
 F 3 "~" H 5850 8900 50  0001 C CNN
+F 4 "Metal Film Resistors - Through Hole (L=3.6 mm, D=1.6 mm, 1%)" V 2350 10100 50  0001 C CNN "Description"
 	1    5850 8900
 	-1   0    0    1   
 $EndComp
@@ -558,6 +572,7 @@ F 0 "R20" H 6930 7554 50  0000 R CNN
 F 1 "47k" H 6930 7645 50  0000 R CNN
 F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" V 6930 7600 50  0001 C CNN
 F 3 "~" H 7000 7600 50  0001 C CNN
+F 4 "Metal Film Resistors - Through Hole (L=3.6 mm, D=1.6 mm, 1%)" V 2350 10100 50  0001 C CNN "Description"
 	1    7000 7600
 	-1   0    0    1   
 $EndComp
@@ -572,6 +587,7 @@ F 0 "R28" V 8093 8400 50  0000 C CNN
 F 1 "560k" V 8184 8400 50  0000 C CNN
 F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P2.54mm_Vertical" V 8230 8400 50  0001 C CNN
 F 3 "~" H 8300 8400 50  0001 C CNN
+F 4 "Metal Film Resistors - Through Hole (L=3.6 mm, D=1.6 mm, 1%)" V 2350 10100 50  0001 C CNN "Description"
 	1    8300 8400
 	0    1    1    0   
 $EndComp
@@ -582,7 +598,8 @@ P 7700 8400
 F 0 "C28" V 7448 8400 50  0000 C CNN
 F 1 "2n2" V 7539 8400 50  0000 C CNN
 F 2 "Capacitor_THT:C_Rect_L7.2mm_W4.5mm_P5.00mm_FKS2_FKP2_MKS2_MKP2" H 7738 8250 50  0001 C CNN
-F 3 "~" H 7700 8400 50  0001 C CNN
+F 3 "https://www.mouser.ch/datasheet/2/440/e_WIMA_FKP_2-1139852.pdf" H 7700 8400 50  0001 C CNN
+F 4 "Film Capacitors Polypropylene (L=7.2 mm W=4.5 mm, P=5 mm )" V 7700 8400 50  0001 C CNN "Description"
 	1    7700 8400
 	0    1    1    0   
 $EndComp
@@ -593,7 +610,8 @@ P 7700 8000
 F 0 "C27" V 7448 8000 50  0000 C CNN
 F 1 "2n2" V 7539 8000 50  0000 C CNN
 F 2 "Capacitor_THT:C_Rect_L7.2mm_W4.5mm_P5.00mm_FKS2_FKP2_MKS2_MKP2" H 7738 7850 50  0001 C CNN
-F 3 "~" H 7700 8000 50  0001 C CNN
+F 3 "https://www.mouser.ch/datasheet/2/440/e_WIMA_FKP_2-1139852.pdf" H 7700 8000 50  0001 C CNN
+F 4 "Film Capacitors Polypropylene (L=7.2 mm W=4.5 mm, P=5 mm )" V 7700 8000 50  0001 C CNN "Description"
 	1    7700 8000
 	0    1    1    0   
 $EndComp
@@ -621,6 +639,7 @@ F 0 "R26" H 7380 8854 50  0000 R CNN
 F 1 "24k" H 7380 8945 50  0000 R CNN
 F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" V 7380 8900 50  0001 C CNN
 F 3 "~" H 7450 8900 50  0001 C CNN
+F 4 "Metal Film Resistors - Through Hole (L=3.6 mm, D=1.6 mm, 1%)" V 2350 10100 50  0001 C CNN "Description"
 	1    7450 8900
 	-1   0    0    1   
 $EndComp
@@ -670,6 +689,7 @@ F 0 "R30" H 8530 7554 50  0000 R CNN
 F 1 "47k" H 8530 7645 50  0000 R CNN
 F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" V 8530 7600 50  0001 C CNN
 F 3 "~" H 8600 7600 50  0001 C CNN
+F 4 "Metal Film Resistors - Through Hole (L=3.6 mm, D=1.6 mm, 1%)" V 2350 10100 50  0001 C CNN "Description"
 	1    8600 7600
 	-1   0    0    1   
 $EndComp
@@ -684,6 +704,7 @@ F 0 "R9" V 4843 4950 50  0000 C CNN
 F 1 "510k" V 4934 4950 50  0000 C CNN
 F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P2.54mm_Vertical" V 4980 4950 50  0001 C CNN
 F 3 "~" H 5050 4950 50  0001 C CNN
+F 4 "Metal Film Resistors - Through Hole (L=3.6 mm, D=1.6 mm, 1%)" V 2350 10100 50  0001 C CNN "Description"
 	1    5050 4950
 	0    1    1    0   
 $EndComp
@@ -694,7 +715,8 @@ P 4450 4950
 F 0 "C8" V 4198 4950 50  0000 C CNN
 F 1 "47n" V 4289 4950 50  0000 C CNN
 F 2 "Capacitor_THT:C_Rect_L7.2mm_W3.5mm_P5.00mm_FKS2_FKP2_MKS2_MKP2" H 4488 4800 50  0001 C CNN
-F 3 "~" H 4450 4950 50  0001 C CNN
+F 3 "https://www.mouser.ch/datasheet/2/440/e_WIMA_MKP_2-1139746.pdf" H 4450 4950 50  0001 C CNN
+F 4 "Film Capacitors Polypropylene (L=7.2 mm W=3.5  mm, P=5 mm )" V 4450 4950 50  0001 C CNN "Description"
 	1    4450 4950
 	0    1    1    0   
 $EndComp
@@ -705,7 +727,8 @@ P 4450 4550
 F 0 "C7" V 4198 4550 50  0000 C CNN
 F 1 "47n" V 4289 4550 50  0000 C CNN
 F 2 "Capacitor_THT:C_Rect_L7.2mm_W3.5mm_P5.00mm_FKS2_FKP2_MKS2_MKP2" H 4488 4400 50  0001 C CNN
-F 3 "~" H 4450 4550 50  0001 C CNN
+F 3 "https://www.mouser.ch/datasheet/2/440/e_WIMA_MKP_2-1139746.pdf" H 4450 4550 50  0001 C CNN
+F 4 "Film Capacitors Polypropylene (L=7.2 mm W=3.5  mm, P=5 mm )" V 4450 4550 50  0001 C CNN "Description"
 	1    4450 4550
 	0    1    1    0   
 $EndComp
@@ -733,6 +756,7 @@ F 0 "R6" H 4130 5404 50  0000 R CNN
 F 1 "91k" H 4130 5495 50  0000 R CNN
 F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" V 4130 5450 50  0001 C CNN
 F 3 "~" H 4200 5450 50  0001 C CNN
+F 4 "Metal Film Resistors - Through Hole (L=3.6 mm, D=1.6 mm, 1%)" V 2350 10100 50  0001 C CNN "Description"
 	1    4200 5450
 	-1   0    0    1   
 $EndComp
@@ -782,6 +806,7 @@ F 0 "R11" H 5280 4104 50  0000 R CNN
 F 1 "47k" H 5280 4195 50  0000 R CNN
 F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" V 5280 4150 50  0001 C CNN
 F 3 "~" H 5350 4150 50  0001 C CNN
+F 4 "Metal Film Resistors - Through Hole (L=3.6 mm, D=1.6 mm, 1%)" V 2350 10100 50  0001 C CNN "Description"
 	1    5350 4150
 	-1   0    0    1   
 $EndComp
@@ -796,6 +821,7 @@ F 0 "R17" V 6493 4950 50  0000 C CNN
 F 1 "820k" V 6584 4950 50  0000 C CNN
 F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P2.54mm_Vertical" V 6630 4950 50  0001 C CNN
 F 3 "~" H 6700 4950 50  0001 C CNN
+F 4 "Metal Film Resistors - Through Hole (L=3.6 mm, D=1.6 mm, 1%)" V 2350 10100 50  0001 C CNN "Description"
 	1    6700 4950
 	0    1    1    0   
 $EndComp
@@ -806,7 +832,8 @@ P 6100 4950
 F 0 "C16" V 5848 4950 50  0000 C CNN
 F 1 "10n" V 5939 4950 50  0000 C CNN
 F 2 "Capacitor_THT:C_Rect_L7.2mm_W3.0mm_P5.00mm_FKS2_FKP2_MKS2_MKP2" H 6138 4800 50  0001 C CNN
-F 3 "~" H 6100 4950 50  0001 C CNN
+F 3 "https://www.mouser.ch/datasheet/2/440/e_WIMA_MKP_2-1139746.pdf" H 6100 4950 50  0001 C CNN
+F 4 "Film Capacitors Polypropylene (L=7.2 mm W=3  mm, P=5 mm )" V 6100 4950 50  0001 C CNN "Description"
 	1    6100 4950
 	0    1    1    0   
 $EndComp
@@ -817,7 +844,8 @@ P 6100 4550
 F 0 "C15" V 5848 4550 50  0000 C CNN
 F 1 "10n" V 5939 4550 50  0000 C CNN
 F 2 "Capacitor_THT:C_Rect_L7.2mm_W3.0mm_P5.00mm_FKS2_FKP2_MKS2_MKP2" H 6138 4400 50  0001 C CNN
-F 3 "~" H 6100 4550 50  0001 C CNN
+F 3 "https://www.mouser.ch/datasheet/2/440/e_WIMA_MKP_2-1139746.pdf" H 6100 4550 50  0001 C CNN
+F 4 "Film Capacitors Polypropylene (L=7.2 mm W=3  mm, P=5 mm )" V 6100 4550 50  0001 C CNN "Description"
 	1    6100 4550
 	0    1    1    0   
 $EndComp
@@ -845,6 +873,7 @@ F 0 "R14" H 5780 5404 50  0000 R CNN
 F 1 "36k" H 5780 5495 50  0000 R CNN
 F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" V 5780 5450 50  0001 C CNN
 F 3 "~" H 5850 5450 50  0001 C CNN
+F 4 "Metal Film Resistors - Through Hole (L=3.6 mm, D=1.6 mm, 1%)" V 2350 10100 50  0001 C CNN "Description"
 	1    5850 5450
 	-1   0    0    1   
 $EndComp
@@ -894,6 +923,7 @@ F 0 "R19" H 6930 4104 50  0000 R CNN
 F 1 "47k" H 6930 4195 50  0000 R CNN
 F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" V 6930 4150 50  0001 C CNN
 F 3 "~" H 7000 4150 50  0001 C CNN
+F 4 "Metal Film Resistors - Through Hole (L=3.6 mm, D=1.6 mm, 1%)" V 2350 10100 50  0001 C CNN "Description"
 	1    7000 4150
 	-1   0    0    1   
 $EndComp
@@ -908,6 +938,7 @@ F 0 "R27" V 8093 4950 50  0000 C CNN
 F 1 "510k" V 8184 4950 50  0000 C CNN
 F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P2.54mm_Vertical" V 8230 4950 50  0001 C CNN
 F 3 "~" H 8300 4950 50  0001 C CNN
+F 4 "Metal Film Resistors - Through Hole (L=3.6 mm, D=1.6 mm, 1%)" V 2350 10100 50  0001 C CNN "Description"
 	1    8300 4950
 	0    1    1    0   
 $EndComp
@@ -918,7 +949,8 @@ P 7700 4950
 F 0 "C26" V 7448 4950 50  0000 C CNN
 F 1 "4n7" V 7539 4950 50  0000 C CNN
 F 2 "Capacitor_THT:C_Rect_L7.2mm_W4.5mm_P5.00mm_FKS2_FKP2_MKS2_MKP2" H 7738 4800 50  0001 C CNN
-F 3 "~" H 7700 4950 50  0001 C CNN
+F 3 "https://www.mouser.ch/datasheet/2/440/e_WIMA_FKP_2-1139852.pdf" H 7700 4950 50  0001 C CNN
+F 4 "Film Capacitors Polypropylene (L=7.2 mm W=4.5 mm, P=5 mm )" V 7700 4950 50  0001 C CNN "Description"
 	1    7700 4950
 	0    1    1    0   
 $EndComp
@@ -929,7 +961,8 @@ P 7700 4550
 F 0 "C25" V 7448 4550 50  0000 C CNN
 F 1 "4n7" V 7539 4550 50  0000 C CNN
 F 2 "Capacitor_THT:C_Rect_L7.2mm_W4.5mm_P5.00mm_FKS2_FKP2_MKS2_MKP2" H 7738 4400 50  0001 C CNN
-F 3 "~" H 7700 4550 50  0001 C CNN
+F 3 "https://www.mouser.ch/datasheet/2/440/e_WIMA_FKP_2-1139852.pdf" H 7700 4550 50  0001 C CNN
+F 4 "Film Capacitors Polypropylene (L=7.2 mm W=4.5 mm, P=5 mm )" V 7700 4550 50  0001 C CNN "Description"
 	1    7700 4550
 	0    1    1    0   
 $EndComp
@@ -957,6 +990,7 @@ F 0 "R24" H 7380 5404 50  0000 R CNN
 F 1 "22k" H 7380 5495 50  0000 R CNN
 F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" V 7380 5450 50  0001 C CNN
 F 3 "~" H 7450 5450 50  0001 C CNN
+F 4 "Metal Film Resistors - Through Hole (L=3.6 mm, D=1.6 mm, 1%)" V 2350 10100 50  0001 C CNN "Description"
 	1    7450 5450
 	-1   0    0    1   
 $EndComp
@@ -1006,6 +1040,7 @@ F 0 "R29" H 8530 4104 50  0000 R CNN
 F 1 "47k" H 8530 4195 50  0000 R CNN
 F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" V 8530 4150 50  0001 C CNN
 F 3 "~" H 8600 4150 50  0001 C CNN
+F 4 "Metal Film Resistors - Through Hole (L=3.6 mm, D=1.6 mm, 1%)" V 2350 10100 50  0001 C CNN "Description"
 	1    8600 4150
 	-1   0    0    1   
 $EndComp
@@ -1018,8 +1053,9 @@ U 1 1 60F0B1A0
 P 9950 4950
 F 0 "R39" V 9743 4950 50  0000 C CNN
 F 1 "620k" V 9834 4950 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P2.54mm_Vertical" V 9880 4950 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 9880 4950 50  0001 C CNN
 F 3 "~" H 9950 4950 50  0001 C CNN
+F 4 "Metal Film Resistors - Through Hole (L=3.6 mm, D=1.6 mm, 1%)" V 2350 10100 50  0001 C CNN "Description"
 	1    9950 4950
 	0    1    1    0   
 $EndComp
@@ -1030,7 +1066,8 @@ P 9350 4950
 F 0 "C35" V 9098 4950 50  0000 C CNN
 F 1 "1n" V 9189 4950 50  0000 C CNN
 F 2 "Capacitor_THT:C_Rect_L7.2mm_W4.5mm_P5.00mm_FKS2_FKP2_MKS2_MKP2" H 9388 4800 50  0001 C CNN
-F 3 "~" H 9350 4950 50  0001 C CNN
+F 3 "https://www.mouser.ch/datasheet/2/440/e_WIMA_FKP_2-1139852.pdf" H 9350 4950 50  0001 C CNB
+F 4 "Film Capacitors Polypropylene (L=7.2 mm W=4.5 mm, P=5 mm )" V 9350 4950 50  0001 C CNN "Description"
 	1    9350 4950
 	0    1    1    0   
 $EndComp
@@ -1041,7 +1078,8 @@ P 9350 4550
 F 0 "C34" V 9098 4550 50  0000 C CNN
 F 1 "1n" V 9189 4550 50  0000 C CNN
 F 2 "Capacitor_THT:C_Rect_L7.2mm_W4.5mm_P5.00mm_FKS2_FKP2_MKS2_MKP2" H 9388 4400 50  0001 C CNN
-F 3 "~" H 9350 4550 50  0001 C CNN
+F 3 "https://www.mouser.ch/datasheet/2/440/e_WIMA_FKP_2-1139852.pdf" H 9350 4550 50  0001 C CNN
+F 4 "Film Capacitors Polypropylene (L=7.2 mm W=4.5 mm, P=5 mm )" V 9350 4550 50  0001 C CNN "Description"
 	1    9350 4550
 	0    1    1    0   
 $EndComp
@@ -1069,6 +1107,7 @@ F 0 "R34" H 9030 5404 50  0000 R CNN
 F 1 "27k" H 9030 5495 50  0000 R CNN
 F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" V 9030 5450 50  0001 C CNN
 F 3 "~" H 9100 5450 50  0001 C CNN
+F 4 "Metal Film Resistors - Through Hole (L=3.6 mm, D=1.6 mm, 1%)" V 2350 10100 50  0001 C CNN "Description"
 	1    9100 5450
 	-1   0    0    1   
 $EndComp
@@ -1118,6 +1157,7 @@ F 0 "R42" H 10180 4104 50  0000 R CNN
 F 1 "47k" H 10180 4195 50  0000 R CNN
 F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" V 10180 4150 50  0001 C CNN
 F 3 "~" H 10250 4150 50  0001 C CNN
+F 4 "Metal Film Resistors - Through Hole (L=3.6 mm, D=1.6 mm, 1%)" V 2350 10100 50  0001 C CNN "Description"
 	1    10250 4150
 	-1   0    0    1   
 $EndComp
@@ -1132,6 +1172,7 @@ F 0 "R44" H 10730 5804 50  0000 R CNN
 F 1 "130k" H 10730 5895 50  0000 R CNN
 F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" V 10730 5850 50  0001 C CNN
 F 3 "~" H 10800 5850 50  0001 C CNN
+F 4 "Metal Film Resistors - Through Hole (L=3.6 mm, D=1.6 mm, 1%)" V 2350 10100 50  0001 C CNN "Description"
 	1    10800 5850
 	-1   0    0    1   
 $EndComp
@@ -1142,7 +1183,8 @@ P 10600 5850
 F 0 "C39" H 10800 5800 50  0000 C CNN
 F 1 "220p" H 10800 5900 50  0000 C CNN
 F 2 "Capacitor_THT:C_Rect_L7.2mm_W4.5mm_P5.00mm_FKS2_FKP2_MKS2_MKP2" H 10638 5700 50  0001 C CNN
-F 3 "~" H 10600 5850 50  0001 C CNN
+F 3 "https://www.mouser.ch/datasheet/2/440/e_WIMA_FKP_2-1139852.pdf" H 10600 5850 50  0001 C CNN
+F 4 "Film Capacitors Polypropylene (L=7.2 mm W=4.5 mm, P=5 mm )" H 10600 5850 50  0001 C CNN "Description"
 	1    10600 5850
 	-1   0    0    1   
 $EndComp
@@ -1176,6 +1218,7 @@ F 0 "R48" V 11043 5600 50  0000 C CNN
 F 1 "10k" V 11134 5600 50  0000 C CNN
 F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" V 11180 5600 50  0001 C CNN
 F 3 "~" H 11250 5600 50  0001 C CNN
+F 4 "Metal Film Resistors - Through Hole (L=3.6 mm, D=1.6 mm, 1%)" V 2350 10100 50  0001 C CNN "Description"
 	1    11250 5600
 	0    1    1    0   
 $EndComp
@@ -1187,6 +1230,7 @@ F 0 "R47" V 11043 4650 50  0000 C CNN
 F 1 "16k5" V 11134 4650 50  0000 C CNN
 F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" V 11180 4650 50  0001 C CNN
 F 3 "~" H 11250 4650 50  0001 C CNN
+F 4 "Metal Film Resistors - Through Hole (L=3.6 mm, D=1.6 mm, 1%)" V 2350 10100 50  0001 C CNN "Description"
 	1    11250 4650
 	0    1    1    0   
 $EndComp
@@ -1225,8 +1269,6 @@ Wire Wire Line
 	11100 4650 10600 4650
 Connection ~ 10600 4650
 Wire Wire Line
-	10600 4650 10600 4550
-Wire Wire Line
 	11750 4450 11650 4450
 Wire Wire Line
 	11650 4450 11650 4100
@@ -1244,6 +1286,7 @@ F 0 "R54" H 12380 3804 50  0000 R CNN
 F 1 "33k" H 12380 3895 50  0000 R CNN
 F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" V 12380 3850 50  0001 C CNN
 F 3 "~" H 12450 3850 50  0001 C CNN
+F 4 "Metal Film Resistors - Through Hole (L=3.6 mm, D=1.6 mm, 1%)" V 2350 10100 50  0001 C CNN "Description"
 	1    12450 3850
 	-1   0    0    1   
 $EndComp
@@ -1274,6 +1317,7 @@ F 0 "R36" H 9230 9154 50  0000 R CNN
 F 1 "82k" H 9230 9245 50  0000 R CNN
 F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" V 9230 9200 50  0001 C CNN
 F 3 "~" H 9300 9200 50  0001 C CNN
+F 4 "Metal Film Resistors - Through Hole (L=3.6 mm, D=1.6 mm, 1%)" V 2350 10100 50  0001 C CNN "Description"
 	1    9300 9200
 	-1   0    0    1   
 $EndComp
@@ -1284,7 +1328,8 @@ P 9100 9200
 F 0 "C33" H 9300 9150 50  0000 C CNN
 F 1 "680p" H 9300 9250 50  0000 C CNN
 F 2 "Capacitor_THT:C_Rect_L7.0mm_W4.5mm_P5.00mm" H 9138 9050 50  0001 C CNN
-F 3 "~" H 9100 9200 50  0001 C CNN
+F 3 "https://www.mouser.ch/datasheet/2/440/e_WIMA_FKP_2-1139852.pdf" H 9100 9200 50  0001 C CNN
+F 4 "Film Capacitors Polypropylene (L=7.2 mm W=4.5 mm, P=5 mm )" H 9100 9200 50  0001 C CNN "Description"
 	1    9100 9200
 	-1   0    0    1   
 $EndComp
@@ -1318,6 +1363,7 @@ F 0 "R38" V 9543 8950 50  0000 C CNN
 F 1 "10k" V 9634 8950 50  0000 C CNN
 F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" V 9680 8950 50  0001 C CNN
 F 3 "~" H 9750 8950 50  0001 C CNN
+F 4 "Metal Film Resistors - Through Hole (L=3.6 mm, D=1.6 mm, 1%)" V 2350 10100 50  0001 C CNN "Description"
 	1    9750 8950
 	0    1    1    0   
 $EndComp
@@ -1329,6 +1375,7 @@ F 0 "R37" V 9543 8000 50  0000 C CNN
 F 1 "16k5" V 9634 8000 50  0000 C CNN
 F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" V 9680 8000 50  0001 C CNN
 F 3 "~" H 9750 8000 50  0001 C CNN
+F 4 "Metal Film Resistors - Through Hole (L=3.6 mm, D=1.6 mm, 1%)" V 2350 10100 50  0001 C CNN "Description"
 	1    9750 8000
 	0    1    1    0   
 $EndComp
@@ -1367,8 +1414,6 @@ Wire Wire Line
 	9600 8000 9100 8000
 Connection ~ 9100 8000
 Wire Wire Line
-	9100 8000 9100 7900
-Wire Wire Line
 	10250 7800 10150 7800
 Wire Wire Line
 	10150 7800 10150 7450
@@ -1386,6 +1431,7 @@ F 0 "R46" H 10880 7154 50  0000 R CNN
 F 1 "33k" H 10880 7245 50  0000 R CNN
 F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" V 10880 7200 50  0001 C CNN
 F 3 "~" H 10950 7200 50  0001 C CNN
+F 4 "Metal Film Resistors - Through Hole (L=3.6 mm, D=1.6 mm, 1%)" V 2350 10100 50  0001 C CNN "Description"
 	1    10950 7200
 	-1   0    0    1   
 $EndComp
@@ -1412,7 +1458,8 @@ P 11300 9200
 F 0 "C44" H 11500 9150 50  0000 C CNN
 F 1 "220p" H 11500 9250 50  0000 C CNN
 F 2 "Capacitor_THT:C_Rect_L7.2mm_W4.5mm_P5.00mm_FKS2_FKP2_MKS2_MKP2" H 11338 9050 50  0001 C CNN
-F 3 "~" H 11300 9200 50  0001 C CNN
+F 3 "https://www.mouser.ch/datasheet/2/440/e_WIMA_FKP_2-1139852.pdf" H 11300 9200 50  0001 C CNN
+F 4 "Film Capacitors Polypropylene (L=7.2 mm W=4.5 mm, P=5 mm )" H 11300 9200 50  0001 C CNN "Description"
 	1    11300 9200
 	-1   0    0    1   
 $EndComp
@@ -1446,6 +1493,7 @@ F 0 "R53" V 11743 8950 50  0000 C CNN
 F 1 "10k" V 11834 8950 50  0000 C CNN
 F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" V 11880 8950 50  0001 C CNN
 F 3 "~" H 11950 8950 50  0001 C CNN
+F 4 "Metal Film Resistors - Through Hole (L=3.6 mm, D=1.6 mm, 1%)" V 2350 10100 50  0001 C CNN "Description"
 	1    11950 8950
 	0    1    1    0   
 $EndComp
@@ -1457,6 +1505,7 @@ F 0 "R52" V 11743 8000 50  0000 C CNN
 F 1 "15k4" V 11834 8000 50  0000 C CNN
 F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" V 11880 8000 50  0001 C CNN
 F 3 "~" H 11950 8000 50  0001 C CNN
+F 4 "Metal Film Resistors - Through Hole (L=3.6 mm, D=1.6 mm, 1%)" V 2350 10100 50  0001 C CNN "Description"
 	1    11950 8000
 	0    1    1    0   
 $EndComp
@@ -1495,8 +1544,6 @@ Wire Wire Line
 	11800 8000 11300 8000
 Connection ~ 11300 8000
 Wire Wire Line
-	11300 8000 11300 7900
-Wire Wire Line
 	12450 7800 12350 7800
 Wire Wire Line
 	12350 7800 12350 7450
@@ -1514,6 +1561,7 @@ F 0 "R57" H 13080 7154 50  0000 R CNN
 F 1 "22k" H 13080 7245 50  0000 R CNN
 F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" V 13080 7200 50  0001 C CNN
 F 3 "~" H 13150 7200 50  0001 C CNN
+F 4 "Metal Film Resistors - Through Hole (L=3.6 mm, D=1.6 mm, 1%)" V 2350 10100 50  0001 C CNN "Description"
 	1    13150 7200
 	-1   0    0    1   
 $EndComp
@@ -1566,6 +1614,7 @@ F 0 "R4" H 2570 3796 50  0000 L CNN
 F 1 "470k" H 2570 3705 50  0000 L CNN
 F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" V 2430 3750 50  0001 C CNN
 F 3 "~" H 2500 3750 50  0001 C CNN
+F 4 "Metal Film Resistors - Through Hole (L=3.6 mm, D=1.6 mm, 1%)" V 2350 10100 50  0001 C CNN "Description"
 	1    2500 3750
 	1    0    0    -1  
 $EndComp
@@ -1577,6 +1626,7 @@ F 0 "R3" V 2043 3500 50  0000 C CNN
 F 1 "3k3" V 2134 3500 50  0000 C CNN
 F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" V 2180 3500 50  0001 C CNN
 F 3 "~" H 2250 3500 50  0001 C CNN
+F 4 "Metal Film Resistors - Through Hole (L=3.6 mm, D=1.6 mm, 1%)" V 2350 10100 50  0001 C CNN "Description"
 	1    2250 3500
 	0    1    1    0   
 $EndComp
@@ -1772,6 +1822,7 @@ F 0 "C19" V 6345 1400 50  0000 C CNN
 F 1 "4u7" V 6436 1400 50  0000 C CNN
 F 2 "Capacitor_THT:CP_Radial_D6.3mm_P2.50mm" H 6638 1250 50  0001 C CNN
 F 3 "~" H 6600 1400 50  0001 C CNN
+F 4 "Aluminium Electrolytic Capacitors (D=6.3 mm, P= 2.5 mm)" V 6600 1400 50  0001 C CNN "Description"
 	1    6600 1400
 	0    1    1    0   
 $EndComp
@@ -1783,6 +1834,7 @@ F 0 "C20" V 6345 2500 50  0000 C CNN
 F 1 "4u7" V 6436 2500 50  0000 C CNN
 F 2 "Capacitor_THT:CP_Radial_D6.3mm_P2.50mm" H 6638 2350 50  0001 C CNN
 F 3 "~" H 6600 2500 50  0001 C CNN
+F 4 "Aluminium Electrolytic Capacitors (D=6.3 mm, P= 2.5 mm)" V 6600 2500 50  0001 C CNN "Description"
 	1    6600 2500
 	0    1    1    0   
 $EndComp
@@ -1794,6 +1846,7 @@ F 0 "R21" V 7193 900 50  0000 C CNN
 F 1 "47k" V 7284 900 50  0000 C CNN
 F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" V 7330 900 50  0001 C CNN
 F 3 "~" H 7400 900 50  0001 C CNN
+F 4 "Metal Film Resistors - Through Hole (L=3.6 mm, D=1.6 mm, 1%)" V 2350 10100 50  0001 C CNN "Description"
 	1    7400 900 
 	0    1    1    0   
 $EndComp
@@ -1805,6 +1858,7 @@ F 0 "R22" V 7193 2050 50  0000 C CNN
 F 1 "47k" V 7284 2050 50  0000 C CNN
 F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" V 7330 2050 50  0001 C CNN
 F 3 "~" H 7400 2050 50  0001 C CNN
+F 4 "Metal Film Resistors - Through Hole (L=3.6 mm, D=1.6 mm, 1%)" V 2350 10100 50  0001 C CNN "Description"
 	1    7400 2050
 	0    1    1    0   
 $EndComp
@@ -1912,6 +1966,7 @@ F 0 "R40" V 9993 1600 50  0000 C CNN
 F 1 "47k" V 10084 1600 50  0000 C CNN
 F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" V 10130 1600 50  0001 C CNN
 F 3 "~" H 10200 1600 50  0001 C CNN
+F 4 "Metal Film Resistors - Through Hole (L=3.6 mm, D=1.6 mm, 1%)" V 2350 10100 50  0001 C CNN "Description"
 	1    10200 1600
 	0    1    1    0   
 $EndComp
@@ -1923,6 +1978,7 @@ F 0 "R41" V 9993 1800 50  0000 C CNN
 F 1 "47k" V 10084 1800 50  0000 C CNN
 F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" V 10130 1800 50  0001 C CNN
 F 3 "~" H 10200 1800 50  0001 C CNN
+F 4 "Metal Film Resistors - Through Hole (L=3.6 mm, D=1.6 mm, 1%)" V 2350 10100 50  0001 C CNN "Description"
 	1    10200 1800
 	0    1    1    0   
 $EndComp
@@ -1991,6 +2047,7 @@ F 0 "R45" V 10743 1250 50  0000 C CNN
 F 1 "47k" V 10834 1250 50  0000 C CNN
 F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" V 10880 1250 50  0001 C CNN
 F 3 "~" H 10950 1250 50  0001 C CNN
+F 4 "Metal Film Resistors - Through Hole (L=3.6 mm, D=1.6 mm, 1%)" V 2350 10100 50  0001 C CNN "Description"
 	1    10950 1250
 	0    1    1    0   
 $EndComp
@@ -2002,6 +2059,7 @@ F 0 "C42" V 10698 850 50  0000 C CNN
 F 1 "47p" V 10789 850 50  0000 C CNN
 F 2 "Capacitor_THT:C_Disc_D3.8mm_W2.6mm_P2.50mm" H 10988 700 50  0001 C CNN
 F 3 "~" H 10950 850 50  0001 C CNN
+F 4 "Multilayer Ceramic Capacitors MLCC C0G (NP0), L=4 mm,  W=2.5 mm, P= 2.5 mm" V 10950 850 50  0001 C CNN "Description"
 	1    10950 850 
 	0    1    1    0   
 $EndComp
@@ -2051,6 +2109,7 @@ F 0 "C46" V 12098 1350 50  0000 C CNN
 F 1 "47p" V 12189 1350 50  0000 C CNN
 F 2 "Capacitor_THT:C_Disc_D3.8mm_W2.6mm_P2.50mm" H 12388 1200 50  0001 C CNN
 F 3 "~" H 12350 1350 50  0001 C CNN
+F 4 "Multilayer Ceramic Capacitors MLCC C0G (NP0), L=4 mm,  W=2.5 mm, P= 2.5 mm" V 12350 1350 50  0001 C CNN "Description"
 	1    12350 1350
 	0    1    1    0   
 $EndComp
@@ -2062,6 +2121,7 @@ F 0 "R55" V 12493 950 50  0000 C CNN
 F 1 "4k7" V 12584 950 50  0000 C CNN
 F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" V 12630 950 50  0001 C CNN
 F 3 "~" H 12700 950 50  0001 C CNN
+F 4 "Metal Film Resistors - Through Hole (L=3.6 mm, D=1.6 mm, 1%)" V 2350 10100 50  0001 C CNN "Description"
 	1    12700 950 
 	0    1    1    0   
 $EndComp
@@ -2073,6 +2133,7 @@ F 0 "R56" V 12643 1900 50  0000 C CNN
 F 1 "330" V 12734 1900 50  0000 C CNN
 F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" V 12780 1900 50  0001 C CNN
 F 3 "~" H 12850 1900 50  0001 C CNN
+F 4 "Metal Film Resistors - Through Hole (L=3.6 mm, D=1.6 mm, 1%)" V 2350 10100 50  0001 C CNN "Description"
 	1    12850 1900
 	0    1    1    0   
 $EndComp
@@ -2086,6 +2147,7 @@ F 0 "R51" V 11393 1800 50  0000 C CNN
 F 1 "4k7" V 11484 1800 50  0000 C CNN
 F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" V 11530 1800 50  0001 C CNN
 F 3 "~" H 11600 1800 50  0001 C CNN
+F 4 "Metal Film Resistors - Through Hole (L=3.6 mm, D=1.6 mm, 1%)" V 2350 10100 50  0001 C CNN "Description"
 	1    11600 1800
 	0    1    1    0   
 $EndComp
@@ -2171,6 +2233,7 @@ F 0 "C3" H 3335 10154 50  0000 R CNN
 F 1 "0.1u" H 3335 10245 50  0000 R CNN
 F 2 "Capacitor_THT:C_Disc_D3.8mm_W2.6mm_P2.50mm" H 3488 10050 50  0001 C CNN
 F 3 "~" H 3450 10200 50  0001 C CNN
+F 4 "Multilayer Ceramic Capacitors MLCC (50V, L=4 mm, W=2.5 mm, LS=2.5 mm)" H 3450 10200 50  0001 C CNN "Description"
 	1    3450 10200
 	-1   0    0    1   
 $EndComp
@@ -2182,6 +2245,7 @@ F 0 "C4" H 3335 10454 50  0000 R CNN
 F 1 "0.1u" H 3335 10545 50  0000 R CNN
 F 2 "Capacitor_THT:C_Disc_D3.8mm_W2.6mm_P2.50mm" H 3488 10350 50  0001 C CNN
 F 3 "~" H 3450 10500 50  0001 C CNN
+F 4 "Multilayer Ceramic Capacitors MLCC (50V, L=4 mm, W=2.5 mm, LS=2.5 mm)" H 3450 10500 50  0001 C CNN "Description"
 	1    3450 10500
 	-1   0    0    1   
 $EndComp
@@ -2244,6 +2308,7 @@ F 0 "C5" H 4135 10154 50  0000 R CNN
 F 1 "0.1u" H 4135 10245 50  0000 R CNN
 F 2 "Capacitor_THT:C_Disc_D3.8mm_W2.6mm_P2.50mm" H 4288 10050 50  0001 C CNN
 F 3 "~" H 4250 10200 50  0001 C CNN
+F 4 "Multilayer Ceramic Capacitors MLCC (50V, L=4 mm, W=2.5 mm, LS=2.5 mm)" H 4250 10200 50  0001 C CNN "Description"
 	1    4250 10200
 	-1   0    0    1   
 $EndComp
@@ -2255,6 +2320,7 @@ F 0 "C6" H 4135 10454 50  0000 R CNN
 F 1 "0.1u" H 4135 10545 50  0000 R CNN
 F 2 "Capacitor_THT:C_Disc_D3.8mm_W2.6mm_P2.50mm" H 4288 10350 50  0001 C CNN
 F 3 "~" H 4250 10500 50  0001 C CNN
+F 4 "Multilayer Ceramic Capacitors MLCC (50V, L=4 mm, W=2.5 mm, LS=2.5 mm)" H 4250 10500 50  0001 C CNN "Description"
 	1    4250 10500
 	-1   0    0    1   
 $EndComp
@@ -2317,6 +2383,7 @@ F 0 "C11" H 4935 10154 50  0000 R CNN
 F 1 "0.1u" H 4935 10245 50  0000 R CNN
 F 2 "Capacitor_THT:C_Disc_D3.8mm_W2.6mm_P2.50mm" H 5088 10050 50  0001 C CNN
 F 3 "~" H 5050 10200 50  0001 C CNN
+F 4 "Multilayer Ceramic Capacitors MLCC (50V, L=4 mm, W=2.5 mm, LS=2.5 mm)" H 5050 10200 50  0001 C CNN "Description"
 	1    5050 10200
 	-1   0    0    1   
 $EndComp
@@ -2328,6 +2395,7 @@ F 0 "C12" H 4935 10454 50  0000 R CNN
 F 1 "0.1u" H 4935 10545 50  0000 R CNN
 F 2 "Capacitor_THT:C_Disc_D3.8mm_W2.6mm_P2.50mm" H 5088 10350 50  0001 C CNN
 F 3 "~" H 5050 10500 50  0001 C CNN
+F 4 "Multilayer Ceramic Capacitors MLCC (50V, L=4 mm, W=2.5 mm, LS=2.5 mm)" H 5050 10500 50  0001 C CNN "Description"
 	1    5050 10500
 	-1   0    0    1   
 $EndComp
@@ -2390,6 +2458,7 @@ F 0 "C13" H 5735 10154 50  0000 R CNN
 F 1 "0.1u" H 5735 10245 50  0000 R CNN
 F 2 "Capacitor_THT:C_Disc_D3.8mm_W2.6mm_P2.50mm" H 5888 10050 50  0001 C CNN
 F 3 "~" H 5850 10200 50  0001 C CNN
+F 4 "Multilayer Ceramic Capacitors MLCC (50V, L=4 mm, W=2.5 mm, LS=2.5 mm)" H 5850 10200 50  0001 C CNN "Description"
 	1    5850 10200
 	-1   0    0    1   
 $EndComp
@@ -2401,6 +2470,7 @@ F 0 "C14" H 5735 10454 50  0000 R CNN
 F 1 "0.1u" H 5735 10545 50  0000 R CNN
 F 2 "Capacitor_THT:C_Disc_D3.8mm_W2.6mm_P2.50mm" H 5888 10350 50  0001 C CNN
 F 3 "~" H 5850 10500 50  0001 C CNN
+F 4 "Multilayer Ceramic Capacitors MLCC (50V, L=4 mm, W=2.5 mm, LS=2.5 mm)" H 5850 10500 50  0001 C CNN "Description"
 	1    5850 10500
 	-1   0    0    1   
 $EndComp
@@ -2463,6 +2533,7 @@ F 0 "C21" H 6535 10154 50  0000 R CNN
 F 1 "0.1u" H 6535 10245 50  0000 R CNN
 F 2 "Capacitor_THT:C_Disc_D3.8mm_W2.6mm_P2.50mm" H 6688 10050 50  0001 C CNN
 F 3 "~" H 6650 10200 50  0001 C CNN
+F 4 "Multilayer Ceramic Capacitors MLCC (50V, L=4 mm, W=2.5 mm, LS=2.5 mm)" H 6650 10200 50  0001 C CNN "Description"
 	1    6650 10200
 	-1   0    0    1   
 $EndComp
@@ -2474,6 +2545,7 @@ F 0 "C22" H 6535 10454 50  0000 R CNN
 F 1 "0.1u" H 6535 10545 50  0000 R CNN
 F 2 "Capacitor_THT:C_Disc_D3.8mm_W2.6mm_P2.50mm" H 6688 10350 50  0001 C CNN
 F 3 "~" H 6650 10500 50  0001 C CNN
+F 4 "Multilayer Ceramic Capacitors MLCC (50V, L=4 mm, W=2.5 mm, LS=2.5 mm)" H 6650 10500 50  0001 C CNN "Description"
 	1    6650 10500
 	-1   0    0    1   
 $EndComp
@@ -2536,6 +2608,7 @@ F 0 "C23" H 7335 10154 50  0000 R CNN
 F 1 "0.1u" H 7335 10245 50  0000 R CNN
 F 2 "Capacitor_THT:C_Disc_D3.8mm_W2.6mm_P2.50mm" H 7488 10050 50  0001 C CNN
 F 3 "~" H 7450 10200 50  0001 C CNN
+F 4 "Multilayer Ceramic Capacitors MLCC (50V, L=4 mm, W=2.5 mm, LS=2.5 mm)" H 7450 10200 50  0001 C CNN "Description"
 	1    7450 10200
 	-1   0    0    1   
 $EndComp
@@ -2547,6 +2620,7 @@ F 0 "C24" H 7335 10454 50  0000 R CNN
 F 1 "0.1u" H 7335 10545 50  0000 R CNN
 F 2 "Capacitor_THT:C_Disc_D3.8mm_W2.6mm_P2.50mm" H 7488 10350 50  0001 C CNN
 F 3 "~" H 7450 10500 50  0001 C CNN
+F 4 "Multilayer Ceramic Capacitors MLCC (50V, L=4 mm, W=2.5 mm, LS=2.5 mm)" H 7450 10500 50  0001 C CNN "Description"
 	1    7450 10500
 	-1   0    0    1   
 $EndComp
@@ -2609,6 +2683,7 @@ F 0 "C29" H 8135 10154 50  0000 R CNN
 F 1 "0.1u" H 8135 10245 50  0000 R CNN
 F 2 "Capacitor_THT:C_Disc_D3.8mm_W2.6mm_P2.50mm" H 8288 10050 50  0001 C CNN
 F 3 "~" H 8250 10200 50  0001 C CNN
+F 4 "Multilayer Ceramic Capacitors MLCC (50V, L=4 mm, W=2.5 mm, LS=2.5 mm)" H 8250 10200 50  0001 C CNN "Description"
 	1    8250 10200
 	-1   0    0    1   
 $EndComp
@@ -2620,6 +2695,7 @@ F 0 "C30" H 8135 10454 50  0000 R CNN
 F 1 "0.1u" H 8135 10545 50  0000 R CNN
 F 2 "Capacitor_THT:C_Disc_D3.8mm_W2.6mm_P2.50mm" H 8288 10350 50  0001 C CNN
 F 3 "~" H 8250 10500 50  0001 C CNN
+F 4 "Multilayer Ceramic Capacitors MLCC (50V, L=4 mm, W=2.5 mm, LS=2.5 mm)" H 8250 10500 50  0001 C CNN "Description"
 	1    8250 10500
 	-1   0    0    1   
 $EndComp
@@ -2682,6 +2758,7 @@ F 0 "C31" H 8935 10154 50  0000 R CNN
 F 1 "0.1u" H 8935 10245 50  0000 R CNN
 F 2 "Capacitor_THT:C_Disc_D3.8mm_W2.6mm_P2.50mm" H 9088 10050 50  0001 C CNN
 F 3 "~" H 9050 10200 50  0001 C CNN
+F 4 "Multilayer Ceramic Capacitors MLCC (50V, L=4 mm, W=2.5 mm, LS=2.5 mm)" H 9050 10200 50  0001 C CNN "Description"
 	1    9050 10200
 	-1   0    0    1   
 $EndComp
@@ -2693,6 +2770,7 @@ F 0 "C32" H 8935 10454 50  0000 R CNN
 F 1 "0.1u" H 8935 10545 50  0000 R CNN
 F 2 "Capacitor_THT:C_Disc_D3.8mm_W2.6mm_P2.50mm" H 9088 10350 50  0001 C CNN
 F 3 "~" H 9050 10500 50  0001 C CNN
+F 4 "Multilayer Ceramic Capacitors MLCC (50V, L=4 mm, W=2.5 mm, LS=2.5 mm)" H 9050 10500 50  0001 C CNN "Description"
 	1    9050 10500
 	-1   0    0    1   
 $EndComp
@@ -2755,6 +2833,7 @@ F 0 "C37" H 9735 10154 50  0000 R CNN
 F 1 "0.1u" H 9735 10245 50  0000 R CNN
 F 2 "Capacitor_THT:C_Disc_D3.8mm_W2.6mm_P2.50mm" H 9888 10050 50  0001 C CNN
 F 3 "~" H 9850 10200 50  0001 C CNN
+F 4 "Multilayer Ceramic Capacitors MLCC (50V, L=4 mm, W=2.5 mm, LS=2.5 mm)" H 9850 10200 50  0001 C CNN "Description"
 	1    9850 10200
 	-1   0    0    1   
 $EndComp
@@ -2766,6 +2845,7 @@ F 0 "C38" H 9735 10454 50  0000 R CNN
 F 1 "0.1u" H 9735 10545 50  0000 R CNN
 F 2 "Capacitor_THT:C_Disc_D3.8mm_W2.6mm_P2.50mm" H 9888 10350 50  0001 C CNN
 F 3 "~" H 9850 10500 50  0001 C CNN
+F 4 "Multilayer Ceramic Capacitors MLCC (50V, L=4 mm, W=2.5 mm, LS=2.5 mm)" H 9850 10500 50  0001 C CNN "Description"
 	1    9850 10500
 	-1   0    0    1   
 $EndComp
@@ -2828,6 +2908,7 @@ F 0 "C40" H 10535 10154 50  0000 R CNN
 F 1 "0.1u" H 10535 10245 50  0000 R CNN
 F 2 "Capacitor_THT:C_Disc_D3.8mm_W2.6mm_P2.50mm" H 10688 10050 50  0001 C CNN
 F 3 "~" H 10650 10200 50  0001 C CNN
+F 4 "Multilayer Ceramic Capacitors MLCC (50V, L=4 mm, W=2.5 mm, LS=2.5 mm)" H 10650 10200 50  0001 C CNN "Description"
 	1    10650 10200
 	-1   0    0    1   
 $EndComp
@@ -2839,6 +2920,7 @@ F 0 "C41" H 10535 10454 50  0000 R CNN
 F 1 "0.1u" H 10535 10545 50  0000 R CNN
 F 2 "Capacitor_THT:C_Disc_D3.8mm_W2.6mm_P2.50mm" H 10688 10350 50  0001 C CNN
 F 3 "~" H 10650 10500 50  0001 C CNN
+F 4 "Multilayer Ceramic Capacitors MLCC (50V, L=4 mm, W=2.5 mm, LS=2.5 mm)" H 10650 10500 50  0001 C CNN "Description"
 	1    10650 10500
 	-1   0    0    1   
 $EndComp
@@ -2918,9 +3000,10 @@ L Connector:Conn_01x07_Female J7
 U 1 1 60F547E9
 P 2950 8200
 F 0 "J7" H 2978 8226 50  0000 L CNN
-F 1 "Conn_01x07_Female" H 2978 8135 50  0000 L CNN
+F 1 "01x07 Female" H 2978 8135 50  0000 L CNN
 F 2 "Connector_PinSocket_2.54mm:PinSocket_1x07_P2.54mm_Vertical" H 2950 8200 50  0001 C CNN
 F 3 "~" H 2950 8200 50  0001 C CNN
+F 4 "Board to Board Connectors (2.54 mm)" H 2950 8200 50  0001 C CNN "Description"
 	1    2950 8200
 	1    0    0    -1  
 $EndComp
@@ -2945,9 +3028,10 @@ L Connector:Conn_01x05_Female J3
 U 1 1 60F967B2
 P 14700 2250
 F 0 "J3" H 14728 2276 50  0000 L CNN
-F 1 "Conn_01x05_Female" H 14728 2185 50  0000 L CNN
+F 1 "01x05 Female" H 14728 2185 50  0000 L CNN
 F 2 "Connector_PinSocket_2.54mm:PinSocket_1x05_P2.54mm_Vertical" H 14700 2250 50  0001 C CNN
 F 3 "~" H 14700 2250 50  0001 C CNN
+F 4 "Board to Board Connectors (2.54 mm)" H 14700 2250 50  0001 C CNN "Description"
 	1    14700 2250
 	1    0    0    -1  
 $EndComp
@@ -2970,7 +3054,7 @@ Text GLabel 7450 4300 1    50   Input ~ 0
 C_B
 Text GLabel 9100 4300 1    50   Input ~ 0
 D_B
-Text GLabel 10600 4550 1    50   Input ~ 0
+Text GLabel 10600 3650 1    50   Input ~ 0
 E_B
 Wire Wire Line
 	3600 3200 3600 3500
@@ -2985,9 +3069,9 @@ Text GLabel 5850 7750 1    50   Input ~ 0
 G_B
 Text GLabel 7450 7750 1    50   Input ~ 0
 H_B
-Text GLabel 9100 7900 1    50   Input ~ 0
+Text GLabel 9100 6900 1    50   Input ~ 0
 I_B
-Text GLabel 11300 7900 1    50   Input ~ 0
+Text GLabel 11300 6900 1    50   Input ~ 0
 J_B
 Text GLabel 4200 6750 2    50   Input ~ 0
 F_A
@@ -3062,9 +3146,10 @@ L Connector:Conn_01x06_Female J6
 U 1 1 6108EDA7
 P 2550 4650
 F 0 "J6" H 2578 4626 50  0000 L CNN
-F 1 "Conn_01x06_Female" H 2578 4535 50  0000 L CNN
+F 1 "01x06 Female" H 2578 4535 50  0000 L CNN
 F 2 "Connector_PinSocket_2.54mm:PinSocket_1x06_P2.54mm_Vertical" H 2550 4650 50  0001 C CNN
 F 3 "~" H 2550 4650 50  0001 C CNN
+F 4 "Board to Board Connectors (2.54 mm)" H 2550 4650 50  0001 C CNN "Description"
 	1    2550 4650
 	1    0    0    -1  
 $EndComp
@@ -3079,4 +3164,92 @@ F 3 "" H 2350 4450 50  0001 C CNN
 	1    2350 4450
 	0    -1   -1   0   
 $EndComp
+$Comp
+L Device:R R5
+U 1 1 6109BBBE
+P 9100 7600
+F 0 "R5" H 9030 7554 50  0000 R CNN
+F 1 "82k" H 9030 7645 50  0000 R CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" V 9030 7600 50  0001 C CNN
+F 3 "~" H 9100 7600 50  0001 C CNN
+F 4 "Metal Film Resistors - Through Hole (L=3.6 mm, D=1.6 mm, 1%)" V 2350 10100 50  0001 C CNN "Description"
+	1    9100 7600
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:C C36
+U 1 1 6109C867
+P 9100 7200
+F 0 "C36" H 9300 7150 50  0000 C CNN
+F 1 "680p" H 9300 7250 50  0000 C CNN
+F 2 "Capacitor_THT:C_Rect_L7.0mm_W4.5mm_P5.00mm" H 9138 7050 50  0001 C CNN
+F 3 "https://www.mouser.ch/datasheet/2/440/e_WIMA_FKP_2-1139852.pdf" H 9100 7200 50  0001 C CNN
+F 4 "Film Capacitors Polypropylene (L=7.2 mm W=4.5 mm, P=5 mm )" H 9100 7200 50  0001 C CNN "Description"
+	1    9100 7200
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	9100 6900 9100 7050
+Wire Wire Line
+	9100 7750 9100 8000
+Wire Wire Line
+	9100 7350 9100 7450
+$Comp
+L Device:R R13
+U 1 1 610C2DBE
+P 11300 7550
+F 0 "R13" H 11230 7504 50  0000 R CNN
+F 1 "68k" H 11230 7595 50  0000 R CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" V 11230 7550 50  0001 C CNN
+F 3 "~" H 11300 7550 50  0001 C CNN
+F 4 "Metal Film Resistors - Through Hole (L=3.6 mm, D=1.6 mm, 1%)" V 2350 10100 50  0001 C CNN "Description"
+	1    11300 7550
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:C C45
+U 1 1 610C339D
+P 11300 7150
+F 0 "C45" H 11100 7100 50  0000 C CNN
+F 1 "220p" H 11100 7200 50  0000 C CNN
+F 2 "Capacitor_THT:C_Rect_L7.2mm_W4.5mm_P5.00mm_FKS2_FKP2_MKS2_MKP2" H 11338 7000 50  0001 C CNN
+F 3 "https://www.mouser.ch/datasheet/2/440/e_WIMA_FKP_2-1139852.pdf" H 11300 7150 50  0001 C CNN
+F 4 "Film Capacitors Polypropylene (L=7.2 mm W=4.5 mm, P=5 mm )" H 11300 7150 50  0001 C CNN "Description"
+	1    11300 7150
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	11300 6900 11300 7000
+Wire Wire Line
+	11300 7700 11300 8000
+Wire Wire Line
+	11300 7300 11300 7400
+$Comp
+L Device:R R7
+U 1 1 610F12DC
+P 10600 4150
+F 0 "R7" H 10530 4104 50  0000 R CNN
+F 1 "130k" H 10530 4195 50  0000 R CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" V 10530 4150 50  0001 C CNN
+F 3 "~" H 10600 4150 50  0001 C CNN
+F 4 "Metal Film Resistors - Through Hole (L=3.6 mm, D=1.6 mm, 1%)" V 2350 10100 50  0001 C CNN "Description"
+	1    10600 4150
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:C C43
+U 1 1 610F20B6
+P 10600 3850
+F 0 "C43" H 10800 3800 50  0000 C CNN
+F 1 "220p" H 10800 3900 50  0000 C CNN
+F 2 "Capacitor_THT:C_Rect_L7.2mm_W4.5mm_P5.00mm_FKS2_FKP2_MKS2_MKP2" H 10638 3700 50  0001 C CNN
+F 3 "https://www.mouser.ch/datasheet/2/440/e_WIMA_FKP_2-1139852.pdf" H 10600 3850 50  0001 C CNN
+F 4 "Film Capacitors Polypropylene (L=7.2 mm W=4.5 mm, P=5 mm )" H 10600 3850 50  0001 C CNN "Description"
+	1    10600 3850
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	10600 3650 10600 3700
+Wire Wire Line
+	10600 4300 10600 4650
 $EndSCHEMATC
