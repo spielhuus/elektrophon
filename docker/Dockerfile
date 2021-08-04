@@ -1,4 +1,5 @@
 FROM ubuntu:20.10
+#FROM ubuntu:latest
 
 ENV DEBIAN_FRONTEND noninteractive
 
@@ -46,5 +47,6 @@ ENV JEKYLL_DIR="/github/workspace"
 ENV WWW_DIR="/github/workspace/www"
 WORKDIR $JEKYLL_DIR
 ENV GEM_HOME /var/lib/gems
+ENV DRAFT=""
 
 CMD ["/bin/bash"]

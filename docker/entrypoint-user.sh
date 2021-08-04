@@ -75,7 +75,8 @@ case "$@" in
         scons
         cd $WWW_DIR
         installdeps_bundler_local
-        bundle exec jekyll build --trace
+
+        bundle exec jekyll build "${DRAFT:+--drafts}" --trace
         cd - &>/dev/null
         ;;
     notebook)
