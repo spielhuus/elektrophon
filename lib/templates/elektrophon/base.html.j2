@@ -97,8 +97,14 @@ unknown type  {{ cell.type }}
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output {{ extra_class }}" data-mime-type="text/html">
 {{ output.data['text/html'] }}
 </div>
-<!-- start html scoped -->
+<!-- emd html scoped -->
 {%- endblock data_html %}
+
+{%- block data_javascript scoped %}
+<script type="text/javascript">
+{{ output.data['application/javascript'] }}
+</script>
+{%- endblock -%}
 
 {% block data_svg scoped -%}
 <div class="column is-12 has-text-centered mb-6" data-mime-type="image/svg+xml">
