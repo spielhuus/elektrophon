@@ -20,7 +20,7 @@ function installdeps_bundler_local()
         cd "$WWW_DIR"
         setup_bundler_local
         bundler install --path $BUNDLER_FOLDER
-        setup_bundler_local
+        #setup_bundler_local
         cd - &>/dev/null
     else
         exit 1

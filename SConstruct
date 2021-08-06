@@ -290,7 +290,19 @@ for x in NOTEBOOKS:
     Install(target_path, target_file)
 
 env.KibotParser([os.path.join('build', 'elektrophon.json'), os.path.join('build', 'elektrophon.xml')], kibot_files)
+
+ab = env.Command(["www/node_modules/alpinejs/dist/cdn.min.js", 'www/node_modules/mathjax/es5/tex-chtml.js', 'www/node_modules/fft.js/lib/fft.js'],
+                 "www/package.json",
+                 "npm install",
+                 chdir='www')
+
+ab = env.Command(["www/assets/js/bundle.js"],
+                 ["www/assets/js/main.js", 'www/node_modules/fft.js/lib/fft.js'],
+                 "www/node_modules/.bin/browserify www/assets/js/main.js > www/assets/js/bundle.js")
+
 Install(os.path.join('www', '_data'), os.path.join('build', 'elektrophon.json'))
+env.Install('www/assets/js', 'www/node_modules/alpinejs/dist/cdn.js')
+env.Install('www/assets/js', 'www/node_modules/mathjax/es5/')
 env.Install('www/assets', Glob('content/**.jpg'))
 env.Install('www/assets', Glob('content/**/*.jpg'))
 env.Install('www/assets', Glob('content/**/*.pdf'))

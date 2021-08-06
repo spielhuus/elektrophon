@@ -1,3 +1,4 @@
+var Chart = require('chart.js');
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -24,6 +25,33 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   
 });
+
+
+window.fft_freq = (n, d) => {
+  console.log(d);
+  var results = [];
+  for(let i=0; i<n; i++ ) {
+    results.push(i/2);
+  }
+  return results;
+}
+
+/* fft transform */
+window.fft_transform = (input, size) => {
+  const FFT = require('fft.js');
+  const f = new FFT(input.length);
+
+  const out = f.createComplexArray();
+  let data = f.toComplexArray(input);
+  f.transform(out, data);
+
+  var result = [];
+  for (let i = 0; i < size; i++) {
+    result.push(Math.abs(out[i]));
+  }
+  
+  return result;
+}
 
 /* the image modal script */
 function openModal() {
