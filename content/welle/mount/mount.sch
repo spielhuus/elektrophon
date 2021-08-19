@@ -1,0 +1,654 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "welle"
+Date "2021-08-19"
+Rev "R01"
+Comp ""
+Comment1 "schema for mount pcb"
+Comment2 "Wavefolder designed by Jürgen Haible and Yves Usson"
+Comment3 ""
+Comment4 "License CC BY 4.0 - Attribution 4.0 International"
+$EndDescr
+$Comp
+L Mechanical:MountingHole H1
+U 1 1 6097A217
+P 9700 5900
+F 0 "H1" H 9800 5946 50  0000 L CNN
+F 1 "MountingHole" H 9800 5855 50  0000 L CNN
+F 2 "MountingHole:MountingHole_2.2mm_M2" H 9700 5900 50  0001 C CNN
+F 3 "~" H 9700 5900 50  0001 C CNN
+	1    9700 5900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H2
+U 1 1 61220C9A
+P 9700 6200
+F 0 "H2" H 9800 6246 50  0000 L CNN
+F 1 "MountingHole" H 9800 6155 50  0000 L CNN
+F 2 "MountingHole:MountingHole_2.2mm_M2" H 9700 6200 50  0001 C CNN
+F 3 "~" H 9700 6200 50  0001 C CNN
+	1    9700 6200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+15V #PWR013
+U 1 1 61220C96
+P 6100 7200
+F 0 "#PWR013" H 6100 7050 50  0001 C CNN
+F 1 "+15V" H 6115 7373 50  0000 C CNN
+F 2 "" H 6100 7200 50  0001 C CNN
+F 3 "" H 6100 7200 50  0001 C CNN
+	1    6100 7200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR015
+U 1 1 5F817A91
+P 6600 7300
+F 0 "#PWR015" H 6600 7050 50  0001 C CNN
+F 1 "GND" H 6605 7127 50  0000 C CNN
+F 2 "" H 6600 7300 50  0001 C CNN
+F 3 "" H 6600 7300 50  0001 C CNN
+	1    6600 7300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:PWR_FLAG #FLG01
+U 1 1 61220C93
+P 6100 7200
+F 0 "#FLG01" H 6100 7275 50  0001 C CNN
+F 1 "PWR_FLAG" H 6100 7373 50  0001 C CNN
+F 2 "" H 6100 7200 50  0001 C CNN
+F 3 "~" H 6100 7200 50  0001 C CNN
+	1    6100 7200
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:PWR_FLAG #FLG02
+U 1 1 61220C94
+P 6350 7200
+F 0 "#FLG02" H 6350 7275 50  0001 C CNN
+F 1 "PWR_FLAG" H 6350 7373 50  0001 C CNN
+F 2 "" H 6350 7200 50  0001 C CNN
+F 3 "~" H 6350 7200 50  0001 C CNN
+	1    6350 7200
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:PWR_FLAG #FLG03
+U 1 1 61220C95
+P 6600 7300
+F 0 "#FLG03" H 6600 7375 50  0001 C CNN
+F 1 "PWR_FLAG" H 6600 7473 50  0001 C CNN
+F 2 "" H 6600 7300 50  0001 C CNN
+F 3 "~" H 6600 7300 50  0001 C CNN
+	1    6600 7300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H3
+U 1 1 6098DECA
+P 10450 5900
+F 0 "H3" H 10550 5946 50  0000 L CNN
+F 1 "MountingHole" H 10550 5855 50  0000 L CNN
+F 2 "MountingHole:MountingHole_2.2mm_M2" H 10450 5900 50  0001 C CNN
+F 3 "~" H 10450 5900 50  0001 C CNN
+	1    10450 5900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H4
+U 1 1 6098DED0
+P 10450 6200
+F 0 "H4" H 10550 6246 50  0000 L CNN
+F 1 "MountingHole" H 10550 6155 50  0000 L CNN
+F 2 "MountingHole:MountingHole_2.2mm_M2" H 10450 6200 50  0001 C CNN
+F 3 "~" H 10450 6200 50  0001 C CNN
+	1    10450 6200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:AudioJack2_SwitchT J1
+U 1 1 5D78B0A3
+P 850 2200
+F 0 "J1" H 882 2525 50  0000 C CNN
+F 1 "INPUT" H 882 2434 50  0000 C CNN
+F 2 "elektrophon:Jack_3.5mm_WQP-PJ398SM_Vertical" H 850 2200 50  0001 C CNN
+F 3 "~" H 850 2200 50  0001 C CNN
+	1    850  2200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR01
+U 1 1 5D78B0AA
+P 1050 2100
+F 0 "#PWR01" H 1050 1850 50  0001 C CNN
+F 1 "GND" H 1055 1927 50  0000 C CNN
+F 2 "" H 1050 2100 50  0001 C CNN
+F 3 "" H 1050 2100 50  0001 C CNN
+	1    1050 2100
+	0    -1   -1   0   
+$EndComp
+NoConn ~ 1050 2300
+$Comp
+L Connector:AudioJack2_SwitchT J4
+U 1 1 5D7D8B20
+P 1350 5500
+F 0 "J4" H 1170 5525 50  0000 R CNN
+F 1 "OUT" H 1170 5434 50  0000 R CNN
+F 2 "elektrophon:Jack_3.5mm_WQP-PJ398SM_Vertical" H 1350 5500 50  0001 C CNN
+F 3 "~" H 1350 5500 50  0001 C CNN
+	1    1350 5500
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR04
+U 1 1 5D7D8B27
+P 1150 5400
+F 0 "#PWR04" H 1150 5150 50  0001 C CNN
+F 1 "GND" H 1155 5227 50  0000 C CNN
+F 2 "" H 1150 5400 50  0001 C CNN
+F 3 "" H 1150 5400 50  0001 C CNN
+	1    1150 5400
+	0    1    1    0   
+$EndComp
+NoConn ~ 1150 5600
+Wire Wire Line
+	1050 3250 1400 3250
+NoConn ~ 1050 3350
+$Comp
+L power:GND #PWR02
+U 1 1 5D7987A5
+P 1050 3150
+F 0 "#PWR02" H 1050 2900 50  0001 C CNN
+F 1 "GND" H 1055 2977 50  0000 C CNN
+F 2 "" H 1050 3150 50  0001 C CNN
+F 3 "" H 1050 3150 50  0001 C CNN
+	1    1050 3150
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Connector:AudioJack2_SwitchT J2
+U 1 1 5D79879E
+P 850 3250
+F 0 "J2" H 882 3575 50  0000 C CNN
+F 1 "Control" H 882 3484 50  0000 C CNN
+F 2 "elektrophon:Jack_3.5mm_WQP-PJ398SM_Vertical" H 850 3250 50  0001 C CNN
+F 3 "~" H 850 3250 50  0001 C CNN
+	1    850  3250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR05
+U 1 1 5CA9B016
+P 1400 3700
+F 0 "#PWR05" H 1400 3450 50  0001 C CNN
+F 1 "GND" H 1405 3527 50  0000 C CNN
+F 2 "" H 1400 3700 50  0001 C CNN
+F 3 "" H 1400 3700 50  0001 C CNN
+	1    1400 3700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1550 3550 1650 3550
+Wire Wire Line
+	1400 3250 1400 3400
+$Comp
+L Device:R_POT RV1
+U 1 1 5CA99468
+P 1400 3550
+F 0 "RV1" H 1330 3596 50  0000 R CNN
+F 1 "100k" H 1330 3505 50  0000 R CNN
+F 2 "elektrophon:Potentiometer_Alpha_RD901F-40-00D_Single_Vertical" H 1400 3550 50  0001 C CNN
+F 3 "~" H 1400 3550 50  0001 C CNN
+F 4 "Alpha 9 mm Pots – Vertical" H 1400 3550 50  0001 C CNN "Description"
+	1    1400 3550
+	1    0    0    1   
+$EndComp
+Text Notes 1100 3800 1    50   ~ 0
+attenuate
+$Comp
+L power:GND #PWR07
+U 1 1 5E3FF08E
+P 1400 4650
+F 0 "#PWR07" H 1400 4400 50  0001 C CNN
+F 1 "GND" H 1405 4477 50  0000 C CNN
+F 2 "" H 1400 4650 50  0001 C CNN
+F 3 "" H 1400 4650 50  0001 C CNN
+	1    1400 4650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1550 4500 1650 4500
+$Comp
+L Device:R_POT RV2
+U 1 1 5E3FF095
+P 1400 4500
+F 0 "RV2" H 1330 4546 50  0000 R CNN
+F 1 "100k" H 1330 4455 50  0000 R CNN
+F 2 "elektrophon:Potentiometer_Alpha_RD901F-40-00D_Single_Vertical" H 1400 4500 50  0001 C CNN
+F 3 "~" H 1400 4500 50  0001 C CNN
+F 4 "Alpha 9 mm Pots – Vertical" H 1400 4500 50  0001 C CNN "Description"
+	1    1400 4500
+	1    0    0    1   
+$EndComp
+$Comp
+L power:+15V #PWR06
+U 1 1 5E3FFF28
+P 1400 4350
+F 0 "#PWR06" H 1400 4200 50  0001 C CNN
+F 1 "+15V" H 1415 4523 50  0000 C CNN
+F 2 "" H 1400 4350 50  0001 C CNN
+F 3 "" H 1400 4350 50  0001 C CNN
+	1    1400 4350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_POT RV4
+U 1 1 5E764C30
+P 2550 4550
+F 0 "RV4" H 2481 4596 50  0000 R CNN
+F 1 "47k" H 2481 4505 50  0000 R CNN
+F 2 "elektrophon:Potentiometer_Alpha_RD901F-40-00D_Single_Vertical" H 2550 4550 50  0001 C CNN
+F 3 "~" H 2550 4550 50  0001 C CNN
+F 4 "Alpha 9 mm Pots – Vertical" H 2550 4550 50  0001 C CNN "Description"
+	1    2550 4550
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	2800 4550 2700 4550
+NoConn ~ 2550 4700
+Text Notes 2300 4650 1    50   ~ 0
+shape
+Text Notes 1100 4650 1    50   ~ 0
+range
+Text Label 3800 7050 2    50   ~ 0
+input
+Text Label 3800 6850 2    50   ~ 0
+control
+Text Label 3800 6950 2    50   ~ 0
+range
+Text Label 3800 7250 2    50   ~ 0
+out
+Text Label 4600 6950 2    50   ~ 0
+shape_a
+Text Label 4600 7050 2    50   ~ 0
+shape_b
+$Comp
+L power:GND #PWR012
+U 1 1 6126FB45
+P 4600 6850
+F 0 "#PWR012" H 4600 6600 50  0001 C CNN
+F 1 "GND" V 4605 6722 50  0000 R CNN
+F 2 "" H 4600 6850 50  0001 C CNN
+F 3 "" H 4600 6850 50  0001 C CNN
+	1    4600 6850
+	0    1    1    0   
+$EndComp
+$Comp
+L power:+5V #PWR09
+U 1 1 612927B3
+P 3800 6750
+F 0 "#PWR09" H 3800 6600 50  0001 C CNN
+F 1 "+5V" V 3815 6878 50  0000 L CNN
+F 2 "" H 3800 6750 50  0001 C CNN
+F 3 "" H 3800 6750 50  0001 C CNN
+	1    3800 6750
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:+15V #PWR011
+U 1 1 6127169F
+P 3800 7150
+F 0 "#PWR011" H 3800 7000 50  0001 C CNN
+F 1 "+15V" V 3815 7278 50  0000 L CNN
+F 2 "" H 3800 7150 50  0001 C CNN
+F 3 "" H 3800 7150 50  0001 C CNN
+	1    3800 7150
+	0    -1   -1   0   
+$EndComp
+Text Label 1650 4500 0    50   ~ 0
+range
+Text Label 1650 3550 0    50   ~ 0
+control
+Text Label 1400 2200 0    50   ~ 0
+input
+Wire Wire Line
+	1050 2200 1400 2200
+Text Label 1150 5500 2    50   ~ 0
+out
+Text Label 2800 4550 0    50   ~ 0
+shape_a
+Text Label 2550 4400 0    50   ~ 0
+shape_b
+$Comp
+L Device:LED D4
+U 1 1 60AE943D
+P 8850 2750
+F 0 "D4" V 8950 2350 50  0000 C CNN
+F 1 "LED (Yellow)" V 8850 2350 50  0000 C CNN
+F 2 "LED_THT:LED_D3.0mm" H 8850 2750 50  0001 C CNN
+F 3 "https://www.mouser.ch/datasheet/2/216/WP710A10LZGCK-535717.pdf" H 8850 2750 50  0001 C CNN
+F 4 "LED 3mm low current" V 8850 2750 50  0001 C CNN "Description"
+	1    8850 2750
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR019
+U 1 1 60AE9449
+P 8850 3050
+F 0 "#PWR019" H 8850 2800 50  0001 C CNN
+F 1 "GND" H 8855 2877 50  0000 C CNN
+F 2 "" H 8850 3050 50  0001 C CNN
+F 3 "" H 8850 3050 50  0001 C CNN
+	1    8850 3050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R4
+U 1 1 60AE944F
+P 8850 2050
+F 0 "R4" H 8920 2096 50  0000 L CNN
+F 1 "5k" H 8920 2005 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 8780 2050 50  0001 C CNN
+F 3 "~" H 8850 2050 50  0001 C CNN
+F 4 "Thick Film Resistors - SMD (0805)" H 8850 2050 50  0001 C CNN "Description"
+	1    8850 2050
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR018
+U 1 1 60AE9455
+P 8850 1900
+F 0 "#PWR018" H 8850 1750 50  0001 C CNN
+F 1 "+5V" H 8865 2073 50  0000 C CNN
+F 2 "" H 8850 1900 50  0001 C CNN
+F 3 "" H 8850 1900 50  0001 C CNN
+	1    8850 1900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R3
+U 1 1 60AE945B
+P 8300 2400
+F 0 "R3" V 8093 2400 50  0000 C CNN
+F 1 "100k" V 8184 2400 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 8230 2400 50  0001 C CNN
+F 3 "~" H 8300 2400 50  0001 C CNN
+F 4 "Thick Film Resistors - SMD (0805)" V 8300 2400 50  0001 C CNN "Description"
+	1    8300 2400
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	8450 2400 8550 2400
+Wire Wire Line
+	8550 2600 8550 2400
+Text Label 8150 2400 2    50   ~ 0
+control_in
+Wire Wire Line
+	8850 2900 8850 2950
+Wire Wire Line
+	8550 2950 8850 2950
+Connection ~ 8850 2950
+Wire Wire Line
+	8850 2950 8850 3050
+Wire Wire Line
+	8550 2950 8550 2900
+$Comp
+L Device:LED D7
+U 1 1 60AF092F
+P 10400 2750
+F 0 "D7" V 10500 2400 50  0000 C CNN
+F 1 "LED (Green)" V 10400 2400 50  0000 C CNN
+F 2 "LED_THT:LED_D3.0mm" H 10400 2750 50  0001 C CNN
+F 3 "https://www.mouser.ch/datasheet/2/216/WP710A10LSECK-J3-535625.pdf" H 10400 2750 50  0001 C CNN
+F 4 "LED 3mm low current" V 10400 2750 50  0001 C CNN "Description"
+	1    10400 2750
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR021
+U 1 1 60AF093B
+P 10400 3050
+F 0 "#PWR021" H 10400 2800 50  0001 C CNN
+F 1 "GND" H 10405 2877 50  0000 C CNN
+F 2 "" H 10400 3050 50  0001 C CNN
+F 3 "" H 10400 3050 50  0001 C CNN
+	1    10400 3050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R7
+U 1 1 60AF0941
+P 10400 2050
+F 0 "R7" H 10470 2096 50  0000 L CNN
+F 1 "5k" H 10470 2005 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 10330 2050 50  0001 C CNN
+F 3 "~" H 10400 2050 50  0001 C CNN
+F 4 "Thick Film Resistors - SMD (0805)" H 10400 2050 50  0001 C CNN "Description"
+	1    10400 2050
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR020
+U 1 1 60AF0947
+P 10400 1900
+F 0 "#PWR020" H 10400 1750 50  0001 C CNN
+F 1 "+5V" H 10415 2073 50  0000 C CNN
+F 2 "" H 10400 1900 50  0001 C CNN
+F 3 "" H 10400 1900 50  0001 C CNN
+	1    10400 1900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R5
+U 1 1 60AF094D
+P 9850 2400
+F 0 "R5" V 9643 2400 50  0000 C CNN
+F 1 "100k" V 9734 2400 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 9780 2400 50  0001 C CNN
+F 3 "~" H 9850 2400 50  0001 C CNN
+F 4 "Thick Film Resistors - SMD (0805)" V 9850 2400 50  0001 C CNN "Description"
+	1    9850 2400
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	10000 2400 10100 2400
+Wire Wire Line
+	10100 2600 10100 2400
+Wire Wire Line
+	10400 2900 10400 2950
+Wire Wire Line
+	10100 2950 10400 2950
+Connection ~ 10400 2950
+Wire Wire Line
+	10400 2950 10400 3050
+Wire Wire Line
+	10100 2950 10100 2900
+$Comp
+L Diode:1N4148W D5
+U 1 1 60AACD5E
+P 10100 2750
+F 0 "D5" V 10050 2400 50  0000 L CNN
+F 1 "1N4148W" V 10150 2300 50  0000 L CNN
+F 2 "Diode_SMD:D_SOD-123" H 10100 2575 50  0001 C CNN
+F 3 "https://www.vishay.com/docs/85748/1n4148w.pdf" H 10100 2750 50  0001 C CNN
+	1    10100 2750
+	0    1    1    0   
+$EndComp
+$Comp
+L Diode:1N4148W D3
+U 1 1 60AB3CED
+P 8550 2750
+F 0 "D3" V 8504 2830 50  0000 L CNN
+F 1 "1N4148W" V 8595 2830 50  0000 L CNN
+F 2 "Diode_SMD:D_SOD-123" H 8550 2575 50  0001 C CNN
+F 3 "https://www.vishay.com/docs/85748/1n4148w.pdf" H 8550 2750 50  0001 C CNN
+	1    8550 2750
+	0    1    1    0   
+$EndComp
+$Comp
+L Transistor_BJT:MMBT3904 Q2
+U 1 1 60AD3277
+P 8750 2400
+F 0 "Q2" H 8941 2446 50  0000 L CNN
+F 1 "MMBT3904" H 8941 2355 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 8950 2325 50  0001 L CIN
+F 3 "https://www.onsemi.com/pub/Collateral/2N3903-D.PDF" H 8750 2400 50  0001 L CNN
+	1    8750 2400
+	1    0    0    -1  
+$EndComp
+Connection ~ 8550 2400
+$Comp
+L Transistor_BJT:MMBT3904 Q3
+U 1 1 60AD3DD5
+P 10300 2400
+F 0 "Q3" H 10491 2446 50  0000 L CNN
+F 1 "MMBT3904" H 10491 2355 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 10500 2325 50  0001 L CIN
+F 3 "https://www.onsemi.com/pub/Collateral/2N3903-D.PDF" H 10300 2400 50  0001 L CNN
+	1    10300 2400
+	1    0    0    -1  
+$EndComp
+Connection ~ 10100 2400
+$Comp
+L Device:LED D8
+U 1 1 60AC9EF5
+P 10450 4700
+F 0 "D8" V 10550 4450 50  0000 C CNN
+F 1 "LED (Red)" V 10450 4450 50  0000 C CNN
+F 2 "LED_THT:LED_D3.0mm" H 10450 4700 50  0001 C CNN
+F 3 "https://www.mouser.ch/datasheet/2/216/WP710A10LSECK-J3-535625.pdf" H 10450 4700 50  0001 C CNN
+F 4 "LED 3mm low current" V 10450 4700 50  0001 C CNN "Description"
+	1    10450 4700
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR023
+U 1 1 60AC9EFB
+P 10450 5000
+F 0 "#PWR023" H 10450 4750 50  0001 C CNN
+F 1 "GND" H 10455 4827 50  0000 C CNN
+F 2 "" H 10450 5000 50  0001 C CNN
+F 3 "" H 10450 5000 50  0001 C CNN
+	1    10450 5000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R8
+U 1 1 60AC9F01
+P 10450 4000
+F 0 "R8" H 10520 4046 50  0000 L CNN
+F 1 "5k" H 10520 3955 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 10380 4000 50  0001 C CNN
+F 3 "~" H 10450 4000 50  0001 C CNN
+F 4 "Thick Film Resistors - SMD (0805)" H 10450 4000 50  0001 C CNN "Description"
+	1    10450 4000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR022
+U 1 1 60AC9F07
+P 10450 3850
+F 0 "#PWR022" H 10450 3700 50  0001 C CNN
+F 1 "+5V" H 10465 4023 50  0000 C CNN
+F 2 "" H 10450 3850 50  0001 C CNN
+F 3 "" H 10450 3850 50  0001 C CNN
+	1    10450 3850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R6
+U 1 1 60AC9F0D
+P 9900 4350
+F 0 "R6" V 9693 4350 50  0000 C CNN
+F 1 "100k" V 9784 4350 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 9830 4350 50  0001 C CNN
+F 3 "~" H 9900 4350 50  0001 C CNN
+F 4 "" V 9900 4350 50  0001 C CNN "Description"
+	1    9900 4350
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	10050 4350 10150 4350
+Wire Wire Line
+	10150 4550 10150 4350
+Wire Wire Line
+	10450 4850 10450 4900
+Wire Wire Line
+	10150 4900 10450 4900
+Connection ~ 10450 4900
+Wire Wire Line
+	10450 4900 10450 5000
+Wire Wire Line
+	10150 4900 10150 4850
+$Comp
+L Diode:1N4148W D6
+U 1 1 60AC9F1B
+P 10150 4700
+F 0 "D6" V 10100 4350 50  0000 L CNN
+F 1 "1N4148W" V 10200 4250 50  0000 L CNN
+F 2 "Diode_SMD:D_SOD-123" H 10150 4525 50  0001 C CNN
+F 3 "https://www.vishay.com/docs/85748/1n4148w.pdf" H 10150 4700 50  0001 C CNN
+	1    10150 4700
+	0    1    1    0   
+$EndComp
+$Comp
+L Transistor_BJT:MMBT3904 Q4
+U 1 1 60AC9F21
+P 10350 4350
+F 0 "Q4" H 10541 4396 50  0000 L CNN
+F 1 "MMBT3904" H 10541 4305 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 10550 4275 50  0001 L CIN
+F 3 "https://www.onsemi.com/pub/Collateral/2N3903-D.PDF" H 10350 4350 50  0001 L CNN
+	1    10350 4350
+	1    0    0    -1  
+$EndComp
+Connection ~ 10150 4350
+Text Label 9700 2400 2    50   ~ 0
+input
+Text Label 1400 3250 0    50   ~ 0
+control_in
+Text Label 9750 4350 2    50   ~ 0
+out
+$Comp
+L Connector:Conn_01x06_Male J3
+U 1 1 611E1D38
+P 4000 6950
+F 0 "J3" H 3972 6878 50  0000 R CNN
+F 1 "01x06 Male" H 3972 6833 50  0001 R CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x06_P2.54mm_Vertical" H 4000 6950 50  0001 C CNN
+F 3 "~" H 4000 6950 50  0001 C CNN
+F 4 "Board to Board Connectors (2.54 mm)" H 4000 6950 50  0001 C CNN "Description"
+	1    4000 6950
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x03_Male J5
+U 1 1 611E4909
+P 4800 6950
+F 0 "J5" H 4772 6928 50  0000 R CNN
+F 1 "01x03 Male" H 4772 6883 50  0001 R CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x03_P2.54mm_Vertical" H 4800 6950 50  0001 C CNN
+F 3 "~" H 4800 6950 50  0001 C CNN
+F 4 "Board to Board Connectors (2.54 mm)" H 4800 6950 50  0001 C CNN "Description"
+	1    4800 6950
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0101
+U 1 1 611CE3B9
+P 6350 7200
+F 0 "#PWR0101" H 6350 7050 50  0001 C CNN
+F 1 "+5V" H 6365 7373 50  0000 C CNN
+F 2 "" H 6350 7200 50  0001 C CNN
+F 3 "" H 6350 7200 50  0001 C CNN
+	1    6350 7200
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC
