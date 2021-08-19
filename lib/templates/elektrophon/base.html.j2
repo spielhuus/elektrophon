@@ -106,6 +106,32 @@ unknown type  {{ cell.type }}
 </script>
 {%- endblock -%}
 
+{%- block data_markdown scoped %}
+<div class="section">
+<div class="container">
+{%- if resources.global_content_filter.include_input_prompt-%}
+    {{ self.empty_in_prompt() }}
+{%- endif -%}
+<div class="content" data-mime-type="text/markdown">
+{{ output.data['text/markdown'] }}
+</div>
+</div>
+</div>
+{%- endblock -%}
+
+{%- block data_latex scoped %}
+<div class="section">
+<div class="container">
+{%- if resources.global_content_filter.include_input_prompt-%}
+    {{ self.empty_in_prompt() }}
+{%- endif -%}
+<div class="content" data-mime-type="text/latex">
+{{ output.data['text/latex'] }}
+</div>
+</div>
+</div>
+{%- endblock -%}
+
 {% block data_svg scoped -%}
 <div class="column is-12 has-text-centered mb-6" data-mime-type="image/svg+xml">
 {%- if output.svg_filename %}
