@@ -112,6 +112,9 @@ F 1 "22u" H 2718 7055 50  0000 L CNN
 F 2 "Capacitor_THT:CP_Radial_D6.3mm_P2.50mm" H 2638 6950 50  0001 C CNN
 F 3 "~" H 2600 7100 50  0001 C CNN
 F 4 "Aluminium Electrolytic Capacitors (50V, D=6.3 mm, LS=2.5 mm)" H 2600 7100 50  0001 C CNN "Description"
+F 5 "C" H 2600 7100 50  0001 C CNN "Spice_Primitive"
+F 6 "22u" H 2600 7100 50  0001 C CNN "Spice_Model"
+F 7 "N" H 2600 7100 50  0001 C CNN "Spice_Netlist_Enabled"
 	1    2600 7100
 	1    0    0    -1  
 $EndComp
@@ -126,6 +129,9 @@ F 1 "22u" H 2718 7355 50  0000 L CNN
 F 2 "Capacitor_THT:CP_Radial_D6.3mm_P2.50mm" H 2638 7250 50  0001 C CNN
 F 3 "~" H 2600 7400 50  0001 C CNN
 F 4 "Aluminium Electrolytic Capacitors (50V, D=6.3 mm, LS=2.5 mm)" H 2600 7400 50  0001 C CNN "Description"
+F 5 "C" H 2600 7400 50  0001 C CNN "Spice_Primitive"
+F 6 "22u" H 2600 7400 50  0001 C CNN "Spice_Model"
+F 7 "N" H 2600 7400 50  0001 C CNN "Spice_Netlist_Enabled"
 	1    2600 7400
 	1    0    0    -1  
 $EndComp
@@ -237,6 +243,9 @@ F 1 "10 Pos" H 1300 7526 50  0000 C CNN
 F 2 "Connector_IDC:IDC-Header_2x05_P2.54mm_Vertical" H 1250 7200 50  0001 C CNN
 F 3 "~" H 1250 7200 50  0001 C CNN
 F 4 "Pin Header IDC (2.54mm)" H 1250 7200 50  0001 C CNN "Description"
+F 5 "J" H 1250 7200 50  0001 C CNN "Spice_Primitive"
+F 6 "10 Pos" H 1250 7200 50  0001 C CNN "Spice_Model"
+F 7 "N" H 1250 7200 50  0001 C CNN "Spice_Netlist_Enabled"
 	1    1250 7200
 	-1   0    0    1   
 $EndComp
@@ -262,6 +271,9 @@ F 1 "10" V 2084 6950 50  0000 C CNN
 F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" V 2130 6950 50  0001 C CNN
 F 3 "~" H 2200 6950 50  0001 C CNN
 F 4 "Metal Film Resistors - Through Hole (L=3.6 mm, D=1.6 mm, 1%)" V 2200 6950 50  0001 C CNN "Description"
+F 5 "R" H 2200 6950 50  0001 C CNN "Spice_Primitive"
+F 6 "10" H 2200 6950 50  0001 C CNN "Spice_Model"
+F 7 "N" H 2200 6950 50  0001 C CNN "Spice_Netlist_Enabled"
 	1    2200 6950
 	0    1    1    0   
 $EndComp
@@ -300,6 +312,9 @@ F 1 "10" V 2084 7550 50  0000 C CNN
 F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" V 2130 7550 50  0001 C CNN
 F 3 "~" H 2200 7550 50  0001 C CNN
 F 4 "Metal Film Resistors - Through Hole (L=3.6 mm, D=1.6 mm, 1%)" V 2200 6950 50  0001 C CNN "Description"
+F 5 "R" H 2200 7550 50  0001 C CNN "Spice_Primitive"
+F 6 "10" H 2200 7550 50  0001 C CNN "Spice_Model"
+F 7 "N" H 2200 7550 50  0001 C CNN "Spice_Netlist_Enabled"
 	1    2200 7550
 	0    1    1    0   
 $EndComp
@@ -354,6 +369,9 @@ F 1 "0.1u" H 4565 7055 50  0000 L CNN
 F 2 "Capacitor_THT:C_Disc_D3.4mm_W2.1mm_P2.50mm" H 4488 6950 50  0001 C CNN
 F 3 "~" H 4450 7100 50  0001 C CNN
 F 4 "Multilayer Ceramic Capacitors MLCC (50V, L=4 mm, W=2.5 mm, LS=2.5 mm)" H 4450 7100 50  0001 C CNN "Description"
+F 5 "C" H 4450 7100 50  0001 C CNN "Spice_Primitive"
+F 6 "0.1u" H 4450 7100 50  0001 C CNN "Spice_Model"
+F 7 "N" H 4450 7100 50  0001 C CNN "Spice_Netlist_Enabled"
 	1    4450 7100
 	1    0    0    -1  
 $EndComp
@@ -366,6 +384,9 @@ F 1 "0.1u" H 4565 7355 50  0000 L CNN
 F 2 "Capacitor_THT:C_Disc_D3.4mm_W2.1mm_P2.50mm" H 4488 7250 50  0001 C CNN
 F 3 "~" H 4450 7400 50  0001 C CNN
 F 4 "Multilayer Ceramic Capacitors MLCC (50V, L=4 mm, W=2.5 mm, LS=2.5 mm)" H 4450 7400 50  0001 C CNN "Description"
+F 5 "C" H 4450 7400 50  0001 C CNN "Spice_Primitive"
+F 6 "0.1u" H 4450 7400 50  0001 C CNN "Spice_Model"
+F 7 "N" H 4450 7400 50  0001 C CNN "Spice_Netlist_Enabled"
 	1    4450 7400
 	1    0    0    -1  
 $EndComp
@@ -377,6 +398,9 @@ F 0 "U2" H 6700 1983 50  0000 C CNN
 F 1 "TL074" H 6700 2074 50  0000 C CNN
 F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 6650 2450 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 6750 2550 50  0001 C CNN
+F 4 "X" H 6700 2350 50  0001 C CNN "Spice_Primitive"
+F 5 "TL074c" H 6700 2350 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 6700 2350 50  0001 C CNN "Spice_Netlist_Enabled"
 	1    6700 2350
 	1    0    0    1   
 $EndComp
@@ -388,6 +412,9 @@ F 0 "U2" H 7500 2933 50  0000 C CNN
 F 1 "TL074" H 7500 3024 50  0000 C CNN
 F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 7450 3400 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 7550 3500 50  0001 C CNN
+F 4 "X" H 7500 3300 50  0001 C CNN "Spice_Primitive"
+F 5 "TL074c" H 7500 3300 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 7500 3300 50  0001 C CNN "Spice_Netlist_Enabled"
 	2    7500 3300
 	1    0    0    1   
 $EndComp
@@ -399,6 +426,9 @@ F 0 "U2" H 8500 3033 50  0000 C CNN
 F 1 "TL074" H 8500 3124 50  0000 C CNN
 F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 8450 3500 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 8550 3600 50  0001 C CNN
+F 4 "X" H 8500 3400 50  0001 C CNN "Spice_Primitive"
+F 5 "TL074c" H 8500 3400 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 8500 3400 50  0001 C CNN "Spice_Netlist_Enabled"
 	3    8500 3400
 	1    0    0    1   
 $EndComp
@@ -410,6 +440,9 @@ F 0 "U2" H 9500 3133 50  0000 C CNN
 F 1 "TL074" H 9500 3224 50  0000 C CNN
 F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 9450 3600 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 9550 3700 50  0001 C CNN
+F 4 "X" H 9500 3500 50  0001 C CNN "Spice_Primitive"
+F 5 "TL074c" H 9500 3500 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 9500 3500 50  0001 C CNN "Spice_Netlist_Enabled"
 	4    9500 3500
 	1    0    0    1   
 $EndComp
@@ -421,6 +454,9 @@ F 0 "U1" H 2650 3633 50  0000 C CNN
 F 1 "TL072" H 2650 3724 50  0000 C CNN
 F 2 "Package_DIP:DIP-8_W7.62mm_Socket" H 2650 4000 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 2650 4000 50  0001 C CNN
+F 4 "X" H 2650 4000 50  0001 C CNN "Spice_Primitive"
+F 5 "TL072c" H 2650 4000 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 2650 4000 50  0001 C CNN "Spice_Netlist_Enabled"
 	2    2650 4000
 	1    0    0    1   
 $EndComp
@@ -507,6 +543,9 @@ F 0 "Q2" H 3891 4046 50  0000 L CNN
 F 1 "BC547" H 3891 3955 50  0000 L CNN
 F 2 "Package_TO_SOT_THT:TO-92_Inline_Wide" H 3900 3925 50  0001 L CIN
 F 3 "http://www.fairchildsemi.com/ds/BC/BC547.pdf" H 3700 4000 50  0001 L CNN
+F 4 "Q" H 3700 4000 50  0001 C CNN "Spice_Primitive"
+F 5 "BC846B" H 3700 4000 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 3700 4000 50  0001 C CNN "Spice_Netlist_Enabled"
 	1    3700 4000
 	1    0    0    -1  
 $EndComp
@@ -565,6 +604,9 @@ F 1 "50k" V 3244 5000 50  0000 C CNN
 F 2 "Potentiometer_THT:Potentiometer_Bourns_3296Z_Horizontal" H 3450 5000 50  0001 C CNN
 F 3 "~" H 3450 5000 50  0001 C CNN
 F 4 "Trimmer Resistor, Bourns 3296Z" V 3450 5000 50  0001 C CNN "Description"
+F 5 "X" H 3450 5000 50  0001 C CNN "Spice_Primitive"
+F 6 "RV4" H 3450 5000 50  0001 C CNN "Spice_Model"
+F 7 "Y" H 3450 5000 50  0001 C CNN "Spice_Netlist_Enabled"
 	1    3450 5000
 	0    -1   -1   0   
 $EndComp
@@ -653,6 +695,9 @@ F 0 "Q1" H 3791 2946 50  0000 L CNN
 F 1 "BC547" H 3791 2855 50  0000 L CNN
 F 2 "Package_TO_SOT_THT:TO-92_Inline_Wide" H 3800 2825 50  0001 L CIN
 F 3 "http://www.fairchildsemi.com/ds/BC/BC547.pdf" H 3600 2900 50  0001 L CNN
+F 4 "Q" H 3600 2900 50  0001 C CNN "Spice_Primitive"
+F 5 "BC846B" H 3600 2900 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 3600 2900 50  0001 C CNN "Spice_Netlist_Enabled"
 	1    3600 2900
 	1    0    0    -1  
 $EndComp
@@ -664,6 +709,9 @@ F 0 "Q3" H 4691 2946 50  0000 L CNN
 F 1 "BC547" H 4691 2855 50  0000 L CNN
 F 2 "Package_TO_SOT_THT:TO-92_Inline_Wide" H 4700 2825 50  0001 L CIN
 F 3 "http://www.fairchildsemi.com/ds/BC/BC547.pdf" H 4500 2900 50  0001 L CNN
+F 4 "Q" H 4500 2900 50  0001 C CNN "Spice_Primitive"
+F 5 "BC846B" H 4500 2900 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 4500 2900 50  0001 C CNN "Spice_Netlist_Enabled"
 	1    4500 2900
 	-1   0    0    -1  
 $EndComp
@@ -889,6 +937,9 @@ F 1 "D" H 6450 1425 50  0000 C CNN
 F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 6450 1300 50  0001 C CNN
 F 3 "~" H 6450 1300 50  0001 C CNN
 F 4 "Small Signal Diode (DO-35)" V 5900 3850 50  0001 C CNN "Description"
+F 5 "D" H 5900 3850 50  0001 C CNN "Spice_Primitive"
+F 6 "D1N4148" H 5900 3850 50  0001 C CNN "Spice_Model"
+F 7 "Y" H 5900 3850 50  0001 C CNN "Spice_Netlist_Enabled"
 	1    6450 1300
 	1    0    0    -1  
 $EndComp
@@ -901,6 +952,9 @@ F 1 "D" H 6450 825 50  0000 C CNN
 F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 6450 950 50  0001 C CNN
 F 3 "~" H 6450 950 50  0001 C CNN
 F 4 "Small Signal Diode (DO-35)" V 5900 3850 50  0001 C CNN "Description"
+F 5 "D" H 5900 3850 50  0001 C CNN "Spice_Primitive"
+F 6 "D1N4148" H 5900 3850 50  0001 C CNN "Spice_Model"
+F 7 "Y" H 5900 3850 50  0001 C CNN "Spice_Netlist_Enabled"
 	1    6450 950 
 	-1   0    0    1   
 $EndComp
@@ -1021,6 +1075,9 @@ F 0 "U1" H 5600 1883 50  0000 C CNN
 F 1 "TL072" H 5600 1974 50  0000 C CNN
 F 2 "Package_DIP:DIP-8_W7.62mm_Socket" H 5600 2250 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 5600 2250 50  0001 C CNN
+F 4 "X" H 5600 2250 50  0001 C CNN "Spice_Primitive"
+F 5 "TL072c" H 5600 2250 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 5600 2250 50  0001 C CNN "Spice_Netlist_Enabled"
 	1    5600 2250
 	1    0    0    1   
 $EndComp
@@ -1143,6 +1200,9 @@ F 1 "D" H 8500 2275 50  0000 C CNN
 F 2 "Diode_THT:D_DO-35_SOD27_P5.08mm_Vertical_KathodeUp" H 8500 2150 50  0001 C CNN
 F 3 "~" H 8500 2150 50  0001 C CNN
 F 4 "Small Signal Diode (DO-35)" V 5900 3650 50  0001 C CNN "Description"
+F 5 "D" H 5900 3850 50  0001 C CNN "Spice_Primitive"
+F 6 "D1N4148" H 5900 3850 50  0001 C CNN "Spice_Model"
+F 7 "Y" H 5900 3850 50  0001 C CNN "Spice_Netlist_Enabled"
 	1    8500 2150
 	1    0    0    -1  
 $EndComp
@@ -1155,6 +1215,9 @@ F 1 "D" H 8500 1625 50  0000 C CNN
 F 2 "Diode_THT:D_DO-35_SOD27_P5.08mm_Vertical_KathodeUp" H 8500 1750 50  0001 C CNN
 F 3 "~" H 8500 1750 50  0001 C CNN
 F 4 "Small Signal Diode (DO-35)" V 5900 3650 50  0001 C CNN "Description"
+F 5 "D" H 5900 3850 50  0001 C CNN "Spice_Primitive"
+F 6 "D1N4148" H 5900 3850 50  0001 C CNN "Spice_Model"
+F 7 "Y" H 5900 3850 50  0001 C CNN "Spice_Netlist_Enabled"
 	1    8500 1750
 	-1   0    0    1   
 $EndComp
@@ -1221,6 +1284,9 @@ F 1 "D" V 5945 3929 50  0000 L CNN
 F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 5900 3850 50  0001 C CNN
 F 3 "~" H 5900 3850 50  0001 C CNN
 F 4 "Small Signal Diode (DO-35)" V 5900 3850 50  0001 C CNN "Description"
+F 5 "D" H 5900 3850 50  0001 C CNN "Spice_Primitive"
+F 6 "D1N4148" H 5900 3850 50  0001 C CNN "Spice_Model"
+F 7 "Y" H 5900 3850 50  0001 C CNN "Spice_Netlist_Enabled"
 	1    5900 3850
 	0    1    1    0   
 $EndComp
@@ -1233,6 +1299,9 @@ F 1 "D" V 5945 4229 50  0000 L CNN
 F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 5900 4150 50  0001 C CNN
 F 3 "~" H 5900 4150 50  0001 C CNN
 F 4 "Small Signal Diode (DO-35)" V 5900 3850 50  0001 C CNN "Description"
+F 5 "D" H 5900 3850 50  0001 C CNN "Spice_Primitive"
+F 6 "D1N4148" H 5900 3850 50  0001 C CNN "Spice_Model"
+F 7 "Y" H 5900 3850 50  0001 C CNN "Spice_Netlist_Enabled"
 	1    5900 4150
 	0    1    1    0   
 $EndComp
@@ -1245,6 +1314,9 @@ F 1 "D" V 5945 4529 50  0000 L CNN
 F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 5900 4450 50  0001 C CNN
 F 3 "~" H 5900 4450 50  0001 C CNN
 F 4 "Small Signal Diode (DO-35)" V 5900 3850 50  0001 C CNN "Description"
+F 5 "D" H 5900 3850 50  0001 C CNN "Spice_Primitive"
+F 6 "D1N4148" H 5900 3850 50  0001 C CNN "Spice_Model"
+F 7 "Y" H 5900 3850 50  0001 C CNN "Spice_Netlist_Enabled"
 	1    5900 4450
 	0    1    1    0   
 $EndComp
@@ -1257,6 +1329,9 @@ F 1 "D" V 5945 4829 50  0000 L CNN
 F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 5900 4750 50  0001 C CNN
 F 3 "~" H 5900 4750 50  0001 C CNN
 F 4 "Small Signal Diode (DO-35)" V 5900 3850 50  0001 C CNN "Description"
+F 5 "D" H 5900 3850 50  0001 C CNN "Spice_Primitive"
+F 6 "D1N4148" H 5900 3850 50  0001 C CNN "Spice_Model"
+F 7 "Y" H 5900 3850 50  0001 C CNN "Spice_Netlist_Enabled"
 	1    5900 4750
 	0    1    1    0   
 $EndComp
@@ -1269,6 +1344,9 @@ F 1 "D" V 5945 5129 50  0000 L CNN
 F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 5900 5050 50  0001 C CNN
 F 3 "~" H 5900 5050 50  0001 C CNN
 F 4 "Small Signal Diode (DO-35)" V 5900 3850 50  0001 C CNN "Description"
+F 5 "D" H 5900 3850 50  0001 C CNN "Spice_Primitive"
+F 6 "D1N4148" H 5900 3850 50  0001 C CNN "Spice_Model"
+F 7 "Y" H 5900 3850 50  0001 C CNN "Spice_Netlist_Enabled"
 	1    5900 5050
 	0    1    1    0   
 $EndComp
@@ -1281,6 +1359,9 @@ F 1 "D" V 5945 5429 50  0000 L CNN
 F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 5900 5350 50  0001 C CNN
 F 3 "~" H 5900 5350 50  0001 C CNN
 F 4 "Small Signal Diode (DO-35)" V 5900 3850 50  0001 C CNN "Description"
+F 5 "D" H 5900 3850 50  0001 C CNN "Spice_Primitive"
+F 6 "D1N4148" H 5900 3850 50  0001 C CNN "Spice_Model"
+F 7 "Y" H 5900 3850 50  0001 C CNN "Spice_Netlist_Enabled"
 	1    5900 5350
 	0    1    1    0   
 $EndComp
@@ -1293,6 +1374,9 @@ F 1 "D" V 5945 5729 50  0000 L CNN
 F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 5900 5650 50  0001 C CNN
 F 3 "~" H 5900 5650 50  0001 C CNN
 F 4 "Small Signal Diode (DO-35)" V 5900 3850 50  0001 C CNN "Description"
+F 5 "D" H 5900 3850 50  0001 C CNN "Spice_Primitive"
+F 6 "D1N4148" H 5900 3850 50  0001 C CNN "Spice_Model"
+F 7 "Y" H 5900 3850 50  0001 C CNN "Spice_Netlist_Enabled"
 	1    5900 5650
 	0    1    1    0   
 $EndComp
@@ -1305,6 +1389,9 @@ F 1 "D" V 5945 6029 50  0000 L CNN
 F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 5900 5950 50  0001 C CNN
 F 3 "~" H 5900 5950 50  0001 C CNN
 F 4 "Small Signal Diode (DO-35)" V 5900 3850 50  0001 C CNN "Description"
+F 5 "D" H 5900 3850 50  0001 C CNN "Spice_Primitive"
+F 6 "D1N4148" H 5900 3850 50  0001 C CNN "Spice_Model"
+F 7 "Y" H 5900 3850 50  0001 C CNN "Spice_Netlist_Enabled"
 	1    5900 5950
 	0    1    1    0   
 $EndComp
@@ -1317,6 +1404,9 @@ F 1 "D" V 6395 6029 50  0000 L CNN
 F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 6350 5950 50  0001 C CNN
 F 3 "~" H 6350 5950 50  0001 C CNN
 F 4 "Small Signal Diode (DO-35)" V 5900 3850 50  0001 C CNN "Description"
+F 5 "D" H 5900 3850 50  0001 C CNN "Spice_Primitive"
+F 6 "D1N4148" H 5900 3850 50  0001 C CNN "Spice_Model"
+F 7 "Y" H 5900 3850 50  0001 C CNN "Spice_Netlist_Enabled"
 	1    6350 5950
 	0    -1   -1   0   
 $EndComp
@@ -1329,6 +1419,9 @@ F 1 "D" V 6395 5729 50  0000 L CNN
 F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 6350 5650 50  0001 C CNN
 F 3 "~" H 6350 5650 50  0001 C CNN
 F 4 "Small Signal Diode (DO-35)" V 5900 3850 50  0001 C CNN "Description"
+F 5 "D" H 5900 3850 50  0001 C CNN "Spice_Primitive"
+F 6 "D1N4148" H 5900 3850 50  0001 C CNN "Spice_Model"
+F 7 "Y" H 5900 3850 50  0001 C CNN "Spice_Netlist_Enabled"
 	1    6350 5650
 	0    -1   -1   0   
 $EndComp
@@ -1341,6 +1434,9 @@ F 1 "D" V 6395 5429 50  0000 L CNN
 F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 6350 5350 50  0001 C CNN
 F 3 "~" H 6350 5350 50  0001 C CNN
 F 4 "Small Signal Diode (DO-35)" V 5900 3850 50  0001 C CNN "Description"
+F 5 "D" H 5900 3850 50  0001 C CNN "Spice_Primitive"
+F 6 "D1N4148" H 5900 3850 50  0001 C CNN "Spice_Model"
+F 7 "Y" H 5900 3850 50  0001 C CNN "Spice_Netlist_Enabled"
 	1    6350 5350
 	0    -1   -1   0   
 $EndComp
@@ -1353,6 +1449,9 @@ F 1 "D" V 6395 5129 50  0000 L CNN
 F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 6350 5050 50  0001 C CNN
 F 3 "~" H 6350 5050 50  0001 C CNN
 F 4 "Small Signal Diode (DO-35)" V 5900 3850 50  0001 C CNN "Description"
+F 5 "D" H 5900 3850 50  0001 C CNN "Spice_Primitive"
+F 6 "D1N4148" H 5900 3850 50  0001 C CNN "Spice_Model"
+F 7 "Y" H 5900 3850 50  0001 C CNN "Spice_Netlist_Enabled"
 	1    6350 5050
 	0    -1   -1   0   
 $EndComp
@@ -1365,6 +1464,9 @@ F 1 "D" V 6395 4829 50  0000 L CNN
 F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 6350 4750 50  0001 C CNN
 F 3 "~" H 6350 4750 50  0001 C CNN
 F 4 "Small Signal Diode (DO-35)" V 5900 3850 50  0001 C CNN "Description"
+F 5 "D" H 5900 3850 50  0001 C CNN "Spice_Primitive"
+F 6 "D1N4148" H 5900 3850 50  0001 C CNN "Spice_Model"
+F 7 "Y" H 5900 3850 50  0001 C CNN "Spice_Netlist_Enabled"
 	1    6350 4750
 	0    -1   -1   0   
 $EndComp
@@ -1377,6 +1479,9 @@ F 1 "D" V 6395 4529 50  0000 L CNN
 F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 6350 4450 50  0001 C CNN
 F 3 "~" H 6350 4450 50  0001 C CNN
 F 4 "Small Signal Diode (DO-35)" V 5900 3850 50  0001 C CNN "Description"
+F 5 "D" H 5900 3850 50  0001 C CNN "Spice_Primitive"
+F 6 "D1N4148" H 5900 3850 50  0001 C CNN "Spice_Model"
+F 7 "Y" H 5900 3850 50  0001 C CNN "Spice_Netlist_Enabled"
 	1    6350 4450
 	0    -1   -1   0   
 $EndComp
@@ -1389,6 +1494,9 @@ F 1 "D" V 6395 4229 50  0000 L CNN
 F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 6350 4150 50  0001 C CNN
 F 3 "~" H 6350 4150 50  0001 C CNN
 F 4 "Small Signal Diode (DO-35)" V 5900 3850 50  0001 C CNN "Description"
+F 5 "D" H 5900 3850 50  0001 C CNN "Spice_Primitive"
+F 6 "D1N4148" H 5900 3850 50  0001 C CNN "Spice_Model"
+F 7 "Y" H 5900 3850 50  0001 C CNN "Spice_Netlist_Enabled"
 	1    6350 4150
 	0    -1   -1   0   
 $EndComp
@@ -1401,6 +1509,9 @@ F 1 "D" V 6395 3929 50  0000 L CNN
 F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 6350 3850 50  0001 C CNN
 F 3 "~" H 6350 3850 50  0001 C CNN
 F 4 "Small Signal Diode (DO-35)" V 5900 3850 50  0001 C CNN "Description"
+F 5 "D" H 5900 3850 50  0001 C CNN "Spice_Primitive"
+F 6 "D1N4148" H 5900 3850 50  0001 C CNN "Spice_Model"
+F 7 "Y" H 5900 3850 50  0001 C CNN "Spice_Netlist_Enabled"
 	1    6350 3850
 	0    -1   -1   0   
 $EndComp
@@ -1623,6 +1734,9 @@ F 0 "U1" H 3358 7296 50  0000 L CNN
 F 1 "TL072" H 3358 7205 50  0000 L CNN
 F 2 "Package_DIP:DIP-8_W7.62mm_Socket" H 3400 7250 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 3400 7250 50  0001 C CNN
+F 4 "X" H 3400 7250 50  0001 C CNN "Spice_Primitive"
+F 5 "TL072c" H 3400 7250 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 3400 7250 50  0001 C CNN "Spice_Netlist_Enabled"
 	3    3400 7250
 	1    0    0    -1  
 $EndComp
@@ -1635,6 +1749,9 @@ F 1 "0.1u" H 3765 7055 50  0000 L CNN
 F 2 "Capacitor_THT:C_Disc_D3.4mm_W2.1mm_P2.50mm" H 3688 6950 50  0001 C CNN
 F 3 "~" H 3650 7100 50  0001 C CNN
 F 4 "Multilayer Ceramic Capacitors MLCC (50V, L=4 mm, W=2.5 mm, LS=2.5 mm)" H 3650 7100 50  0001 C CNN "Description"
+F 5 "C" H 3650 7100 50  0001 C CNN "Spice_Primitive"
+F 6 "0.1u" H 3650 7100 50  0001 C CNN "Spice_Model"
+F 7 "N" H 3650 7100 50  0001 C CNN "Spice_Netlist_Enabled"
 	1    3650 7100
 	1    0    0    -1  
 $EndComp
@@ -1647,6 +1764,9 @@ F 1 "0.1u" H 3765 7355 50  0000 L CNN
 F 2 "Capacitor_THT:C_Disc_D3.4mm_W2.1mm_P2.50mm" H 3688 7250 50  0001 C CNN
 F 3 "~" H 3650 7400 50  0001 C CNN
 F 4 "Multilayer Ceramic Capacitors MLCC (50V, L=4 mm, W=2.5 mm, LS=2.5 mm)" H 3650 7400 50  0001 C CNN "Description"
+F 5 "C" H 3650 7400 50  0001 C CNN "Spice_Primitive"
+F 6 "0.1u" H 3650 7400 50  0001 C CNN "Spice_Model"
+F 7 "N" H 3650 7400 50  0001 C CNN "Spice_Netlist_Enabled"
 	1    3650 7400
 	1    0    0    -1  
 $EndComp
@@ -1668,6 +1788,9 @@ F 0 "U2" H 4108 7296 50  0000 L CNN
 F 1 "TL074" H 4108 7205 50  0000 L CNN
 F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 4100 7350 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 4200 7450 50  0001 C CNN
+F 4 "X" H 4150 7250 50  0001 C CNN "Spice_Primitive"
+F 5 "TL074c" H 4150 7250 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 4150 7250 50  0001 C CNN "Spice_Netlist_Enabled"
 	5    4150 7250
 	1    0    0    -1  
 $EndComp
@@ -1690,6 +1813,9 @@ F 1 "1k" V 3844 1400 50  0000 C CNN
 F 2 "Potentiometer_THT:Potentiometer_Bourns_3296Z_Horizontal" H 4050 1400 50  0001 C CNN
 F 3 "~" H 4050 1400 50  0001 C CNN
 F 4 "Trimmer Resistor, Bourns 3296Z" V 4050 1400 50  0001 C CNN "Description"
+F 5 "X" H 4050 1400 50  0001 C CNN "Spice_Primitive"
+F 6 "RV5" H 4050 1400 50  0001 C CNN "Spice_Model"
+F 7 "Y" H 4050 1400 50  0001 C CNN "Spice_Netlist_Enabled"
 	1    4050 1400
 	0    -1   -1   0   
 $EndComp
@@ -1815,6 +1941,9 @@ F 1 "01x06 Female" H 8178 4935 50  0001 L CNN
 F 2 "Connector_PinSocket_2.54mm:PinSocket_1x06_P2.54mm_Vertical" H 8150 5050 50  0001 C CNN
 F 3 "~" H 8150 5050 50  0001 C CNN
 F 4 "Board to Board Connectors (2.54 mm)" H 8150 5050 50  0001 C CNN "Description"
+F 5 "J" H 8150 5050 50  0001 C CNN "Spice_Primitive"
+F 6 "01x06 Female" H 8150 5050 50  0001 C CNN "Spice_Model"
+F 7 "N" H 8150 5050 50  0001 C CNN "Spice_Netlist_Enabled"
 	1    8150 5050
 	1    0    0    -1  
 $EndComp
@@ -1827,6 +1956,9 @@ F 1 "01x03 Female" H 8978 4985 50  0001 L CNN
 F 2 "Connector_PinSocket_2.54mm:PinSocket_1x03_P2.54mm_Vertical" H 8950 5050 50  0001 C CNN
 F 3 "~" H 8950 5050 50  0001 C CNN
 F 4 "Board to Board Connectors (2.54 mm)" H 8950 5050 50  0001 C CNN "Description"
+F 5 "J" H 8950 5050 50  0001 C CNN "Spice_Primitive"
+F 6 "01x03 Female" H 8950 5050 50  0001 C CNN "Spice_Model"
+F 7 "N" H 8950 5050 50  0001 C CNN "Spice_Netlist_Enabled"
 	1    8950 5050
 	1    0    0    -1  
 $EndComp
@@ -1839,6 +1971,9 @@ F 1 "10p*" V 8339 2850 50  0000 C CNN
 F 2 "Capacitor_THT:C_Disc_D3.4mm_W2.1mm_P2.50mm" H 8538 2700 50  0001 C CNN
 F 3 "~" H 8500 2850 50  0001 C CNN
 F 4 "Multilayer Ceramic Capacitors MLCC (50V, L=4 mm, W=2.5 mm, LS=2.5 mm)" V 8500 2850 50  0001 C CNN "Description"
+F 5 "C" H 8500 2850 50  0001 C CNN "Spice_Primitive"
+F 6 "10p*" H 8500 2850 50  0001 C CNN "Spice_Model"
+F 7 "N" H 8500 2850 50  0001 C CNN "Spice_Netlist_Enabled"
 	1    8500 2850
 	0    1    1    0   
 $EndComp
@@ -1851,6 +1986,9 @@ F 1 "10p*" V 9339 2950 50  0000 C CNN
 F 2 "Capacitor_THT:C_Disc_D3.4mm_W2.1mm_P2.50mm" H 9538 2800 50  0001 C CNN
 F 3 "~" H 9500 2950 50  0001 C CNN
 F 4 "Multilayer Ceramic Capacitors MLCC (50V, L=4 mm, W=2.5 mm, LS=2.5 mm)" V 9500 2950 50  0001 C CNN "Description"
+F 5 "C" H 9500 2950 50  0001 C CNN "Spice_Primitive"
+F 6 "10p*" H 9500 2950 50  0001 C CNN "Spice_Model"
+F 7 "N" H 9500 2950 50  0001 C CNN "Spice_Netlist_Enabled"
 	1    9500 2950
 	0    1    1    0   
 $EndComp
