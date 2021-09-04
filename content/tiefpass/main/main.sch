@@ -1513,4 +1513,10 @@ F 4 "Aluminium Electrolytic Capacitors (50V, D=6.3 mm, LS=2.5 mm)" V 5250 4000 5
 	1    5250 4000
 	0    -1   -1   0   
 $EndComp
+Text Notes 6250 1750 0    50   ~ 0
+47k
+Text Notes 6200 1250 0    50   ~ 0
+4k7
+Text Notes 1500 5000 0    50   ~ 0
+resistor R25 must be connected to inverting input
 $EndSCHEMATC
