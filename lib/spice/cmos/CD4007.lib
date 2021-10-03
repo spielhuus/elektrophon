@@ -1,0 +1,63 @@
+**************************************************
+* Level 1 SPICE Models for the 4007 CMOS chip
+**************************************************
+* These Level 1 models were extracted from measured results. The
+* model attempts to account for the package parasitics. The simulated and
+* typical measured device capacitances are as follows:
+*
+*    NMOS: Cgs = 18pF   Cds = 14pF
+*    PMOS: Cgs = 17pF   Cds = 26pF
+*
+* Gate-to-drain capacitances were not extracted but were adjusted to
+* to help fit measured results.
+
+*$
+.MODEL CMOSP    PMOS    ( LEVEL   = 1           L=5u    W=100u                
++VTO    = -1.40         KP      = 3.2e-5        GAMMA   = 3.30  
++PHI    = 0.65          LAMBDA  = 9e-2          CBD     = 65e-12
++CBS    = 2e-14         IS      = 1e-15         PB      = 0.87
++CGSO   = 0             CGDO    = 0             CGBO    = 1e-5
++CJ     = 2e-10         MJ      = 0.5           CJSW    = 1e-9
++MJSW   = 0.33          JS      = 1e-8          TOX     = 6.89e-10)
+*$
+.MODEL CMOSN    NMOS    ( LEVEL   = 1           L=5u    W=20u             
++VTO    = 1.77          Kp      = 2.169e-4      GAMMA   = 4.10  
++PHI    = 0.65          LAMBDA  = 1.5e-2        CBD     = 20e-12
++CBS    = 0             IS      = 1e-15         PB      = 0.87
++CBS    = 2e-14         CGDO    = 88e-8         CGBO    = 0
++CJ     = 2e-10         MJ      = 0.5           CJSW    = 1e-9
++MJSW   = 0.33          JS      = 1e-8          TOX     = 1.265e-10)
+
+**************************************************
+* Macro for 4007 IC:
+**************************************************
+*
+* Pinout:
+*
+*             S4/psub G1,4 D5   S5   G5,2 S2   D2      * 1,2,3 - PMOS
+*               _||___||___||___||___||___||___||_     * 4,5,6 - NMOS
+*               | 7   6    5    4    3    2    1 |     * All PMOS susbstrates 
+*               |                                |       connected to pin 14
+*               |                              * |     * All NMOS susbstrates
+*               |                                |       connected to pin 7
+*               | 8   9    10   11   12   13   14|
+*               _  ___  ___  ___  ___  ___  ___  _
+*                ||   ||   ||   ||   ||   ||   ||
+*                D4   S6   G3,6 S3   D3,6 D1   S1/nsub
+*
+* General Form of subcircuit call:
+*  X1 n1 n2 ... n14 CMOS4007
+*
+*$
+.SUBCKT CMOS4007 1 2 3 4 5 6 7 8 9 10 11 12 13 14
+* MOSFET DR GT SRC SUBS MODEL L    W
+M1       13 6  14  14   CMOSP L=5u W=100u
+M2       1  3  2   14   CMOSP L=5u W=100u
+M3       12 10 11  14   CMOSP L=5u W=100u
+M4       8  6  7   7    CMOSN L=5u W=20u
+M5       5  3  4   7    CMOSN L=5u W=20u
+M6       12 10 9   7    CMOSN L=5u W=20u
+.ENDS CMOS4007
+*
+
+*$
