@@ -1,0 +1,17 @@
+.title KiCad schematic
+XU2 Net-_R8-Pad1_ NC_01 Net-_R7-Pad1_ Net-_R4-Pad1_ Net-_R10-Pad2_ -15V NC_02 NC_03 +15V LM13700/NS
+R7 Net-_R7-Pad1_ GND 620
+R5 Net-_R4-Pad1_ GND 620
+R4 Net-_R4-Pad1_ Net-_C1-Pad1_ 100k
+C1 Net-_C1-Pad1_ /IN_1 470n
+XU1 Net-_Q1-Pad2_ Net-_C4-Pad2_ GND -15V GND Net-_R10-Pad2_ Net-_R10-Pad1_ +15V TL072c
+R10 Net-_R10-Pad1_ Net-_R10-Pad2_ 18k
+R11 /OUT_1 Net-_R10-Pad1_ 1k
+R1 Net-_C4-Pad2_ /CV_1 330k
+C4 Net-_C4-Pad1_ Net-_C4-Pad2_ 1n
+D1 Net-_C4-Pad1_ Net-_C4-Pad2_ D1N4148
+R6 Net-_Q1-Pad1_ Net-_C4-Pad2_ 33k
+R9 GND Net-_Q1-Pad1_ 1k
+Q1 Net-_Q1-Pad3_ Net-_Q1-Pad2_ Net-_Q1-Pad1_ q2n3906
+R8 Net-_R8-Pad1_ Net-_Q1-Pad3_ 6.8k
+.end
