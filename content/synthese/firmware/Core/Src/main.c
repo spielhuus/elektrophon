@@ -23,7 +23,8 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include "wavetable.h"
+#include "usbd_midi_if.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -41,11 +42,18 @@
 /* USER CODE END PM */
 
 /* Private variables ---------------------------------------------------------*/
+SPI_HandleTypeDef hspi1;
+
 TIM_HandleTypeDef htim2;
+TIM_HandleTypeDef htim3;
 TIM_HandleTypeDef htim4;
 
 /* USER CODE BEGIN PV */
-
+uint16_t spi_buffer[1];
+struct DDS dds;
+// extern DMA_HandleTypeDef hdma_spi1_tx;
+// extern uint32_t DMA_CalcBaseAndBitshift(DMA_HandleTypeDef *hdma) ;
+// uint32_t StreamBaseAddr ;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -53,13 +61,58 @@ void SystemClock_Config(void);
 static void MX_GPIO_Init(void);
 static void MX_TIM4_Init(void);
 static void MX_TIM2_Init(void);
+static void MX_SPI1_Init(void);
+static void MX_TIM3_Init(void);
 /* USER CODE BEGIN PFP */
 
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
+// void HAL_SPI_TxHalfCpltCallback(SPI_HandleTypeDef *hspi) {
+//   for( int i=0; i<BUF_SIZE/2; i++ ) {
+// 	  uint32_t index = dds.accumulator >> 22;
+//     spi_buffer[i] = wt_sine[index] * 4096;
+//     spi_buffer[i] |= 0x1000;
 
+// 	  dds.accumulator += dds.increment;
+//   }
+// }
+ 
+// void HAL_SPI_TxCpltCallback(SPI_HandleTypeDef *hspi) {
+//   HAL_GPIO_WritePin(NSS_GPIO_Port, NSS_Pin, SET);
+//   HAL_GPIO_WritePin(NSS_GPIO_Port, NSS_Pin, RESET);
+//   if (HAL_SPI_Transmit_IT(&hspi1, (uint8_t *)spi_buffer, 2) != HAL_OK)
+//   {
+//     Error_Handler();
+//   }
+//   HAL_GPIO_WritePin(NSS_GPIO_Port, NSS_Pin, SET);
+//   /* USER CODE END SPI1_IRQn 0 */
+//   HAL_SPI_IRQHandler(&hspi1);
+//   /* USER CODE BEGIN SPI1_IRQn 1 */
+//     uint32_t index = dds.accumulator >> 22;
+// 	  uint16_t s =  wt_sine[index];
+//     spi_buffer[0] = s;
+//     spi_buffer[0] |= 0x10000000;
+// 	  dds.accumulator += dds.increment;
+// }
+void note_on(uint8_t channel, uint8_t note, uint8_t velocity) {
+	if( channel == 0 && note < 128 ) {
+		dds.increment = tunes[note];
+		// gate(&adsr[voice_index], velocity > 0);
+
+		// voice_notes[note] = voice_index;
+    // 	voice_index += 1;
+		// if(voice_index >= NUM_VOICES )
+		// {voice_index = 0;}
+	}
+}
+void note_off(uint8_t channel, uint8_t note, uint8_t velocity) {
+	// if( channel == 0 ) {
+	// 	gate(&adsr[voice_notes[note]], 0);
+	// 	voice_notes[note] = 0;
+	// }
+}
 /* USER CODE END 0 */
 
 /**
@@ -69,6 +122,20 @@ static void MX_TIM2_Init(void);
 int main(void)
 {
   /* USER CODE BEGIN 1 */
+  dds.position = 0;
+  dds.increment = tunes[69];
+  dds.accumulator = 0;
+  dds.sample = &wt_sine;
+  setHdlNoteOn(note_on);
+	setHdlNoteOff(note_off);
+
+
+  // for( int i=0; i<BUF_SIZE; i++ ) {
+	//   uint32_t index = dds.accumulator >> 22;
+  //   spi_buffer[i] = (wt_sine[index] + 1) * 2048;
+  //   spi_buffer[i] |= 0x1000;
+	//   dds.accumulator += dds.increment;
+  // }
 
   /* USER CODE END 1 */
 
@@ -93,12 +160,27 @@ int main(void)
   MX_TIM4_Init();
   MX_USB_DEVICE_Init();
   MX_TIM2_Init();
+  MX_SPI1_Init();
+  MX_TIM3_Init();
   /* USER CODE BEGIN 2 */
-
+  HAL_TIM_Base_Start_IT(&htim2);
+  HAL_TIM_Base_Start_IT(&htim3);
+  HAL_TIM_Base_Start_IT(&htim4);
+  // if (HAL_SPI_Transmit_IT(&hspi1, (uint8_t *)spi_buffer, 2) != HAL_OK)
+  // {
+  //   Error_Handler();
+  // }
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
+  HAL_GPIO_WritePin(NSS_GPIO_Port, NSS_Pin, RESET);
+  spi_buffer[0] = 6144;
+  if (HAL_SPI_Transmit(&hspi1, (uint8_t *)spi_buffer, 2, 100) != HAL_OK)
+  {
+    Error_Handler();
+  }
+
   while (1)
   {
     /* USER CODE END WHILE */
@@ -154,6 +236,44 @@ void SystemClock_Config(void)
 }
 
 /**
+  * @brief SPI1 Initialization Function
+  * @param None
+  * @retval None
+  */
+static void MX_SPI1_Init(void)
+{
+
+  /* USER CODE BEGIN SPI1_Init 0 */
+
+  /* USER CODE END SPI1_Init 0 */
+
+  /* USER CODE BEGIN SPI1_Init 1 */
+
+  /* USER CODE END SPI1_Init 1 */
+  /* SPI1 parameter configuration*/
+  hspi1.Instance = SPI1;
+  hspi1.Init.Mode = SPI_MODE_MASTER;
+  hspi1.Init.Direction = SPI_DIRECTION_2LINES;
+  hspi1.Init.DataSize = SPI_DATASIZE_16BIT;
+  hspi1.Init.CLKPolarity = SPI_POLARITY_LOW;
+  hspi1.Init.CLKPhase = SPI_PHASE_1EDGE;
+  hspi1.Init.NSS = SPI_NSS_SOFT;
+  hspi1.Init.BaudRatePrescaler = SPI_BAUDRATEPRESCALER_4;
+  hspi1.Init.FirstBit = SPI_FIRSTBIT_MSB;
+  hspi1.Init.TIMode = SPI_TIMODE_DISABLE;
+  hspi1.Init.CRCCalculation = SPI_CRCCALCULATION_DISABLE;
+  hspi1.Init.CRCPolynomial = 10;
+  if (HAL_SPI_Init(&hspi1) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /* USER CODE BEGIN SPI1_Init 2 */
+
+  /* USER CODE END SPI1_Init 2 */
+
+}
+
+/**
   * @brief TIM2 Initialization Function
   * @param None
   * @retval None
@@ -172,9 +292,9 @@ static void MX_TIM2_Init(void)
 
   /* USER CODE END TIM2_Init 1 */
   htim2.Instance = TIM2;
-  htim2.Init.Prescaler = 48000;
+  htim2.Init.Prescaler = 2;
   htim2.Init.CounterMode = TIM_COUNTERMODE_UP;
-  htim2.Init.Period = 65535;
+  htim2.Init.Period = 2000;
   htim2.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
   htim2.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
   if (HAL_TIM_Base_Init(&htim2) != HAL_OK)
@@ -199,6 +319,51 @@ static void MX_TIM2_Init(void)
 }
 
 /**
+  * @brief TIM3 Initialization Function
+  * @param None
+  * @retval None
+  */
+static void MX_TIM3_Init(void)
+{
+
+  /* USER CODE BEGIN TIM3_Init 0 */
+
+  /* USER CODE END TIM3_Init 0 */
+
+  TIM_ClockConfigTypeDef sClockSourceConfig = {0};
+  TIM_MasterConfigTypeDef sMasterConfig = {0};
+
+  /* USER CODE BEGIN TIM3_Init 1 */
+
+  /* USER CODE END TIM3_Init 1 */
+  htim3.Instance = TIM3;
+  htim3.Init.Prescaler = 0;
+  htim3.Init.CounterMode = TIM_COUNTERMODE_UP;
+  htim3.Init.Period = 16666;
+  htim3.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
+  htim3.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
+  if (HAL_TIM_Base_Init(&htim3) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  sClockSourceConfig.ClockSource = TIM_CLOCKSOURCE_INTERNAL;
+  if (HAL_TIM_ConfigClockSource(&htim3, &sClockSourceConfig) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  sMasterConfig.MasterOutputTrigger = TIM_TRGO_RESET;
+  sMasterConfig.MasterSlaveMode = TIM_MASTERSLAVEMODE_DISABLE;
+  if (HAL_TIMEx_MasterConfigSynchronization(&htim3, &sMasterConfig) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /* USER CODE BEGIN TIM3_Init 2 */
+
+  /* USER CODE END TIM3_Init 2 */
+
+}
+
+/**
   * @brief TIM4 Initialization Function
   * @param None
   * @retval None
@@ -217,9 +382,9 @@ static void MX_TIM4_Init(void)
 
   /* USER CODE END TIM4_Init 1 */
   htim4.Instance = TIM4;
-  htim4.Init.Prescaler = 96;
+  htim4.Init.Prescaler = 3999;
   htim4.Init.CounterMode = TIM_COUNTERMODE_UP;
-  htim4.Init.Period = 1136;
+  htim4.Init.Period = 10000;
   htim4.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
   htim4.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_ENABLE;
   if (HAL_TIM_Base_Init(&htim4) != HAL_OK)
@@ -255,18 +420,21 @@ static void MX_GPIO_Init(void)
   /* GPIO Ports Clock Enable */
   __HAL_RCC_GPIOC_CLK_ENABLE();
   __HAL_RCC_GPIOD_CLK_ENABLE();
-  __HAL_RCC_GPIOB_CLK_ENABLE();
   __HAL_RCC_GPIOA_CLK_ENABLE();
+  __HAL_RCC_GPIOB_CLK_ENABLE();
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOB, SQUARE_Pin|LED_CONNECT_Pin|MIDI_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(NSS_GPIO_Port, NSS_Pin, GPIO_PIN_SET);
 
-  /*Configure GPIO pin : SQUARE_Pin */
-  GPIO_InitStruct.Pin = SQUARE_Pin;
+  /*Configure GPIO pin Output Level */
+  HAL_GPIO_WritePin(GPIOB, LED_CONNECT_Pin|MIDI_Pin, GPIO_PIN_RESET);
+
+  /*Configure GPIO pin : NSS_Pin */
+  GPIO_InitStruct.Pin = NSS_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
-  GPIO_InitStruct.Pull = GPIO_PULLDOWN;
-  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_HIGH;
-  HAL_GPIO_Init(SQUARE_GPIO_Port, &GPIO_InitStruct);
+  GPIO_InitStruct.Pull = GPIO_PULLUP;
+  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+  HAL_GPIO_Init(NSS_GPIO_Port, &GPIO_InitStruct);
 
   /*Configure GPIO pins : LED_CONNECT_Pin MIDI_Pin */
   GPIO_InitStruct.Pin = LED_CONNECT_Pin|MIDI_Pin;

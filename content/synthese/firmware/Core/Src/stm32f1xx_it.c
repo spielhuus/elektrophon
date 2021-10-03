@@ -23,6 +23,8 @@
 #include "stm32f1xx_it.h"
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
+#include "usb_device.h"
+#include "wavetable.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -58,8 +60,14 @@
 /* External variables --------------------------------------------------------*/
 extern PCD_HandleTypeDef hpcd_USB_FS;
 extern TIM_HandleTypeDef htim2;
+extern TIM_HandleTypeDef htim3;
 extern TIM_HandleTypeDef htim4;
 /* USER CODE BEGIN EV */
+extern USBD_HandleTypeDef hUsbDeviceFS;
+extern void processMidiMessage();
+extern  uint16_t spi_buffer[1];
+extern struct DDS dds;
+extern SPI_HandleTypeDef hspi1;
 
 /* USER CODE END EV */
 
@@ -221,12 +229,35 @@ void USB_LP_CAN1_RX0_IRQHandler(void)
 void TIM2_IRQHandler(void)
 {
   /* USER CODE BEGIN TIM2_IRQn 0 */
-
+  HAL_GPIO_WritePin(NSS_GPIO_Port, NSS_Pin, RESET);
+  if (HAL_SPI_Transmit(&hspi1, (uint8_t *)spi_buffer, 2, 100) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  HAL_GPIO_WritePin(NSS_GPIO_Port, NSS_Pin, SET);
   /* USER CODE END TIM2_IRQn 0 */
   HAL_TIM_IRQHandler(&htim2);
   /* USER CODE BEGIN TIM2_IRQn 1 */
-
+    uint32_t index = dds.accumulator >> 22;
+	  uint16_t s =  wt_sine[index];
+    spi_buffer[0] = s;
+    spi_buffer[0] |= 0x1000;
+	  dds.accumulator += dds.increment;
   /* USER CODE END TIM2_IRQn 1 */
+}
+
+/**
+  * @brief This function handles TIM3 global interrupt.
+  */
+void TIM3_IRQHandler(void)
+{
+  /* USER CODE BEGIN TIM3_IRQn 0 */
+
+  /* USER CODE END TIM3_IRQn 0 */
+  HAL_TIM_IRQHandler(&htim3);
+  /* USER CODE BEGIN TIM3_IRQn 1 */
+  processMidiMessage();
+  /* USER CODE END TIM3_IRQn 1 */
 }
 
 /**
@@ -239,6 +270,13 @@ void TIM4_IRQHandler(void)
   /* USER CODE END TIM4_IRQn 0 */
   HAL_TIM_IRQHandler(&htim4);
   /* USER CODE BEGIN TIM4_IRQn 1 */
+	if(USBD_STATE_CONFIGURED == hUsbDeviceFS.dev_state)
+	{
+		HAL_GPIO_WritePin(LED_CONNECT_GPIO_Port, LED_CONNECT_Pin, SET);
+
+	} else {
+		HAL_GPIO_TogglePin(LED_CONNECT_GPIO_Port, LED_CONNECT_Pin);
+	}
 
   /* USER CODE END TIM4_IRQn 1 */
 }
