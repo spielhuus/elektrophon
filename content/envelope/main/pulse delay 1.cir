@@ -1,24 +1,24 @@
 .title KiCad schematic
-XU2 Net-_C7-Pad1_ Net-_C5-Pad1_ Net-_C4-Pad1_ +15V Net-_C6-Pad2_ Net-_C7-Pad1_ +15V UA555
-XU3 Net-_C9-Pad1_ Net-_C8-Pad1_ Net-_C6-Pad1_ Net-_C6-Pad1_ Net-_R9-Pad2_ Net-_C9-Pad1_ +15V UA555
 XU1 Net-_C4-Pad2_ Net-_R2-Pad1_ Net-_R3-Pad1_ -15V GND Net-_U1-Pad6_ Net-_U1-Pad6_ +15V TL072c
 R1 /IN GND 100k
-C4 Net-_C4-Pad1_ Net-_C4-Pad2_ 560p
-R4 Net-_C4-Pad2_ Net-_R3-Pad1_ 1M
 R5 GND Net-_R3-Pad1_ 2.7k
 R3 Net-_R3-Pad1_ +15V 22k
+R2 Net-_R2-Pad1_ /IN 10k
+R4 Net-_C4-Pad2_ Net-_R3-Pad1_ 1Meg
+C4 Net-_C4-Pad1_ Net-_C4-Pad2_ 560p
 R6 +15V Net-_C4-Pad1_ 56k
 C5 Net-_C5-Pad1_ GND 0.01u
-XRV1 Net-_R7-Pad1_ Net-_R7-Pad1_ +15V POT1
-R7 Net-_R7-Pad1_ Net-_C7-Pad1_ 1k
-C7 Net-_C7-Pad1_ GND 2.2u
-C6 Net-_C6-Pad1_ Net-_C6-Pad2_ 560p
-R8 +15V Net-_C6-Pad1_ 56k
-C8 Net-_C8-Pad1_ GND 0.01u
-XRV2 Net-_R10-Pad1_ Net-_R10-Pad1_ +15V POT2
-R10 Net-_R10-Pad1_ Net-_C9-Pad1_ 1k
-C9 Net-_C9-Pad1_ GND 2.2u
-R9 /del_out Net-_R9-Pad2_ 2.7k
 R11 GND /del_out 1.8k
-R2 Net-_R2-Pad1_ /IN 10k
+R9 /del_out Net-_R9-Pad2_ 2.7k
+C9 Net-_C9-Pad1_ GND 2.2u
+R10 Net-_R10-Pad1_ Net-_C9-Pad1_ 1k
+XRV2 Net-_R10-Pad1_ Net-_R10-Pad1_ +15V POT2
+C8 Net-_C8-Pad1_ GND 0.01u
+R8 +15V Net-_C6-Pad1_ 56k
+C6 Net-_C6-Pad1_ Net-_C6-Pad2_ 560p
+C7 Net-_C7-Pad1_ GND 2.2u
+R7 Net-_R7-Pad1_ Net-_C7-Pad1_ 1k
+XRV1 Net-_R7-Pad1_ Net-_R7-Pad1_ +15V POT1
+XU3 Net-_C9-Pad1_ Net-_C8-Pad1_ Net-_C6-Pad1_ Net-_C6-Pad1_ Net-_R9-Pad2_ Net-_C9-Pad1_ +15V UA555
+XU2 Net-_C7-Pad1_ Net-_C5-Pad1_ Net-_C4-Pad1_ +15V Net-_C6-Pad2_ Net-_C7-Pad1_ +15V UA555
 .end
