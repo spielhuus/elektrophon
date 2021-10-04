@@ -1,11 +1,12 @@
-PROJECT = midi_notes
-DATE = 2021-02-22
-TARGET = _drafts
+PROJECT = stmdac
+DATE = 2021-02-01
+TARGET=_drafts
 
 JUPYTER = jupyter
 OUTPUT =  ../../www
 SRC = $(PROJECT).ipynb
 FRONT_MATTER = $(PROJECT).yaml
+DOCS = docs
 
 JUPITERFLAGS = nbconvert --ExecutePreprocessor.timeout=600 --execute --to markdown \
                --no-input --log-level=CRITICAL --ExecutePreprocessor.kernel_name=python3 \
@@ -15,35 +16,35 @@ JUPITERFLAGS = nbconvert --ExecutePreprocessor.timeout=600 --execute --to markdo
 
 ARTICLE_TARGETS = $(OUTPUT)/$(TARGET)/$(DATE)-$(PROJECT).md
 DEST = build/$(PROJECT).md
-DEST_IMAGES = $(notdir $(wildcard build/$(PROJECT)_files/*.svg))
 IMAGES = $(wildcard *.svg) $(wildcard *.jpg) $(wildcard *.png)
 IMAGE_TARGETS = $(addprefix $(OUTPUT)/assets/$(PROJECT)_files/,$(IMAGES))
 
-all: $(DEST)
+all: $(DOCS) deploy
 
-deploy: $(IMAGE_TARGETS) $(ARTICLE_TARGETS) $(addprefix $(OUTPUT)/assets/$(PROJECT)_files/,$(DEST_IMAGES))
-
-$(IMAGE_TARGETS) : $(IMAGES)
+deploy: $(DOCS) 
 	mkdir -p $(OUTPUT)/assets/$(PROJECT)_files/
+
+	#copy the jupyter project files
+	if [ -d "build/$(PROJECT)_files" ]; then \
+	cp build/$(PROJECT)_files/* $(OUTPUT)/assets/$(PROJECT)_files/; \
+	fi
+
+	#copy images
 	$(foreach img, $(IMAGES), \
-	cp $(img) $(addprefix $(OUTPUT)/assets/$(PROJECT)_files/,$(img)) ;)
+	convert $(img) -resize 800 $(addprefix $(OUTPUT)/assets/$(PROJECT)_files/,$(img)) &&\
+	convert $(img) -resize 200 $(addprefix $(OUTPUT)/assets/$(PROJECT)_files/tmb_,$(img)) ;)
 
-$(ARTICLE_TARGETS) : $(FRONT_MATTER) $(DEST) 
-	mkdir -p $(OUTPUT)/assets/$(PROJECT)_files/
 	cp $(FRONT_MATTER) $(ARTICLE_TARGETS)
 	echo "\n\n" >> $(ARTICLE_TARGETS)
 	cat $(DEST) >> $(ARTICLE_TARGETS)
-
-$(addprefix $(OUTPUT)/assets/$(PROJECT)_files/,$(DEST_IMAGES)) :
-	if [ -d "build/$(PROJECT)_files" ]; then \
-		cp build/$(PROJECT)_files/* $(OUTPUT)/assets/$(PROJECT)_files/; \
-	fi
-
+	
 clean: 
 	rm -rf build
 	rm -rf $(OUTPUT)/assets/$(PROJECT)_files/
 	rm -f $(ARTICLE_TARGETS)
-	rm -f $(IMAGE_TARGETS)
+
+$(DOCS): $(DEST)
 
 $(DEST): $(CIRCUITS) $(SRC)
 	$(JUPYTER) $(JUPITERFLAGS) $(SRC)
+	sed -r -i 's/\!\[(.*)\]\((.*)\)/\!\[\1\]\(\/assets\/\2\)/g' $(DEST)

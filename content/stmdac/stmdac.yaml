@@ -1,0 +1,12 @@
+---
+layout: article
+title: stm DAC utility
+author: spielhuus
+tags: utilities
+category: article
+image: /assets/stmdac_files/cd4069.jpg
+panel: /assets/stmdac_files/cd4069.jpg
+hero_image: /assets/stmdac_files/cd4069.jpg
+excerpt: breadboard utility module with an STM32 microprocessor and a DAC.
+show_sidebar: false
+---

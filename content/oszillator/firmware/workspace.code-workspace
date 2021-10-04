@@ -1,0 +1,18 @@
+{
+	"folders": [
+		{
+			"path": "../../synthese/firmware"
+		},
+		{
+			"path": "../../synthese"
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"wavetable.h": "c",
+			"stm32f1xx_hal_dma.h": "c",
+			"stm32f1xx_hal_dma_ex.h": "c",
+			"stm32f1xx_hal_def.h": "c"
+		}
+	}
+}
