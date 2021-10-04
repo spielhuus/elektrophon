@@ -230,6 +230,7 @@ bld_kibot_parser = Builder( action = parse_kibot )
 env = Environment(ENV=os.environ)
 env.Append(BUILDERS = {'Notebook' : bld_notebook, 'Kibot': bld_kibot, "KibotParser": bld_kibot_parser})
 
+##collect the files
 testfiles = []
 kibot_targets = []
 kibot_sources = []
@@ -318,37 +319,35 @@ for path in Path('content').iterdir():
                                 kibot_files.append(FILE_ERC)
                                 kibot_files.append(FILE_DRC)
 
-if GetOption("clean"):
-    print("clean notebooks")
-    for s in notebooks :
-        jupyter = 'jupyter nbconvert --clear-output --inplace %s' % (s.get_path())
-        env.Execute(jupyter)
-
-
 env.Notebook( (notebook_targets, testfiles), notebooks)
 env.KibotParser([os.path.join('build', '_data', 'elektrophon.json'), os.path.join('build', 'elektrophon.xml')], kibot_files)
 
-# ab = env.Command(["www/node_modules/alpinejs/dist/cdn.min.js", 'www/node_modules/mathjax/es5/tex-chtml.js', 'www/node_modules/fft.js/lib/fft.js'],
-#                 "www/package.json",
-#                 "npm install",
-#                  chdir='www')
+## install the js files with npm
+ab = env.Command(["www/node_modules/alpinejs/dist/cdn.min.js", 'www/node_modules/mathjax/es5/tex-chtml.js', 'www/node_modules/fft.js/lib/fft.js'],
+                 "www/package.json",
+                 "npm install",
+                 chdir='www')
 
-# ab = env.Command(["www/node_modules"],
-#                  "www/package.json",
-#                  "npm install",
-#                  chdir='www')
+ab = env.Command(["www/assets/js/bundle.js"],
+                 ["www/assets/js/main.js", 'www/node_modules/fft.js/lib/fft.js'],
+                 "www/node_modules/.bin/browserify www/assets/js/main.js > www/assets/js/bundle.js")
 
-#ab = env.Command(["www/assets/js/bundle.js"],
-#                 ["www/assets/js/main.js", 'www/node_modules'],
-#                 "www/node_modules/.bin/browserify www/assets/js/main.js > www/assets/js/bundle.js")
-
+##install
 Install(os.path.join('www', '_data'), os.path.join('build', '_data', 'elektrophon.json'))
 InstallAs(install_notebooks, notebook_targets)
 InstallAs(kibot_targets, kibot_sources)
-#env.Install('www/assets/js', 'www/node_modules/mathjax/es5/')
+env.Install('www/assets/js', 'www/node_modules/mathjax/es5/')
 env.Install('www/assets', Glob('content/**.jpg'))
 env.Install('www/assets', Glob('content/**/*.jpg'))
 env.Install('www/assets', Glob('content/**/*.pdf'))
 env.Install('www/assets', Glob('content/**/*.png'))
 env.Install('www/assets', Glob('content/**/*.wav'))
+
+##clean
+if GetOption("clean"):
+    for s in notebooks :
+        jupyter = 'jupyter nbconvert --clear-output --inplace %s' % (s.get_path())
+        env.Execute(jupyter)
 Clean('build/elektophon.xml', './build')
+Clean(["www/node_modules/alpinejs/dist/cdn.min.js", 'www/node_modules/mathjax/es5/tex-chtml.js', 'www/node_modules/fft.js/lib/fft.js'], ['www/assets/js/bundle.js', 'www/node_modules'])
+Clean('www/assets/js', 'www/assets/js/es5/')

@@ -51,3 +51,8 @@ www/Gemfile.lock
 
 .ipynb_checkpoints
 .pytest_cache
+.bundle
+.npm
+.sconsign.dblite
+www/package-lock.json
+content/kraft/kraft/kraft.xml

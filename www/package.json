@@ -2,8 +2,8 @@
   "dependencies": {
     "fft.js": "^4.0.4",
     "jsfft": "^0.0.4",
-    "chart.js": "3.5.0",
-    "alpinejs": "3.2.3",
+    "chart.js": "3.5.1",
+    "alpinejs": "3.4.2",
     "mathjax": "3.2.0"
   },
   "devDependencies": {
