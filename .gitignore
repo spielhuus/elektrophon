@@ -50,3 +50,4 @@ www/Gemfile.lock
 **/panel/panel.xml
 
 .ipynb_checkpoints
+.pytest_cache

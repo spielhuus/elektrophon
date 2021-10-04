@@ -6,6 +6,7 @@ import csv
 from pathlib import Path
 from junit_xml import TestSuite, TestCase
 
+##Build the junit report for jenkins
 def create_report(input, output) :
     f = open(input,)
     data = json.load(f)
@@ -131,13 +132,14 @@ def kibot_parser(type, target, source) :
     return None
 
 def build_notebook(target, source, env):
-    jupyter = 'jupyter nbconvert --ExecutePreprocessor.timeout=600 --execute --to html \
-            --no-input --log-level=CRITICAL --ExecutePreprocessor.kernel_name=python3 \
-            --output=%s \
-            --HTMLExporter.exclude_anchor_links=True \
-            --TemplateExporter.extra_template_basedirs=lib/templates \
-            --template=elektrophon %s' % (target[0].get_abspath(), source[0].get_path())
-    env.Execute(jupyter)
+    for s, t in zip(source, target) :
+        jupyter = 'jupyter nbconvert --ExecutePreprocessor.timeout=600 --execute --to html \
+                --no-input --log-level=CRITICAL --ExecutePreprocessor.kernel_name=python3 \
+                --output=%s \
+                --HTMLExporter.exclude_anchor_links=True \
+                --TemplateExporter.extra_template_basedirs=lib/templates \
+                --template=elektrophon %s' % (t.get_abspath(), s.get_path())
+        env.Execute(jupyter)
     return None
 
 callouts = {}
@@ -156,7 +158,7 @@ def parse_kibot(target, source, env):
         project = "project"
         type = "type"
 
-        m = re.search('build/(.*)-(.*)/.*-(.*)\..*', x.get_path())
+        m = re.search('build/kibot/(.*)/(.*)-(.*)\..*', x.get_path())
         m_test = re.search('build/(.*)-test.json', x.get_path())
         if m:
             project = m.group(1)
@@ -228,83 +230,125 @@ bld_kibot_parser = Builder( action = parse_kibot )
 env = Environment(ENV=os.environ)
 env.Append(BUILDERS = {'Notebook' : bld_notebook, 'Kibot': bld_kibot, "KibotParser": bld_kibot_parser})
 
+testfiles = []
+kibot_targets = []
+kibot_sources = []
+notebook_targets = []
+notebooks = []
 kibot_files = []
-for root, dirnames, filenames in os.walk('content'):
-    for dirname in dirnames:
-        if( os.path.isfile(os.path.join(root, dirname, dirname + '.pro')) and 
-            os.path.isfile(os.path.join(root, dirname, dirname + '.kicad_pcb')) and
-            os.path.isfile(os.path.join(root, dirname, dirname + '.sch'))) :
-            path = Path(os.path.join(root, dirname, dirname + '.sch'))
-            project = path.parent.parent.name
+install_notebooks = []
+for path in Path('content').iterdir():
+    if path.is_dir():
+        notebook = ''
+        title = path.name
+        date = path.name
+        version = '0'
+        test = 'False'
+        target = '_posts'
+        build = False
 
-            FILE_BOM = os.path.join('build', project + '-' + dirname, dirname + "-bom.csv")
-            FILE_ERC = os.path.join('build', project + '-' + dirname, dirname + "-erc.txt")
-            FILE_DRC = os.path.join('build', project + '-' + dirname, dirname + "-drc.txt")
-            FILE_SCHEMA = os.path.join('build', project + '-' + dirname, dirname + '-schematic.pdf')
-            FILE_PCB = os.path.join('build', project + '-' + dirname, dirname + '-pcb.pdf')
-            FILE_IMAGE = os.path.join('build', project + '-' + dirname, dirname + '-top.png')
-            FILE_JLCPCB = os.path.join('build', project + '-' + dirname, 'JLCPCB', dirname + '-JLCPCB.zip')
+        for nb in Glob(f'{path}/*.ipynb'):
+            notebook = nb
+            meta = (json.loads(nb.get_text_contents()))
+            if "FrontMatter" in meta['metadata']:
+                if "title" in meta['metadata']['FrontMatter']:
+                    title = meta['metadata']['FrontMatter']['title']
+                if "date" in meta['metadata']['FrontMatter']:
+                    date = meta['metadata']['FrontMatter']['date']
+                if "version" in meta['metadata']['FrontMatter']:
+                    version = meta['metadata']['FrontMatter']['version']
+                if "test" in meta['metadata']['FrontMatter']:
+                    test = meta['metadata']['FrontMatter']['test']
+                if "build" in meta['metadata']['FrontMatter'] and meta['metadata']['FrontMatter']['build'] == 'False' :
+                    build = False
+                else :
+                    build = True
+                if( version == '0' ) :
+                    target = '_drafts'
 
-            Execute(Mkdir(os.path.join('build', project + '-' + dirname)))
-            env.Kibot([FILE_BOM, FILE_DRC, FILE_ERC, FILE_SCHEMA, FILE_IMAGE, FILE_PCB, FILE_JLCPCB], 
-                [os.path.join(root, dirname, dirname + '.kicad_pcb'), os.path.join(root, dirname, dirname + '.sch')])
+                if build :
+                    notebooks.append(nb)
+                    notebook_targets.append(os.path.join('build', target, date + '-' + title + '.html'))
+                    install_notebooks.append(os.path.join('www', target, date + '-' + title + '.html'))
+                    
+                    if test == "True" :
+                        kibot_files.append(os.path.join('build', title + '-test.json'))
+                        testfiles.append(os.path.join('build', title + '-test.json'))
 
-            if not project in callouts:
-                callouts[project] = {}
-            callouts[project][dirname] = {"gerber": '/assets/' + project + '-' + dirname + '-gerbers.zip', "PCB": '/assets/' + project + '-' + dirname + '-pcb.pdf'}
-            if dirname != 'panel' :
-                callouts[project][dirname]['schema'] = '/assets/' + project + '-' + dirname + '-schematic.pdf'
+                    for s_path in path.iterdir():
+                        if s_path.is_dir():
+                            if( os.path.isfile(os.path.join(s_path, s_path.name + '.pro')) and 
+                                os.path.isfile(os.path.join(s_path, s_path.name + '.kicad_pcb')) and
+                                os.path.isfile(os.path.join(s_path, s_path.name + '.sch'))) :
+                                path = Path(os.path.join(s_path, s_path.name + '.sch'))
 
-            kibot_files.append(FILE_BOM)
-            kibot_files.append(FILE_ERC)
-            kibot_files.append(FILE_DRC)
+                                FILE_BOM = os.path.join('build', 'kibot', title, s_path.name + "-bom.csv")
+                                kibot_targets.append(os.path.join('www', 'assets', title + '-' + s_path.name + "-bom.csv"))
+                                kibot_sources.append(FILE_BOM)                            
+                                FILE_ERC = os.path.join('build', 'kibot', title, s_path.name + "-erc.txt")
+                                kibot_targets.append(os.path.join('www', 'assets', title + '-' + s_path.name + "-erc.txt"))
+                                kibot_sources.append(FILE_ERC)
+                                FILE_DRC = os.path.join('build', 'kibot', title, s_path.name + "-drc.txt")
+                                kibot_targets.append(os.path.join('www', 'assets', title + '-' + s_path.name + "-drc.txt"))
+                                kibot_sources.append(FILE_DRC)
+                                FILE_SCHEMA = os.path.join('build', 'kibot', title, s_path.name + '-schematic.pdf')
+                                kibot_targets.append(os.path.join('www', 'assets', title + '-' + s_path.name + "-schematic.pdf"))
+                                kibot_sources.append(FILE_SCHEMA)
+                                FILE_PCB = os.path.join('build', 'kibot', title, s_path.name + '-pcb.pdf')
+                                kibot_targets.append(os.path.join('www', 'assets', title + '-' + s_path.name + "-pcb.pdf"))
+                                kibot_sources.append(FILE_PCB)
+                                FILE_IMAGE = os.path.join('build', 'kibot', title, s_path.name + '-top.png')
+                                kibot_targets.append(os.path.join('www', 'assets', title + '-' + s_path.name + "-top.png"))
+                                kibot_sources.append(FILE_IMAGE)
+                                FILE_JLCPCB = os.path.join('build', 'kibot', title, 'JLCPCB', s_path.name + '-JLCPCB.zip')
+                                kibot_targets.append(os.path.join('www', 'assets', title + '-' + s_path.name + "-JLCPCB.zip"))
+                                kibot_sources.append(FILE_JLCPCB)
 
-            env.InstallAs(os.path.join('www', 'assets', project + '-' + dirname + '-pcb.pdf'), FILE_PCB)
-            env.InstallAs(os.path.join('www', 'assets', project + '-' + dirname + '-schematic.pdf'), FILE_SCHEMA)
-            env.InstallAs(os.path.join('www', 'assets', project + '-' + dirname + '-top.png'), FILE_IMAGE)
-            env.InstallAs(os.path.join('www', 'assets', project + '-' + dirname + '-gerbers.zip'), FILE_JLCPCB)
+                                Execute(Mkdir(os.path.join('build', 'kibot', title)))
+                                env.Kibot([FILE_BOM, FILE_DRC, FILE_ERC, FILE_SCHEMA, FILE_IMAGE, FILE_PCB, FILE_JLCPCB], 
+                                    [os.path.join(s_path, s_path.name + '.kicad_pcb'), os.path.join(s_path, s_path.name + '.sch')])
 
-NOTEBOOKS = Glob('content/**/*.ipynb')
-for x in NOTEBOOKS:
-    notebook = (json.loads(x.get_text_contents()))
-    title = notebook['metadata']['FrontMatter']['title']
-    date = notebook['metadata']['FrontMatter']['date']
-    version = notebook['metadata']['FrontMatter']['version']
-    test = 'False'
-    if "test" in notebook['metadata']['FrontMatter']:
-        test = notebook['metadata']['FrontMatter']['test']
-    target = '_posts'
-    if( version == '0' ) :
-        target = '_drafts'
+                                if not title in callouts :
+                                    callouts[title] = {}
+                                callouts[title][s_path.name] = {"gerber": '/assets/' + title + '-' + s_path.name + '-gerbers.zip', "PCB": '/assets/' + title + '-' + s_path.name + '-pcb.pdf'}
+                                if s_path.name != 'panel' :
+                                    callouts[title][s_path.name]['schema'] = '/assets/' + title + '-' + s_path.name + '-schematic.pdf'
 
-    abspath = Dir('.').srcnode().abspath
-    target_path = os.path.join(abspath, 'www', target)
-    target_file = os.path.join('build', date + '-' + title + '.html')
-    Execute(Mkdir(target_path))
-    targets = [target_file]
-    if test == "True" :
-        targets.append(os.path.join('build', title + '-test.json'))
-        kibot_files.append(os.path.join('build', title + '-test.json'))
+                                kibot_files.append(FILE_BOM)
+                                kibot_files.append(FILE_ERC)
+                                kibot_files.append(FILE_DRC)
 
-    env.Notebook( target_file, x)
-    Install(target_path, target_file)
+if GetOption("clean"):
+    print("clean notebooks")
+    for s in notebooks :
+        jupyter = 'jupyter nbconvert --clear-output --inplace %s' % (s.get_path())
+        env.Execute(jupyter)
 
-env.KibotParser([os.path.join('build', 'elektrophon.json'), os.path.join('build', 'elektrophon.xml')], kibot_files)
 
-ab = env.Command(["www/node_modules/alpinejs/dist/cdn.min.js", 'www/node_modules/mathjax/es5/tex-chtml.js', 'www/node_modules/fft.js/lib/fft.js'],
-                 "www/package.json",
-                 "npm install",
-                 chdir='www')
+env.Notebook( (notebook_targets, testfiles), notebooks)
+env.KibotParser([os.path.join('build', '_data', 'elektrophon.json'), os.path.join('build', 'elektrophon.xml')], kibot_files)
 
-ab = env.Command(["www/assets/js/bundle.js"],
-                 ["www/assets/js/main.js", 'www/node_modules/fft.js/lib/fft.js'],
-                 "www/node_modules/.bin/browserify www/assets/js/main.js > www/assets/js/bundle.js")
+# ab = env.Command(["www/node_modules/alpinejs/dist/cdn.min.js", 'www/node_modules/mathjax/es5/tex-chtml.js', 'www/node_modules/fft.js/lib/fft.js'],
+#                 "www/package.json",
+#                 "npm install",
+#                  chdir='www')
 
-Install(os.path.join('www', '_data'), os.path.join('build', 'elektrophon.json'))
-env.Install('www/assets/js', 'www/node_modules/alpinejs/dist/cdn.js')
-env.Install('www/assets/js', 'www/node_modules/mathjax/es5/')
+# ab = env.Command(["www/node_modules"],
+#                  "www/package.json",
+#                  "npm install",
+#                  chdir='www')
+
+#ab = env.Command(["www/assets/js/bundle.js"],
+#                 ["www/assets/js/main.js", 'www/node_modules'],
+#                 "www/node_modules/.bin/browserify www/assets/js/main.js > www/assets/js/bundle.js")
+
+Install(os.path.join('www', '_data'), os.path.join('build', '_data', 'elektrophon.json'))
+InstallAs(install_notebooks, notebook_targets)
+InstallAs(kibot_targets, kibot_sources)
+#env.Install('www/assets/js', 'www/node_modules/mathjax/es5/')
 env.Install('www/assets', Glob('content/**.jpg'))
 env.Install('www/assets', Glob('content/**/*.jpg'))
 env.Install('www/assets', Glob('content/**/*.pdf'))
 env.Install('www/assets', Glob('content/**/*.png'))
 env.Install('www/assets', Glob('content/**/*.wav'))
+Clean('build/elektophon.xml', './build')
