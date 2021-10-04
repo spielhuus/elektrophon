@@ -54,5 +54,6 @@ www/Gemfile.lock
 .bundle
 .npm
 .sconsign.dblite
+.local
 www/package-lock.json
 content/kraft/kraft/kraft.xml
