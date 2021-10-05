@@ -1,0 +1,173 @@
+** Drc report for /github/workspace/content/konsole/mount/mount.kicad_pcb **
+** Created on 2021-10-05 07:59:27 **
+
+** Found 0 DRC errors **
+
+** Found 55 unconnected pads **
+ErrType(2): Unconnected items
+    @(101.256 mm, 108.233 mm): Pad 2 of R2 on All copper layers
+    @(102.836 mm, 121.543 mm): Pad 2 of R1 on All copper layers
+ErrType(2): Unconnected items
+    @(84.836 mm, 67.088 mm): Pad 2 of C1 on All copper layers
+    @(101.256 mm, 108.233 mm): Pad 2 of R2 on All copper layers
+ErrType(2): Unconnected items
+    @(84.836 mm, 69.088 mm): Pad 1 of C1 on All copper layers
+    @(62.976 mm, 80.263 mm): Pad 2 of RV1 on All copper layers
+ErrType(2): Unconnected items
+    @(92.936 mm, 80.398 mm): Pad 2 of C2 on All copper layers
+    @(87.386 mm, 85.803 mm): Pad 2 of R4 on All copper layers
+ErrType(2): Unconnected items
+    @(87.386 mm, 85.803 mm): Pad 2 of R4 on All copper layers
+    @(71.936 mm, 74.753 mm): Pad 2 of R3 on All copper layers
+ErrType(2): Unconnected items
+    @(78.426 mm, 129.213 mm): Pad 2 of RV2 on All copper layers
+    @(92.936 mm, 82.398 mm): Pad 1 of C2 on All copper layers
+ErrType(2): Unconnected items
+    @(75.986 mm, 74.753 mm): Pad 2 of R5 on All copper layers
+    @(64.366 mm, 63.308 mm): Pad 2 of C3 on All copper layers
+ErrType(2): Unconnected items
+    @(101.256 mm, 94.923 mm): Pad 2 of R6 on All copper layers
+    @(75.986 mm, 74.753 mm): Pad 2 of R5 on All copper layers
+ErrType(2): Unconnected items
+    @(92.296 mm, 110.663 mm): Pad 2 of RV3 on All copper layers
+    @(64.366 mm, 65.308 mm): Pad 1 of C3 on All copper layers
+ErrType(2): Unconnected items
+    @(58.816 mm, 63.308 mm): Pad 2 of C4 on All copper layers
+    @(80.036 mm, 74.753 mm): Pad 2 of R8 on All copper layers
+ErrType(2): Unconnected items
+    @(80.036 mm, 74.753 mm): Pad 2 of R8 on All copper layers
+    @(102.836 mm, 134.853 mm): Pad 2 of R7 on All copper layers
+ErrType(2): Unconnected items
+    @(78.426 mm, 99.613 mm): Pad 2 of RV4 on All copper layers
+    @(58.816 mm, 65.308 mm): Pad 1 of C4 on All copper layers
+ErrType(2): Unconnected items
+    @(96.466 mm, 144.263 mm): Pad 16 of J6 on All copper layers
+    @(93.876 mm, 140.263 mm): Pad 2 of RV8 on All copper layers
+ErrType(2): Unconnected items
+    @(57.986 mm, 102.763 mm): Pad S of J5 on All copper layers
+    @(62.976 mm, 95.063 mm): Pad 2 of RV5 on All copper layers
+ErrType(2): Unconnected items
+    @(73.436 mm, 136.413 mm): Pad S of J4 on All copper layers
+    @(80.926 mm, 129.213 mm): Pad 3 of RV2 on All copper layers
+ErrType(2): Unconnected items
+    @(57.986 mm, 125.363 mm): Pad S of J2 on All copper layers
+    @(57.986 mm, 114.313 mm): Pad S of J3 on All copper layers
+ErrType(2): Unconnected items
+    @(57.986 mm, 136.413 mm): Pad S of J1 on All copper layers
+    @(57.986 mm, 125.363 mm): Pad S of J2 on All copper layers
+ErrType(2): Unconnected items
+    @(57.986 mm, 114.313 mm): Pad S of J3 on All copper layers
+    @(57.986 mm, 102.763 mm): Pad S of J5 on All copper layers
+ErrType(2): Unconnected items
+    @(80.926 mm, 129.213 mm): Pad 3 of RV2 on All copper layers
+    @(92.296 mm, 125.463 mm): Pad 2 of RV6 on All copper layers
+ErrType(2): Unconnected items
+    @(93.876 mm, 140.263 mm): Pad 2 of RV8 on All copper layers
+    @(92.296 mm, 125.463 mm): Pad 2 of RV6 on All copper layers
+ErrType(2): Unconnected items
+    @(62.976 mm, 95.063 mm): Pad 2 of RV5 on All copper layers
+    @(65.476 mm, 80.263 mm): Pad 3 of RV1 on All copper layers
+ErrType(2): Unconnected items
+    @(80.926 mm, 99.613 mm): Pad 3 of RV4 on All copper layers
+    @(78.426 mm, 114.413 mm): Pad 2 of RV7 on All copper layers
+ErrType(2): Unconnected items
+    @(80.926 mm, 129.213 mm): Pad 3 of RV2 on All copper layers
+    @(78.426 mm, 114.413 mm): Pad 2 of RV7 on All copper layers
+ErrType(2): Unconnected items
+    @(92.296 mm, 125.463 mm): Pad 2 of RV6 on All copper layers
+    @(94.796 mm, 110.663 mm): Pad 3 of RV3 on All copper layers
+ErrType(2): Unconnected items
+    @(73.436 mm, 136.413 mm): Pad S of J4 on All copper layers
+    @(57.986 mm, 136.413 mm): Pad S of J1 on All copper layers
+ErrType(2): Unconnected items
+    @(60.476 mm, 80.263 mm): Pad 1 of RV1 on All copper layers
+    @(69.386 mm, 136.413 mm): Pad T of J1 on All copper layers
+ErrType(2): Unconnected items
+    @(69.386 mm, 125.363 mm): Pad T of J2 on All copper layers
+    @(75.926 mm, 129.213 mm): Pad 1 of RV2 on All copper layers
+ErrType(2): Unconnected items
+    @(89.796 mm, 110.663 mm): Pad 1 of RV3 on All copper layers
+    @(69.386 mm, 114.313 mm): Pad T of J3 on All copper layers
+ErrType(2): Unconnected items
+    @(75.926 mm, 99.613 mm): Pad 1 of RV4 on All copper layers
+    @(84.836 mm, 136.413 mm): Pad T of J4 on All copper layers
+ErrType(2): Unconnected items
+    @(61.086 mm, 102.763 mm): Pad R of J5 on All copper layers
+    @(65.986 mm, 144.263 mm): Pad 4 of J6 on All copper layers
+ErrType(2): Unconnected items
+    @(63.446 mm, 144.263 mm): Pad 3 of J6 on All copper layers
+    @(69.386 mm, 102.763 mm): Pad T of J5 on All copper layers
+ErrType(2): Unconnected items
+    @(88.136 mm, 82.653 mm): Pad 1 of R9 on All copper layers
+    @(84.086 mm, 82.653 mm): Pad 1 of R13 on All copper layers
+ErrType(2): Unconnected items
+    @(88.136 mm, 82.653 mm): Pad 1 of R9 on All copper layers
+    @(99.536 mm, 91.773 mm): Pad 1 of R11 on All copper layers
+ErrType(2): Unconnected items
+    @(71.936 mm, 71.603 mm): Pad 1 of R15 on All copper layers
+    @(84.086 mm, 82.653 mm): Pad 1 of R13 on All copper layers
+ErrType(2): Unconnected items
+    @(99.536 mm, 91.773 mm): Pad 1 of R11 on All copper layers
+    @(60.906 mm, 144.263 mm): Pad 2 of J6 on All copper layers
+ErrType(2): Unconnected items
+    @(75.986 mm, 61.443 mm): Pad 2 of R12 on All copper layers
+    @(80.036 mm, 61.443 mm): Pad 2 of R10 on All copper layers
+ErrType(2): Unconnected items
+    @(91.436 mm, 85.803 mm): Pad 2 of R16 on All copper layers
+    @(95.486 mm, 85.803 mm): Pad 2 of R14 on All copper layers
+ErrType(2): Unconnected items
+    @(80.036 mm, 61.443 mm): Pad 2 of R10 on All copper layers
+    @(91.436 mm, 85.803 mm): Pad 2 of R16 on All copper layers
+ErrType(2): Unconnected items
+    @(91.436 mm, 85.803 mm): Pad 2 of R16 on All copper layers
+    @(58.366 mm, 144.263 mm): Pad 1 of J6 on All copper layers
+ErrType(2): Unconnected items
+    @(60.476 mm, 95.063 mm): Pad 1 of RV5 on All copper layers
+    @(88.136 mm, 72.493 mm): Pad 2 of R9 on All copper layers
+ErrType(2): Unconnected items
+    @(102.836 mm, 131.703 mm): Pad 1 of R1 on All copper layers
+    @(60.476 mm, 95.063 mm): Pad 1 of RV5 on All copper layers
+ErrType(2): Unconnected items
+    @(65.476 mm, 95.063 mm): Pad 3 of RV5 on All copper layers
+    @(80.036 mm, 71.603 mm): Pad 1 of R10 on All copper layers
+ErrType(2): Unconnected items
+    @(101.256 mm, 118.393 mm): Pad 1 of R2 on All copper layers
+    @(65.476 mm, 95.063 mm): Pad 3 of RV5 on All copper layers
+ErrType(2): Unconnected items
+    @(71.936 mm, 84.913 mm): Pad 1 of R3 on All copper layers
+    @(99.536 mm, 81.613 mm): Pad 2 of R11 on All copper layers
+ErrType(2): Unconnected items
+    @(89.796 mm, 125.463 mm): Pad 1 of RV6 on All copper layers
+    @(71.936 mm, 84.913 mm): Pad 1 of R3 on All copper layers
+ErrType(2): Unconnected items
+    @(75.986 mm, 71.603 mm): Pad 1 of R12 on All copper layers
+    @(87.386 mm, 95.963 mm): Pad 1 of R4 on All copper layers
+ErrType(2): Unconnected items
+    @(87.386 mm, 95.963 mm): Pad 1 of R4 on All copper layers
+    @(94.796 mm, 125.463 mm): Pad 3 of RV6 on All copper layers
+ErrType(2): Unconnected items
+    @(75.986 mm, 84.913 mm): Pad 1 of R5 on All copper layers
+    @(84.086 mm, 72.493 mm): Pad 2 of R13 on All copper layers
+ErrType(2): Unconnected items
+    @(75.926 mm, 114.413 mm): Pad 1 of RV7 on All copper layers
+    @(75.986 mm, 84.913 mm): Pad 1 of R5 on All copper layers
+ErrType(2): Unconnected items
+    @(95.486 mm, 95.963 mm): Pad 1 of R14 on All copper layers
+    @(101.256 mm, 105.083 mm): Pad 1 of R6 on All copper layers
+ErrType(2): Unconnected items
+    @(101.256 mm, 105.083 mm): Pad 1 of R6 on All copper layers
+    @(80.926 mm, 114.413 mm): Pad 3 of RV7 on All copper layers
+ErrType(2): Unconnected items
+    @(102.836 mm, 145.013 mm): Pad 1 of R7 on All copper layers
+    @(91.376 mm, 140.263 mm): Pad 1 of RV8 on All copper layers
+ErrType(2): Unconnected items
+    @(91.376 mm, 140.263 mm): Pad 1 of RV8 on All copper layers
+    @(71.936 mm, 61.443 mm): Pad 2 of R15 on All copper layers
+ErrType(2): Unconnected items
+    @(80.036 mm, 84.913 mm): Pad 1 of R8 on All copper layers
+    @(91.436 mm, 95.963 mm): Pad 1 of R16 on All copper layers
+ErrType(2): Unconnected items
+    @(91.436 mm, 95.963 mm): Pad 1 of R16 on All copper layers
+    @(96.376 mm, 140.263 mm): Pad 3 of RV8 on All copper layers
+
+** End of Report **

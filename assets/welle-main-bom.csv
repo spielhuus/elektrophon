@@ -1,0 +1,28 @@
+Row,Description,Part,References,Value,Footprint,Quantity Per PCB,Status,Datasheet,Spice_Primitive,Spice_Model,Spice_Netlist_Enabled
+1,"Multilayer Ceramic Capacitors MLCC (50V, L=4 mm, W=2.5 mm, LS=2.5 mm)",C,C3 C4 C5 C6,0.1u,C_Disc_D3.4mm_W2.1mm_P2.50mm,4, ,~,C,0.1u,N
+2,"Aluminium Electrolytic Capacitors (50V, D=6.3 mm, LS=2.5 mm)",CP,C1 C2,22u,CP_Radial_D6.3mm_P2.50mm,2, ,~,C,22u,N
+3,"Multilayer Ceramic Capacitors MLCC (50V, L=4 mm, W=2.5 mm, LS=2.5 mm)",C,C7 C8,10p*,C_Disc_D3.4mm_W2.1mm_P2.50mm,2, ,~,C,10p*,N
+4,Small Signal Diode (DO-35),D,D1 D2 D3 D4 D5 D6 D7 D8 D9 D10 D11 D12 D13 D14 D15 D16 D17 D18,D,D_DO-35_SOD27_P7.62mm_Horizontal,18, ,~,D,D1N4148,Y
+5,Small Signal Diode (DO-35),D,D19 D20,D,D_DO-35_SOD27_P5.08mm_Vertical_KathodeUp,2, ,~,D,D1N4148,Y
+6,Board to Board Connectors (2.54 mm),Conn_01x03_Female,J2,01x03 Female,PinSocket_1x03_P2.54mm_Vertical,1, ,~,J,01x03 Female,N
+7,Board to Board Connectors (2.54 mm),Conn_01x06_Female,J1,01x06 Female,PinSocket_1x06_P2.54mm_Vertical,1, ,~,J,01x06 Female,N
+8,Pin Header IDC (2.54mm),Conn_02x05_Odd_Even,J4,10 Pos,IDC-Header_2x05_P2.54mm_Vertical,1, ,~,J,10 Pos,N
+9,"0.1A Ic, 45V Vce, Small Signal NPN Transistor, TO-92",BC547,Q1 Q2 Q3,BC547,TO-92_Inline_Wide,3, ,http://www.fairchildsemi.com/ds/BC/BC547.pdf,Q,BC846B,Y
+10,"Metal Film Resistors - Through Hole (L=3.6 mm, D=1.6 mm, 1%)",R,R6 R7,10,R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal,2, ,~,R,10,N
+11,"Metal Film Resistors - Through Hole (L=3.6 mm, D=1.6 mm, 1%)",R,R37,470,R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal,1, ,~,,,
+12,"Metal Film Resistors - Through Hole (L=3.6 mm, D=1.6 mm, 1%)",R,R5,680,R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal,1, ,~,,,
+13,"Metal Film Resistors - Through Hole (L=3.6 mm, D=1.6 mm, 1%)",R,R31,2k7,R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal,1, ,~,,,
+14,"Metal Film Resistors - Through Hole (L=3.6 mm, D=1.6 mm, 1%)",R,R32 R33,5k6,R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal,2, ,~,,,
+15,"Metal Film Resistors - Through Hole (L=3.6 mm, D=1.6 mm, 1%)",R,R35,6k8,R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal,1, ,~,,,
+16,"Metal Film Resistors - Through Hole (L=3.6 mm, D=1.6 mm, 1%)",R,R15 R16,10k,R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal,2, ,~,,,
+17,"Metal Film Resistors - Through Hole (L=3.6 mm, D=1.6 mm, 1%)",R,R11 R13 R14 R19 R20 R21 R22 R25 R26 R27 R28,15k,R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal,11, ,~,,,
+18,"Metal Film Resistors - Through Hole (L=3.6 mm, D=1.6 mm, 1%)",R,R9 R10,22k,R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal,2, ,~,,,
+19,"Metal Film Resistors - Through Hole (L=3.6 mm, D=1.6 mm, 1%)",R,R29,27k,R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal,1, ,~,,,
+20,"Metal Film Resistors - Through Hole (L=3.6 mm, D=1.6 mm, 1%)",R,R12 R30,33k,R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal,2, ,~,,,
+21,"Metal Film Resistors - Through Hole (L=3.6 mm, D=1.6 mm, 1%)",R,R34 R36,56k,R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal,2, ,~,,,
+22,"Metal Film Resistors - Through Hole (L=3.6 mm, D=1.6 mm, 1%)",R,R2,68k,R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal,1, ,~,,,
+23,"Metal Film Resistors - Through Hole (L=3.6 mm, D=1.6 mm, 1%)",R,R1 R3 R8 R17 R18 R23 R24,100k,R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal,7, ,~,,,
+24,"Trimmer Resistor, Bourns 3296Z",R_POT_TRIM,RV5,1k,Potentiometer_Bourns_3296Z_Horizontal,1, ,~,X,RV5,Y
+25,"Trimmer Resistor, Bourns 3296Z",R_POT_TRIM,RV4,50k,Potentiometer_Bourns_3296Z_Horizontal,1, ,~,X,RV4,Y
+26,"Dual Low-Noise JFET-Input Operational Amplifiers, DIP-8/SOIC-8",TL072,U1,TL072,DIP-8_W7.62mm_Socket,1, ,http://www.ti.com/lit/ds/symlink/tl071.pdf,X,TL072c,Y
+27,"Quad Low-Noise JFET-Input Operational Amplifiers, DIP-14/SOIC-14",TL074,U2,TL074,DIP-14_W7.62mm_Socket,1, ,http://www.ti.com/lit/ds/symlink/tl071.pdf,X,TL074c,Y

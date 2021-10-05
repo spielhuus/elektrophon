@@ -1,0 +1,13 @@
+Row,Description,Part,References,Value,Footprint,Quantity Per PCB,Status,Datasheet
+1,"75V 0.15A Fast Switching Diode, SOD-123",1N4148W,D3 D5 D6,1N4148W,D_SOD-123,3, ,https://www.vishay.com/docs/85748/1n4148w.pdf
+2,LED 3mm low current,LED,D7,LED (Green),LED_D3.0mm,1, ,https://www.mouser.ch/datasheet/2/216/WP710A10LSECK-J3-535625.pdf
+3,LED 3mm low current,LED,D8,LED (Red),LED_D3.0mm,1, ,https://www.mouser.ch/datasheet/2/216/WP710A10LSECK-J3-535625.pdf
+4,LED 3mm low current,LED,D4,LED (Yellow),LED_D3.0mm,1, ,https://www.mouser.ch/datasheet/2/216/WP710A10LZGCK-535717.pdf
+5,Board to Board Connectors (2.54 mm),Conn_01x03_Male,J5,01x03 Male,PinSocket_1x03_P2.54mm_Vertical,1, ,~
+6,Board to Board Connectors (2.54 mm),Conn_01x06_Male,J3,01x06 Male,PinSocket_1x06_P2.54mm_Vertical,1, ,~
+7,"Audio Jack, 2 Poles (Mono / TS), Switched T Pole (Normalling)",AudioJack2_SwitchT,J1 J2 J4,INPUT,Jack_3.5mm_WQP-PJ398SM_Vertical,3, ,~
+8,"0.2A Ic, 40V Vce, Small Signal NPN Transistor, SOT-23",MMBT3904,Q2 Q3 Q4,MMBT3904,SOT-23,3, ,https://www.onsemi.com/pub/Collateral/2N3903-D.PDF
+9,Thick Film Resistors - SMD (0805),R,R4 R7 R8,5k,R_0805_2012Metric_Pad1.20x1.40mm_HandSolder,3, ,~
+10,Thick Film Resistors - SMD (0805),R,R3 R5 R6,100k,R_0805_2012Metric_Pad1.20x1.40mm_HandSolder,3, ,~
+11,Alpha 9 mm Pots – Vertical,R_POT,RV4,47k,Potentiometer_Alpha_RD901F-40-00D_Single_Vertical,1, ,~
+12,Alpha 9 mm Pots – Vertical,R_POT,RV1 RV2,100k,Potentiometer_Alpha_RD901F-40-00D_Single_Vertical,2, ,~

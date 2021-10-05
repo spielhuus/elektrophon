@@ -1,0 +1,8 @@
+** Drc report for /github/workspace/content/welle/panel/panel.kicad_pcb **
+** Created on 2021-10-05 07:55:32 **
+
+** Found 0 DRC errors **
+
+** Found 0 unconnected pads **
+
+** End of Report **

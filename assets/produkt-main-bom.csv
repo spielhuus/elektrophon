@@ -1,0 +1,13 @@
+Row,Description,Part,References,Value,Footprint,Quantity Per PCB,Status,Datasheet,Spice_Primitive,Spice_Model,Spice_Netlist_Enabled
+1,"Multilayer Ceramic Capacitors MLCC (50V, L=4 mm, W=2.5 mm, LS=2.5 mm)",C,C3 C4 C5 C6 C7 C8 C9 C10 C11 C12,0.1u,C_Disc_D3.4mm_W2.1mm_P2.50mm,10, ,~,C,0.1u,N
+2,"Aluminium Electrolytic Capacitors (50V, D=6.3 mm, LS=2.5 mm)",CP,C1 C2,22u,CP_Radial_D6.3mm_P2.50mm,2, ,~,C,22u,N
+3,Board to Board Connectors (2.54 mm),Conn_01x03_Female,J3,01x03 Female,PinSocket_1x03_P2.54mm_Vertical,1, ,~,,,
+4,Board to Board Connectors (2.54 mm),Conn_01x05_Female,J2,01x05 Female,PinSocket_1x05_P2.54mm_Vertical,1, ,~,,,
+5,Pin Header IDC (2.54mm),Conn_02x05_Odd_Even,J1,10 Pos,IDC-Header_2x05_P2.54mm_Vertical,1, ,~,J,IDC Header,N
+6,"Metal Film Resistors - Through Hole (L=3.6 mm, D=1.6 mm, 1%)",R,R1 R2,10,R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal,2, ,~,R,10,N
+7,"Metal Film Resistors - Through Hole (L=3.6 mm, D=1.6 mm, 1%)",R,R9 R10,100,R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal,2, ,~,,,
+8,"Metal Film Resistors - Through Hole (L=3.6 mm, D=1.6 mm, 1%)",R,R3 R4 R5 R6,10k,R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal,4, ,~,,,
+9,"Metal Film Resistors - Through Hole (L=3.6 mm, D=1.6 mm, 1%)",R,R7 R8,330k,R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal,2, ,~,,,
+10,"Trimmer Resistor, Bourns 3386P",R_POT_TRIM,RV1 RV2,100k,Potentiometer_Bourns_3386P_Vertical,2, ,~,X,voltage_divider_1 voltage_divider_2,Y
+11,"Analog Multiplier, DIP-8/SOIC-8",AD633,U3 U4,AD633,DIP-8_W7.62mm,2, ,https://www.analog.com/media/en/technical-documentation/data-sheets/AD633.pdf,X,AD633,Y
+12,"Dual Low-Noise JFET-Input Operational Amplifiers, DIP-8/SOIC-8",TL072,U1 U2 U5,TL072,DIP-8_W7.62mm_Socket,3, ,http://www.ti.com/lit/ds/symlink/tl071.pdf,,,

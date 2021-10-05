@@ -1,0 +1,17 @@
+Row,Description,Part,References,Value,Footprint,Quantity Per PCB,Status,Datasheet
+1,"75V 0.15A Fast Switching Diode, SOD-123",1N4148W,D1 D5 D9 D10,1N4148W,D_SOD-123,4, ,https://www.vishay.com/docs/85748/1n4148w.pdf
+2,LED 3mm low current,LED,D11,LED (Green),LED_D3.0mm,1, ,https://www.mouser.ch/datasheet/2/216/WP710A10LSECK-J3-535625.pdf
+3,LED 3mm low current,LED,D12,LED (Red),LED_D3.0mm,1, ,https://www.mouser.ch/datasheet/2/216/WP710A10LSECK-J3-535625.pdf
+4,LED 3mm low current,LED,D3 D7,LED (Yellow),LED_D3.0mm,2, ,https://www.mouser.ch/datasheet/2/216/WP710A10LZGCK-535717.pdf
+5,Board to Board Connectors (2.54 mm),Conn_01x06_Male,J6,01x06 Male,PinSocket_1x06_P2.54mm_Vertical,1, ,~
+6,Board to Board Connectors (2.54 mm),Conn_01x10_Male,J4,01x10 Male,PinSocket_1x10_P2.54mm_Vertical,1, ,~
+7,"Audio Jack, 2 Poles (Mono / TS), Switched T Pole (Normalling)",AudioJack2_SwitchT,J1 J2 J3 J5,CV1,Jack_3.5mm_WQP-PJ398SM_Vertical,4, ,~
+8,"0.2A Ic, 40V Vce, Small Signal NPN Transistor, SOT-23",MMBT3904,Q1 Q3 Q5 Q6,MMBT3904,SOT-23,4, ,https://www.onsemi.com/pub/Collateral/2N3903-D.PDF
+9,"Metal Film Resistors - Through Hole (L=3.6 mm, D=1.6 mm, 1%)",R,R2,1k,R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal,1, ,~
+10,Thick Film Resistors - SMD (0805),R,R5 R9 R13 R14,5k,R_0805_2012Metric_Pad1.20x1.40mm_HandSolder,4, ,~
+11,"Metal Film Resistors - Through Hole (L=3.6 mm, D=1.6 mm, 1%)",R,R1,22k,R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal,1, ,~
+12,Thick Film Resistors - SMD (0805),R,R3 R7 R11 R12,100k,R_0805_2012Metric_Pad1.20x1.40mm_HandSolder,4, ,~
+13,Alpha 9 mm Pots – Vertical,R_POT,RV2,10k,Potentiometer_Alpha_RD901F-40-00D_Single_Vertical,1, ,~
+14,Alpha 9 mm Pots – Vertical,R_POT,RV1 RV3 RV4,100k,Potentiometer_Alpha_RD901F-40-00D_Single_Vertical,3, ,~
+15,Toggle Switches 3PDT ON-OFF-ON,SWITCH_3PDT,SW2,SWITCH_3PDT,3PDT,1, ,https://www.mouser.ch/datasheet/2/979/Dailywell_10082019_1M_Series-1660460.pdf
+16,"Switch, single pole double throw",SW_SPDT,SW1,SW_SPDT,SPDT_KIT,1, ,~

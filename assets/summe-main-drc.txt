@@ -1,0 +1,8 @@
+** Drc report for /github/workspace/content/summe/main/main.kicad_pcb **
+** Created on 2021-10-05 07:59:55 **
+
+** Found 0 DRC errors **
+
+** Found 0 unconnected pads **
+
+** End of Report **

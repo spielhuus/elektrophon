@@ -1,0 +1,17 @@
+** Drc report for /github/workspace/content/phasenregelschleife/main/main.kicad_pcb **
+** Created on 2021-10-05 08:08:29 **
+
+** Found 0 DRC errors **
+
+** Found 3 unconnected pads **
+ErrType(2): Unconnected items
+    @(129.500 mm, 76.200 mm): Pad 2 of C1 on All copper layers
+    @(104.000 mm, 91.490 mm): Pad 7 of U1 on All copper layers
+ErrType(2): Unconnected items
+    @(127.000 mm, 76.200 mm): Pad 1 of C1 on All copper layers
+    @(104.000 mm, 88.950 mm): Pad 6 of U1 on All copper layers
+ErrType(2): Unconnected items
+    @(104.000 mm, 94.030 mm): Pad 8 of U1 on All copper layers
+    @(104.000 mm, 86.410 mm): Pad 5 of U1 on All copper layers
+
+** End of Report **

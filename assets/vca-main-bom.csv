@@ -1,0 +1,20 @@
+Row,Description,Part,References,Value,Footprint,Quantity Per PCB,Status,Datasheet,Spice_Primitive,Spice_Model,Spice_Netlist_Enabled,Spice_Node_Sequence
+1,Unpolarized capacitor,C,C4,1n,,1, ,~,,,,
+2,Unpolarized capacitor,C,C5 C6 C7 C8,0.1u,,4, ,~,C,0.1,N,
+3,Unpolarized capacitor,C,C1,470n,,1, ,~,,,,
+4,Polarized capacitor,CP,C2 C3,22u,CP_Radial_D6.3mm_P2.50mm,2, ,~,C,22u,N,
+5,Diode,D,D1,D,,1, ,~,D,D1N4148,Y,2 1
+6,"Audio Jack, 2 Poles (Mono / TS), Switched T Pole (Normalling)",AudioJack2_SwitchT,J1 J3 J4,AudioJack2_SwitchT,,3, ,~,X,TRIGGER OUT,N,
+7,"Generic connector, double row, 02x05, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)",Conn_02x05_Odd_Even,J2,IDC Header,IDC-Header_2x05_P2.54mm_Vertical,1, ,~,J,IDC Header,N,
+8,"-0.2A Ic, -40V Vce, Small Signal PNP Transistor, TO-92",2N3906,Q1,2N3906,TO-92_Inline,1, ,https://www.onsemi.com/pub/Collateral/2N3906-D.PDF,Q,q2n3906,Y,3 2 1
+9,Resistor,R,R2 R3,10,R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal,2, ,~,R,10,N,
+10,Resistor,R,R5 R7,620,,2, ,~,,,,
+11,Resistor,R,R9 R11,1k,,2, ,~,,,,
+12,Resistor,R,R8,6.8k,,1, ,~,,,,
+13,Resistor,R,R10,18k,,1, ,~,,,,
+14,Resistor,R,R6,33k,,1, ,~,,,,
+15,Resistor,R,R4,100k,,1, ,~,,,,
+16,Resistor,R,R1,330k,,1, ,~,,,,
+17,Potentiometer,R_POT,RV1,R_POT,,1, ,~,R,100k,N,
+18,"Dual Operational Transconductance Amplifiers with Linearizing Diodes and Buffers, DIP-16/SOIC-16",LM13700,U2,LM13700,,1, ,http://www.ti.com/lit/ds/symlink/lm13700.pdf,X,LM13700/NS,Y,16 15 14 13 12 6 10 9 11
+19,"Dual Low-Noise JFET-Input Operational Amplifiers, DIP-8/SOIC-8",TL072,U1,TL072,,1, ,http://www.ti.com/lit/ds/symlink/tl071.pdf,X,TL072c,Y,

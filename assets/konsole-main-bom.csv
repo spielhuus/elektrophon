@@ -1,0 +1,14 @@
+Row,Description,Part,References,Value,Footprint,Quantity Per PCB,Status,Datasheet,Spice_Primitive,Spice_Model,Spice_Netlist_Enabled,Spice_Lib_File,Spice_Node_Sequence
+1,Unpolarized capacitor,C,C5 C6,47p,C_Disc_D3.4mm_W2.1mm_P2.50mm,2, ,~,,,,,
+2,Unpolarized capacitor,C,C7 C8 C9 C10 C13 C14 C15 C16,0.1u,C_Disc_D3.4mm_W2.1mm_P2.50mm,8, ,~,,,,,
+3,Polarized capacitor,CP,C3 C4,4u7,C_Disc_D3.4mm_W2.1mm_P2.50mm,2, ,~,,,,,
+4,Polarized capacitor,CP,C1 C2,10u,CP_Radial_D5.0mm_P2.50mm,2, ,~,,,,,
+5,Polarized capacitor,CP,C11 C12,22u,CP_Radial_D6.3mm_P2.50mm,2, ,~,,,,,
+6,"Generic connector, single row, 01x16, script generated (kicad-library-utils/schlib/autogen/connector/)",Conn_01x16_Female,J2,Conn_01x16_Female,PinSocket_1x16_P2.54mm_Vertical,1, ,~,,,,,
+7,"Generic connector, double row, 02x05, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)",Conn_02x05_Odd_Even,J1,IDC Header,IDC-Header_2x05_P2.54mm_Vertical,1, ,~,,,,,
+8,Resistor,R,R11 R12,10,R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal,2, ,~,,,,,
+9,Resistor,R,R7 R8,1k,R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal,2, ,~,,,,,
+10,Resistor,R,R1 R2 R5 R6 R13 R14,5k,R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal,6, ,~,,,,,
+11,Resistor,R,R3 R4 R9 R10 R15 R16,10k,R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal,6, ,~,,,,,
+12,"Dual Low-Noise Operational Amplifiers, DIP-8/SOIC-8",NE5532,U1 U2,NE5532,DIP-8_W7.62mm_Socket,2, ,http://www.ti.com/lit/ds/symlink/ne5532.pdf,X R,NE5532 1,Y N,/home/etienne/Projects/elektrophon/lib/kicad/spice/ne5532-2.lib,3 2 8 4 1
+13,"Quad Low-Noise JFET-Input Operational Amplifiers, DIP-14/SOIC-14",TL074,U3,TL074,DIP-14_W7.62mm_Socket,1, ,http://www.ti.com/lit/ds/symlink/tl071.pdf,,,,,

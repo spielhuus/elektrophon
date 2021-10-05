@@ -1,0 +1,3 @@
+Row,Description,Part,References,Value,Footprint,Quantity Per PCB,Status,Datasheet
+1,Unpolarized capacitor,C,C1,0.01u,C_Disc_D3.8mm_W2.6mm_P2.50mm,1, ,~
+2,Phase Comp & VCO,4046,U1 U2,4046,DIP-16_W7.62mm_Socket,2, ,https://assets.nexperia.com/documents/data-sheet/HEF4046B.pdf

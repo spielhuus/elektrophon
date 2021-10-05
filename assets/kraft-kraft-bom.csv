@@ -1,0 +1,12 @@
+Row,Description,Part,References,Value,Footprint,Quantity Per PCB,Status,Datasheet
+1,"Aluminium Electrolytic Capacitor, 35V, D=5 mm, LS=2 mm",CP1,C7 C8 C9 C10,1uF,CP_Radial_D5.0mm_P2.00mm,4, ,~
+2,"Aluminium Electrolytic Capacitor, 35V, D=12.5 mm, LS=5 mm",CP1,C1 C2 C3 C4 C5 C6,3300uF,CP_Radial_D12.5mm_P5.00mm,6, ,https://www.mouser.ch/datasheet/2/293/UBY_e-1280407.pdf
+3,Multilayer Ceramic Capacitors MLCC,C,C12,0.1,C_Disc_D4.7mm_W2.5mm_P5.00mm,1, ,~
+4,Multilayer Ceramic Capacitors MLCC,C,C11,0.33,C_Disc_D4.7mm_W2.5mm_P5.00mm,1, ,~
+5,"400V 1A General Purpose Rectifier Diode, DO-41",1N4004,D1 D2 D3 D4 D5 D6,1N4004,D_DO-41_SOD81_P10.16mm_Horizontal,6, ,http://www.vishay.com/docs/88503/1n4001.pdf
+6,"Heatsink TO-220, No Solderable Tabs, Mounting Kit 4880SG",Heatsink,HS1 HS2 HS3,5772,,3, ,~
+7,"Pin Header IDC, 10 Pos, 2.54mm",Conn_02x05_Odd_Even,J3 J4 J5 J6 J7 J8 J9 J10 J11 J12 J13 J14 J15 J16 J17,IDC Header,IDC-Header_2x05_P2.54mm_Vertical,15, ,https://www.mouser.ch/datasheet/2/418/7/ENG_CD_1761682_A1-2019262.pdf
+8,DC Power Connector,Barrel_Jack_Switch,J1 J2,PJ-102AH,BarrelJack_CUI_PJ-102AH_Horizontal,2, ,https://www.mouser.ch/datasheet/2/670/pj_102ah-1778518.pdf
+9,"Positive 1.5A 35V Linear Regulator, Fixed Output 5V",L7805,U3,L7805,TO-220-3_Vertical,1, ,http://www.st.com/content/ccc/resource/technical/document/datasheet/41/4f/b3/b0/12/d4/47/88/CD00000444.pdf/files/CD00000444.pdf/jcr:content/translations/en.CD00000444.pdf
+10,"Positive 1.5A 35V Linear Regulator, Fixed Output 15V, TO-220",L7815,U1,L7815,TO-220-3_Vertical,1, ,http://www.st.com/content/ccc/resource/technical/document/datasheet/41/4f/b3/b0/12/d4/47/88/CD00000444.pdf/files/CD00000444.pdf/jcr:content/translations/en.CD00000444.pdf
+11,"Negative 1.5A 35V Linear Regulator, Fixed Output -15V, TO-220",L7915,U2,L7915,TO-220-3_Vertical,1, ,http://www.st.com/content/ccc/resource/technical/document/datasheet/c9/16/86/41/c7/2b/45/f2/CD00000450.pdf/files/CD00000450.pdf/jcr:content/translations/en.CD00000450.pdf
