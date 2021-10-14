@@ -1,5 +1,5 @@
 ** Drc report for /github/workspace/content/konsole/mount/mount.kicad_pcb **
-** Created on 2021-10-05 07:59:27 **
+** Created on 2021-10-14 15:45:05 **
 
 ** Found 0 DRC errors **
 
@@ -104,8 +104,8 @@ ErrType(2): Unconnected items
     @(88.136 mm, 82.653 mm): Pad 1 of R9 on All copper layers
     @(99.536 mm, 91.773 mm): Pad 1 of R11 on All copper layers
 ErrType(2): Unconnected items
-    @(71.936 mm, 71.603 mm): Pad 1 of R15 on All copper layers
     @(84.086 mm, 82.653 mm): Pad 1 of R13 on All copper layers
+    @(71.936 mm, 71.603 mm): Pad 1 of R15 on All copper layers
 ErrType(2): Unconnected items
     @(99.536 mm, 91.773 mm): Pad 1 of R11 on All copper layers
     @(60.906 mm, 144.263 mm): Pad 2 of J6 on All copper layers
@@ -116,8 +116,8 @@ ErrType(2): Unconnected items
     @(91.436 mm, 85.803 mm): Pad 2 of R16 on All copper layers
     @(95.486 mm, 85.803 mm): Pad 2 of R14 on All copper layers
 ErrType(2): Unconnected items
-    @(80.036 mm, 61.443 mm): Pad 2 of R10 on All copper layers
     @(91.436 mm, 85.803 mm): Pad 2 of R16 on All copper layers
+    @(80.036 mm, 61.443 mm): Pad 2 of R10 on All copper layers
 ErrType(2): Unconnected items
     @(91.436 mm, 85.803 mm): Pad 2 of R16 on All copper layers
     @(58.366 mm, 144.263 mm): Pad 1 of J6 on All copper layers

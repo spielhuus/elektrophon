@@ -1,5 +1,5 @@
 ** Drc report for /github/workspace/content/summe/panel/panel.kicad_pcb **
-** Created on 2021-10-05 08:00:23 **
+** Created on 2021-10-14 15:36:11 **
 
 ** Found 0 DRC errors **
 

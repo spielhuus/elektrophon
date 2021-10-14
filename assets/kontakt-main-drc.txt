@@ -1,5 +1,5 @@
 ** Drc report for /github/workspace/content/kontakt/main/main.kicad_pcb **
-** Created on 2021-10-05 08:07:05 **
+** Created on 2021-10-14 15:46:07 **
 
 ** Found 0 DRC errors **
 
@@ -41,8 +41,8 @@ ErrType(2): Unconnected items
     @(100.330 mm, 143.510 mm): Pad 7 of U2 on All copper layers
     @(100.330 mm, 148.590 mm): Pad 5 of U2 on All copper layers
 ErrType(2): Unconnected items
-    @(66.040 mm, 67.310 mm): Pad 12 of U10 on All copper layers
     @(58.420 mm, 67.310 mm): Pad 3 of U10 on All copper layers
+    @(66.040 mm, 67.310 mm): Pad 12 of U10 on All copper layers
 ErrType(2): Unconnected items
     @(88.900 mm, 116.840 mm): Pad 1 of U11 on All copper layers
     @(81.280 mm, 116.840 mm): Pad 5 of U1 on All copper layers
@@ -152,8 +152,8 @@ ErrType(2): Unconnected items
     @(73.660 mm, 101.600 mm): Pad 4 of U7 on All copper layers
     @(88.900 mm, 96.520 mm): Pad 9 of U11 on All copper layers
 ErrType(2): Unconnected items
-    @(73.660 mm, 116.840 mm): Pad 4 of U1 on All copper layers
     @(92.710 mm, 134.620 mm): Pad 4 of U4 on All copper layers
+    @(73.660 mm, 116.840 mm): Pad 4 of U1 on All copper layers
 ErrType(2): Unconnected items
     @(92.710 mm, 132.080 mm): Pad 3 of U4 on All copper layers
     @(92.710 mm, 146.050 mm): Pad 3 of U2 on All copper layers

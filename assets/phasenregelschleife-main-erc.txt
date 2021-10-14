@@ -1,4 +1,4 @@
-ERC report (Tue 05 Oct 2021 08:08:22 AM UTC, Encoding UTF8 )
+ERC report (Thu 14 Oct 2021 03:39:34 PM UTC, Encoding UTF8 )
 
 ***** Sheet /
 ErrType(3): Pin connected to other pins, but not driven by any pin
