@@ -161,42 +161,6 @@ F 6 "Y" H 4100 1700 50  0001 C CNN "Spice_Netlist_Enabled"
 	1    4100 1700
 	1    0    0    -1  
 $EndComp
-$Comp
-L Device:D D3
-U 1 1 616A1F2B
-P 4500 2250
-AR Path="/6166EC9B/616A1F2B" Ref="D3"  Part="1" 
-AR Path="/61728A8F/616A1F2B" Ref="D3"  Part="1" 
-AR Path="/61729059/616A1F2B" Ref="D?"  Part="1" 
-F 0 "D3" V 4546 2170 50  0000 R CNN
-F 1 "D" V 4455 2170 50  0000 R CNN
-F 2 "Diode_THT:D_DO-35_SOD27_P2.54mm_Vertical_KathodeUp" H 4500 2250 50  0001 C CNN
-F 3 "~" H 4500 2250 50  0001 C CNN
-F 4 "D" H 4500 2250 50  0001 C CNN "Spice_Primitive"
-F 5 "D1N4148" H 4500 2250 50  0001 C CNN "Spice_Model"
-F 6 "Y" H 4500 2250 50  0001 C CNN "Spice_Netlist_Enabled"
-F 7 "2 1" H 4500 2250 50  0001 C CNN "Spice_Node_Sequence"
-	1    4500 2250
-	0    -1   -1   0   
-$EndComp
-$Comp
-L Device:D D2
-U 1 1 616A1F35
-P 4500 1950
-AR Path="/6166EC9B/616A1F35" Ref="D2"  Part="1" 
-AR Path="/61728A8F/616A1F35" Ref="D2"  Part="1" 
-AR Path="/61729059/616A1F35" Ref="D?"  Part="1" 
-F 0 "D2" V 4546 1870 50  0000 R CNN
-F 1 "D" V 4455 1870 50  0000 R CNN
-F 2 "Diode_THT:D_DO-35_SOD27_P2.54mm_Vertical_KathodeUp" H 4500 1950 50  0001 C CNN
-F 3 "~" H 4500 1950 50  0001 C CNN
-F 4 "D" H 4500 1950 50  0001 C CNN "Spice_Primitive"
-F 5 "D1N4148" H 4500 1950 50  0001 C CNN "Spice_Model"
-F 6 "Y" H 4500 1950 50  0001 C CNN "Spice_Netlist_Enabled"
-F 7 "2 1" H 4500 1950 50  0001 C CNN "Spice_Node_Sequence"
-	1    4500 1950
-	0    -1   -1   0   
-$EndComp
 Wire Wire Line
 	4500 2400 4500 2700
 Wire Wire Line
@@ -244,24 +208,6 @@ F 1 "47k" H 4430 3395 50  0000 R CNN
 F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" V 4430 3350 50  0001 C CNN
 F 3 "~" H 4500 3350 50  0001 C CNN
 	1    4500 3350
-	-1   0    0    1   
-$EndComp
-$Comp
-L Device:D D4
-U 1 1 616A1F55
-P 4950 3900
-AR Path="/6166EC9B/616A1F55" Ref="D4"  Part="1" 
-AR Path="/61728A8F/616A1F55" Ref="D4"  Part="1" 
-AR Path="/61729059/616A1F55" Ref="D?"  Part="1" 
-F 0 "D4" H 4950 3683 50  0000 C CNN
-F 1 "D" H 4950 3774 50  0000 C CNN
-F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 4950 3900 50  0001 C CNN
-F 3 "~" H 4950 3900 50  0001 C CNN
-F 4 "D" H 4950 3900 50  0001 C CNN "Spice_Primitive"
-F 5 "D1N4148" H 4950 3900 50  0001 C CNN "Spice_Model"
-F 6 "Y" H 4950 3900 50  0001 C CNN "Spice_Netlist_Enabled"
-F 7 "2 1" H 4950 3900 50  0001 C CNN "Spice_Node_Sequence"
-	1    4950 3900
 	-1   0    0    1   
 $EndComp
 Connection ~ 3500 1600
@@ -316,42 +262,6 @@ F 3 "" H 3500 4250 50  0001 C CNN
 	1    3500 4250
 	1    0    0    -1  
 $EndComp
-$Comp
-L Device:D D6
-U 1 1 61731062
-P 5050 2100
-AR Path="/6166EC9B/61731062" Ref="D6"  Part="1" 
-AR Path="/61728A8F/61731062" Ref="D6"  Part="1" 
-AR Path="/61729059/61731062" Ref="D?"  Part="1" 
-F 0 "D6" H 5050 1883 50  0000 C CNN
-F 1 "D" H 5050 1974 50  0000 C CNN
-F 2 "Diode_THT:D_DO-35_SOD27_P2.54mm_Vertical_KathodeUp" H 5050 2100 50  0001 C CNN
-F 3 "~" H 5050 2100 50  0001 C CNN
-F 4 "D" H 5050 2100 50  0001 C CNN "Spice_Primitive"
-F 5 "D1N4148" H 5050 2100 50  0001 C CNN "Spice_Model"
-F 6 "Y" H 5050 2100 50  0001 C CNN "Spice_Netlist_Enabled"
-F 7 "2 1" H 5050 2100 50  0001 C CNN "Spice_Node_Sequence"
-	1    5050 2100
-	-1   0    0    1   
-$EndComp
-$Comp
-L Device:D D5
-U 1 1 616A1F81
-P 5050 1750
-AR Path="/6166EC9B/616A1F81" Ref="D5"  Part="1" 
-AR Path="/61728A8F/616A1F81" Ref="D5"  Part="1" 
-AR Path="/61729059/616A1F81" Ref="D?"  Part="1" 
-F 0 "D5" H 5050 1967 50  0000 C CNN
-F 1 "D" H 5050 1876 50  0000 C CNN
-F 2 "Diode_THT:D_DO-35_SOD27_P2.54mm_Vertical_KathodeUp" H 5050 1750 50  0001 C CNN
-F 3 "~" H 5050 1750 50  0001 C CNN
-F 4 "D" H 5050 1750 50  0001 C CNN "Spice_Primitive"
-F 5 "D1N4148" H 5050 1750 50  0001 C CNN "Spice_Model"
-F 6 "Y" H 5050 1750 50  0001 C CNN "Spice_Netlist_Enabled"
-F 7 "2 1" H 5050 1750 50  0001 C CNN "Spice_Node_Sequence"
-	1    5050 1750
-	1    0    0    -1  
-$EndComp
 Connection ~ 4700 1750
 Wire Wire Line
 	4700 1300 4700 1750
@@ -372,24 +282,6 @@ F 1 "2.2u" H 7265 3055 50  0000 L CNN
 F 2 "Capacitor_THT:C_Rect_L4.0mm_W2.5mm_P2.50mm" H 7188 2950 50  0001 C CNN
 F 3 "~" H 7150 3100 50  0001 C CNN
 	1    7150 3100
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:D D8
-U 1 1 61731065
-P 5900 2850
-AR Path="/6166EC9B/61731065" Ref="D8"  Part="1" 
-AR Path="/61728A8F/61731065" Ref="D8"  Part="1" 
-AR Path="/61729059/61731065" Ref="D?"  Part="1" 
-F 0 "D8" H 5900 3067 50  0000 C CNN
-F 1 "D" H 5900 2976 50  0000 C CNN
-F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 5900 2850 50  0001 C CNN
-F 3 "~" H 5900 2850 50  0001 C CNN
-F 4 "D" H 5900 2850 50  0001 C CNN "Spice_Primitive"
-F 5 "D1N4148" H 5900 2850 50  0001 C CNN "Spice_Model"
-F 6 "Y" H 5900 2850 50  0001 C CNN "Spice_Netlist_Enabled"
-F 7 "2 1" H 5900 2850 50  0001 C CNN "Spice_Node_Sequence"
-	1    5900 2850
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -424,24 +316,6 @@ Wire Wire Line
 	6100 2850 6050 2850
 Wire Wire Line
 	6100 2400 6050 2400
-$Comp
-L Device:D D7
-U 1 1 616A1FB5
-P 5900 2400
-AR Path="/6166EC9B/616A1FB5" Ref="D7"  Part="1" 
-AR Path="/61728A8F/616A1FB5" Ref="D7"  Part="1" 
-AR Path="/61729059/616A1FB5" Ref="D?"  Part="1" 
-F 0 "D7" H 5900 2183 50  0000 C CNN
-F 1 "D" H 5900 2274 50  0000 C CNN
-F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 5900 2400 50  0001 C CNN
-F 3 "~" H 5900 2400 50  0001 C CNN
-F 4 "D" H 5900 2400 50  0001 C CNN "Spice_Primitive"
-F 5 "D1N4148" H 5900 2400 50  0001 C CNN "Spice_Model"
-F 6 "Y" H 5900 2400 50  0001 C CNN "Spice_Netlist_Enabled"
-F 7 "2 1" H 5900 2400 50  0001 C CNN "Spice_Node_Sequence"
-	1    5900 2400
-	-1   0    0    1   
-$EndComp
 Wire Wire Line
 	5350 2600 5400 2600
 Wire Wire Line
@@ -474,24 +348,6 @@ Wire Wire Line
 	3750 1850 3750 1800
 Wire Wire Line
 	3750 1800 3800 1800
-$Comp
-L Device:D D1
-U 1 1 616A1FFC
-P 3000 1600
-AR Path="/6166EC9B/616A1FFC" Ref="D1"  Part="1" 
-AR Path="/61728A8F/616A1FFC" Ref="D1"  Part="1" 
-AR Path="/61729059/616A1FFC" Ref="D?"  Part="1" 
-F 0 "D1" H 3000 1817 50  0000 C CNN
-F 1 "D" H 3000 1726 50  0000 C CNN
-F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 3000 1600 50  0001 C CNN
-F 3 "~" H 3000 1600 50  0001 C CNN
-F 4 "D" H 3000 1600 50  0001 C CNN "Spice_Primitive"
-F 5 "D1N4148" H 3000 1600 50  0001 C CNN "Spice_Model"
-F 6 "Y" H 3000 1600 50  0001 C CNN "Spice_Netlist_Enabled"
-F 7 "2 1" H 3000 1600 50  0001 C CNN "Spice_Node_Sequence"
-	1    3000 1600
-	-1   0    0    1   
-$EndComp
 Wire Wire Line
 	3200 1600 3150 1600
 Wire Wire Line
@@ -642,42 +498,6 @@ Wire Wire Line
 Wire Wire Line
 	5900 4850 6400 4850
 $Comp
-L Device:D D9
-U 1 1 616A2053
-P 7200 4750
-AR Path="/6166EC9B/616A2053" Ref="D9"  Part="1" 
-AR Path="/61728A8F/616A2053" Ref="D9"  Part="1" 
-AR Path="/61729059/616A2053" Ref="D?"  Part="1" 
-F 0 "D9" H 7200 4533 50  0000 C CNN
-F 1 "D" H 7200 4624 50  0000 C CNN
-F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 7200 4750 50  0001 C CNN
-F 3 "~" H 7200 4750 50  0001 C CNN
-F 4 "D" H 7200 4750 50  0001 C CNN "Spice_Primitive"
-F 5 "D1N4148" H 7200 4750 50  0001 C CNN "Spice_Model"
-F 6 "Y" H 7200 4750 50  0001 C CNN "Spice_Netlist_Enabled"
-F 7 "2 1" H 7200 4750 50  0001 C CNN "Spice_Node_Sequence"
-	1    7200 4750
-	-1   0    0    1   
-$EndComp
-$Comp
-L Device:D D10
-U 1 1 616A205D
-P 7200 5300
-AR Path="/6166EC9B/616A205D" Ref="D10"  Part="1" 
-AR Path="/61728A8F/616A205D" Ref="D10"  Part="1" 
-AR Path="/61729059/616A205D" Ref="D?"  Part="1" 
-F 0 "D10" H 7200 5083 50  0000 C CNN
-F 1 "D" H 7200 5174 50  0000 C CNN
-F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 7200 5300 50  0001 C CNN
-F 3 "~" H 7200 5300 50  0001 C CNN
-F 4 "D" H 7200 5300 50  0001 C CNN "Spice_Primitive"
-F 5 "D1N4148" H 7200 5300 50  0001 C CNN "Spice_Model"
-F 6 "Y" H 7200 5300 50  0001 C CNN "Spice_Netlist_Enabled"
-F 7 "2 1" H 7200 5300 50  0001 C CNN "Spice_Node_Sequence"
-	1    7200 5300
-	-1   0    0    1   
-$EndComp
-$Comp
 L Device:R R16
 U 1 1 616A2063
 P 7700 5050
@@ -689,24 +509,6 @@ F 1 "100k" V 7584 5050 50  0000 C CNN
 F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" V 7630 5050 50  0001 C CNN
 F 3 "~" H 7700 5050 50  0001 C CNN
 	1    7700 5050
-	0    1    1    0   
-$EndComp
-$Comp
-L Device:D D11
-U 1 1 616A206D
-P 8000 5300
-AR Path="/6166EC9B/616A206D" Ref="D11"  Part="1" 
-AR Path="/61728A8F/616A206D" Ref="D11"  Part="1" 
-AR Path="/61729059/616A206D" Ref="D?"  Part="1" 
-F 0 "D11" H 8000 5083 50  0000 C CNN
-F 1 "D" H 8000 5174 50  0000 C CNN
-F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 8000 5300 50  0001 C CNN
-F 3 "~" H 8000 5300 50  0001 C CNN
-F 4 "D" H 8000 5300 50  0001 C CNN "Spice_Primitive"
-F 5 "D1N4148" H 8000 5300 50  0001 C CNN "Spice_Model"
-F 6 "Y" H 8000 5300 50  0001 C CNN "Spice_Netlist_Enabled"
-F 7 "2 1" H 8000 5300 50  0001 C CNN "Spice_Node_Sequence"
-	1    8000 5300
 	0    1    1    0   
 $EndComp
 $Comp
@@ -862,4 +664,125 @@ Wire Wire Line
 	6500 1300 7900 1300
 Wire Wire Line
 	5900 4000 7900 4000
+$Comp
+L Diode:1N4148 D1
+U 1 1 616B340C
+P 3000 1600
+F 0 "D1" H 3000 1383 50  0000 C CNN
+F 1 "1N4148" H 3000 1474 50  0000 C CNN
+F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 3000 1425 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 3000 1600 50  0001 C CNN
+	1    3000 1600
+	-1   0    0    1   
+$EndComp
+$Comp
+L Diode:1N4148 D2
+U 1 1 616BBED2
+P 4500 1950
+F 0 "D2" V 4550 2200 50  0000 R CNN
+F 1 "1N4148" V 4450 2350 50  0000 R CNN
+F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 4500 1775 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 4500 1950 50  0001 C CNN
+	1    4500 1950
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Diode:1N4148 D3
+U 1 1 616BD07B
+P 4500 2250
+F 0 "D3" V 4550 2500 50  0000 R CNN
+F 1 "1N4148" V 4450 2650 50  0000 R CNN
+F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 4500 2075 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 4500 2250 50  0001 C CNN
+	1    4500 2250
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Diode:1N4148 D5
+U 1 1 616BFF25
+P 5050 1750
+F 0 "D5" H 5100 1950 50  0000 R CNN
+F 1 "1N4148" H 5200 1850 50  0000 R CNN
+F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 5050 1575 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 5050 1750 50  0001 C CNN
+	1    5050 1750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Diode:1N4148 D6
+U 1 1 616C0CD6
+P 5050 2100
+F 0 "D6" H 5100 1900 50  0000 R CNN
+F 1 "1N4148" H 5200 2000 50  0000 R CNN
+F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 5050 1925 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 5050 2100 50  0001 C CNN
+	1    5050 2100
+	-1   0    0    1   
+$EndComp
+$Comp
+L Diode:1N4148 D7
+U 1 1 616CAED4
+P 5900 2400
+F 0 "D7" H 5950 2200 50  0000 R CNN
+F 1 "1N4148" H 6050 2300 50  0000 R CNN
+F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 5900 2225 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 5900 2400 50  0001 C CNN
+	1    5900 2400
+	-1   0    0    1   
+$EndComp
+$Comp
+L Diode:1N4148 D8
+U 1 1 616CBD7E
+P 5900 2850
+F 0 "D8" H 5950 3050 50  0000 R CNN
+F 1 "1N4148" H 6050 2950 50  0000 R CNN
+F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 5900 2675 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 5900 2850 50  0001 C CNN
+	1    5900 2850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Diode:1N4148 D4
+U 1 1 616CD90E
+P 4950 3900
+F 0 "D4" H 5000 3700 50  0000 R CNN
+F 1 "1N4148" H 5100 3800 50  0000 R CNN
+F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 4950 3725 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 4950 3900 50  0001 C CNN
+	1    4950 3900
+	-1   0    0    1   
+$EndComp
+$Comp
+L Diode:1N4148 D9
+U 1 1 616CFABD
+P 7200 4750
+F 0 "D9" H 7250 4550 50  0000 R CNN
+F 1 "1N4148" H 7350 4650 50  0000 R CNN
+F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 7200 4575 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 7200 4750 50  0001 C CNN
+	1    7200 4750
+	-1   0    0    1   
+$EndComp
+$Comp
+L Diode:1N4148 D10
+U 1 1 616D0B71
+P 7200 5300
+F 0 "D10" H 7250 5100 50  0000 R CNN
+F 1 "1N4148" H 7350 5200 50  0000 R CNN
+F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 7200 5125 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 7200 5300 50  0001 C CNN
+	1    7200 5300
+	-1   0    0    1   
+$EndComp
+$Comp
+L Diode:1N4148 D11
+U 1 1 616D222E
+P 8000 5300
+F 0 "D11" V 8050 5550 50  0000 R CNN
+F 1 "1N4148" V 7950 5700 50  0000 R CNN
+F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 8000 5125 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 8000 5300 50  0001 C CNN
+	1    8000 5300
+	0    1    1    0   
+$EndComp
 $EndSCHEMATC

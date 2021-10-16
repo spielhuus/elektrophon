@@ -16,29 +16,29 @@ $EndDescr
 $Comp
 L Mechanical:MountingHole H1
 U 1 1 6097A217
-P 9650 6000
-F 0 "H1" H 9750 6046 50  0000 L CNN
-F 1 "MountingHole" H 9750 5955 50  0000 L CNN
-F 2 "MountingHole:MountingHole_2.2mm_M2" H 9650 6000 50  0001 C CNN
-F 3 "~" H 9650 6000 50  0001 C CNN
-F 4 "R" H 9650 6000 50  0001 C CNN "Spice_Primitive"
-F 5 "1" H 9650 6000 50  0001 C CNN "Spice_Model"
-F 6 "N" H 9650 6000 50  0001 C CNN "Spice_Netlist_Enabled"
-	1    9650 6000
+P 9550 5700
+F 0 "H1" H 9650 5746 50  0000 L CNN
+F 1 "MountingHole" H 9650 5655 50  0000 L CNN
+F 2 "MountingHole:MountingHole_2.2mm_M2" H 9550 5700 50  0001 C CNN
+F 3 "~" H 9550 5700 50  0001 C CNN
+F 4 "R" H 9550 5700 50  0001 C CNN "Spice_Primitive"
+F 5 "1" H 9550 5700 50  0001 C CNN "Spice_Model"
+F 6 "N" H 9550 5700 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    9550 5700
 	1    0    0    -1  
 $EndComp
 $Comp
 L Mechanical:MountingHole H2
 U 1 1 6097A580
-P 9650 6300
-F 0 "H2" H 9750 6346 50  0000 L CNN
-F 1 "MountingHole" H 9750 6255 50  0000 L CNN
-F 2 "MountingHole:MountingHole_2.2mm_M2" H 9650 6300 50  0001 C CNN
-F 3 "~" H 9650 6300 50  0001 C CNN
-F 4 "R" H 9650 6300 50  0001 C CNN "Spice_Primitive"
-F 5 "1" H 9650 6300 50  0001 C CNN "Spice_Model"
-F 6 "N" H 9650 6300 50  0001 C CNN "Spice_Netlist_Enabled"
-	1    9650 6300
+P 9550 6000
+F 0 "H2" H 9650 6046 50  0000 L CNN
+F 1 "MountingHole" H 9650 5955 50  0000 L CNN
+F 2 "MountingHole:MountingHole_2.2mm_M2" H 9550 6000 50  0001 C CNN
+F 3 "~" H 9550 6000 50  0001 C CNN
+F 4 "R" H 9550 6000 50  0001 C CNN "Spice_Primitive"
+F 5 "1" H 9550 6000 50  0001 C CNN "Spice_Model"
+F 6 "N" H 9550 6000 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    9550 6000
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -120,6 +120,7 @@ F 3 "~" H 2550 7050 50  0001 C CNN
 F 4 "C" H 2550 7050 50  0001 C CNN "Spice_Primitive"
 F 5 "22u" H 2550 7050 50  0001 C CNN "Spice_Model"
 F 6 "N" H 2550 7050 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "Aluminium Electrolytic Capacitors (50V, D=6.3 mm, LS=2.5 mm)" H 2550 7050 50  0001 C CNN "Description"
 	1    2550 7050
 	1    0    0    -1  
 $EndComp
@@ -136,6 +137,7 @@ F 3 "~" H 2550 7350 50  0001 C CNN
 F 4 "C" H 2550 7350 50  0001 C CNN "Spice_Primitive"
 F 5 "22u" H 2550 7350 50  0001 C CNN "Spice_Model"
 F 6 "N" H 2550 7350 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "Aluminium Electrolytic Capacitors (50V, D=6.3 mm, LS=2.5 mm)" H 2550 7350 50  0001 C CNN "Description"
 	1    2550 7350
 	1    0    0    -1  
 $EndComp
@@ -342,29 +344,29 @@ VN
 $Comp
 L Mechanical:MountingHole H3
 U 1 1 6098DECA
-P 10400 6000
-F 0 "H3" H 10500 6046 50  0000 L CNN
-F 1 "MountingHole" H 10500 5955 50  0000 L CNN
-F 2 "MountingHole:MountingHole_2.2mm_M2" H 10400 6000 50  0001 C CNN
-F 3 "~" H 10400 6000 50  0001 C CNN
-F 4 "R" H 10400 6000 50  0001 C CNN "Spice_Primitive"
-F 5 "1" H 10400 6000 50  0001 C CNN "Spice_Model"
-F 6 "N" H 10400 6000 50  0001 C CNN "Spice_Netlist_Enabled"
-	1    10400 6000
+P 10300 5700
+F 0 "H3" H 10400 5746 50  0000 L CNN
+F 1 "MountingHole" H 10400 5655 50  0000 L CNN
+F 2 "MountingHole:MountingHole_2.2mm_M2" H 10300 5700 50  0001 C CNN
+F 3 "~" H 10300 5700 50  0001 C CNN
+F 4 "R" H 10300 5700 50  0001 C CNN "Spice_Primitive"
+F 5 "1" H 10300 5700 50  0001 C CNN "Spice_Model"
+F 6 "N" H 10300 5700 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    10300 5700
 	1    0    0    -1  
 $EndComp
 $Comp
 L Mechanical:MountingHole H4
 U 1 1 6098DED0
-P 10400 6300
-F 0 "H4" H 10500 6346 50  0000 L CNN
-F 1 "MountingHole" H 10500 6255 50  0000 L CNN
-F 2 "MountingHole:MountingHole_2.2mm_M2" H 10400 6300 50  0001 C CNN
-F 3 "~" H 10400 6300 50  0001 C CNN
-F 4 "R" H 10400 6300 50  0001 C CNN "Spice_Primitive"
-F 5 "1" H 10400 6300 50  0001 C CNN "Spice_Model"
-F 6 "N" H 10400 6300 50  0001 C CNN "Spice_Netlist_Enabled"
-	1    10400 6300
+P 10300 6000
+F 0 "H4" H 10400 6046 50  0000 L CNN
+F 1 "MountingHole" H 10400 5955 50  0000 L CNN
+F 2 "MountingHole:MountingHole_2.2mm_M2" H 10300 6000 50  0001 C CNN
+F 3 "~" H 10300 6000 50  0001 C CNN
+F 4 "R" H 10300 6000 50  0001 C CNN "Spice_Primitive"
+F 5 "1" H 10300 6000 50  0001 C CNN "Spice_Model"
+F 6 "N" H 10300 6000 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    10300 6000
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -418,6 +420,7 @@ F 3 "~" H 3200 7050 50  0001 C CNN
 F 4 "C" H 3200 7050 50  0001 C CNN "Spice_Primitive"
 F 5 "0.1" H 3200 7050 50  0001 C CNN "Spice_Model"
 F 6 "N" H 3200 7050 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "Multilayer Ceramic Capacitors MLCC (50V, L=4 mm, W=2.5 mm, LS=2.5 mm)" H 3200 7050 50  0001 C CNN "Description"
 	1    3200 7050
 	1    0    0    -1  
 $EndComp
@@ -432,6 +435,7 @@ F 3 "~" H 3200 7350 50  0001 C CNN
 F 4 "C" H 3200 7350 50  0001 C CNN "Spice_Primitive"
 F 5 "0.1" H 3200 7350 50  0001 C CNN "Spice_Model"
 F 6 "N" H 3200 7350 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "Multilayer Ceramic Capacitors MLCC (50V, L=4 mm, W=2.5 mm, LS=2.5 mm)" H 3200 7350 50  0001 C CNN "Description"
 	1    3200 7350
 	1    0    0    -1  
 $EndComp
@@ -508,6 +512,7 @@ F 3 "~" H 4100 7050 50  0001 C CNN
 F 4 "C" H 4100 7050 50  0001 C CNN "Spice_Primitive"
 F 5 "0.1" H 4100 7050 50  0001 C CNN "Spice_Model"
 F 6 "N" H 4100 7050 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "Multilayer Ceramic Capacitors MLCC (50V, L=4 mm, W=2.5 mm, LS=2.5 mm)" H 4100 7050 50  0001 C CNN "Description"
 	1    4100 7050
 	1    0    0    -1  
 $EndComp
@@ -522,6 +527,7 @@ F 3 "~" H 4100 7350 50  0001 C CNN
 F 4 "C" H 4100 7350 50  0001 C CNN "Spice_Primitive"
 F 5 "0.1" H 4100 7350 50  0001 C CNN "Spice_Model"
 F 6 "N" H 4100 7350 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "Multilayer Ceramic Capacitors MLCC (50V, L=4 mm, W=2.5 mm, LS=2.5 mm)" H 4100 7350 50  0001 C CNN "Description"
 	1    4100 7350
 	1    0    0    -1  
 $EndComp
@@ -582,6 +588,7 @@ F 3 "~" H 3300 5450 50  0001 C CNN
 F 4 "C" H 3300 5450 50  0001 C CNN "Spice_Primitive"
 F 5 "0.1" H 3300 5450 50  0001 C CNN "Spice_Model"
 F 6 "N" H 3300 5450 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "Multilayer Ceramic Capacitors MLCC (50V, L=4 mm, W=2.5 mm, LS=2.5 mm)" H 3300 5450 50  0001 C CNN "Description"
 	1    3300 5450
 	1    0    0    -1  
 $EndComp
@@ -822,6 +829,7 @@ F 3 "~" H 5050 7050 50  0001 C CNN
 F 4 "C" H 5050 7050 50  0001 C CNN "Spice_Primitive"
 F 5 "0.1" H 5050 7050 50  0001 C CNN "Spice_Model"
 F 6 "N" H 5050 7050 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "Multilayer Ceramic Capacitors MLCC (50V, L=4 mm, W=2.5 mm, LS=2.5 mm)" H 5050 7050 50  0001 C CNN "Description"
 	1    5050 7050
 	1    0    0    -1  
 $EndComp
@@ -836,6 +844,7 @@ F 3 "~" H 5050 7350 50  0001 C CNN
 F 4 "C" H 5050 7350 50  0001 C CNN "Spice_Primitive"
 F 5 "0.1" H 5050 7350 50  0001 C CNN "Spice_Model"
 F 6 "N" H 5050 7350 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "Multilayer Ceramic Capacitors MLCC (50V, L=4 mm, W=2.5 mm, LS=2.5 mm)" H 5050 7350 50  0001 C CNN "Description"
 	1    5050 7350
 	1    0    0    -1  
 $EndComp
