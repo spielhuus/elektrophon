@@ -1,5 +1,5 @@
 ** Drc report for /github/workspace/content/puls/main/main.kicad_pcb **
-** Created on 2021-10-14 15:31:28 **
+** Created on 2021-10-16 09:06:21 **
 
 ** Found 0 DRC errors **
 
@@ -12,7 +12,7 @@ ErrType(2): Unconnected items
     @(59.182 mm, 94.148 mm): Pad 5 of J1 on All copper layers
 ErrType(2): Unconnected items
     @(61.722 mm, 96.688 mm): Pad 8 of J1 on All copper layers
-    @(59.182 mm, 96.688 mm): Pad 7 of J1 on All copper layers
+    @(61.722 mm, 94.148 mm): Pad 6 of J1 on All copper layers
 ErrType(2): Unconnected items
     @(68.732 mm, 98.518 mm): Pad 1 of C2 on All copper layers
     @(61.722 mm, 96.688 mm): Pad 8 of J1 on All copper layers

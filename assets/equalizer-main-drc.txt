@@ -1,5 +1,5 @@
 ** Drc report for /github/workspace/content/equalizer/main/main.kicad_pcb **
-** Created on 2021-10-14 15:30:27 **
+** Created on 2021-10-16 09:05:17 **
 
 ** Found 0 DRC errors **
 
