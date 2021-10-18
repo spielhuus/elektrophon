@@ -24,6 +24,7 @@ F 0 "R20" V 3143 1600 50  0000 C CNN
 F 1 "27k" V 3234 1600 50  0000 C CNN
 F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" V 3280 1600 50  0001 C CNN
 F 3 "~" H 3350 1600 50  0001 C CNN
+F 4 "Metal Film Resistors - Through Hole (L=3.6 mm, D=1.6 mm, 1%)" H 2600 1750 50  0001 C CNN "Description"
 	1    3350 1600
 	0    1    1    0   
 $EndComp
@@ -127,6 +128,7 @@ F 0 "R19" H 2530 1704 50  0000 R CNN
 F 1 "100k" H 2530 1795 50  0000 R CNN
 F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" V 2530 1750 50  0001 C CNN
 F 3 "~" H 2600 1750 50  0001 C CNN
+F 4 "Metal Film Resistors - Through Hole (L=3.6 mm, D=1.6 mm, 1%)" H 2600 1750 50  0001 C CNN "Description"
 	1    2600 1750
 	-1   0    0    1   
 $EndComp
@@ -141,6 +143,7 @@ F 0 "R23" V 3893 1200 50  0000 C CNN
 F 1 "470k" V 3984 1200 50  0000 C CNN
 F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" V 4030 1200 50  0001 C CNN
 F 3 "~" H 4100 1200 50  0001 C CNN
+F 4 "Metal Film Resistors - Through Hole (L=3.6 mm, D=1.6 mm, 1%)" H 2600 1750 50  0001 C CNN "Description"
 	1    4100 1200
 	0    1    1    0   
 $EndComp
@@ -179,6 +182,7 @@ F 0 "R24" H 4430 2904 50  0000 R CNN
 F 1 "2.2k" H 4430 2995 50  0000 R CNN
 F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" V 4430 2950 50  0001 C CNN
 F 3 "~" H 4500 2950 50  0001 C CNN
+F 4 "Metal Film Resistors - Through Hole (L=3.6 mm, D=1.6 mm, 1%)" H 2600 1750 50  0001 C CNN "Description"
 	1    4500 2950
 	-1   0    0    1   
 $EndComp
@@ -207,6 +211,7 @@ F 0 "R25" H 4430 3304 50  0000 R CNN
 F 1 "47k" H 4430 3395 50  0000 R CNN
 F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" V 4430 3350 50  0001 C CNN
 F 3 "~" H 4500 3350 50  0001 C CNN
+F 4 "Metal Film Resistors - Through Hole (L=3.6 mm, D=1.6 mm, 1%)" H 2600 1750 50  0001 C CNN "Description"
 	1    4500 3350
 	-1   0    0    1   
 $EndComp
@@ -224,6 +229,7 @@ F 0 "R21" H 3430 3654 50  0000 R CNN
 F 1 "390k" H 3430 3745 50  0000 R CNN
 F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" V 3430 3700 50  0001 C CNN
 F 3 "~" H 3500 3700 50  0001 C CNN
+F 4 "Metal Film Resistors - Through Hole (L=3.6 mm, D=1.6 mm, 1%)" H 2600 1750 50  0001 C CNN "Description"
 	1    3500 3700
 	-1   0    0    1   
 $EndComp
@@ -238,6 +244,7 @@ F 0 "R22" H 3430 4054 50  0000 R CNN
 F 1 "47k" H 3430 4145 50  0000 R CNN
 F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" V 3430 4100 50  0001 C CNN
 F 3 "~" H 3500 4100 50  0001 C CNN
+F 4 "Metal Film Resistors - Through Hole (L=3.6 mm, D=1.6 mm, 1%)" H 2600 1750 50  0001 C CNN "Description"
 	1    3500 4100
 	-1   0    0    1   
 $EndComp
@@ -279,8 +286,9 @@ AR Path="/61728A8F/616A1F8C" Ref="C?"  Part="1"
 AR Path="/61729059/616A1F8C" Ref="C9"  Part="1" 
 F 0 "C9" H 6965 3146 50  0000 L CNN
 F 1 "2.2u" H 6965 3055 50  0000 L CNN
-F 2 "Capacitor_THT:C_Rect_L4.0mm_W2.5mm_P2.50mm" H 6888 2950 50  0001 C CNN
+F 2 "Capacitor_THT:C_Disc_D6.0mm_W4.4mm_P5.00mm" H 6888 2950 50  0001 C CNN
 F 3 "~" H 6850 3100 50  0001 C CNN
+F 4 "Multilayer Ceramic Capacitors MLCC (25V, L=6 mm, W=5.5 mm, LS=5 mm)" H 6850 3100 50  0001 C CNN "Description"
 	1    6850 3100
 	1    0    0    -1  
 $EndComp
@@ -309,6 +317,7 @@ F 0 "R26" V 5893 1300 50  0000 C CNN
 F 1 "10k" V 5984 1300 50  0000 C CNN
 F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" V 6030 1300 50  0001 C CNN
 F 3 "~" H 6100 1300 50  0001 C CNN
+F 4 "Metal Film Resistors - Through Hole (L=3.6 mm, D=1.6 mm, 1%)" H 2600 1750 50  0001 C CNN "Description"
 	1    6100 1300
 	0    1    1    0   
 $EndComp
@@ -412,6 +421,7 @@ F 0 "R27" H 6130 4354 50  0000 R CNN
 F 1 "36k" H 6130 4445 50  0000 R CNN
 F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" V 6130 4400 50  0001 C CNN
 F 3 "~" H 6200 4400 50  0001 C CNN
+F 4 "Metal Film Resistors - Through Hole (L=3.6 mm, D=1.6 mm, 1%)" H 2600 1750 50  0001 C CNN "Description"
 	1    6200 4400
 	-1   0    0    1   
 $EndComp
@@ -426,6 +436,7 @@ F 0 "R28" H 6130 4954 50  0000 R CNN
 F 1 "1k" H 6130 5045 50  0000 R CNN
 F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" V 6130 5000 50  0001 C CNN
 F 3 "~" H 6200 5000 50  0001 C CNN
+F 4 "Metal Film Resistors - Through Hole (L=3.6 mm, D=1.6 mm, 1%)" H 2600 1750 50  0001 C CNN "Description"
 	1    6200 5000
 	-1   0    0    1   
 $EndComp
@@ -476,6 +487,7 @@ F 0 "R32" V 7493 5050 50  0000 C CNN
 F 1 "100k" V 7584 5050 50  0000 C CNN
 F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" V 7630 5050 50  0001 C CNN
 F 3 "~" H 7700 5050 50  0001 C CNN
+F 4 "Metal Film Resistors - Through Hole (L=3.6 mm, D=1.6 mm, 1%)" H 2600 1750 50  0001 C CNN "Description"
 	1    7700 5050
 	0    1    1    0   
 $EndComp
@@ -517,8 +529,6 @@ Wire Wire Line
 Connection ~ 5900 4850
 Connection ~ 5900 4000
 Wire Wire Line
-	5900 4000 7250 4000
-Wire Wire Line
 	5900 3800 8150 3800
 Wire Wire Line
 	8150 3800 8150 4850
@@ -540,6 +550,7 @@ F 0 "R29" H 6130 5654 50  0000 R CNN
 F 1 "220" H 6130 5745 50  0000 R CNN
 F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" V 6130 5700 50  0001 C CNN
 F 3 "~" H 6200 5700 50  0001 C CNN
+F 4 "Metal Film Resistors - Through Hole (L=3.6 mm, D=1.6 mm, 1%)" H 2600 1750 50  0001 C CNN "Description"
 	1    6200 5700
 	-1   0    0    1   
 $EndComp
@@ -631,6 +642,7 @@ F 0 "R14" V 6393 2400 50  0000 C CNN
 F 1 "1k" V 6484 2400 50  0000 C CNN
 F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" V 6530 2400 50  0001 C CNN
 F 3 "~" H 6600 2400 50  0001 C CNN
+F 4 "Metal Film Resistors - Through Hole (L=3.6 mm, D=1.6 mm, 1%)" H 2600 1750 50  0001 C CNN "Description"
 	1    6600 2400
 	0    1    1    0   
 $EndComp
@@ -645,6 +657,7 @@ F 0 "R15" V 6393 2850 50  0000 C CNN
 F 1 "1k" V 6484 2850 50  0000 C CNN
 F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" V 6530 2850 50  0001 C CNN
 F 3 "~" H 6600 2850 50  0001 C CNN
+F 4 "Metal Film Resistors - Through Hole (L=3.6 mm, D=1.6 mm, 1%)" H 2600 1750 50  0001 C CNN "Description"
 	1    6600 2850
 	0    1    1    0   
 $EndComp
@@ -678,7 +691,7 @@ U 1 1 616DB57D
 P 5050 2100
 F 0 "D17" H 5050 1883 50  0000 C CNN
 F 1 "1N4148" H 5050 1974 50  0000 C CNN
-F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 5050 1925 50  0001 C CNN
+F 2 "Diode_THT:D_DO-35_SOD27_P2.54mm_Vertical_KathodeUp" H 5050 1925 50  0001 C CNN
 F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 5050 2100 50  0001 C CNN
 	1    5050 2100
 	-1   0    0    1   
@@ -689,7 +702,7 @@ U 1 1 616DBF82
 P 5050 1750
 F 0 "D16" H 5050 1967 50  0000 C CNN
 F 1 "1N4148" H 5050 1876 50  0000 C CNN
-F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 5050 1575 50  0001 C CNN
+F 2 "Diode_THT:D_DO-35_SOD27_P2.54mm_Vertical_KathodeUp" H 5050 1575 50  0001 C CNN
 F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 5050 1750 50  0001 C CNN
 	1    5050 1750
 	1    0    0    -1  
@@ -700,7 +713,7 @@ U 1 1 616DCC14
 P 4500 1950
 F 0 "D13" V 4550 2150 50  0000 R CNN
 F 1 "1N4148" V 4450 2350 50  0000 R CNN
-F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 4500 1775 50  0001 C CNN
+F 2 "Diode_THT:D_DO-35_SOD27_P2.54mm_Vertical_KathodeUp" H 4500 1775 50  0001 C CNN
 F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 4500 1950 50  0001 C CNN
 	1    4500 1950
 	0    -1   -1   0   
@@ -711,7 +724,7 @@ U 1 1 616DD54C
 P 4500 2250
 F 0 "D14" V 4550 2450 50  0000 R CNN
 F 1 "1N4148" V 4450 2650 50  0000 R CNN
-F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 4500 2075 50  0001 C CNN
+F 2 "Diode_THT:D_DO-35_SOD27_P2.54mm_Vertical_KathodeUp" H 4500 2075 50  0001 C CNN
 F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 4500 2250 50  0001 C CNN
 	1    4500 2250
 	0    -1   -1   0   
@@ -782,4 +795,6 @@ F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 8000 
 	1    8000 5300
 	0    -1   -1   0   
 $EndComp
+Wire Wire Line
+	5900 4000 7600 4000
 $EndSCHEMATC

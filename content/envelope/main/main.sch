@@ -16,29 +16,29 @@ $EndDescr
 $Comp
 L Mechanical:MountingHole H1
 U 1 1 6097A217
-P 9550 5700
-F 0 "H1" H 9650 5746 50  0000 L CNN
-F 1 "MountingHole" H 9650 5655 50  0000 L CNN
-F 2 "MountingHole:MountingHole_2.2mm_M2" H 9550 5700 50  0001 C CNN
-F 3 "~" H 9550 5700 50  0001 C CNN
-F 4 "R" H 9550 5700 50  0001 C CNN "Spice_Primitive"
-F 5 "1" H 9550 5700 50  0001 C CNN "Spice_Model"
-F 6 "N" H 9550 5700 50  0001 C CNN "Spice_Netlist_Enabled"
-	1    9550 5700
+P 9600 6000
+F 0 "H1" H 9700 6046 50  0000 L CNN
+F 1 "MountingHole" H 9700 5955 50  0000 L CNN
+F 2 "MountingHole:MountingHole_2.2mm_M2" H 9600 6000 50  0001 C CNN
+F 3 "~" H 9600 6000 50  0001 C CNN
+F 4 "R" H 9600 6000 50  0001 C CNN "Spice_Primitive"
+F 5 "1" H 9600 6000 50  0001 C CNN "Spice_Model"
+F 6 "N" H 9600 6000 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    9600 6000
 	1    0    0    -1  
 $EndComp
 $Comp
 L Mechanical:MountingHole H2
 U 1 1 6097A580
-P 9550 6000
-F 0 "H2" H 9650 6046 50  0000 L CNN
-F 1 "MountingHole" H 9650 5955 50  0000 L CNN
-F 2 "MountingHole:MountingHole_2.2mm_M2" H 9550 6000 50  0001 C CNN
-F 3 "~" H 9550 6000 50  0001 C CNN
-F 4 "R" H 9550 6000 50  0001 C CNN "Spice_Primitive"
-F 5 "1" H 9550 6000 50  0001 C CNN "Spice_Model"
-F 6 "N" H 9550 6000 50  0001 C CNN "Spice_Netlist_Enabled"
-	1    9550 6000
+P 9600 6300
+F 0 "H2" H 9700 6346 50  0000 L CNN
+F 1 "MountingHole" H 9700 6255 50  0000 L CNN
+F 2 "MountingHole:MountingHole_2.2mm_M2" H 9600 6300 50  0001 C CNN
+F 3 "~" H 9600 6300 50  0001 C CNN
+F 4 "R" H 9600 6300 50  0001 C CNN "Spice_Primitive"
+F 5 "1" H 9600 6300 50  0001 C CNN "Spice_Model"
+F 6 "N" H 9600 6300 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    9600 6300
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -245,12 +245,13 @@ P 1200 7150
 AR Path="/5FCD165C" Ref="J2"  Part="1" 
 AR Path="/5DD3665B/5FCD165C" Ref="J?"  Part="1" 
 F 0 "J2" H 1250 7567 50  0000 C CNN
-F 1 "IDC Header" H 1250 7476 50  0000 C CNN
+F 1 "10 Pos" H 1250 7476 50  0000 C CNN
 F 2 "Connector_IDC:IDC-Header_2x05_P2.54mm_Vertical" H 1200 7150 50  0001 C CNN
 F 3 "~" H 1200 7150 50  0001 C CNN
 F 4 "J" H 1200 7150 50  0001 C CNN "Spice_Primitive"
 F 5 "IDC Header" H 1200 7150 50  0001 C CNN "Spice_Model"
 F 6 "N" H 1200 7150 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "Pin Header IDC (2.54mm)" H 1200 7150 50  0001 C CNN "Description"
 	1    1200 7150
 	-1   0    0    1   
 $EndComp
@@ -278,6 +279,7 @@ F 3 "~" H 2150 6900 50  0001 C CNN
 F 4 "R" H 2150 6900 50  0001 C CNN "Spice_Primitive"
 F 5 "10" H 2150 6900 50  0001 C CNN "Spice_Model"
 F 6 "N" H 2150 6900 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "Metal Film Resistors - Through Hole (L=3.6 mm, D=1.6 mm, 1%)" V 2150 6900 50  0001 C CNN "Description"
 	1    2150 6900
 	0    1    1    0   
 $EndComp
@@ -318,6 +320,7 @@ F 3 "~" H 2150 7500 50  0001 C CNN
 F 4 "R" H 2150 7500 50  0001 C CNN "Spice_Primitive"
 F 5 "10" H 2150 7500 50  0001 C CNN "Spice_Model"
 F 6 "N" H 2150 7500 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "Metal Film Resistors - Through Hole (L=3.6 mm, D=1.6 mm, 1%)" V 2150 7500 50  0001 C CNN "Description"
 	1    2150 7500
 	0    1    1    0   
 $EndComp
@@ -344,29 +347,29 @@ VN
 $Comp
 L Mechanical:MountingHole H3
 U 1 1 6098DECA
-P 10300 5700
-F 0 "H3" H 10400 5746 50  0000 L CNN
-F 1 "MountingHole" H 10400 5655 50  0000 L CNN
-F 2 "MountingHole:MountingHole_2.2mm_M2" H 10300 5700 50  0001 C CNN
-F 3 "~" H 10300 5700 50  0001 C CNN
-F 4 "R" H 10300 5700 50  0001 C CNN "Spice_Primitive"
-F 5 "1" H 10300 5700 50  0001 C CNN "Spice_Model"
-F 6 "N" H 10300 5700 50  0001 C CNN "Spice_Netlist_Enabled"
-	1    10300 5700
+P 10350 6000
+F 0 "H3" H 10450 6046 50  0000 L CNN
+F 1 "MountingHole" H 10450 5955 50  0000 L CNN
+F 2 "MountingHole:MountingHole_2.2mm_M2" H 10350 6000 50  0001 C CNN
+F 3 "~" H 10350 6000 50  0001 C CNN
+F 4 "R" H 10350 6000 50  0001 C CNN "Spice_Primitive"
+F 5 "1" H 10350 6000 50  0001 C CNN "Spice_Model"
+F 6 "N" H 10350 6000 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    10350 6000
 	1    0    0    -1  
 $EndComp
 $Comp
 L Mechanical:MountingHole H4
 U 1 1 6098DED0
-P 10300 6000
-F 0 "H4" H 10400 6046 50  0000 L CNN
-F 1 "MountingHole" H 10400 5955 50  0000 L CNN
-F 2 "MountingHole:MountingHole_2.2mm_M2" H 10300 6000 50  0001 C CNN
-F 3 "~" H 10300 6000 50  0001 C CNN
-F 4 "R" H 10300 6000 50  0001 C CNN "Spice_Primitive"
-F 5 "1" H 10300 6000 50  0001 C CNN "Spice_Model"
-F 6 "N" H 10300 6000 50  0001 C CNN "Spice_Netlist_Enabled"
-	1    10300 6000
+P 10350 6300
+F 0 "H4" H 10450 6346 50  0000 L CNN
+F 1 "MountingHole" H 10450 6255 50  0000 L CNN
+F 2 "MountingHole:MountingHole_2.2mm_M2" H 10350 6300 50  0001 C CNN
+F 3 "~" H 10350 6300 50  0001 C CNN
+F 4 "R" H 10350 6300 50  0001 C CNN "Spice_Primitive"
+F 5 "1" H 10350 6300 50  0001 C CNN "Spice_Model"
+F 6 "N" H 10350 6300 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    10350 6300
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -714,9 +717,10 @@ L Connector:Conn_01x09_Female J1
 U 1 1 617A2C15
 P 1750 2000
 F 0 "J1" H 1642 2585 50  0000 C CNN
-F 1 "Conn_01x09_Female" H 1642 2494 50  0000 C CNN
+F 1 "01x09 Female" H 1642 2494 50  0000 C CNN
 F 2 "Connector_PinSocket_2.54mm:PinSocket_1x09_P2.54mm_Vertical" H 1750 2000 50  0001 C CNN
 F 3 "~" H 1750 2000 50  0001 C CNN
+F 4 "Board to Board Connectors (2.54 mm)" H 1750 2000 50  0001 C CNN "Description"
 	1    1750 2000
 	-1   0    0    -1  
 $EndComp
@@ -760,9 +764,10 @@ L Connector:Conn_01x07_Female J3
 U 1 1 617DDB64
 P 1750 3800
 F 0 "J3" H 1642 4285 50  0000 C CNN
-F 1 "Conn_01x07_Female" H 1642 4194 50  0000 C CNN
+F 1 "01x07 Female" H 1642 4194 50  0000 C CNN
 F 2 "Connector_PinSocket_2.54mm:PinSocket_1x07_P2.54mm_Vertical" H 1750 3800 50  0001 C CNN
 F 3 "~" H 1750 3800 50  0001 C CNN
+F 4 "Board to Board Connectors (2.54 mm)" H 1750 3800 50  0001 C CNN "Description"
 	1    1750 3800
 	-1   0    0    -1  
 $EndComp
