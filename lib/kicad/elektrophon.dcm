@@ -95,6 +95,16 @@ K VCO CEM340 ALFA
 F http://www.alfarzpp.lv/eng/sc/AS3340.pdf
 $ENDCMP
 #
+$CMP DMMT3904W
+D Matched pair NPN small signal transistor
+F https://www.diodes.com/assets/Datasheets/DMMT3904W.pdf
+$ENDCMP
+#
+$CMP DMMT3906W
+D Matched pair PNP small signal transistor
+F https://www.diodes.com/assets/Datasheets/ds30312.pdf
+$ENDCMP
+#
 $CMP J113
 D 50mA min, 40V, 25mOhm max, 4-10V Vgs(off), N-Channel JFET, SOT-23
 K N-Channel FET Transistor

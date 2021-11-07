@@ -1,0 +1,7 @@
+import os
+
+Import(['env', 'FILES', 'HTML'])
+
+HTML += env.nbconvert('midi_notes.html', 'midi_notes.ipynb')
+
+FILES += Glob('*.jpg')

@@ -1,0 +1,114 @@
+<section class="hero is-info is-fullheight">
+  <img class="hero-background is-transparent" src="{{ .Site.BaseURL }}/{{ .Params.hero_image}}">
+  <div class="hero-head hero-darken">
+    <nav class="navbar">
+      <div class="container">
+        <div class="navbar-brand">
+          <a href="{{ .Site.BaseURL }}/" class="navbar-item">{{ .Site.Title }}</a>
+          <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navMenu">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
+        </div>
+        <div class="navbar-menu" id="navMenu">
+          {{ range .Site.Menus.main }}
+          <a href="#">
+            {{ .Pre }}
+            <span>{{ .Name }}</span>
+          </a>
+          {{ end }}
+          <div class="navbar-end">
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div>
+  <div class="hero-body hero-darken">
+    <div class="column is-6 is-offset-3">
+      <!-- start tags-->
+      {{ $drc := int (index .Site.Data.report .Params.Title ).summary.drc }}
+      {{ $erc := int (index .Site.Data.report .Params.Title ).summary.erc }}
+      {{ $unconnected := int (index .Site.Data.report .Params.Title ).summary.unconnected }}
+      {{ if eq .Params.Categories "module" }}
+      <div class="field is-grouped">
+        <div class="control">
+          <div class="tags has-addons is-normal">
+            {{ if eq .Params.Version 0 }}
+            <span class="tag is-dark">status</span>
+            <span class="tag is-warning">Draft</span>
+            {{ else }}
+            <span class="tag is-dark">Version </span>
+            <span class="tag is-success">{{ .Params.version }}</span>
+            {{ end }}
+          </div>
+        </div>
+
+        {{ if eq $drc 0 }}
+        <div class="control">
+          <div class="tags has-addons is-normal">
+            <span class="tag is-dark">drc</span>
+            <span class="tag is-success">ok</span>
+          </div>
+        </div>
+        {{ else }}
+        <div class="control">
+          <div class="tags has-addons is-normal">
+            <span class="tag is-dark">drc</span>
+            <span class="tag is-danger">{{ (index .Site.Data.report .Params.Title ).summary.drc }}</span>
+          </div>
+        </div>
+        {{ end }}
+
+        {{ if eq $erc 0 }}
+        <div class="control">
+          <div class="tags has-addons is-normal">
+            <span class="tag is-dark">erc</span>
+            <span class="tag is-success">ok</span>
+          </div>
+        </div>
+        {{ else }}
+        <div class="control">
+          <div class="tags has-addons is-normal">
+            <span class="tag is-dark">erc</span>
+            <span class="tag is-danger">{{ (index .Site.Data.report .Params.Title ).summary.erc }}</span>
+          </div>
+        </div>
+        {{ end }}
+
+        {{ if eq $unconnected 0 }}
+        <div class="control">
+          <div class="tags has-addons is-normal">
+            <span class="tag is-dark">unconnected</span>
+            <span class="tag is-success">ok</span>
+          </div>
+        </div>
+        {{ else }}
+        <div class="control">
+          <div class="tags has-addons is-normal">
+            <span class="tag is-dark">unconnected</span>
+            <span class="tag is-danger">{{ (index .Site.Data.report .Params.Title ).summary.unconnected }}</span>
+          </div>
+        </div>
+        {{ end }}
+
+        <div class="control">
+          <a class="tags has-addons is-normal"
+            href="https://github.com/spielhuus/elektrophon/tree/master/content/{{ .Params.Title }}">
+            <span class="tag is-dark"><i class="fab fa-github" aria-hidden="true"></i></span>
+            <span class="tag is-link">github</span>
+          </a>
+        </div>
+        {{ end }}
+        <!-- end tags-->
+
+        {{ if isset .Params "title" }}
+        <h1 class="title has-text-white is-size-3">{{ .Params.Title }}</h1>
+        {{ end }}
+        {{ if isset .Params "subtitle" }}
+        <div class="has-text-white is-size-4">{{ .Params.subtitle }}</div>
+        {{ end }}
+        <!-- div class="mt-4 has-text-weight-semibold">toc</div -->
+      </div>
+    </div>
+</section>

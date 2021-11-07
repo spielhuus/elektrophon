@@ -1,0 +1,7 @@
+import os
+
+Import(['env', 'FILES', 'HTML'])
+
+HTML += env.nbconvert('ringmodulator.html', 'ringmodulator.ipynb')
+
+FILES += Glob('*.jpg')

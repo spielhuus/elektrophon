@@ -1,0 +1,13 @@
+Reference, Value, Footprint, Datasheet
+"H9","MountingHole","elektrophon:MountingHole_Panel_3.2mm_M3","~"
+"H10","MountingHole","elektrophon:MountingHole_Panel_3.2mm_M3","~"
+"H1","A1","elektrophon:panel_potentiometer","~"
+"H3","EOE1","elektrophon:panel_jack","~"
+"H4","OUT1","elektrophon:panel_jack","~"
+"H2","D/R1","elektrophon:panel_potentiometer","~"
+"H7","EOE2","elektrophon:panel_jack","~"
+"H8","OUT2","elektrophon:panel_jack","~"
+"H5","A2","elektrophon:panel_potentiometer","~"
+"H6","D/R2","elektrophon:panel_potentiometer","~"
+"H11","IN1","elektrophon:panel_jack","~"
+"H12","IN2","elektrophon:panel_jack","~"

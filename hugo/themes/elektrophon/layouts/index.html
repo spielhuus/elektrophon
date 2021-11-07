@@ -1,0 +1,48 @@
+{{ define "main" }}
+
+{{ .Content }}
+
+<section class="section">
+    <div class="container">
+      {{- $pages := . -}}
+      {{- if .IsHome -}}
+      {{- $pages = .Site.RegularPages -}}
+      {{- else -}}
+      {{ $pages = .Pages -}}
+      {{- end -}}
+      {{ $paginator := .Paginate (where $pages "Params.hidden" "ne" true) }}
+
+      
+      {{ range sort .Paginator.Pages }}
+      <div class="container">
+        <div class="section">
+          <div class="row columns is-multiline">
+            <div class="column is-4">
+              {{ partial "card.html" . }}
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- article>
+        <div class="subtitle tags is-6 is-pulled-right">
+          {{ if .Params.tags }}
+          { { partial "tags" .Params.tags } }
+          {{ end }}
+        </div>
+        <h2 class="subtitle is-6 date">{{ .Date.Format "January 2, 2006" }}</h2>
+        <h1 class="title"><a href="{{ .Permalink }}">{{ .Title }}</a>{{ if .Draft }} ::Draft{{ end }}</h1>
+        <div class="content">
+          {{ .Summary | plainify | safeHTML }}
+          {{ if .Truncated }}
+          <a class="button is-link" href="{{ .Permalink }}" style="height:28px">
+            Read more
+          </a>
+          {{ end }}
+        </div>
+      </article -->
+      {{ end }}
+    </div>
+  </section>
+  {{ end }}

@@ -1,0 +1,28 @@
+<div class="card large">
+    <div class="card-image">
+        <figure class="image is-16by9">
+            <img src="{{ .Site.BaseURL }}/{{ .Params.image }}" alt="Image">
+        </figure>
+    </div>
+    <div class="card-content">
+        <div class="media">
+            <div class="media-left">
+                <figure class="image is-48x48">
+                    <a href="{{ .Permalink }}"><img src="card.avatar" alt="Image"></a>
+                </figure>
+            </div>
+            <div class="media-content">
+                <a href="{{ .Permalink }}" class="title is-4 no-padding">{{ replace  .Params.Title "_" " " }}</a>
+                <p>
+                    <span class="title is-6">
+                        <a href="http://twitter.com/"> { { card.user.handle } } </a> </span>
+                </p>
+                <p class="subtitle is-6"> { {card.user.title} }</p>
+            </div>
+        </div>
+        <div class="content">
+            {{ .Params.subtitle }}
+            <div class="background-icon"><span class="icon-twitter"></span></div>
+        </div>
+    </div>
+</div>

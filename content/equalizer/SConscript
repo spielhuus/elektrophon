@@ -1,0 +1,19 @@
+import os
+
+Import(['env', 'PCB', 'GERBER', 'SCHEMA', 'REPORTS', 'FILES', 'HTML'])
+
+project = 'equalizer'
+for board in ['main', 'mount', 'panel'] :
+    REPORTS += env.preflight('%s/%s_%s_report.json' % (board,project,board), '%s/%s.pro' % (board, board), project_name=project)
+    SCHEMA += env.schema('%s/%s_%s_schematic.pdf' % (board,project,board), '%s/%s.pro' % (board, board))
+    PCB += env.pcb('%s/%s_%s_pcb.pdf' % (board,project,board), '%s/%s.pro' % (board, board))
+    GERBER += env.gerbers('%s/%s_%s_JLCPCB.zip' % (board,project,board), '%s/%s.pro' % (board, board))
+    REPORTS += env.bom('%s/%s_%s_bom.json' % (board,project,board), '%s/%s.pro' % (board, board), project_name=project)
+
+    Clean(os.path.join(board, '%s.pro' % board), os.path.join(board, 'fp-info-cache'))
+    Clean(os.path.join(board, '%s.pro' % board), os.path.join(board, '%s-cache.lib' % board))
+    Clean(os.path.join(board, '%s.pro' % board), Glob('%s/*-bak' % board)) 
+
+HTML += env.nbconvert('%s.html' % project, '%s.ipynb' % project)
+
+FILES += Glob('*.jpg')
