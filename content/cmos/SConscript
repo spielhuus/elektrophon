@@ -1,0 +1,8 @@
+import os
+
+Import(['env', 'FILES', 'HTML'])
+
+HTML += env.nbconvert('cmos_buffer.html', 'cmos_buffer.ipynb')
+HTML += env.nbconvert('cmos_filter.html', 'cmos_filter.ipynb')
+
+FILES += Glob('*.jpg')

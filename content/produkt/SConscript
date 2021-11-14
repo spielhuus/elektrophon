@@ -15,5 +15,6 @@ for board in ['main', 'panel'] :
     Clean(os.path.join(board, '%s.pro' % board), Glob('%s/*-bak' % board)) 
 
 HTML += env.nbconvert('%s.html' % project, '%s.ipynb' % project)
+REPORTS += env.pytest("produkt_test.json", "test/test_produkt.py", project_name=project)
 
 FILES += Glob('*.jpg')
