@@ -1,0 +1,56 @@
+.title KiCad schematic
+H1 MountingHole
+H2 MountingHole
+H3 MountingHole
+H4 MountingHole
+Q1 /1_7 /1_1 /1_4 BC846B
+Q3 /1_6 Net-_Q2-Pad1_ /1_4 BC846B
+R3 Net-_Q2-Pad1_ /1_1 750
+Q5 /1_7 Net-_Q4-Pad1_ /1_4 BC846B
+R5 Net-_Q4-Pad1_ Net-_Q2-Pad1_ 750
+Q7 /1_6 Net-_Q6-Pad1_ /1_4 BC846B
+R7 Net-_Q6-Pad1_ Net-_Q4-Pad1_ 750
+Q10 /1_7 Net-_Q10-Pad2_ /1_4 BC846B
+R9 Net-_Q10-Pad2_ Net-_Q6-Pad1_ 750
+Q2 Net-_Q2-Pad1_ /2_6 Net-_Q2-Pad3_ BC556B
+R4 Net-_Q2-Pad3_ /2_5 51k
+Q4 Net-_Q4-Pad1_ /2_6 Net-_Q4-Pad3_ BC556B
+R6 Net-_Q4-Pad3_ /2_5 51k
+Q6 Net-_Q6-Pad1_ /2_6 Net-_Q6-Pad3_ BC556B
+R8 Net-_Q6-Pad3_ /2_5 51k
+Q9 Net-_Q10-Pad2_ /2_6 Net-_Q9-Pad3_ BC556B
+R10 Net-_Q9-Pad3_ /2_5 51k
+Q20 /1_6 /1_5 /1_4 BC846B
+Q18 /1_7 Net-_Q18-Pad2_ /1_4 BC846B
+R19 Net-_Q18-Pad2_ /1_5 750
+Q16 /1_6 Net-_Q16-Pad2_ /1_4 BC846B
+R17 Net-_Q16-Pad2_ Net-_Q18-Pad2_ 750
+Q14 /1_7 Net-_Q14-Pad2_ /1_4 BC846B
+R15 Net-_Q14-Pad2_ Net-_Q16-Pad2_ 750
+Q12 /1_6 Net-_Q12-Pad2_ /1_4 BC846B
+R13 Net-_Q12-Pad2_ Net-_Q14-Pad2_ 750
+Q19 Net-_Q18-Pad2_ /2_6 /2_7 BC556B
+R18 /2_7 /2_5 51k
+Q17 Net-_Q16-Pad2_ /2_6 Net-_Q17-Pad3_ BC556B
+R16 Net-_Q17-Pad3_ /2_5 51k
+Q15 Net-_Q14-Pad2_ /2_6 Net-_Q15-Pad3_ BC556B
+R14 Net-_Q15-Pad3_ /2_5 51k
+Q13 Net-_Q12-Pad2_ /2_6 Net-_Q13-Pad3_ BC556B
+R12 Net-_Q13-Pad3_ /2_5 51k
+R11 Net-_Q10-Pad2_ Net-_Q12-Pad2_ 750
+Q8 /2_1 /2_2 /2_4 BC846B
+Q11 /1_4 /2_3 /2_4 BC846B
+XU1 /1_6 /1_7 +15V -15V /OUT TL072
+R20 /1_7 /OUT 100k
+R21 /1_7 +15V 47k
+R22 /1_6 +15V 47k
+R23 GND /1_6 100k
+C4 /1_6 GND 47p
+C3 /1_7 /OUT 47p
+R27 /1_5 Net-_R26-Pad1_ 10k
+R26 Net-_R26-Pad1_ /1_1 10k
+R25 /1_1 Net-_R24-Pad1_ 47k
+R24 Net-_R24-Pad1_ /IN 100k
+XU2 GND Net-_R24-Pad1_ +15V -15V /1_1 TL072
+XU3 GND Net-_R26-Pad1_ +15V -15V /1_5 TL072
+.end

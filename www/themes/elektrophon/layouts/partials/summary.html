@@ -1,0 +1,24 @@
+<div class="column is-4">
+  <div style="height: 580px;" class="card">
+    <div class="card-image">
+      <a href="{{ .RelPermalink }}">
+        <figure class="image is-4by3">
+          <img src="{{  .Site.BaseURL }}/{{ .Params.image }}" alt="Placeholder image" class="modal-button" data-target="modal-image2">
+        </figure>
+      </a>
+    </div>
+    <div class="card-content">
+      <div class="columns">
+        <div class="column is-three-quarters">
+          <h4><a href="{{ .RelPermalink }}">{{ replace  .Params.Title "_" " " }}</a></h4>
+        </div>
+        <div class="column is-one-quarter has-text-right mr-4">
+          {{ range $name := .Params.Categories }}
+          <span class="tag is-light"><a href="{{ "/categories/" | relLangURL }}{{ $name | urlize }}">{{ $name }}</a></span>
+          {{ end }}
+        </div>
+      </div>
+      <p>{{ .Params.subtitle }}</p>
+    </div>
+  </div>
+</div>

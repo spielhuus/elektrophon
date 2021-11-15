@@ -14,6 +14,7 @@ for board in ['main'] :
     Clean(os.path.join(board, '%s.pro' % board), os.path.join(board, '%s-cache.lib' % board))
     Clean(os.path.join(board, '%s.pro' % board), Glob('%s/*-bak' % board)) 
 
-HTML += env.nbconvert('%s.html' % project, '%s.ipynb' % project)
+REPORTS += env.pytest(f"{project}_test.json", f"test/test_{project}.py", project_name=project)
+HTML += env.nbconvert(f'{project}.html', f'{project}.ipynb')
 
 FILES += Glob('*.jpg')

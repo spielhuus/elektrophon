@@ -50,10 +50,8 @@ HTML = NodeList()
 SConscript(Glob('**/**/SConscript'), exports=['env', 'PCB', 'GERBER', 'SCHEMA', 'REPORTS', 'FILES', 'HTML'])
 env.reports('content/report.json', REPORTS)
 
-env.Install('www', ['hugo/archetypes',  'hugo/config.toml',  'hugo/content', 'hugo/data', 'hugo/layouts', 'hugo/resources', 'hugo/static', 'hugo/themes'])
+#env.Install('www', ['hugo/archetypes',  'hugo/config.toml',  'hugo/content', 'hugo/data', 'hugo/layouts', 'hugo/resources', 'hugo/static', 'hugo/themes'])
 env.Install('www/content/posts/', HTML)
 env.Install('www/static', [PCB, GERBER, SCHEMA, FILES])
 env.Install('www/assets/images', [FILES])
 env.Install('www/data/', 'content/report.json')
-
-Clean(['env', 'PCB', 'GERBER', 'SCHEMA', 'REPORTS', 'FILES', 'HTML'], './www')

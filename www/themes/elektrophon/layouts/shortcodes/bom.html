@@ -1,0 +1,48 @@
+{{$allparams := .Params }}
+{{ $name := .Get 0 }}
+
+<h2 class="is-subtitle">BOM</h2>
+
+{{range $board := $allparams }}
+{{if eq $board (index $allparams 0) }}
+<!-- if it is, do nada -->
+{{else}}
+
+<h3 class="is-subtitle">{{ $board }}</h3>
+<table class="table is-striped is-hoverable is-narrow bom">
+        <col style="width:10%">
+        <col style="width:20%">
+        <col style="width:20%">
+        <col style="width:1%">
+        <col style="width:49%">
+    <thead>
+    <tr>
+        <td> #</td>
+        <td> reference </td>
+        <td> value </td>
+        <td></td>
+        <td> description </td>
+    </tr>    
+</thead>
+<tbody>
+    {{ range ( index (index $.Site.Data.report $name) $board).bom }}
+    <tr>
+        <td>{{ len .ref }}</td>
+        <td>
+            {{range .ref}}
+            {{ . }}
+            {{ end }}
+        </td>
+        <td>{{ .value }}</td>
+        {{ if ne .datasheet "~" }}
+            <td></td>
+        {{ else }}
+            <td></td>
+        {{ end }}
+        <td>{{ .description }}</td>
+    </tr>
+    {{ end }}    
+</tbody>
+</table>
+{{ end }}    
+{{ end }}    

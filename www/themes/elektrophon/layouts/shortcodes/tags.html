@@ -1,0 +1,84 @@
+{{ $name := .Get 0 }}
+
+<div class="field is-grouped">
+    <div class="control">
+      <div class="tags has-addons is-normal">
+        {{ if $.Site.Page.draft eq true }}
+        <span class="tag is-dark">status</span>
+        <span class="tag is-warning">{{ $.Site.Page.draft }}</span>
+        {{ else }}
+        <span class="tag is-dark">Version </span>
+        <span class="tag is-success">{{ $.Site.Page.version }}</span>
+        {{ end }}
+      </div>
+    </div>
+  
+    <!-- div class="control">
+      <div class="tags has-addons is-normal">
+        <span class="tag is-dark">test</span>
+        <span class="tag is-success"> pytest_failed / pytest_count </span>
+      </div>
+    </div>
+    <div class="control">
+      <div class="tags has-addons is-normal">
+        <span class="tag is-dark">test</span>
+        <span class="tag is-danger"> pytest_failed / pytest_count </span>
+      </div>
+    </div -->
+  
+    {{ if (index $.Site.Data.report $name).summary.drc eq 0 }}
+    <div class="control">
+      <div class="tags has-addons is-normal">
+        <span class="tag is-dark">drc</span>
+        <span class="tag is-success">ok</span>
+      </div>
+    </div>
+    {{ else }}
+    <div class="control">
+      <div class="tags has-addons is-normal">
+        <span class="tag is-dark">drc</span>
+        <span class="tag is-danger">(index $.Site.Data.report $name).summary.drc</span>
+      </div>
+    </div>
+    {{ end }}
+  
+    {{ if (index $.Site.Data.report $name).summary.erc eq 0 }}
+    <div class="control">
+      <div class="tags has-addons is-normal">
+        <span class="tag is-dark">erc</span>
+        <span class="tag is-success">ok</span>
+      </div>
+    </div>
+    {{ else }}
+    <div class="control">
+      <div class="tags has-addons is-normal">
+        <span class="tag is-dark">erc</span>
+        <span class="tag is-danger">{{ (index $.Site.Data.report $name).summary.erc }}</span>
+      </div>
+    </div>
+    {{ end }}
+  
+    {{ if (index $.Site.Data.report $name).summary.unconnected eq 0 }}
+    <div class="control">
+      <div class="tags has-addons is-normal">
+        <span class="tag is-dark">unconnected</span>
+        <span class="tag is-success">ok</span>
+      </div>
+    </div>
+    {{ else }}
+    <div class="control">
+      <div class="tags has-addons is-normal">
+        <span class="tag is-dark">unconnected</span>
+        <span class="tag is-danger">{{ (index $.Site.Data.report $name).summary.unconnected }}</span>
+      </div>
+    </div>
+    {{ end }}
+  
+      <div class="control">
+        <a class="tags has-addons is-normal" href="https://github.com/spielhuus/elektrophon/tree/master/content/{{ $name }}">
+          <span class="tag is-dark"><i class="fab fa-github" aria-hidden="true"></i></span>
+          <span class="tag is-link">github</span>
+        </a>
+      </div>
+  </div>
+  
