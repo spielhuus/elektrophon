@@ -3,7 +3,7 @@
 {{ $caption := .Get 1 }}
 {{- $image := resources.Get $ressource -}}
 {{ with $image }}
-<div class="figure has-text-centered spotlight" data-src="{{ .RelPermalink }}">
+<div class="figure has-text-centered spotlight my-6" data-src="{{ .RelPermalink }}">
 <img src="{{ (.Resize "640x").Permalink }}"/>
 <p class="content">{{ $caption }}</p>
 </div>

@@ -14,7 +14,7 @@
 .hero-darken {
     background-color: rgba($hero-darken, 0.5);
 }
-.navbar .nav > li.current-menu-ancestor > a {
+.navbar-brand a {
 font-family: Montserrat;
-padding: 5px 20px;
+padding: 5px 16px;
 }

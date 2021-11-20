@@ -1,13 +1,30 @@
-{{ if isset .Params "hero_image" }}
+{{ if or (isset .Params "hero_image") (eq .Params.Title "module") (eq .Params.Title "article") }}
 <style scoped>
   .hero_title {
       no-repeat center center; 
       background-size: cover; 
+      {{ if isset .Params "hero_image" }}
       background-image: url({{ .Site.BaseURL }}/{{ .Params.hero_image}}); 
+      {{ else }}
+      background-image: url({{ .Site.BaseURL }}/{{ .Params.Title }}.jpg); 
+      {{ end }}
   }
   @media (max-width: 980px) {
       .hero {
           background-image: url({{ .Site.BaseURL }}/{{ .Params.hero_mobile}});
+      }
+  }
+</style>
+{{ else if eq .Params.Title "module" }}
+<style scoped>
+  .hero_title {
+      no-repeat center center; 
+      background-size: cover; 
+      background-image: url('/modules.jpg'); 
+  }
+  @media (max-width: 980px) {
+      .hero {
+          background-image: url('');
       }
   }
 </style>
@@ -141,11 +158,13 @@
       {{ end }}
       <!-- end tags-->
 
+      {{ if not .IsHome }}
       <div class="column is-8 is-offset-2">
         {{ if isset .Params "title" }}
         <h1 class="title is-size-3 has-text-white">{{ replace  .Params.Title "_" " " }}</h1>
         {{ end }}
       </div>
+      {{ end }}
       <div class="column is-8 is-offset-2">
         {{ if isset .Params "subtitle" }}
         <p class="has-text-white is-size-4 has-text-weight-semibold">{{ .Params.subtitle }}</p>
