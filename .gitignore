@@ -58,3 +58,4 @@ www/Gemfile.lock
 www/package-lock.json
 content/kraft/kraft/kraft.xml
 __pycache__
+www/resources/_gen

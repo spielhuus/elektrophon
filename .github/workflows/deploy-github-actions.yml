@@ -10,7 +10,7 @@ jobs:
           persist-credentials: false
 
       - name: build notebooks and jekyll page
-        uses: docker://spielhuus/elektrophon
+        uses: ghcr.io/spielhuus/docker-elektrophon:main
         env:
           USER_UID: 1001
         with:
@@ -21,6 +21,6 @@ jobs:
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           BRANCH: gh-pages # The branch the action should deploy to.
-          FOLDER: www/_site # The folder the action should deploy.
+          FOLDER: www/public # The folder the action should deploy.
           CLEAN: true # Automatically remove deleted files from the deploy branch
            
