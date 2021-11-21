@@ -4,9 +4,17 @@
       no-repeat center center; 
       background-size: cover; 
       {{ if isset .Params "hero_image" }}
-      background-image: url({{ .Site.BaseURL }}/{{ .Params.hero_image}}); 
+      {{ $ressource := (print "images/" .Params.hero_image) }}
+      {{- $image := resources.Get $ressource -}}
+      {{ with $image }}
+        background-image: url({{ (.Resize "1280x").Permalink }}); 
+      {{ end }}
       {{ else }}
-      background-image: url({{ .Site.BaseURL }}/{{ .Params.Title }}.jpg); 
+      {{ $ressource := (print "images/" .Params.Title ".jpg") }}
+      {{- $image := resources.Get $ressource -}}
+      {{ with $image }}
+        background-image: url({{ (.Resize "1280x").Permalink }}); 
+      {{ end }}
       {{ end }}
   }
   @media (max-width: 980px) {
@@ -87,10 +95,10 @@
           </div>
           {{ else }}
           <div class="control">
-            <div class="tags has-addons is-normal">
+            <a class="tags has-addons is-normal" href="#tests">
               <span class="tag is-dark">drc</span>
               <span class="tag is-danger">{{ (index .Site.Data.report .Params.Title ).summary.drc }}</span>
-            </div>
+            </a>
           </div>
           {{ end }}
 
@@ -103,10 +111,10 @@
           </div>
           {{ else }}
           <div class="control">
-            <div class="tags has-addons is-normal">
-              <span class="tag is-dark">erc</span>
-              <span class="tag is-danger">{{ (index .Site.Data.report .Params.Title ).summary.erc }}</span>
-            </div>
+              <a class="tags has-addons is-normal" href="#tests">
+                <span class="tag is-dark">erc</span>
+                <span class="tag is-danger">{{ (index .Site.Data.report .Params.Title ).summary.erc }}</span>
+            </a>
           </div>
           {{ end }}
 
@@ -119,10 +127,10 @@
           </div>
           {{ else }}
           <div class="control">
-            <div class="tags has-addons is-normal">
+              <a class="tags has-addons is-normal" href="#tests">
               <span class="tag is-dark">unconnected</span>
               <span class="tag is-danger">{{ (index .Site.Data.report .Params.Title ).summary.unconnected }}</span>
-            </div>
+            </a>
           </div>
           {{ end }}
 
@@ -138,10 +146,10 @@
             </div>
             {{ else }}
             <div class="control">
-              <div class="tags has-addons is-normal">
+                <a class="tags has-addons is-normal" href="#tests">
                 <span class="tag is-dark">Test:</span>
                 <span class="tag is-danger">{{ $test_passed }}/{{ $num_tests }}</span>
-              </div>
+              </a>
             </div>
             {{ end }}
           {{ end }}

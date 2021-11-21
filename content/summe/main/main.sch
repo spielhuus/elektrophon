@@ -6,7 +6,7 @@ encoding utf-8
 Sheet 1 1
 Title "summe"
 Date "2021-05-30"
-Rev "R01"
+Rev "R02"
 Comp ""
 Comment1 "schema for pcb"
 Comment2 "DC coupled mixer"
@@ -654,7 +654,6 @@ Wire Wire Line
 	7600 1350 7750 1350
 Wire Wire Line
 	7050 1950 7100 1950
-Connection ~ 7050 1950
 Wire Wire Line
 	7300 1350 7050 1350
 $Comp
@@ -678,9 +677,6 @@ Wire Wire Line
 Connection ~ 6600 1350
 Wire Wire Line
 	6550 1350 6600 1350
-Wire Wire Line
-	6600 1950 7050 1950
-Connection ~ 6600 1950
 Wire Wire Line
 	6600 1050 6600 1350
 Wire Wire Line
