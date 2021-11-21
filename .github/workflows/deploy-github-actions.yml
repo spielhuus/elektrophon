@@ -14,7 +14,7 @@ jobs:
         env:
           USER_UID: 1001
         with:
-          args: build
+          args: build --minify
           registry: ghcr.io
 
       - name: Deploy 🚀
