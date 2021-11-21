@@ -649,13 +649,7 @@ $EndComp
 Wire Wire Line
 	7750 2050 7700 2050
 Wire Wire Line
-	7750 1350 7750 2050
-Wire Wire Line
-	7600 1350 7750 1350
-Wire Wire Line
 	7050 1950 7100 1950
-Wire Wire Line
-	7300 1350 7050 1350
 $Comp
 L Device:R R31
 U 1 1 5EA8BEB9
@@ -2164,17 +2158,9 @@ F 3 "~" H 7450 900 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	7050 900  7050 1350
-Connection ~ 7050 1350
-Wire Wire Line
-	7050 1350 7050 1950
-Wire Wire Line
 	7050 900  7300 900 
 Wire Wire Line
 	7600 900  7750 900 
-Wire Wire Line
-	7750 900  7750 1350
-Connection ~ 7750 1350
 $Comp
 L power:PWR_FLAG #FLG0101
 U 1 1 61023B83
@@ -2197,4 +2183,22 @@ F 3 "" H 700 6400 50  0001 C CNN
 	1    700  6400
 	1    0    0    -1  
 $EndComp
+Wire Wire Line
+	6600 1950 7050 1950
+Connection ~ 6600 1950
+Connection ~ 7050 1950
+Wire Wire Line
+	7050 900  7050 1350
+Wire Wire Line
+	7750 900  7750 1350
+Wire Wire Line
+	7050 1350 7300 1350
+Wire Wire Line
+	7600 1350 7750 1350
+Connection ~ 7050 1350
+Wire Wire Line
+	7050 1350 7050 1950
+Connection ~ 7750 1350
+Wire Wire Line
+	7750 1350 7750 2050
 $EndSCHEMATC

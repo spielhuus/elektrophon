@@ -44,14 +44,37 @@
     {{ end }}
     {{ end }}
         
-    {{ if gt $unconnected 0 }}
+    {{ if gt $erc 0 }}
     {{ range $board := $allparams }}
     {{ if eq $board (index $allparams 0) }}
     <!-- if it is, do nada -->
     {{else}}
-        {{ range $item := (index (index $.Site.Data.report $name ) $board).unconnected }}
+        {{ range $item := (index (index $.Site.Data.report $name ) $board).erc }}
         <tr>
-            <td rowspan="2">unconnected</td>
+            <td>erc</td>
+            <td>{{ $item.code }}</td>
+            <td>{{ $item.sheet }}</td>
+            {{ range $index, $pos := $item.con }}
+            {{ if (gt $index 0) }}<tr>{{ end }}
+            <td>{{ $pos.x }}</td>
+            <td>{{ $pos.y }}</td>
+            <td>{{ $pos.message }}</td>
+            {{ if (gt $index 0) }}</tr>{{ end }}
+            {{ end }}
+        </tr>
+        {{ end }}
+    {{ end }}
+    {{ end }}
+    {{ end }}
+
+    {{ if gt $drc 0 }}
+    {{ range $board := $allparams }}
+    {{ if eq $board (index $allparams 0) }}
+    <!-- if it is, do nada -->
+    {{else}}
+        {{ range $item := (index (index $.Site.Data.report $name ) $board).drc }}
+        <tr>
+            <td rowspan="2">drc</td>
             <td rowspan="2">{{ $item.code }}</td>
             <td rowspan="2">{{ $item.sheet }}</td>
             {{ range $index, $pos := $item.con }}
