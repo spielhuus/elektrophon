@@ -10,11 +10,12 @@ jobs:
           persist-credentials: false
 
       - name: build notebooks and jekyll page
-        uses: ghcr.io/spielhuus/docker-elektrophon:main
+        uses: docker/spielhuus/docker-elektrophon:main
         env:
           USER_UID: 1001
         with:
           args: build
+          registry: ghcr.io
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@3.7.1
