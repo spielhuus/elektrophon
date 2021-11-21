@@ -1,8 +1,0 @@
-** Drc report for /github/workspace/content/tiefpass/main/main.kicad_pcb **
-** Created on 2021-10-16 09:13:13 **
-
-** Found 0 DRC errors **
-
-** Found 0 unconnected pads **
-
-** End of Report **

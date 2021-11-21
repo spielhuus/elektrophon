@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>filter on elektrophon</title>
+    <link>http://example.org/tags/filter/</link>
+    <description>Recent content in filter on elektrophon</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 15 Aug 2021 00:00:00 +0000</lastBuildDate><atom:link href="http://example.org/tags/filter/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>tiefpass</title>
+      <link>http://example.org/posts/tiefpass/</link>
+      <pubDate>Sun, 15 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/posts/tiefpass/</guid>
+      <description>construction The lowpass gate filter topology is a Sallen and Key filter where the two resistors are replaced with a vactrol. A vactrol is a device with an LDR and a LED. The brightness of the LED will change the resistance of the LDR. This gives a variable cutoff frequency. The lowest frequency has to be in the inaudible range. This will make the LPG quiet if there is no control voltage applied.</description>
+    </item>
+    
+    <item>
+      <title>equalizer</title>
+      <link>http://example.org/posts/equalizer/</link>
+      <pubDate>Thu, 15 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/posts/equalizer/</guid>
+      <description>construction the function depends on the patching and settings of the potentiometers. an attenuverter is used in different modules like the Serge VCS, Maths and also in the polivoks filter. while this module can be used as a simple mixer you can also adjust cv signals. such a signal can be simply attenuated or inverted. when feeding in a positive singal slope (for example from an adsr). the signal will be turned to a neagative dc singal.</description>
+    </item>
+    
+  </channel>
+</rss>

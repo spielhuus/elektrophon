@@ -1,274 +1,139 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-<url>
-<loc>https://spielhuus.github.io//elektrophon/about.html</loc>
-</url>
-<url>
-<loc>https://spielhuus.github.io//elektrophon/</loc>
-</url>
-<url>
-<loc>https://spielhuus.github.io//elektrophon/article/grundlage/</loc>
-</url>
-<url>
-<loc>https://spielhuus.github.io//elektrophon/article/elektronik/</loc>
-</url>
-<url>
-<loc>https://spielhuus.github.io//elektrophon/article/klangsynthese/</loc>
-</url>
-<url>
-<loc>https://spielhuus.github.io//elektrophon/article/lunetta/</loc>
-</url>
-<url>
-<loc>https://spielhuus.github.io//elektrophon/article/</loc>
-</url>
-<url>
-<loc>https://spielhuus.github.io//elektrophon/module/misc/</loc>
-</url>
-<url>
-<loc>https://spielhuus.github.io//elektrophon/module/mischer/</loc>
-</url>
-<url>
-<loc>https://spielhuus.github.io//elektrophon/module/VCA/</loc>
-</url>
-<url>
-<loc>https://spielhuus.github.io//elektrophon/module/oszillator/</loc>
-</url>
-<url>
-<loc>https://spielhuus.github.io//elektrophon/module/filter/</loc>
-</url>
-<url>
-<loc>https://spielhuus.github.io//elektrophon/module/</loc>
-</url>
-<url>
-<loc>https://spielhuus.github.io//elektrophon/assets/Europac_eng_datasheet.pdf</loc>
-<lastmod>2021-10-16T09:03:54+00:00</lastmod>
-</url>
-<url>
-<loc>https://spielhuus.github.io//elektrophon/assets/bottom_section-bottom_section.pdf</loc>
-<lastmod>2021-10-16T09:03:54+00:00</lastmod>
-</url>
-<url>
-<loc>https://spielhuus.github.io//elektrophon/assets/equalizer-main-pcb.pdf</loc>
-<lastmod>2021-10-16T09:05:33+00:00</lastmod>
-</url>
-<url>
-<loc>https://spielhuus.github.io//elektrophon/assets/equalizer-main-schematic.pdf</loc>
-<lastmod>2021-10-16T09:05:21+00:00</lastmod>
-</url>
-<url>
-<loc>https://spielhuus.github.io//elektrophon/assets/equalizer-mount-pcb.pdf</loc>
-<lastmod>2021-10-16T09:06:04+00:00</lastmod>
-</url>
-<url>
-<loc>https://spielhuus.github.io//elektrophon/assets/equalizer-mount-schematic.pdf</loc>
-<lastmod>2021-10-16T09:05:53+00:00</lastmod>
-</url>
-<url>
-<loc>https://spielhuus.github.io//elektrophon/assets/equalizer-panel-pcb.pdf</loc>
-<lastmod>2021-10-16T09:05:00+00:00</lastmod>
-</url>
-<url>
-<loc>https://spielhuus.github.io//elektrophon/assets/equalizer-panel-schematic.pdf</loc>
-<lastmod>2021-10-16T09:04:49+00:00</lastmod>
-</url>
-<url>
-<loc>https://spielhuus.github.io//elektrophon/assets/konsole-main-pcb.pdf</loc>
-<lastmod>2021-10-16T09:20:25+00:00</lastmod>
-</url>
-<url>
-<loc>https://spielhuus.github.io//elektrophon/assets/konsole-main-schematic.pdf</loc>
-<lastmod>2021-10-16T09:20:13+00:00</lastmod>
-</url>
-<url>
-<loc>https://spielhuus.github.io//elektrophon/assets/konsole-mount-pcb.pdf</loc>
-<lastmod>2021-10-16T09:20:56+00:00</lastmod>
-</url>
-<url>
-<loc>https://spielhuus.github.io//elektrophon/assets/konsole-mount-schematic.pdf</loc>
-<lastmod>2021-10-16T09:20:44+00:00</lastmod>
-</url>
-<url>
-<loc>https://spielhuus.github.io//elektrophon/assets/konsole-panel-pcb.pdf</loc>
-<lastmod>2021-10-16T09:19:53+00:00</lastmod>
-</url>
-<url>
-<loc>https://spielhuus.github.io//elektrophon/assets/konsole-panel-schematic.pdf</loc>
-<lastmod>2021-10-16T09:19:42+00:00</lastmod>
-</url>
-<url>
-<loc>https://spielhuus.github.io//elektrophon/assets/kontakt-main-pcb.pdf</loc>
-<lastmod>2021-10-16T09:21:59+00:00</lastmod>
-</url>
-<url>
-<loc>https://spielhuus.github.io//elektrophon/assets/kontakt-main-schematic.pdf</loc>
-<lastmod>2021-10-16T09:21:47+00:00</lastmod>
-</url>
-<url>
-<loc>https://spielhuus.github.io//elektrophon/assets/kontakt-mount-pcb.pdf</loc>
-<lastmod>2021-10-16T09:22:29+00:00</lastmod>
-</url>
-<url>
-<loc>https://spielhuus.github.io//elektrophon/assets/kontakt-mount-schematic.pdf</loc>
-<lastmod>2021-10-16T09:22:18+00:00</lastmod>
-</url>
-<url>
-<loc>https://spielhuus.github.io//elektrophon/assets/kontakt-panel-pcb.pdf</loc>
-<lastmod>2021-10-16T09:21:26+00:00</lastmod>
-</url>
-<url>
-<loc>https://spielhuus.github.io//elektrophon/assets/kontakt-panel-schematic.pdf</loc>
-<lastmod>2021-10-16T09:21:15+00:00</lastmod>
-</url>
-<url>
-<loc>https://spielhuus.github.io//elektrophon/assets/kraft-kraft-pcb.pdf</loc>
-<lastmod>2021-10-16T09:16:44+00:00</lastmod>
-</url>
-<url>
-<loc>https://spielhuus.github.io//elektrophon/assets/kraft-kraft-schematic.pdf</loc>
-<lastmod>2021-10-16T09:16:32+00:00</lastmod>
-</url>
-<url>
-<loc>https://spielhuus.github.io//elektrophon/assets/kraft-mount-pcb.pdf</loc>
-<lastmod>2021-10-16T09:17:24+00:00</lastmod>
-</url>
-<url>
-<loc>https://spielhuus.github.io//elektrophon/assets/kraft-mount-schematic.pdf</loc>
-<lastmod>2021-10-16T09:17:13+00:00</lastmod>
-</url>
-<url>
-<loc>https://spielhuus.github.io//elektrophon/assets/kraft-panel-pcb.pdf</loc>
-<lastmod>2021-10-16T09:15:59+00:00</lastmod>
-</url>
-<url>
-<loc>https://spielhuus.github.io//elektrophon/assets/kraft-panel-schematic.pdf</loc>
-<lastmod>2021-10-16T09:15:49+00:00</lastmod>
-</url>
-<url>
-<loc>https://spielhuus.github.io//elektrophon/assets/middle_section-middle_section.pdf</loc>
-<lastmod>2021-10-16T09:03:54+00:00</lastmod>
-</url>
-<url>
-<loc>https://spielhuus.github.io//elektrophon/assets/phasenregelschleife-main-pcb.pdf</loc>
-<lastmod>2021-10-16T09:15:23+00:00</lastmod>
-</url>
-<url>
-<loc>https://spielhuus.github.io//elektrophon/assets/phasenregelschleife-main-schematic.pdf</loc>
-<lastmod>2021-10-16T09:15:13+00:00</lastmod>
-</url>
-<url>
-<loc>https://spielhuus.github.io//elektrophon/assets/produkt-main-pcb.pdf</loc>
-<lastmod>2021-10-16T09:10:34+00:00</lastmod>
-</url>
-<url>
-<loc>https://spielhuus.github.io//elektrophon/assets/produkt-main-schematic.pdf</loc>
-<lastmod>2021-10-16T09:10:23+00:00</lastmod>
-</url>
-<url>
-<loc>https://spielhuus.github.io//elektrophon/assets/produkt-mount-pcb.pdf</loc>
-<lastmod>2021-10-16T09:11:09+00:00</lastmod>
-</url>
-<url>
-<loc>https://spielhuus.github.io//elektrophon/assets/produkt-mount-schematic.pdf</loc>
-<lastmod>2021-10-16T09:10:59+00:00</lastmod>
-</url>
-<url>
-<loc>https://spielhuus.github.io//elektrophon/assets/produkt-panel-pcb.pdf</loc>
-<lastmod>2021-10-16T09:10:03+00:00</lastmod>
-</url>
-<url>
-<loc>https://spielhuus.github.io//elektrophon/assets/produkt-panel-schematic.pdf</loc>
-<lastmod>2021-10-16T09:09:52+00:00</lastmod>
-</url>
-<url>
-<loc>https://spielhuus.github.io//elektrophon/assets/puls-main-pcb.pdf</loc>
-<lastmod>2021-10-16T09:06:35+00:00</lastmod>
-</url>
-<url>
-<loc>https://spielhuus.github.io//elektrophon/assets/puls-main-schematic.pdf</loc>
-<lastmod>2021-10-16T09:06:24+00:00</lastmod>
-</url>
-<url>
-<loc>https://spielhuus.github.io//elektrophon/assets/rack.pdf</loc>
-<lastmod>2021-10-16T09:03:54+00:00</lastmod>
-</url>
-<url>
-<loc>https://spielhuus.github.io//elektrophon/assets/steckfeld-main-pcb.pdf</loc>
-<lastmod>2021-10-16T09:14:53+00:00</lastmod>
-</url>
-<url>
-<loc>https://spielhuus.github.io//elektrophon/assets/steckfeld-main-schematic.pdf</loc>
-<lastmod>2021-10-16T09:14:41+00:00</lastmod>
-</url>
-<url>
-<loc>https://spielhuus.github.io//elektrophon/assets/summe-main-pcb.pdf</loc>
-<lastmod>2021-10-16T09:12:26+00:00</lastmod>
-</url>
-<url>
-<loc>https://spielhuus.github.io//elektrophon/assets/summe-main-schematic.pdf</loc>
-<lastmod>2021-10-16T09:12:15+00:00</lastmod>
-</url>
-<url>
-<loc>https://spielhuus.github.io//elektrophon/assets/summe-panel-pcb.pdf</loc>
-<lastmod>2021-10-16T09:11:49+00:00</lastmod>
-</url>
-<url>
-<loc>https://spielhuus.github.io//elektrophon/assets/summe-panel-schematic.pdf</loc>
-<lastmod>2021-10-16T09:11:39+00:00</lastmod>
-</url>
-<url>
-<loc>https://spielhuus.github.io//elektrophon/assets/tiefpass-main-pcb.pdf</loc>
-<lastmod>2021-10-16T09:13:33+00:00</lastmod>
-</url>
-<url>
-<loc>https://spielhuus.github.io//elektrophon/assets/tiefpass-main-schematic.pdf</loc>
-<lastmod>2021-10-16T09:13:22+00:00</lastmod>
-</url>
-<url>
-<loc>https://spielhuus.github.io//elektrophon/assets/tiefpass-mount-pcb.pdf</loc>
-<lastmod>2021-10-16T09:14:15+00:00</lastmod>
-</url>
-<url>
-<loc>https://spielhuus.github.io//elektrophon/assets/tiefpass-mount-schematic.pdf</loc>
-<lastmod>2021-10-16T09:14:04+00:00</lastmod>
-</url>
-<url>
-<loc>https://spielhuus.github.io//elektrophon/assets/tiefpass-panel-pcb.pdf</loc>
-<lastmod>2021-10-16T09:12:56+00:00</lastmod>
-</url>
-<url>
-<loc>https://spielhuus.github.io//elektrophon/assets/tiefpass-panel-schematic.pdf</loc>
-<lastmod>2021-10-16T09:12:45+00:00</lastmod>
-</url>
-<url>
-<loc>https://spielhuus.github.io//elektrophon/assets/vca-main-pcb.pdf</loc>
-<lastmod>2021-10-16T09:04:29+00:00</lastmod>
-</url>
-<url>
-<loc>https://spielhuus.github.io//elektrophon/assets/vca-main-schematic.pdf</loc>
-<lastmod>2021-10-16T09:04:19+00:00</lastmod>
-</url>
-<url>
-<loc>https://spielhuus.github.io//elektrophon/assets/welle-main-pcb.pdf</loc>
-<lastmod>2021-10-16T09:18:36+00:00</lastmod>
-</url>
-<url>
-<loc>https://spielhuus.github.io//elektrophon/assets/welle-main-schematic.pdf</loc>
-<lastmod>2021-10-16T09:18:25+00:00</lastmod>
-</url>
-<url>
-<loc>https://spielhuus.github.io//elektrophon/assets/welle-mount-pcb.pdf</loc>
-<lastmod>2021-10-16T09:19:17+00:00</lastmod>
-</url>
-<url>
-<loc>https://spielhuus.github.io//elektrophon/assets/welle-mount-schematic.pdf</loc>
-<lastmod>2021-10-16T09:19:06+00:00</lastmod>
-</url>
-<url>
-<loc>https://spielhuus.github.io//elektrophon/assets/welle-panel-pcb.pdf</loc>
-<lastmod>2021-10-16T09:17:59+00:00</lastmod>
-</url>
-<url>
-<loc>https://spielhuus.github.io//elektrophon/assets/welle-panel-schematic.pdf</loc>
-<lastmod>2021-10-16T09:17:48+00:00</lastmod>
-</url>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>http://example.org/categories/</loc>
+    <lastmod>2021-08-17T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/</loc>
+    <lastmod>2021-08-17T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/posts/</loc>
+    <lastmod>2021-08-17T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/categories/module/</loc>
+    <lastmod>2021-08-17T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/</loc>
+    <lastmod>2021-08-17T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/waveshaper/</loc>
+    <lastmod>2021-08-17T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/posts/welle/</loc>
+    <lastmod>2021-08-17T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/filter/</loc>
+    <lastmod>2021-08-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/posts/tiefpass/</loc>
+    <lastmod>2021-08-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/posts/equalizer/</loc>
+    <lastmod>2021-07-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/categories/article/</loc>
+    <lastmod>2021-06-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/posts/midi_notes/</loc>
+    <lastmod>2021-06-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/theorie/</loc>
+    <lastmod>2021-06-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/misc/</loc>
+    <lastmod>2021-04-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/posts/produkt/</loc>
+    <lastmod>2021-04-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/posts/steckfeld/</loc>
+    <lastmod>2021-04-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/posts/cmos_filter/</loc>
+    <lastmod>2021-01-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/grundlage/</loc>
+    <lastmod>2021-01-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/posts/cmos_buffer/</loc>
+    <lastmod>2021-01-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/elektronik/</loc>
+    <lastmod>2021-01-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/klangsynthese/</loc>
+    <lastmod>2021-01-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/posts/licht/</loc>
+    <lastmod>2021-01-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/posts/ringmodulator/</loc>
+    <lastmod>2021-01-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/posts/vermarkung/</loc>
+    <lastmod>2020-12-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/posts/kraft/</loc>
+    <lastmod>2020-12-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/posts/arbeitsplatz/</loc>
+    <lastmod>2020-12-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/about/</loc>
+  </url>
+  
 </urlset>

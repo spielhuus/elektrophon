@@ -1,8 +1,0 @@
-Row,Description,Part,References,Value,Footprint,Quantity Per PCB,Status,Datasheet
-1,LED 3mm low current,LED,D1,LED (Blue),LED_D3.0mm,1, ,https://www.mouser.ch/datasheet/2/216/WP710A10LSYCK-J3-535861.pdf
-2,LED 3mm low current,LED,D3,LED (Green),LED_D3.0mm,1, ,https://www.mouser.ch/datasheet/2/216/WP710A10LZGCK-535717.pdf
-3,LED 3mm low current,LED,D2,LED (Red),LED_D3.0mm,1, ,https://www.mouser.ch/datasheet/2/216/WP710A10LSECK-J3-535625.pdf
-4,LED 3mm low current,LED,D4,LED (Yellow),LED_D3.0mm,1, ,https://www.mouser.ch/datasheet/2/216/WP710A10LVBC-D-535711.pdf
-5,"Pin Header IDC, 10 Pos, 2.54mm",Conn_02x05_Odd_Even,J1 J3,IDC Header,IDC-Header_2x05_P2.54mm_Vertical,2, ,https://www.mouser.ch/datasheet/2/418/7/ENG_CD_1761682_A1-2019262.pdf
-6,Resistor,R,R1 R4,2k2,R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal,2, ,~
-7,Resistor,R,R2 R3,10k,R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal,2, ,~

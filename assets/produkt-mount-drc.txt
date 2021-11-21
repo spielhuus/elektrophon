@@ -1,8 +1,0 @@
-** Drc report for /github/workspace/content/produkt/mount/mount.kicad_pcb **
-** Created on 2021-10-16 09:10:50 **
-
-** Found 0 DRC errors **
-
-** Found 0 unconnected pads **
-
-** End of Report **

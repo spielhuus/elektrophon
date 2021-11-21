@@ -1,8 +1,0 @@
-Row,Description,Part,References,Value,Footprint,Quantity Per PCB,Status,Datasheet,Spice_Primitive,Spice_Model,Spice_Netlist_Enabled
-1,Polarized capacitor,CP,C1 C2 C3 C4,4u7,CP_Radial_D4.0mm_P2.00mm,4, ,~,,,
-2,"Audio Jack, 2 Poles (Mono / TS), Switched T Pole (Normalling)",AudioJack2_SwitchT,J1 J2 J3 J4,#1,Jack_3.5mm_WQP-PJ398SM_Vertical,4, ,~,J,AudioJack2_SwitchT,N
-3,"Generic connector, single row, 01x16, script generated (kicad-library-utils/schlib/autogen/connector/)",Conn_01x16_Male,J6,Conn_01x16_Male,PinHeader_1x16_P2.54mm_Vertical,1, ,~,,,
-4,"Audio Jack, 3 Poles (Stereo / TRS)",AudioJack3,J5,STEREO_OUT,Jack_3.5mm_WQP-PJ301BM_Vertical,1, ,~,J,AudioJack3,N
-5,Resistor,R,R1 R2 R3 R4 R5 R6 R7 R8 R9 R10 R11 R12 R13 R14 R15 R16,10k,R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal,16, ,~,,,
-6,Potentiometer,R_POT,RV5 RV6 RV7 RV8,25k,Potentiometer_Alpha_RD901F-40-00D_Single_Vertical,4, ,~,,,
-7,Potentiometer,R_POT,RV1 RV2 RV3 RV4,10k LOG,Potentiometer_Alpha_RD901F-40-00D_Single_Vertical,4, ,~,,,
