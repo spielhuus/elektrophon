@@ -1,0 +1,19 @@
+import os
+
+Import(['env', 'PCB', 'GERBER', 'SCHEMA', 'REPORTS', 'FILES', 'HTML'])
+
+project = 'filter'
+for board in ['main', 'mount', 'panel'] :
+    REPORTS += env.preflight(f'{board}/{project}_{board}_report.json', f'{board}/{board}.pro', project_name=project)
+    SCHEMA += env.schema(f'{board}/{project}_{board}_schematic.pdf', f'{board}/{board}.pro')
+    PCB += env.pcb(f'{board}/{project}_{board}_pcb.pdf', f'{board}/{board}.pro')
+    GERBER += env.gerbers(f'{board}/{project}_{board}_JLCPCB.zip', f'{board}/{board}.pro')
+    REPORTS += env.bom(f'{board}/{project}_{board}_bom.json', f'{board}/{board}.pro', project_name=project)
+
+    Clean(os.path.join(board, f'{board}.pro'), os.path.join(board, 'fp-info-cache'))
+    Clean(os.path.join(board, f'{board}.pro'), os.path.join(board, f'{board}-cache.lib'))
+    Clean(os.path.join(board, f'{board}.pro'), Glob(f'{board}/*-bak')) 
+
+#REPORTS += env.pytest("summe_test.json", "test/test_summe.py", project_name=project)
+HTML += env.nbconvert(f'{project}.html', f'{project}.ipynb')
+#FILES += Glob('*.jpg')
