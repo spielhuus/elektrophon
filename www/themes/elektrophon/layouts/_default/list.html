@@ -1,12 +1,5 @@
 <section class="section">
     <div class="container">
-      {{- $pages := . -}}
-      {{- if .IsHome -}}
-      {{- $pages = .Site.RegularPages -}}
-      {{- else -}}
-      {{ $pages = .Pages -}}
-      {{- end -}}
-      {{ $paginator := .Paginate (where $pages "Params.hidden" "ne" true) }}
       {{ range sort .Paginator.Pages }}
       {{ partial "summary.html" . }}
       {{ end }}

@@ -1,16 +1,32 @@
-{{ if or (isset .Params "hero_image") (eq .Params.Title "module") (eq .Params.Title "article") }}
 <style scoped>
   .hero_title {
-      no-repeat center center; 
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
       background-size: cover; 
-      {{ if isset .Params "hero_image" }}
+      {{ if .IsHome }}
+      {{ $ressource := (print "images/elektrophon-logo.jpg") }}
+      {{- $image := resources.Get $ressource -}}
+      {{ with $image }}
+        background-image: url({{ (.Resize "1280x").Permalink }}); 
+      {{ end }}
+
+      {{ else if isset .Params "hero_image" }}      
       {{ $ressource := (print "images/" .Params.hero_image) }}
       {{- $image := resources.Get $ressource -}}
       {{ with $image }}
         background-image: url({{ (.Resize "1280x").Permalink }}); 
       {{ end }}
-      {{ else }}
+
+      {{ else if (or (eq .Params.Title "module") (eq .Params.Title "article") (eq .Params.Title "about")) }}   
       {{ $ressource := (print "images/" .Params.Title ".jpg") }}
+      {{- $image := resources.Get $ressource -}}
+      {{ with $image }}
+        background-image: url({{ (.Resize "1280x").Permalink }}); 
+      {{ end }}
+      
+      {{ else }}
+      {{ $ressource := (print "images/default.jpg") }}
       {{- $image := resources.Get $ressource -}}
       {{ with $image }}
         background-image: url({{ (.Resize "1280x").Permalink }}); 
@@ -19,34 +35,46 @@
   }
   @media (max-width: 980px) {
       .hero {
-          background-image: url({{ .Site.BaseURL }}/{{ .Params.hero_mobile}});
-      }
+        {{ if .IsHome }}
+        {{ $ressource := (print "images/elektrophon-logo_mobile.jpg") }}
+        {{- $image := resources.Get $ressource -}}
+        {{ with $image }}
+          background-image: url({{ (.Resize "1280x").Permalink }}); 
+        {{ end }}
+  
+        {{ else if isset .Params "hero_image" }}      
+        {{ $ressource := (print "images/" .Params.hero_mobile ) }}
+        {{- $image := resources.Get $ressource -}}
+        {{ with $image }}
+          background-image: url({{ (.Resize "1280x").Permalink }}); 
+        {{ end }}
+  
+        {{ else if (or (eq .Params.Title "module") (eq .Params.Title "article") (eq .Params.Title "about")) }}   
+        {{ $ressource := (print "images/" .Params.Title "_mobile.jpg") }}
+        {{- $image := resources.Get $ressource -}}
+        {{ with $image }}
+          background-image: url({{ (.Resize "1280x").Permalink }}); 
+        {{ end }}
+        
+        {{ else }}
+        {{ $ressource := (print "images/default_mobile.jpg") }}
+        {{- $image := resources.Get $ressource -}}
+        {{ with $image }}
+          background-image: url({{ (.Resize "1280x").Permalink }}); 
+        {{ end }}
+        {{ end }}
+        }
   }
 </style>
-{{ else if eq .Params.Title "module" }}
-<style scoped>
-  .hero_title {
-      no-repeat center center; 
-      background-size: cover; 
-      background-image: url('/modules.jpg'); 
-  }
-  @media (max-width: 980px) {
-      .hero {
-          background-image: url('');
-      }
-  }
-</style>
-{{ end }}
 
 <section class="hero {{ if isset .Params "hero_image" }}is-fullheight{{ end }} hero_title">
   {{ if isset .Params "hero_image" }}
-  <!-- img class="hero-background is-transparent is-dark" src="{{ .Site.BaseURL }}/{{ .Params.hero_image}}"/ -->
   {{ end }}
   <div class="hero-head hero-darken">
     <nav class="navbar">
       <div class="container">
         <div class="navbar-brand">
-          <a href="{{ .Site.BaseURL }}/" class="navbar-item title is-size-3 has-text-white">{{ .Site.Title }}</a>
+          <a href="{{ .Site.BaseURL }}/" class="navbar-item title has-text-white">{{ .Site.Title }}</a>
           <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navMenu">
             <span aria-hidden="true"></span>
             <span aria-hidden="true"></span>
@@ -66,10 +94,8 @@
   </div>
 
   <div class="hero-body hero-darken">
-    <div class="columns is-multiline">
-      <!-- start tags-->
+    <div class="container adjust">
       {{ if in .Params.Categories "module" }}
-      <div class="column is-8 is-offset-2 is-hidden-mobile">
         {{ $drc := int (index .Site.Data.report .Params.Title ).summary.drc }}
         {{ $erc := int (index .Site.Data.report .Params.Title ).summary.erc }}
         {{ $unconnected := int (index .Site.Data.report .Params.Title ).summary.unconnected }}
@@ -162,22 +188,15 @@
             </a>
           </div>
         </div>
-      </div>
       {{ end }}
       <!-- end tags-->
 
-      {{ if not .IsHome }}
-      <div class="column is-8 is-offset-2">
-        {{ if isset .Params "title" }}
-        <h1 class="title is-size-3 has-text-white">{{ replace  .Params.Title "_" " " }}</h1>
-        {{ end }}
-      </div>
+      {{ if and (not .IsHome) (isset .Params "title") }}
+          <h1 class="title is-size-3 has-text-white">{{ replace  .Params.Title "_" " " }}</h1>
       {{ end }}
-      <div class="column is-8 is-offset-2">
         {{ if isset .Params "subtitle" }}
-        <p class="has-text-white is-size-4 has-text-weight-semibold">{{ .Params.subtitle }}</p>
+        <p class="has-text-white is-size-5 has-text-weight-semibold">{{ .Params.subtitle }}</p>
         {{ end }}
-      </div>
     </div>
   </div>
 </section>

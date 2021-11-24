@@ -1,26 +1,32 @@
 {{ define "main" }}
-{{ .Content }}
-<section class="section">
-    <div class="container">
-      {{- $pages := . -}}
-      {{- if .IsHome -}}
-      {{- $pages = .Site.RegularPages -}}
-      {{- else -}}
-      {{ $pages = .Pages -}}
-      {{- end -}}
-      {{ $paginator := .Paginate (where $pages "Params.hidden" "ne" true) }}
 
-      {{ range sort .Paginator.Pages }}
-      <div class="container">
-        <div class="section">
-          <div class="row columns is-multiline">
-            <div class="column is-4">
-              {{ partial "summary.html" . }}
+<div class="column is-12">
+  <div class="container">
+    <div class="content">
+      {{ .Content }}
+      <section class="section">
+        <div class="container">
+          {{- $pages := . -}}
+          {{- if .IsHome -}}
+          {{- $pages = .Site.RegularPages -}}
+          {{- else -}}
+          {{ $pages = .Pages -}}
+          {{- end -}}
+          {{ $paginator := .Paginate (where $pages "Params.hidden" "ne" true) }}
+          <div class="column is-12">
+            <div class="container">
+                <div class="content">              
+                  <div class="columns is-12 features is-multiline">
+                    {{ range sort .Paginator.Pages }}
+                {{ partial "summary.html" . }}
+                {{ end }}
+              </div>
             </div>
           </div>
+            </div>
         </div>
-      </div>
-      {{ end }}
+    </section>
     </div>
-  </section>
-  {{ end }}
+  </div>
+</div>
+{{ end }}

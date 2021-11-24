@@ -2,6 +2,7 @@ baseURL = "http://example.org/"
 languageCode = "en-us"
 title = "elektrophon"
 theme = "elektrophon"
+Paginate = 9
 
 [params]
   description = """\
