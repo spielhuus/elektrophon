@@ -2,6 +2,9 @@
 
 @import url('https://fonts.googleapis.com/css?family=Newsreader');
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import url({{ "/css/spotlight.min.css" | absURL }});
+@import url({{ "/css/katex.min.css" | absURL }});
+@import url({{ "/css/syntax.css" | absURL }});
 
 $family-sans-serif: 'Montserrat', sans-serif;
 $family-serif: 'Newsreader', serif;
@@ -34,9 +37,7 @@ $footer-padding: 1rem 10rem 1rem;
 
 $hero-darken: $dark !default;
 
-@import style.saas;
-@import url({{ "/css/spotlight.min.css" | absURL }});
-@import url({{ "/css/katex.min.css" | absURL }});
-@import url({{ "/css/syntax.css" | absURL }});
+@import "style.saas"
+
 
 
