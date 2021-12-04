@@ -1,0 +1,1786 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 6 6
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Device:LED D?
+U 1 1 61B63F80
+P 1750 1700
+AR Path="/61B63F80" Ref="D?"  Part="1" 
+AR Path="/61B0DAB1/61B63F80" Ref="D2"  Part="1" 
+F 0 "D2" V 1850 1450 50  0000 C CNN
+F 1 "LED" V 1750 1450 50  0000 C CNN
+F 2 "LED_THT:LED_D3.0mm" H 1750 1700 50  0001 C CNN
+F 3 "~" H 1750 1700 50  0001 C CNN
+F 4 "D" H 1750 1700 50  0001 C CNN "Spice_Primitive"
+F 5 "LED2" H 1750 1700 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 1750 1700 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "LED 3mm low current" V 1750 1700 50  0001 C CNN "Description"
+	1    1750 1700
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 61B63F86
+P 1750 2000
+AR Path="/61B63F86" Ref="#PWR?"  Part="1" 
+AR Path="/61B0DAB1/61B63F86" Ref="#PWR056"  Part="1" 
+F 0 "#PWR056" H 1750 1750 50  0001 C CNN
+F 1 "GND" H 1755 1827 50  0000 C CNN
+F 2 "" H 1750 2000 50  0001 C CNN
+F 3 "" H 1750 2000 50  0001 C CNN
+	1    1750 2000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 61B63F8C
+P 1750 1000
+AR Path="/61B63F8C" Ref="R?"  Part="1" 
+AR Path="/61B0DAB1/61B63F8C" Ref="R15"  Part="1" 
+F 0 "R15" H 1820 1046 50  0000 L CNN
+F 1 "5.1k" H 1820 955 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 1680 1000 50  0001 C CNN
+F 3 "~" H 1750 1000 50  0001 C CNN
+	1    1750 1000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 61B63F92
+P 1750 850
+AR Path="/61B63F92" Ref="#PWR?"  Part="1" 
+AR Path="/61B0DAB1/61B63F92" Ref="#PWR055"  Part="1" 
+F 0 "#PWR055" H 1750 700 50  0001 C CNN
+F 1 "+5V" H 1765 1023 50  0000 C CNN
+F 2 "" H 1750 850 50  0001 C CNN
+F 3 "" H 1750 850 50  0001 C CNN
+	1    1750 850 
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 61B63F98
+P 1200 1350
+AR Path="/61B63F98" Ref="R?"  Part="1" 
+AR Path="/61B0DAB1/61B63F98" Ref="R14"  Part="1" 
+F 0 "R14" V 993 1350 50  0000 C CNN
+F 1 "100k" V 1084 1350 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 1130 1350 50  0001 C CNN
+F 3 "~" H 1200 1350 50  0001 C CNN
+	1    1200 1350
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1350 1350 1450 1350
+Wire Wire Line
+	1450 1550 1450 1350
+Wire Wire Line
+	1750 1850 1750 1900
+Wire Wire Line
+	1450 1900 1750 1900
+Connection ~ 1750 1900
+Wire Wire Line
+	1750 1900 1750 2000
+Wire Wire Line
+	1450 1900 1450 1850
+$Comp
+L Device:LED D?
+U 1 1 61B63FAA
+P 3250 1700
+AR Path="/61B63FAA" Ref="D?"  Part="1" 
+AR Path="/61B0DAB1/61B63FAA" Ref="D10"  Part="1" 
+F 0 "D10" V 3350 1450 50  0000 C CNN
+F 1 "LED" V 3250 1450 50  0000 C CNN
+F 2 "LED_THT:LED_D3.0mm" H 3250 1700 50  0001 C CNN
+F 3 "~" H 3250 1700 50  0001 C CNN
+F 4 "D" H 3250 1700 50  0001 C CNN "Spice_Primitive"
+F 5 "LED2" H 3250 1700 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 3250 1700 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "LED 3mm low current" V 3250 1700 50  0001 C CNN "Description"
+	1    3250 1700
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 61B63FB0
+P 3250 2000
+AR Path="/61B63FB0" Ref="#PWR?"  Part="1" 
+AR Path="/61B0DAB1/61B63FB0" Ref="#PWR064"  Part="1" 
+F 0 "#PWR064" H 3250 1750 50  0001 C CNN
+F 1 "GND" H 3255 1827 50  0000 C CNN
+F 2 "" H 3250 2000 50  0001 C CNN
+F 3 "" H 3250 2000 50  0001 C CNN
+	1    3250 2000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 61B63FB6
+P 3250 1000
+AR Path="/61B63FB6" Ref="R?"  Part="1" 
+AR Path="/61B0DAB1/61B63FB6" Ref="R23"  Part="1" 
+F 0 "R23" H 3320 1046 50  0000 L CNN
+F 1 "5.1k" H 3320 955 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 3180 1000 50  0001 C CNN
+F 3 "~" H 3250 1000 50  0001 C CNN
+	1    3250 1000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 61B63FBC
+P 3250 850
+AR Path="/61B63FBC" Ref="#PWR?"  Part="1" 
+AR Path="/61B0DAB1/61B63FBC" Ref="#PWR063"  Part="1" 
+F 0 "#PWR063" H 3250 700 50  0001 C CNN
+F 1 "+5V" H 3265 1023 50  0000 C CNN
+F 2 "" H 3250 850 50  0001 C CNN
+F 3 "" H 3250 850 50  0001 C CNN
+	1    3250 850 
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 61B63FC2
+P 2700 1350
+AR Path="/61B63FC2" Ref="R?"  Part="1" 
+AR Path="/61B0DAB1/61B63FC2" Ref="R21"  Part="1" 
+F 0 "R21" V 2493 1350 50  0000 C CNN
+F 1 "100k" V 2584 1350 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 2630 1350 50  0001 C CNN
+F 3 "~" H 2700 1350 50  0001 C CNN
+	1    2700 1350
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2850 1350 2950 1350
+Wire Wire Line
+	2950 1550 2950 1350
+Wire Wire Line
+	3250 1850 3250 1900
+Wire Wire Line
+	2950 1900 3250 1900
+Connection ~ 3250 1900
+Wire Wire Line
+	3250 1900 3250 2000
+Wire Wire Line
+	2950 1900 2950 1850
+$Comp
+L Device:LED D?
+U 1 1 61B63FD4
+P 4550 1700
+AR Path="/61B63FD4" Ref="D?"  Part="1" 
+AR Path="/61B0DAB1/61B63FD4" Ref="D18"  Part="1" 
+F 0 "D18" V 4650 1450 50  0000 C CNN
+F 1 "LED" V 4550 1450 50  0000 C CNN
+F 2 "LED_THT:LED_D3.0mm" H 4550 1700 50  0001 C CNN
+F 3 "~" H 4550 1700 50  0001 C CNN
+F 4 "D" H 4550 1700 50  0001 C CNN "Spice_Primitive"
+F 5 "LED2" H 4550 1700 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 4550 1700 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "LED 3mm low current" V 4550 1700 50  0001 C CNN "Description"
+	1    4550 1700
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 61B63FDA
+P 4550 2000
+AR Path="/61B63FDA" Ref="#PWR?"  Part="1" 
+AR Path="/61B0DAB1/61B63FDA" Ref="#PWR072"  Part="1" 
+F 0 "#PWR072" H 4550 1750 50  0001 C CNN
+F 1 "GND" H 4555 1827 50  0000 C CNN
+F 2 "" H 4550 2000 50  0001 C CNN
+F 3 "" H 4550 2000 50  0001 C CNN
+	1    4550 2000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 61B63FE0
+P 4550 1000
+AR Path="/61B63FE0" Ref="R?"  Part="1" 
+AR Path="/61B0DAB1/61B63FE0" Ref="R31"  Part="1" 
+F 0 "R31" H 4620 1046 50  0000 L CNN
+F 1 "5.1k" H 4620 955 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 4480 1000 50  0001 C CNN
+F 3 "~" H 4550 1000 50  0001 C CNN
+	1    4550 1000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 61B63FE6
+P 4550 850
+AR Path="/61B63FE6" Ref="#PWR?"  Part="1" 
+AR Path="/61B0DAB1/61B63FE6" Ref="#PWR071"  Part="1" 
+F 0 "#PWR071" H 4550 700 50  0001 C CNN
+F 1 "+5V" H 4565 1023 50  0000 C CNN
+F 2 "" H 4550 850 50  0001 C CNN
+F 3 "" H 4550 850 50  0001 C CNN
+	1    4550 850 
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 61B63FEC
+P 4000 1350
+AR Path="/61B63FEC" Ref="R?"  Part="1" 
+AR Path="/61B0DAB1/61B63FEC" Ref="R29"  Part="1" 
+F 0 "R29" V 3793 1350 50  0000 C CNN
+F 1 "100k" V 3884 1350 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 3930 1350 50  0001 C CNN
+F 3 "~" H 4000 1350 50  0001 C CNN
+	1    4000 1350
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4150 1350 4250 1350
+Wire Wire Line
+	4250 1550 4250 1350
+Wire Wire Line
+	4550 1850 4550 1900
+Wire Wire Line
+	4250 1900 4550 1900
+Connection ~ 4550 1900
+Wire Wire Line
+	4550 1900 4550 2000
+Wire Wire Line
+	4250 1900 4250 1850
+$Comp
+L Device:LED D?
+U 1 1 61B63FFE
+P 2350 3300
+AR Path="/61B63FFE" Ref="D?"  Part="1" 
+AR Path="/61B0DAB1/61B63FFE" Ref="D5"  Part="1" 
+F 0 "D5" V 2450 3050 50  0000 C CNN
+F 1 "LED" V 2350 3050 50  0000 C CNN
+F 2 "LED_THT:LED_D3.0mm" H 2350 3300 50  0001 C CNN
+F 3 "~" H 2350 3300 50  0001 C CNN
+F 4 "D" H 2350 3300 50  0001 C CNN "Spice_Primitive"
+F 5 "LED2" H 2350 3300 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 2350 3300 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "LED 3mm low current" V 2350 3300 50  0001 C CNN "Description"
+	1    2350 3300
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 61B64004
+P 2350 3600
+AR Path="/61B64004" Ref="#PWR?"  Part="1" 
+AR Path="/61B0DAB1/61B64004" Ref="#PWR058"  Part="1" 
+F 0 "#PWR058" H 2350 3350 50  0001 C CNN
+F 1 "GND" H 2355 3427 50  0000 C CNN
+F 2 "" H 2350 3600 50  0001 C CNN
+F 3 "" H 2350 3600 50  0001 C CNN
+	1    2350 3600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 61B6400A
+P 2350 2600
+AR Path="/61B6400A" Ref="R?"  Part="1" 
+AR Path="/61B0DAB1/61B6400A" Ref="R18"  Part="1" 
+F 0 "R18" H 2420 2646 50  0000 L CNN
+F 1 "5k" H 2420 2555 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 2280 2600 50  0001 C CNN
+F 3 "~" H 2350 2600 50  0001 C CNN
+	1    2350 2600
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 61B64010
+P 2350 2450
+AR Path="/61B64010" Ref="#PWR?"  Part="1" 
+AR Path="/61B0DAB1/61B64010" Ref="#PWR057"  Part="1" 
+F 0 "#PWR057" H 2350 2300 50  0001 C CNN
+F 1 "+5V" H 2365 2623 50  0000 C CNN
+F 2 "" H 2350 2450 50  0001 C CNN
+F 3 "" H 2350 2450 50  0001 C CNN
+	1    2350 2450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 61B64016
+P 1800 2950
+AR Path="/61B64016" Ref="R?"  Part="1" 
+AR Path="/61B0DAB1/61B64016" Ref="R16"  Part="1" 
+F 0 "R16" V 1593 2950 50  0000 C CNN
+F 1 "100k" V 1684 2950 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 1730 2950 50  0001 C CNN
+F 3 "~" H 1800 2950 50  0001 C CNN
+	1    1800 2950
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1950 2950 2050 2950
+Wire Wire Line
+	2050 3150 2050 2950
+Wire Wire Line
+	2350 3450 2350 3500
+Wire Wire Line
+	2050 3500 2350 3500
+Connection ~ 2350 3500
+Wire Wire Line
+	2350 3500 2350 3600
+Wire Wire Line
+	2050 3500 2050 3450
+$Comp
+L Device:LED D?
+U 1 1 61B64028
+P 3900 3350
+AR Path="/61B64028" Ref="D?"  Part="1" 
+AR Path="/61B0DAB1/61B64028" Ref="D14"  Part="1" 
+F 0 "D14" V 4000 3100 50  0000 C CNN
+F 1 "LED" V 3900 3100 50  0000 C CNN
+F 2 "LED_THT:LED_D3.0mm" H 3900 3350 50  0001 C CNN
+F 3 "~" H 3900 3350 50  0001 C CNN
+F 4 "D" H 3900 3350 50  0001 C CNN "Spice_Primitive"
+F 5 "LED1" H 3900 3350 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 3900 3350 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "LED 3mm low current" V 3900 3350 50  0001 C CNN "Description"
+	1    3900 3350
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 61B6402E
+P 3900 3650
+AR Path="/61B6402E" Ref="#PWR?"  Part="1" 
+AR Path="/61B0DAB1/61B6402E" Ref="#PWR068"  Part="1" 
+F 0 "#PWR068" H 3900 3400 50  0001 C CNN
+F 1 "GND" H 3905 3477 50  0000 C CNN
+F 2 "" H 3900 3650 50  0001 C CNN
+F 3 "" H 3900 3650 50  0001 C CNN
+	1    3900 3650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 61B64034
+P 3900 2650
+AR Path="/61B64034" Ref="R?"  Part="1" 
+AR Path="/61B0DAB1/61B64034" Ref="R27"  Part="1" 
+F 0 "R27" H 3970 2696 50  0000 L CNN
+F 1 "5k" H 3970 2605 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 3830 2650 50  0001 C CNN
+F 3 "~" H 3900 2650 50  0001 C CNN
+	1    3900 2650
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 61B6403A
+P 3900 2500
+AR Path="/61B6403A" Ref="#PWR?"  Part="1" 
+AR Path="/61B0DAB1/61B6403A" Ref="#PWR067"  Part="1" 
+F 0 "#PWR067" H 3900 2350 50  0001 C CNN
+F 1 "+5V" H 3915 2673 50  0000 C CNN
+F 2 "" H 3900 2500 50  0001 C CNN
+F 3 "" H 3900 2500 50  0001 C CNN
+	1    3900 2500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 61B64040
+P 3350 3000
+AR Path="/61B64040" Ref="R?"  Part="1" 
+AR Path="/61B0DAB1/61B64040" Ref="R25"  Part="1" 
+F 0 "R25" V 3143 3000 50  0000 C CNN
+F 1 "100k" V 3234 3000 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 3280 3000 50  0001 C CNN
+F 3 "~" H 3350 3000 50  0001 C CNN
+	1    3350 3000
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3500 3000 3600 3000
+Wire Wire Line
+	3600 3200 3600 3000
+Wire Wire Line
+	3900 3500 3900 3550
+Wire Wire Line
+	3600 3550 3900 3550
+Connection ~ 3900 3550
+Wire Wire Line
+	3900 3550 3900 3650
+Wire Wire Line
+	3600 3550 3600 3500
+$Comp
+L Diode:1N4148W D?
+U 1 1 61B64051
+P 4250 1700
+AR Path="/61B64051" Ref="D?"  Part="1" 
+AR Path="/61B0DAB1/61B64051" Ref="D16"  Part="1" 
+F 0 "D16" V 4150 1350 50  0000 L CNN
+F 1 "1N4148W" V 4250 1250 50  0000 L CNN
+F 2 "Diode_SMD:D_SOD-123" H 4250 1525 50  0001 C CNN
+F 3 "https://www.vishay.com/docs/85748/1n4148w.pdf" H 4250 1700 50  0001 C CNN
+F 4 "D" H 4250 1700 50  0001 C CNN "Spice_Primitive"
+F 5 "D1N4148" H 4250 1700 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 4250 1700 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    4250 1700
+	0    1    1    0   
+$EndComp
+$Comp
+L Diode:1N4148W D?
+U 1 1 61B6405A
+P 2950 1700
+AR Path="/61B6405A" Ref="D?"  Part="1" 
+AR Path="/61B0DAB1/61B6405A" Ref="D8"  Part="1" 
+F 0 "D8" V 2850 1350 50  0000 L CNN
+F 1 "1N4148W" V 2950 1250 50  0000 L CNN
+F 2 "Diode_SMD:D_SOD-123" H 2950 1525 50  0001 C CNN
+F 3 "https://www.vishay.com/docs/85748/1n4148w.pdf" H 2950 1700 50  0001 C CNN
+F 4 "D" H 2950 1700 50  0001 C CNN "Spice_Primitive"
+F 5 "D1N4148" H 2950 1700 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 2950 1700 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    2950 1700
+	0    1    1    0   
+$EndComp
+$Comp
+L Diode:1N4148W D?
+U 1 1 61B64063
+P 1450 1700
+AR Path="/61B64063" Ref="D?"  Part="1" 
+AR Path="/61B0DAB1/61B64063" Ref="D1"  Part="1" 
+F 0 "D1" V 1350 1350 50  0000 L CNN
+F 1 "1N4148W" V 1450 1250 50  0000 L CNN
+F 2 "Diode_SMD:D_SOD-123" H 1450 1525 50  0001 C CNN
+F 3 "https://www.vishay.com/docs/85748/1n4148w.pdf" H 1450 1700 50  0001 C CNN
+F 4 "D" H 1450 1700 50  0001 C CNN "Spice_Primitive"
+F 5 "D1N4148" H 1450 1700 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 1450 1700 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    1450 1700
+	0    1    1    0   
+$EndComp
+$Comp
+L Diode:1N4148W D?
+U 1 1 61B6406C
+P 2050 3300
+AR Path="/61B6406C" Ref="D?"  Part="1" 
+AR Path="/61B0DAB1/61B6406C" Ref="D3"  Part="1" 
+F 0 "D3" V 1950 2950 50  0000 L CNN
+F 1 "1N4148W" V 2050 2850 50  0000 L CNN
+F 2 "Diode_SMD:D_SOD-123" H 2050 3125 50  0001 C CNN
+F 3 "https://www.vishay.com/docs/85748/1n4148w.pdf" H 2050 3300 50  0001 C CNN
+F 4 "D" H 2050 3300 50  0001 C CNN "Spice_Primitive"
+F 5 "D1N4148" H 2050 3300 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 2050 3300 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    2050 3300
+	0    1    1    0   
+$EndComp
+$Comp
+L Diode:1N4148W D?
+U 1 1 61B64075
+P 3600 3350
+AR Path="/61B64075" Ref="D?"  Part="1" 
+AR Path="/61B0DAB1/61B64075" Ref="D12"  Part="1" 
+F 0 "D12" V 3500 3000 50  0000 L CNN
+F 1 "1N4148W" V 3600 2900 50  0000 L CNN
+F 2 "Diode_SMD:D_SOD-123" H 3600 3175 50  0001 C CNN
+F 3 "https://www.vishay.com/docs/85748/1n4148w.pdf" H 3600 3350 50  0001 C CNN
+F 4 "D" H 3600 3350 50  0001 C CNN "Spice_Primitive"
+F 5 "D1N4148" H 3600 3350 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 3600 3350 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    3600 3350
+	0    1    1    0   
+$EndComp
+$Comp
+L Transistor_BJT:MMBT3904 Q?
+U 1 1 61B6407F
+P 1650 1350
+AR Path="/61B6407F" Ref="Q?"  Part="1" 
+AR Path="/61B0DAB1/61B6407F" Ref="Q1"  Part="1" 
+F 0 "Q1" H 1841 1396 50  0000 L CNN
+F 1 "MMBT3904" H 1841 1305 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 1850 1275 50  0001 L CIN
+F 3 "https://www.onsemi.com/pub/Collateral/2N3903-D.PDF" H 1650 1350 50  0001 L CNN
+F 4 "Q" H 1650 1350 50  0001 C CNN "Spice_Primitive"
+F 5 "BC846B" H 1650 1350 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 1650 1350 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "3 1 2" H 1650 1350 50  0001 C CNN "Spice_Node_Sequence"
+	1    1650 1350
+	1    0    0    -1  
+$EndComp
+Connection ~ 1450 1350
+$Comp
+L Transistor_BJT:MMBT3904 Q?
+U 1 1 61B6408A
+P 3150 1350
+AR Path="/61B6408A" Ref="Q?"  Part="1" 
+AR Path="/61B0DAB1/61B6408A" Ref="Q5"  Part="1" 
+F 0 "Q5" H 3341 1396 50  0000 L CNN
+F 1 "MMBT3904" H 3341 1305 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 3350 1275 50  0001 L CIN
+F 3 "https://www.onsemi.com/pub/Collateral/2N3903-D.PDF" H 3150 1350 50  0001 L CNN
+F 4 "Q" H 3150 1350 50  0001 C CNN "Spice_Primitive"
+F 5 "BC846B" H 3150 1350 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 3150 1350 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "3 1 2" H 3150 1350 50  0001 C CNN "Spice_Node_Sequence"
+	1    3150 1350
+	1    0    0    -1  
+$EndComp
+Connection ~ 2950 1350
+$Comp
+L Transistor_BJT:MMBT3904 Q?
+U 1 1 61B64095
+P 4450 1350
+AR Path="/61B64095" Ref="Q?"  Part="1" 
+AR Path="/61B0DAB1/61B64095" Ref="Q9"  Part="1" 
+F 0 "Q9" H 4641 1396 50  0000 L CNN
+F 1 "MMBT3904" H 4641 1305 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 4650 1275 50  0001 L CIN
+F 3 "https://www.onsemi.com/pub/Collateral/2N3903-D.PDF" H 4450 1350 50  0001 L CNN
+F 4 "Q" H 4450 1350 50  0001 C CNN "Spice_Primitive"
+F 5 "BC846B" H 4450 1350 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 4450 1350 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "3 1 2" H 4450 1350 50  0001 C CNN "Spice_Node_Sequence"
+	1    4450 1350
+	1    0    0    -1  
+$EndComp
+Connection ~ 4250 1350
+$Comp
+L Transistor_BJT:MMBT3904 Q?
+U 1 1 61B640A0
+P 2250 2950
+AR Path="/61B640A0" Ref="Q?"  Part="1" 
+AR Path="/61B0DAB1/61B640A0" Ref="Q2"  Part="1" 
+F 0 "Q2" H 2441 2996 50  0000 L CNN
+F 1 "MMBT3904" H 2441 2905 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 2450 2875 50  0001 L CIN
+F 3 "https://www.onsemi.com/pub/Collateral/2N3903-D.PDF" H 2250 2950 50  0001 L CNN
+F 4 "Q" H 2250 2950 50  0001 C CNN "Spice_Primitive"
+F 5 "BC846B" H 2250 2950 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 2250 2950 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "3 2 1" H 2250 2950 50  0001 C CNN "Spice_Node_Sequence"
+	1    2250 2950
+	1    0    0    -1  
+$EndComp
+Connection ~ 2050 2950
+$Comp
+L Transistor_BJT:MMBT3904 Q?
+U 1 1 61B640AB
+P 3800 3000
+AR Path="/61B640AB" Ref="Q?"  Part="1" 
+AR Path="/61B0DAB1/61B640AB" Ref="Q7"  Part="1" 
+F 0 "Q7" H 3991 3046 50  0000 L CNN
+F 1 "MMBT3904" H 3991 2955 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 4000 2925 50  0001 L CIN
+F 3 "https://www.onsemi.com/pub/Collateral/2N3903-D.PDF" H 3800 3000 50  0001 L CNN
+F 4 "Q" H 3800 3000 50  0001 C CNN "Spice_Primitive"
+F 5 "BC846B" H 3800 3000 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 3800 3000 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "3 1 2" H 3800 3000 50  0001 C CNN "Spice_Node_Sequence"
+	1    3800 3000
+	1    0    0    -1  
+$EndComp
+Connection ~ 3600 3000
+$Comp
+L Device:LED D?
+U 1 1 61B640B6
+P 2350 5300
+AR Path="/61B640B6" Ref="D?"  Part="1" 
+AR Path="/61B0DAB1/61B640B6" Ref="D6"  Part="1" 
+F 0 "D6" V 2450 5050 50  0000 C CNN
+F 1 "LED" V 2350 5050 50  0000 C CNN
+F 2 "LED_THT:LED_D3.0mm" H 2350 5300 50  0001 C CNN
+F 3 "~" H 2350 5300 50  0001 C CNN
+F 4 "D" H 2350 5300 50  0001 C CNN "Spice_Primitive"
+F 5 "LED2" H 2350 5300 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 2350 5300 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "LED 3mm low current" V 2350 5300 50  0001 C CNN "Description"
+	1    2350 5300
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 61B640BC
+P 2350 5600
+AR Path="/61B640BC" Ref="#PWR?"  Part="1" 
+AR Path="/61B0DAB1/61B640BC" Ref="#PWR060"  Part="1" 
+F 0 "#PWR060" H 2350 5350 50  0001 C CNN
+F 1 "GND" H 2355 5427 50  0000 C CNN
+F 2 "" H 2350 5600 50  0001 C CNN
+F 3 "" H 2350 5600 50  0001 C CNN
+	1    2350 5600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 61B640C2
+P 2350 4600
+AR Path="/61B640C2" Ref="R?"  Part="1" 
+AR Path="/61B0DAB1/61B640C2" Ref="R19"  Part="1" 
+F 0 "R19" H 2420 4646 50  0000 L CNN
+F 1 "5.1k" H 2420 4555 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 2280 4600 50  0001 C CNN
+F 3 "~" H 2350 4600 50  0001 C CNN
+	1    2350 4600
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 61B640C8
+P 2350 4450
+AR Path="/61B640C8" Ref="#PWR?"  Part="1" 
+AR Path="/61B0DAB1/61B640C8" Ref="#PWR059"  Part="1" 
+F 0 "#PWR059" H 2350 4300 50  0001 C CNN
+F 1 "+5V" H 2365 4623 50  0000 C CNN
+F 2 "" H 2350 4450 50  0001 C CNN
+F 3 "" H 2350 4450 50  0001 C CNN
+	1    2350 4450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 61B640CE
+P 1800 4950
+AR Path="/61B640CE" Ref="R?"  Part="1" 
+AR Path="/61B0DAB1/61B640CE" Ref="R17"  Part="1" 
+F 0 "R17" V 1593 4950 50  0000 C CNN
+F 1 "100k" V 1684 4950 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 1730 4950 50  0001 C CNN
+F 3 "~" H 1800 4950 50  0001 C CNN
+	1    1800 4950
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1950 4950 2050 4950
+Wire Wire Line
+	2050 5150 2050 4950
+Wire Wire Line
+	2350 5450 2350 5500
+Wire Wire Line
+	2050 5500 2350 5500
+Connection ~ 2350 5500
+Wire Wire Line
+	2350 5500 2350 5600
+Wire Wire Line
+	2050 5500 2050 5450
+$Comp
+L Device:LED D?
+U 1 1 61B640E0
+P 3850 5300
+AR Path="/61B640E0" Ref="D?"  Part="1" 
+AR Path="/61B0DAB1/61B640E0" Ref="D13"  Part="1" 
+F 0 "D13" V 3950 5050 50  0000 C CNN
+F 1 "LED" V 3850 5050 50  0000 C CNN
+F 2 "LED_THT:LED_D3.0mm" H 3850 5300 50  0001 C CNN
+F 3 "~" H 3850 5300 50  0001 C CNN
+F 4 "D" H 3850 5300 50  0001 C CNN "Spice_Primitive"
+F 5 "LED2" H 3850 5300 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 3850 5300 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "LED 3mm low current" V 3850 5300 50  0001 C CNN "Description"
+	1    3850 5300
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 61B640E6
+P 3850 5600
+AR Path="/61B640E6" Ref="#PWR?"  Part="1" 
+AR Path="/61B0DAB1/61B640E6" Ref="#PWR066"  Part="1" 
+F 0 "#PWR066" H 3850 5350 50  0001 C CNN
+F 1 "GND" H 3855 5427 50  0000 C CNN
+F 2 "" H 3850 5600 50  0001 C CNN
+F 3 "" H 3850 5600 50  0001 C CNN
+	1    3850 5600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 61B640EC
+P 3850 4600
+AR Path="/61B640EC" Ref="R?"  Part="1" 
+AR Path="/61B0DAB1/61B640EC" Ref="R26"  Part="1" 
+F 0 "R26" H 3920 4646 50  0000 L CNN
+F 1 "5.1k" H 3920 4555 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 3780 4600 50  0001 C CNN
+F 3 "~" H 3850 4600 50  0001 C CNN
+	1    3850 4600
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 61B640F2
+P 3850 4450
+AR Path="/61B640F2" Ref="#PWR?"  Part="1" 
+AR Path="/61B0DAB1/61B640F2" Ref="#PWR065"  Part="1" 
+F 0 "#PWR065" H 3850 4300 50  0001 C CNN
+F 1 "+5V" H 3865 4623 50  0000 C CNN
+F 2 "" H 3850 4450 50  0001 C CNN
+F 3 "" H 3850 4450 50  0001 C CNN
+	1    3850 4450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 61B640F8
+P 3300 4950
+AR Path="/61B640F8" Ref="R?"  Part="1" 
+AR Path="/61B0DAB1/61B640F8" Ref="R24"  Part="1" 
+F 0 "R24" V 3093 4950 50  0000 C CNN
+F 1 "100k" V 3184 4950 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 3230 4950 50  0001 C CNN
+F 3 "~" H 3300 4950 50  0001 C CNN
+	1    3300 4950
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3450 4950 3550 4950
+Wire Wire Line
+	3550 5150 3550 4950
+Wire Wire Line
+	3850 5450 3850 5500
+Wire Wire Line
+	3550 5500 3850 5500
+Connection ~ 3850 5500
+Wire Wire Line
+	3850 5500 3850 5600
+Wire Wire Line
+	3550 5500 3550 5450
+$Comp
+L Device:LED D?
+U 1 1 61B6410A
+P 5150 5300
+AR Path="/61B6410A" Ref="D?"  Part="1" 
+AR Path="/61B0DAB1/61B6410A" Ref="D20"  Part="1" 
+F 0 "D20" V 5250 5050 50  0000 C CNN
+F 1 "LED" V 5150 5050 50  0000 C CNN
+F 2 "LED_THT:LED_D3.0mm" H 5150 5300 50  0001 C CNN
+F 3 "~" H 5150 5300 50  0001 C CNN
+F 4 "D" H 5150 5300 50  0001 C CNN "Spice_Primitive"
+F 5 "LED2" H 5150 5300 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 5150 5300 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "LED 3mm low current" V 5150 5300 50  0001 C CNN "Description"
+	1    5150 5300
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 61B64110
+P 5150 5600
+AR Path="/61B64110" Ref="#PWR?"  Part="1" 
+AR Path="/61B0DAB1/61B64110" Ref="#PWR074"  Part="1" 
+F 0 "#PWR074" H 5150 5350 50  0001 C CNN
+F 1 "GND" H 5155 5427 50  0000 C CNN
+F 2 "" H 5150 5600 50  0001 C CNN
+F 3 "" H 5150 5600 50  0001 C CNN
+	1    5150 5600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 61B64116
+P 5150 4600
+AR Path="/61B64116" Ref="R?"  Part="1" 
+AR Path="/61B0DAB1/61B64116" Ref="R33"  Part="1" 
+F 0 "R33" H 5220 4646 50  0000 L CNN
+F 1 "5.1k" H 5220 4555 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 5080 4600 50  0001 C CNN
+F 3 "~" H 5150 4600 50  0001 C CNN
+	1    5150 4600
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 61B6411C
+P 5150 4450
+AR Path="/61B6411C" Ref="#PWR?"  Part="1" 
+AR Path="/61B0DAB1/61B6411C" Ref="#PWR073"  Part="1" 
+F 0 "#PWR073" H 5150 4300 50  0001 C CNN
+F 1 "+5V" H 5165 4623 50  0000 C CNN
+F 2 "" H 5150 4450 50  0001 C CNN
+F 3 "" H 5150 4450 50  0001 C CNN
+	1    5150 4450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 61B64122
+P 4600 4950
+AR Path="/61B64122" Ref="R?"  Part="1" 
+AR Path="/61B0DAB1/61B64122" Ref="R32"  Part="1" 
+F 0 "R32" V 4393 4950 50  0000 C CNN
+F 1 "100k" V 4484 4950 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 4530 4950 50  0001 C CNN
+F 3 "~" H 4600 4950 50  0001 C CNN
+	1    4600 4950
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4750 4950 4850 4950
+Wire Wire Line
+	4850 5150 4850 4950
+Wire Wire Line
+	5150 5450 5150 5500
+Wire Wire Line
+	4850 5500 5150 5500
+Connection ~ 5150 5500
+Wire Wire Line
+	5150 5500 5150 5600
+Wire Wire Line
+	4850 5500 4850 5450
+$Comp
+L Device:LED D?
+U 1 1 61B64134
+P 2950 6900
+AR Path="/61B64134" Ref="D?"  Part="1" 
+AR Path="/61B0DAB1/61B64134" Ref="D9"  Part="1" 
+F 0 "D9" V 3050 6650 50  0000 C CNN
+F 1 "LED" V 2950 6650 50  0000 C CNN
+F 2 "LED_THT:LED_D3.0mm" H 2950 6900 50  0001 C CNN
+F 3 "~" H 2950 6900 50  0001 C CNN
+F 4 "D" H 2950 6900 50  0001 C CNN "Spice_Primitive"
+F 5 "LED2" H 2950 6900 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 2950 6900 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "LED 3mm low current" V 2950 6900 50  0001 C CNN "Description"
+	1    2950 6900
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 61B6413A
+P 2950 7200
+AR Path="/61B6413A" Ref="#PWR?"  Part="1" 
+AR Path="/61B0DAB1/61B6413A" Ref="#PWR062"  Part="1" 
+F 0 "#PWR062" H 2950 6950 50  0001 C CNN
+F 1 "GND" H 2955 7027 50  0000 C CNN
+F 2 "" H 2950 7200 50  0001 C CNN
+F 3 "" H 2950 7200 50  0001 C CNN
+	1    2950 7200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 61B64140
+P 2950 6200
+AR Path="/61B64140" Ref="R?"  Part="1" 
+AR Path="/61B0DAB1/61B64140" Ref="R22"  Part="1" 
+F 0 "R22" H 3020 6246 50  0000 L CNN
+F 1 "5k" H 3020 6155 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 2880 6200 50  0001 C CNN
+F 3 "~" H 2950 6200 50  0001 C CNN
+	1    2950 6200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 61B64146
+P 2950 6050
+AR Path="/61B64146" Ref="#PWR?"  Part="1" 
+AR Path="/61B0DAB1/61B64146" Ref="#PWR061"  Part="1" 
+F 0 "#PWR061" H 2950 5900 50  0001 C CNN
+F 1 "+5V" H 2965 6223 50  0000 C CNN
+F 2 "" H 2950 6050 50  0001 C CNN
+F 3 "" H 2950 6050 50  0001 C CNN
+	1    2950 6050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 61B6414C
+P 2400 6550
+AR Path="/61B6414C" Ref="R?"  Part="1" 
+AR Path="/61B0DAB1/61B6414C" Ref="R20"  Part="1" 
+F 0 "R20" V 2193 6550 50  0000 C CNN
+F 1 "100k" V 2284 6550 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 2330 6550 50  0001 C CNN
+F 3 "~" H 2400 6550 50  0001 C CNN
+	1    2400 6550
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2550 6550 2650 6550
+Wire Wire Line
+	2650 6750 2650 6550
+Wire Wire Line
+	2950 7050 2950 7100
+Wire Wire Line
+	2650 7100 2950 7100
+Connection ~ 2950 7100
+Wire Wire Line
+	2950 7100 2950 7200
+Wire Wire Line
+	2650 7100 2650 7050
+$Comp
+L Device:LED D?
+U 1 1 61B6415E
+P 4500 6950
+AR Path="/61B6415E" Ref="D?"  Part="1" 
+AR Path="/61B0DAB1/61B6415E" Ref="D17"  Part="1" 
+F 0 "D17" V 4600 6700 50  0000 C CNN
+F 1 "LED" V 4500 6700 50  0000 C CNN
+F 2 "LED_THT:LED_D3.0mm" H 4500 6950 50  0001 C CNN
+F 3 "~" H 4500 6950 50  0001 C CNN
+F 4 "D" H 4500 6950 50  0001 C CNN "Spice_Primitive"
+F 5 "LED1" H 4500 6950 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 4500 6950 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "LED 3mm low current" V 4500 6950 50  0001 C CNN "Description"
+	1    4500 6950
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 61B64164
+P 4500 7250
+AR Path="/61B64164" Ref="#PWR?"  Part="1" 
+AR Path="/61B0DAB1/61B64164" Ref="#PWR070"  Part="1" 
+F 0 "#PWR070" H 4500 7000 50  0001 C CNN
+F 1 "GND" H 4505 7077 50  0000 C CNN
+F 2 "" H 4500 7250 50  0001 C CNN
+F 3 "" H 4500 7250 50  0001 C CNN
+	1    4500 7250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 61B6416A
+P 4500 6250
+AR Path="/61B6416A" Ref="R?"  Part="1" 
+AR Path="/61B0DAB1/61B6416A" Ref="R30"  Part="1" 
+F 0 "R30" H 4570 6296 50  0000 L CNN
+F 1 "5k" H 4570 6205 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 4430 6250 50  0001 C CNN
+F 3 "~" H 4500 6250 50  0001 C CNN
+	1    4500 6250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 61B64170
+P 4500 6100
+AR Path="/61B64170" Ref="#PWR?"  Part="1" 
+AR Path="/61B0DAB1/61B64170" Ref="#PWR069"  Part="1" 
+F 0 "#PWR069" H 4500 5950 50  0001 C CNN
+F 1 "+5V" H 4515 6273 50  0000 C CNN
+F 2 "" H 4500 6100 50  0001 C CNN
+F 3 "" H 4500 6100 50  0001 C CNN
+	1    4500 6100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 61B64176
+P 3950 6600
+AR Path="/61B64176" Ref="R?"  Part="1" 
+AR Path="/61B0DAB1/61B64176" Ref="R28"  Part="1" 
+F 0 "R28" V 3743 6600 50  0000 C CNN
+F 1 "100k" V 3834 6600 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 3880 6600 50  0001 C CNN
+F 3 "~" H 3950 6600 50  0001 C CNN
+	1    3950 6600
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4100 6600 4200 6600
+Wire Wire Line
+	4200 6800 4200 6600
+Wire Wire Line
+	4500 7100 4500 7150
+Wire Wire Line
+	4200 7150 4500 7150
+Connection ~ 4500 7150
+Wire Wire Line
+	4500 7150 4500 7250
+Wire Wire Line
+	4200 7150 4200 7100
+$Comp
+L Diode:1N4148W D?
+U 1 1 61B64187
+P 4850 5300
+AR Path="/61B64187" Ref="D?"  Part="1" 
+AR Path="/61B0DAB1/61B64187" Ref="D19"  Part="1" 
+F 0 "D19" V 4750 4950 50  0000 L CNN
+F 1 "1N4148W" V 4850 4850 50  0000 L CNN
+F 2 "Diode_SMD:D_SOD-123" H 4850 5125 50  0001 C CNN
+F 3 "https://www.vishay.com/docs/85748/1n4148w.pdf" H 4850 5300 50  0001 C CNN
+F 4 "D" H 4850 5300 50  0001 C CNN "Spice_Primitive"
+F 5 "D1N4148" H 4850 5300 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 4850 5300 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    4850 5300
+	0    1    1    0   
+$EndComp
+$Comp
+L Diode:1N4148W D?
+U 1 1 61B64190
+P 3550 5300
+AR Path="/61B64190" Ref="D?"  Part="1" 
+AR Path="/61B0DAB1/61B64190" Ref="D11"  Part="1" 
+F 0 "D11" V 3450 4950 50  0000 L CNN
+F 1 "1N4148W" V 3550 4850 50  0000 L CNN
+F 2 "Diode_SMD:D_SOD-123" H 3550 5125 50  0001 C CNN
+F 3 "https://www.vishay.com/docs/85748/1n4148w.pdf" H 3550 5300 50  0001 C CNN
+F 4 "D" H 3550 5300 50  0001 C CNN "Spice_Primitive"
+F 5 "D1N4148" H 3550 5300 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 3550 5300 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    3550 5300
+	0    1    1    0   
+$EndComp
+$Comp
+L Diode:1N4148W D?
+U 1 1 61B64199
+P 2050 5300
+AR Path="/61B64199" Ref="D?"  Part="1" 
+AR Path="/61B0DAB1/61B64199" Ref="D4"  Part="1" 
+F 0 "D4" V 1950 4950 50  0000 L CNN
+F 1 "1N4148W" V 2050 4850 50  0000 L CNN
+F 2 "Diode_SMD:D_SOD-123" H 2050 5125 50  0001 C CNN
+F 3 "https://www.vishay.com/docs/85748/1n4148w.pdf" H 2050 5300 50  0001 C CNN
+F 4 "D" H 2050 5300 50  0001 C CNN "Spice_Primitive"
+F 5 "D1N4148" H 2050 5300 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 2050 5300 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    2050 5300
+	0    1    1    0   
+$EndComp
+$Comp
+L Diode:1N4148W D?
+U 1 1 61B641A2
+P 2650 6900
+AR Path="/61B641A2" Ref="D?"  Part="1" 
+AR Path="/61B0DAB1/61B641A2" Ref="D7"  Part="1" 
+F 0 "D7" V 2550 6550 50  0000 L CNN
+F 1 "1N4148W" V 2650 6450 50  0000 L CNN
+F 2 "Diode_SMD:D_SOD-123" H 2650 6725 50  0001 C CNN
+F 3 "https://www.vishay.com/docs/85748/1n4148w.pdf" H 2650 6900 50  0001 C CNN
+F 4 "D" H 2650 6900 50  0001 C CNN "Spice_Primitive"
+F 5 "D1N4148" H 2650 6900 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 2650 6900 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    2650 6900
+	0    1    1    0   
+$EndComp
+$Comp
+L Diode:1N4148W D?
+U 1 1 61B641AB
+P 4200 6950
+AR Path="/61B641AB" Ref="D?"  Part="1" 
+AR Path="/61B0DAB1/61B641AB" Ref="D15"  Part="1" 
+F 0 "D15" V 4100 6600 50  0000 L CNN
+F 1 "1N4148W" V 4200 6500 50  0000 L CNN
+F 2 "Diode_SMD:D_SOD-123" H 4200 6775 50  0001 C CNN
+F 3 "https://www.vishay.com/docs/85748/1n4148w.pdf" H 4200 6950 50  0001 C CNN
+F 4 "D" H 4200 6950 50  0001 C CNN "Spice_Primitive"
+F 5 "D1N4148" H 4200 6950 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 4200 6950 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    4200 6950
+	0    1    1    0   
+$EndComp
+$Comp
+L Transistor_BJT:MMBT3904 Q?
+U 1 1 61B641B5
+P 2250 4950
+AR Path="/61B641B5" Ref="Q?"  Part="1" 
+AR Path="/61B0DAB1/61B641B5" Ref="Q3"  Part="1" 
+F 0 "Q3" H 2441 4996 50  0000 L CNN
+F 1 "MMBT3904" H 2441 4905 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 2450 4875 50  0001 L CIN
+F 3 "https://www.onsemi.com/pub/Collateral/2N3903-D.PDF" H 2250 4950 50  0001 L CNN
+F 4 "Q" H 2250 4950 50  0001 C CNN "Spice_Primitive"
+F 5 "BC846B" H 2250 4950 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 2250 4950 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "3 1 2" H 2250 4950 50  0001 C CNN "Spice_Node_Sequence"
+	1    2250 4950
+	1    0    0    -1  
+$EndComp
+Connection ~ 2050 4950
+$Comp
+L Transistor_BJT:MMBT3904 Q?
+U 1 1 61B641C0
+P 3750 4950
+AR Path="/61B641C0" Ref="Q?"  Part="1" 
+AR Path="/61B0DAB1/61B641C0" Ref="Q6"  Part="1" 
+F 0 "Q6" H 3941 4996 50  0000 L CNN
+F 1 "MMBT3904" H 3941 4905 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 3950 4875 50  0001 L CIN
+F 3 "https://www.onsemi.com/pub/Collateral/2N3903-D.PDF" H 3750 4950 50  0001 L CNN
+F 4 "Q" H 3750 4950 50  0001 C CNN "Spice_Primitive"
+F 5 "BC846B" H 3750 4950 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 3750 4950 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "3 1 2" H 3750 4950 50  0001 C CNN "Spice_Node_Sequence"
+	1    3750 4950
+	1    0    0    -1  
+$EndComp
+Connection ~ 3550 4950
+$Comp
+L Transistor_BJT:MMBT3904 Q?
+U 1 1 61B641CB
+P 5050 4950
+AR Path="/61B641CB" Ref="Q?"  Part="1" 
+AR Path="/61B0DAB1/61B641CB" Ref="Q10"  Part="1" 
+F 0 "Q10" H 5241 4996 50  0000 L CNN
+F 1 "MMBT3904" H 5241 4905 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 5250 4875 50  0001 L CIN
+F 3 "https://www.onsemi.com/pub/Collateral/2N3903-D.PDF" H 5050 4950 50  0001 L CNN
+F 4 "Q" H 5050 4950 50  0001 C CNN "Spice_Primitive"
+F 5 "BC846B" H 5050 4950 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 5050 4950 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "3 1 2" H 5050 4950 50  0001 C CNN "Spice_Node_Sequence"
+	1    5050 4950
+	1    0    0    -1  
+$EndComp
+Connection ~ 4850 4950
+$Comp
+L Transistor_BJT:MMBT3904 Q?
+U 1 1 61B641D6
+P 2850 6550
+AR Path="/61B641D6" Ref="Q?"  Part="1" 
+AR Path="/61B0DAB1/61B641D6" Ref="Q4"  Part="1" 
+F 0 "Q4" H 3041 6596 50  0000 L CNN
+F 1 "MMBT3904" H 3041 6505 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 3050 6475 50  0001 L CIN
+F 3 "https://www.onsemi.com/pub/Collateral/2N3903-D.PDF" H 2850 6550 50  0001 L CNN
+F 4 "Q" H 2850 6550 50  0001 C CNN "Spice_Primitive"
+F 5 "BC846B" H 2850 6550 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 2850 6550 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "3 2 1" H 2850 6550 50  0001 C CNN "Spice_Node_Sequence"
+	1    2850 6550
+	1    0    0    -1  
+$EndComp
+Connection ~ 2650 6550
+$Comp
+L Transistor_BJT:MMBT3904 Q?
+U 1 1 61B641E1
+P 4400 6600
+AR Path="/61B641E1" Ref="Q?"  Part="1" 
+AR Path="/61B0DAB1/61B641E1" Ref="Q8"  Part="1" 
+F 0 "Q8" H 4591 6646 50  0000 L CNN
+F 1 "MMBT3904" H 4591 6555 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 4600 6525 50  0001 L CIN
+F 3 "https://www.onsemi.com/pub/Collateral/2N3903-D.PDF" H 4400 6600 50  0001 L CNN
+F 4 "Q" H 4400 6600 50  0001 C CNN "Spice_Primitive"
+F 5 "BC846B" H 4400 6600 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 4400 6600 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "3 1 2" H 4400 6600 50  0001 C CNN "Spice_Node_Sequence"
+	1    4400 6600
+	1    0    0    -1  
+$EndComp
+Connection ~ 4200 6600
+$Comp
+L Device:LED D?
+U 1 1 61B641EC
+P 6200 1600
+AR Path="/61B641EC" Ref="D?"  Part="1" 
+AR Path="/61B0DAB1/61B641EC" Ref="D22"  Part="1" 
+F 0 "D22" V 6300 1350 50  0000 C CNN
+F 1 "LED" V 6200 1350 50  0000 C CNN
+F 2 "LED_THT:LED_D3.0mm" H 6200 1600 50  0001 C CNN
+F 3 "~" H 6200 1600 50  0001 C CNN
+F 4 "D" H 6200 1600 50  0001 C CNN "Spice_Primitive"
+F 5 "LED2" H 6200 1600 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 6200 1600 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "LED 3mm low current" V 6200 1600 50  0001 C CNN "Description"
+	1    6200 1600
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 61B641F2
+P 6200 1900
+AR Path="/61B641F2" Ref="#PWR?"  Part="1" 
+AR Path="/61B0DAB1/61B641F2" Ref="#PWR076"  Part="1" 
+F 0 "#PWR076" H 6200 1650 50  0001 C CNN
+F 1 "GND" H 6205 1727 50  0000 C CNN
+F 2 "" H 6200 1900 50  0001 C CNN
+F 3 "" H 6200 1900 50  0001 C CNN
+	1    6200 1900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 61B641F8
+P 6200 900
+AR Path="/61B641F8" Ref="R?"  Part="1" 
+AR Path="/61B0DAB1/61B641F8" Ref="R35"  Part="1" 
+F 0 "R35" H 6270 946 50  0000 L CNN
+F 1 "5.1k" H 6270 855 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 6130 900 50  0001 C CNN
+F 3 "~" H 6200 900 50  0001 C CNN
+	1    6200 900 
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 61B641FE
+P 6200 750
+AR Path="/61B641FE" Ref="#PWR?"  Part="1" 
+AR Path="/61B0DAB1/61B641FE" Ref="#PWR075"  Part="1" 
+F 0 "#PWR075" H 6200 600 50  0001 C CNN
+F 1 "+5V" H 6215 923 50  0000 C CNN
+F 2 "" H 6200 750 50  0001 C CNN
+F 3 "" H 6200 750 50  0001 C CNN
+	1    6200 750 
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 61B64204
+P 5650 1250
+AR Path="/61B64204" Ref="R?"  Part="1" 
+AR Path="/61B0DAB1/61B64204" Ref="R34"  Part="1" 
+F 0 "R34" V 5443 1250 50  0000 C CNN
+F 1 "100k" V 5534 1250 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 5580 1250 50  0001 C CNN
+F 3 "~" H 5650 1250 50  0001 C CNN
+	1    5650 1250
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5800 1250 5900 1250
+Wire Wire Line
+	5900 1450 5900 1250
+Wire Wire Line
+	6200 1750 6200 1800
+Wire Wire Line
+	5900 1800 6200 1800
+Connection ~ 6200 1800
+Wire Wire Line
+	6200 1800 6200 1900
+Wire Wire Line
+	5900 1800 5900 1750
+$Comp
+L Device:LED D?
+U 1 1 61B64216
+P 7700 1600
+AR Path="/61B64216" Ref="D?"  Part="1" 
+AR Path="/61B0DAB1/61B64216" Ref="D26"  Part="1" 
+F 0 "D26" V 7800 1350 50  0000 C CNN
+F 1 "LED" V 7700 1350 50  0000 C CNN
+F 2 "LED_THT:LED_D3.0mm" H 7700 1600 50  0001 C CNN
+F 3 "~" H 7700 1600 50  0001 C CNN
+F 4 "D" H 7700 1600 50  0001 C CNN "Spice_Primitive"
+F 5 "LED2" H 7700 1600 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 7700 1600 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "LED 3mm low current" V 7700 1600 50  0001 C CNN "Description"
+	1    7700 1600
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 61B6421C
+P 7700 1900
+AR Path="/61B6421C" Ref="#PWR?"  Part="1" 
+AR Path="/61B0DAB1/61B6421C" Ref="#PWR080"  Part="1" 
+F 0 "#PWR080" H 7700 1650 50  0001 C CNN
+F 1 "GND" H 7705 1727 50  0000 C CNN
+F 2 "" H 7700 1900 50  0001 C CNN
+F 3 "" H 7700 1900 50  0001 C CNN
+	1    7700 1900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 61B64222
+P 7700 900
+AR Path="/61B64222" Ref="R?"  Part="1" 
+AR Path="/61B0DAB1/61B64222" Ref="R39"  Part="1" 
+F 0 "R39" H 7770 946 50  0000 L CNN
+F 1 "5.1k" H 7770 855 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 7630 900 50  0001 C CNN
+F 3 "~" H 7700 900 50  0001 C CNN
+	1    7700 900 
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 61B64228
+P 7700 750
+AR Path="/61B64228" Ref="#PWR?"  Part="1" 
+AR Path="/61B0DAB1/61B64228" Ref="#PWR079"  Part="1" 
+F 0 "#PWR079" H 7700 600 50  0001 C CNN
+F 1 "+5V" H 7715 923 50  0000 C CNN
+F 2 "" H 7700 750 50  0001 C CNN
+F 3 "" H 7700 750 50  0001 C CNN
+	1    7700 750 
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 61B6422E
+P 7150 1250
+AR Path="/61B6422E" Ref="R?"  Part="1" 
+AR Path="/61B0DAB1/61B6422E" Ref="R38"  Part="1" 
+F 0 "R38" V 6943 1250 50  0000 C CNN
+F 1 "100k" V 7034 1250 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 7080 1250 50  0001 C CNN
+F 3 "~" H 7150 1250 50  0001 C CNN
+	1    7150 1250
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	7300 1250 7400 1250
+Wire Wire Line
+	7400 1450 7400 1250
+Wire Wire Line
+	7700 1750 7700 1800
+Wire Wire Line
+	7400 1800 7700 1800
+Connection ~ 7700 1800
+Wire Wire Line
+	7700 1800 7700 1900
+Wire Wire Line
+	7400 1800 7400 1750
+$Comp
+L Device:LED D?
+U 1 1 61B64240
+P 9000 1600
+AR Path="/61B64240" Ref="D?"  Part="1" 
+AR Path="/61B0DAB1/61B64240" Ref="D30"  Part="1" 
+F 0 "D30" V 9100 1350 50  0000 C CNN
+F 1 "LED" V 9000 1350 50  0000 C CNN
+F 2 "LED_THT:LED_D3.0mm" H 9000 1600 50  0001 C CNN
+F 3 "~" H 9000 1600 50  0001 C CNN
+F 4 "D" H 9000 1600 50  0001 C CNN "Spice_Primitive"
+F 5 "LED2" H 9000 1600 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 9000 1600 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "LED 3mm low current" V 9000 1600 50  0001 C CNN "Description"
+	1    9000 1600
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 61B64246
+P 9000 1900
+AR Path="/61B64246" Ref="#PWR?"  Part="1" 
+AR Path="/61B0DAB1/61B64246" Ref="#PWR084"  Part="1" 
+F 0 "#PWR084" H 9000 1650 50  0001 C CNN
+F 1 "GND" H 9005 1727 50  0000 C CNN
+F 2 "" H 9000 1900 50  0001 C CNN
+F 3 "" H 9000 1900 50  0001 C CNN
+	1    9000 1900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 61B6424C
+P 9000 900
+AR Path="/61B6424C" Ref="R?"  Part="1" 
+AR Path="/61B0DAB1/61B6424C" Ref="R43"  Part="1" 
+F 0 "R43" H 9070 946 50  0000 L CNN
+F 1 "5.1k" H 9070 855 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 8930 900 50  0001 C CNN
+F 3 "~" H 9000 900 50  0001 C CNN
+	1    9000 900 
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 61B64252
+P 9000 750
+AR Path="/61B64252" Ref="#PWR?"  Part="1" 
+AR Path="/61B0DAB1/61B64252" Ref="#PWR083"  Part="1" 
+F 0 "#PWR083" H 9000 600 50  0001 C CNN
+F 1 "+5V" H 9015 923 50  0000 C CNN
+F 2 "" H 9000 750 50  0001 C CNN
+F 3 "" H 9000 750 50  0001 C CNN
+	1    9000 750 
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 61B64258
+P 8450 1250
+AR Path="/61B64258" Ref="R?"  Part="1" 
+AR Path="/61B0DAB1/61B64258" Ref="R42"  Part="1" 
+F 0 "R42" V 8243 1250 50  0000 C CNN
+F 1 "100k" V 8334 1250 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 8380 1250 50  0001 C CNN
+F 3 "~" H 8450 1250 50  0001 C CNN
+	1    8450 1250
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	8600 1250 8700 1250
+Wire Wire Line
+	8700 1450 8700 1250
+Wire Wire Line
+	9000 1750 9000 1800
+Wire Wire Line
+	8700 1800 9000 1800
+Connection ~ 9000 1800
+Wire Wire Line
+	9000 1800 9000 1900
+Wire Wire Line
+	8700 1800 8700 1750
+$Comp
+L Device:LED D?
+U 1 1 61B6426A
+P 6800 3200
+AR Path="/61B6426A" Ref="D?"  Part="1" 
+AR Path="/61B0DAB1/61B6426A" Ref="D24"  Part="1" 
+F 0 "D24" V 6900 2950 50  0000 C CNN
+F 1 "LED" V 6800 2950 50  0000 C CNN
+F 2 "LED_THT:LED_D3.0mm" H 6800 3200 50  0001 C CNN
+F 3 "~" H 6800 3200 50  0001 C CNN
+F 4 "D" H 6800 3200 50  0001 C CNN "Spice_Primitive"
+F 5 "LED2" H 6800 3200 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 6800 3200 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "LED 3mm low current" V 6800 3200 50  0001 C CNN "Description"
+	1    6800 3200
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 61B64270
+P 6800 3500
+AR Path="/61B64270" Ref="#PWR?"  Part="1" 
+AR Path="/61B0DAB1/61B64270" Ref="#PWR078"  Part="1" 
+F 0 "#PWR078" H 6800 3250 50  0001 C CNN
+F 1 "GND" H 6805 3327 50  0000 C CNN
+F 2 "" H 6800 3500 50  0001 C CNN
+F 3 "" H 6800 3500 50  0001 C CNN
+	1    6800 3500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 61B64276
+P 6800 2500
+AR Path="/61B64276" Ref="R?"  Part="1" 
+AR Path="/61B0DAB1/61B64276" Ref="R37"  Part="1" 
+F 0 "R37" H 6870 2546 50  0000 L CNN
+F 1 "5k" H 6870 2455 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 6730 2500 50  0001 C CNN
+F 3 "~" H 6800 2500 50  0001 C CNN
+	1    6800 2500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 61B6427C
+P 6800 2350
+AR Path="/61B6427C" Ref="#PWR?"  Part="1" 
+AR Path="/61B0DAB1/61B6427C" Ref="#PWR077"  Part="1" 
+F 0 "#PWR077" H 6800 2200 50  0001 C CNN
+F 1 "+5V" H 6815 2523 50  0000 C CNN
+F 2 "" H 6800 2350 50  0001 C CNN
+F 3 "" H 6800 2350 50  0001 C CNN
+	1    6800 2350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 61B64282
+P 6250 2850
+AR Path="/61B64282" Ref="R?"  Part="1" 
+AR Path="/61B0DAB1/61B64282" Ref="R36"  Part="1" 
+F 0 "R36" V 6043 2850 50  0000 C CNN
+F 1 "100k" V 6134 2850 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 6180 2850 50  0001 C CNN
+F 3 "~" H 6250 2850 50  0001 C CNN
+	1    6250 2850
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6400 2850 6500 2850
+Wire Wire Line
+	6500 3050 6500 2850
+Wire Wire Line
+	6800 3350 6800 3400
+Wire Wire Line
+	6500 3400 6800 3400
+Connection ~ 6800 3400
+Wire Wire Line
+	6800 3400 6800 3500
+Wire Wire Line
+	6500 3400 6500 3350
+$Comp
+L Device:LED D?
+U 1 1 61B64294
+P 8350 3250
+AR Path="/61B64294" Ref="D?"  Part="1" 
+AR Path="/61B0DAB1/61B64294" Ref="D28"  Part="1" 
+F 0 "D28" V 8450 3000 50  0000 C CNN
+F 1 "LED" V 8350 3000 50  0000 C CNN
+F 2 "LED_THT:LED_D3.0mm" H 8350 3250 50  0001 C CNN
+F 3 "~" H 8350 3250 50  0001 C CNN
+F 4 "D" H 8350 3250 50  0001 C CNN "Spice_Primitive"
+F 5 "LED1" H 8350 3250 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 8350 3250 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "LED 3mm low current" V 8350 3250 50  0001 C CNN "Description"
+	1    8350 3250
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 61B6429A
+P 8350 3550
+AR Path="/61B6429A" Ref="#PWR?"  Part="1" 
+AR Path="/61B0DAB1/61B6429A" Ref="#PWR082"  Part="1" 
+F 0 "#PWR082" H 8350 3300 50  0001 C CNN
+F 1 "GND" H 8355 3377 50  0000 C CNN
+F 2 "" H 8350 3550 50  0001 C CNN
+F 3 "" H 8350 3550 50  0001 C CNN
+	1    8350 3550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 61B642A0
+P 8350 2550
+AR Path="/61B642A0" Ref="R?"  Part="1" 
+AR Path="/61B0DAB1/61B642A0" Ref="R41"  Part="1" 
+F 0 "R41" H 8420 2596 50  0000 L CNN
+F 1 "5k" H 8420 2505 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 8280 2550 50  0001 C CNN
+F 3 "~" H 8350 2550 50  0001 C CNN
+	1    8350 2550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 61B642A6
+P 8350 2400
+AR Path="/61B642A6" Ref="#PWR?"  Part="1" 
+AR Path="/61B0DAB1/61B642A6" Ref="#PWR081"  Part="1" 
+F 0 "#PWR081" H 8350 2250 50  0001 C CNN
+F 1 "+5V" H 8365 2573 50  0000 C CNN
+F 2 "" H 8350 2400 50  0001 C CNN
+F 3 "" H 8350 2400 50  0001 C CNN
+	1    8350 2400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 61B642AC
+P 7800 2900
+AR Path="/61B642AC" Ref="R?"  Part="1" 
+AR Path="/61B0DAB1/61B642AC" Ref="R40"  Part="1" 
+F 0 "R40" V 7593 2900 50  0000 C CNN
+F 1 "100k" V 7684 2900 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 7730 2900 50  0001 C CNN
+F 3 "~" H 7800 2900 50  0001 C CNN
+	1    7800 2900
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	7950 2900 8050 2900
+Wire Wire Line
+	8050 3100 8050 2900
+Wire Wire Line
+	8350 3400 8350 3450
+Wire Wire Line
+	8050 3450 8350 3450
+Connection ~ 8350 3450
+Wire Wire Line
+	8350 3450 8350 3550
+Wire Wire Line
+	8050 3450 8050 3400
+$Comp
+L Diode:1N4148W D?
+U 1 1 61B642BD
+P 8700 1600
+AR Path="/61B642BD" Ref="D?"  Part="1" 
+AR Path="/61B0DAB1/61B642BD" Ref="D29"  Part="1" 
+F 0 "D29" V 8600 1250 50  0000 L CNN
+F 1 "1N4148W" V 8700 1150 50  0000 L CNN
+F 2 "Diode_SMD:D_SOD-123" H 8700 1425 50  0001 C CNN
+F 3 "https://www.vishay.com/docs/85748/1n4148w.pdf" H 8700 1600 50  0001 C CNN
+F 4 "D" H 8700 1600 50  0001 C CNN "Spice_Primitive"
+F 5 "D1N4148" H 8700 1600 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 8700 1600 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    8700 1600
+	0    1    1    0   
+$EndComp
+$Comp
+L Diode:1N4148W D?
+U 1 1 61B642C6
+P 7400 1600
+AR Path="/61B642C6" Ref="D?"  Part="1" 
+AR Path="/61B0DAB1/61B642C6" Ref="D25"  Part="1" 
+F 0 "D25" V 7300 1250 50  0000 L CNN
+F 1 "1N4148W" V 7400 1150 50  0000 L CNN
+F 2 "Diode_SMD:D_SOD-123" H 7400 1425 50  0001 C CNN
+F 3 "https://www.vishay.com/docs/85748/1n4148w.pdf" H 7400 1600 50  0001 C CNN
+F 4 "D" H 7400 1600 50  0001 C CNN "Spice_Primitive"
+F 5 "D1N4148" H 7400 1600 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 7400 1600 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    7400 1600
+	0    1    1    0   
+$EndComp
+$Comp
+L Diode:1N4148W D?
+U 1 1 61B642CF
+P 5900 1600
+AR Path="/61B642CF" Ref="D?"  Part="1" 
+AR Path="/61B0DAB1/61B642CF" Ref="D21"  Part="1" 
+F 0 "D21" V 5800 1250 50  0000 L CNN
+F 1 "1N4148W" V 5900 1150 50  0000 L CNN
+F 2 "Diode_SMD:D_SOD-123" H 5900 1425 50  0001 C CNN
+F 3 "https://www.vishay.com/docs/85748/1n4148w.pdf" H 5900 1600 50  0001 C CNN
+F 4 "D" H 5900 1600 50  0001 C CNN "Spice_Primitive"
+F 5 "D1N4148" H 5900 1600 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 5900 1600 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    5900 1600
+	0    1    1    0   
+$EndComp
+$Comp
+L Diode:1N4148W D?
+U 1 1 61B642D8
+P 6500 3200
+AR Path="/61B642D8" Ref="D?"  Part="1" 
+AR Path="/61B0DAB1/61B642D8" Ref="D23"  Part="1" 
+F 0 "D23" V 6400 2850 50  0000 L CNN
+F 1 "1N4148W" V 6500 2750 50  0000 L CNN
+F 2 "Diode_SMD:D_SOD-123" H 6500 3025 50  0001 C CNN
+F 3 "https://www.vishay.com/docs/85748/1n4148w.pdf" H 6500 3200 50  0001 C CNN
+F 4 "D" H 6500 3200 50  0001 C CNN "Spice_Primitive"
+F 5 "D1N4148" H 6500 3200 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 6500 3200 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    6500 3200
+	0    1    1    0   
+$EndComp
+$Comp
+L Diode:1N4148W D?
+U 1 1 61B642E1
+P 8050 3250
+AR Path="/61B642E1" Ref="D?"  Part="1" 
+AR Path="/61B0DAB1/61B642E1" Ref="D27"  Part="1" 
+F 0 "D27" V 7950 2900 50  0000 L CNN
+F 1 "1N4148W" V 8050 2800 50  0000 L CNN
+F 2 "Diode_SMD:D_SOD-123" H 8050 3075 50  0001 C CNN
+F 3 "https://www.vishay.com/docs/85748/1n4148w.pdf" H 8050 3250 50  0001 C CNN
+F 4 "D" H 8050 3250 50  0001 C CNN "Spice_Primitive"
+F 5 "D1N4148" H 8050 3250 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 8050 3250 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    8050 3250
+	0    1    1    0   
+$EndComp
+$Comp
+L Transistor_BJT:MMBT3904 Q?
+U 1 1 61B642EB
+P 6100 1250
+AR Path="/61B642EB" Ref="Q?"  Part="1" 
+AR Path="/61B0DAB1/61B642EB" Ref="Q11"  Part="1" 
+F 0 "Q11" H 6291 1296 50  0000 L CNN
+F 1 "MMBT3904" H 6291 1205 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 6300 1175 50  0001 L CIN
+F 3 "https://www.onsemi.com/pub/Collateral/2N3903-D.PDF" H 6100 1250 50  0001 L CNN
+F 4 "Q" H 6100 1250 50  0001 C CNN "Spice_Primitive"
+F 5 "BC846B" H 6100 1250 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 6100 1250 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "3 1 2" H 6100 1250 50  0001 C CNN "Spice_Node_Sequence"
+	1    6100 1250
+	1    0    0    -1  
+$EndComp
+Connection ~ 5900 1250
+$Comp
+L Transistor_BJT:MMBT3904 Q?
+U 1 1 61B642F6
+P 7600 1250
+AR Path="/61B642F6" Ref="Q?"  Part="1" 
+AR Path="/61B0DAB1/61B642F6" Ref="Q13"  Part="1" 
+F 0 "Q13" H 7791 1296 50  0000 L CNN
+F 1 "MMBT3904" H 7791 1205 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 7800 1175 50  0001 L CIN
+F 3 "https://www.onsemi.com/pub/Collateral/2N3903-D.PDF" H 7600 1250 50  0001 L CNN
+F 4 "Q" H 7600 1250 50  0001 C CNN "Spice_Primitive"
+F 5 "BC846B" H 7600 1250 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 7600 1250 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "3 1 2" H 7600 1250 50  0001 C CNN "Spice_Node_Sequence"
+	1    7600 1250
+	1    0    0    -1  
+$EndComp
+Connection ~ 7400 1250
+$Comp
+L Transistor_BJT:MMBT3904 Q?
+U 1 1 61B64301
+P 8900 1250
+AR Path="/61B64301" Ref="Q?"  Part="1" 
+AR Path="/61B0DAB1/61B64301" Ref="Q15"  Part="1" 
+F 0 "Q15" H 9091 1296 50  0000 L CNN
+F 1 "MMBT3904" H 9091 1205 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 9100 1175 50  0001 L CIN
+F 3 "https://www.onsemi.com/pub/Collateral/2N3903-D.PDF" H 8900 1250 50  0001 L CNN
+F 4 "Q" H 8900 1250 50  0001 C CNN "Spice_Primitive"
+F 5 "BC846B" H 8900 1250 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 8900 1250 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "3 1 2" H 8900 1250 50  0001 C CNN "Spice_Node_Sequence"
+	1    8900 1250
+	1    0    0    -1  
+$EndComp
+Connection ~ 8700 1250
+$Comp
+L Transistor_BJT:MMBT3904 Q?
+U 1 1 61B6430C
+P 6700 2850
+AR Path="/61B6430C" Ref="Q?"  Part="1" 
+AR Path="/61B0DAB1/61B6430C" Ref="Q12"  Part="1" 
+F 0 "Q12" H 6891 2896 50  0000 L CNN
+F 1 "MMBT3904" H 6891 2805 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 6900 2775 50  0001 L CIN
+F 3 "https://www.onsemi.com/pub/Collateral/2N3903-D.PDF" H 6700 2850 50  0001 L CNN
+F 4 "Q" H 6700 2850 50  0001 C CNN "Spice_Primitive"
+F 5 "BC846B" H 6700 2850 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 6700 2850 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "3 2 1" H 6700 2850 50  0001 C CNN "Spice_Node_Sequence"
+	1    6700 2850
+	1    0    0    -1  
+$EndComp
+Connection ~ 6500 2850
+$Comp
+L Transistor_BJT:MMBT3904 Q?
+U 1 1 61B64317
+P 8250 2900
+AR Path="/61B64317" Ref="Q?"  Part="1" 
+AR Path="/61B0DAB1/61B64317" Ref="Q14"  Part="1" 
+F 0 "Q14" H 8441 2946 50  0000 L CNN
+F 1 "MMBT3904" H 8441 2855 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 8450 2825 50  0001 L CIN
+F 3 "https://www.onsemi.com/pub/Collateral/2N3903-D.PDF" H 8250 2900 50  0001 L CNN
+F 4 "Q" H 8250 2900 50  0001 C CNN "Spice_Primitive"
+F 5 "BC846B" H 8250 2900 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 8250 2900 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "3 1 2" H 8250 2900 50  0001 C CNN "Spice_Node_Sequence"
+	1    8250 2900
+	1    0    0    -1  
+$EndComp
+Connection ~ 8050 2900
+Text HLabel 1050 1350 0    50   Input ~ 0
+IN_1
+Text HLabel 2550 1350 0    50   Input ~ 0
+IN_2
+Text HLabel 3850 1350 0    50   Input ~ 0
+IN_3
+Text HLabel 1650 2950 0    50   Input ~ 0
+IN_4
+Text HLabel 3200 3000 0    50   Input ~ 0
+IN_5
+Text HLabel 5500 1250 0    50   Input ~ 0
+CV_1
+Text HLabel 7000 1250 0    50   Input ~ 0
+CV_2
+Text HLabel 8300 1250 0    50   Input ~ 0
+CV_3
+Text HLabel 6100 2850 0    50   Input ~ 0
+CV_4
+Text HLabel 7650 2900 0    50   Input ~ 0
+CV_5
+Text HLabel 1650 4950 0    50   Input ~ 0
+OUT_1
+Text HLabel 3150 4950 0    50   Input ~ 0
+OUT_2
+Text HLabel 4450 4950 0    50   Input ~ 0
+OUT_3
+Text HLabel 2250 6550 0    50   Input ~ 0
+OUT_4
+Text HLabel 3800 6600 0    50   Input ~ 0
+OUT_5
+$EndSCHEMATC
