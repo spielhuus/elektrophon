@@ -1,4 +1,4 @@
-baseURL = "https://spielhuus.github.io/elektrophon/"
+baseURL = "https://www.elektrophon.org"
 languageCode = "en-us"
 title = "elektrophon"
 theme = "elektrophon"
