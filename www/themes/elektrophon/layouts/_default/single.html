@@ -13,6 +13,42 @@
     <div class="container">
         <div class="content">
             {{ .Content }}
+            {{ if (isset .Params "todo") }}
+            <h2 class="is-subtitle">TODO</h2>
+            <table class="table table is-striped table is-hoverable table is-fullwidth">
+                <col style="width:10%">
+                <col style="width:10%">
+                <col style="width:80%">
+                        <thead>
+                    <tr>
+                      <th>Date</th>
+                      <th>Title</th>
+                      <th>Description</th>
+                    </tr>
+                  </thead>
+                {{ range .Params.todo }}
+                <tr><td>{{ .date }}</td><td><strong>{{ .title }}</strong></td><td>{{ .description }}</td></tr>
+                {{ end }}
+            </table>
+            {{ end }}
+            {{ if (isset .Params "history") }}
+            <h2 class="is-subtitle">history</h2>
+            <table class="table table is-striped table is-hoverable table is-fullwidth">
+                <col style="width:10%">
+                <col style="width:10%">
+                <col style="width:80%">
+                <thead>
+                    <tr>
+                      <th>Rev.</th>
+                      <th>Date</th>
+                      <th>Description</th>
+                    </tr>
+                  </thead>
+                {{ range .Params.history }}
+                <tr><td>{{ .revision }}</td><td><strong>{{ .date }}</strong></td><td>{{ .description }}</td></tr>
+                {{ end }}
+            </table>
+            {{ end }}
             {{ if (isset .Params "references") }}
             <h2 class="is-subtitle">references</h2>
             <ul>

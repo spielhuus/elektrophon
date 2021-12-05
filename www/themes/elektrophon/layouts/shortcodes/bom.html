@@ -3,10 +3,8 @@
 
 <h2 class="is-subtitle">BOM</h2>
 
-{{range $board := $allparams }}
-{{if eq $board (index $allparams 0) }}
-<!-- if it is, do nada -->
-{{else}}
+{{range $i, $board :=  $allparams }}
+{{ if gt $i 0 }}
 
 <h3 class="is-subtitle">{{ $board }}</h3>
 <table class="table is-striped is-hoverable is-narrow bom">
