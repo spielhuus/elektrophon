@@ -32,7 +32,7 @@
             </table>
             {{ end }}
             {{ if (isset .Params "history") }}
-            <h2 class="is-subtitle">history</h2>
+            <h2 class="is-subtitle">History</h2>
             <table class="table table is-striped table is-hoverable table is-fullwidth">
                 <col style="width:10%">
                 <col style="width:10%">
@@ -50,7 +50,7 @@
             </table>
             {{ end }}
             {{ if (isset .Params "references") }}
-            <h2 class="is-subtitle">references</h2>
+            <h2 class="is-subtitle">References</h2>
             <ul>
                 {{ range .Params.references }}
                 <li><strong><a href="{{ .url }}">{{ .title }}</a></strong>&nbsp;{{ .description }}</li>

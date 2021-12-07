@@ -28,3 +28,19 @@ svg {
     max-width: 100%;
     max-height: 100%;
 }
+
+.card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-content {
+    height: 100%;
+}
+
+.table {
+    word-wrap: break-word; 
+    table-layout:fixed;
+    width: 100%;
+}

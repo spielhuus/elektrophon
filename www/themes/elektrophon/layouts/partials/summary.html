@@ -1,5 +1,5 @@
 <div class="column is-4">
-  <div style="height: 580px;" class="card">
+  <div class="card">
     <div class="card-image">
       <a href="{{ .RelPermalink }}">
         <figure class="image is-4by3">
@@ -12,16 +12,20 @@
       </a>
     </div>
     <div class="card-content">
-      <div class="columns">
-        <div class="column is-three-quarters">
-          <h4><a href="{{ .RelPermalink }}">{{ replace  .Params.Title "_" " " }}</a></h4>
+      <nav class="level">
+        <div class="level-left">
+          <div class="level-item">
+            <h4><a href="{{ .RelPermalink }}">{{ replace  .Params.Title "_" " " }}</a></h4>
+          </div>
         </div>
-        <div class="column is-one-quarter has-text-right mr-4">
-          {{ range $name := .Params.Categories }}
-          <span class="tag is-light"><a href="{{ "/categories/" | relLangURL }}{{ $name | urlize }}">{{ $name }}</a></span>
-          {{ end }}
+        <div class="level-right">
+          <div class="level-item">
+            {{ range $name := .Params.Categories }}
+            <span class="tag is-light"><a href="{{ "/categories/" | relLangURL }}{{ $name | urlize }}">{{ $name }}</a></span>
+            {{ end }}
+            </div>
         </div>
-      </div>
+      </nav>
       <p>{{ .Params.subtitle }}</p>
     </div>
   </div>

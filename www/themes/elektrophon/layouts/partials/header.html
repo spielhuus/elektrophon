@@ -99,7 +99,7 @@
         {{ $drc := int (index .Site.Data.report .Params.Title ).summary.drc }}
         {{ $erc := int (index .Site.Data.report .Params.Title ).summary.erc }}
         {{ $unconnected := int (index .Site.Data.report .Params.Title ).summary.unconnected }}
-        <div class="field is-grouped">
+        <div class="field is-grouped is-hidden-mobile">
           <div class="control">
             <div class="tags has-addons is-normal">
               {{ if eq .Params.Version 0 }}

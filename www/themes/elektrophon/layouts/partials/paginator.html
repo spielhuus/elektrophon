@@ -9,11 +9,14 @@
 {{ if gt $paginator.TotalPages 1 }}
 <nav class="pagination is-centered" role="navigation" aria-label="pagination">
     {{ if $paginator.HasPrev }}
-    <a class="pagination-previous" href="{{ $paginator.Prev.URL }}">Previous</a>
+    <a class="pagination-previous">Previous</a>
+    {{ end }}
+    {{ if $paginator.HasNext }}
+      <a class="pagination-next" href="{{ $paginator.Next.URL }}">Next</a>
     {{ end }}
 
-    {{ range $paginator.Pagers }}
     <ul class="pagination-list">
+      {{ range $paginator.Pagers }}
       {{ if gt $paginator.TotalPages $min_links }}
         {{ $.Scratch.Set "page_number_flag" false }}
         {{ if eq .PageNumber 1 }}
@@ -22,7 +25,7 @@
 
         {{ if eq .PageNumber 2 }}
           {{ if gt $paginator.PageNumber $lower_gap }}
-            <li><span>...</span></li>
+          <li><span class="pagination-ellipsis">&hellip;</span></li>
           {{ else if eq $paginator.PageNumber $lower_gap }}
             {{ $.Scratch.Set "page_number_flag" true }}
           {{ end }}
@@ -54,13 +57,7 @@
       {{ if eq ($.Scratch.Get "page_number_flag") true }}
         <li><a class="pagination-link {{ if eq . $paginator }} is-current{{ end }}" aria-label="Goto page 1" href="{{ .URL }}">{{ .PageNumber }}</a></li>
       {{ end }}
-    </ul>
     {{ end }}
-
-    {{ if $paginator.HasNext }}
-    <!-- li class="page-item next" -->
-      <a class="pagination-next" href="{{ $paginator.Next.URL }}">Next</a>
-    <!-- /li -->
-    {{ end }}
+  </ul>
 </nav>
 {{ end }} 

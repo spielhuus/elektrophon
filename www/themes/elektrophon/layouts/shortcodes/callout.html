@@ -2,14 +2,12 @@
 {{ $name := .Get 0 }}
 <div class="columns is-multiline is-centered my-6">
     <div class="column is-3 has-text-centered">
-        <div class="icon callout-icon">
+        <div class="icon callout-icon mt-6">
             <i class="fas fa-file-download fa-4x"></i>
         </div>
-        <p class="title is-5 mt-6">schema</p>
-        {{range $board := $allparams }}
-        {{if eq $board (index $allparams 0) }}
-        <!-- if it is, do nada -->
-        {{else}}
+        <p class="title is-5 mt-3">schema</p>
+        {{range $i, $board :=  $allparams }}
+        {{ if gt $i 0 }}    
             {{if ne $board "panel" }}
             <a href="{{ $.Site.BaseURL }}/{{ $name }}_{{ $board }}_schematic.pdf" class="button is-light">
                 {{ $board }}
@@ -19,14 +17,12 @@
         {{ end }}
     </div>
     <div class="column is-3 has-text-centered">
-        <div class="icon callout-icon">
+        <div class="icon callout-icon mt-6">
             <i class="fas fa-code-branch fa-4x"></i>
         </div>
-        <p class="title is-5 mt-6">PCB</p>
-        {{range $board := $allparams }}
-        {{if eq $board (index $allparams 0) }}
-        <!-- if it is, do nada -->
-        {{else}}
+        <p class="title is-5 mt-3">PCB</p>
+        {{range $i, $board :=  $allparams }}
+        {{ if gt $i 0 }}    
             <a href="{{ $.Site.BaseURL }}/{{ $name }}_{{ $board }}_pcb.pdf" class="button is-light">
                 {{ $board }}
             </a>
@@ -34,14 +30,12 @@
         {{ end }}
     </div>
     <div class="column is-3 has-text-centered">
-        <div class="icon callout-icon">
+        <div class="icon callout-icon mt-6">
             <i class="fas fa-industry fa-4x"></i>
         </div>
-        <p class="title is-5 mt-6">gerber</p>
-        {{range $board := $allparams }}
-        {{if eq $board (index $allparams 0) }}
-        <!-- if it is, do nada -->
-        {{else}}
+        <p class="title is-5 mt-3">gerber</p>
+        {{range $i, $board :=  $allparams }}
+        {{ if gt $i 0 }}    
             <a href="{{ $.Site.BaseURL }}/{{ $name }}_{{ $board }}_JLCPCB.zip" class="button is-light">
                 {{ $board }}
             </a>
