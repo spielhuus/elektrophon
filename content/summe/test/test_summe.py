@@ -105,27 +105,6 @@ def test_non_inverting_output():
     analysis_op = simulator.operating_point()
     result = float(analysis_op["/OUT"]) 
     assert result == approx( 4.95, rel=1e-2 )
-    
-# def test_led1_current():
-#    simulator = load(0.999999, 0.5, 0.5, 0.5).simulator(temperature=25, nominal_temperature=25)
-#    simulator.save_currents = True
-#    simulator.save('@R29[i]')
-#
-#    analysis_op = simulator.transient(step_time=1@u_us, start_time=0@u_ms, end_time=10@u_ms)
-#    analysis_op = simulator.operating_point()
-
-#    print("input voltage %f " % analysis_op['/IN_1'][20])
-#    print("base voltage %f " % analysis_op['Net-_D1-Pad1_'][20])
-#    print("emitter current %f " % analysis_op['@Q1[ie]'][20])
-#    print("emitter current %f " % analysis_op['@R29[i]'])
-#    print("base current %f " % analysis_op['@R23[i]'][20])
-#    result = float(analysis_op["/IN_1"]) 
-#    result = float(analysis_op["Net-_D2-Pad2_"][20]) 
-#    result = float(analysis_op["Net-_D8-Pad2_"]) 
-#    print( "Diode Voltage: %f " % result )
-#    assert result == approx( 4.95, rel=1e-2 )
-#    assert True == False
-
 
 def load(div1=0.0000001, div2=0.5, div3=0.5, div4=0.5):
     ## setup spice library path
@@ -139,8 +118,8 @@ def load(div1=0.0000001, div2=0.5, div3=0.5, div4=0.5):
     parser = SpiceParser(path=str(kicad_netlist_path))
 
     circuit = parser.build_circuit(ground=5)
-    circuit.include(spice_library['OPA2134'])
-    circuit.include(spice_library['OPA2134d'])
+    #circuit.include(spice_library['LM4040_NA10P0'])
+    circuit.include(spice_library['TL072c'])
     circuit.include(spice_library['LED1'])
     circuit.include(spice_library['LED2'])
     circuit.include(spice_library['D1N4148'])

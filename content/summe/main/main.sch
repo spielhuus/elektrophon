@@ -229,6 +229,7 @@ F 3 "~" H 2200 6950 50  0001 C CNN
 F 4 "R" H 2200 6950 50  0001 C CNN "Spice_Primitive"
 F 5 "10" H 2200 6950 50  0001 C CNN "Spice_Model"
 F 6 "N" H 2200 6950 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "Metal Film Resistors - Through Hole (L=3.6 mm, D=1.6 mm, 1%)" V 2200 6950 50  0001 C CNN "Description"
 	1    2200 6950
 	0    1    1    0   
 $EndComp
@@ -269,6 +270,7 @@ F 3 "~" H 2200 7550 50  0001 C CNN
 F 4 "R" H 2200 7550 50  0001 C CNN "Spice_Primitive"
 F 5 "10" H 2200 7550 50  0001 C CNN "Spice_Model"
 F 6 "N" H 2200 7550 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "Metal Film Resistors - Through Hole (L=3.6 mm, D=1.6 mm, 1%)" V 2200 7550 50  0001 C CNN "Description"
 	1    2200 7550
 	0    1    1    0   
 $EndComp
@@ -373,6 +375,7 @@ F 0 "R36" V 8850 1450 50  0000 C CNN
 F 1 "100k" V 8750 1450 50  0000 C CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 8530 1450 50  0001 C CNN
 F 3 "~" H 8600 1450 50  0001 C CNN
+F 4 "Thick Film Resistors - SMD (0805)" V 8600 1450 50  0001 C CNN "Description"
 	1    8600 1450
 	0    -1   -1   0   
 $EndComp
@@ -384,138 +387,9 @@ F 0 "R33" H 7930 2004 50  0000 R CNN
 F 1 "100k" H 7930 2095 50  0000 R CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 7930 2050 50  0001 C CNN
 F 3 "~" H 8000 2050 50  0001 C CNN
+F 4 "Thick Film Resistors - SMD (0805)" H 8000 2050 50  0001 C CNN "Description"
 	1    8000 2050
 	0    -1   -1   0   
-$EndComp
-Connection ~ 3250 4900
-Connection ~ 3200 3850
-Connection ~ 3150 2800
-Connection ~ 3150 1700
-$Comp
-L Amplifier_Operational:OPA2134 U3
-U 3 1 5EB84906
-P 6550 7250
-F 0 "U3" H 6508 7296 50  0000 L CNN
-F 1 "OPA2134" H 6508 7205 50  0000 L CNN
-F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 6550 7250 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/opa134.pdf" H 6550 7250 50  0001 C CNN
-F 4 "X" H 6550 7250 50  0001 C CNN "Spice_Primitive"
-F 5 "OPA2134d" H 6550 7250 50  0001 C CNN "Spice_Model"
-F 6 "Y" H 6550 7250 50  0001 C CNN "Spice_Netlist_Enabled"
-	3    6550 7250
-	1    0    0    -1  
-$EndComp
-$Comp
-L Amplifier_Operational:OPA2134 U3
-U 2 1 5EB84900
-P 8550 2150
-F 0 "U3" H 8550 1783 50  0000 C CNN
-F 1 "OPA2134" H 8550 1874 50  0000 C CNN
-F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 8550 2150 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/opa134.pdf" H 8550 2150 50  0001 C CNN
-F 4 "X" H 8550 2150 50  0001 C CNN "Spice_Primitive"
-F 5 "OPA2134d" H 8550 2150 50  0001 C CNN "Spice_Model"
-F 6 "Y" H 8550 2150 50  0001 C CNN "Spice_Netlist_Enabled"
-	2    8550 2150
-	1    0    0    1   
-$EndComp
-$Comp
-L Amplifier_Operational:OPA2134 U3
-U 1 1 5EB848FA
-P 7400 2050
-F 0 "U3" H 7400 1683 50  0000 C CNN
-F 1 "OPA2134" H 7400 1774 50  0000 C CNN
-F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 7400 2050 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/opa134.pdf" H 7400 2050 50  0001 C CNN
-F 4 "X" H 7400 2050 50  0001 C CNN "Spice_Primitive"
-F 5 "OPA2134d" H 7400 2050 50  0001 C CNN "Spice_Model"
-F 6 "Y" H 7400 2050 50  0001 C CNN "Spice_Netlist_Enabled"
-	1    7400 2050
-	1    0    0    1   
-$EndComp
-$Comp
-L Amplifier_Operational:OPA2134 U2
-U 3 1 5EB7FAE8
-P 5400 7250
-F 0 "U2" H 5358 7296 50  0000 L CNN
-F 1 "OPA2134" H 5358 7205 50  0000 L CNN
-F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 5400 7250 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/opa134.pdf" H 5400 7250 50  0001 C CNN
-F 4 "X" H 5400 7250 50  0001 C CNN "Spice_Primitive"
-F 5 "OPA2134d" H 5400 7250 50  0001 C CNN "Spice_Model"
-F 6 "Y" H 5400 7250 50  0001 C CNN "Spice_Netlist_Enabled"
-	3    5400 7250
-	1    0    0    -1  
-$EndComp
-$Comp
-L Amplifier_Operational:OPA2134 U2
-U 2 1 5EB7FAE2
-P 3550 5000
-F 0 "U2" H 3550 4633 50  0000 C CNN
-F 1 "OPA2134" H 3550 4724 50  0000 C CNN
-F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 3550 5000 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/opa134.pdf" H 3550 5000 50  0001 C CNN
-F 4 "X" H 3550 5000 50  0001 C CNN "Spice_Primitive"
-F 5 "OPA2134d" H 3550 5000 50  0001 C CNN "Spice_Model"
-F 6 "Y" H 3550 5000 50  0001 C CNN "Spice_Netlist_Enabled"
-	2    3550 5000
-	1    0    0    1   
-$EndComp
-$Comp
-L Amplifier_Operational:OPA2134 U2
-U 1 1 5EB7FADC
-P 3500 3950
-F 0 "U2" H 3500 3583 50  0000 C CNN
-F 1 "OPA2134" H 3500 3674 50  0000 C CNN
-F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 3500 3950 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/opa134.pdf" H 3500 3950 50  0001 C CNN
-F 4 "X" H 3500 3950 50  0001 C CNN "Spice_Primitive"
-F 5 "OPA2134d" H 3500 3950 50  0001 C CNN "Spice_Model"
-F 6 "Y" H 3500 3950 50  0001 C CNN "Spice_Netlist_Enabled"
-	1    3500 3950
-	1    0    0    1   
-$EndComp
-$Comp
-L Amplifier_Operational:OPA2134 U1
-U 3 1 5EB7BA39
-P 4200 7250
-F 0 "U1" H 4158 7296 50  0000 L CNN
-F 1 "OPA2134" H 4158 7205 50  0000 L CNN
-F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 4200 7250 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/opa134.pdf" H 4200 7250 50  0001 C CNN
-F 4 "X" H 4200 7250 50  0001 C CNN "Spice_Primitive"
-F 5 "OPA2134d" H 4200 7250 50  0001 C CNN "Spice_Model"
-F 6 "Y" H 4200 7250 50  0001 C CNN "Spice_Netlist_Enabled"
-	3    4200 7250
-	1    0    0    -1  
-$EndComp
-$Comp
-L Amplifier_Operational:OPA2134 U1
-U 2 1 5EB7A226
-P 3450 2900
-F 0 "U1" H 3450 2533 50  0000 C CNN
-F 1 "OPA2134" H 3450 2624 50  0000 C CNN
-F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 3450 2900 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/opa134.pdf" H 3450 2900 50  0001 C CNN
-F 4 "X" H 3450 2900 50  0001 C CNN "Spice_Primitive"
-F 5 "OPA2134d" H 3450 2900 50  0001 C CNN "Spice_Model"
-F 6 "Y" H 3450 2900 50  0001 C CNN "Spice_Netlist_Enabled"
-	2    3450 2900
-	1    0    0    1   
-$EndComp
-$Comp
-L Amplifier_Operational:OPA2134 U1
-U 1 1 5EB78EF1
-P 3450 1800
-F 0 "U1" H 3450 1433 50  0000 C CNN
-F 1 "OPA2134" H 3450 1524 50  0000 C CNN
-F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 3450 1800 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/opa134.pdf" H 3450 1800 50  0001 C CNN
-F 4 "X" H 3450 1800 50  0001 C CNN "Spice_Primitive"
-F 5 "OPA2134d" H 3450 1800 50  0001 C CNN "Spice_Model"
-F 6 "Y" H 3450 1800 50  0001 C CNN "Spice_Netlist_Enabled"
-	1    3450 1800
-	1    0    0    1   
 $EndComp
 $Comp
 L Device:C C6
@@ -618,6 +492,7 @@ F 0 "R39" H 9080 2104 50  0000 R CNN
 F 1 "1k" H 9080 2195 50  0000 R CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 9080 2150 50  0001 C CNN
 F 3 "~" H 9150 2150 50  0001 C CNN
+F 4 "Thick Film Resistors - SMD (0805)" H 9150 2150 50  0001 C CNN "Description"
 	1    9150 2150
 	0    -1   -1   0   
 $EndComp
@@ -643,6 +518,7 @@ F 3 "~" H 9750 2150 50  0001 C CNN
 F 4 "X" H 9750 2150 50  0001 C CNN "Spice_Primitive"
 F 5 "OUT" H 9750 2150 50  0001 C CNN "Spice_Model"
 F 6 "Y" H 9750 2150 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "3.5mm Eurorack Jacks" H 9750 2150 50  0001 C CNN "Description"
 	1    9750 2150
 	-1   0    0    -1  
 $EndComp
@@ -658,6 +534,7 @@ F 0 "R31" V 7700 1350 50  0000 C CNN
 F 1 "100k" V 7600 1350 50  0000 C CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 7380 1350 50  0001 C CNN
 F 3 "~" H 7450 1350 50  0001 C CNN
+F 4 "Thick Film Resistors - SMD (0805)" V 7450 1350 50  0001 C CNN "Description"
 	1    7450 1350
 	0    -1   -1   0   
 $EndComp
@@ -693,6 +570,7 @@ F 0 "R24" H 6330 1004 50  0000 R CNN
 F 1 "100k" H 6330 1095 50  0000 R CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 6330 1050 50  0001 C CNN
 F 3 "~" H 6400 1050 50  0001 C CNN
+F 4 "Thick Film Resistors - SMD (0805)" H 6400 1050 50  0001 C CNN "Description"
 	1    6400 1050
 	0    -1   -1   0   
 $EndComp
@@ -704,6 +582,7 @@ F 0 "R25" H 6330 1304 50  0000 R CNN
 F 1 "100k" H 6330 1395 50  0000 R CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 6330 1350 50  0001 C CNN
 F 3 "~" H 6400 1350 50  0001 C CNN
+F 4 "Thick Film Resistors - SMD (0805)" H 6400 1350 50  0001 C CNN "Description"
 	1    6400 1350
 	0    -1   -1   0   
 $EndComp
@@ -715,6 +594,7 @@ F 0 "R26" H 6330 1604 50  0000 R CNN
 F 1 "100k" H 6330 1695 50  0000 R CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 6330 1650 50  0001 C CNN
 F 3 "~" H 6400 1650 50  0001 C CNN
+F 4 "Thick Film Resistors - SMD (0805)" H 6400 1650 50  0001 C CNN "Description"
 	1    6400 1650
 	0    -1   -1   0   
 $EndComp
@@ -726,6 +606,7 @@ F 0 "R27" H 6330 1904 50  0000 R CNN
 F 1 "100k" H 6330 1995 50  0000 R CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 6330 1950 50  0001 C CNN
 F 3 "~" H 6400 1950 50  0001 C CNN
+F 4 "Thick Film Resistors - SMD (0805)" H 6400 1950 50  0001 C CNN "Description"
 	1    6400 1950
 	0    -1   -1   0   
 $EndComp
@@ -743,6 +624,7 @@ F 0 "R22" H 4130 4954 50  0000 R CNN
 F 1 "1k" H 4130 5045 50  0000 R CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 4130 5000 50  0001 C CNN
 F 3 "~" H 4200 5000 50  0001 C CNN
+F 4 "Thick Film Resistors - SMD (0805)" H 4200 5000 50  0001 C CNN "Description"
 	1    4200 5000
 	0    -1   -1   0   
 $EndComp
@@ -768,6 +650,7 @@ F 3 "~" H 4800 5000 50  0001 C CNN
 F 4 "X" H 4800 5000 50  0001 C CNN "Spice_Primitive"
 F 5 "OUT_4" H 4800 5000 50  0001 C CNN "Spice_Model"
 F 6 "Y" H 4800 5000 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "3.5mm Eurorack Jacks" H 4800 5000 50  0001 C CNN "Description"
 	1    4800 5000
 	-1   0    0    -1  
 $EndComp
@@ -785,6 +668,7 @@ F 0 "R21" H 4080 3904 50  0000 R CNN
 F 1 "1k" H 4080 3995 50  0000 R CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 4080 3950 50  0001 C CNN
 F 3 "~" H 4150 3950 50  0001 C CNN
+F 4 "Thick Film Resistors - SMD (0805)" H 4150 3950 50  0001 C CNN "Description"
 	1    4150 3950
 	0    -1   -1   0   
 $EndComp
@@ -810,6 +694,7 @@ F 3 "~" H 4750 3950 50  0001 C CNN
 F 4 "X" H 4750 3950 50  0001 C CNN "Spice_Primitive"
 F 5 "OUT_3" H 4750 3950 50  0001 C CNN "Spice_Model"
 F 6 "Y" H 4750 3950 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "3.5mm Eurorack Jacks" H 4750 3950 50  0001 C CNN "Description"
 	1    4750 3950
 	-1   0    0    -1  
 $EndComp
@@ -827,6 +712,7 @@ F 0 "R20" H 4080 2854 50  0000 R CNN
 F 1 "1k" H 4080 2945 50  0000 R CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 4080 2900 50  0001 C CNN
 F 3 "~" H 4150 2900 50  0001 C CNN
+F 4 "Thick Film Resistors - SMD (0805)" H 4150 2900 50  0001 C CNN "Description"
 	1    4150 2900
 	0    -1   -1   0   
 $EndComp
@@ -852,6 +738,7 @@ F 3 "~" H 4750 2900 50  0001 C CNN
 F 4 "X" H 4750 2900 50  0001 C CNN "Spice_Primitive"
 F 5 "OUT_2" H 4750 2900 50  0001 C CNN "Spice_Model"
 F 6 "Y" H 4750 2900 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "3.5mm Eurorack Jacks" H 4750 2900 50  0001 C CNN "Description"
 	1    4750 2900
 	-1   0    0    -1  
 $EndComp
@@ -876,6 +763,7 @@ F 0 "R18" V 3393 4500 50  0000 C CNN
 F 1 "100k" V 3484 4500 50  0000 C CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 3530 4500 50  0001 C CNN
 F 3 "~" H 3600 4500 50  0001 C CNN
+F 4 "Thick Film Resistors - SMD (0805)" V 3600 4500 50  0001 C CNN "Description"
 	1    3600 4500
 	0    1    1    0   
 $EndComp
@@ -910,6 +798,7 @@ F 0 "R10" H 2870 5396 50  0000 L CNN
 F 1 "47k" H 2870 5305 50  0000 L CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 2730 5350 50  0001 C CNN
 F 3 "~" H 2800 5350 50  0001 C CNN
+F 4 "Thick Film Resistors - SMD (0805)" H 2800 5350 50  0001 C CNN "Description"
 	1    2800 5350
 	1    0    0    -1  
 $EndComp
@@ -921,6 +810,7 @@ F 0 "R9" H 2870 5096 50  0000 L CNN
 F 1 "47k" H 2870 5005 50  0000 L CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 2730 5050 50  0001 C CNN
 F 3 "~" H 2800 5050 50  0001 C CNN
+F 4 "Thick Film Resistors - SMD (0805)" H 2800 5050 50  0001 C CNN "Description"
 	1    2800 5050
 	1    0    0    -1  
 $EndComp
@@ -939,6 +829,7 @@ F 0 "R14" V 2793 4900 50  0000 C CNN
 F 1 "100k" V 2884 4900 50  0000 C CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 2930 4900 50  0001 C CNN
 F 3 "~" H 3000 4900 50  0001 C CNN
+F 4 "Thick Film Resistors - SMD (0805)" V 3000 4900 50  0001 C CNN "Description"
 	1    3000 4900
 	0    1    1    0   
 $EndComp
@@ -964,6 +855,7 @@ F 3 "~" H 2550 5200 50  0001 C CNN
 F 4 "X" H 2550 5200 50  0001 C CNN "Spice_Primitive"
 F 5 "voltage_divider_4" H 2550 5200 50  0001 C CNN "Spice_Model"
 F 6 "Y" H 2550 5200 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "Alpha 9 mm Pots – Vertical" H 2550 5200 50  0001 C CNN "Description"
 	1    2550 5200
 	1    0    0    1   
 $EndComp
@@ -989,6 +881,7 @@ F 3 "~" H 2000 4900 50  0001 C CNN
 F 4 "X" H 2000 4900 50  0001 C CNN "Spice_Primitive"
 F 5 "IN_4" H 2000 4900 50  0001 C CNN "Spice_Model"
 F 6 "Y" H 2000 4900 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "3.5mm Eurorack Jacks" H 2000 4900 50  0001 C CNN "Description"
 	1    2000 4900
 	1    0    0    -1  
 $EndComp
@@ -1008,6 +901,7 @@ F 0 "R17" V 3343 3450 50  0000 C CNN
 F 1 "100k" V 3434 3450 50  0000 C CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 3480 3450 50  0001 C CNN
 F 3 "~" H 3550 3450 50  0001 C CNN
+F 4 "Thick Film Resistors - SMD (0805)" V 3550 3450 50  0001 C CNN "Description"
 	1    3550 3450
 	0    1    1    0   
 $EndComp
@@ -1042,6 +936,7 @@ F 0 "R8" H 2820 4346 50  0000 L CNN
 F 1 "47k" H 2820 4255 50  0000 L CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 2680 4300 50  0001 C CNN
 F 3 "~" H 2750 4300 50  0001 C CNN
+F 4 "Thick Film Resistors - SMD (0805)" H 2750 4300 50  0001 C CNN "Description"
 	1    2750 4300
 	1    0    0    -1  
 $EndComp
@@ -1053,6 +948,7 @@ F 0 "R7" H 2820 4046 50  0000 L CNN
 F 1 "47k" H 2820 3955 50  0000 L CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 2680 4000 50  0001 C CNN
 F 3 "~" H 2750 4000 50  0001 C CNN
+F 4 "Thick Film Resistors - SMD (0805)" H 2750 4000 50  0001 C CNN "Description"
 	1    2750 4000
 	1    0    0    -1  
 $EndComp
@@ -1071,6 +967,7 @@ F 0 "R13" V 2743 3850 50  0000 C CNN
 F 1 "100k" V 2834 3850 50  0000 C CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 2880 3850 50  0001 C CNN
 F 3 "~" H 2950 3850 50  0001 C CNN
+F 4 "Thick Film Resistors - SMD (0805)" V 2950 3850 50  0001 C CNN "Description"
 	1    2950 3850
 	0    1    1    0   
 $EndComp
@@ -1096,6 +993,7 @@ F 3 "~" H 2500 4150 50  0001 C CNN
 F 4 "X" H 2500 4150 50  0001 C CNN "Spice_Primitive"
 F 5 "voltage_divider_3" H 2500 4150 50  0001 C CNN "Spice_Model"
 F 6 "Y" H 2500 4150 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "Alpha 9 mm Pots – Vertical" H 2500 4150 50  0001 C CNN "Description"
 	1    2500 4150
 	1    0    0    1   
 $EndComp
@@ -1121,6 +1019,7 @@ F 3 "~" H 1950 3850 50  0001 C CNN
 F 4 "X" H 1950 3850 50  0001 C CNN "Spice_Primitive"
 F 5 "IN_3" H 1950 3850 50  0001 C CNN "Spice_Model"
 F 6 "Y" H 1950 3850 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "3.5mm Eurorack Jacks" H 1950 3850 50  0001 C CNN "Description"
 	1    1950 3850
 	1    0    0    -1  
 $EndComp
@@ -1142,6 +1041,7 @@ F 0 "R16" V 3293 2400 50  0000 C CNN
 F 1 "100k" V 3384 2400 50  0000 C CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 3430 2400 50  0001 C CNN
 F 3 "~" H 3500 2400 50  0001 C CNN
+F 4 "Thick Film Resistors - SMD (0805)" V 3500 2400 50  0001 C CNN "Description"
 	1    3500 2400
 	0    1    1    0   
 $EndComp
@@ -1176,6 +1076,7 @@ F 0 "R6" H 2770 3296 50  0000 L CNN
 F 1 "47k" H 2770 3205 50  0000 L CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 2630 3250 50  0001 C CNN
 F 3 "~" H 2700 3250 50  0001 C CNN
+F 4 "Thick Film Resistors - SMD (0805)" H 2700 3250 50  0001 C CNN "Description"
 	1    2700 3250
 	1    0    0    -1  
 $EndComp
@@ -1187,6 +1088,7 @@ F 0 "R5" H 2770 2996 50  0000 L CNN
 F 1 "47k" H 2770 2905 50  0000 L CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 2630 2950 50  0001 C CNN
 F 3 "~" H 2700 2950 50  0001 C CNN
+F 4 "Thick Film Resistors - SMD (0805)" H 2700 2950 50  0001 C CNN "Description"
 	1    2700 2950
 	1    0    0    -1  
 $EndComp
@@ -1205,6 +1107,7 @@ F 0 "R12" V 2693 2800 50  0000 C CNN
 F 1 "100k" V 2784 2800 50  0000 C CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 2830 2800 50  0001 C CNN
 F 3 "~" H 2900 2800 50  0001 C CNN
+F 4 "Thick Film Resistors - SMD (0805)" V 2900 2800 50  0001 C CNN "Description"
 	1    2900 2800
 	0    1    1    0   
 $EndComp
@@ -1230,6 +1133,7 @@ F 3 "~" H 2450 3100 50  0001 C CNN
 F 4 "X" H 2450 3100 50  0001 C CNN "Spice_Primitive"
 F 5 "voltage_divider_2" H 2450 3100 50  0001 C CNN "Spice_Model"
 F 6 "Y" H 2450 3100 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "Alpha 9 mm Pots – Vertical" H 2450 3100 50  0001 C CNN "Description"
 	1    2450 3100
 	1    0    0    1   
 $EndComp
@@ -1255,6 +1159,7 @@ F 3 "~" H 1900 2800 50  0001 C CNN
 F 4 "X" H 1900 2800 50  0001 C CNN "Spice_Primitive"
 F 5 "IN_2" H 1900 2800 50  0001 C CNN "Spice_Model"
 F 6 "Y" H 1900 2800 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "3.5mm Eurorack Jacks" H 1900 2800 50  0001 C CNN "Description"
 	1    1900 2800
 	1    0    0    -1  
 $EndComp
@@ -1276,6 +1181,7 @@ F 0 "R15" V 3293 1300 50  0000 C CNN
 F 1 "100k" V 3384 1300 50  0000 C CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 3430 1300 50  0001 C CNN
 F 3 "~" H 3500 1300 50  0001 C CNN
+F 4 "Thick Film Resistors - SMD (0805)" V 3500 1300 50  0001 C CNN "Description"
 	1    3500 1300
 	0    1    1    0   
 $EndComp
@@ -1310,6 +1216,7 @@ F 0 "R4" H 2770 2196 50  0000 L CNN
 F 1 "47k" H 2770 2105 50  0000 L CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 2630 2150 50  0001 C CNN
 F 3 "~" H 2700 2150 50  0001 C CNN
+F 4 "Thick Film Resistors - SMD (0805)" H 2700 2150 50  0001 C CNN "Description"
 	1    2700 2150
 	1    0    0    -1  
 $EndComp
@@ -1321,6 +1228,7 @@ F 0 "R3" H 2770 1896 50  0000 L CNN
 F 1 "47k" H 2770 1805 50  0000 L CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 2630 1850 50  0001 C CNN
 F 3 "~" H 2700 1850 50  0001 C CNN
+F 4 "Thick Film Resistors - SMD (0805)" H 2700 1850 50  0001 C CNN "Description"
 	1    2700 1850
 	1    0    0    -1  
 $EndComp
@@ -1339,6 +1247,7 @@ F 0 "R11" V 2693 1700 50  0000 C CNN
 F 1 "100k" V 2784 1700 50  0000 C CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 2830 1700 50  0001 C CNN
 F 3 "~" H 2900 1700 50  0001 C CNN
+F 4 "Thick Film Resistors - SMD (0805)" V 2900 1700 50  0001 C CNN "Description"
 	1    2900 1700
 	0    1    1    0   
 $EndComp
@@ -1364,6 +1273,7 @@ F 3 "~" H 2450 2000 50  0001 C CNN
 F 4 "X" H 2450 2000 50  0001 C CNN "Spice_Primitive"
 F 5 "voltage_divider_1" H 2450 2000 50  0001 C CNN "Spice_Model"
 F 6 "Y" H 2450 2000 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "Alpha 9 mm Pots – Vertical" H 2450 2000 50  0001 C CNN "Description"
 	1    2450 2000
 	1    0    0    1   
 $EndComp
@@ -1377,6 +1287,7 @@ F 0 "R19" H 4080 1754 50  0000 R CNN
 F 1 "1k" H 4080 1845 50  0000 R CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 4080 1800 50  0001 C CNN
 F 3 "~" H 4150 1800 50  0001 C CNN
+F 4 "Thick Film Resistors - SMD (0805)" H 4150 1800 50  0001 C CNN "Description"
 	1    4150 1800
 	0    -1   -1   0   
 $EndComp
@@ -1413,6 +1324,7 @@ F 3 "~" H 4750 1800 50  0001 C CNN
 F 4 "X" H 4750 1800 50  0001 C CNN "Spice_Primitive"
 F 5 "OUT_1" H 4750 1800 50  0001 C CNN "Spice_Model"
 F 6 "Y" H 4750 1800 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "3.5mm Eurorack Jacks" H 4750 1800 50  0001 C CNN "Description"
 	1    4750 1800
 	-1   0    0    -1  
 $EndComp
@@ -1427,529 +1339,10 @@ F 3 "~" H 1900 1700 50  0001 C CNN
 F 4 "X" H 1900 1700 50  0001 C CNN "Spice_Primitive"
 F 5 "IN_1" H 1900 1700 50  0001 C CNN "Spice_Model"
 F 6 "Y" H 1900 1700 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "3.5mm Eurorack Jacks" H 1900 1700 50  0001 C CNN "Description"
 	1    1900 1700
 	1    0    0    -1  
 $EndComp
-$Comp
-L Device:LED D2
-U 1 1 5FEF7875
-P 6500 3700
-F 0 "D2" V 6600 3450 50  0000 C CNN
-F 1 "LED" V 6500 3450 50  0000 C CNN
-F 2 "LED_THT:LED_D3.0mm" H 6500 3700 50  0001 C CNN
-F 3 "~" H 6500 3700 50  0001 C CNN
-F 4 "D" H 6500 3700 50  0001 C CNN "Spice_Primitive"
-F 5 "LED2" H 6500 3700 50  0001 C CNN "Spice_Model"
-F 6 "Y" H 6500 3700 50  0001 C CNN "Spice_Netlist_Enabled"
-F 7 "LED 3mm low current" V 6500 3700 50  0001 C CNN "Description"
-	1    6500 3700
-	0    -1   -1   0   
-$EndComp
-$Comp
-L power:GND #PWR039
-U 1 1 60A735B0
-P 6500 4000
-F 0 "#PWR039" H 6500 3750 50  0001 C CNN
-F 1 "GND" H 6505 3827 50  0000 C CNN
-F 2 "" H 6500 4000 50  0001 C CNN
-F 3 "" H 6500 4000 50  0001 C CNN
-	1    6500 4000
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R R29
-U 1 1 60A7522A
-P 6500 3000
-F 0 "R29" H 6570 3046 50  0000 L CNN
-F 1 "5.1k" H 6570 2955 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 6430 3000 50  0001 C CNN
-F 3 "~" H 6500 3000 50  0001 C CNN
-	1    6500 3000
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:+5V #PWR038
-U 1 1 60A866E8
-P 6500 2850
-F 0 "#PWR038" H 6500 2700 50  0001 C CNN
-F 1 "+5V" H 6515 3023 50  0000 C CNN
-F 2 "" H 6500 2850 50  0001 C CNN
-F 3 "" H 6500 2850 50  0001 C CNN
-	1    6500 2850
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R R23
-U 1 1 60A86F88
-P 5950 3350
-F 0 "R23" V 5743 3350 50  0000 C CNN
-F 1 "100k" V 5834 3350 50  0000 C CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 5880 3350 50  0001 C CNN
-F 3 "~" H 5950 3350 50  0001 C CNN
-	1    5950 3350
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	6100 3350 6200 3350
-Wire Wire Line
-	6200 3550 6200 3350
-Text Label 5800 3350 2    50   ~ 0
-IN_1
-Wire Wire Line
-	6500 3850 6500 3900
-Wire Wire Line
-	6200 3900 6500 3900
-Connection ~ 6500 3900
-Wire Wire Line
-	6500 3900 6500 4000
-Wire Wire Line
-	6200 3900 6200 3850
-$Comp
-L Device:LED D6
-U 1 1 60AE943D
-P 8000 3700
-F 0 "D6" V 8100 3450 50  0000 C CNN
-F 1 "LED" V 8000 3450 50  0000 C CNN
-F 2 "LED_THT:LED_D3.0mm" H 8000 3700 50  0001 C CNN
-F 3 "~" H 8000 3700 50  0001 C CNN
-F 4 "D" H 8000 3700 50  0001 C CNN "Spice_Primitive"
-F 5 "LED2" H 8000 3700 50  0001 C CNN "Spice_Model"
-F 6 "Y" H 8000 3700 50  0001 C CNN "Spice_Netlist_Enabled"
-F 7 "LED 3mm low current" V 8000 3700 50  0001 C CNN "Description"
-	1    8000 3700
-	0    -1   -1   0   
-$EndComp
-$Comp
-L power:GND #PWR044
-U 1 1 60AE9449
-P 8000 4000
-F 0 "#PWR044" H 8000 3750 50  0001 C CNN
-F 1 "GND" H 8005 3827 50  0000 C CNN
-F 2 "" H 8000 4000 50  0001 C CNN
-F 3 "" H 8000 4000 50  0001 C CNN
-	1    8000 4000
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R R34
-U 1 1 60AE944F
-P 8000 3000
-F 0 "R34" H 8070 3046 50  0000 L CNN
-F 1 "5.1k" H 8070 2955 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 7930 3000 50  0001 C CNN
-F 3 "~" H 8000 3000 50  0001 C CNN
-	1    8000 3000
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:+5V #PWR043
-U 1 1 60AE9455
-P 8000 2850
-F 0 "#PWR043" H 8000 2700 50  0001 C CNN
-F 1 "+5V" H 8015 3023 50  0000 C CNN
-F 2 "" H 8000 2850 50  0001 C CNN
-F 3 "" H 8000 2850 50  0001 C CNN
-	1    8000 2850
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R R32
-U 1 1 60AE945B
-P 7450 3350
-F 0 "R32" V 7243 3350 50  0000 C CNN
-F 1 "100k" V 7334 3350 50  0000 C CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 7380 3350 50  0001 C CNN
-F 3 "~" H 7450 3350 50  0001 C CNN
-	1    7450 3350
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	7600 3350 7700 3350
-Wire Wire Line
-	7700 3550 7700 3350
-Text Label 7300 3350 2    50   ~ 0
-IN_2
-Wire Wire Line
-	8000 3850 8000 3900
-Wire Wire Line
-	7700 3900 8000 3900
-Connection ~ 8000 3900
-Wire Wire Line
-	8000 3900 8000 4000
-Wire Wire Line
-	7700 3900 7700 3850
-$Comp
-L Device:LED D10
-U 1 1 60AF092F
-P 9300 3700
-F 0 "D10" V 9400 3450 50  0000 C CNN
-F 1 "LED" V 9300 3450 50  0000 C CNN
-F 2 "LED_THT:LED_D3.0mm" H 9300 3700 50  0001 C CNN
-F 3 "~" H 9300 3700 50  0001 C CNN
-F 4 "D" H 9300 3700 50  0001 C CNN "Spice_Primitive"
-F 5 "LED2" H 9300 3700 50  0001 C CNN "Spice_Model"
-F 6 "Y" H 9300 3700 50  0001 C CNN "Spice_Netlist_Enabled"
-F 7 "LED 3mm low current" V 9300 3700 50  0001 C CNN "Description"
-	1    9300 3700
-	0    -1   -1   0   
-$EndComp
-$Comp
-L power:GND #PWR049
-U 1 1 60AF093B
-P 9300 4000
-F 0 "#PWR049" H 9300 3750 50  0001 C CNN
-F 1 "GND" H 9305 3827 50  0000 C CNN
-F 2 "" H 9300 4000 50  0001 C CNN
-F 3 "" H 9300 4000 50  0001 C CNN
-	1    9300 4000
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R R40
-U 1 1 60AF0941
-P 9300 3000
-F 0 "R40" H 9370 3046 50  0000 L CNN
-F 1 "5.1k" H 9370 2955 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 9230 3000 50  0001 C CNN
-F 3 "~" H 9300 3000 50  0001 C CNN
-	1    9300 3000
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:+5V #PWR048
-U 1 1 60AF0947
-P 9300 2850
-F 0 "#PWR048" H 9300 2700 50  0001 C CNN
-F 1 "+5V" H 9315 3023 50  0000 C CNN
-F 2 "" H 9300 2850 50  0001 C CNN
-F 3 "" H 9300 2850 50  0001 C CNN
-	1    9300 2850
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R R38
-U 1 1 60AF094D
-P 8750 3350
-F 0 "R38" V 8543 3350 50  0000 C CNN
-F 1 "100k" V 8634 3350 50  0000 C CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 8680 3350 50  0001 C CNN
-F 3 "~" H 8750 3350 50  0001 C CNN
-	1    8750 3350
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	8900 3350 9000 3350
-Wire Wire Line
-	9000 3550 9000 3350
-Text Label 8600 3350 2    50   ~ 0
-IN_3
-Wire Wire Line
-	9300 3850 9300 3900
-Wire Wire Line
-	9000 3900 9300 3900
-Connection ~ 9300 3900
-Wire Wire Line
-	9300 3900 9300 4000
-Wire Wire Line
-	9000 3900 9000 3850
-$Comp
-L Device:LED D4
-U 1 1 60AF9231
-P 7100 5600
-F 0 "D4" V 7200 5350 50  0000 C CNN
-F 1 "LED" V 7100 5350 50  0000 C CNN
-F 2 "LED_THT:LED_D3.0mm" H 7100 5600 50  0001 C CNN
-F 3 "~" H 7100 5600 50  0001 C CNN
-F 4 "D" H 7100 5600 50  0001 C CNN "Spice_Primitive"
-F 5 "LED2" H 7100 5600 50  0001 C CNN "Spice_Model"
-F 6 "Y" H 7100 5600 50  0001 C CNN "Spice_Netlist_Enabled"
-F 7 "LED 3mm low current" V 7100 5600 50  0001 C CNN "Description"
-	1    7100 5600
-	0    -1   -1   0   
-$EndComp
-$Comp
-L power:GND #PWR042
-U 1 1 60AF923D
-P 7100 5900
-F 0 "#PWR042" H 7100 5650 50  0001 C CNN
-F 1 "GND" H 7105 5727 50  0000 C CNN
-F 2 "" H 7100 5900 50  0001 C CNN
-F 3 "" H 7100 5900 50  0001 C CNN
-	1    7100 5900
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R R30
-U 1 1 60AF9243
-P 7100 4900
-F 0 "R30" H 7170 4946 50  0000 L CNN
-F 1 "5k" H 7170 4855 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 7030 4900 50  0001 C CNN
-F 3 "~" H 7100 4900 50  0001 C CNN
-	1    7100 4900
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:+5V #PWR041
-U 1 1 60AF9249
-P 7100 4750
-F 0 "#PWR041" H 7100 4600 50  0001 C CNN
-F 1 "+5V" H 7115 4923 50  0000 C CNN
-F 2 "" H 7100 4750 50  0001 C CNN
-F 3 "" H 7100 4750 50  0001 C CNN
-	1    7100 4750
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R R28
-U 1 1 60AF924F
-P 6550 5250
-F 0 "R28" V 6343 5250 50  0000 C CNN
-F 1 "100k" V 6434 5250 50  0000 C CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 6480 5250 50  0001 C CNN
-F 3 "~" H 6550 5250 50  0001 C CNN
-	1    6550 5250
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	6700 5250 6800 5250
-Wire Wire Line
-	6800 5450 6800 5250
-Text Label 6400 5250 2    50   ~ 0
-IN_4
-Wire Wire Line
-	7100 5750 7100 5800
-Wire Wire Line
-	6800 5800 7100 5800
-Connection ~ 7100 5800
-Wire Wire Line
-	7100 5800 7100 5900
-Wire Wire Line
-	6800 5800 6800 5750
-$Comp
-L Device:LED D8
-U 1 1 60B0103F
-P 8650 5650
-F 0 "D8" V 8750 5400 50  0000 C CNN
-F 1 "LED" V 8650 5400 50  0000 C CNN
-F 2 "LED_THT:LED_D3.0mm" H 8650 5650 50  0001 C CNN
-F 3 "~" H 8650 5650 50  0001 C CNN
-F 4 "D" H 8650 5650 50  0001 C CNN "Spice_Primitive"
-F 5 "LED1" H 8650 5650 50  0001 C CNN "Spice_Model"
-F 6 "Y" H 8650 5650 50  0001 C CNN "Spice_Netlist_Enabled"
-F 7 "LED 3mm low current" V 8650 5650 50  0001 C CNN "Description"
-	1    8650 5650
-	0    -1   -1   0   
-$EndComp
-$Comp
-L power:GND #PWR047
-U 1 1 60B0104B
-P 8650 5950
-F 0 "#PWR047" H 8650 5700 50  0001 C CNN
-F 1 "GND" H 8655 5777 50  0000 C CNN
-F 2 "" H 8650 5950 50  0001 C CNN
-F 3 "" H 8650 5950 50  0001 C CNN
-	1    8650 5950
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R R37
-U 1 1 60B01051
-P 8650 4950
-F 0 "R37" H 8720 4996 50  0000 L CNN
-F 1 "5k" H 8720 4905 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 8580 4950 50  0001 C CNN
-F 3 "~" H 8650 4950 50  0001 C CNN
-	1    8650 4950
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:+5V #PWR046
-U 1 1 60B01057
-P 8650 4800
-F 0 "#PWR046" H 8650 4650 50  0001 C CNN
-F 1 "+5V" H 8665 4973 50  0000 C CNN
-F 2 "" H 8650 4800 50  0001 C CNN
-F 3 "" H 8650 4800 50  0001 C CNN
-	1    8650 4800
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R R35
-U 1 1 60B0105D
-P 8100 5300
-F 0 "R35" V 7893 5300 50  0000 C CNN
-F 1 "100k" V 7984 5300 50  0000 C CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 8030 5300 50  0001 C CNN
-F 3 "~" H 8100 5300 50  0001 C CNN
-	1    8100 5300
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	8250 5300 8350 5300
-Wire Wire Line
-	8350 5500 8350 5300
-Text Label 7950 5300 2    50   ~ 0
-OUT
-Wire Wire Line
-	8650 5800 8650 5850
-Wire Wire Line
-	8350 5850 8650 5850
-Connection ~ 8650 5850
-Wire Wire Line
-	8650 5850 8650 5950
-Wire Wire Line
-	8350 5850 8350 5800
-$Comp
-L Diode:1N4148W D9
-U 1 1 60AACD5E
-P 9000 3700
-F 0 "D9" V 8900 3350 50  0000 L CNN
-F 1 "1N4148W" V 9000 3250 50  0000 L CNN
-F 2 "Diode_SMD:D_SOD-123" H 9000 3525 50  0001 C CNN
-F 3 "https://www.vishay.com/docs/85748/1n4148w.pdf" H 9000 3700 50  0001 C CNN
-F 4 "D" H 9000 3700 50  0001 C CNN "Spice_Primitive"
-F 5 "D1N4148" H 9000 3700 50  0001 C CNN "Spice_Model"
-F 6 "Y" H 9000 3700 50  0001 C CNN "Spice_Netlist_Enabled"
-	1    9000 3700
-	0    1    1    0   
-$EndComp
-$Comp
-L Diode:1N4148W D5
-U 1 1 60AB3CED
-P 7700 3700
-F 0 "D5" V 7600 3350 50  0000 L CNN
-F 1 "1N4148W" V 7700 3250 50  0000 L CNN
-F 2 "Diode_SMD:D_SOD-123" H 7700 3525 50  0001 C CNN
-F 3 "https://www.vishay.com/docs/85748/1n4148w.pdf" H 7700 3700 50  0001 C CNN
-F 4 "D" H 7700 3700 50  0001 C CNN "Spice_Primitive"
-F 5 "D1N4148" H 7700 3700 50  0001 C CNN "Spice_Model"
-F 6 "Y" H 7700 3700 50  0001 C CNN "Spice_Netlist_Enabled"
-	1    7700 3700
-	0    1    1    0   
-$EndComp
-$Comp
-L Diode:1N4148W D1
-U 1 1 60AB44D3
-P 6200 3700
-F 0 "D1" V 6100 3350 50  0000 L CNN
-F 1 "1N4148W" V 6200 3250 50  0000 L CNN
-F 2 "Diode_SMD:D_SOD-123" H 6200 3525 50  0001 C CNN
-F 3 "https://www.vishay.com/docs/85748/1n4148w.pdf" H 6200 3700 50  0001 C CNN
-F 4 "D" H 6200 3700 50  0001 C CNN "Spice_Primitive"
-F 5 "D1N4148" H 6200 3700 50  0001 C CNN "Spice_Model"
-F 6 "Y" H 6200 3700 50  0001 C CNN "Spice_Netlist_Enabled"
-	1    6200 3700
-	0    1    1    0   
-$EndComp
-$Comp
-L Diode:1N4148W D3
-U 1 1 60AB8812
-P 6800 5600
-F 0 "D3" V 6700 5250 50  0000 L CNN
-F 1 "1N4148W" V 6800 5150 50  0000 L CNN
-F 2 "Diode_SMD:D_SOD-123" H 6800 5425 50  0001 C CNN
-F 3 "https://www.vishay.com/docs/85748/1n4148w.pdf" H 6800 5600 50  0001 C CNN
-F 4 "D" H 6800 5600 50  0001 C CNN "Spice_Primitive"
-F 5 "D1N4148" H 6800 5600 50  0001 C CNN "Spice_Model"
-F 6 "Y" H 6800 5600 50  0001 C CNN "Spice_Netlist_Enabled"
-	1    6800 5600
-	0    1    1    0   
-$EndComp
-$Comp
-L Diode:1N4148W D7
-U 1 1 60AB9215
-P 8350 5650
-F 0 "D7" V 8250 5300 50  0000 L CNN
-F 1 "1N4148W" V 8350 5200 50  0000 L CNN
-F 2 "Diode_SMD:D_SOD-123" H 8350 5475 50  0001 C CNN
-F 3 "https://www.vishay.com/docs/85748/1n4148w.pdf" H 8350 5650 50  0001 C CNN
-F 4 "D" H 8350 5650 50  0001 C CNN "Spice_Primitive"
-F 5 "D1N4148" H 8350 5650 50  0001 C CNN "Spice_Model"
-F 6 "Y" H 8350 5650 50  0001 C CNN "Spice_Netlist_Enabled"
-	1    8350 5650
-	0    1    1    0   
-$EndComp
-$Comp
-L Transistor_BJT:MMBT3904 Q1
-U 1 1 60AC31E4
-P 6400 3350
-F 0 "Q1" H 6591 3396 50  0000 L CNN
-F 1 "MMBT3904" H 6591 3305 50  0000 L CNN
-F 2 "Package_TO_SOT_SMD:SOT-23" H 6600 3275 50  0001 L CIN
-F 3 "https://www.onsemi.com/pub/Collateral/2N3903-D.PDF" H 6400 3350 50  0001 L CNN
-F 4 "Q" H 6400 3350 50  0001 C CNN "Spice_Primitive"
-F 5 "BC846B" H 6400 3350 50  0001 C CNN "Spice_Model"
-F 6 "Y" H 6400 3350 50  0001 C CNN "Spice_Netlist_Enabled"
-F 7 "3 1 2" H 6400 3350 50  0001 C CNN "Spice_Node_Sequence"
-	1    6400 3350
-	1    0    0    -1  
-$EndComp
-Connection ~ 6200 3350
-$Comp
-L Transistor_BJT:MMBT3904 Q3
-U 1 1 60AD3277
-P 7900 3350
-F 0 "Q3" H 8091 3396 50  0000 L CNN
-F 1 "MMBT3904" H 8091 3305 50  0000 L CNN
-F 2 "Package_TO_SOT_SMD:SOT-23" H 8100 3275 50  0001 L CIN
-F 3 "https://www.onsemi.com/pub/Collateral/2N3903-D.PDF" H 7900 3350 50  0001 L CNN
-F 4 "Q" H 7900 3350 50  0001 C CNN "Spice_Primitive"
-F 5 "BC846B" H 7900 3350 50  0001 C CNN "Spice_Model"
-F 6 "Y" H 7900 3350 50  0001 C CNN "Spice_Netlist_Enabled"
-F 7 "3 1 2" H 7900 3350 50  0001 C CNN "Spice_Node_Sequence"
-	1    7900 3350
-	1    0    0    -1  
-$EndComp
-Connection ~ 7700 3350
-$Comp
-L Transistor_BJT:MMBT3904 Q5
-U 1 1 60AD3DD5
-P 9200 3350
-F 0 "Q5" H 9391 3396 50  0000 L CNN
-F 1 "MMBT3904" H 9391 3305 50  0000 L CNN
-F 2 "Package_TO_SOT_SMD:SOT-23" H 9400 3275 50  0001 L CIN
-F 3 "https://www.onsemi.com/pub/Collateral/2N3903-D.PDF" H 9200 3350 50  0001 L CNN
-F 4 "Q" H 9200 3350 50  0001 C CNN "Spice_Primitive"
-F 5 "BC846B" H 9200 3350 50  0001 C CNN "Spice_Model"
-F 6 "Y" H 9200 3350 50  0001 C CNN "Spice_Netlist_Enabled"
-F 7 "3 1 2" H 9200 3350 50  0001 C CNN "Spice_Node_Sequence"
-	1    9200 3350
-	1    0    0    -1  
-$EndComp
-Connection ~ 9000 3350
-$Comp
-L Transistor_BJT:MMBT3904 Q2
-U 1 1 60AD4B00
-P 7000 5250
-F 0 "Q2" H 7191 5296 50  0000 L CNN
-F 1 "MMBT3904" H 7191 5205 50  0000 L CNN
-F 2 "Package_TO_SOT_SMD:SOT-23" H 7200 5175 50  0001 L CIN
-F 3 "https://www.onsemi.com/pub/Collateral/2N3903-D.PDF" H 7000 5250 50  0001 L CNN
-F 4 "Q" H 7000 5250 50  0001 C CNN "Spice_Primitive"
-F 5 "BC846B" H 7000 5250 50  0001 C CNN "Spice_Model"
-F 6 "Y" H 7000 5250 50  0001 C CNN "Spice_Netlist_Enabled"
-F 7 "3 2 1" H 7000 5250 50  0001 C CNN "Spice_Node_Sequence"
-	1    7000 5250
-	1    0    0    -1  
-$EndComp
-Connection ~ 6800 5250
-$Comp
-L Transistor_BJT:MMBT3904 Q4
-U 1 1 60AD8BA9
-P 8550 5300
-F 0 "Q4" H 8741 5346 50  0000 L CNN
-F 1 "MMBT3904" H 8741 5255 50  0000 L CNN
-F 2 "Package_TO_SOT_SMD:SOT-23" H 8750 5225 50  0001 L CIN
-F 3 "https://www.onsemi.com/pub/Collateral/2N3903-D.PDF" H 8550 5300 50  0001 L CNN
-F 4 "Q" H 8550 5300 50  0001 C CNN "Spice_Primitive"
-F 5 "BC846B" H 8550 5300 50  0001 C CNN "Spice_Model"
-F 6 "Y" H 8550 5300 50  0001 C CNN "Spice_Netlist_Enabled"
-F 7 "3 1 2" H 8550 5300 50  0001 C CNN "Spice_Node_Sequence"
-	1    8550 5300
-	1    0    0    -1  
-$EndComp
-Connection ~ 8350 5300
 Text Label 2350 1700 3    50   ~ 0
 IN_1
 Text Label 2350 2800 3    50   ~ 0
@@ -2110,42 +1503,6 @@ Connection ~ 3700 6950
 Wire Wire Line
 	4100 7550 3700 7550
 Connection ~ 3700 7550
-NoConn ~ 2100 1800
-$Comp
-L power:+5V #PWR051
-U 1 1 60BA5F98
-P 3050 6950
-F 0 "#PWR051" H 3050 6800 50  0001 C CNN
-F 1 "+5V" H 3065 7123 50  0000 C CNN
-F 2 "" H 3050 6950 50  0001 C CNN
-F 3 "" H 3050 6950 50  0001 C CNN
-	1    3050 6950
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR052
-U 1 1 60BA695A
-P 3050 7250
-AR Path="/60BA695A" Ref="#PWR052"  Part="1" 
-AR Path="/5DD3665B/60BA695A" Ref="#PWR?"  Part="1" 
-F 0 "#PWR052" H 3050 7000 50  0001 C CNN
-F 1 "GND" V 3050 7050 50  0000 C CNN
-F 2 "" H 3050 7250 50  0001 C CNN
-F 3 "" H 3050 7250 50  0001 C CNN
-	1    3050 7250
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:C C9
-U 1 1 60C43E17
-P 3050 7100
-F 0 "C9" H 3165 7146 50  0000 L CNN
-F 1 "10u" H 3165 7055 50  0000 L CNN
-F 2 "Capacitor_SMD:C_1210_3225Metric_Pad1.33x2.70mm_HandSolder" H 3088 6950 50  0001 C CNN
-F 3 "~" H 3050 7100 50  0001 C CNN
-	1    3050 7100
-	1    0    0    -1  
-$EndComp
 $Comp
 L Device:C C10
 U 1 1 6102D371
@@ -2154,6 +1511,7 @@ F 0 "C10" V 7198 900 50  0000 C CNN
 F 1 "100p" V 7289 900 50  0000 C CNN
 F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" H 7488 750 50  0001 C CNN
 F 3 "~" H 7450 900 50  0001 C CNN
+F 4 "Multilayer Ceramic Capacitors MLCC" V 7450 900 50  0001 C CNN "Description"
 	1    7450 900 
 	0    1    1    0   
 $EndComp
@@ -2201,4 +1559,894 @@ Wire Wire Line
 Connection ~ 7750 1350
 Wire Wire Line
 	7750 1350 7750 2050
+$Comp
+L Amplifier_Operational:TL072 U5
+U 1 1 61B1B378
+P 3550 5000
+F 0 "U5" H 3550 4650 50  0000 C CNN
+F 1 "TL072" H 3550 4750 50  0000 C CNN
+F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 3550 5000 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 3550 5000 50  0001 C CNN
+F 4 "Low-Noise FET-Input Operational Amplifiers (SOIC-8 )" H 3550 5000 50  0001 C CNN "Description"
+F 5 "X" H 3550 5000 50  0001 C CNN "Spice_Primitive"
+F 6 "TL072c" H 3550 5000 50  0001 C CNN "Spice_Model"
+F 7 "Y" H 3550 5000 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    3550 5000
+	1    0    0    1   
+$EndComp
+$Comp
+L Amplifier_Operational:TL072 U5
+U 2 1 61B1E802
+P 8300 4300
+F 0 "U5" H 8300 4667 50  0000 C CNN
+F 1 "TL072" H 8300 4576 50  0000 C CNN
+F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 8300 4300 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 8300 4300 50  0001 C CNN
+F 4 "Low-Noise FET-Input Operational Amplifiers (SOIC-8 )" H 8300 4300 50  0001 C CNN "Description"
+F 5 "X" H 8300 4300 50  0001 C CNN "Spice_Primitive"
+F 6 "TL072c" H 8300 4300 50  0001 C CNN "Spice_Model"
+F 7 "Y" H 8300 4300 50  0001 C CNN "Spice_Netlist_Enabled"
+	2    8300 4300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:LED D1
+U 1 1 61B38FAA
+P 7200 3300
+F 0 "D1" V 7300 3050 50  0000 C CNN
+F 1 "LED (Green/Yellow)" V 7200 3050 50  0000 C CNN
+F 2 "LED_THT:LED_D3.0mm" H 7200 3300 50  0001 C CNN
+F 3 "~" H 7200 3300 50  0001 C CNN
+F 4 "D" H 7200 3300 50  0001 C CNN "Spice_Primitive"
+F 5 "LED2" H 7200 3300 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 7200 3300 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "LED 3mm bipolar" V 7200 3300 50  0001 C CNN "Description"
+	1    7200 3300
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	6650 3300 6650 2800
+Wire Wire Line
+	6650 2800 5950 2800
+Wire Wire Line
+	5950 2800 5950 3200
+Wire Wire Line
+	5950 3200 6050 3200
+Text Label 6050 3400 2    50   ~ 0
+IN_1
+$Comp
+L power:GND #PWR038
+U 1 1 61B47B90
+P 7350 3300
+F 0 "#PWR038" H 7350 3050 50  0001 C CNN
+F 1 "GND" H 7355 3127 50  0000 C CNN
+F 2 "" H 7350 3300 50  0001 C CNN
+F 3 "" H 7350 3300 50  0001 C CNN
+	1    7350 3300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8600 3350 8600 2850
+Wire Wire Line
+	7900 2850 7900 3250
+Wire Wire Line
+	7900 3250 8000 3250
+$Comp
+L Device:LED D2
+U 1 1 61B5EE1F
+P 9150 3350
+F 0 "D2" V 9250 3100 50  0000 C CNN
+F 1 "LED (Green/Yellow)" V 9150 3100 50  0000 C CNN
+F 2 "LED_THT:LED_D3.0mm" H 9150 3350 50  0001 C CNN
+F 3 "~" H 9150 3350 50  0001 C CNN
+F 4 "D" H 9150 3350 50  0001 C CNN "Spice_Primitive"
+F 5 "LED2" H 9150 3350 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 9150 3350 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "LED 3mm bipolar" V 9150 3350 50  0001 C CNN "Description"
+	1    9150 3350
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR042
+U 1 1 61B5EE25
+P 9300 3350
+F 0 "#PWR042" H 9300 3100 50  0001 C CNN
+F 1 "GND" H 9305 3177 50  0000 C CNN
+F 2 "" H 9300 3350 50  0001 C CNN
+F 3 "" H 9300 3350 50  0001 C CNN
+	1    9300 3350
+	1    0    0    -1  
+$EndComp
+Text Label 8000 3450 2    50   ~ 0
+IN_2
+$Comp
+L Amplifier_Operational:TL072 U6
+U 1 1 61B6E55B
+P 8250 5300
+F 0 "U6" H 8250 5667 50  0000 C CNN
+F 1 "TL072" H 8250 5576 50  0000 C CNN
+F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 8250 5300 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 8250 5300 50  0001 C CNN
+F 4 "Low-Noise FET-Input Operational Amplifiers (SOIC-8 )" H 8250 5300 50  0001 C CNN "Description"
+F 5 "X" H 8250 5300 50  0001 C CNN "Spice_Primitive"
+F 6 "TL072c" H 8250 5300 50  0001 C CNN "Spice_Model"
+F 7 "Y" H 8250 5300 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    8250 5300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Amplifier_Operational:TL072 U6
+U 2 1 61B6E561
+P 6300 5250
+F 0 "U6" H 6300 5617 50  0000 C CNN
+F 1 "TL072" H 6300 5526 50  0000 C CNN
+F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 6300 5250 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 6300 5250 50  0001 C CNN
+F 4 "Low-Noise FET-Input Operational Amplifiers (SOIC-8 )" H 6300 5250 50  0001 C CNN "Description"
+F 5 "X" H 6300 5250 50  0001 C CNN "Spice_Primitive"
+F 6 "TL072c" H 6300 5250 50  0001 C CNN "Spice_Model"
+F 7 "Y" H 6300 5250 50  0001 C CNN "Spice_Netlist_Enabled"
+	2    6300 5250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:LED D3
+U 1 1 61B6E571
+P 7200 4250
+F 0 "D3" V 7300 4000 50  0000 C CNN
+F 1 "LED (Green/Yellow)" V 7200 4000 50  0000 C CNN
+F 2 "LED_THT:LED_D3.0mm" H 7200 4250 50  0001 C CNN
+F 3 "~" H 7200 4250 50  0001 C CNN
+F 4 "D" H 7200 4250 50  0001 C CNN "Spice_Primitive"
+F 5 "LED2" H 7200 4250 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 7200 4250 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "LED 3mm bipolar" V 7200 4250 50  0001 C CNN "Description"
+	1    7200 4250
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	6650 4250 6650 3750
+Wire Wire Line
+	6650 3750 5950 3750
+Wire Wire Line
+	5950 3750 5950 4150
+Wire Wire Line
+	5950 4150 6050 4150
+Text Label 6050 4350 2    50   ~ 0
+IN_3
+$Comp
+L power:GND #PWR039
+U 1 1 61B6E57D
+P 7350 4250
+F 0 "#PWR039" H 7350 4000 50  0001 C CNN
+F 1 "GND" H 7355 4077 50  0000 C CNN
+F 2 "" H 7350 4250 50  0001 C CNN
+F 3 "" H 7350 4250 50  0001 C CNN
+	1    7350 4250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8600 4300 8600 3800
+Wire Wire Line
+	8600 3800 7900 3800
+Wire Wire Line
+	7900 3800 7900 4200
+Wire Wire Line
+	7900 4200 8000 4200
+$Comp
+L Device:LED D4
+U 1 1 61B6E591
+P 9150 4300
+F 0 "D4" V 9250 4050 50  0000 C CNN
+F 1 "LED (Green/Yellow)" V 9150 4050 50  0000 C CNN
+F 2 "LED_THT:LED_D3.0mm" H 9150 4300 50  0001 C CNN
+F 3 "~" H 9150 4300 50  0001 C CNN
+F 4 "D" H 9150 4300 50  0001 C CNN "Spice_Primitive"
+F 5 "LED2" H 9150 4300 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 9150 4300 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "LED 3mm bipola" V 9150 4300 50  0001 C CNN "Description"
+	1    9150 4300
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR043
+U 1 1 61B6E597
+P 9300 4300
+F 0 "#PWR043" H 9300 4050 50  0001 C CNN
+F 1 "GND" H 9305 4127 50  0000 C CNN
+F 2 "" H 9300 4300 50  0001 C CNN
+F 3 "" H 9300 4300 50  0001 C CNN
+	1    9300 4300
+	1    0    0    -1  
+$EndComp
+Text Label 8000 4400 2    50   ~ 0
+IN_4
+$Comp
+L Amplifier_Operational:TL072 U4
+U 1 1 61B8765D
+P 3500 3950
+F 0 "U4" H 3550 3600 50  0000 C CNN
+F 1 "TL072" H 3550 3700 50  0000 C CNN
+F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 3500 3950 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 3500 3950 50  0001 C CNN
+F 4 "Low-Noise FET-Input Operational Amplifiers (SOIC-8 )" H 3500 3950 50  0001 C CNN "Description"
+F 5 "X" H 3500 3950 50  0001 C CNN "Spice_Primitive"
+F 6 "TL072c" H 3500 3950 50  0001 C CNN "Spice_Model"
+F 7 "Y" H 3500 3950 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    3500 3950
+	1    0    0    1   
+$EndComp
+$Comp
+L Amplifier_Operational:TL072 U4
+U 2 1 61B87663
+P 6350 4250
+F 0 "U4" H 6350 4617 50  0000 C CNN
+F 1 "TL072" H 6350 4526 50  0000 C CNN
+F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 6350 4250 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 6350 4250 50  0001 C CNN
+F 4 "Low-Noise FET-Input Operational Amplifiers (SOIC-8 )" H 6350 4250 50  0001 C CNN "Description"
+F 5 "X" H 6350 4250 50  0001 C CNN "Spice_Primitive"
+F 6 "TL072c" H 6350 4250 50  0001 C CNN "Spice_Model"
+F 7 "Y" H 6350 4250 50  0001 C CNN "Spice_Netlist_Enabled"
+	2    6350 4250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:LED D5
+U 1 1 61B87673
+P 7150 5250
+F 0 "D5" V 7250 5000 50  0000 C CNN
+F 1 "LED (Red/Yellow)" V 7150 5000 50  0000 C CNN
+F 2 "LED_THT:LED_D3.0mm" H 7150 5250 50  0001 C CNN
+F 3 "~" H 7150 5250 50  0001 C CNN
+F 4 "D" H 7150 5250 50  0001 C CNN "Spice_Primitive"
+F 5 "LED2" H 7150 5250 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 7150 5250 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "LED 3mm bipolar" V 7150 5250 50  0001 C CNN "Description"
+	1    7150 5250
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	6600 5250 6600 4750
+Wire Wire Line
+	6600 4750 5900 4750
+Wire Wire Line
+	5900 4750 5900 5150
+Wire Wire Line
+	5900 5150 6000 5150
+Text Label 6000 5350 2    50   ~ 0
+OUT
+$Comp
+L power:GND #PWR09
+U 1 1 61B8767F
+P 7300 5250
+F 0 "#PWR09" H 7300 5000 50  0001 C CNN
+F 1 "GND" H 7305 5077 50  0000 C CNN
+F 2 "" H 7300 5250 50  0001 C CNN
+F 3 "" H 7300 5250 50  0001 C CNN
+	1    7300 5250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8550 5300 8550 4800
+Wire Wire Line
+	8550 4800 7850 4800
+Wire Wire Line
+	7850 4800 7850 5200
+Wire Wire Line
+	7850 5200 7950 5200
+$Comp
+L power:GND #PWR041
+U 1 1 61B9ABD8
+P 7900 5450
+F 0 "#PWR041" H 7900 5200 50  0001 C CNN
+F 1 "GND" H 7905 5277 50  0000 C CNN
+F 2 "" H 7900 5450 50  0001 C CNN
+F 3 "" H 7900 5450 50  0001 C CNN
+	1    7900 5450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7950 5400 7900 5400
+Wire Wire Line
+	7900 5400 7900 5450
+Wire Wire Line
+	6750 3300 6650 3300
+Connection ~ 6650 3300
+Wire Wire Line
+	6750 4250 6650 4250
+Connection ~ 6650 4250
+Wire Wire Line
+	6700 5250 6600 5250
+Wire Wire Line
+	7900 2850 8600 2850
+Wire Wire Line
+	8600 3350 8700 3350
+Connection ~ 8600 3350
+Wire Wire Line
+	8700 4300 8600 4300
+Connection ~ 8600 4300
+$Comp
+L Device:R R29
+U 1 1 61C7911F
+P 6900 3300
+F 0 "R29" V 6693 3300 50  0000 C CNN
+F 1 "500" V 6784 3300 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 6830 3300 50  0001 C CNN
+F 3 "~" H 6900 3300 50  0001 C CNN
+F 4 "Thick Film Resistors - SMD (0805)" V 6900 3300 50  0001 C CNN "Description"
+	1    6900 3300
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R30
+U 1 1 61B507E3
+P 6900 4250
+F 0 "R30" V 6693 4250 50  0000 C CNN
+F 1 "500" V 6784 4250 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 6830 4250 50  0001 C CNN
+F 3 "~" H 6900 4250 50  0001 C CNN
+F 4 "Thick Film Resistors - SMD (0805)" V 6900 4250 50  0001 C CNN "Description"
+	1    6900 4250
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R28
+U 1 1 61B51098
+P 6850 5250
+F 0 "R28" V 6643 5250 50  0000 C CNN
+F 1 "500" V 6734 5250 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 6780 5250 50  0001 C CNN
+F 3 "~" H 6850 5250 50  0001 C CNN
+F 4 "Thick Film Resistors - SMD (0805)" V 6850 5250 50  0001 C CNN "Description"
+	1    6850 5250
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R32
+U 1 1 61B519E5
+P 8850 3350
+F 0 "R32" V 8643 3350 50  0000 C CNN
+F 1 "500" V 8734 3350 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 8780 3350 50  0001 C CNN
+F 3 "~" H 8850 3350 50  0001 C CNN
+F 4 "Thick Film Resistors - SMD (0805)" V 8850 3350 50  0001 C CNN "Description"
+	1    8850 3350
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R34
+U 1 1 61B52316
+P 8850 4300
+F 0 "R34" V 8643 4300 50  0000 C CNN
+F 1 "500" V 8734 4300 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 8780 4300 50  0001 C CNN
+F 3 "~" H 8850 4300 50  0001 C CNN
+F 4 "Thick Film Resistors - SMD (0805)" V 8850 4300 50  0001 C CNN "Description"
+	1    8850 4300
+	0    1    1    0   
+$EndComp
+$Comp
+L Amplifier_Operational:TL072 U7
+U 1 1 61B6AAEC
+P 7400 2050
+F 0 "U7" H 7400 1650 50  0000 C CNN
+F 1 "TL072" H 7400 1750 50  0000 C CNN
+F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 7400 2050 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 7400 2050 50  0001 C CNN
+F 4 "Low-Noise FET-Input Operational Amplifiers (SOIC-8 )" H 7400 2050 50  0001 C CNN "Description"
+F 5 "X" H 7400 2050 50  0001 C CNN "Spice_Primitive"
+F 6 "TL072c" H 7400 2050 50  0001 C CNN "Spice_Model"
+F 7 "Y" H 7400 2050 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    7400 2050
+	1    0    0    1   
+$EndComp
+$Comp
+L Amplifier_Operational:TL072 U7
+U 2 1 61B7777F
+P 8550 2150
+F 0 "U7" H 8550 1750 50  0000 C CNN
+F 1 "TL072" H 8550 1850 50  0000 C CNN
+F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 8550 2150 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 8550 2150 50  0001 C CNN
+F 4 "Low-Noise FET-Input Operational Amplifiers (SOIC-8 )" H 8550 2150 50  0001 C CNN "Description"
+F 5 "X" H 8550 2150 50  0001 C CNN "Spice_Primitive"
+F 6 "TL072c" H 8550 2150 50  0001 C CNN "Spice_Model"
+F 7 "Y" H 8550 2150 50  0001 C CNN "Spice_Netlist_Enabled"
+	2    8550 2150
+	1    0    0    1   
+$EndComp
+$Comp
+L Amplifier_Operational:TL072 U2
+U 1 1 61B85BD5
+P 3450 1800
+F 0 "U2" H 3450 1450 50  0000 C CNN
+F 1 "TL072" H 3450 1550 50  0000 C CNN
+F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 3450 1800 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 3450 1800 50  0001 C CNN
+F 4 "Low-Noise FET-Input Operational Amplifiers (SOIC-8 )" H 3450 1800 50  0001 C CNN "Description"
+F 5 "X" H 3450 1800 50  0001 C CNN "Spice_Primitive"
+F 6 "TL072c" H 3450 1800 50  0001 C CNN "Spice_Model"
+F 7 "Y" H 3450 1800 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    3450 1800
+	1    0    0    1   
+$EndComp
+Connection ~ 3150 1700
+$Comp
+L Amplifier_Operational:TL072 U3
+U 1 1 61B87396
+P 3450 2900
+F 0 "U3" H 3500 2550 50  0000 C CNN
+F 1 "TL072" H 3500 2650 50  0000 C CNN
+F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 3450 2900 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 3450 2900 50  0001 C CNN
+F 4 "Low-Noise FET-Input Operational Amplifiers (SOIC-8 )" H 3450 2900 50  0001 C CNN "Description"
+F 5 "X" H 3450 2900 50  0001 C CNN "Spice_Primitive"
+F 6 "TL072c" H 3450 2900 50  0001 C CNN "Spice_Model"
+F 7 "Y" H 3450 2900 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    3450 2900
+	1    0    0    1   
+$EndComp
+Connection ~ 3200 3850
+$Comp
+L Amplifier_Operational:TL072 U2
+U 2 1 61B8A0B7
+P 6350 3300
+F 0 "U2" H 6350 3700 50  0000 C CNN
+F 1 "TL072" H 6350 3600 50  0000 C CNN
+F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 6350 3300 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 6350 3300 50  0001 C CNN
+F 4 "Low-Noise FET-Input Operational Amplifiers (SOIC-8 )" H 6350 3300 50  0001 C CNN "Description"
+F 5 "X" H 6350 3300 50  0001 C CNN "Spice_Primitive"
+F 6 "TL072c" H 6350 3300 50  0001 C CNN "Spice_Model"
+F 7 "Y" H 6350 3300 50  0001 C CNN "Spice_Netlist_Enabled"
+	2    6350 3300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Amplifier_Operational:TL072 U3
+U 2 1 61B8C44A
+P 8300 3350
+F 0 "U3" H 8300 3750 50  0000 C CNN
+F 1 "TL072" H 8300 3650 50  0000 C CNN
+F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 8300 3350 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 8300 3350 50  0001 C CNN
+F 4 "Low-Noise FET-Input Operational Amplifiers (SOIC-8 )" H 8300 3350 50  0001 C CNN "Description"
+F 5 "X" H 8300 3350 50  0001 C CNN "Spice_Primitive"
+F 6 "TL072c" H 8300 3350 50  0001 C CNN "Spice_Model"
+F 7 "Y" H 8300 3350 50  0001 C CNN "Spice_Netlist_Enabled"
+	2    8300 3350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Amplifier_Operational:TL072 U3
+U 3 1 61B94236
+P 4200 7250
+F 0 "U3" H 4158 7296 50  0000 L CNN
+F 1 "TL072" H 4158 7205 50  0000 L CNN
+F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 4200 7250 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 4200 7250 50  0001 C CNN
+F 4 "Low-Noise FET-Input Operational Amplifiers (SOIC-8 )" H 4200 7250 50  0001 C CNN "Description"
+F 5 "X" H 4200 7250 50  0001 C CNN "Spice_Primitive"
+F 6 "TL072c" H 4200 7250 50  0001 C CNN "Spice_Model"
+F 7 "Y" H 4200 7250 50  0001 C CNN "Spice_Netlist_Enabled"
+	3    4200 7250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Amplifier_Operational:TL072 U7
+U 3 1 61B99C12
+P 5400 7250
+F 0 "U7" H 5358 7296 50  0000 L CNN
+F 1 "TL072" H 5358 7205 50  0000 L CNN
+F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 5400 7250 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 5400 7250 50  0001 C CNN
+F 4 "Low-Noise FET-Input Operational Amplifiers (SOIC-8 )" H 5400 7250 50  0001 C CNN "Description"
+F 5 "X" H 5400 7250 50  0001 C CNN "Spice_Primitive"
+F 6 "TL072c" H 5400 7250 50  0001 C CNN "Spice_Model"
+F 7 "Y" H 5400 7250 50  0001 C CNN "Spice_Netlist_Enabled"
+	3    5400 7250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Amplifier_Operational:TL072 U5
+U 3 1 61B9B30F
+P 6550 7250
+F 0 "U5" H 6508 7296 50  0000 L CNN
+F 1 "TL072" H 6508 7205 50  0000 L CNN
+F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 6550 7250 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 6550 7250 50  0001 C CNN
+F 4 "Low-Noise FET-Input Operational Amplifiers (SOIC-8 )" H 6550 7250 50  0001 C CNN "Description"
+F 5 "X" H 6550 7250 50  0001 C CNN "Spice_Primitive"
+F 6 "TL072c" H 6550 7250 50  0001 C CNN "Spice_Model"
+F 7 "Y" H 6550 7250 50  0001 C CNN "Spice_Netlist_Enabled"
+	3    6550 7250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C16
+U 1 1 61BC0EC3
+P 6050 6300
+AR Path="/61BC0EC3" Ref="C16"  Part="1" 
+AR Path="/5DD3665B/61BC0EC3" Ref="C?"  Part="1" 
+F 0 "C16" H 6165 6346 50  0000 L CNN
+F 1 "0.1u" H 6165 6255 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" H 6088 6150 50  0001 C CNN
+F 3 "~" H 6050 6300 50  0001 C CNN
+F 4 "C" H 6050 6300 50  0001 C CNN "Spice_Primitive"
+F 5 "0.1u" H 6050 6300 50  0001 C CNN "Spice_Model"
+F 6 "N" H 6050 6300 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "Multilayer Ceramic Capacitors MLCC" H 6050 6300 50  0001 C CNN "Description"
+	1    6050 6300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C15
+U 1 1 61BC0ECD
+P 6050 6000
+AR Path="/61BC0ECD" Ref="C15"  Part="1" 
+AR Path="/5DD3665B/61BC0ECD" Ref="C?"  Part="1" 
+F 0 "C15" H 6165 6046 50  0000 L CNN
+F 1 "0.1u" H 6165 5955 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" H 6088 5850 50  0001 C CNN
+F 3 "~" H 6050 6000 50  0001 C CNN
+F 4 "C" H 6050 6000 50  0001 C CNN "Spice_Primitive"
+F 5 "0.1u" H 6050 6000 50  0001 C CNN "Spice_Model"
+F 6 "N" H 6050 6000 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "Multilayer Ceramic Capacitors MLCC" H 6050 6000 50  0001 C CNN "Description"
+	1    6050 6000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C14
+U 1 1 61BC0ED7
+P 4850 6300
+AR Path="/61BC0ED7" Ref="C14"  Part="1" 
+AR Path="/5DD3665B/61BC0ED7" Ref="C?"  Part="1" 
+F 0 "C14" H 4965 6346 50  0000 L CNN
+F 1 "0.1u" H 4965 6255 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" H 4888 6150 50  0001 C CNN
+F 3 "~" H 4850 6300 50  0001 C CNN
+F 4 "C" H 4850 6300 50  0001 C CNN "Spice_Primitive"
+F 5 "0.1u" H 4850 6300 50  0001 C CNN "Spice_Model"
+F 6 "N" H 4850 6300 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "Multilayer Ceramic Capacitors MLCC" H 4850 6300 50  0001 C CNN "Description"
+	1    4850 6300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C13
+U 1 1 61BC0EE1
+P 4850 6000
+AR Path="/61BC0EE1" Ref="C13"  Part="1" 
+AR Path="/5DD3665B/61BC0EE1" Ref="C?"  Part="1" 
+F 0 "C13" H 4965 6046 50  0000 L CNN
+F 1 "0.1u" H 4965 5955 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" H 4888 5850 50  0001 C CNN
+F 3 "~" H 4850 6000 50  0001 C CNN
+F 4 "C" H 4850 6000 50  0001 C CNN "Spice_Primitive"
+F 5 "0.1u" H 4850 6000 50  0001 C CNN "Spice_Model"
+F 6 "N" H 4850 6000 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "Multilayer Ceramic Capacitors MLCC" H 4850 6000 50  0001 C CNN "Description"
+	1    4850 6000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C12
+U 1 1 61BC0EEB
+P 3700 6300
+AR Path="/61BC0EEB" Ref="C12"  Part="1" 
+AR Path="/5DD3665B/61BC0EEB" Ref="C?"  Part="1" 
+F 0 "C12" H 3815 6346 50  0000 L CNN
+F 1 "0.1u" H 3815 6255 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" H 3738 6150 50  0001 C CNN
+F 3 "~" H 3700 6300 50  0001 C CNN
+F 4 "C" H 3700 6300 50  0001 C CNN "Spice_Primitive"
+F 5 "0.1u" H 3700 6300 50  0001 C CNN "Spice_Model"
+F 6 "N" H 3700 6300 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "Multilayer Ceramic Capacitors MLCC" H 3700 6300 50  0001 C CNN "Description"
+	1    3700 6300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C11
+U 1 1 61BC0EF5
+P 3700 6000
+AR Path="/61BC0EF5" Ref="C11"  Part="1" 
+AR Path="/5DD3665B/61BC0EF5" Ref="C?"  Part="1" 
+F 0 "C11" H 3815 6046 50  0000 L CNN
+F 1 "0.1u" H 3815 5955 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" H 3738 5850 50  0001 C CNN
+F 3 "~" H 3700 6000 50  0001 C CNN
+F 4 "C" H 3700 6000 50  0001 C CNN "Spice_Primitive"
+F 5 "0.1u" H 3700 6000 50  0001 C CNN "Spice_Model"
+F 6 "N" H 3700 6000 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "Multilayer Ceramic Capacitors MLCC" H 3700 6000 50  0001 C CNN "Description"
+	1    3700 6000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+15V #PWR048
+U 1 1 61BC0EFB
+P 3700 5850
+AR Path="/61BC0EFB" Ref="#PWR048"  Part="1" 
+AR Path="/5DD3665B/61BC0EFB" Ref="#PWR?"  Part="1" 
+F 0 "#PWR048" H 3700 5700 50  0001 C CNN
+F 1 "+15V" H 3600 6000 50  0000 L CNN
+F 2 "" H 3700 5850 50  0001 C CNN
+F 3 "" H 3700 5850 50  0001 C CNN
+	1    3700 5850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:-15V #PWR049
+U 1 1 61BC0F01
+P 3700 6450
+AR Path="/61BC0F01" Ref="#PWR049"  Part="1" 
+AR Path="/5DD3665B/61BC0F01" Ref="#PWR?"  Part="1" 
+F 0 "#PWR049" H 3700 6550 50  0001 C CNN
+F 1 "-15V" H 3600 6600 50  0000 L CNN
+F 2 "" H 3700 6450 50  0001 C CNN
+F 3 "" H 3700 6450 50  0001 C CNN
+	1    3700 6450
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	6050 5850 6450 5850
+Wire Wire Line
+	6450 6450 6050 6450
+$Comp
+L power:+15V #PWR057
+U 1 1 61BC0F09
+P 6050 5850
+AR Path="/61BC0F09" Ref="#PWR057"  Part="1" 
+AR Path="/5DD3665B/61BC0F09" Ref="#PWR?"  Part="1" 
+F 0 "#PWR057" H 6050 5700 50  0001 C CNN
+F 1 "+15V" H 5950 6000 50  0000 L CNN
+F 2 "" H 6050 5850 50  0001 C CNN
+F 3 "" H 6050 5850 50  0001 C CNN
+	1    6050 5850
+	1    0    0    -1  
+$EndComp
+Connection ~ 6050 5850
+$Comp
+L power:-15V #PWR058
+U 1 1 61BC0F10
+P 6050 6450
+AR Path="/61BC0F10" Ref="#PWR058"  Part="1" 
+AR Path="/5DD3665B/61BC0F10" Ref="#PWR?"  Part="1" 
+F 0 "#PWR058" H 6050 6550 50  0001 C CNN
+F 1 "-15V" H 5950 6600 50  0000 L CNN
+F 2 "" H 6050 6450 50  0001 C CNN
+F 3 "" H 6050 6450 50  0001 C CNN
+	1    6050 6450
+	-1   0    0    1   
+$EndComp
+Connection ~ 6050 6450
+$Comp
+L power:GND #PWR056
+U 1 1 61BC0F17
+P 5800 6250
+AR Path="/61BC0F17" Ref="#PWR056"  Part="1" 
+AR Path="/5DD3665B/61BC0F17" Ref="#PWR?"  Part="1" 
+F 0 "#PWR056" H 5800 6000 50  0001 C CNN
+F 1 "GND" V 5800 6050 50  0000 C CNN
+F 2 "" H 5800 6250 50  0001 C CNN
+F 3 "" H 5800 6250 50  0001 C CNN
+	1    5800 6250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6050 6150 5800 6150
+Wire Wire Line
+	5800 6150 5800 6250
+Connection ~ 6050 6150
+$Comp
+L power:+15V #PWR054
+U 1 1 61BC0F20
+P 4850 5850
+AR Path="/61BC0F20" Ref="#PWR054"  Part="1" 
+AR Path="/5DD3665B/61BC0F20" Ref="#PWR?"  Part="1" 
+F 0 "#PWR054" H 4850 5700 50  0001 C CNN
+F 1 "+15V" H 4750 6000 50  0000 L CNN
+F 2 "" H 4850 5850 50  0001 C CNN
+F 3 "" H 4850 5850 50  0001 C CNN
+	1    4850 5850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:-15V #PWR055
+U 1 1 61BC0F26
+P 4850 6450
+AR Path="/61BC0F26" Ref="#PWR055"  Part="1" 
+AR Path="/5DD3665B/61BC0F26" Ref="#PWR?"  Part="1" 
+F 0 "#PWR055" H 4850 6550 50  0001 C CNN
+F 1 "-15V" H 4750 6600 50  0000 L CNN
+F 2 "" H 4850 6450 50  0001 C CNN
+F 3 "" H 4850 6450 50  0001 C CNN
+	1    4850 6450
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR053
+U 1 1 61BC0F2C
+P 4600 6250
+AR Path="/61BC0F2C" Ref="#PWR053"  Part="1" 
+AR Path="/5DD3665B/61BC0F2C" Ref="#PWR?"  Part="1" 
+F 0 "#PWR053" H 4600 6000 50  0001 C CNN
+F 1 "GND" V 4600 6050 50  0000 C CNN
+F 2 "" H 4600 6250 50  0001 C CNN
+F 3 "" H 4600 6250 50  0001 C CNN
+	1    4600 6250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4850 6150 4600 6150
+Wire Wire Line
+	4600 6150 4600 6250
+Connection ~ 4850 6150
+Wire Wire Line
+	5300 5850 4850 5850
+Connection ~ 4850 5850
+Wire Wire Line
+	5300 6450 4850 6450
+Connection ~ 4850 6450
+$Comp
+L power:GND #PWR047
+U 1 1 61BC0F39
+P 3450 6250
+AR Path="/61BC0F39" Ref="#PWR047"  Part="1" 
+AR Path="/5DD3665B/61BC0F39" Ref="#PWR?"  Part="1" 
+F 0 "#PWR047" H 3450 6000 50  0001 C CNN
+F 1 "GND" V 3450 6050 50  0000 C CNN
+F 2 "" H 3450 6250 50  0001 C CNN
+F 3 "" H 3450 6250 50  0001 C CNN
+	1    3450 6250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3700 6150 3450 6150
+Wire Wire Line
+	3450 6150 3450 6250
+Connection ~ 3700 6150
+Wire Wire Line
+	4100 5850 3700 5850
+Connection ~ 3700 5850
+Wire Wire Line
+	4100 6450 3700 6450
+Connection ~ 3700 6450
+$Comp
+L Amplifier_Operational:TL072 U2
+U 3 1 61BC0F47
+P 4200 6150
+F 0 "U2" H 4158 6196 50  0000 L CNN
+F 1 "TL072" H 4158 6105 50  0000 L CNN
+F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 4200 6150 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 4200 6150 50  0001 C CNN
+F 4 "Low-Noise FET-Input Operational Amplifiers (SOIC-8 )" H 4200 6150 50  0001 C CNN "Description"
+F 5 "X" H 4200 6150 50  0001 C CNN "Spice_Primitive"
+F 6 "TL072c" H 4200 6150 50  0001 C CNN "Spice_Model"
+F 7 "Y" H 4200 6150 50  0001 C CNN "Spice_Netlist_Enabled"
+	3    4200 6150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Amplifier_Operational:TL072 U6
+U 3 1 61BC0F4E
+P 5400 6150
+F 0 "U6" H 5358 6196 50  0000 L CNN
+F 1 "TL072" H 5358 6105 50  0000 L CNN
+F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 5400 6150 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 5400 6150 50  0001 C CNN
+F 4 "Low-Noise FET-Input Operational Amplifiers (SOIC-8 )" H 5400 6150 50  0001 C CNN "Description"
+F 5 "X" H 5400 6150 50  0001 C CNN "Spice_Primitive"
+F 6 "TL072c" H 5400 6150 50  0001 C CNN "Spice_Model"
+F 7 "Y" H 5400 6150 50  0001 C CNN "Spice_Netlist_Enabled"
+	3    5400 6150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Amplifier_Operational:TL072 U4
+U 3 1 61BC0F55
+P 6550 6150
+F 0 "U4" H 6508 6196 50  0000 L CNN
+F 1 "TL072" H 6508 6105 50  0000 L CNN
+F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 6550 6150 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 6550 6150 50  0001 C CNN
+F 4 "Low-Noise FET-Input Operational Amplifiers (SOIC-8 )" H 6550 6150 50  0001 C CNN "Description"
+F 5 "X" H 6550 6150 50  0001 C CNN "Spice_Primitive"
+F 6 "TL072c" H 6550 6150 50  0001 C CNN "Spice_Model"
+F 7 "Y" H 6550 6150 50  0001 C CNN "Spice_Netlist_Enabled"
+	3    6550 6150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Reference_Voltage:LM4040DBZ-5 U1
+U 1 1 61C0222C
+P 2000 6150
+F 0 "U1" V 2046 6062 50  0000 R CNN
+F 1 "LM4040BIM3-5.0" V 1955 6062 50  0000 R CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 2000 5950 50  0001 C CIN
+F 3 "http://www.ti.com/lit/ds/symlink/lm4040-n.pdf" H 2000 6150 50  0001 C CIN
+F 4 "X" H 2000 6150 50  0001 C CNN "Spice_Primitive"
+F 5 "LM4040_NA10P0" H 2000 6150 50  0001 C CNN "Spice_Model"
+F 6 "N" H 2000 6150 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "Precision Micropower Shunt Voltage Reference" V 2000 6150 50  0001 C CNN "Description"
+	1    2000 6150
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR046
+U 1 1 61C03D95
+P 2000 6300
+AR Path="/61C03D95" Ref="#PWR046"  Part="1" 
+AR Path="/5DD3665B/61C03D95" Ref="#PWR?"  Part="1" 
+F 0 "#PWR046" H 2000 6050 50  0001 C CNN
+F 1 "GND" V 2000 6100 50  0000 C CNN
+F 2 "" H 2000 6300 50  0001 C CNN
+F 3 "" H 2000 6300 50  0001 C CNN
+	1    2000 6300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R23
+U 1 1 61C1648A
+P 1750 6000
+F 0 "R23" V 1543 6000 50  0000 C CNN
+F 1 "8.2k" V 1634 6000 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 1680 6000 50  0001 C CNN
+F 3 "~" H 1750 6000 50  0001 C CNN
+F 4 "R" H 1750 6000 50  0001 C CNN "Spice_Primitive"
+F 5 "8.2k" H 1750 6000 50  0001 C CNN "Spice_Model"
+F 6 "N" H 1750 6000 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "Thick Film Resistors - SMD (0805)" V 1750 6000 50  0001 C CNN "Description"
+	1    1750 6000
+	0    1    1    0   
+$EndComp
+$Comp
+L power:+15V #PWR044
+U 1 1 61C17F5A
+P 1450 5950
+F 0 "#PWR044" H 1450 5800 50  0001 C CNN
+F 1 "+15V" H 1465 6123 50  0000 C CNN
+F 2 "" H 1450 5950 50  0001 C CNN
+F 3 "" H 1450 5950 50  0001 C CNN
+	1    1450 5950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1450 5950 1450 6000
+Wire Wire Line
+	1450 6000 1600 6000
+Wire Wire Line
+	1900 6000 2000 6000
+Text Label 2000 6000 0    50   ~ 0
+REF
+Text Label 2100 1800 0    50   ~ 0
+REF
+Connection ~ 3150 2800
+Connection ~ 3250 4900
+Connection ~ 6600 5250
+$Comp
+L Device:C C9
+U 1 1 61B5DCB6
+P 8600 1000
+F 0 "C9" V 8348 1000 50  0000 C CNN
+F 1 "100p" V 8439 1000 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" H 8638 850 50  0001 C CNN
+F 3 "~" H 8600 1000 50  0001 C CNN
+F 4 "Multilayer Ceramic Capacitors MLCC" V 8600 1000 50  0001 C CNN "Description"
+	1    8600 1000
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	8200 1000 8450 1000
+Wire Wire Line
+	8750 1000 8900 1000
+Wire Wire Line
+	8200 1000 8200 1450
+Wire Wire Line
+	8900 1000 8900 1450
+Connection ~ 8900 1450
+Connection ~ 8200 1450
 $EndSCHEMATC
