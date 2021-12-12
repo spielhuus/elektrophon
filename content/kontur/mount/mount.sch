@@ -4,12 +4,12 @@ EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
-Title "(title)"
-Date ""
+Title "kontur"
+Date "2021-12-12"
 Rev "R01"
 Comp ""
 Comment1 "schema for pcb"
-Comment2 "(description)"
+Comment2 "AD/AR envelope generator"
 Comment3 ""
 Comment4 "License CC BY 4.0 - Attribution 4.0 International"
 $EndDescr
@@ -104,6 +104,7 @@ F 3 "~" H 2350 1950 50  0001 C CNN
 F 4 "X" H 2350 1950 50  0001 C CNN "Spice_Primitive"
 F 5 "TRIGGER" H 2350 1950 50  0001 C CNN "Spice_Model"
 F 6 "N" H 2350 1950 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "3.5mm Eurorack Jacks" H 2350 1950 50  0001 C CNN "Description"
 	1    2350 1950
 	1    0    0    -1  
 $EndComp
@@ -136,6 +137,7 @@ F 3 "~" H 5150 1650 50  0001 C CNN
 F 4 "X" H 5150 1650 50  0001 C CNN "Spice_Primitive"
 F 5 "OUT" H 5150 1650 50  0001 C CNN "Spice_Model"
 F 6 "N" H 5150 1650 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "3.5mm Eurorack Jacks" H 5150 1650 50  0001 C CNN "Description"
 	1    5150 1650
 	-1   0    0    -1  
 $EndComp
@@ -168,6 +170,7 @@ F 3 "~" H 5150 2550 50  0001 C CNN
 F 4 "X" H 5150 2550 50  0001 C CNN "Spice_Primitive"
 F 5 "OUT" H 5150 2550 50  0001 C CNN "Spice_Model"
 F 6 "N" H 5150 2550 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "3.5mm Eurorack Jacks" H 5150 2550 50  0001 C CNN "Description"
 	1    5150 2550
 	-1   0    0    -1  
 $EndComp
@@ -421,6 +424,7 @@ F 3 "~" H 2350 4050 50  0001 C CNN
 F 4 "X" H 2350 4050 50  0001 C CNN "Spice_Primitive"
 F 5 "TRIGGER" H 2350 4050 50  0001 C CNN "Spice_Model"
 F 6 "N" H 2350 4050 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "3.5mm Eurorack Jacks" H 2350 4050 50  0001 C CNN "Description"
 	1    2350 4050
 	1    0    0    -1  
 $EndComp
@@ -453,6 +457,7 @@ F 3 "~" H 5150 3750 50  0001 C CNN
 F 4 "X" H 5150 3750 50  0001 C CNN "Spice_Primitive"
 F 5 "OUT" H 5150 3750 50  0001 C CNN "Spice_Model"
 F 6 "N" H 5150 3750 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "3.5mm Eurorack Jacks" H 5150 3750 50  0001 C CNN "Description"
 	1    5150 3750
 	-1   0    0    -1  
 $EndComp
@@ -485,6 +490,7 @@ F 3 "~" H 5150 4650 50  0001 C CNN
 F 4 "X" H 5150 4650 50  0001 C CNN "Spice_Primitive"
 F 5 "OUT" H 5150 4650 50  0001 C CNN "Spice_Model"
 F 6 "N" H 5150 4650 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "3.5mm Eurorack Jacks" H 5150 4650 50  0001 C CNN "Description"
 	1    5150 4650
 	-1   0    0    -1  
 $EndComp
@@ -929,6 +935,7 @@ F 4 "Q" H 7450 1700 50  0001 C CNN "Spice_Primitive"
 F 5 "BC846B" H 7450 1700 50  0001 C CNN "Spice_Model"
 F 6 "Y" H 7450 1700 50  0001 C CNN "Spice_Netlist_Enabled"
 F 7 "3 1 2" H 7450 1700 50  0001 C CNN "Spice_Node_Sequence"
+F 8 "NPN switching transistor (SOT23)" H 7450 1700 50  0001 C CNN "Description"
 	1    7450 1700
 	1    0    0    -1  
 $EndComp
@@ -945,6 +952,7 @@ F 4 "Q" H 8950 1700 50  0001 C CNN "Spice_Primitive"
 F 5 "BC846B" H 8950 1700 50  0001 C CNN "Spice_Model"
 F 6 "Y" H 8950 1700 50  0001 C CNN "Spice_Netlist_Enabled"
 F 7 "3 1 2" H 8950 1700 50  0001 C CNN "Spice_Node_Sequence"
+F 8 "NPN switching transistor (SOT23)" H 8950 1700 50  0001 C CNN "Description"
 	1    8950 1700
 	1    0    0    -1  
 $EndComp
@@ -961,6 +969,7 @@ F 4 "Q" H 10400 1700 50  0001 C CNN "Spice_Primitive"
 F 5 "BC846B" H 10400 1700 50  0001 C CNN "Spice_Model"
 F 6 "Y" H 10400 1700 50  0001 C CNN "Spice_Netlist_Enabled"
 F 7 "3 1 2" H 10400 1700 50  0001 C CNN "Spice_Node_Sequence"
+F 8 "NPN switching transistor (SOT23)" H 10400 1700 50  0001 C CNN "Description"
 	1    10400 1700
 	1    0    0    -1  
 $EndComp
@@ -1247,6 +1256,7 @@ F 4 "Q" H 7450 3500 50  0001 C CNN "Spice_Primitive"
 F 5 "BC846B" H 7450 3500 50  0001 C CNN "Spice_Model"
 F 6 "Y" H 7450 3500 50  0001 C CNN "Spice_Netlist_Enabled"
 F 7 "3 1 2" H 7450 3500 50  0001 C CNN "Spice_Node_Sequence"
+F 8 "NPN switching transistor (SOT23)" H 7450 3500 50  0001 C CNN "Description"
 	1    7450 3500
 	1    0    0    -1  
 $EndComp
@@ -1263,6 +1273,7 @@ F 4 "Q" H 8950 3500 50  0001 C CNN "Spice_Primitive"
 F 5 "BC846B" H 8950 3500 50  0001 C CNN "Spice_Model"
 F 6 "Y" H 8950 3500 50  0001 C CNN "Spice_Netlist_Enabled"
 F 7 "3 1 2" H 8950 3500 50  0001 C CNN "Spice_Node_Sequence"
+F 8 "NPN switching transistor (SOT23)" H 8950 3500 50  0001 C CNN "Description"
 	1    8950 3500
 	1    0    0    -1  
 $EndComp
@@ -1279,6 +1290,7 @@ F 4 "Q" H 10400 3500 50  0001 C CNN "Spice_Primitive"
 F 5 "BC846B" H 10400 3500 50  0001 C CNN "Spice_Model"
 F 6 "Y" H 10400 3500 50  0001 C CNN "Spice_Netlist_Enabled"
 F 7 "3 1 2" H 10400 3500 50  0001 C CNN "Spice_Node_Sequence"
+F 8 "NPN switching transistor (SOT23)" H 10400 3500 50  0001 C CNN "Description"
 	1    10400 3500
 	1    0    0    -1  
 $EndComp

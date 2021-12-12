@@ -11,9 +11,11 @@
 
   (page A4)
   (title_block
-    (title "(title)")
+    (title kontur)
+    (date 2021-12-12)
+    (rev R01)
     (comment 1 "PCB for panel")
-    (comment 2 "(description)")
+    (comment 2 "AD/AR envelope generator")
     (comment 4 "License CC BY 4.0 - Attribution 4.0 International")
   )
 
@@ -119,11 +121,11 @@
     (fp_text value IN2 (at 0 9.144) (layer F.Mask) hide
       (effects (font (size 2 1.4) (thickness 0.25)))
     )
+    (fp_circle (center 0 0) (end 4.2 0) (layer F.CrtYd) (width 0.05))
+    (fp_circle (center 0 0) (end 4 0) (layer Cmts.User) (width 0.15))
     (fp_text user %R (at 0.3 0) (layer F.Fab)
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_circle (center 0 0) (end 4 0) (layer Cmts.User) (width 0.15))
-    (fp_circle (center 0 0) (end 4.2 0) (layer F.CrtYd) (width 0.05))
     (pad "" np_thru_hole circle (at 0 0) (size 6.4 6.4) (drill 6.4) (layers *.Cu *.Mask))
     (model "${KIPRJMOD}/../../../lib/kicad/models/PJ301M-12 Thonkiconn v0.2.stp"
       (offset (xyz 0 0.8 -10.5))
@@ -144,11 +146,11 @@
     (fp_text value IN1 (at 0 9.144) (layer F.Mask) hide
       (effects (font (size 2 1.4) (thickness 0.25)))
     )
+    (fp_circle (center 0 0) (end 4.2 0) (layer F.CrtYd) (width 0.05))
+    (fp_circle (center 0 0) (end 4 0) (layer Cmts.User) (width 0.15))
     (fp_text user %R (at 0.3 0) (layer F.Fab)
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_circle (center 0 0) (end 4 0) (layer Cmts.User) (width 0.15))
-    (fp_circle (center 0 0) (end 4.2 0) (layer F.CrtYd) (width 0.05))
     (pad "" np_thru_hole circle (at 0 0) (size 6.4 6.4) (drill 6.4) (layers *.Cu *.Mask))
     (model "${KIPRJMOD}/../../../lib/kicad/models/PJ301M-12 Thonkiconn v0.2.stp"
       (offset (xyz 0 0.8 -10.5))
@@ -169,11 +171,11 @@
     (fp_text value OUT2 (at 0 9.144) (layer F.Mask) hide
       (effects (font (size 2 1.4) (thickness 0.25)))
     )
+    (fp_circle (center 0 0) (end 4.2 0) (layer F.CrtYd) (width 0.05))
+    (fp_circle (center 0 0) (end 4 0) (layer Cmts.User) (width 0.15))
     (fp_text user %R (at 0.3 0) (layer F.Fab)
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_circle (center 0 0) (end 4 0) (layer Cmts.User) (width 0.15))
-    (fp_circle (center 0 0) (end 4.2 0) (layer F.CrtYd) (width 0.05))
     (pad "" np_thru_hole circle (at 0 0) (size 6.4 6.4) (drill 6.4) (layers *.Cu *.Mask))
     (model "${KIPRJMOD}/../../../lib/kicad/models/PJ301M-12 Thonkiconn v0.2.stp"
       (offset (xyz 0 0.8 -10.5))
@@ -194,11 +196,11 @@
     (fp_text value EOE2 (at 0 9.144) (layer F.Mask) hide
       (effects (font (size 2 1.4) (thickness 0.25)))
     )
+    (fp_circle (center 0 0) (end 4.2 0) (layer F.CrtYd) (width 0.05))
+    (fp_circle (center 0 0) (end 4 0) (layer Cmts.User) (width 0.15))
     (fp_text user %R (at 0.3 0) (layer F.Fab)
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_circle (center 0 0) (end 4 0) (layer Cmts.User) (width 0.15))
-    (fp_circle (center 0 0) (end 4.2 0) (layer F.CrtYd) (width 0.05))
     (pad "" np_thru_hole circle (at 0 0) (size 6.4 6.4) (drill 6.4) (layers *.Cu *.Mask))
     (model "${KIPRJMOD}/../../../lib/kicad/models/PJ301M-12 Thonkiconn v0.2.stp"
       (offset (xyz 0 0.8 -10.5))
@@ -219,11 +221,11 @@
     (fp_text value D/R2 (at 0 9.144) (layer F.Mask) hide
       (effects (font (size 2 1.4) (thickness 0.25)))
     )
+    (fp_circle (center 0 0) (end 6.6 0) (layer F.CrtYd) (width 0.05))
+    (fp_circle (center 0 0) (end 6.35 0) (layer Cmts.User) (width 0.15))
     (fp_text user %R (at 0.3 0) (layer F.Fab)
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_circle (center 0 0) (end 6.35 0) (layer Cmts.User) (width 0.15))
-    (fp_circle (center 0 0) (end 6.6 0) (layer F.CrtYd) (width 0.05))
     (pad "" np_thru_hole circle (at 0 0) (size 7.4 7.4) (drill 7.4) (layers *.Cu *.Mask))
     (model ${KIPRJMOD}/../../../lib/kicad/models/ALPHA-RD901F-40.step
       (offset (xyz 0 0.5 -12))
@@ -244,11 +246,11 @@
     (fp_text value A2 (at 0 9.144) (layer F.Mask) hide
       (effects (font (size 2 1.4) (thickness 0.25)))
     )
+    (fp_circle (center 0 0) (end 6.6 0) (layer F.CrtYd) (width 0.05))
+    (fp_circle (center 0 0) (end 6.35 0) (layer Cmts.User) (width 0.15))
     (fp_text user %R (at 0.3 0) (layer F.Fab)
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_circle (center 0 0) (end 6.35 0) (layer Cmts.User) (width 0.15))
-    (fp_circle (center 0 0) (end 6.6 0) (layer F.CrtYd) (width 0.05))
     (pad "" np_thru_hole circle (at 0 0) (size 7.4 7.4) (drill 7.4) (layers *.Cu *.Mask))
     (model ${KIPRJMOD}/../../../lib/kicad/models/ALPHA-RD901F-40.step
       (offset (xyz 0 0.5 -12))
@@ -269,11 +271,11 @@
     (fp_text value OUT1 (at 0 9.144) (layer F.Mask) hide
       (effects (font (size 2 1.4) (thickness 0.25)))
     )
+    (fp_circle (center 0 0) (end 4.2 0) (layer F.CrtYd) (width 0.05))
+    (fp_circle (center 0 0) (end 4 0) (layer Cmts.User) (width 0.15))
     (fp_text user %R (at 0.3 0) (layer F.Fab)
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_circle (center 0 0) (end 4 0) (layer Cmts.User) (width 0.15))
-    (fp_circle (center 0 0) (end 4.2 0) (layer F.CrtYd) (width 0.05))
     (pad "" np_thru_hole circle (at 0 0) (size 6.4 6.4) (drill 6.4) (layers *.Cu *.Mask))
     (model "${KIPRJMOD}/../../../lib/kicad/models/PJ301M-12 Thonkiconn v0.2.stp"
       (offset (xyz 0 0.8 -10.5))
@@ -294,11 +296,11 @@
     (fp_text value EOE1 (at 0 9.144) (layer F.Mask) hide
       (effects (font (size 2 1.4) (thickness 0.25)))
     )
+    (fp_circle (center 0 0) (end 4.2 0) (layer F.CrtYd) (width 0.05))
+    (fp_circle (center 0 0) (end 4 0) (layer Cmts.User) (width 0.15))
     (fp_text user %R (at 0.3 0) (layer F.Fab)
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_circle (center 0 0) (end 4 0) (layer Cmts.User) (width 0.15))
-    (fp_circle (center 0 0) (end 4.2 0) (layer F.CrtYd) (width 0.05))
     (pad "" np_thru_hole circle (at 0 0) (size 6.4 6.4) (drill 6.4) (layers *.Cu *.Mask))
     (model "${KIPRJMOD}/../../../lib/kicad/models/PJ301M-12 Thonkiconn v0.2.stp"
       (offset (xyz 0 0.8 -10.5))
@@ -319,11 +321,11 @@
     (fp_text value D/R1 (at 0 9.144) (layer F.Mask) hide
       (effects (font (size 2 1.4) (thickness 0.25)))
     )
+    (fp_circle (center 0 0) (end 6.6 0) (layer F.CrtYd) (width 0.05))
+    (fp_circle (center 0 0) (end 6.35 0) (layer Cmts.User) (width 0.15))
     (fp_text user %R (at 0.3 0) (layer F.Fab)
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_circle (center 0 0) (end 6.35 0) (layer Cmts.User) (width 0.15))
-    (fp_circle (center 0 0) (end 6.6 0) (layer F.CrtYd) (width 0.05))
     (pad "" np_thru_hole circle (at 0 0) (size 7.4 7.4) (drill 7.4) (layers *.Cu *.Mask))
     (model ${KIPRJMOD}/../../../lib/kicad/models/ALPHA-RD901F-40.step
       (offset (xyz 0 0.5 -12))
@@ -344,11 +346,11 @@
     (fp_text value A1 (at 0 9.144) (layer F.Mask) hide
       (effects (font (size 2 1.4) (thickness 0.25)))
     )
+    (fp_circle (center 0 0) (end 6.6 0) (layer F.CrtYd) (width 0.05))
+    (fp_circle (center 0 0) (end 6.35 0) (layer Cmts.User) (width 0.15))
     (fp_text user %R (at 0.3 0) (layer F.Fab)
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_circle (center 0 0) (end 6.35 0) (layer Cmts.User) (width 0.15))
-    (fp_circle (center 0 0) (end 6.6 0) (layer F.CrtYd) (width 0.05))
     (pad "" np_thru_hole circle (at 0 0) (size 7.4 7.4) (drill 7.4) (layers *.Cu *.Mask))
     (model ${KIPRJMOD}/../../../lib/kicad/models/ALPHA-RD901F-40.step
       (offset (xyz 0 0.5 -12))
@@ -369,8 +371,8 @@
     (fp_text value MountingHole (at 0 3.8) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_circle (center 0 0) (end 3.05 0) (layer F.CrtYd) (width 0.05))
     (fp_circle (center 0 0) (end 2.8 0) (layer Cmts.User) (width 0.15))
+    (fp_circle (center 0 0) (end 3.05 0) (layer F.CrtYd) (width 0.05))
     (fp_text user %R (at 0.3 0) (layer F.Fab)
       (effects (font (size 1 1) (thickness 0.15)))
     )
@@ -391,8 +393,8 @@
     (fp_text value MountingHole (at 0 3.8) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_circle (center 0 0) (end 3.05 0) (layer F.CrtYd) (width 0.05))
     (fp_circle (center 0 0) (end 2.8 0) (layer Cmts.User) (width 0.15))
+    (fp_circle (center 0 0) (end 3.05 0) (layer F.CrtYd) (width 0.05))
     (fp_text user %R (at 0.3 0) (layer F.Fab)
       (effects (font (size 1 1) (thickness 0.15)))
     )

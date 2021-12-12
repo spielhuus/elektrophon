@@ -4,12 +4,12 @@ EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 3
-Title "(title)"
-Date ""
+Title "kontur"
+Date "2021-12-12"
 Rev "R01"
 Comp ""
 Comment1 "schema for pcb"
-Comment2 "(description)"
+Comment2 "AD/AR envelope generator"
 Comment3 ""
 Comment4 "License CC BY 4.0 - Attribution 4.0 International"
 $EndDescr
@@ -383,6 +383,7 @@ F 3 "http://www.ti.com/lit/ds/symlink/lm2902-n.pdf" H 3650 7400 50  0001 C CNN
 F 4 "X" H 3600 7200 50  0001 C CNN "Spice_Primitive"
 F 5 "LM324c" H 3600 7200 50  0001 C CNN "Spice_Model"
 F 6 "Y" H 3600 7200 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "Low-Power, Quad-Operational Amplifiers" H 3600 7200 50  0001 C CNN "Description"
 	5    3600 7200
 	1    0    0    -1  
 $EndComp
@@ -475,6 +476,7 @@ F 3 "http://www.ti.com/lit/ds/symlink/lm2902-n.pdf" H 4550 7400 50  0001 C CNN
 F 4 "X" H 4500 7200 50  0001 C CNN "Spice_Primitive"
 F 5 "LM324c" H 4500 7200 50  0001 C CNN "Spice_Model"
 F 6 "Y" H 4500 7200 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "Low-Power, Quad-Operational Amplifiers" H 4500 7200 50  0001 C CNN "Description"
 	5    4500 7200
 	1    0    0    -1  
 $EndComp
@@ -564,6 +566,7 @@ F 0 "U3" H 4030 5846 50  0000 L CNN
 F 1 "4001" H 4030 5755 50  0000 L CNN
 F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 3800 5800 50  0001 C CNN
 F 3 "http://www.intersil.com/content/dam/Intersil/documents/cd40/cd4000bms-01bms-02bms-25bms.pdf" H 3800 5800 50  0001 C CNN
+F 4 "CMOS Quad 2-Input NOR Gate" H 3800 5800 50  0001 C CNN "Description"
 	5    3800 5800
 	1    0    0    -1  
 $EndComp
@@ -794,6 +797,7 @@ F 3 "http://www.ti.com/lit/ds/symlink/lm2902-n.pdf" H 5500 7400 50  0001 C CNN
 F 4 "X" H 5450 7200 50  0001 C CNN "Spice_Primitive"
 F 5 "LM324c" H 5450 7200 50  0001 C CNN "Spice_Model"
 F 6 "Y" H 5450 7200 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "Low-Power, Quad-Operational Amplifiers" H 5450 7200 50  0001 C CNN "Description"
 	5    5450 7200
 	1    0    0    -1  
 $EndComp

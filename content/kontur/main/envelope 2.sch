@@ -4,14 +4,14 @@ EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 2 3
-Title ""
-Date ""
-Rev ""
+Title "kontur"
+Date "2021-12-12"
+Rev "R01"
 Comp ""
-Comment1 ""
-Comment2 ""
+Comment1 "schema for pcb"
+Comment2 "AD/AR envelope generator"
 Comment3 ""
-Comment4 ""
+Comment4 "License CC BY 4.0 - Attribution 4.0 International"
 $EndDescr
 $Comp
 L Device:R R2
@@ -285,8 +285,8 @@ AR Path="/6166EC9B/616A1F8C" Ref="C7"  Part="1"
 AR Path="/61728A8F/616A1F8C" Ref="C?"  Part="1" 
 AR Path="/61729059/616A1F8C" Ref="C9"  Part="1" 
 F 0 "C9" H 6965 3146 50  0000 L CNN
-F 1 "2.2u" H 6965 3055 50  0000 L CNN
-F 2 "Capacitor_THT:C_Disc_D6.0mm_W4.4mm_P5.00mm" H 6888 2950 50  0001 C CNN
+F 1 "4.7u" H 6965 3055 50  0000 L CNN
+F 2 "Capacitor_THT:C_Rect_L7.0mm_W6.0mm_P5.00mm" H 6888 2950 50  0001 C CNN
 F 3 "~" H 6850 3100 50  0001 C CNN
 F 4 "Multilayer Ceramic Capacitors MLCC (25V, L=6 mm, W=5.5 mm, LS=5 mm)" H 6850 3100 50  0001 C CNN "Description"
 	1    6850 3100
@@ -682,6 +682,7 @@ F 0 "D12" H 3000 1383 50  0000 C CNN
 F 1 "1N4148" H 3000 1474 50  0000 C CNN
 F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 3000 1425 50  0001 C CNN
 F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 3000 1600 50  0001 C CNN
+F 4 "Small Signal Diode (DO-35)" H 3000 1600 50  0001 C CNN "Description"
 	1    3000 1600
 	-1   0    0    1   
 $EndComp
@@ -693,6 +694,7 @@ F 0 "D17" H 5050 1883 50  0000 C CNN
 F 1 "1N4148" H 5050 1974 50  0000 C CNN
 F 2 "Diode_THT:D_DO-35_SOD27_P2.54mm_Vertical_KathodeUp" H 5050 1925 50  0001 C CNN
 F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 5050 2100 50  0001 C CNN
+F 4 "Small Signal Diode (DO-35)" H 5050 2100 50  0001 C CNN "Description"
 	1    5050 2100
 	-1   0    0    1   
 $EndComp
@@ -704,6 +706,7 @@ F 0 "D16" H 5050 1967 50  0000 C CNN
 F 1 "1N4148" H 5050 1876 50  0000 C CNN
 F 2 "Diode_THT:D_DO-35_SOD27_P2.54mm_Vertical_KathodeUp" H 5050 1575 50  0001 C CNN
 F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 5050 1750 50  0001 C CNN
+F 4 "Small Signal Diode (DO-35)" H 5050 1750 50  0001 C CNN "Description"
 	1    5050 1750
 	1    0    0    -1  
 $EndComp
@@ -715,6 +718,7 @@ F 0 "D13" V 4550 2150 50  0000 R CNN
 F 1 "1N4148" V 4450 2350 50  0000 R CNN
 F 2 "Diode_THT:D_DO-35_SOD27_P2.54mm_Vertical_KathodeUp" H 4500 1775 50  0001 C CNN
 F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 4500 1950 50  0001 C CNN
+F 4 "Small Signal Diode (DO-35)" V 4500 1950 50  0001 C CNN "Description"
 	1    4500 1950
 	0    -1   -1   0   
 $EndComp
@@ -726,6 +730,7 @@ F 0 "D14" V 4550 2450 50  0000 R CNN
 F 1 "1N4148" V 4450 2650 50  0000 R CNN
 F 2 "Diode_THT:D_DO-35_SOD27_P2.54mm_Vertical_KathodeUp" H 4500 2075 50  0001 C CNN
 F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 4500 2250 50  0001 C CNN
+F 4 "Small Signal Diode (DO-35)" V 4500 2250 50  0001 C CNN "Description"
 	1    4500 2250
 	0    -1   -1   0   
 $EndComp
@@ -737,6 +742,7 @@ F 0 "D18" H 5900 2183 50  0000 C CNN
 F 1 "1N4148" H 5900 2274 50  0000 C CNN
 F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 5900 2225 50  0001 C CNN
 F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 5900 2400 50  0001 C CNN
+F 4 "Small Signal Diode (DO-35)" H 5900 2400 50  0001 C CNN "Description"
 	1    5900 2400
 	-1   0    0    1   
 $EndComp
@@ -748,6 +754,7 @@ F 0 "D19" H 5900 3067 50  0000 C CNN
 F 1 "1N4148" H 5900 2976 50  0000 C CNN
 F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 5900 2675 50  0001 C CNN
 F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 5900 2850 50  0001 C CNN
+F 4 "Small Signal Diode (DO-35)" H 5900 2850 50  0001 C CNN "Description"
 	1    5900 2850
 	1    0    0    -1  
 $EndComp
@@ -759,6 +766,7 @@ F 0 "D15" H 4950 3683 50  0000 C CNN
 F 1 "1N4148" H 4950 3774 50  0000 C CNN
 F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 4950 3725 50  0001 C CNN
 F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 4950 3900 50  0001 C CNN
+F 4 "Small Signal Diode (DO-35)" H 4950 3900 50  0001 C CNN "Description"
 	1    4950 3900
 	-1   0    0    1   
 $EndComp
@@ -770,6 +778,7 @@ F 0 "D20" H 7200 4533 50  0000 C CNN
 F 1 "1N4148" H 7200 4624 50  0000 C CNN
 F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 7200 4575 50  0001 C CNN
 F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 7200 4750 50  0001 C CNN
+F 4 "Small Signal Diode (DO-35)" H 7200 4750 50  0001 C CNN "Description"
 	1    7200 4750
 	-1   0    0    1   
 $EndComp
@@ -781,6 +790,7 @@ F 0 "D21" H 7200 5083 50  0000 C CNN
 F 1 "1N4148" H 7200 5174 50  0000 C CNN
 F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 7200 5125 50  0001 C CNN
 F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 7200 5300 50  0001 C CNN
+F 4 "Small Signal Diode (DO-35)" H 7200 5300 50  0001 C CNN "Description"
 	1    7200 5300
 	-1   0    0    1   
 $EndComp
@@ -792,6 +802,7 @@ F 0 "D22" V 8046 5220 50  0000 R CNN
 F 1 "1N4148" V 7955 5220 50  0000 R CNN
 F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 8000 5125 50  0001 C CNN
 F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 8000 5300 50  0001 C CNN
+F 4 "Small Signal Diode (DO-35)" V 8000 5300 50  0001 C CNN "Description"
 	1    8000 5300
 	0    -1   -1   0   
 $EndComp

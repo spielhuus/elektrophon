@@ -4,12 +4,12 @@ EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
-Title "(title)"
-Date ""
+Title "kontur"
+Date "2021-12-12"
 Rev "R01"
 Comp ""
 Comment1 "schema for panel"
-Comment2 "(description)"
+Comment2 "AD/AR envelope generator"
 Comment3 ""
 Comment4 "License CC BY 4.0 - Attribution 4.0 International"
 $EndDescr
