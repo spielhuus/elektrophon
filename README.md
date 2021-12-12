@@ -20,7 +20,7 @@ ressources on the internet which provide information about electronic instrument
 
 list of some third party software used to develop the modules. for a complete list go to the arbeitsplatz article.
 
-* [KiCad EDA](https://kicad-pcb.org/) A Cross Platform and Open Source Electronics Design Automation Suite.
+* [KiCad EDA](https://kicad.org/) A Cross Platform and Open Source Electronics Design Automation Suite.
 * [ngspice](http://ngspice.sourceforge.net/index.html) is an open source spice simulator for electric and electronic circuits.
 * [PySpice](https://pyspice.fabrice-salvaire.fr/releases/v1.4/overview.html) is an open source Python module which provides a Python interface to the Ngspice and Xyce circuit simulators.
 * [Jupyter](https://jupyter.org/) interactive Python notebook.  
