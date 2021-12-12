@@ -27,7 +27,7 @@
                     </tr>
                   </thead>
                 {{ range .Params.todo }}
-                <tr><td>{{ .date }}</td><td><strong>{{ .title }}</strong></td><td>{{ .description }}</td></tr>
+                <tr><td>{{ dateFormat "2 Jan 2006" .date }}</td><td><strong>{{ .title }}</strong></td><td>{{ .description }}</td></tr>
                 {{ end }}
             </table>
             {{ end }}
@@ -45,7 +45,7 @@
                     </tr>
                   </thead>
                 {{ range .Params.history }}
-                <tr><td>{{ .revision }}</td><td><strong>{{ .date }}</strong></td><td>{{ .description }}</td></tr>
+                <tr><td>{{ .revision }}</td><td><strong>{{ dateFormat "2 Jan 2006" .date }}</strong></td><td>{{ .description }}</td></tr>
                 {{ end }}
             </table>
             {{ end }}

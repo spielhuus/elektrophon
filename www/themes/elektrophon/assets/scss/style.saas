@@ -28,7 +28,6 @@ svg {
     max-width: 100%;
     max-height: 100%;
 }
-
 .card {
   height: 100%;
   display: flex;
@@ -39,8 +38,32 @@ svg {
     height: 100%;
 }
 
-.table {
-    word-wrap: break-word; 
-    table-layout:fixed;
-    width: 100%;
+table {
+  display: inline-block;
+  overflow-x: auto;
+  white-space: wrap;
+  width: 100%;
+  border: 0;
+}
+table td {
+  border: 1px solid;
+}
+
+//responsive katex
+.katex-display > .katex {
+  white-space: nowrap;
+  max-width: 100%;
+  text-align: initial;
+  display:block;
+  height:auto;
+  padding-bottom:12px;
+  -webkit-box-sizing:border-box;
+  overflow-x:auto;
+  white-space:nowrap
+}
+.katex {
+  font: normal 1.21em KaTeX_Main, Times New Roman, serif;
+  line-height: 1.2;
+  white-space: normal;
+  text-indent: 0;
 }
