@@ -3,7 +3,7 @@ import os
 Import(['env', 'PCB', 'GERBER', 'SCHEMA', 'REPORTS', 'FILES', 'HTML'])
 
 project = 'produkt'
-for board in ['main', 'panel'] :
+for board in ['main', 'mount', 'panel'] :
     REPORTS += env.preflight('%s/%s_%s_report.json' % (board,project,board), '%s/%s.pro' % (board, board), project_name=project)
     SCHEMA += env.schema('%s/%s_%s_schematic.pdf' % (board,project,board), '%s/%s.pro' % (board, board))
     PCB += env.pcb('%s/%s_%s_pcb.pdf' % (board,project,board), '%s/%s.pro' % (board, board))

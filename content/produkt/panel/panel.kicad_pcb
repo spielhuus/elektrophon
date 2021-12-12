@@ -2,7 +2,7 @@
 
   (general
     (thickness 1.6)
-    (drawings 12)
+    (drawings 18)
     (tracks 0)
     (zones 0)
     (modules 12)
@@ -11,9 +11,11 @@
 
   (page A4)
   (title_block
-    (title "(title)")
+    (title produkt)
+    (date 2021-12-08)
+    (rev R01)
     (comment 1 "PCB for panel")
-    (comment 2 "(description)")
+    (comment 2 "vca and ringmodulator")
     (comment 4 "License CC BY 4.0 - Attribution 4.0 International")
   )
 
@@ -116,12 +118,12 @@
     (fp_text reference H12 (at 0 -9.4) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value out (at 0 9.144) (layer F.Mask)
+    (fp_text value out (at 0 9.144) (layer F.Mask) hide
       (effects (font (size 2 1.4) (thickness 0.25)))
     )
     (fp_circle (center 0 0) (end 4.2 0) (layer F.CrtYd) (width 0.05))
     (fp_circle (center 0 0) (end 4 0) (layer Cmts.User) (width 0.15))
-    (fp_text user %R (at 0.3 0) (layer F.Fab)
+    (fp_text user %R (at 0.3 0) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (pad "" np_thru_hole circle (at 0 0) (size 6.4 6.4) (drill 6.4) (layers *.Cu *.Mask))
@@ -166,12 +168,12 @@
     (fp_text reference H10 (at 0 -9.4) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value Y (at 0 9.144) (layer F.Mask)
+    (fp_text value Y (at 0 9.144) (layer F.Mask) hide
       (effects (font (size 2 1.4) (thickness 0.25)))
     )
     (fp_circle (center 0 0) (end 4.2 0) (layer F.CrtYd) (width 0.05))
     (fp_circle (center 0 0) (end 4 0) (layer Cmts.User) (width 0.15))
-    (fp_text user %R (at 0.3 0) (layer F.Fab)
+    (fp_text user %R (at 0.3 0) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (pad "" np_thru_hole circle (at 0 0) (size 6.4 6.4) (drill 6.4) (layers *.Cu *.Mask))
@@ -216,12 +218,12 @@
     (fp_text reference H8 (at 0 -9.4) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value X (at 0 9.144) (layer F.Mask)
+    (fp_text value X (at 0 9.144) (layer F.Mask) hide
       (effects (font (size 2 1.4) (thickness 0.25)))
     )
     (fp_circle (center 0 0) (end 4.2 0) (layer F.CrtYd) (width 0.05))
     (fp_circle (center 0 0) (end 4 0) (layer Cmts.User) (width 0.15))
-    (fp_text user %R (at 0.3 0) (layer F.Fab)
+    (fp_text user %R (at 0.3 0) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (pad "" np_thru_hole circle (at 0 0) (size 6.4 6.4) (drill 6.4) (layers *.Cu *.Mask))
@@ -266,12 +268,12 @@
     (fp_text reference H6 (at 0 -9.4) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value Y (at 0 9.144) (layer F.Mask)
+    (fp_text value Y (at 0 9.144) (layer F.Mask) hide
       (effects (font (size 2 1.4) (thickness 0.25)))
     )
     (fp_circle (center 0 0) (end 4.2 0) (layer F.CrtYd) (width 0.05))
     (fp_circle (center 0 0) (end 4 0) (layer Cmts.User) (width 0.15))
-    (fp_text user %R (at 0.3 0) (layer F.Fab)
+    (fp_text user %R (at 0.3 0) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (pad "" np_thru_hole circle (at 0 0) (size 6.4 6.4) (drill 6.4) (layers *.Cu *.Mask))
@@ -291,12 +293,12 @@
     (fp_text reference H5 (at 0 -9.4) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value out (at 0 9.144) (layer F.Mask)
+    (fp_text value out (at 0 9.144) (layer F.Mask) hide
       (effects (font (size 2 1.4) (thickness 0.25)))
     )
     (fp_circle (center 0 0) (end 4.2 0) (layer F.CrtYd) (width 0.05))
     (fp_circle (center 0 0) (end 4 0) (layer Cmts.User) (width 0.15))
-    (fp_text user %R (at 0.3 0) (layer F.Fab)
+    (fp_text user %R (at 0.3 0) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (pad "" np_thru_hole circle (at 0 0) (size 6.4 6.4) (drill 6.4) (layers *.Cu *.Mask))
@@ -341,12 +343,12 @@
     (fp_text reference H3 (at 0 -9.4) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value X (at 0 9.144) (layer F.Mask)
+    (fp_text value X (at 0 9.144) (layer F.Mask) hide
       (effects (font (size 2 1.4) (thickness 0.25)))
     )
     (fp_circle (center 0 0) (end 4.2 0) (layer F.CrtYd) (width 0.05))
     (fp_circle (center 0 0) (end 4 0) (layer Cmts.User) (width 0.15))
-    (fp_text user %R (at 0.3 0) (layer F.Fab)
+    (fp_text user %R (at 0.3 0) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (pad "" np_thru_hole circle (at 0 0) (size 6.4 6.4) (drill 6.4) (layers *.Cu *.Mask))
@@ -401,6 +403,24 @@
     (pad 1 thru_hole circle (at 0 0) (size 3.6 3.6) (drill 3.2) (layers *.Cu *.Mask))
   )
 
+  (gr_text out (at 81.28 166.624) (layer F.Mask) (tstamp 61B09431)
+    (effects (font (size 2 1.4) (thickness 0.25)))
+  )
+  (gr_text out (at 60.96 166.624) (layer F.Mask) (tstamp 61B09431)
+    (effects (font (size 2 1.4) (thickness 0.25)))
+  )
+  (gr_text Y (at 81.28 125.984) (layer F.Mask) (tstamp 61B093E1)
+    (effects (font (size 2 1.4) (thickness 0.25)))
+  )
+  (gr_text Y (at 60.96 125.984) (layer F.Mask) (tstamp 61B093E1)
+    (effects (font (size 2 1.4) (thickness 0.25)))
+  )
+  (gr_text X (at 81.28 85.344) (layer F.Mask) (tstamp 61B0935A)
+    (effects (font (size 2 1.4) (thickness 0.25)))
+  )
+  (gr_text X (at 60.96 85.344) (layer F.Mask) (tstamp 61B0935A)
+    (effects (font (size 2 1.4) (thickness 0.25)))
+  )
   (gr_text R01 (at 86.106 177.038) (layer F.Cu)
     (effects (font (size 1.5 1.5) (thickness 0.3)))
   )
