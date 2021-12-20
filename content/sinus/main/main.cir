@@ -1,56 +1,116 @@
 .title KiCad schematic
-H1 MountingHole
-H2 MountingHole
-H3 MountingHole
-H4 MountingHole
-Q1 /1_7 /1_1 /1_4 BC846B
-Q3 /1_6 Net-_Q2-Pad1_ /1_4 BC846B
-R3 Net-_Q2-Pad1_ /1_1 750
-Q5 /1_7 Net-_Q4-Pad1_ /1_4 BC846B
-R5 Net-_Q4-Pad1_ Net-_Q2-Pad1_ 750
-Q7 /1_6 Net-_Q6-Pad1_ /1_4 BC846B
-R7 Net-_Q6-Pad1_ Net-_Q4-Pad1_ 750
-Q10 /1_7 Net-_Q10-Pad2_ /1_4 BC846B
-R9 Net-_Q10-Pad2_ Net-_Q6-Pad1_ 750
-Q2 Net-_Q2-Pad1_ /2_6 Net-_Q2-Pad3_ BC556B
-R4 Net-_Q2-Pad3_ /2_5 51k
-Q4 Net-_Q4-Pad1_ /2_6 Net-_Q4-Pad3_ BC556B
-R6 Net-_Q4-Pad3_ /2_5 51k
-Q6 Net-_Q6-Pad1_ /2_6 Net-_Q6-Pad3_ BC556B
-R8 Net-_Q6-Pad3_ /2_5 51k
-Q9 Net-_Q10-Pad2_ /2_6 Net-_Q9-Pad3_ BC556B
-R10 Net-_Q9-Pad3_ /2_5 51k
-Q20 /1_6 /1_5 /1_4 BC846B
-Q18 /1_7 Net-_Q18-Pad2_ /1_4 BC846B
-R19 Net-_Q18-Pad2_ /1_5 750
-Q16 /1_6 Net-_Q16-Pad2_ /1_4 BC846B
-R17 Net-_Q16-Pad2_ Net-_Q18-Pad2_ 750
-Q14 /1_7 Net-_Q14-Pad2_ /1_4 BC846B
-R15 Net-_Q14-Pad2_ Net-_Q16-Pad2_ 750
-Q12 /1_6 Net-_Q12-Pad2_ /1_4 BC846B
-R13 Net-_Q12-Pad2_ Net-_Q14-Pad2_ 750
-Q19 Net-_Q18-Pad2_ /2_6 /2_7 BC556B
-R18 /2_7 /2_5 51k
-Q17 Net-_Q16-Pad2_ /2_6 Net-_Q17-Pad3_ BC556B
-R16 Net-_Q17-Pad3_ /2_5 51k
-Q15 Net-_Q14-Pad2_ /2_6 Net-_Q15-Pad3_ BC556B
-R14 Net-_Q15-Pad3_ /2_5 51k
-Q13 Net-_Q12-Pad2_ /2_6 Net-_Q13-Pad3_ BC556B
-R12 Net-_Q13-Pad3_ /2_5 51k
-R11 Net-_Q10-Pad2_ Net-_Q12-Pad2_ 750
-Q8 /2_1 /2_2 /2_4 BC846B
-Q11 /1_4 /2_3 /2_4 BC846B
-XU1 /1_6 /1_7 +15V -15V /OUT TL072
-R20 /1_7 /OUT 100k
-R21 /1_7 +15V 47k
-R22 /1_6 +15V 47k
-R23 GND /1_6 100k
-C4 /1_6 GND 47p
-C3 /1_7 /OUT 47p
-R27 /1_5 Net-_R26-Pad1_ 10k
-R26 Net-_R26-Pad1_ /1_1 10k
-R25 /1_1 Net-_R24-Pad1_ 47k
-R24 Net-_R24-Pad1_ /IN 100k
-XU2 GND Net-_R24-Pad1_ +15V -15V /1_1 TL072
-XU3 GND Net-_R26-Pad1_ +15V -15V /1_5 TL072
+XU2 Net-_Q13-Pad2_ Net-_Q25-Pad3_ Net-_R11-Pad2_ -15V GND Net-_R32-Pad1_ Net-_Q28-Pad2_ +15V TL072c
+XU1 Net-_C5-Pad2_ Net-_C5-Pad1_ GND -15V /core/OUTb /core/OUTa Net-_C4-Pad2_ +15V TL072c
+R4 GND /core/OUTb 100k
+XJ2 GND Net-_J2-PadT_ NC_01 OUT
+R7 Net-_C4-Pad2_ Net-_J2-PadT_ 100
+R3 /core/OUTb +15V 51k
+R5 /core/OUTa +15V 51k
+R6 /core/OUTa Net-_C4-Pad2_ 100k
+C4 /core/OUTa Net-_C4-Pad2_ 47p
+R41 Net-_C7-Pad1_ Net-_R40-Pad1_ 100k
+C7 Net-_C7-Pad1_ GND 22u
+XU4 +5V Net-_C8-Pad2_ Net-_C7-Pad1_ -15V GND Net-_C9-Pad2_ -5V +15V TL072c
+R44 Net-_C9-Pad2_ +5V 100k
+R40 Net-_R40-Pad1_ +15V 10k
+R43 +5V Net-_C8-Pad2_ 100k
+C8 +5V Net-_C8-Pad2_ 22u
+R42 GND Net-_C8-Pad2_ 100k
+R45 -5V Net-_C9-Pad2_ 100k
+C9 -5V Net-_C9-Pad2_ 22u
+XU5 Net-_R40-Pad1_ GND Net-_R40-Pad1_ TL431
+R54 Net-_C11-Pad1_ Net-_R47-Pad1_ 100k
+R47 Net-_R47-Pad1_ Net-_R47-Pad2_ 820k
+XRV5 +5V Net-_R58-Pad1_ -5V TRIM
+R60 GND Net-_Q29-Pad1_ 22k
+Q30 Net-_Q30-Pad3_ Net-_Q29-Pad2_ Net-_Q29-Pad1_ BC556B
+Q29 Net-_Q29-Pad1_ Net-_Q29-Pad1_ Net-_Q29-Pad2_ BC556B
+R57 Net-_Q29-Pad1_ Net-_R49-Pad1_ 51k
+R49 Net-_R49-Pad1_ Net-_R49-Pad2_ 100k
+XU7 Net-_Q29-Pad2_ Net-_R49-Pad1_ GND -15V GND Net-_C11-Pad1_ /core/IN +15V TL072c
+R58 Net-_R58-Pad1_ Net-_R52-Pad2_ 3M
+R61 /core/IN Net-_C11-Pad1_ 100k
+C11 Net-_C11-Pad1_ /core/IN 47p
+R55 GND Net-_R52-Pad2_ 10k
+R52 GND Net-_R52-Pad2_ 100k
+R48 GND Net-_R46-Pad1_ 10k
+R46 Net-_R46-Pad1_ Net-_J4-PadT_ 100k
+XJ4 GND Net-_J4-PadT_ NC_02 IN
+R59 Net-_R59-Pad1_ Net-_Q30-Pad3_ 10k
+XRV1 +5V Net-_R47-Pad2_ -5V POT
+XRV2 +5V Net-_R49-Pad2_ GND POT
+R51 Net-_R51-Pad1_ +5V 51k
+R56 Net-_C10-Pad2_ +5V 100k
+C10 -15V Net-_C10-Pad2_ 10u
+R53 Net-_C11-Pad1_ Net-_R53-Pad2_ 100k
+XJ5 GND Net-_J5-PadT_ NC_03 LEVEL
+XRV3 Net-_J5-PadT_ Net-_R53-Pad2_ GND POT
+XRV4 Net-_J3-PadT_ Net-_R50-Pad2_ GND POT
+XJ3 GND Net-_J3-PadT_ NC_04 CV
+R50 Net-_R49-Pad1_ Net-_R50-Pad2_ 100k
+XU6 Net-_R59-Pad1_ Net-_U6-Pad12_ Net-_R46-Pad1_ Net-_R52-Pad2_ Net-_C11-Pad1_ -15V NC_05 NC_06 NC_07 NC_08 +15V Net-_U6-Pad12_ GND Net-_R51-Pad1_ Net-_R51-Pad1_ Net-_C10-Pad2_ LM13700d
+Q12 /core/OUTa Net-_Q12-Pad2_ Net-_Q1-Pad3_ BC846B
+R23 Net-_Q12-Pad2_ Net-_Q14-Pad2_ 750
+Q13 Net-_Q12-Pad2_ Net-_Q13-Pad2_ Net-_Q13-Pad3_ BC556B
+R22 Net-_Q13-Pad3_ +15V 51k
+Q14 /core/OUTb Net-_Q14-Pad2_ Net-_Q1-Pad3_ BC846B
+R25 Net-_Q14-Pad2_ Net-_Q16-Pad2_ 750
+Q15 Net-_Q14-Pad2_ Net-_Q13-Pad2_ Net-_Q15-Pad3_ BC556B
+R24 Net-_Q15-Pad3_ +15V 51k
+Q16 /core/OUTa Net-_Q16-Pad2_ Net-_Q1-Pad3_ BC846B
+R27 Net-_Q16-Pad2_ Net-_Q18-Pad2_ 750
+Q17 Net-_Q16-Pad2_ Net-_Q13-Pad2_ Net-_Q17-Pad3_ BC556B
+R26 Net-_Q17-Pad3_ +15V 51k
+Q18 /core/OUTb Net-_Q18-Pad2_ Net-_Q1-Pad3_ BC846B
+R29 Net-_Q18-Pad2_ Net-_Q20-Pad2_ 750
+Q19 Net-_Q18-Pad2_ Net-_Q13-Pad2_ Net-_Q19-Pad3_ BC556B
+R28 Net-_Q19-Pad3_ +15V 51k
+Q20 /core/OUTa Net-_Q20-Pad2_ Net-_Q1-Pad3_ BC846B
+R31 Net-_Q20-Pad2_ Net-_Q22-Pad2_ 750
+Q21 Net-_Q20-Pad2_ Net-_Q13-Pad2_ Net-_Q21-Pad3_ BC556B
+R30 Net-_Q21-Pad3_ +15V 51k
+Q22 /core/OUTb Net-_Q22-Pad2_ Net-_Q1-Pad3_ BC846B
+R34 Net-_Q22-Pad2_ Net-_Q24-Pad2_ 750
+Q23 Net-_Q22-Pad2_ Net-_Q13-Pad2_ Net-_Q23-Pad3_ BC556B
+R33 Net-_Q23-Pad3_ +15V 51k
+Q24 /core/OUTa Net-_Q24-Pad2_ Net-_Q1-Pad3_ BC846B
+R37 Net-_Q24-Pad2_ Net-_Q26-Pad2_ 750
+Q25 Net-_Q24-Pad2_ Net-_Q13-Pad2_ Net-_Q25-Pad3_ BC556B
+R36 Net-_Q25-Pad3_ +15V 51k
+Q10 /core/OUTb Net-_Q10-Pad2_ Net-_Q1-Pad3_ BC846B
+R19 Net-_Q10-Pad2_ Net-_Q6-Pad1_ 750
+Q9 Net-_Q10-Pad2_ Net-_Q13-Pad2_ Net-_Q9-Pad3_ BC556B
+R20 Net-_Q9-Pad3_ +15V 51k
+R21 Net-_Q12-Pad2_ Net-_Q10-Pad2_ 750
+Q7 /core/OUTa Net-_Q6-Pad1_ Net-_Q1-Pad3_ BC846B
+R16 Net-_Q6-Pad1_ Net-_Q4-Pad1_ 750
+Q6 Net-_Q6-Pad1_ Net-_Q13-Pad2_ Net-_Q6-Pad3_ BC556B
+R17 Net-_Q6-Pad3_ +15V 51k
+Q5 /core/OUTb Net-_Q4-Pad1_ Net-_Q1-Pad3_ BC846B
+R14 Net-_Q4-Pad1_ Net-_Q2-Pad1_ 750
+Q4 Net-_Q4-Pad1_ Net-_Q13-Pad2_ Net-_Q4-Pad3_ BC556B
+R15 Net-_Q4-Pad3_ +15V 51k
+Q3 /core/OUTa Net-_Q2-Pad1_ Net-_Q1-Pad3_ BC846B
+R10 Net-_Q2-Pad1_ /core/IN 750
+Q2 Net-_Q2-Pad1_ Net-_Q13-Pad2_ Net-_Q2-Pad3_ BC556B
+R12 Net-_Q2-Pad3_ +15V 51k
+Q1 /core/OUTb /core/IN Net-_Q1-Pad3_ BC846B
+Q26 /core/OUTb Net-_Q26-Pad2_ Net-_Q1-Pad3_ BC846B
+R39 Net-_Q26-Pad2_ Net-_Q28-Pad2_ 750
+Q27 Net-_Q26-Pad2_ Net-_Q13-Pad2_ Net-_Q27-Pad3_ BC556B
+R38 Net-_Q27-Pad3_ +15V 51k
+Q28 /core/OUTa Net-_Q28-Pad2_ Net-_Q1-Pad3_ BC846B
+R35 Net-_Q28-Pad2_ Net-_R32-Pad1_ 10k
+R32 Net-_R32-Pad1_ /core/IN 10k
+XU3 +15V Net-_R11-Pad2_ Net-_R8-Pad1_ TL431
+R8 Net-_R8-Pad1_ +15V 10k
+R9 Net-_R11-Pad2_ Net-_R8-Pad1_ 10k
+R11 -15V Net-_R11-Pad2_ 10k
+C6 +15V GND 0.1u
+Q8 Net-_C5-Pad1_ GND Net-_D1-Pad2_ BC846B
+Q11 Net-_Q1-Pad3_ GND Net-_D1-Pad2_ BC846B
+D1 Net-_C5-Pad1_ Net-_D1-Pad2_ D1N4148
+R18 Net-_C5-Pad2_ Net-_D1-Pad2_ 1k
+C5 Net-_C5-Pad1_ Net-_C5-Pad2_ 47p
+R13 +5V Net-_C5-Pad1_ 36k
 .end
