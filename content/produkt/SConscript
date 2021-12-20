@@ -4,17 +4,17 @@ Import(['env', 'PCB', 'GERBER', 'SCHEMA', 'REPORTS', 'FILES', 'HTML'])
 
 project = 'produkt'
 for board in ['main', 'mount', 'panel'] :
-    REPORTS += env.preflight('%s/%s_%s_report.json' % (board,project,board), '%s/%s.pro' % (board, board), project_name=project)
-    SCHEMA += env.schema('%s/%s_%s_schematic.pdf' % (board,project,board), '%s/%s.pro' % (board, board))
-    PCB += env.pcb('%s/%s_%s_pcb.pdf' % (board,project,board), '%s/%s.pro' % (board, board))
-    GERBER += env.gerbers('%s/%s_%s_JLCPCB.zip' % (board,project,board), '%s/%s.pro' % (board, board))
-    REPORTS += env.bom('%s/%s_%s_bom.json' % (board,project,board), '%s/%s.pro' % (board, board), project_name=project)
+    REPORTS += env.preflight(f'{board}/{project}_{board}_report.json', f'{board}/{board}.pro', project_name=project)
+    SCHEMA += env.schema(f'{board}/{project}_{board}_schematic.pdf', f'{board}/{board}.pro')
+    PCB += env.pcb(f'{board}/{project}_{board}_pcb.pdf', f'{board}/{board}.pro')
+    GERBER += env.gerbers(f'{board}/{project}_{board}_JLCPCB.zip', f'{board}/{board}.pro')
+    REPORTS += env.bom(f'{board}/{project}_{board}_bom.json', f'{board}/{board}.pro', project_name=project)
 
-    Clean(os.path.join(board, '%s.pro' % board), os.path.join(board, 'fp-info-cache'))
-    Clean(os.path.join(board, '%s.pro' % board), os.path.join(board, '%s-cache.lib' % board))
-    Clean(os.path.join(board, '%s.pro' % board), Glob('%s/*-bak' % board)) 
+    Clean(os.path.join(board, f'{board}.pro'), os.path.join(board, 'fp-info-cache'))
+    Clean(os.path.join(board, f'{board}.pro'), os.path.join(board, f'{board}-cache.lib'))
+    Clean(os.path.join(board, f'{board}.pro'), Glob(f'{board}/*-bak')) 
 
-HTML += env.nbconvert('%s.html' % project, '%s.ipynb' % project)
-REPORTS += env.pytest("produkt_test.json", "test/test_produkt.py", project_name=project)
+HTML += env.nbconvert(f'{project}.html', f'{project}.ipynb')
+REPORTS += env.pytest(f"{project}_test.json", f"test/test_{project}.py", project_name=project)
 
 FILES += Glob('*.jpg')
