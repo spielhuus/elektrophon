@@ -1,0 +1,1412 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 4
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Transistor_BJT:BC548 Q12
+U 1 1 61BDD25E
+P 4750 4600
+F 0 "Q12" H 4650 4900 50  0000 L CNN
+F 1 "BC548" H 4550 4800 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 4950 4525 50  0001 L CIN
+F 3 "https://www.onsemi.com/pub/Collateral/BC550-D.pdf" H 4750 4600 50  0001 L CNN
+F 4 "Q" H 4750 4600 50  0001 C CNN "Spice_Primitive"
+F 5 "BC846B" H 4750 4600 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 4750 4600 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    4750 4600
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Device:R R23
+U 1 1 61BDD264
+P 5100 4600
+F 0 "R23" V 4893 4600 50  0000 C CNN
+F 1 "750" V 4984 4600 50  0000 C CNN
+F 2 "" V 5030 4600 50  0001 C CNN
+F 3 "~" H 5100 4600 50  0001 C CNN
+	1    5100 4600
+	0    -1   1    0   
+$EndComp
+$Comp
+L Transistor_BJT:BC556 Q13
+U 1 1 61BDD26D
+P 5050 3650
+F 0 "Q13" H 5300 3500 50  0000 L CNN
+F 1 "BC556" H 5250 3600 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 5250 3575 50  0001 L CIN
+F 3 "https://www.onsemi.com/pub/Collateral/BC556BTA-D.pdf" H 5050 3650 50  0001 L CNN
+F 4 "Q" H 5050 3650 50  0001 C CNN "Spice_Primitive"
+F 5 "BC556B" H 5050 3650 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 5050 3650 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    5050 3650
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R R22
+U 1 1 61BDD273
+P 4950 3150
+F 0 "R22" H 4880 3104 50  0000 R CNN
+F 1 "51k" H 4880 3195 50  0000 R CNN
+F 2 "" V 4880 3150 50  0001 C CNN
+F 3 "~" H 4950 3150 50  0001 C CNN
+	1    4950 3150
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	4950 3450 4950 3300
+Wire Wire Line
+	4950 3000 4950 2850
+Wire Wire Line
+	4950 4600 4950 3850
+Connection ~ 4950 4600
+$Comp
+L Transistor_BJT:BC548 Q14
+U 1 1 61C05DAE
+P 5450 4600
+F 0 "Q14" H 5350 4900 50  0000 L CNN
+F 1 "BC548" H 5250 4800 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 5650 4525 50  0001 L CIN
+F 3 "https://www.onsemi.com/pub/Collateral/BC550-D.pdf" H 5450 4600 50  0001 L CNN
+F 4 "Q" H 5450 4600 50  0001 C CNN "Spice_Primitive"
+F 5 "BC846B" H 5450 4600 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 5450 4600 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    5450 4600
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Device:R R25
+U 1 1 61C05DB4
+P 5800 4600
+F 0 "R25" V 5593 4600 50  0000 C CNN
+F 1 "750" V 5684 4600 50  0000 C CNN
+F 2 "" V 5730 4600 50  0001 C CNN
+F 3 "~" H 5800 4600 50  0001 C CNN
+	1    5800 4600
+	0    -1   1    0   
+$EndComp
+$Comp
+L Transistor_BJT:BC556 Q15
+U 1 1 61C05DBD
+P 5750 3650
+F 0 "Q15" H 6000 3500 50  0000 L CNN
+F 1 "BC556" H 5950 3600 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 5950 3575 50  0001 L CIN
+F 3 "https://www.onsemi.com/pub/Collateral/BC556BTA-D.pdf" H 5750 3650 50  0001 L CNN
+F 4 "Q" H 5750 3650 50  0001 C CNN "Spice_Primitive"
+F 5 "BC556B" H 5750 3650 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 5750 3650 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    5750 3650
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R R24
+U 1 1 61C05DC3
+P 5650 3150
+F 0 "R24" H 5580 3104 50  0000 R CNN
+F 1 "51k" H 5580 3195 50  0000 R CNN
+F 2 "" V 5580 3150 50  0001 C CNN
+F 3 "~" H 5650 3150 50  0001 C CNN
+	1    5650 3150
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	5650 3450 5650 3300
+Wire Wire Line
+	5650 3000 5650 2850
+Wire Wire Line
+	5650 4600 5650 3850
+Connection ~ 5650 4600
+$Comp
+L Transistor_BJT:BC548 Q16
+U 1 1 61C09DE7
+P 6150 4600
+F 0 "Q16" H 6050 4900 50  0000 L CNN
+F 1 "BC548" H 5950 4800 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 6350 4525 50  0001 L CIN
+F 3 "https://www.onsemi.com/pub/Collateral/BC550-D.pdf" H 6150 4600 50  0001 L CNN
+F 4 "Q" H 6150 4600 50  0001 C CNN "Spice_Primitive"
+F 5 "BC846B" H 6150 4600 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 6150 4600 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    6150 4600
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Device:R R27
+U 1 1 61C09DED
+P 6500 4600
+F 0 "R27" V 6293 4600 50  0000 C CNN
+F 1 "750" V 6384 4600 50  0000 C CNN
+F 2 "" V 6430 4600 50  0001 C CNN
+F 3 "~" H 6500 4600 50  0001 C CNN
+	1    6500 4600
+	0    -1   1    0   
+$EndComp
+$Comp
+L Transistor_BJT:BC556 Q17
+U 1 1 61C09DF6
+P 6450 3650
+F 0 "Q17" H 6700 3500 50  0000 L CNN
+F 1 "BC556" H 6650 3600 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 6650 3575 50  0001 L CIN
+F 3 "https://www.onsemi.com/pub/Collateral/BC556BTA-D.pdf" H 6450 3650 50  0001 L CNN
+F 4 "Q" H 6450 3650 50  0001 C CNN "Spice_Primitive"
+F 5 "BC556B" H 6450 3650 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 6450 3650 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    6450 3650
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R R26
+U 1 1 61C09DFC
+P 6350 3150
+F 0 "R26" H 6280 3104 50  0000 R CNN
+F 1 "51k" H 6280 3195 50  0000 R CNN
+F 2 "" V 6280 3150 50  0001 C CNN
+F 3 "~" H 6350 3150 50  0001 C CNN
+	1    6350 3150
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	6350 3450 6350 3300
+Wire Wire Line
+	6350 3000 6350 2850
+Wire Wire Line
+	6350 4600 6350 3850
+Connection ~ 6350 4600
+$Comp
+L Transistor_BJT:BC548 Q18
+U 1 1 61C0D8C6
+P 6850 4600
+F 0 "Q18" H 6750 4900 50  0000 L CNN
+F 1 "BC548" H 6650 4800 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 7050 4525 50  0001 L CIN
+F 3 "https://www.onsemi.com/pub/Collateral/BC550-D.pdf" H 6850 4600 50  0001 L CNN
+F 4 "Q" H 6850 4600 50  0001 C CNN "Spice_Primitive"
+F 5 "BC846B" H 6850 4600 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 6850 4600 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    6850 4600
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Device:R R29
+U 1 1 61C0D8CC
+P 7200 4600
+F 0 "R29" V 6993 4600 50  0000 C CNN
+F 1 "750" V 7084 4600 50  0000 C CNN
+F 2 "" V 7130 4600 50  0001 C CNN
+F 3 "~" H 7200 4600 50  0001 C CNN
+	1    7200 4600
+	0    -1   1    0   
+$EndComp
+$Comp
+L Transistor_BJT:BC556 Q19
+U 1 1 61C0D8D5
+P 7150 3650
+F 0 "Q19" H 7400 3500 50  0000 L CNN
+F 1 "BC556" H 7350 3600 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 7350 3575 50  0001 L CIN
+F 3 "https://www.onsemi.com/pub/Collateral/BC556BTA-D.pdf" H 7150 3650 50  0001 L CNN
+F 4 "Q" H 7150 3650 50  0001 C CNN "Spice_Primitive"
+F 5 "BC556B" H 7150 3650 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 7150 3650 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    7150 3650
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R R28
+U 1 1 61C0D8DB
+P 7050 3150
+F 0 "R28" H 6980 3104 50  0000 R CNN
+F 1 "51k" H 6980 3195 50  0000 R CNN
+F 2 "" V 6980 3150 50  0001 C CNN
+F 3 "~" H 7050 3150 50  0001 C CNN
+	1    7050 3150
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	7050 3450 7050 3300
+Wire Wire Line
+	7050 3000 7050 2850
+Wire Wire Line
+	7050 4600 7050 3850
+Connection ~ 7050 4600
+$Comp
+L Transistor_BJT:BC548 Q20
+U 1 1 61C10D02
+P 7550 4600
+F 0 "Q20" H 7450 4900 50  0000 L CNN
+F 1 "BC548" H 7350 4800 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 7750 4525 50  0001 L CIN
+F 3 "https://www.onsemi.com/pub/Collateral/BC550-D.pdf" H 7550 4600 50  0001 L CNN
+F 4 "Q" H 7550 4600 50  0001 C CNN "Spice_Primitive"
+F 5 "BC846B" H 7550 4600 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 7550 4600 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    7550 4600
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Device:R R31
+U 1 1 61C10D08
+P 7900 4600
+F 0 "R31" V 7693 4600 50  0000 C CNN
+F 1 "750" V 7784 4600 50  0000 C CNN
+F 2 "" V 7830 4600 50  0001 C CNN
+F 3 "~" H 7900 4600 50  0001 C CNN
+	1    7900 4600
+	0    -1   1    0   
+$EndComp
+$Comp
+L Transistor_BJT:BC556 Q21
+U 1 1 61C10D11
+P 7850 3650
+F 0 "Q21" H 8100 3500 50  0000 L CNN
+F 1 "BC556" H 8050 3600 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 8050 3575 50  0001 L CIN
+F 3 "https://www.onsemi.com/pub/Collateral/BC556BTA-D.pdf" H 7850 3650 50  0001 L CNN
+F 4 "Q" H 7850 3650 50  0001 C CNN "Spice_Primitive"
+F 5 "BC556B" H 7850 3650 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 7850 3650 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    7850 3650
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R R30
+U 1 1 61C10D17
+P 7750 3150
+F 0 "R30" H 7680 3104 50  0000 R CNN
+F 1 "51k" H 7680 3195 50  0000 R CNN
+F 2 "" V 7680 3150 50  0001 C CNN
+F 3 "~" H 7750 3150 50  0001 C CNN
+	1    7750 3150
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	7750 3450 7750 3300
+Wire Wire Line
+	7750 3000 7750 2850
+Wire Wire Line
+	7750 4600 7750 3850
+Connection ~ 7750 4600
+$Comp
+L Transistor_BJT:BC548 Q22
+U 1 1 61C15473
+P 8250 4600
+F 0 "Q22" H 8150 4900 50  0000 L CNN
+F 1 "BC548" H 8050 4800 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 8450 4525 50  0001 L CIN
+F 3 "https://www.onsemi.com/pub/Collateral/BC550-D.pdf" H 8250 4600 50  0001 L CNN
+F 4 "Q" H 8250 4600 50  0001 C CNN "Spice_Primitive"
+F 5 "BC846B" H 8250 4600 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 8250 4600 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    8250 4600
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Device:R R34
+U 1 1 61C15479
+P 8600 4600
+F 0 "R34" V 8393 4600 50  0000 C CNN
+F 1 "750" V 8484 4600 50  0000 C CNN
+F 2 "" V 8530 4600 50  0001 C CNN
+F 3 "~" H 8600 4600 50  0001 C CNN
+	1    8600 4600
+	0    -1   1    0   
+$EndComp
+$Comp
+L Transistor_BJT:BC556 Q23
+U 1 1 61C15482
+P 8550 3650
+F 0 "Q23" H 8800 3500 50  0000 L CNN
+F 1 "BC556" H 8750 3600 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 8750 3575 50  0001 L CIN
+F 3 "https://www.onsemi.com/pub/Collateral/BC556BTA-D.pdf" H 8550 3650 50  0001 L CNN
+F 4 "Q" H 8550 3650 50  0001 C CNN "Spice_Primitive"
+F 5 "BC556B" H 8550 3650 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 8550 3650 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    8550 3650
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R R33
+U 1 1 61C15488
+P 8450 3150
+F 0 "R33" H 8380 3104 50  0000 R CNN
+F 1 "51k" H 8380 3195 50  0000 R CNN
+F 2 "" V 8380 3150 50  0001 C CNN
+F 3 "~" H 8450 3150 50  0001 C CNN
+	1    8450 3150
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	8450 3450 8450 3300
+Wire Wire Line
+	8450 3000 8450 2850
+Wire Wire Line
+	8450 4600 8450 3850
+Connection ~ 8450 4600
+$Comp
+L Transistor_BJT:BC548 Q24
+U 1 1 61C1900D
+P 8950 4600
+F 0 "Q24" H 8850 4900 50  0000 L CNN
+F 1 "BC548" H 8750 4800 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 9150 4525 50  0001 L CIN
+F 3 "https://www.onsemi.com/pub/Collateral/BC550-D.pdf" H 8950 4600 50  0001 L CNN
+F 4 "Q" H 8950 4600 50  0001 C CNN "Spice_Primitive"
+F 5 "BC846B" H 8950 4600 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 8950 4600 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    8950 4600
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Device:R R37
+U 1 1 61C19013
+P 9300 4600
+F 0 "R37" V 9093 4600 50  0000 C CNN
+F 1 "750" V 9184 4600 50  0000 C CNN
+F 2 "" V 9230 4600 50  0001 C CNN
+F 3 "~" H 9300 4600 50  0001 C CNN
+	1    9300 4600
+	0    -1   1    0   
+$EndComp
+$Comp
+L Transistor_BJT:BC556 Q25
+U 1 1 61C1901C
+P 9250 3650
+F 0 "Q25" H 9500 3500 50  0000 L CNN
+F 1 "BC556" H 9450 3600 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 9450 3575 50  0001 L CIN
+F 3 "https://www.onsemi.com/pub/Collateral/BC556BTA-D.pdf" H 9250 3650 50  0001 L CNN
+F 4 "Q" H 9250 3650 50  0001 C CNN "Spice_Primitive"
+F 5 "BC556B" H 9250 3650 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 9250 3650 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    9250 3650
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R R36
+U 1 1 61C19022
+P 9150 3150
+F 0 "R36" H 9080 3104 50  0000 R CNN
+F 1 "51k" H 9080 3195 50  0000 R CNN
+F 2 "" V 9080 3150 50  0001 C CNN
+F 3 "~" H 9150 3150 50  0001 C CNN
+	1    9150 3150
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	9150 3450 9150 3400
+Wire Wire Line
+	9150 4600 9150 3850
+Connection ~ 9150 4600
+$Comp
+L Transistor_BJT:BC548 Q10
+U 1 1 61C1D5A2
+P 4050 4600
+F 0 "Q10" H 3950 4900 50  0000 L CNN
+F 1 "BC548" H 3850 4800 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 4250 4525 50  0001 L CIN
+F 3 "https://www.onsemi.com/pub/Collateral/BC550-D.pdf" H 4050 4600 50  0001 L CNN
+F 4 "Q" H 4050 4600 50  0001 C CNN "Spice_Primitive"
+F 5 "BC846B" H 4050 4600 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 4050 4600 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    4050 4600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R19
+U 1 1 61C1D5A8
+P 3700 4600
+F 0 "R19" V 3493 4600 50  0000 C CNN
+F 1 "750" V 3584 4600 50  0000 C CNN
+F 2 "" V 3630 4600 50  0001 C CNN
+F 3 "~" H 3700 4600 50  0001 C CNN
+	1    3700 4600
+	0    1    1    0   
+$EndComp
+$Comp
+L Transistor_BJT:BC556 Q9
+U 1 1 61C1D5B1
+P 3750 3650
+F 0 "Q9" H 4000 3500 50  0000 L CNN
+F 1 "BC556" H 3950 3600 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 3950 3575 50  0001 L CIN
+F 3 "https://www.onsemi.com/pub/Collateral/BC556BTA-D.pdf" H 3750 3650 50  0001 L CNN
+F 4 "Q" H 3750 3650 50  0001 C CNN "Spice_Primitive"
+F 5 "BC556B" H 3750 3650 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 3750 3650 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    3750 3650
+	1    0    0    1   
+$EndComp
+$Comp
+L Device:R R20
+U 1 1 61C1D5B7
+P 3850 3150
+F 0 "R20" H 3780 3104 50  0000 R CNN
+F 1 "51k" H 3780 3195 50  0000 R CNN
+F 2 "" V 3780 3150 50  0001 C CNN
+F 3 "~" H 3850 3150 50  0001 C CNN
+	1    3850 3150
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	3850 3450 3850 3300
+Wire Wire Line
+	3850 3000 3850 2850
+Wire Wire Line
+	3850 4600 3850 3850
+Connection ~ 3850 4600
+$Comp
+L Device:R R21
+U 1 1 61C3F995
+P 4400 4600
+F 0 "R21" V 4193 4600 50  0000 C CNN
+F 1 "750" V 4284 4600 50  0000 C CNN
+F 2 "" V 4330 4600 50  0001 C CNN
+F 3 "~" H 4400 4600 50  0001 C CNN
+	1    4400 4600
+	0    1    1    0   
+$EndComp
+$Comp
+L Transistor_BJT:BC548 Q7
+U 1 1 61C4D046
+P 3350 4600
+F 0 "Q7" H 3250 4900 50  0000 L CNN
+F 1 "BC548" H 3150 4800 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 3550 4525 50  0001 L CIN
+F 3 "https://www.onsemi.com/pub/Collateral/BC550-D.pdf" H 3350 4600 50  0001 L CNN
+F 4 "Q" H 3350 4600 50  0001 C CNN "Spice_Primitive"
+F 5 "BC846B" H 3350 4600 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 3350 4600 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    3350 4600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R16
+U 1 1 61C4D04C
+P 3000 4600
+F 0 "R16" V 2793 4600 50  0000 C CNN
+F 1 "750" V 2884 4600 50  0000 C CNN
+F 2 "" V 2930 4600 50  0001 C CNN
+F 3 "~" H 3000 4600 50  0001 C CNN
+	1    3000 4600
+	0    1    1    0   
+$EndComp
+$Comp
+L Transistor_BJT:BC556 Q6
+U 1 1 61C4D055
+P 3050 3650
+F 0 "Q6" H 3300 3500 50  0000 L CNN
+F 1 "BC556" H 3250 3600 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 3250 3575 50  0001 L CIN
+F 3 "https://www.onsemi.com/pub/Collateral/BC556BTA-D.pdf" H 3050 3650 50  0001 L CNN
+F 4 "Q" H 3050 3650 50  0001 C CNN "Spice_Primitive"
+F 5 "BC556B" H 3050 3650 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 3050 3650 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    3050 3650
+	1    0    0    1   
+$EndComp
+$Comp
+L Device:R R17
+U 1 1 61C4D05B
+P 3150 3150
+F 0 "R17" H 3080 3104 50  0000 R CNN
+F 1 "51k" H 3080 3195 50  0000 R CNN
+F 2 "" V 3080 3150 50  0001 C CNN
+F 3 "~" H 3150 3150 50  0001 C CNN
+	1    3150 3150
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	3150 3450 3150 3300
+Wire Wire Line
+	3150 3000 3150 2850
+Wire Wire Line
+	3150 4600 3150 3850
+Connection ~ 3150 4600
+$Comp
+L Transistor_BJT:BC548 Q5
+U 1 1 61C51659
+P 2650 4600
+F 0 "Q5" H 2550 4900 50  0000 L CNN
+F 1 "BC548" H 2450 4800 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 2850 4525 50  0001 L CIN
+F 3 "https://www.onsemi.com/pub/Collateral/BC550-D.pdf" H 2650 4600 50  0001 L CNN
+F 4 "Q" H 2650 4600 50  0001 C CNN "Spice_Primitive"
+F 5 "BC846B" H 2650 4600 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 2650 4600 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    2650 4600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R14
+U 1 1 61C5165F
+P 2300 4600
+F 0 "R14" V 2093 4600 50  0000 C CNN
+F 1 "750" V 2184 4600 50  0000 C CNN
+F 2 "" V 2230 4600 50  0001 C CNN
+F 3 "~" H 2300 4600 50  0001 C CNN
+	1    2300 4600
+	0    1    1    0   
+$EndComp
+$Comp
+L Transistor_BJT:BC556 Q4
+U 1 1 61C51668
+P 2350 3650
+F 0 "Q4" H 2600 3500 50  0000 L CNN
+F 1 "BC556" H 2550 3600 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 2550 3575 50  0001 L CIN
+F 3 "https://www.onsemi.com/pub/Collateral/BC556BTA-D.pdf" H 2350 3650 50  0001 L CNN
+F 4 "Q" H 2350 3650 50  0001 C CNN "Spice_Primitive"
+F 5 "BC556B" H 2350 3650 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 2350 3650 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    2350 3650
+	1    0    0    1   
+$EndComp
+$Comp
+L Device:R R15
+U 1 1 61C5166E
+P 2450 3150
+F 0 "R15" H 2380 3104 50  0000 R CNN
+F 1 "51k" H 2380 3195 50  0000 R CNN
+F 2 "" V 2380 3150 50  0001 C CNN
+F 3 "~" H 2450 3150 50  0001 C CNN
+	1    2450 3150
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	2450 3450 2450 3300
+Wire Wire Line
+	2450 3000 2450 2850
+Wire Wire Line
+	2450 4600 2450 3850
+Connection ~ 2450 4600
+$Comp
+L Transistor_BJT:BC548 Q3
+U 1 1 61C56D12
+P 1950 4600
+F 0 "Q3" H 1850 4900 50  0000 L CNN
+F 1 "BC548" H 1750 4800 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 2150 4525 50  0001 L CIN
+F 3 "https://www.onsemi.com/pub/Collateral/BC550-D.pdf" H 1950 4600 50  0001 L CNN
+F 4 "Q" H 1950 4600 50  0001 C CNN "Spice_Primitive"
+F 5 "BC846B" H 1950 4600 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 1950 4600 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    1950 4600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R10
+U 1 1 61C56D18
+P 1600 4600
+F 0 "R10" V 1393 4600 50  0000 C CNN
+F 1 "750" V 1484 4600 50  0000 C CNN
+F 2 "" V 1530 4600 50  0001 C CNN
+F 3 "~" H 1600 4600 50  0001 C CNN
+	1    1600 4600
+	0    1    1    0   
+$EndComp
+$Comp
+L Transistor_BJT:BC556 Q2
+U 1 1 61C56D21
+P 1650 3650
+F 0 "Q2" H 1900 3500 50  0000 L CNN
+F 1 "BC556" H 1850 3600 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 1850 3575 50  0001 L CIN
+F 3 "https://www.onsemi.com/pub/Collateral/BC556BTA-D.pdf" H 1650 3650 50  0001 L CNN
+F 4 "Q" H 1650 3650 50  0001 C CNN "Spice_Primitive"
+F 5 "BC556B" H 1650 3650 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 1650 3650 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    1650 3650
+	1    0    0    1   
+$EndComp
+$Comp
+L Device:R R12
+U 1 1 61C56D27
+P 1750 3150
+F 0 "R12" H 1680 3104 50  0000 R CNN
+F 1 "51k" H 1680 3195 50  0000 R CNN
+F 2 "" V 1680 3150 50  0001 C CNN
+F 3 "~" H 1750 3150 50  0001 C CNN
+	1    1750 3150
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	1750 3450 1750 3300
+Wire Wire Line
+	1750 3000 1750 2850
+Wire Wire Line
+	1750 4600 1750 3850
+Connection ~ 1750 4600
+$Comp
+L Transistor_BJT:BC548 Q1
+U 1 1 61C5C09E
+P 1250 4600
+F 0 "Q1" H 1150 4900 50  0000 L CNN
+F 1 "BC548" H 1050 4800 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 1450 4525 50  0001 L CIN
+F 3 "https://www.onsemi.com/pub/Collateral/BC550-D.pdf" H 1250 4600 50  0001 L CNN
+F 4 "Q" H 1250 4600 50  0001 C CNN "Spice_Primitive"
+F 5 "BC846B" H 1250 4600 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 1250 4600 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    1250 4600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Transistor_BJT:BC548 Q26
+U 1 1 61C71E2A
+P 9650 4600
+F 0 "Q26" H 9550 4900 50  0000 L CNN
+F 1 "BC548" H 9450 4800 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 9850 4525 50  0001 L CIN
+F 3 "https://www.onsemi.com/pub/Collateral/BC550-D.pdf" H 9650 4600 50  0001 L CNN
+F 4 "Q" H 9650 4600 50  0001 C CNN "Spice_Primitive"
+F 5 "BC846B" H 9650 4600 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 9650 4600 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    9650 4600
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Device:R R39
+U 1 1 61C71E30
+P 10000 4600
+F 0 "R39" V 9793 4600 50  0000 C CNN
+F 1 "750" V 9884 4600 50  0000 C CNN
+F 2 "" V 9930 4600 50  0001 C CNN
+F 3 "~" H 10000 4600 50  0001 C CNN
+	1    10000 4600
+	0    -1   1    0   
+$EndComp
+$Comp
+L Transistor_BJT:BC556 Q27
+U 1 1 61C71E39
+P 9950 3650
+F 0 "Q27" H 10200 3500 50  0000 L CNN
+F 1 "BC556" H 10150 3600 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 10150 3575 50  0001 L CIN
+F 3 "https://www.onsemi.com/pub/Collateral/BC556BTA-D.pdf" H 9950 3650 50  0001 L CNN
+F 4 "Q" H 9950 3650 50  0001 C CNN "Spice_Primitive"
+F 5 "BC556B" H 9950 3650 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 9950 3650 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    9950 3650
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R R38
+U 1 1 61C71E3F
+P 9850 3150
+F 0 "R38" H 9780 3104 50  0000 R CNN
+F 1 "51k" H 9780 3195 50  0000 R CNN
+F 2 "" V 9780 3150 50  0001 C CNN
+F 3 "~" H 9850 3150 50  0001 C CNN
+	1    9850 3150
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	9850 4600 9850 3850
+Connection ~ 9850 4600
+$Comp
+L Transistor_BJT:BC548 Q28
+U 1 1 61C78641
+P 10350 4600
+F 0 "Q28" H 10250 4900 50  0000 L CNN
+F 1 "BC548" H 10150 4800 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 10550 4525 50  0001 L CIN
+F 3 "https://www.onsemi.com/pub/Collateral/BC550-D.pdf" H 10350 4600 50  0001 L CNN
+F 4 "Q" H 10350 4600 50  0001 C CNN "Spice_Primitive"
+F 5 "BC846B" H 10350 4600 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 10350 4600 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    10350 4600
+	-1   0    0    -1  
+$EndComp
+Text HLabel 850  4600 0    50   Input ~ 0
+IN
+Wire Wire Line
+	850  4600 900  4600
+$Comp
+L Device:R R?
+U 1 1 61CCB858
+P 8900 5250
+AR Path="/61CCB858" Ref="R?"  Part="1" 
+AR Path="/61BABDBB/61CCB858" Ref="R35"  Part="1" 
+F 0 "R35" V 8693 5250 50  0000 C CNN
+F 1 "10k" V 8784 5250 50  0000 C CNN
+F 2 "" V 8830 5250 50  0001 C CNN
+F 3 "~" H 8900 5250 50  0001 C CNN
+	1    8900 5250
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 61CCB85E
+P 8200 5650
+AR Path="/61CCB85E" Ref="R?"  Part="1" 
+AR Path="/61BABDBB/61CCB85E" Ref="R32"  Part="1" 
+F 0 "R32" V 7993 5650 50  0000 C CNN
+F 1 "10k" V 8084 5650 50  0000 C CNN
+F 2 "" V 8130 5650 50  0001 C CNN
+F 3 "~" H 8200 5650 50  0001 C CNN
+	1    8200 5650
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	8350 5650 8500 5650
+Wire Wire Line
+	8500 5650 8500 5250
+Wire Wire Line
+	8500 5250 8750 5250
+Connection ~ 8500 5650
+Wire Wire Line
+	8500 5650 8600 5650
+Wire Wire Line
+	9050 5250 9300 5250
+Wire Wire Line
+	9300 5250 9300 5750
+Wire Wire Line
+	9300 5750 9200 5750
+$Comp
+L power:GND #PWR?
+U 1 1 61CCB86C
+P 8550 5900
+AR Path="/61CCB86C" Ref="#PWR?"  Part="1" 
+AR Path="/61BABDBB/61CCB86C" Ref="#PWR028"  Part="1" 
+F 0 "#PWR028" H 8550 5650 50  0001 C CNN
+F 1 "GND" H 8555 5727 50  0000 C CNN
+F 2 "" H 8550 5900 50  0001 C CNN
+F 3 "" H 8550 5900 50  0001 C CNN
+	1    8550 5900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8550 5900 8550 5850
+Wire Wire Line
+	8550 5850 8600 5850
+Connection ~ 9300 5750
+Wire Wire Line
+	10550 4600 10750 4600
+Wire Wire Line
+	10750 4600 10750 5750
+Wire Wire Line
+	9300 5750 10750 5750
+Connection ~ 10550 4600
+Wire Wire Line
+	8050 5650 900  5650
+Wire Wire Line
+	900  5650 900  4600
+$Comp
+L Reference_Voltage:TL431DBZ U3
+U 1 1 61CDD836
+P 1750 1500
+F 0 "U3" V 1796 1430 50  0000 R CNN
+F 1 "TL431DBZ" V 1705 1430 50  0000 R CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 1750 1350 50  0001 C CIN
+F 3 "http://www.ti.com/lit/ds/symlink/tl431.pdf" H 1750 1500 50  0001 C CIN
+F 4 "X" H 1750 1500 50  0001 C CNN "Spice_Primitive"
+F 5 "TL431" H 1750 1500 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 1750 1500 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "1 3 2" H 1750 1500 50  0001 C CNN "Spice_Node_Sequence"
+	1    1750 1500
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R8
+U 1 1 61CDF4B4
+P 1450 1300
+F 0 "R8" H 1380 1254 50  0000 R CNN
+F 1 "10k" H 1380 1345 50  0000 R CNN
+F 2 "" V 1380 1300 50  0001 C CNN
+F 3 "~" H 1450 1300 50  0001 C CNN
+	1    1450 1300
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R R9
+U 1 1 61CDF91D
+P 1450 1700
+F 0 "R9" H 1380 1654 50  0000 R CNN
+F 1 "10k" H 1380 1745 50  0000 R CNN
+F 2 "" V 1380 1700 50  0001 C CNN
+F 3 "~" H 1450 1700 50  0001 C CNN
+	1    1450 1700
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R R11
+U 1 1 61CDFD76
+P 1750 2100
+F 0 "R11" H 1680 2054 50  0000 R CNN
+F 1 "10k" H 1680 2145 50  0000 R CNN
+F 2 "" V 1680 2100 50  0001 C CNN
+F 3 "~" H 1750 2100 50  0001 C CNN
+	1    1750 2100
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	1750 1950 1750 1900
+Wire Wire Line
+	1750 1400 1750 1100
+Wire Wire Line
+	1750 1100 1450 1100
+Wire Wire Line
+	1450 1100 1450 1150
+Wire Wire Line
+	1450 1850 1450 1900
+Wire Wire Line
+	1450 1900 1750 1900
+Connection ~ 1750 1900
+Wire Wire Line
+	1750 1900 1750 1600
+Wire Wire Line
+	1450 1550 1450 1500
+Wire Wire Line
+	1450 1500 1650 1500
+Connection ~ 1450 1500
+Wire Wire Line
+	1450 1500 1450 1450
+$Comp
+L power:-15V #PWR022
+U 1 1 61CE9C1F
+P 1750 2250
+F 0 "#PWR022" H 1750 2350 50  0001 C CNN
+F 1 "-15V" H 1765 2423 50  0000 C CNN
+F 2 "" H 1750 2250 50  0001 C CNN
+F 3 "" H 1750 2250 50  0001 C CNN
+	1    1750 2250
+	-1   0    0    1   
+$EndComp
+$Comp
+L Amplifier_Operational:TL072 U?
+U 1 1 61CEE667
+P 2850 1800
+AR Path="/61CEE667" Ref="U?"  Part="1" 
+AR Path="/61BABDBB/61CEE667" Ref="U2"  Part="1" 
+F 0 "U2" H 2850 1433 50  0000 C CNN
+F 1 "TL072" H 2850 1524 50  0000 C CNN
+F 2 "" H 2850 1800 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 2850 1800 50  0001 C CNN
+F 4 "X" H 2850 1800 50  0001 C CNN "Spice_Primitive"
+F 5 "TL072c" H 2850 1800 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 2850 1800 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    2850 1800
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	2550 1900 1750 1900
+Wire Wire Line
+	2550 1700 2400 1700
+Wire Wire Line
+	2400 1700 2400 2150
+Wire Wire Line
+	2400 2150 8750 2150
+Wire Wire Line
+	1450 1100 700  1100
+Wire Wire Line
+	700  1100 700  2850
+Connection ~ 1450 1100
+Connection ~ 1750 2850
+Wire Wire Line
+	1750 2850 2450 2850
+Connection ~ 2450 2850
+Wire Wire Line
+	2450 2850 3150 2850
+Connection ~ 3150 2850
+Wire Wire Line
+	3150 2850 3850 2850
+Connection ~ 3850 2850
+Wire Wire Line
+	3850 2850 4400 2850
+Connection ~ 4950 2850
+Wire Wire Line
+	4950 2850 5650 2850
+Connection ~ 5650 2850
+Wire Wire Line
+	5650 2850 6350 2850
+Connection ~ 6350 2850
+Wire Wire Line
+	6350 2850 7050 2850
+Connection ~ 7050 2850
+Wire Wire Line
+	7050 2850 7750 2850
+Connection ~ 7750 2850
+Wire Wire Line
+	7750 2850 8450 2850
+Connection ~ 8450 2850
+Wire Wire Line
+	8450 2850 9150 2850
+Wire Wire Line
+	9850 3000 9850 2850
+Connection ~ 9850 2850
+Wire Wire Line
+	9150 3000 9150 2850
+Connection ~ 9150 2850
+Wire Wire Line
+	9150 2850 9850 2850
+$Comp
+L power:+15V #PWR026
+U 1 1 61D11956
+P 4400 2800
+F 0 "#PWR026" H 4400 2650 50  0001 C CNN
+F 1 "+15V" H 4415 2973 50  0000 C CNN
+F 2 "" H 4400 2800 50  0001 C CNN
+F 3 "" H 4400 2800 50  0001 C CNN
+	1    4400 2800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4400 2800 4400 2850
+Connection ~ 4400 2850
+Wire Wire Line
+	4400 2850 4950 2850
+Wire Wire Line
+	3450 2500 3450 1800
+Wire Wire Line
+	3450 1800 3150 1800
+Connection ~ 2150 3650
+Wire Wire Line
+	2150 3650 1450 3650
+Connection ~ 2850 3650
+Wire Wire Line
+	2850 3650 2150 3650
+Connection ~ 3550 3650
+Wire Wire Line
+	3550 3650 2850 3650
+Connection ~ 5250 3650
+Wire Wire Line
+	5250 3650 3550 3650
+Connection ~ 5950 3650
+Wire Wire Line
+	5950 3650 5250 3650
+Connection ~ 6650 3650
+Wire Wire Line
+	6650 3650 5950 3650
+Connection ~ 7350 3650
+Wire Wire Line
+	7350 3650 6650 3650
+Connection ~ 8050 3650
+Wire Wire Line
+	8050 3650 7350 3650
+Connection ~ 8750 3650
+Wire Wire Line
+	8750 3650 8050 3650
+Connection ~ 9450 3650
+Wire Wire Line
+	9450 3650 8750 3650
+Wire Wire Line
+	10150 3650 9450 3650
+$Comp
+L Device:C C6
+U 1 1 61D2330E
+P 10100 3150
+F 0 "C6" H 10215 3196 50  0000 L CNN
+F 1 "0.1u" H 10215 3105 50  0000 L CNN
+F 2 "" H 10138 3000 50  0001 C CNN
+F 3 "~" H 10100 3150 50  0001 C CNN
+	1    10100 3150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR029
+U 1 1 61D24BAC
+P 10100 3300
+F 0 "#PWR029" H 10100 3050 50  0001 C CNN
+F 1 "GND" H 10105 3127 50  0000 C CNN
+F 2 "" H 10100 3300 50  0001 C CNN
+F 3 "" H 10100 3300 50  0001 C CNN
+	1    10100 3300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10100 3000 10100 2850
+$Comp
+L Transistor_BJT:BC548 Q?
+U 1 1 61D3D7AF
+P 3500 6450
+AR Path="/61D3D7AF" Ref="Q?"  Part="1" 
+AR Path="/61BABDBB/61D3D7AF" Ref="Q8"  Part="1" 
+F 0 "Q8" H 3691 6496 50  0000 L CNN
+F 1 "BC548" H 3691 6405 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 3700 6375 50  0001 L CIN
+F 3 "https://www.onsemi.com/pub/Collateral/BC550-D.pdf" H 3500 6450 50  0001 L CNN
+F 4 "Q" H 3500 6450 50  0001 C CNN "Spice_Primitive"
+F 5 "BC846B" H 3500 6450 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 3500 6450 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    3500 6450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Transistor_BJT:BC548 Q?
+U 1 1 61D3D7B8
+P 4500 6450
+AR Path="/61D3D7B8" Ref="Q?"  Part="1" 
+AR Path="/61BABDBB/61D3D7B8" Ref="Q11"  Part="1" 
+F 0 "Q11" H 4691 6496 50  0000 L CNN
+F 1 "BC548" H 4691 6405 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 4700 6375 50  0001 L CIN
+F 3 "https://www.onsemi.com/pub/Collateral/BC550-D.pdf" H 4500 6450 50  0001 L CNN
+F 4 "Q" H 4500 6450 50  0001 C CNN "Spice_Primitive"
+F 5 "BC846B" H 4500 6450 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 4500 6450 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    4500 6450
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	4400 6650 4400 6850
+Wire Wire Line
+	3600 6850 3600 6650
+$Comp
+L Diode:1N4148W D1
+U 1 1 61D44BE5
+P 4000 6250
+F 0 "D1" V 3954 6330 50  0000 L CNN
+F 1 "1N4148W" V 4045 6330 50  0000 L CNN
+F 2 "Diode_SMD:D_SOD-123" H 4000 6075 50  0001 C CNN
+F 3 "https://www.vishay.com/docs/85748/1n4148w.pdf" H 4000 6250 50  0001 C CNN
+F 4 "D" H 4000 6250 50  0001 C CNN "Spice_Primitive"
+F 5 "D1N4148" H 4000 6250 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 4000 6250 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    4000 6250
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3600 6850 4000 6850
+$Comp
+L Device:R R18
+U 1 1 61D51A12
+P 3450 7150
+F 0 "R18" V 3243 7150 50  0000 C CNN
+F 1 "1k" V 3334 7150 50  0000 C CNN
+F 2 "" V 3380 7150 50  0001 C CNN
+F 3 "~" H 3450 7150 50  0001 C CNN
+	1    3450 7150
+	0    -1   1    0   
+$EndComp
+$Comp
+L Amplifier_Operational:TL072 U?
+U 1 1 61D52446
+P 2600 6650
+AR Path="/61D52446" Ref="U?"  Part="1" 
+AR Path="/61BABDBB/61D52446" Ref="U1"  Part="1" 
+F 0 "U1" H 2600 6283 50  0000 C CNN
+F 1 "TL072" H 2600 6374 50  0000 C CNN
+F 2 "" H 2600 6650 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 2600 6650 50  0001 C CNN
+F 4 "X" H 2600 6650 50  0001 C CNN "Spice_Primitive"
+F 5 "TL072c" H 2600 6650 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 2600 6650 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    2600 6650
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	4000 6400 4000 6850
+Connection ~ 4000 6850
+Wire Wire Line
+	4000 6850 4400 6850
+Wire Wire Line
+	3600 7150 4000 7150
+Wire Wire Line
+	4000 7150 4000 6850
+$Comp
+L power:GND #PWR?
+U 1 1 61D64376
+P 3300 6500
+AR Path="/61D64376" Ref="#PWR?"  Part="1" 
+AR Path="/61BABDBB/61D64376" Ref="#PWR025"  Part="1" 
+F 0 "#PWR025" H 3300 6250 50  0001 C CNN
+F 1 "GND" H 3305 6327 50  0000 C CNN
+F 2 "" H 3300 6500 50  0001 C CNN
+F 3 "" H 3300 6500 50  0001 C CNN
+	1    3300 6500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3300 6450 3300 6500
+Wire Wire Line
+	4000 6100 3600 6100
+Wire Wire Line
+	3600 6100 3600 6250
+$Comp
+L Device:C C5
+U 1 1 61D6E924
+P 3050 6300
+F 0 "C5" H 3165 6346 50  0000 L CNN
+F 1 "47p" H 3165 6255 50  0000 L CNN
+F 2 "" H 3088 6150 50  0001 C CNN
+F 3 "~" H 3050 6300 50  0001 C CNN
+	1    3050 6300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3600 6100 3050 6100
+Wire Wire Line
+	3050 6100 3050 6150
+Connection ~ 3600 6100
+Wire Wire Line
+	3050 6450 3050 6650
+Wire Wire Line
+	3050 7150 3300 7150
+Wire Wire Line
+	2900 6650 3050 6650
+Connection ~ 3050 6650
+Wire Wire Line
+	3050 6650 3050 7150
+$Comp
+L power:GND #PWR?
+U 1 1 61D7D428
+P 2250 6800
+AR Path="/61D7D428" Ref="#PWR?"  Part="1" 
+AR Path="/61BABDBB/61D7D428" Ref="#PWR024"  Part="1" 
+F 0 "#PWR024" H 2250 6550 50  0001 C CNN
+F 1 "GND" H 2255 6627 50  0000 C CNN
+F 2 "" H 2250 6800 50  0001 C CNN
+F 3 "" H 2250 6800 50  0001 C CNN
+	1    2250 6800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2300 6750 2250 6750
+Wire Wire Line
+	2250 6750 2250 6800
+$Comp
+L Device:R R13
+U 1 1 61D8289C
+P 2100 6550
+F 0 "R13" V 1893 6550 50  0000 C CNN
+F 1 "36k" V 1984 6550 50  0000 C CNN
+F 2 "" V 2030 6550 50  0001 C CNN
+F 3 "~" H 2100 6550 50  0001 C CNN
+	1    2100 6550
+	0    -1   1    0   
+$EndComp
+$Comp
+L power:+5V #PWR023
+U 1 1 61D830D0
+P 1850 6500
+F 0 "#PWR023" H 1850 6350 50  0001 C CNN
+F 1 "+5V" H 1865 6673 50  0000 C CNN
+F 2 "" H 1850 6500 50  0001 C CNN
+F 3 "" H 1850 6500 50  0001 C CNN
+	1    1850 6500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1850 6500 1850 6550
+Wire Wire Line
+	1850 6550 1950 6550
+Wire Wire Line
+	2300 6550 2250 6550
+$Comp
+L power:GND #PWR?
+U 1 1 61D8DEEC
+P 4750 6500
+AR Path="/61D8DEEC" Ref="#PWR?"  Part="1" 
+AR Path="/61BABDBB/61D8DEEC" Ref="#PWR027"  Part="1" 
+F 0 "#PWR027" H 4750 6250 50  0001 C CNN
+F 1 "GND" H 4755 6327 50  0000 C CNN
+F 2 "" H 4750 6500 50  0001 C CNN
+F 3 "" H 4750 6500 50  0001 C CNN
+	1    4750 6500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4700 6450 4750 6450
+Wire Wire Line
+	4750 6450 4750 6500
+Wire Wire Line
+	3850 4600 4250 4600
+Wire Wire Line
+	3150 4600 3550 4600
+Wire Wire Line
+	2450 4600 2850 4600
+Wire Wire Line
+	1750 4600 2150 4600
+Wire Wire Line
+	5250 4600 5650 4600
+Wire Wire Line
+	5950 4600 6350 4600
+Wire Wire Line
+	6650 4600 7050 4600
+Wire Wire Line
+	7350 4600 7750 4600
+Wire Wire Line
+	8050 4600 8450 4600
+Wire Wire Line
+	8750 4600 9150 4600
+Wire Wire Line
+	9450 4600 9850 4600
+Wire Wire Line
+	4550 4600 4950 4600
+Wire Wire Line
+	10150 4600 10550 4600
+Wire Wire Line
+	10250 4800 9550 4800
+Connection ~ 2050 4800
+Wire Wire Line
+	2050 4800 1350 4800
+Connection ~ 2750 4800
+Wire Wire Line
+	2750 4800 2050 4800
+Connection ~ 3450 4800
+Wire Wire Line
+	3450 4800 2750 4800
+Connection ~ 4150 4800
+Wire Wire Line
+	4150 4800 3450 4800
+Connection ~ 4650 4800
+Wire Wire Line
+	4650 4800 4400 4800
+Connection ~ 5350 4800
+Wire Wire Line
+	5350 4800 4650 4800
+Connection ~ 6050 4800
+Wire Wire Line
+	6050 4800 5350 4800
+Connection ~ 6750 4800
+Wire Wire Line
+	6750 4800 6050 4800
+Connection ~ 7450 4800
+Wire Wire Line
+	7450 4800 6750 4800
+Connection ~ 8150 4800
+Wire Wire Line
+	8150 4800 7450 4800
+Connection ~ 8850 4800
+Wire Wire Line
+	8850 4800 8150 4800
+Connection ~ 9550 4800
+Wire Wire Line
+	9550 4800 8850 4800
+Wire Wire Line
+	4400 6250 4400 4800
+Connection ~ 4400 4800
+Wire Wire Line
+	4400 4800 4150 4800
+Text HLabel 10700 4000 2    50   Input ~ 0
+OUTa
+Text HLabel 10700 4150 2    50   Input ~ 0
+OUTb
+Wire Wire Line
+	10700 4150 9550 4150
+Wire Wire Line
+	1350 4150 1350 4400
+Wire Wire Line
+	2750 4400 2750 4150
+Connection ~ 2750 4150
+Wire Wire Line
+	2750 4150 1350 4150
+Wire Wire Line
+	4150 4400 4150 4150
+Connection ~ 4150 4150
+Wire Wire Line
+	4150 4150 2750 4150
+Wire Wire Line
+	5350 4400 5350 4150
+Connection ~ 5350 4150
+Wire Wire Line
+	5350 4150 4150 4150
+Wire Wire Line
+	6750 4400 6750 4150
+Connection ~ 6750 4150
+Wire Wire Line
+	6750 4150 5350 4150
+Wire Wire Line
+	8150 4400 8150 4150
+Connection ~ 8150 4150
+Wire Wire Line
+	8150 4150 6750 4150
+Wire Wire Line
+	9550 4400 9550 4150
+Connection ~ 9550 4150
+Wire Wire Line
+	9550 4150 8150 4150
+Wire Wire Line
+	10700 4000 10250 4000
+Wire Wire Line
+	2050 4000 2050 4400
+Wire Wire Line
+	4650 4400 4650 4000
+Connection ~ 4650 4000
+Wire Wire Line
+	6050 4400 6050 4000
+Connection ~ 6050 4000
+Wire Wire Line
+	6050 4000 4650 4000
+Wire Wire Line
+	7450 4400 7450 4000
+Connection ~ 7450 4000
+Wire Wire Line
+	7450 4000 6050 4000
+Wire Wire Line
+	8850 4400 8850 4000
+Connection ~ 8850 4000
+Wire Wire Line
+	8850 4000 7450 4000
+Wire Wire Line
+	10250 4400 10250 4000
+Connection ~ 10250 4000
+Wire Wire Line
+	10250 4000 8850 4000
+Wire Wire Line
+	600  2500 600  3650
+Wire Wire Line
+	600  2500 3450 2500
+$Comp
+L Amplifier_Operational:TL072 U2
+U 2 1 620C1080
+P 8900 5750
+F 0 "U2" H 8900 5383 50  0000 C CNN
+F 1 "TL072" H 8900 5474 50  0000 C CNN
+F 2 "" H 8900 5750 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 8900 5750 50  0001 C CNN
+F 4 "X" H 8900 5750 50  0001 C CNN "Spice_Primitive"
+F 5 "TL072c" H 8900 5750 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 8900 5750 50  0001 C CNN "Spice_Netlist_Enabled"
+	2    8900 5750
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	3450 4400 3450 4000
+Connection ~ 3450 4000
+Wire Wire Line
+	3450 4000 2050 4000
+Wire Wire Line
+	3450 4000 4650 4000
+Wire Wire Line
+	3050 6100 2250 6100
+Wire Wire Line
+	2250 6100 2250 6550
+Connection ~ 3050 6100
+Connection ~ 2250 6550
+Wire Wire Line
+	1050 4600 900  4600
+Connection ~ 900  4600
+Wire Wire Line
+	1050 4600 1450 4600
+Connection ~ 1050 4600
+Wire Wire Line
+	1450 3650 600  3650
+Connection ~ 1450 3650
+Wire Wire Line
+	700  2850 1750 2850
+Wire Wire Line
+	9850 2850 10100 2850
+Wire Wire Line
+	9150 3400 8750 3400
+Wire Wire Line
+	8750 3400 8750 2150
+Connection ~ 9150 3400
+Wire Wire Line
+	9150 3400 9150 3300
+Wire Wire Line
+	9850 3300 9850 3450
+$EndSCHEMATC
