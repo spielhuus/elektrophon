@@ -3,11 +3,28 @@
 <div class="column is-12">
     <div class="container has-text-centered">
         <div class="content has-text-centered is-size-5 is-italic has-text-weight-medium">
-            {{ .Params.excerpt }}
+            {{ .Params.excerpt | safeHTML }}
         </div>
     </div>
 </div>
 {{ end }}
+
+<div class="column is-12">
+    <div class="container">
+        <div class="content">
+            {{ if eq .Params.Version 0 }}
+            <article class="message is-info">
+                <div class="message-header">
+                    <p>Danger</p>
+                </div>
+                <div class="message-body">
+                    This is a work in progress module and might not work as expected. Feel free to file a bug report on the <a href="https://github.com/spielhuus/elektrophon">github</a> page.
+                </div>
+            </article>
+            {{ end }}
+        </div>
+    </div>
+</div>
 
 <div class="column is-12">
     <div class="container">
