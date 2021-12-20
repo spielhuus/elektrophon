@@ -1,0 +1,99 @@
+* PSpice Model Editor - Version 16.0.0
+*$
+* TL431
+*****************************************************************************
+* (C) Copyright 2009 Texas Instruments Incorporated. All rights reserved.                                            
+*****************************************************************************
+** This model is designed as an aid for customers of Texas Instruments.                                             
+** TI and its licensors and suppliers make no warranties, either expressed                                           
+** or implied, with respect to this model, including the warranties of                                                    
+** merchantability or fitness for a particular purpose. The model is                                                      
+** provided solely on an "as is" basis. The entire risk as to its quality                                                    
+** and performance is with the customer                                                                                              
+*****************************************************************************
+*
+* This model was developed for Texas Instruments Incorporated by:
+*   AEi Systems, LLC
+*   5777 W. Century Blvd., Suite 876
+*   Los Angeles, California  90045
+*
+* This model is subject to change without notice. Neither Texas Instruments Incorporated 
+* nor AEi Systems is responsible for updating this model.
+* For more information regarding modeling services, model libraries and simulation 
+* products, please call AEi Systems at (310) 216-1144, or contact AEi Systems by email: 
+* info@AENG.com. Or visit AEi Systems on the web at http://www.AENG.com.
+*
+*****************************************************************************
+*
+** Released by: Analog eLab Design Center, Texas Instruments Inc.
+* Part: TL431
+* Date: 29NOV2017
+* Model Type: Transient and AC  
+* Simulator: PSPICE  
+* Simulator Version: 16.0.0.p001
+* Datasheet: SLVS543J - AUGUST 2004 - REVISED DECEMBER 2005 
+*
+*****************************************************************************
+*
+* Updates:
+*
+* Final 2.10
+* Modified the clamping diode parameters( Rs & N).
+* Replaced the dc volatage source of 2.495 V with ABM E27.
+* Modified internal feedback and reference implementation.
+* Implemented internal resistors using VCVS.
+* Validated the comparator open loop mode in PSpice 16.2 after model modification.
+*
+* Final 2.00
+* Changed encrypted model to unencrypted.
+*
+* Final 1.00
+* Release to Web.
+*
+*****************************************************************************
+.SUBCKT TL431 7 6 11 PARAMS: V_REF=2.495
+*             K A FDBK 
+R_R18         0 N16955548  1 TC=0,0 
+C_C17         N16955362 0  1n  
+C_C18         2 6  0.5u  
+D_D11         N16976181 N16975344 DCLAMP 
+C_C19         3 4  0.08u  
+E_E23         2 N16955404 VALUE { (I(V_V16)*15.6) }
+C_C22         N16955548 0  1n  
+R_R13         N16955401 N16955404  1 TC=0,0 
+E_E27         VREF 0 VALUE { IF(V(11,0)<{V_REF},V(11,0),{V_REF}) }
+V_V16         N16955401 6 0Vdc
+R_R14         0 N16955362  1 TC=0,0 
+X_H8          7 N169559021 IKA 6 TL431_H8 
+E_E24         4 N16955473 VALUE { (I(V_V17)*10) }
+E_E28         N16955936 0 11 6 1
+V_V7          N16976181 6 2
+G_ABM2I2      6 N16975344 VALUE { IF((V(3)-V(6)) < 0 ,1.73*(V(3)-V(6))-1U ,-1U) }
+R_R15         N16955470 N16955473  1 TC=0,0 
+V_V17         N16955470 6 0Vdc
+G_G4          6 2 VREF N16955936 0.11
+R_R16         0 N16955493  1 TC=0,0 
+D_D12         N169559021 N16975344 DCLAMP 
+R_R17         N16955529 N16955532  1 TC=0,0 
+C_C21         N16955493 0  1n  
+E_E25         3 N16955532 VALUE { (I(V_V18)*100) }
+V_V18         N16955529 2 0Vdc
+V_V19         N16985445 0 0Vdc
+.ENDS
+*$
+.subckt TL431_H8 1 2 3 4  
+H_H8         3 4 VH_H8 1
+VH_H8         1 2 0V
+.ends TL431_H8
+*$
+.model DCLAMP d
++ is=1.35e-011
++ rs=0.005
++ n=0.001
++ cjo=4.5e-011
++ vj=0.75
++ m=0.302
++ tt=5.04e-008
++ bv=100
++ ibv=0.001
+*$
