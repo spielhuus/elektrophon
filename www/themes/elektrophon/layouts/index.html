@@ -3,9 +3,16 @@
 <div class="column is-12">
   <div class="container">
     <div class="content">
-      {{ .Content }}
+      <section class="hero is-halfheight is-black">
+        <div class="hero-body has-text-centered">
+          <div class="container title">
+            &#8220;elektrophon is a collection of modules for a modular analog electro acoustic noise machine. All the required files for building or adopting the modules are available in this project. All the files and information is licensed under the common public license.&#8221;
+          </div>
+        </div>
+      </section>
       <section class="section">
         <div class="container">
+          <h1 class="header">Latest updates</h1>
           {{- $pages := . -}}
           {{- if .IsHome -}}
           {{- $pages = .Site.RegularPages -}}
@@ -15,17 +22,19 @@
           {{ $paginator := .Paginate (where $pages "Params.hidden" "ne" true) }}
           <div class="column is-12">
             <div class="container">
-                <div class="content">              
-                  <div class="columns is-12 features is-multiline">
-                    {{ range sort .Paginator.Pages }}
-                {{ partial "summary.html" . }}
-                {{ end }}
+              <div class="content">
+                <div class="columns is-12 features is-multiline">
+                  {{ range sort .Paginator.Pages }}
+                  {{ partial "summary.html" . }}
+                  {{ end }}
+                </div>
               </div>
             </div>
           </div>
-            </div>
         </div>
-    </section>
+      </section>
+      {{ partial "tags.html" . }}
+      {{ .Content }}
     </div>
   </div>
 </div>
