@@ -808,4 +808,6 @@ F 4 "Small Signal Diode (DO-35)" V 8000 5300 50  0001 C CNN "Description"
 $EndComp
 Wire Wire Line
 	5900 4000 7600 4000
+Text Notes 8050 5450 0    50   ~ 0
+try rotating diode
 $EndSCHEMATC
