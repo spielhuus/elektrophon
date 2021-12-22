@@ -2449,4 +2449,6 @@ Wire Wire Line
 	8900 1000 8900 1450
 Connection ~ 8900 1450
 Connection ~ 8200 1450
+Text Notes 5950 3650 0    50   ~ 0
+try rotating opamp\nhttps://electro-music.com/forum/topic-49449.html&postorder=asc
 $EndSCHEMATC
