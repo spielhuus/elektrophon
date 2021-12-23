@@ -1343,13 +1343,13 @@ F 7 "3.5mm Eurorack Jacks" H 1900 1700 50  0001 C CNN "Description"
 	1    1900 1700
 	1    0    0    -1  
 $EndComp
-Text Label 2350 1700 3    50   ~ 0
+Text Label 3800 1800 3    50   ~ 0
 IN_1
-Text Label 2350 2800 3    50   ~ 0
+Text Label 3800 2900 3    50   ~ 0
 IN_2
-Text Label 2400 3850 3    50   ~ 0
+Text Label 3850 3950 3    50   ~ 0
 IN_3
-Text Label 2450 4900 3    50   ~ 0
+Text Label 3900 5000 3    50   ~ 0
 IN_4
 Text Label 8900 2150 3    50   ~ 0
 OUT
@@ -1578,8 +1578,8 @@ $Comp
 L Amplifier_Operational:TL072 U5
 U 2 1 61B1E802
 P 8300 4300
-F 0 "U5" H 8300 4667 50  0000 C CNN
-F 1 "TL072" H 8300 4576 50  0000 C CNN
+F 0 "U5" H 8300 3950 50  0000 C CNN
+F 1 "TL072" H 8300 4050 50  0000 C CNN
 F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 8300 4300 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 8300 4300 50  0001 C CNN
 F 4 "Low-Noise FET-Input Operational Amplifiers (SOIC-8 )" H 8300 4300 50  0001 C CNN "Description"
@@ -1587,7 +1587,7 @@ F 5 "X" H 8300 4300 50  0001 C CNN "Spice_Primitive"
 F 6 "TL072c" H 8300 4300 50  0001 C CNN "Spice_Model"
 F 7 "Y" H 8300 4300 50  0001 C CNN "Spice_Netlist_Enabled"
 	2    8300 4300
-	1    0    0    -1  
+	1    0    0    1   
 $EndComp
 $Comp
 L Device:LED D1
@@ -1678,8 +1678,8 @@ $Comp
 L Amplifier_Operational:TL072 U6
 U 2 1 61B6E561
 P 6300 5250
-F 0 "U6" H 6300 5617 50  0000 C CNN
-F 1 "TL072" H 6300 5526 50  0000 C CNN
+F 0 "U6" H 6300 4900 50  0000 C CNN
+F 1 "TL072" H 6300 5000 50  0000 C CNN
 F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 6300 5250 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 6300 5250 50  0001 C CNN
 F 4 "Low-Noise FET-Input Operational Amplifiers (SOIC-8 )" H 6300 5250 50  0001 C CNN "Description"
@@ -1687,7 +1687,7 @@ F 5 "X" H 6300 5250 50  0001 C CNN "Spice_Primitive"
 F 6 "TL072c" H 6300 5250 50  0001 C CNN "Spice_Model"
 F 7 "Y" H 6300 5250 50  0001 C CNN "Spice_Netlist_Enabled"
 	2    6300 5250
-	1    0    0    -1  
+	1    0    0    1   
 $EndComp
 $Comp
 L Device:LED D3
@@ -1780,8 +1780,8 @@ $Comp
 L Amplifier_Operational:TL072 U4
 U 2 1 61B87663
 P 6350 4250
-F 0 "U4" H 6350 4617 50  0000 C CNN
-F 1 "TL072" H 6350 4526 50  0000 C CNN
+F 0 "U4" H 6350 3900 50  0000 C CNN
+F 1 "TL072" H 6350 4000 50  0000 C CNN
 F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 6350 4250 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 6350 4250 50  0001 C CNN
 F 4 "Low-Noise FET-Input Operational Amplifiers (SOIC-8 )" H 6350 4250 50  0001 C CNN "Description"
@@ -1789,7 +1789,7 @@ F 5 "X" H 6350 4250 50  0001 C CNN "Spice_Primitive"
 F 6 "TL072c" H 6350 4250 50  0001 C CNN "Spice_Model"
 F 7 "Y" H 6350 4250 50  0001 C CNN "Spice_Netlist_Enabled"
 	2    6350 4250
-	1    0    0    -1  
+	1    0    0    1   
 $EndComp
 $Comp
 L Device:LED D5
@@ -1992,8 +1992,8 @@ $Comp
 L Amplifier_Operational:TL072 U2
 U 2 1 61B8A0B7
 P 6350 3300
-F 0 "U2" H 6350 3700 50  0000 C CNN
-F 1 "TL072" H 6350 3600 50  0000 C CNN
+F 0 "U2" H 6350 2950 50  0000 C CNN
+F 1 "TL072" H 6350 3050 50  0000 C CNN
 F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 6350 3300 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 6350 3300 50  0001 C CNN
 F 4 "Low-Noise FET-Input Operational Amplifiers (SOIC-8 )" H 6350 3300 50  0001 C CNN "Description"
@@ -2001,14 +2001,14 @@ F 5 "X" H 6350 3300 50  0001 C CNN "Spice_Primitive"
 F 6 "TL072c" H 6350 3300 50  0001 C CNN "Spice_Model"
 F 7 "Y" H 6350 3300 50  0001 C CNN "Spice_Netlist_Enabled"
 	2    6350 3300
-	1    0    0    -1  
+	1    0    0    1   
 $EndComp
 $Comp
 L Amplifier_Operational:TL072 U3
 U 2 1 61B8C44A
 P 8300 3350
-F 0 "U3" H 8300 3750 50  0000 C CNN
-F 1 "TL072" H 8300 3650 50  0000 C CNN
+F 0 "U3" H 8300 3000 50  0000 C CNN
+F 1 "TL072" H 8300 3100 50  0000 C CNN
 F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 8300 3350 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 8300 3350 50  0001 C CNN
 F 4 "Low-Noise FET-Input Operational Amplifiers (SOIC-8 )" H 8300 3350 50  0001 C CNN "Description"
@@ -2016,7 +2016,7 @@ F 5 "X" H 8300 3350 50  0001 C CNN "Spice_Primitive"
 F 6 "TL072c" H 8300 3350 50  0001 C CNN "Spice_Model"
 F 7 "Y" H 8300 3350 50  0001 C CNN "Spice_Netlist_Enabled"
 	2    8300 3350
-	1    0    0    -1  
+	1    0    0    1   
 $EndComp
 $Comp
 L Amplifier_Operational:TL072 U3
@@ -2449,6 +2449,4 @@ Wire Wire Line
 	8900 1000 8900 1450
 Connection ~ 8900 1450
 Connection ~ 8200 1450
-Text Notes 5950 3650 0    50   ~ 0
-try rotating opamp\nhttps://electro-music.com/forum/topic-49449.html&postorder=asc
 $EndSCHEMATC

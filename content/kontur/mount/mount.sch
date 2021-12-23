@@ -6,7 +6,7 @@ encoding utf-8
 Sheet 1 1
 Title "kontur"
 Date "2021-12-12"
-Rev "R01"
+Rev "R02"
 Comp ""
 Comment1 "schema for pcb"
 Comment2 "AD/AR envelope generator"

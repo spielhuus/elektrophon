@@ -13,7 +13,7 @@
   (title_block
     (title kontur)
     (date 2021-12-12)
-    (rev R01)
+    (rev R02)
     (comment 1 "PCB for panel")
     (comment 2 "AD/AR envelope generator")
     (comment 4 "License CC BY 4.0 - Attribution 4.0 International")
@@ -121,8 +121,8 @@
     (fp_text value IN2 (at 0 9.144) (layer F.Mask) hide
       (effects (font (size 2 1.4) (thickness 0.25)))
     )
-    (fp_circle (center 0 0) (end 4.2 0) (layer F.CrtYd) (width 0.05))
     (fp_circle (center 0 0) (end 4 0) (layer Cmts.User) (width 0.15))
+    (fp_circle (center 0 0) (end 4.2 0) (layer F.CrtYd) (width 0.05))
     (fp_text user %R (at 0.3 0) (layer F.Fab)
       (effects (font (size 1 1) (thickness 0.15)))
     )
@@ -146,8 +146,8 @@
     (fp_text value IN1 (at 0 9.144) (layer F.Mask) hide
       (effects (font (size 2 1.4) (thickness 0.25)))
     )
-    (fp_circle (center 0 0) (end 4.2 0) (layer F.CrtYd) (width 0.05))
     (fp_circle (center 0 0) (end 4 0) (layer Cmts.User) (width 0.15))
+    (fp_circle (center 0 0) (end 4.2 0) (layer F.CrtYd) (width 0.05))
     (fp_text user %R (at 0.3 0) (layer F.Fab)
       (effects (font (size 1 1) (thickness 0.15)))
     )
@@ -171,8 +171,8 @@
     (fp_text value OUT2 (at 0 9.144) (layer F.Mask) hide
       (effects (font (size 2 1.4) (thickness 0.25)))
     )
-    (fp_circle (center 0 0) (end 4.2 0) (layer F.CrtYd) (width 0.05))
     (fp_circle (center 0 0) (end 4 0) (layer Cmts.User) (width 0.15))
+    (fp_circle (center 0 0) (end 4.2 0) (layer F.CrtYd) (width 0.05))
     (fp_text user %R (at 0.3 0) (layer F.Fab)
       (effects (font (size 1 1) (thickness 0.15)))
     )
@@ -196,8 +196,8 @@
     (fp_text value EOE2 (at 0 9.144) (layer F.Mask) hide
       (effects (font (size 2 1.4) (thickness 0.25)))
     )
-    (fp_circle (center 0 0) (end 4.2 0) (layer F.CrtYd) (width 0.05))
     (fp_circle (center 0 0) (end 4 0) (layer Cmts.User) (width 0.15))
+    (fp_circle (center 0 0) (end 4.2 0) (layer F.CrtYd) (width 0.05))
     (fp_text user %R (at 0.3 0) (layer F.Fab)
       (effects (font (size 1 1) (thickness 0.15)))
     )
@@ -221,8 +221,8 @@
     (fp_text value D/R2 (at 0 9.144) (layer F.Mask) hide
       (effects (font (size 2 1.4) (thickness 0.25)))
     )
-    (fp_circle (center 0 0) (end 6.6 0) (layer F.CrtYd) (width 0.05))
     (fp_circle (center 0 0) (end 6.35 0) (layer Cmts.User) (width 0.15))
+    (fp_circle (center 0 0) (end 6.6 0) (layer F.CrtYd) (width 0.05))
     (fp_text user %R (at 0.3 0) (layer F.Fab)
       (effects (font (size 1 1) (thickness 0.15)))
     )
@@ -246,8 +246,8 @@
     (fp_text value A2 (at 0 9.144) (layer F.Mask) hide
       (effects (font (size 2 1.4) (thickness 0.25)))
     )
-    (fp_circle (center 0 0) (end 6.6 0) (layer F.CrtYd) (width 0.05))
     (fp_circle (center 0 0) (end 6.35 0) (layer Cmts.User) (width 0.15))
+    (fp_circle (center 0 0) (end 6.6 0) (layer F.CrtYd) (width 0.05))
     (fp_text user %R (at 0.3 0) (layer F.Fab)
       (effects (font (size 1 1) (thickness 0.15)))
     )
@@ -271,8 +271,8 @@
     (fp_text value OUT1 (at 0 9.144) (layer F.Mask) hide
       (effects (font (size 2 1.4) (thickness 0.25)))
     )
-    (fp_circle (center 0 0) (end 4.2 0) (layer F.CrtYd) (width 0.05))
     (fp_circle (center 0 0) (end 4 0) (layer Cmts.User) (width 0.15))
+    (fp_circle (center 0 0) (end 4.2 0) (layer F.CrtYd) (width 0.05))
     (fp_text user %R (at 0.3 0) (layer F.Fab)
       (effects (font (size 1 1) (thickness 0.15)))
     )
@@ -296,8 +296,8 @@
     (fp_text value EOE1 (at 0 9.144) (layer F.Mask) hide
       (effects (font (size 2 1.4) (thickness 0.25)))
     )
-    (fp_circle (center 0 0) (end 4.2 0) (layer F.CrtYd) (width 0.05))
     (fp_circle (center 0 0) (end 4 0) (layer Cmts.User) (width 0.15))
+    (fp_circle (center 0 0) (end 4.2 0) (layer F.CrtYd) (width 0.05))
     (fp_text user %R (at 0.3 0) (layer F.Fab)
       (effects (font (size 1 1) (thickness 0.15)))
     )
@@ -321,8 +321,8 @@
     (fp_text value D/R1 (at 0 9.144) (layer F.Mask) hide
       (effects (font (size 2 1.4) (thickness 0.25)))
     )
-    (fp_circle (center 0 0) (end 6.6 0) (layer F.CrtYd) (width 0.05))
     (fp_circle (center 0 0) (end 6.35 0) (layer Cmts.User) (width 0.15))
+    (fp_circle (center 0 0) (end 6.6 0) (layer F.CrtYd) (width 0.05))
     (fp_text user %R (at 0.3 0) (layer F.Fab)
       (effects (font (size 1 1) (thickness 0.15)))
     )
@@ -346,8 +346,8 @@
     (fp_text value A1 (at 0 9.144) (layer F.Mask) hide
       (effects (font (size 2 1.4) (thickness 0.25)))
     )
-    (fp_circle (center 0 0) (end 6.6 0) (layer F.CrtYd) (width 0.05))
     (fp_circle (center 0 0) (end 6.35 0) (layer Cmts.User) (width 0.15))
+    (fp_circle (center 0 0) (end 6.6 0) (layer F.CrtYd) (width 0.05))
     (fp_text user %R (at 0.3 0) (layer F.Fab)
       (effects (font (size 1 1) (thickness 0.15)))
     )
@@ -371,8 +371,8 @@
     (fp_text value MountingHole (at 0 3.8) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_circle (center 0 0) (end 2.8 0) (layer Cmts.User) (width 0.15))
     (fp_circle (center 0 0) (end 3.05 0) (layer F.CrtYd) (width 0.05))
+    (fp_circle (center 0 0) (end 2.8 0) (layer Cmts.User) (width 0.15))
     (fp_text user %R (at 0.3 0) (layer F.Fab)
       (effects (font (size 1 1) (thickness 0.15)))
     )
@@ -393,8 +393,8 @@
     (fp_text value MountingHole (at 0 3.8) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_circle (center 0 0) (end 2.8 0) (layer Cmts.User) (width 0.15))
     (fp_circle (center 0 0) (end 3.05 0) (layer F.CrtYd) (width 0.05))
+    (fp_circle (center 0 0) (end 2.8 0) (layer Cmts.User) (width 0.15))
     (fp_text user %R (at 0.3 0) (layer F.Fab)
       (effects (font (size 1 1) (thickness 0.15)))
     )

@@ -6,7 +6,7 @@ encoding utf-8
 Sheet 2 3
 Title "kontur"
 Date "2021-12-12"
-Rev "R01"
+Rev "R02"
 Comp ""
 Comment1 "schema for pcb"
 Comment2 "AD/AR envelope generator"
@@ -804,10 +804,8 @@ F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 8000 5125 50  0001 C CNN
 F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 8000 5300 50  0001 C CNN
 F 4 "Small Signal Diode (DO-35)" V 8000 5300 50  0001 C CNN "Description"
 	1    8000 5300
-	0    -1   -1   0   
+	0    -1   1    0   
 $EndComp
 Wire Wire Line
 	5900 4000 7600 4000
-Text Notes 8050 5450 0    50   ~ 0
-try rotating diode
 $EndSCHEMATC
