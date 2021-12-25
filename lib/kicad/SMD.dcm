@@ -1,20 +1,15 @@
 EESchema-DOCLIB  Version 2.0
 #
-$CMP 23PS122
-D Film Capacitors STYRENE 50V 220P
-F https://www.mouser.com/datasheet/2/449/23p-1212170.pdf
+$CMP 1N4148W
+D 75V 0.15A Fast Switching Diode, SOD-123
+K diode
+F https://www.vishay.com/docs/85748/1n4148w.pdf
 $ENDCMP
 #
-$CMP 2N5457
-D JFET N-CH 25V 0.31W TO-92
-K 2N5457-ND
-F https://my.centralsemi.com/get_document.php?cmp=1&mergetype=pd&mergepath=pd&pdf_id=2N5457-5459.PDF
-$ENDCMP
-#
-$CMP AD633
-D Low Cost Analog Multiplier,  PDIP-8
-K Analog Multiplier
-F https://www.analog.com/media/en/technical-documentation/data-sheets/AD633.pdf
+$CMP 1N4448W
+D 100V 0.15A High-speed standard diode, SOD-123
+K diode
+F https://www.vishay.com/docs/85722/1n4448w.pdf
 $ENDCMP
 #
 $CMP AD8620
@@ -35,85 +30,113 @@ K dual opamp
 F https://www.analog.com/media/en/technical-documentation/data-sheets/ADA4807-1_4807-2_4807-4.pdf
 $ENDCMP
 #
-$CMP AudioJack2_SwitchT
-D Audio Jack, 2 Poles (Mono / TS), Switched T Pole (Normalling)
-K audio jack receptacle mono headphones phone TS connector
+$CMP BAV16W
+D 75V 0.15A Fast Switching Diode, SOD-123
+K diode
+F https://www.diodes.com/assets/Datasheets/ds30086.pdf
+$ENDCMP
+#
+$CMP BC807
+D 0.8A Ic, 45V Vce, PNP Transistor, SOT-23
+K PNP Transistor
+F https://www.onsemi.com/pub/Collateral/BC808-D.pdf
+$ENDCMP
+#
+$CMP BC808
+D 0.8A Ic, 25V Vce, PNP Transistor, SOT-23
+K PNP Transistor
+F https://www.onsemi.com/pub/Collateral/BC808-D.pdf
+$ENDCMP
+#
+$CMP BC817
+D 0.8A Ic, 45V Vce, NPN Transistor, SOT-23
+K NPN Transistor
+F https://www.onsemi.com/pub/Collateral/BC818-D.pdf
+$ENDCMP
+#
+$CMP BC818
+D 0.8A Ic, 25V Vce, NPN Transistor, SOT-23
+K NPN Transistor
+F https://www.onsemi.com/pub/Collateral/BC818-D.pdf
+$ENDCMP
+#
+$CMP BC846
+D 0.1A Ic, 65V Vce, NPN Transistor, SOT-23
+K NPN Transistor
+F https://assets.nexperia.com/documents/data-sheet/BC846_SER.pdf
+$ENDCMP
+#
+$CMP BC847
+D 0.1A Ic, 45V Vce, NPN Transistor, SOT-23
+K NPN Small Signal Transistor
+F http://www.infineon.com/dgdl/Infineon-BC847SERIES_BC848SERIES_BC849SERIES_BC850SERIES-DS-v01_01-en.pdf?fileId=db3a304314dca389011541d4630a1657
+$ENDCMP
+#
+$CMP BC848
+D 0.1A Ic, 30V Vce, NPN Transistor, SOT-23
+K NPN Small Signal Transistor
+F http://www.infineon.com/dgdl/Infineon-BC847SERIES_BC848SERIES_BC849SERIES_BC850SERIES-DS-v01_01-en.pdf?fileId=db3a304314dca389011541d4630a1657
+$ENDCMP
+#
+$CMP BC849
+D 0.1A Ic, 30V Vce, NPN Transistor, SOT-23
+K NPN Small Signal Transistor
+F http://www.infineon.com/dgdl/Infineon-BC847SERIES_BC848SERIES_BC849SERIES_BC850SERIES-DS-v01_01-en.pdf?fileId=db3a304314dca389011541d4630a1657
+$ENDCMP
+#
+$CMP BC850
+D 0.1A Ic, 45V Vce, NPN Transistor, SOT-23
+K NPN Small Signal Transistor
+F http://www.infineon.com/dgdl/Infineon-BC847SERIES_BC848SERIES_BC849SERIES_BC850SERIES-DS-v01_01-en.pdf?fileId=db3a304314dca389011541d4630a1657
+$ENDCMP
+#
+$CMP BC856
+D 0.1A Ic, 65V Vce, PNP Transistor, SOT-23
+K PNP transistor
+F https://www.onsemi.com/pub/Collateral/BC860-D.pdf
+$ENDCMP
+#
+$CMP BC857
+D 0.1A Ic, 45V Vce, PNP Transistor, SOT-23
+K PNP transistor
+F https://www.onsemi.com/pub/Collateral/BC860-D.pdf
+$ENDCMP
+#
+$CMP BC858
+D 0.1A Ic, 30V Vce, PNP Transistor, SOT-23
+K PNP transistor
+F https://www.onsemi.com/pub/Collateral/BC860-D.pdf
+$ENDCMP
+#
+$CMP BC859
+D 0.1A Ic, 30V Vce, PNP Small Signal Transistor, SOT-23
+K PNP Transistor
+F http://www.infineon.com/dgdl/Infineon-BC857SERIES_BC858SERIES_BC859SERIES_BC860SERIES-DS-v01_01-en.pdf?fileId=db3a304314dca389011541da0e3a1661
+$ENDCMP
+#
+$CMP BC860
+D 0.1A Ic, 45V Vce, PNP Small Signal Transistor, SOT-23
+K PNP Transistor
+F http://www.infineon.com/dgdl/Infineon-BC857SERIES_BC858SERIES_BC859SERIES_BC860SERIES-DS-v01_01-en.pdf?fileId=db3a304314dca389011541da0e3a1661
+$ENDCMP
+#
+$CMP C
+D Unpolarized capacitor
+K cap capacitor
 F ~
 $ENDCMP
 #
-$CMP BC327
-D 0.8A Ic, 45V Vce, PNP Transistor, TO-92
-K PNP Transistor
-F http://www.onsemi.com/pub_link/Collateral/BC327-D.PDF
+$CMP DMMT3904W
+D Matched pair NPN small signal transistor
+F https://www.diodes.com/assets/Datasheets/DMMT3904W.pdf
 $ENDCMP
 #
-$CMP BC328
-D 0.8A Ic, 25V Vce, PNP Transistor, TO-92
-K PNP Transistor
-F http://www.redrok.com/PNP_BC327_-45V_-800mA_0.625W_Hfe100_TO-92.pdf
+$CMP DMMT3906W
+D Matched pair PNP small signal transistor
+F https://www.diodes.com/assets/Datasheets/ds30312.pdf
 $ENDCMP
 #
-$CMP BC556
-D 0.1A Ic, 65V Vce, PNP Small Signal Transistor, TO-92
-K PNP Transistor
-F http://www.fairchildsemi.com/ds/BC/BC557.pdf
-$ENDCMP
-#
-$CMP BC558
-D 0.1A Ic, 30V Vce, PNP Small Signal Transistor, TO-92
-K PNP Transistor
-F http://www.fairchildsemi.com/ds/BC/BC557.pdf
-$ENDCMP
-#
-$CMP BC559
-D 0.1A Ic, 30V Vce, PNP Small Signal Transistor, TO-92
-K PNP Transistor
-F http://www.fairchildsemi.com/ds/BC/BC557.pdf
-$ENDCMP
-#
-$CMP BC560
-D 0.1A Ic, 45V Vce, PNP Small Signal Transistor, TO-92
-K PNP Transistor
-F http://www.fairchildsemi.com/ds/BC/BC557.pdf
-$ENDCMP
-#
-$CMP BF244B
-D 50mA Id, 30V Vgs, N-Channel FET Transistor, TO-92
-K N-Channel FET Transistor Low Voltage
-F http://www.fairchildsemi.com/ds/BF/BF244A.pdf
-$ENDCMP
-#
-$CMP BF244C
-D 10mA Id, 30V Vgs, N-Channel FET Transistor, TO-92
-K N-Channel FET Transistor Low Voltage
-F http://www.fairchildsemi.com/ds/BF/BF244A.pdf
-$ENDCMP
-#
-$CMP CEM3340
-D Voltage Controlled Oscillator (VCO), DIP-16/SOIC-16
-K VCO CEM340 ALFA
-F http://www.alfarzpp.lv/eng/sc/AS3340.pdf
-$ENDCMP
-#
-$CMP J113
-D 50mA min, 40V, 25mOhm max, 4-10V Vgs(off), N-Channel JFET, SOT-23
-K N-Channel FET Transistor
-F https://www.nxp.com/docs/en/data-sheet/BSR56_57_58.pdf
-$ENDCMP
-#
-$CMP J201
-D 50mA Id, 30V Vgs, N-Channel FET Transistor, TO-92
-K N-Channel FET Transistor Low Voltage
-F http://www.fairchildsemi.com/ds/BF/BF244A.pdf
-$ENDCMP
-#
-$CMP LF353
-D Dual Operational Amplifiers, DIP-8/SOIC-8/TSSOP-8/VSSOP-8
-K dual opamp
-F https://www.ti.com/lit/ds/symlink/lf353-n.pdf
-$ENDCMP
-#
-$CMP LM1458
+$CMP LM2904
 D Dual Operational Amplifiers, DIP-8/SOIC-8/TSSOP-8/VSSOP-8
 K dual opamp
 F http://www.ti.com/lit/ds/symlink/lm358.pdf
@@ -243,6 +266,48 @@ $CMP MCP6L92
 D 10 MHz, 850 µA Op Amps, SOIC-8/MSOP-8
 K dual opamp
 F http://ww1.microchip.com/downloads/en/DeviceDoc/22141b.pdf
+$ENDCMP
+#
+$CMP MCP6V67EMS
+D Dual Operational Amplifiers, Zero-Drift, 80 kHz Bandwidth, 1.8V to 5.5V, Rail-to-Rail, MSOP-8
+K dual opamp zero drift
+F http://ww1.microchip.com/downloads/en/DeviceDoc/MCP6V66-Family-Data-Sheet-DS20006266A.pdf
+$ENDCMP
+#
+$CMP MMBT3904
+D 0.2A Ic, 40V Vce, Small Signal NPN Transistor, SOT-23
+K NPN Transistor
+F https://www.onsemi.com/pub/Collateral/2N3903-D.PDF
+$ENDCMP
+#
+$CMP MMBT3906
+D -0.2A Ic, -40V Vce, Small Signal PNP Transistor, SOT-23
+K PNP Transistor
+F https://www.onsemi.com/pub/Collateral/2N3906-D.PDF
+$ENDCMP
+#
+$CMP MMBT5550L
+D 0.6A Ic, 140V Vce, NPN Transistor, SOT-23
+K NPN Transistor
+F www.onsemi.com/pub/Collateral/MMBT5550LT1-D.PDF
+$ENDCMP
+#
+$CMP MMBT5551L
+D 0.6A Ic, 160V Vce, NPN Transistor, SOT-23
+K NPN Transistor
+F www.onsemi.com/pub/Collateral/MMBT5550LT1-D.PDF
+$ENDCMP
+#
+$CMP MMSD4148
+D 100V 200mA Switching Diode, SOD-123
+K diode
+F https://www.onsemi.com/pub/Collateral/MMSD4148T1-D.PDF
+$ENDCMP
+#
+$CMP MMSD914
+D 100V 0.2A Switching Diode, SOD-123
+K diode
+F https://www.onsemi.com/pub/Collateral/MMSD914T1-D.PDF
 $ENDCMP
 #
 $CMP NE5532
@@ -389,10 +454,14 @@ K dual current feedback opamp
 F http://www.ti.com/lit/ds/sbos224d/sbos224d.pdf
 $ENDCMP
 #
-$CMP PN4250
-D 0.1A Ic, 45V Vce, PNP Small Signal Transistor, TO-92
-K PNP Transistor
-F http://www.fairchildsemi.com/ds/BC/BC557.pdf
+$CMP PMP4201
+D NPN/NPN matched double transistors (SOT-666)
+F https://www.mouser.ch/datasheet/2/916/PMP4201V_G_Y-1600056.pdf
+$ENDCMP
+#
+$CMP PMP5201
+D NPN/NPN matched double transistors (SOT-666)
+F https://www.mouser.ch/datasheet/2/916/PMP5201V_G_Y-1600057.pdf
 $ENDCMP
 #
 $CMP R
@@ -425,10 +494,9 @@ K dual opamp
 F http://www.ti.com/lit/ds/symlink/ne5532.pdf
 $ENDCMP
 #
-$CMP SSM2040
-D Voltage Controlled Filter (VCF), DIP-18
-K VCF SSM2040
-F http://www.alfarzpp.lv/eng/sc/AS3320.pdf
+$CMP THAT340
+D Low-Noise Matched Transistor Array
+F https://www.mouser.ch/datasheet/2/407/THAT_300-Series_Datasheet-180059.pdf
 $ENDCMP
 #
 $CMP TL062
@@ -483,10 +551,6 @@ $CMP TSV912IST
 D Dual rail-to-rail input/output 8 MHz operational amplifiers, MiniSO-8
 K dual opamp
 F www.st.com/resource/en/datasheet/tsv911.pdf
-$ENDCMP
-#
-$CMP lm3916
-F https://cdn.sparkfun.com/datasheets/Components/General%20IC/lm3916.pdf
 $ENDCMP
 #
 #End Doc Library

@@ -1,0 +1,8 @@
+* PNP/PNP Matched Transistor Array ngspice model
+* file name: PMP5201.lib
+.subckt PMP5201 1 2 3 4 5 6
+.include bc5x7.lib
+Q1 6 1 5 BC556B
+Q2 3 2 4 BC556B
+.ends 
+ 

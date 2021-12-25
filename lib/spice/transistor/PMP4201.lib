@@ -1,0 +1,8 @@
+* NPN/NPN Matched Transistor Array ngspice model
+* file name: PMP4201.lib
+.subckt PMP4201 1 2 3 4 5 6
+.include bc5x7.lib
+Q1 6 1 5 BC846B
+Q2 3 2 4 BC846B
+.ends 
+ 

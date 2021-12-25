@@ -1,0 +1,11 @@
+* Low-Noise Matched Transistor Array ngspice model
+* file name: THAT340.lib
+.subckt THAT340 1 2 3 4 5 6 7 8 9 10 11 12 13 14
+.include .lib
+.include bc5x7.lib
+Q1 1 2 3 BC846B
+Q2 14 13 12 BC846B
+Q3 7 6 5 BC556B
+Q4 8 9 10 BC556B
+.ends 
+ 
