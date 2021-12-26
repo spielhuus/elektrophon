@@ -175,20 +175,6 @@ F 3 "" H 4700 6800 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Amplifier_Operational:TL072 U3
-U 3 1 618F7352
-P 4800 7100
-F 0 "U3" H 4758 7146 50  0000 L CNN
-F 1 "TL072" H 4758 7055 50  0000 L CNN
-F 2 "" H 4800 7100 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 4800 7100 50  0001 C CNN
-F 4 "X" H 4800 7100 50  0001 C CNN "Spice_Primitive"
-F 5 "TL072c" H 4800 7100 50  0001 C CNN "Spice_Model"
-F 6 "Y" H 4800 7100 50  0001 C CNN "Spice_Netlist_Enabled"
-	3    4800 7100
-	1    0    0    -1  
-$EndComp
-$Comp
 L power:-15V #PWR013
 U 1 1 618D6CE9
 P 4100 7350
@@ -200,20 +186,6 @@ F 2 "" H 4100 7350 50  0001 C CNN
 F 3 "" H 4100 7350 50  0001 C CNN
 	1    4100 7350
 	-1   0    0    1   
-$EndComp
-$Comp
-L Amplifier_Operational:TL072 U2
-U 3 1 618D6CDD
-P 4200 7050
-F 0 "U2" H 4158 7096 50  0000 L CNN
-F 1 "TL072" H 4158 7005 50  0000 L CNN
-F 2 "" H 4200 7050 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 4200 7050 50  0001 C CNN
-F 4 "X" H 4200 7050 50  0001 C CNN "Spice_Primitive"
-F 5 "TL072c" H 4200 7050 50  0001 C CNN "Spice_Model"
-F 6 "Y" H 4200 7050 50  0001 C CNN "Spice_Netlist_Enabled"
-	3    4200 7050
-	1    0    0    -1  
 $EndComp
 $Sheet
 S 9600 1200 1100 200 
@@ -282,7 +254,7 @@ L Connector:AudioJack2_SwitchT J2
 U 1 1 62096D82
 P 8900 3600
 F 0 "J2" H 8720 3625 50  0000 R CNN
-F 1 "AudioJack2_SwitchT" H 8720 3534 50  0000 R CNN
+F 1 "OUT" H 8720 3534 50  0000 R CNN
 F 2 "" H 8900 3600 50  0001 C CNN
 F 3 "~" H 8900 3600 50  0001 C CNN
 F 4 "X" H 8900 3600 50  0001 C CNN "Spice_Primitive"
@@ -413,20 +385,6 @@ F 3 "~" H 7650 2700 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	6750 3700 7350 3700
-$Comp
-L Amplifier_Operational:TL072 U2
-U 2 1 620D7212
-P 7650 3600
-F 0 "U2" H 7650 3233 50  0000 C CNN
-F 1 "TL072" H 7650 3324 50  0000 C CNN
-F 2 "" H 7650 3600 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 7650 3600 50  0001 C CNN
-F 4 "X" H 7650 3600 50  0001 C CNN "Spice_Primitive"
-F 5 "TL072c" H 7650 3600 50  0001 C CNN "Spice_Model"
-F 6 "Y" H 7650 3600 50  0001 C CNN "Spice_Netlist_Enabled"
-	2    7650 3600
-	1    0    0    1   
-$EndComp
 $Comp
 L power:+5VD #PWR01
 U 1 1 62201CC0
@@ -712,22 +670,6 @@ F 3 "" H 4750 5550 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Amplifier_Operational:TL072 U4
-U 3 1 61C29056
-P 4850 5850
-AR Path="/61C29056" Ref="U4"  Part="3" 
-AR Path="/61C0AC19/61C29056" Ref="U?"  Part="3" 
-F 0 "U4" H 4808 5896 50  0000 L CNN
-F 1 "TL072" H 4808 5805 50  0000 L CNN
-F 2 "" H 4850 5850 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 4850 5850 50  0001 C CNN
-F 4 "X" H 4850 5850 50  0001 C CNN "Spice_Primitive"
-F 5 "TL072c" H 4850 5850 50  0001 C CNN "Spice_Model"
-F 6 "Y" H 4850 5850 50  0001 C CNN "Spice_Netlist_Enabled"
-	3    4850 5850
-	1    0    0    -1  
-$EndComp
-$Comp
 L Amplifier_Operational:LM13700 U1
 U 5 1 61C2905F
 P 4150 5900
@@ -746,45 +688,104 @@ $EndComp
 $Comp
 L power:-15V #PWR019
 U 1 1 61C5FBF3
-P 5350 6150
+P 5400 6200
 AR Path="/61C5FBF3" Ref="#PWR019"  Part="1" 
 AR Path="/5DD3665B/61C5FBF3" Ref="#PWR?"  Part="1" 
 AR Path="/61C0AC19/61C5FBF3" Ref="#PWR?"  Part="1" 
-F 0 "#PWR019" H 5350 6250 50  0001 C CNN
-F 1 "-15V" H 5250 6300 50  0000 L CNN
-F 2 "" H 5350 6150 50  0001 C CNN
-F 3 "" H 5350 6150 50  0001 C CNN
-	1    5350 6150
+F 0 "#PWR019" H 5400 6300 50  0001 C CNN
+F 1 "-15V" H 5300 6350 50  0000 L CNN
+F 2 "" H 5400 6200 50  0001 C CNN
+F 3 "" H 5400 6200 50  0001 C CNN
+	1    5400 6200
 	-1   0    0    1   
 $EndComp
 $Comp
 L power:+15V #PWR018
 U 1 1 61C5FBF9
-P 5350 5550
+P 5400 5600
 AR Path="/61C5FBF9" Ref="#PWR018"  Part="1" 
 AR Path="/5DD3665B/61C5FBF9" Ref="#PWR?"  Part="1" 
 AR Path="/61C0AC19/61C5FBF9" Ref="#PWR?"  Part="1" 
-F 0 "#PWR018" H 5350 5400 50  0001 C CNN
-F 1 "+15V" H 5250 5700 50  0000 L CNN
-F 2 "" H 5350 5550 50  0001 C CNN
-F 3 "" H 5350 5550 50  0001 C CNN
-	1    5350 5550
+F 0 "#PWR018" H 5400 5450 50  0001 C CNN
+F 1 "+15V" H 5300 5750 50  0000 L CNN
+F 2 "" H 5400 5600 50  0001 C CNN
+F 3 "" H 5400 5600 50  0001 C CNN
+	1    5400 5600
 	1    0    0    -1  
 $EndComp
 $Comp
-L Amplifier_Operational:TL072 U5
-U 3 1 61C5FC02
-P 5450 5850
-AR Path="/61C5FC02" Ref="U5"  Part="3" 
-AR Path="/61C0AC19/61C5FC02" Ref="U?"  Part="3" 
-F 0 "U5" H 5408 5896 50  0000 L CNN
-F 1 "TL072" H 5408 5805 50  0000 L CNN
-F 2 "" H 5450 5850 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 5450 5850 50  0001 C CNN
-F 4 "X" H 5450 5850 50  0001 C CNN "Spice_Primitive"
-F 5 "TL072c" H 5450 5850 50  0001 C CNN "Spice_Model"
-F 6 "Y" H 5450 5850 50  0001 C CNN "Spice_Netlist_Enabled"
-	3    5450 5850
+L SMD:TL072 U2
+U 2 1 61C5CB63
+P 7650 3600
+F 0 "U2" H 7650 3233 50  0000 C CNN
+F 1 "TL072" H 7650 3324 50  0000 C CNN
+F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 7650 3600 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 7650 3600 50  0001 C CNN
+F 4 "Low-Noise FET-Input Operational Amplifiers (SOIC-8 )" H 7650 3600 50  0001 C CNN "Description"
+F 5 "X" H 7650 3800 50  0001 L CNN "Spice_Primitive"
+F 6 "TL072c" H 7650 3800 50  0001 L CNN "Spice_Model"
+F 7 "Y" H 7650 3800 50  0001 L CNN "Spice_Netlist_Enabled"
+	2    7650 3600
+	1    0    0    1   
+$EndComp
+$Comp
+L SMD:TL072 U4
+U 3 1 61C7E43E
+P 4850 5850
+F 0 "U4" H 4808 5896 50  0000 L CNN
+F 1 "TL072" H 4808 5805 50  0000 L CNN
+F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 4850 5850 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 4850 5850 50  0001 C CNN
+F 4 "Low-Noise FET-Input Operational Amplifiers (SOIC-8 )" H 4850 5850 50  0001 C CNN "Description"
+F 5 "X" H 4850 6050 50  0001 L CNN "Spice_Primitive"
+F 6 "TL072c" H 4850 6050 50  0001 L CNN "Spice_Model"
+F 7 "Y" H 4850 6050 50  0001 L CNN "Spice_Netlist_Enabled"
+	3    4850 5850
+	1    0    0    -1  
+$EndComp
+$Comp
+L SMD:TL072 U5
+U 3 1 61C80273
+P 5500 5900
+F 0 "U5" H 5458 5946 50  0000 L CNN
+F 1 "TL072" H 5458 5855 50  0000 L CNN
+F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 5500 5900 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 5500 5900 50  0001 C CNN
+F 4 "Low-Noise FET-Input Operational Amplifiers (SOIC-8 )" H 5500 5900 50  0001 C CNN "Description"
+F 5 "X" H 5500 6100 50  0001 L CNN "Spice_Primitive"
+F 6 "TL072c" H 5500 6100 50  0001 L CNN "Spice_Model"
+F 7 "Y" H 5500 6100 50  0001 L CNN "Spice_Netlist_Enabled"
+	3    5500 5900
+	1    0    0    -1  
+$EndComp
+$Comp
+L SMD:TL072 U2
+U 3 1 61C8152D
+P 4200 7050
+F 0 "U2" H 4158 7096 50  0000 L CNN
+F 1 "TL072" H 4158 7005 50  0000 L CNN
+F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 4200 7050 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 4200 7050 50  0001 C CNN
+F 4 "Low-Noise FET-Input Operational Amplifiers (SOIC-8 )" H 4200 7050 50  0001 C CNN "Description"
+F 5 "X" H 4200 7250 50  0001 L CNN "Spice_Primitive"
+F 6 "TL072c" H 4200 7250 50  0001 L CNN "Spice_Model"
+F 7 "Y" H 4200 7250 50  0001 L CNN "Spice_Netlist_Enabled"
+	3    4200 7050
+	1    0    0    -1  
+$EndComp
+$Comp
+L SMD:TL072 U3
+U 3 1 61C82A35
+P 4800 7100
+F 0 "U3" H 4758 7146 50  0000 L CNN
+F 1 "TL072" H 4758 7055 50  0000 L CNN
+F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 4800 7100 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 4800 7100 50  0001 C CNN
+F 4 "Low-Noise FET-Input Operational Amplifiers (SOIC-8 )" H 4800 7100 50  0001 C CNN "Description"
+F 5 "X" H 4800 7300 50  0001 L CNN "Spice_Primitive"
+F 6 "TL072c" H 4800 7300 50  0001 L CNN "Spice_Model"
+F 7 "Y" H 4800 7300 50  0001 L CNN "Spice_Netlist_Enabled"
+	3    4800 7100
 	1    0    0    -1  
 $EndComp
 $EndSCHEMATC
