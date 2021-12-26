@@ -14,8 +14,14 @@
     {{ $auto_render := resources.Get "js/auto-render.js" }}
     {{ $js := slice $plugins $katex $auto_render | resources.Concat "js/bundle.js" }}
     <script defer src="{{ $js.Permalink }}"></script>
-    {{ template "_internal/google_analytics.html" . }}
-    {{ template "_internal/google_analytics_async.html" . }}    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FB5W33P6QT"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-FB5W33P6QT');
+    </script>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             renderMathInElement(document.body, {
