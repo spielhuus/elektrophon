@@ -1,0 +1,1001 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "(title)"
+Date ""
+Rev "R01"
+Comp ""
+Comment1 "schema for pcb"
+Comment2 "(description)"
+Comment3 ""
+Comment4 "License CC BY 4.0 - Attribution 4.0 International"
+$EndDescr
+$Comp
+L Mechanical:MountingHole H1
+U 1 1 6097A217
+P 9650 6000
+F 0 "H1" H 9750 6046 50  0000 L CNN
+F 1 "MountingHole" H 9750 5955 50  0000 L CNN
+F 2 "MountingHole:MountingHole_2.2mm_M2" H 9650 6000 50  0001 C CNN
+F 3 "~" H 9650 6000 50  0001 C CNN
+	1    9650 6000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H2
+U 1 1 6097A580
+P 9650 6300
+F 0 "H2" H 9750 6346 50  0000 L CNN
+F 1 "MountingHole" H 9750 6255 50  0000 L CNN
+F 2 "MountingHole:MountingHole_2.2mm_M2" H 9650 6300 50  0001 C CNN
+F 3 "~" H 9650 6300 50  0001 C CNN
+	1    9650 6300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+15V #PWR010
+U 1 1 5F816C5C
+P 6050 7300
+F 0 "#PWR010" H 6050 7150 50  0001 C CNN
+F 1 "+15V" H 6065 7473 50  0000 C CNN
+F 2 "" H 6050 7300 50  0001 C CNN
+F 3 "" H 6050 7300 50  0001 C CNN
+	1    6050 7300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:-15V #PWR011
+U 1 1 5F816FAE
+P 6300 7300
+F 0 "#PWR011" H 6300 7400 50  0001 C CNN
+F 1 "-15V" H 6315 7473 50  0000 C CNN
+F 2 "" H 6300 7300 50  0001 C CNN
+F 3 "" H 6300 7300 50  0001 C CNN
+	1    6300 7300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR012
+U 1 1 5F817A91
+P 6550 7400
+F 0 "#PWR012" H 6550 7150 50  0001 C CNN
+F 1 "GND" H 6555 7227 50  0000 C CNN
+F 2 "" H 6550 7400 50  0001 C CNN
+F 3 "" H 6550 7400 50  0001 C CNN
+	1    6550 7400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:PWR_FLAG #FLG02
+U 1 1 5F737716
+P 6050 7300
+F 0 "#FLG02" H 6050 7375 50  0001 C CNN
+F 1 "PWR_FLAG" H 6050 7473 50  0001 C CNN
+F 2 "" H 6050 7300 50  0001 C CNN
+F 3 "~" H 6050 7300 50  0001 C CNN
+	1    6050 7300
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:PWR_FLAG #FLG03
+U 1 1 5F737C0D
+P 6300 7300
+F 0 "#FLG03" H 6300 7375 50  0001 C CNN
+F 1 "PWR_FLAG" H 6300 7473 50  0001 C CNN
+F 2 "" H 6300 7300 50  0001 C CNN
+F 3 "~" H 6300 7300 50  0001 C CNN
+	1    6300 7300
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:PWR_FLAG #FLG04
+U 1 1 5F737FC5
+P 6550 7400
+F 0 "#FLG04" H 6550 7475 50  0001 C CNN
+F 1 "PWR_FLAG" H 6550 7573 50  0001 C CNN
+F 2 "" H 6550 7400 50  0001 C CNN
+F 3 "~" H 6550 7400 50  0001 C CNN
+	1    6550 7400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:CP C1
+U 1 1 5E180738
+P 2550 7050
+AR Path="/5E180738" Ref="C1"  Part="1" 
+AR Path="/5DD3665B/5E180738" Ref="C?"  Part="1" 
+F 0 "C1" H 2668 7096 50  0000 L CNN
+F 1 "22u" H 2668 7005 50  0000 L CNN
+F 2 "Capacitor_THT:CP_Radial_D6.3mm_P2.50mm" H 2588 6900 50  0001 C CNN
+F 3 "~" H 2550 7050 50  0001 C CNN
+	1    2550 7050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:CP C2
+U 1 1 5E18070C
+P 2550 7350
+AR Path="/5E18070C" Ref="C2"  Part="1" 
+AR Path="/5DD3665B/5E18070C" Ref="C?"  Part="1" 
+F 0 "C2" H 2668 7396 50  0000 L CNN
+F 1 "22u" H 2668 7305 50  0000 L CNN
+F 2 "Capacitor_THT:CP_Radial_D6.3mm_P2.50mm" H 2588 7200 50  0001 C CNN
+F 3 "~" H 2550 7350 50  0001 C CNN
+	1    2550 7350
+	1    0    0    -1  
+$EndComp
+Connection ~ 2550 7200
+Wire Wire Line
+	2550 7200 2350 7200
+Wire Wire Line
+	2300 7500 2350 7500
+Connection ~ 900  6950
+$Comp
+L power:PWR_FLAG #FLG01
+U 1 1 5FCD1662
+P 900 6950
+AR Path="/5FCD1662" Ref="#FLG01"  Part="1" 
+AR Path="/5DD3665B/5FCD1662" Ref="#FLG?"  Part="1" 
+F 0 "#FLG01" H 900 7025 50  0001 C CNN
+F 1 "PWR_FLAG" H 900 7078 50  0001 L CNN
+F 2 "" H 900 6950 50  0001 C CNN
+F 3 "~" H 900 6950 50  0001 C CNN
+	1    900  6950
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR01
+U 1 1 5FCD1661
+P 900 6950
+AR Path="/5FCD1661" Ref="#PWR01"  Part="1" 
+AR Path="/5DD3665B/5FCD1661" Ref="#PWR?"  Part="1" 
+F 0 "#PWR01" H 900 6800 50  0001 C CNN
+F 1 "+5V" V 915 7078 50  0000 L CNN
+F 2 "" H 900 6950 50  0001 C CNN
+F 3 "" H 900 6950 50  0001 C CNN
+	1    900  6950
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:+5V #PWR04
+U 1 1 5FCD1660
+P 1400 6950
+AR Path="/5FCD1660" Ref="#PWR04"  Part="1" 
+AR Path="/5DD3665B/5FCD1660" Ref="#PWR?"  Part="1" 
+F 0 "#PWR04" H 1400 6800 50  0001 C CNN
+F 1 "+5V" V 1415 7078 50  0000 L CNN
+F 2 "" H 1400 6950 50  0001 C CNN
+F 3 "" H 1400 6950 50  0001 C CNN
+	1    1400 6950
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR06
+U 1 1 5FC69BA7
+P 1400 7150
+AR Path="/5FC69BA7" Ref="#PWR06"  Part="1" 
+AR Path="/5DD3665B/5FC69BA7" Ref="#PWR?"  Part="1" 
+F 0 "#PWR06" H 1400 6900 50  0001 C CNN
+F 1 "GND" V 1405 7022 50  0000 R CNN
+F 2 "" H 1400 7150 50  0001 C CNN
+F 3 "" H 1400 7150 50  0001 C CNN
+	1    1400 7150
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR05
+U 1 1 5FCD165F
+P 1400 7050
+AR Path="/5FCD165F" Ref="#PWR05"  Part="1" 
+AR Path="/5DD3665B/5FCD165F" Ref="#PWR?"  Part="1" 
+F 0 "#PWR05" H 1400 6800 50  0001 C CNN
+F 1 "GND" V 1405 6922 50  0000 R CNN
+F 2 "" H 1400 7050 50  0001 C CNN
+F 3 "" H 1400 7050 50  0001 C CNN
+	1    1400 7050
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR02
+U 1 1 5E18076B
+P 900 7050
+AR Path="/5E18076B" Ref="#PWR02"  Part="1" 
+AR Path="/5DD3665B/5E18076B" Ref="#PWR?"  Part="1" 
+F 0 "#PWR02" H 900 6800 50  0001 C CNN
+F 1 "GND" V 905 6922 50  0000 R CNN
+F 2 "" H 900 7050 50  0001 C CNN
+F 3 "" H 900 7050 50  0001 C CNN
+	1    900  7050
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR03
+U 1 1 5E180765
+P 900 7150
+AR Path="/5E180765" Ref="#PWR03"  Part="1" 
+AR Path="/5DD3665B/5E180765" Ref="#PWR?"  Part="1" 
+F 0 "#PWR03" H 900 6900 50  0001 C CNN
+F 1 "GND" V 905 7022 50  0000 R CNN
+F 2 "" H 900 7150 50  0001 C CNN
+F 3 "" H 900 7150 50  0001 C CNN
+	1    900  7150
+	0    1    1    0   
+$EndComp
+$Comp
+L Connector_Generic:Conn_02x05_Odd_Even J1
+U 1 1 5FCD165C
+P 1200 7150
+AR Path="/5FCD165C" Ref="J1"  Part="1" 
+AR Path="/5DD3665B/5FCD165C" Ref="J?"  Part="1" 
+F 0 "J1" H 1250 7567 50  0000 C CNN
+F 1 "IDC Header" H 1250 7476 50  0000 C CNN
+F 2 "Connector_IDC:IDC-Header_2x05_P2.54mm_Vertical" H 1200 7150 50  0001 C CNN
+F 3 "~" H 1200 7150 50  0001 C CNN
+	1    1200 7150
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR08
+U 1 1 5E180712
+P 2350 7200
+AR Path="/5E180712" Ref="#PWR08"  Part="1" 
+AR Path="/5DD3665B/5E180712" Ref="#PWR?"  Part="1" 
+F 0 "#PWR08" H 2350 6950 50  0001 C CNN
+F 1 "GND" V 2350 7000 50  0000 C CNN
+F 2 "" H 2350 7200 50  0001 C CNN
+F 3 "" H 2350 7200 50  0001 C CNN
+	1    2350 7200
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R1
+U 1 1 5FB443E6
+P 2150 6900
+F 0 "R1" V 1943 6900 50  0000 C CNN
+F 1 "10" V 2034 6900 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 2080 6900 50  0001 C CNN
+F 3 "~" H 2150 6900 50  0001 C CNN
+	1    2150 6900
+	0    1    1    0   
+$EndComp
+$Comp
+L power:+15V #PWR07
+U 1 1 5FC69BA0
+P 2350 6900
+AR Path="/5FC69BA0" Ref="#PWR07"  Part="1" 
+AR Path="/5DD3665B/5FC69BA0" Ref="#PWR?"  Part="1" 
+F 0 "#PWR07" H 2350 6750 50  0001 C CNN
+F 1 "+15V" H 2250 7050 50  0000 L CNN
+F 2 "" H 2350 6900 50  0001 C CNN
+F 3 "" H 2350 6900 50  0001 C CNN
+	1    2350 6900
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:-15V #PWR09
+U 1 1 5FC69BA2
+P 2350 7500
+AR Path="/5FC69BA2" Ref="#PWR09"  Part="1" 
+AR Path="/5DD3665B/5FC69BA2" Ref="#PWR?"  Part="1" 
+F 0 "#PWR09" H 2350 7600 50  0001 C CNN
+F 1 "-15V" H 2250 7650 50  0000 L CNN
+F 2 "" H 2350 7500 50  0001 C CNN
+F 3 "" H 2350 7500 50  0001 C CNN
+	1    2350 7500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 5FC69BB1
+P 2150 7500
+F 0 "R2" V 1943 7500 50  0000 C CNN
+F 1 "10" V 2034 7500 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 2080 7500 50  0001 C CNN
+F 3 "~" H 2150 7500 50  0001 C CNN
+	1    2150 7500
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2300 6900 2350 6900
+Connection ~ 2350 6900
+Wire Wire Line
+	2350 6900 2550 6900
+Connection ~ 2350 7500
+Wire Wire Line
+	2350 7500 2550 7500
+Text GLabel 2000 6900 0    50   Input ~ 0
+VP
+Text GLabel 2000 7500 0    50   Input ~ 0
+VN
+Text GLabel 1400 7250 2    50   Input ~ 0
+VP
+Text GLabel 900  7250 0    50   Input ~ 0
+VP
+Text GLabel 1400 7350 2    50   Input ~ 0
+VN
+Text GLabel 900  7350 0    50   Input ~ 0
+VN
+$Comp
+L Mechanical:MountingHole H3
+U 1 1 6098DECA
+P 10400 6000
+F 0 "H3" H 10500 6046 50  0000 L CNN
+F 1 "MountingHole" H 10500 5955 50  0000 L CNN
+F 2 "MountingHole:MountingHole_2.2mm_M2" H 10400 6000 50  0001 C CNN
+F 3 "~" H 10400 6000 50  0001 C CNN
+	1    10400 6000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H4
+U 1 1 6098DED0
+P 10400 6300
+F 0 "H4" H 10500 6346 50  0000 L CNN
+F 1 "MountingHole" H 10500 6255 50  0000 L CNN
+F 2 "MountingHole:MountingHole_2.2mm_M2" H 10400 6300 50  0001 C CNN
+F 3 "~" H 10400 6300 50  0001 C CNN
+	1    10400 6300
+	1    0    0    -1  
+$EndComp
+$Comp
+L SMD:THAT340 Q3
+U 1 1 61C8500D
+P 4900 2650
+F 0 "Q3" H 5090 2696 50  0000 L CNN
+F 1 "THAT340" H 5090 2605 50  0000 L CNN
+F 2 "Package_SO:SOIC-14-16_3.9x9.9mm_P1.27mm" H 5020 2750 50  0001 C CNN
+F 3 "https://www.mouser.ch/datasheet/2/407/THAT_300-Series_Datasheet-180059.pdf" H 4820 2650 50  0001 C CNN
+F 4 "Low-Noise Matched Transistor Array" H 4900 2650 50  0001 C CNN "Description"
+F 5 "X" H 5110 2450 50  0001 L CNN "Spice_Primitive"
+F 6 "THAT340" H 5110 2450 50  0001 L CNN "Spice_Model"
+F 7 "Y" H 5110 2450 50  0001 L CNN "Spice_Netlist_Enabled"
+	1    4900 2650
+	-1   0    0    -1  
+$EndComp
+$Comp
+L SMD:THAT340 Q3
+U 2 1 61C85922
+P 4900 2050
+F 0 "Q3" H 5090 2096 50  0000 L CNN
+F 1 "THAT340" H 5090 2005 50  0000 L CNN
+F 2 "Package_SO:SOIC-14-16_3.9x9.9mm_P1.27mm" H 5020 2150 50  0001 C CNN
+F 3 "https://www.mouser.ch/datasheet/2/407/THAT_300-Series_Datasheet-180059.pdf" H 4820 2050 50  0001 C CNN
+F 4 "Low-Noise Matched Transistor Array" H 4900 2050 50  0001 C CNN "Description"
+F 5 "X" H 5110 1850 50  0001 L CNN "Spice_Primitive"
+F 6 "THAT340" H 5110 1850 50  0001 L CNN "Spice_Model"
+F 7 "Y" H 5110 1850 50  0001 L CNN "Spice_Netlist_Enabled"
+	2    4900 2050
+	-1   0    0    -1  
+$EndComp
+$Comp
+L SMD:THAT340 Q3
+U 3 1 61C86381
+P 3850 2650
+F 0 "Q3" H 4040 2604 50  0000 L CNN
+F 1 "THAT340" H 4040 2695 50  0000 L CNN
+F 2 "Package_SO:SOIC-14-16_3.9x9.9mm_P1.27mm" H 3970 2750 50  0001 C CNN
+F 3 "https://www.mouser.ch/datasheet/2/407/THAT_300-Series_Datasheet-180059.pdf" H 3770 2650 50  0001 C CNN
+F 4 "Low-Noise Matched Transistor Array" H 3850 2650 50  0001 C CNN "Description"
+F 5 "X" H 4060 2450 50  0001 L CNN "Spice_Primitive"
+F 6 "THAT340" H 4060 2450 50  0001 L CNN "Spice_Model"
+F 7 "Y" H 4060 2450 50  0001 L CNN "Spice_Netlist_Enabled"
+	3    3850 2650
+	1    0    0    1   
+$EndComp
+$Comp
+L SMD:THAT340 Q3
+U 4 1 61C8751C
+P 3850 2050
+F 0 "Q3" H 4040 2004 50  0000 L CNN
+F 1 "THAT340" H 4040 2095 50  0000 L CNN
+F 2 "Package_SO:SOIC-14-16_3.9x9.9mm_P1.27mm" H 3970 2150 50  0001 C CNN
+F 3 "https://www.mouser.ch/datasheet/2/407/THAT_300-Series_Datasheet-180059.pdf" H 3770 2050 50  0001 C CNN
+F 4 "Low-Noise Matched Transistor Array" H 3850 2050 50  0001 C CNN "Description"
+F 5 "X" H 4060 1850 50  0001 L CNN "Spice_Primitive"
+F 6 "THAT340" H 4060 1850 50  0001 L CNN "Spice_Model"
+F 7 "Y" H 4060 1850 50  0001 L CNN "Spice_Netlist_Enabled"
+	4    3850 2050
+	1    0    0    1   
+$EndComp
+$Comp
+L SMD:THAT340 Q3
+U 5 1 61C88346
+P 9000 5950
+F 0 "Q3" V 8954 6078 50  0000 L CNN
+F 1 "THAT340" V 9045 6078 50  0000 L CNN
+F 2 "Package_SO:SOIC-14-16_3.9x9.9mm_P1.27mm" H 9120 6050 50  0001 C CNN
+F 3 "https://www.mouser.ch/datasheet/2/407/THAT_300-Series_Datasheet-180059.pdf" H 8920 5950 50  0001 C CNN
+F 4 "Low-Noise Matched Transistor Array" H 9000 5950 50  0001 C CNN "Description"
+F 5 "X" H 9210 5750 50  0001 L CNN "Spice_Primitive"
+F 6 "THAT340" H 9210 5750 50  0001 L CNN "Spice_Model"
+F 7 "Y" H 9210 5750 50  0001 L CNN "Spice_Netlist_Enabled"
+	5    9000 5950
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4800 2850 4800 2950
+Wire Wire Line
+	4800 2950 4350 2950
+Wire Wire Line
+	3950 2950 3950 2850
+$Comp
+L SMD:TL072 U1
+U 1 1 61C82F1E
+P 5850 1950
+F 0 "U1" H 5850 1583 50  0000 C CNN
+F 1 "TL072" H 5850 1674 50  0000 C CNN
+F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 5850 1950 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 5850 1950 50  0001 C CNN
+F 4 "Low-Noise FET-Input Operational Amplifiers (SOIC-8 )" H 5850 1950 50  0001 C CNN "Description"
+F 5 "X" H 5850 2150 50  0001 L CNN "Spice_Primitive"
+F 6 "TL072c" H 5850 2150 50  0001 L CNN "Spice_Model"
+F 7 "Y" H 5850 2150 50  0001 L CNN "Spice_Netlist_Enabled"
+	1    5850 1950
+	1    0    0    1   
+$EndComp
+$Comp
+L SMD:TL072 U1
+U 2 1 61C83D6B
+P 5850 3500
+F 0 "U1" H 5850 3867 50  0000 C CNN
+F 1 "TL072" H 5850 3776 50  0000 C CNN
+F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 5850 3500 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 5850 3500 50  0001 C CNN
+F 4 "Low-Noise FET-Input Operational Amplifiers (SOIC-8 )" H 5850 3500 50  0001 C CNN "Description"
+F 5 "X" H 5850 3700 50  0001 L CNN "Spice_Primitive"
+F 6 "TL072c" H 5850 3700 50  0001 L CNN "Spice_Model"
+F 7 "Y" H 5850 3700 50  0001 L CNN "Spice_Netlist_Enabled"
+	2    5850 3500
+	1    0    0    1   
+$EndComp
+$Comp
+L SMD:TL072 U1
+U 3 1 61C85688
+P 5100 7200
+F 0 "U1" H 5058 7246 50  0000 L CNN
+F 1 "TL072" H 5058 7155 50  0000 L CNN
+F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 5100 7200 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 5100 7200 50  0001 C CNN
+F 4 "Low-Noise FET-Input Operational Amplifiers (SOIC-8 )" H 5100 7200 50  0001 C CNN "Description"
+F 5 "X" H 5100 7400 50  0001 L CNN "Spice_Primitive"
+F 6 "TL072c" H 5100 7400 50  0001 L CNN "Spice_Model"
+F 7 "Y" H 5100 7400 50  0001 L CNN "Spice_Netlist_Enabled"
+	3    5100 7200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5550 2050 5250 2050
+Wire Wire Line
+	5550 1850 5450 1850
+Wire Wire Line
+	5450 1850 5450 1700
+Wire Wire Line
+	5450 1700 4800 1700
+Wire Wire Line
+	3950 1700 3950 1850
+Wire Wire Line
+	4800 1850 4800 1700
+Connection ~ 4800 1700
+Wire Wire Line
+	4800 1700 3950 1700
+Wire Wire Line
+	3950 2250 3950 2350
+Wire Wire Line
+	4800 2250 4800 2350
+Wire Wire Line
+	3950 2350 4800 2350
+Wire Wire Line
+	6350 2350 6350 1950
+Wire Wire Line
+	6350 1950 6150 1950
+Connection ~ 3950 2350
+Wire Wire Line
+	3950 2350 3950 2450
+Connection ~ 4800 2350
+Wire Wire Line
+	4800 2350 4800 2450
+$Comp
+L SMD:R R15
+U 1 1 61C938FC
+P 6000 2350
+F 0 "R15" V 5793 2350 50  0000 C CNN
+F 1 "4.7k" V 5884 2350 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 5930 2350 50  0001 C CNN
+F 3 "~" H 6000 2350 50  0001 C CNN
+F 4 "Thick Film Resistors - SMD (0805)" H 6000 2350 50  0001 C CNN "Description"
+	1    6000 2350
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6150 2350 6350 2350
+$Comp
+L power:GND #PWR023
+U 1 1 61C96C9F
+P 5250 2100
+F 0 "#PWR023" H 5250 1850 50  0001 C CNN
+F 1 "GND" H 5255 1927 50  0000 C CNN
+F 2 "" H 5250 2100 50  0001 C CNN
+F 3 "" H 5250 2100 50  0001 C CNN
+	1    5250 2100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5250 2100 5250 2050
+Connection ~ 5250 2050
+Wire Wire Line
+	5250 2050 5100 2050
+$Comp
+L SMD:R R14
+U 1 1 61C9CBA3
+P 4350 3150
+F 0 "R14" H 4280 3104 50  0000 R CNN
+F 1 "10k" H 4280 3195 50  0000 R CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 4280 3150 50  0001 C CNN
+F 3 "~" H 4350 3150 50  0001 C CNN
+F 4 "Thick Film Resistors - SMD (0805)" H 4350 3150 50  0001 C CNN "Description"
+	1    4350 3150
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	4350 3000 4350 2950
+Connection ~ 4350 2950
+Wire Wire Line
+	4350 2950 3950 2950
+$Comp
+L SMD:R R9
+U 1 1 61C9EC30
+P 3300 2950
+F 0 "R9" H 3230 2904 50  0000 R CNN
+F 1 "2.2k" H 3230 2995 50  0000 R CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 3230 2950 50  0001 C CNN
+F 3 "~" H 3300 2950 50  0001 C CNN
+F 4 "Thick Film Resistors - SMD (0805)" H 3300 2950 50  0001 C CNN "Description"
+	1    3300 2950
+	-1   0    0    1   
+$EndComp
+$Comp
+L SMD:R R6
+U 1 1 61C9F077
+P 2950 2950
+F 0 "R6" H 2880 2904 50  0000 R CNN
+F 1 "150k" H 2880 2995 50  0000 R CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 2880 2950 50  0001 C CNN
+F 3 "~" H 2950 2950 50  0001 C CNN
+F 4 "Thick Film Resistors - SMD (0805)" H 2950 2950 50  0001 C CNN "Description"
+	1    2950 2950
+	-1   0    0    1   
+$EndComp
+$Comp
+L SMD:R R5
+U 1 1 61C9F860
+P 2450 2650
+F 0 "R5" V 2243 2650 50  0000 C CNN
+F 1 "4.7k" V 2334 2650 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 2380 2650 50  0001 C CNN
+F 3 "~" H 2450 2650 50  0001 C CNN
+F 4 "Thick Film Resistors - SMD (0805)" H 2450 2650 50  0001 C CNN "Description"
+	1    2450 2650
+	0    1    1    0   
+$EndComp
+Text GLabel 2150 2650 0    50   Input ~ 0
+ATTACK_CV
+Wire Wire Line
+	2150 2650 2300 2650
+Wire Wire Line
+	2600 2650 2750 2650
+$Comp
+L power:GND #PWR020
+U 1 1 61CA360B
+P 3300 3150
+F 0 "#PWR020" H 3300 2900 50  0001 C CNN
+F 1 "GND" H 3305 2977 50  0000 C CNN
+F 2 "" H 3300 3150 50  0001 C CNN
+F 3 "" H 3300 3150 50  0001 C CNN
+	1    3300 3150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3300 3150 3300 3100
+Wire Wire Line
+	3300 2800 3300 2650
+Connection ~ 3300 2650
+Wire Wire Line
+	3300 2650 3650 2650
+$Comp
+L power:-15V #PWR018
+U 1 1 61CA51FF
+P 2950 3150
+F 0 "#PWR018" H 2950 3250 50  0001 C CNN
+F 1 "-15V" H 2965 3323 50  0000 C CNN
+F 2 "" H 2950 3150 50  0001 C CNN
+F 3 "" H 2950 3150 50  0001 C CNN
+	1    2950 3150
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	2950 3150 2950 3100
+Wire Wire Line
+	2950 2800 2950 2650
+Connection ~ 2950 2650
+Wire Wire Line
+	2950 2650 3300 2650
+$Comp
+L SMD:R R8
+U 1 1 61CA7884
+P 3300 2250
+F 0 "R8" H 3230 2204 50  0000 R CNN
+F 1 "2.2k" H 3230 2295 50  0000 R CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 3230 2250 50  0001 C CNN
+F 3 "~" H 3300 2250 50  0001 C CNN
+F 4 "Thick Film Resistors - SMD (0805)" H 3300 2250 50  0001 C CNN "Description"
+	1    3300 2250
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR019
+U 1 1 61CA80CC
+P 3300 2400
+F 0 "#PWR019" H 3300 2150 50  0001 C CNN
+F 1 "GND" H 3305 2227 50  0000 C CNN
+F 2 "" H 3300 2400 50  0001 C CNN
+F 3 "" H 3300 2400 50  0001 C CNN
+	1    3300 2400
+	1    0    0    -1  
+$EndComp
+$Comp
+L THT:R_POT RV2
+U 1 1 61CAA346
+P 2450 3100
+F 0 "RV2" H 2380 3146 50  0000 R CNN
+F 1 "10k" H 2380 3055 50  0000 R CNN
+F 2 "" H 2450 3100 50  0001 C CNN
+F 3 "~" H 2450 3100 50  0001 C CNN
+F 4 "Alpha 9 mm Pots – Vertical" H 2450 3100 50  0001 C CNN "Description"
+	1    2450 3100
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:-15V #PWR017
+U 1 1 61CABA88
+P 2450 3250
+F 0 "#PWR017" H 2450 3350 50  0001 C CNN
+F 1 "-15V" H 2465 3423 50  0000 C CNN
+F 2 "" H 2450 3250 50  0001 C CNN
+F 3 "" H 2450 3250 50  0001 C CNN
+	1    2450 3250
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:+15V #PWR016
+U 1 1 61CAE301
+P 2450 2950
+F 0 "#PWR016" H 2450 2800 50  0001 C CNN
+F 1 "+15V" H 2465 3123 50  0000 C CNN
+F 2 "" H 2450 2950 50  0001 C CNN
+F 3 "" H 2450 2950 50  0001 C CNN
+	1    2450 2950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2600 3100 2750 3100
+Wire Wire Line
+	2750 3100 2750 2650
+Connection ~ 2750 2650
+Wire Wire Line
+	2750 2650 2950 2650
+$Comp
+L SMD:R R4
+U 1 1 61CBB184
+P 2200 1100
+F 0 "R4" H 2130 1054 50  0000 R CNN
+F 1 "82k" H 2130 1145 50  0000 R CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 2130 1100 50  0001 C CNN
+F 3 "~" H 2200 1100 50  0001 C CNN
+F 4 "Thick Film Resistors - SMD (0805)" H 2200 1100 50  0001 C CNN "Description"
+	1    2200 1100
+	-1   0    0    1   
+$EndComp
+$Comp
+L SMD:R R3
+U 1 1 61CBB18B
+P 1700 800
+F 0 "R3" V 1493 800 50  0000 C CNN
+F 1 "100k" V 1584 800 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 1630 800 50  0001 C CNN
+F 3 "~" H 1700 800 50  0001 C CNN
+F 4 "Thick Film Resistors - SMD (0805)" H 1700 800 50  0001 C CNN "Description"
+	1    1700 800 
+	0    1    1    0   
+$EndComp
+Text GLabel 1400 800  0    50   Input ~ 0
+RELEASE_CV
+Wire Wire Line
+	1400 800  1550 800 
+Wire Wire Line
+	1850 800  2000 800 
+$Comp
+L power:-15V #PWR015
+U 1 1 61CBB194
+P 2200 1300
+F 0 "#PWR015" H 2200 1400 50  0001 C CNN
+F 1 "-15V" H 2215 1473 50  0000 C CNN
+F 2 "" H 2200 1300 50  0001 C CNN
+F 3 "" H 2200 1300 50  0001 C CNN
+	1    2200 1300
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	2200 1300 2200 1250
+Wire Wire Line
+	2200 950  2200 800 
+Connection ~ 2200 800 
+$Comp
+L THT:R_POT RV1
+U 1 1 61CBB19F
+P 1700 1250
+F 0 "RV1" H 1630 1296 50  0000 R CNN
+F 1 "10k" H 1630 1205 50  0000 R CNN
+F 2 "" H 1700 1250 50  0001 C CNN
+F 3 "~" H 1700 1250 50  0001 C CNN
+F 4 "Alpha 9 mm Pots – Vertical" H 1700 1250 50  0001 C CNN "Description"
+	1    1700 1250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:-15V #PWR014
+U 1 1 61CBB1A5
+P 1700 1400
+F 0 "#PWR014" H 1700 1500 50  0001 C CNN
+F 1 "-15V" H 1715 1573 50  0000 C CNN
+F 2 "" H 1700 1400 50  0001 C CNN
+F 3 "" H 1700 1400 50  0001 C CNN
+	1    1700 1400
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:+15V #PWR013
+U 1 1 61CBB1AB
+P 1700 1100
+F 0 "#PWR013" H 1700 950 50  0001 C CNN
+F 1 "+15V" H 1715 1273 50  0000 C CNN
+F 2 "" H 1700 1100 50  0001 C CNN
+F 3 "" H 1700 1100 50  0001 C CNN
+	1    1700 1100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1850 1250 2000 1250
+Wire Wire Line
+	2000 1250 2000 800 
+Connection ~ 2000 800 
+Wire Wire Line
+	2000 800  2200 800 
+$Comp
+L SMD:R R7
+U 1 1 61CC5145
+P 3000 550
+F 0 "R7" V 2793 550 50  0000 C CNN
+F 1 "100k" V 2884 550 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 2930 550 50  0001 C CNN
+F 3 "~" H 3000 550 50  0001 C CNN
+F 4 "Thick Film Resistors - SMD (0805)" H 3000 550 50  0001 C CNN "Description"
+	1    3000 550 
+	0    1    1    0   
+$EndComp
+Text GLabel 2700 550  0    50   Input ~ 0
+DECAY_CV
+Wire Wire Line
+	2700 550  2850 550 
+$Comp
+L THT:R_POT RV3
+U 1 1 61CC5159
+P 4150 550
+F 0 "RV3" H 4080 596 50  0000 R CNN
+F 1 "10k" H 4080 505 50  0000 R CNN
+F 2 "" H 4150 550 50  0001 C CNN
+F 3 "~" H 4150 550 50  0001 C CNN
+F 4 "Alpha 9 mm Pots – Vertical" H 4150 550 50  0001 C CNN "Description"
+	1    4150 550 
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:-15V #PWR022
+U 1 1 61CC515F
+P 4150 700
+F 0 "#PWR022" H 4150 800 50  0001 C CNN
+F 1 "-15V" H 4165 873 50  0000 C CNN
+F 2 "" H 4150 700 50  0001 C CNN
+F 3 "" H 4150 700 50  0001 C CNN
+	1    4150 700 
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:+15V #PWR021
+U 1 1 61CC5165
+P 4150 400
+F 0 "#PWR021" H 4150 250 50  0001 C CNN
+F 1 "+15V" H 4165 573 50  0000 C CNN
+F 2 "" H 4150 400 50  0001 C CNN
+F 3 "" H 4150 400 50  0001 C CNN
+	1    4150 400 
+	1    0    0    -1  
+$EndComp
+$Comp
+L SMD:R R10
+U 1 1 61CD0396
+P 3600 550
+F 0 "R10" V 3393 550 50  0000 C CNN
+F 1 "100k" V 3484 550 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 3530 550 50  0001 C CNN
+F 3 "~" H 3600 550 50  0001 C CNN
+F 4 "Thick Film Resistors - SMD (0805)" H 3600 550 50  0001 C CNN "Description"
+	1    3600 550 
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4000 550  3750 550 
+Wire Wire Line
+	3450 550  3300 550 
+$Comp
+L SMD:MMBT3904 Q1
+U 1 1 61CF9720
+P 3050 1150
+F 0 "Q1" H 3241 1104 50  0000 L CNN
+F 1 "MMBT3904" H 3241 1195 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 3250 1075 50  0001 L CIN
+F 3 "https://www.onsemi.com/pub/Collateral/2N3903-D.PDF" H 3050 1150 50  0001 L CNN
+F 4 "NPN general purpose transistors (SOT-23)" H 3050 1150 50  0001 C CNN "Description"
+F 5 "Q" H 3250 1225 50  0001 L CNN "Spice_Primitive"
+F 6 "DI_DMMT3904W" H 3250 1225 50  0001 L CNN "Spice_Model"
+F 7 "Y" H 3250 1225 50  0001 L CNN "Spice_Netlist_Enabled"
+F 8 "3 1 2" H 3250 1225 50  0001 L CNN "Spice_Node_Sequence"
+	1    3050 1150
+	-1   0    0    1   
+$EndComp
+$Comp
+L SMD:MMBT3906 Q2
+U 1 1 61CFB165
+P 3400 1500
+F 0 "Q2" H 3591 1546 50  0000 L CNN
+F 1 "MMBT3906" H 3591 1455 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 3600 1425 50  0001 L CIN
+F 3 "https://www.onsemi.com/pub/Collateral/2N3906-D.PDF" H 3400 1500 50  0001 L CNN
+F 4 "Q" H 3600 1575 50  0001 L CNN "Spice_Primitive"
+F 5 "DI_DMMT3906W" H 3600 1575 50  0001 L CNN "Spice_Model"
+F 6 "Y" H 3600 1575 50  0001 L CNN "Spice_Netlist_Enabled"
+F 7 "3 1 2" H 3600 1575 50  0001 L CNN "Spice_Node_Sequence"
+F 8 "NPN general purpose transistors (SOT-23)" H 3400 1500 50  0001 C CNN "Description"
+	1    3400 1500
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	3650 2050 3300 2050
+Wire Wire Line
+	3300 2100 3300 2050
+Connection ~ 3300 2050
+Wire Wire Line
+	3300 2050 2950 2050
+Wire Wire Line
+	3300 1700 3300 2050
+Wire Wire Line
+	2950 800  2950 950 
+Wire Wire Line
+	2200 800  2950 800 
+Wire Wire Line
+	3300 1300 3300 550 
+Connection ~ 3300 550 
+Wire Wire Line
+	3300 550  3150 550 
+$Comp
+L SMD:R R13
+U 1 1 61D51DC9
+P 3950 1500
+F 0 "R13" V 3743 1500 50  0000 C CNN
+F 1 "100k" V 3834 1500 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 3880 1500 50  0001 C CNN
+F 3 "~" H 3950 1500 50  0001 C CNN
+F 4 "Thick Film Resistors - SMD (0805)" H 3950 1500 50  0001 C CNN "Description"
+	1    3950 1500
+	0    1    1    0   
+$EndComp
+$Comp
+L SMD:R R12
+U 1 1 61D525B6
+P 3950 1150
+F 0 "R12" V 3743 1150 50  0000 C CNN
+F 1 "470k" V 3834 1150 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 3880 1150 50  0001 C CNN
+F 3 "~" H 3950 1150 50  0001 C CNN
+F 4 "Thick Film Resistors - SMD (0805)" H 3950 1150 50  0001 C CNN "Description"
+	1    3950 1150
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2950 1350 2950 2050
+Wire Wire Line
+	3250 1150 3800 1150
+Wire Wire Line
+	3600 1500 3800 1500
+$Comp
+L power:GND #PWR024
+U 1 1 61D612CD
+P 5250 2700
+F 0 "#PWR024" H 5250 2450 50  0001 C CNN
+F 1 "GND" H 5255 2527 50  0000 C CNN
+F 2 "" H 5250 2700 50  0001 C CNN
+F 3 "" H 5250 2700 50  0001 C CNN
+	1    5250 2700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5100 2650 5250 2650
+Wire Wire Line
+	6350 3500 6150 3500
+Wire Wire Line
+	5250 2700 5250 2650
+Connection ~ 5250 2650
+Wire Wire Line
+	5250 2650 6350 2650
+Wire Wire Line
+	4800 2350 5850 2350
+$Comp
+L power:GND #PWR025
+U 1 1 61D72F7A
+P 5500 3650
+F 0 "#PWR025" H 5500 3400 50  0001 C CNN
+F 1 "GND" H 5505 3477 50  0000 C CNN
+F 2 "" H 5500 3650 50  0001 C CNN
+F 3 "" H 5500 3650 50  0001 C CNN
+	1    5500 3650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5550 3600 5500 3600
+Wire Wire Line
+	5500 3600 5500 3650
+Wire Wire Line
+	6350 2650 6350 3500
+Wire Wire Line
+	5550 3400 4350 3400
+Wire Wire Line
+	4350 3400 4350 3300
+Text GLabel 6350 3100 2    50   Input ~ 0
+OUT
+$Comp
+L SMD:C C3
+U 1 1 61D84FF0
+P 4350 3650
+F 0 "C3" H 4465 3696 50  0000 L CNN
+F 1 "0.01u" H 4465 3605 50  0000 L CNN
+F 2 "" H 4388 3500 50  0001 C CNN
+F 3 "~" H 4350 3650 50  0001 C CNN
+F 4 "Multilayer Ceramic Capacitors MLCC (0805)" H 4350 3650 50  0001 C CNN "Description"
+	1    4350 3650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6350 3500 6350 4050
+Wire Wire Line
+	6350 4050 4350 4050
+Wire Wire Line
+	4350 4050 4350 3800
+Wire Wire Line
+	4350 3500 4350 3400
+Connection ~ 6350 3500
+Connection ~ 4350 3400
+$Comp
+L SMD:R R11
+U 1 1 61D88686
+P 3900 3400
+F 0 "R11" V 3693 3400 50  0000 C CNN
+F 1 "33k" V 3784 3400 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 3830 3400 50  0001 C CNN
+F 3 "~" H 3900 3400 50  0001 C CNN
+F 4 "Thick Film Resistors - SMD (0805)" H 3900 3400 50  0001 C CNN "Description"
+	1    3900 3400
+	0    1    1    0   
+$EndComp
+$EndSCHEMATC
