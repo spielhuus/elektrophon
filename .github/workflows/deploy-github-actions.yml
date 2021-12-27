@@ -10,7 +10,7 @@ jobs:
           persist-credentials: false
 
       - name: build notebooks and jekyll page
-        uses: docker://ghcr.io/spielhuus/docker-elektrophon:main
+        uses: docker://ghcr.io/spielhuus/docker-elektrophon:v1.0.1
         env:
           USER_UID: 1001
         with:

@@ -1050,7 +1050,7 @@ F 4 "R" H 1750 1500 50  0001 C CNN "Spice_Primitive"
 F 5 "100k" H 1750 1500 50  0001 C CNN "Spice_Model"
 F 6 "N" H 1750 1500 50  0001 C CNN "Spice_Netlist_Enabled"
 	1    1750 1500
-	1    0    0    -1  
+	1    0    0    1   
 $EndComp
 $Comp
 L power:GND #PWR?
@@ -1145,7 +1145,7 @@ F 4 "R" H 1750 2300 50  0001 C CNN "Spice_Primitive"
 F 5 "100k" H 1750 2300 50  0001 C CNN "Spice_Model"
 F 6 "N" H 1750 2300 50  0001 C CNN "Spice_Netlist_Enabled"
 	1    1750 2300
-	1    0    0    -1  
+	1    0    0    1   
 $EndComp
 $Comp
 L power:GND #PWR?
@@ -1269,7 +1269,7 @@ F 4 "R" H 1750 3100 50  0001 C CNN "Spice_Primitive"
 F 5 "100k" H 1750 3100 50  0001 C CNN "Spice_Model"
 F 6 "N" H 1750 3100 50  0001 C CNN "Spice_Netlist_Enabled"
 	1    1750 3100
-	1    0    0    -1  
+	1    0    0    1   
 $EndComp
 $Comp
 L power:GND #PWR?
@@ -1348,7 +1348,7 @@ F 4 "R" H 1750 3950 50  0001 C CNN "Spice_Primitive"
 F 5 "100k" H 1750 3950 50  0001 C CNN "Spice_Model"
 F 6 "N" H 1750 3950 50  0001 C CNN "Spice_Netlist_Enabled"
 	1    1750 3950
-	1    0    0    -1  
+	1    0    0    1   
 $EndComp
 $Comp
 L power:GND #PWR?
