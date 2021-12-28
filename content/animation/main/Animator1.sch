@@ -1,0 +1,650 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Amplifier_Operational:TL072 U1
+U 1 1 61CAE5DC
+P 3650 2850
+F 0 "U1" H 3650 2483 50  0000 C CNN
+F 1 "TL072" H 3650 2574 50  0000 C CNN
+F 2 "" H 3650 2850 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 3650 2850 50  0001 C CNN
+F 4 "X" H 3650 2850 50  0001 C CNN "Spice_Primitive"
+F 5 "TL072c" H 3650 2850 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 3650 2850 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    3650 2850
+	1    0    0    1   
+$EndComp
+$Comp
+L Amplifier_Operational:TL072 U2
+U 2 1 61CAED3D
+P 5600 2950
+F 0 "U2" H 5600 2583 50  0000 C CNN
+F 1 "TL072" H 5600 2674 50  0000 C CNN
+F 2 "" H 5600 2950 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 5600 2950 50  0001 C CNN
+F 4 "X" H 5600 2950 50  0001 C CNN "Spice_Primitive"
+F 5 "TL072c" H 5600 2950 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 5600 2950 50  0001 C CNN "Spice_Netlist_Enabled"
+	2    5600 2950
+	1    0    0    1   
+$EndComp
+$Comp
+L Amplifier_Operational:TL072 U1
+U 3 1 61CAF3E3
+P 3950 7050
+F 0 "U1" H 3908 7096 50  0000 L CNN
+F 1 "TL072" H 3908 7005 50  0000 L CNN
+F 2 "" H 3950 7050 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 3950 7050 50  0001 C CNN
+F 4 "X" H 3950 7050 50  0001 C CNN "Spice_Primitive"
+F 5 "TL072c" H 3950 7050 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 3950 7050 50  0001 C CNN "Spice_Netlist_Enabled"
+	3    3950 7050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R6
+U 1 1 61CB2E76
+P 4200 2850
+F 0 "R6" V 3993 2850 50  0000 C CNN
+F 1 "150k" V 4084 2850 50  0000 C CNN
+F 2 "" V 4130 2850 50  0001 C CNN
+F 3 "~" H 4200 2850 50  0001 C CNN
+	1    4200 2850
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4750 2850 4950 2850
+Wire Wire Line
+	4950 2850 4950 2250
+Wire Wire Line
+	3300 2250 3300 2750
+Wire Wire Line
+	3300 2750 3350 2750
+Wire Wire Line
+	4450 2850 4350 2850
+Wire Wire Line
+	4050 2850 3950 2850
+$Comp
+L power:GND #PWR020
+U 1 1 61CB940E
+P 5250 3100
+F 0 "#PWR020" H 5250 2850 50  0001 C CNN
+F 1 "GND" H 5255 2927 50  0000 C CNN
+F 2 "" H 5250 3100 50  0001 C CNN
+F 3 "" H 5250 3100 50  0001 C CNN
+	1    5250 3100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5300 3050 5250 3050
+Wire Wire Line
+	5250 3050 5250 3100
+Wire Wire Line
+	5300 2850 5250 2850
+Connection ~ 4950 2850
+$Comp
+L Device:R R10
+U 1 1 61CBA2E0
+P 5600 2250
+F 0 "R10" V 5393 2250 50  0000 C CNN
+F 1 "100k" V 5484 2250 50  0000 C CNN
+F 2 "" V 5530 2250 50  0001 C CNN
+F 3 "~" H 5600 2250 50  0001 C CNN
+	1    5600 2250
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5450 2250 5250 2250
+Wire Wire Line
+	5250 2250 5250 2850
+Connection ~ 5250 2850
+Wire Wire Line
+	5250 2850 4950 2850
+Wire Wire Line
+	5750 2250 6000 2250
+Wire Wire Line
+	6000 2250 6000 2950
+Wire Wire Line
+	6000 2950 5900 2950
+Connection ~ 5250 2250
+$Comp
+L power:+15V #PWR014
+U 1 1 61CD5FFB
+P 3850 6750
+F 0 "#PWR014" H 3850 6600 50  0001 C CNN
+F 1 "+15V" H 3865 6923 50  0000 C CNN
+F 2 "" H 3850 6750 50  0001 C CNN
+F 3 "" H 3850 6750 50  0001 C CNN
+	1    3850 6750
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:-15V #PWR015
+U 1 1 61CD7F08
+P 3850 7350
+F 0 "#PWR015" H 3850 7450 50  0001 C CNN
+F 1 "-15V" H 3865 7523 50  0000 C CNN
+F 2 "" H 3850 7350 50  0001 C CNN
+F 3 "" H 3850 7350 50  0001 C CNN
+	1    3850 7350
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R R3
+U 1 1 61CF3B6A
+P 2950 2750
+F 0 "R3" H 3020 2796 50  0000 L CNN
+F 1 "100k" H 3020 2705 50  0000 L CNN
+F 2 "" V 2880 2750 50  0001 C CNN
+F 3 "~" H 2950 2750 50  0001 C CNN
+	1    2950 2750
+	0    1    1    0   
+$EndComp
+Text GLabel 2800 2750 0    50   Input ~ 0
+LFO1
+Wire Wire Line
+	3100 2750 3300 2750
+Connection ~ 3300 2750
+$Comp
+L Diode:1N4148 D1
+U 1 1 61CB368C
+P 4600 2850
+F 0 "D1" H 4600 2633 50  0000 C CNN
+F 1 "1N4148" H 4600 2724 50  0000 C CNN
+F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 4600 2675 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 4600 2850 50  0001 C CNN
+F 4 "D" H 4600 2850 50  0001 C CNN "Spice_Primitive"
+F 5 "D1N4148" H 4600 2850 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 4600 2850 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "2 1" H 4600 2850 50  0001 C CNN "Spice_Node_Sequence"
+	1    4600 2850
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	3900 2250 3300 2250
+Wire Wire Line
+	4950 2250 4200 2250
+$Comp
+L Device:R R5
+U 1 1 61CB3CF6
+P 4050 2250
+F 0 "R5" V 3843 2250 50  0000 C CNN
+F 1 "100k" V 3934 2250 50  0000 C CNN
+F 2 "" V 3980 2250 50  0001 C CNN
+F 3 "~" H 4050 2250 50  0001 C CNN
+	1    4050 2250
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5250 1900 5250 2250
+Wire Wire Line
+	4200 1900 5250 1900
+$Comp
+L Device:R R4
+U 1 1 61CBB20D
+P 4050 1900
+F 0 "R4" V 3843 1900 50  0000 C CNN
+F 1 "100k" V 3934 1900 50  0000 C CNN
+F 2 "" V 3980 1900 50  0001 C CNN
+F 3 "~" H 4050 1900 50  0001 C CNN
+	1    4050 1900
+	0    1    1    0   
+$EndComp
+Text GLabel 3350 2950 0    50   Input ~ 0
+IN
+Text GLabel 3900 1900 0    50   Input ~ 0
+INV_IN
+Text GLabel 6000 2950 2    50   Input ~ 0
+OUT
+$Comp
+L Connector:Conn_01x05_Male J2
+U 1 1 61CE0975
+P 7700 2550
+F 0 "J2" H 7808 2931 50  0000 C CNN
+F 1 "Conn_01x05_Male" H 7808 2840 50  0000 C CNN
+F 2 "" H 7700 2550 50  0001 C CNN
+F 3 "~" H 7700 2550 50  0001 C CNN
+F 4 "J" H 7700 2550 50  0001 C CNN "Spice_Primitive"
+F 5 "Conn_01x05_Male" H 7700 2550 50  0001 C CNN "Spice_Model"
+F 6 "N" H 7700 2550 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    7700 2550
+	1    0    0    -1  
+$EndComp
+Text GLabel 7900 2450 2    50   Input ~ 0
+INV_IN
+Text GLabel 7900 2550 2    50   Input ~ 0
+IN
+Text GLabel 7900 2650 2    50   Input ~ 0
+LFO1
+Text GLabel 7900 2350 2    50   Input ~ 0
+OUT
+$Comp
+L Amplifier_Operational:TL072 U2
+U 1 1 61CB2B67
+P 3650 4550
+F 0 "U2" H 3650 4183 50  0000 C CNN
+F 1 "TL072" H 3650 4274 50  0000 C CNN
+F 2 "" H 3650 4550 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 3650 4550 50  0001 C CNN
+F 4 "X" H 3650 4550 50  0001 C CNN "Spice_Primitive"
+F 5 "TL072c" H 3650 4550 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 3650 4550 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    3650 4550
+	1    0    0    1   
+$EndComp
+$Comp
+L Amplifier_Operational:TL072 U1
+U 2 1 61CB44A0
+P 4900 4650
+F 0 "U1" H 4900 4283 50  0000 C CNN
+F 1 "TL072" H 4900 4374 50  0000 C CNN
+F 2 "" H 4900 4650 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 4900 4650 50  0001 C CNN
+F 4 "X" H 4900 4650 50  0001 C CNN "Spice_Primitive"
+F 5 "TL072c" H 4900 4650 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 4900 4650 50  0001 C CNN "Spice_Netlist_Enabled"
+	2    4900 4650
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR013
+U 1 1 61CB68B0
+P 3300 4700
+F 0 "#PWR013" H 3300 4450 50  0001 C CNN
+F 1 "GND" H 3305 4527 50  0000 C CNN
+F 2 "" H 3300 4700 50  0001 C CNN
+F 3 "" H 3300 4700 50  0001 C CNN
+	1    3300 4700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3350 4650 3300 4650
+Wire Wire Line
+	3300 4650 3300 4700
+$Comp
+L Device:C C3
+U 1 1 61CBB52F
+P 3650 4000
+F 0 "C3" V 3398 4000 50  0000 C CNN
+F 1 "2.2u" V 3489 4000 50  0000 C CNN
+F 2 "" H 3688 3850 50  0001 C CNN
+F 3 "~" H 3650 4000 50  0001 C CNN
+	1    3650 4000
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3800 4000 4050 4000
+Wire Wire Line
+	4050 4000 4050 4550
+Wire Wire Line
+	4050 4550 3950 4550
+Wire Wire Line
+	3350 4450 3300 4450
+Wire Wire Line
+	3300 4450 3300 4000
+Wire Wire Line
+	3300 4000 3500 4000
+$Comp
+L Device:R R7
+U 1 1 61CBEB3A
+P 4300 4550
+F 0 "R7" V 4093 4550 50  0000 C CNN
+F 1 "47k" V 4184 4550 50  0000 C CNN
+F 2 "" V 4230 4550 50  0001 C CNN
+F 3 "~" H 4300 4550 50  0001 C CNN
+	1    4300 4550
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R8
+U 1 1 61CC3733
+P 4900 4000
+F 0 "R8" V 4693 4000 50  0000 C CNN
+F 1 "47k" V 4784 4000 50  0000 C CNN
+F 2 "" V 4830 4000 50  0001 C CNN
+F 3 "~" H 4900 4000 50  0001 C CNN
+	1    4900 4000
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4750 4000 4550 4000
+Wire Wire Line
+	4550 4000 4550 4550
+Wire Wire Line
+	4550 4550 4600 4550
+Wire Wire Line
+	4550 4550 4450 4550
+Wire Wire Line
+	4150 4550 4050 4550
+Connection ~ 4550 4550
+Connection ~ 4050 4550
+$Comp
+L power:GND #PWR018
+U 1 1 61CC639F
+P 4550 4800
+F 0 "#PWR018" H 4550 4550 50  0001 C CNN
+F 1 "GND" H 4555 4627 50  0000 C CNN
+F 2 "" H 4550 4800 50  0001 C CNN
+F 3 "" H 4550 4800 50  0001 C CNN
+	1    4550 4800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4600 4750 4550 4750
+Wire Wire Line
+	4550 4750 4550 4800
+Wire Wire Line
+	5050 4000 5250 4000
+Wire Wire Line
+	5250 4000 5250 4650
+Wire Wire Line
+	5250 4650 5200 4650
+$Comp
+L THT:R_POT RV1
+U 1 1 61CD95C7
+P 4300 3600
+F 0 "RV1" V 4093 3600 50  0000 C CNN
+F 1 "1M" V 4184 3600 50  0000 C CNN
+F 2 "" H 4300 3600 50  0001 C CNN
+F 3 "~" H 4300 3600 50  0001 C CNN
+F 4 "Alpha 9 mm Pots – Vertical" H 4300 3600 50  0001 C CNN "Description"
+F 5 "X" H 4300 3600 50  0001 C CNN "Spice_Primitive"
+F 6 "POT_1" H 4300 3600 50  0001 C CNN "Spice_Model"
+F 7 "Y" H 4300 3600 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    4300 3600
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4450 3600 4500 3600
+Wire Wire Line
+	5250 3600 5250 4000
+Connection ~ 5250 4000
+Wire Wire Line
+	4150 3600 3300 3600
+Wire Wire Line
+	3300 3600 3300 4000
+Connection ~ 3300 4000
+Wire Wire Line
+	4300 3750 4500 3750
+Wire Wire Line
+	4500 3750 4500 3600
+Connection ~ 4500 3600
+Wire Wire Line
+	4500 3600 5250 3600
+Text GLabel 5250 5900 2    50   Input ~ 0
+LFO1
+$Comp
+L Amplifier_Operational:TL072 U2
+U 3 1 61CE58B4
+P 4600 7050
+F 0 "U2" H 4558 7096 50  0000 L CNN
+F 1 "TL072" H 4558 7005 50  0000 L CNN
+F 2 "" H 4600 7050 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 4600 7050 50  0001 C CNN
+F 4 "X" H 4600 7050 50  0001 C CNN "Spice_Primitive"
+F 5 "TL072c" H 4600 7050 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 4600 7050 50  0001 C CNN "Spice_Netlist_Enabled"
+	3    4600 7050
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+15V #PWR016
+U 1 1 61CE58BA
+P 4500 6750
+F 0 "#PWR016" H 4500 6600 50  0001 C CNN
+F 1 "+15V" H 4515 6923 50  0000 C CNN
+F 2 "" H 4500 6750 50  0001 C CNN
+F 3 "" H 4500 6750 50  0001 C CNN
+	1    4500 6750
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:-15V #PWR017
+U 1 1 61CE58C0
+P 4500 7350
+F 0 "#PWR017" H 4500 7450 50  0001 C CNN
+F 1 "-15V" H 4515 7523 50  0000 C CNN
+F 2 "" H 4500 7350 50  0001 C CNN
+F 3 "" H 4500 7350 50  0001 C CNN
+	1    4500 7350
+	-1   0    0    1   
+$EndComp
+$Comp
+L Amplifier_Operational:TL072 U3
+U 1 1 61CEDA88
+P 4850 5900
+F 0 "U3" H 4850 5533 50  0000 C CNN
+F 1 "TL072" H 4850 5624 50  0000 C CNN
+F 2 "" H 4850 5900 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 4850 5900 50  0001 C CNN
+F 4 "X" H 4850 5900 50  0001 C CNN "Spice_Primitive"
+F 5 "TL072c" H 4850 5900 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 4850 5900 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    4850 5900
+	1    0    0    1   
+$EndComp
+$Comp
+L Amplifier_Operational:TL072 U3
+U 2 1 61CEFC29
+P 5900 5850
+F 0 "U3" H 5900 5483 50  0000 C CNN
+F 1 "TL072" H 5900 5574 50  0000 C CNN
+F 2 "" H 5900 5850 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 5900 5850 50  0001 C CNN
+F 4 "X" H 5900 5850 50  0001 C CNN "Spice_Primitive"
+F 5 "TL072c" H 5900 5850 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 5900 5850 50  0001 C CNN "Spice_Netlist_Enabled"
+	2    5900 5850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Amplifier_Operational:TL072 U3
+U 3 1 61CFA94C
+P 5200 7050
+F 0 "U3" H 5158 7096 50  0000 L CNN
+F 1 "TL072" H 5158 7005 50  0000 L CNN
+F 2 "" H 5200 7050 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 5200 7050 50  0001 C CNN
+F 4 "X" H 5200 7050 50  0001 C CNN "Spice_Primitive"
+F 5 "TL072c" H 5200 7050 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 5200 7050 50  0001 C CNN "Spice_Netlist_Enabled"
+	3    5200 7050
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+15V #PWR025
+U 1 1 61CFA952
+P 5100 6750
+F 0 "#PWR025" H 5100 6600 50  0001 C CNN
+F 1 "+15V" H 5115 6923 50  0000 C CNN
+F 2 "" H 5100 6750 50  0001 C CNN
+F 3 "" H 5100 6750 50  0001 C CNN
+	1    5100 6750
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:-15V #PWR026
+U 1 1 61CFA958
+P 5100 7350
+F 0 "#PWR026" H 5100 7450 50  0001 C CNN
+F 1 "-15V" H 5115 7523 50  0000 C CNN
+F 2 "" H 5100 7350 50  0001 C CNN
+F 3 "" H 5100 7350 50  0001 C CNN
+	1    5100 7350
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R R14
+U 1 1 61D0C2DD
+P 4850 5400
+F 0 "R14" V 4643 5400 50  0000 C CNN
+F 1 "15k" V 4734 5400 50  0000 C CNN
+F 2 "" V 4780 5400 50  0001 C CNN
+F 3 "~" H 4850 5400 50  0001 C CNN
+	1    4850 5400
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R12
+U 1 1 61D0CFBA
+P 4200 5400
+F 0 "R12" V 3993 5400 50  0000 C CNN
+F 1 "1.5k" V 4084 5400 50  0000 C CNN
+F 2 "" V 4130 5400 50  0001 C CNN
+F 3 "~" H 4200 5400 50  0001 C CNN
+	1    4200 5400
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR022
+U 1 1 61D0E935
+P 4000 5450
+F 0 "#PWR022" H 4000 5200 50  0001 C CNN
+F 1 "GND" H 4005 5277 50  0000 C CNN
+F 2 "" H 4000 5450 50  0001 C CNN
+F 3 "" H 4000 5450 50  0001 C CNN
+	1    4000 5450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5150 5900 5200 5900
+Wire Wire Line
+	5200 5900 5200 5400
+Wire Wire Line
+	5200 5400 5000 5400
+Wire Wire Line
+	4000 5400 4000 5450
+Wire Wire Line
+	4700 5400 4450 5400
+Wire Wire Line
+	4050 5400 4000 5400
+Wire Wire Line
+	5250 5900 5200 5900
+Connection ~ 5200 5900
+Wire Wire Line
+	4550 5800 4450 5800
+Wire Wire Line
+	4450 5800 4450 5400
+Connection ~ 4450 5400
+Wire Wire Line
+	4450 5400 4350 5400
+$Comp
+L Device:R R13
+U 1 1 61D16771
+P 4450 6250
+F 0 "R13" V 4243 6250 50  0000 C CNN
+F 1 "22k" V 4334 6250 50  0000 C CNN
+F 2 "" V 4380 6250 50  0001 C CNN
+F 3 "~" H 4450 6250 50  0001 C CNN
+	1    4450 6250
+	-1   0    0    1   
+$EndComp
+$Comp
+L Diode:1N4148 D3
+U 1 1 61D18109
+P 4150 6250
+F 0 "D3" H 4150 6033 50  0000 C CNN
+F 1 "1N4148" H 4150 6124 50  0000 C CNN
+F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 4150 6075 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 4150 6250 50  0001 C CNN
+F 4 "D" H 4150 6250 50  0001 C CNN "Spice_Primitive"
+F 5 "D1N4148" H 4150 6250 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 4150 6250 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "2 1" H 4150 6250 50  0001 C CNN "Spice_Node_Sequence"
+	1    4150 6250
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Diode:1N4148 D2
+U 1 1 61D1A356
+P 3950 6250
+F 0 "D2" H 3950 6033 50  0000 C CNN
+F 1 "1N4148" H 3950 6124 50  0000 C CNN
+F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 3950 6075 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 3950 6250 50  0001 C CNN
+F 4 "D" H 3950 6250 50  0001 C CNN "Spice_Primitive"
+F 5 "D1N4148" H 3950 6250 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 3950 6250 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "2 1" H 3950 6250 50  0001 C CNN "Spice_Node_Sequence"
+	1    3950 6250
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4550 6000 4450 6000
+Wire Wire Line
+	3950 6000 3950 5950
+Connection ~ 3950 4550
+Wire Wire Line
+	3950 6100 3950 6000
+Connection ~ 3950 6000
+Wire Wire Line
+	4150 6100 4150 6000
+Connection ~ 4150 6000
+Wire Wire Line
+	4150 6000 3950 6000
+Wire Wire Line
+	4450 6100 4450 6000
+Connection ~ 4450 6000
+Wire Wire Line
+	4450 6000 4150 6000
+$Comp
+L power:GND #PWR021
+U 1 1 61D2F7A8
+P 3950 6400
+F 0 "#PWR021" H 3950 6150 50  0001 C CNN
+F 1 "GND" H 3955 6227 50  0000 C CNN
+F 2 "" H 3950 6400 50  0001 C CNN
+F 3 "" H 3950 6400 50  0001 C CNN
+	1    3950 6400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR023
+U 1 1 61D30160
+P 4150 6400
+F 0 "#PWR023" H 4150 6150 50  0001 C CNN
+F 1 "GND" H 4155 6227 50  0000 C CNN
+F 2 "" H 4150 6400 50  0001 C CNN
+F 3 "" H 4150 6400 50  0001 C CNN
+	1    4150 6400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR024
+U 1 1 61D30A30
+P 4500 6400
+F 0 "#PWR024" H 4500 6150 50  0001 C CNN
+F 1 "GND" H 4505 6227 50  0000 C CNN
+F 2 "" H 4500 6400 50  0001 C CNN
+F 3 "" H 4500 6400 50  0001 C CNN
+	1    4500 6400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R11
+U 1 1 61D32FD9
+P 3950 5800
+F 0 "R11" V 3743 5800 50  0000 C CNN
+F 1 "150k" V 3834 5800 50  0000 C CNN
+F 2 "" V 3880 5800 50  0001 C CNN
+F 3 "~" H 3950 5800 50  0001 C CNN
+	1    3950 5800
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	3950 5650 3950 4550
+$EndSCHEMATC

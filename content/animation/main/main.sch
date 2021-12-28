@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 1
+Sheet 1 3
 Title "(title)"
 Date ""
 Rev "R01"
@@ -340,4 +340,16 @@ F 3 "~" H 10400 6300 50  0001 C CNN
 	1    10400 6300
 	1    0    0    -1  
 $EndComp
+$Sheet
+S 2550 2150 1050 300 
+U 61CAD9FD
+F0 "LFO1" 50
+F1 "LFO1.sch" 50
+$EndSheet
+$Sheet
+S 3950 2150 1300 300 
+U 61CADCBB
+F0 "Sheet61CADCBA" 50
+F1 "Animator1.sch" 50
+$EndSheet
 $EndSCHEMATC

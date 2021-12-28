@@ -1,0 +1,10 @@
+.title KiCad schematic
+XU1 Net-_R5-Pad2_ Net-_R4-Pad2_ IN -15V GND Net-_D1-Pad1_ OUT +15V TL072c
+R5 Net-_D1-Pad2_ Net-_R5-Pad2_ 140k
+R6 OUT Net-_D1-Pad1_ 100k
+R9 Net-_R4-Pad2_ LFO1 100k
+D1 Net-_D1-Pad2_ Net-_D1-Pad1_ D1N4148
+R4 Net-_D1-Pad1_ Net-_R4-Pad2_ 100k
+R1 -15V Net-_D1-Pad1_ 300k
+R3 Net-_D1-Pad1_ INV_IN 100k
+.end
