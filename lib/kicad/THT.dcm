@@ -1,5 +1,17 @@
 EESchema-DOCLIB  Version 2.0
 #
+$CMP BC639
+D 100mA Ic, 50V Vce, Epitaxial Silicon NPN Transistor, TO-92
+K Epitaxial Silicon NPN Transistor
+F https://www.onsemi.com/pdf/datasheet/bc637-d.pdf
+$ENDCMP
+#
+$CMP BC640
+D 0.1A Ic, 45V Vce, PNP Small Signal Transistor, TO-92
+K PNP Transistor
+F https://www.onsemi.com/pdf/datasheet/bc640-d.pdf
+$ENDCMP
+#
 $CMP R_POT
 D Potentiometer
 K resistor variable

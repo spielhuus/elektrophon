@@ -1367,28 +1367,6 @@ NoConn ~ 9950 5500
 Text GLabel 9950 5300 0    50   Input ~ 0
 OUT
 $Comp
-L Transistor_BJT:BC240 Q1
-U 1 1 61C4FFD9
-P 9200 -4300
-F 0 "Q1" H 9391 -4254 50  0000 L CNN
-F 1 "BC639" H 9391 -4345 50  0000 L CNN
-F 2 "Package_TO_SOT_THT:TO-92_Inline" H 9400 -4375 50  0001 L CIN
-F 3 "https://www.onsemi.com/pub/Collateral/BF420-D.PDF" H 9200 -4300 50  0001 L CNN
-	1    9200 -4300
-	1    0    0    -1  
-$EndComp
-$Comp
-L Transistor_BJT:BC307 Q2
-U 1 1 61C51807
-P 9200 -2900
-F 0 "Q2" H 9391 -2946 50  0000 L CNN
-F 1 "BC640" H 9391 -2855 50  0000 L CNN
-F 2 "Package_TO_SOT_THT:TO-92_Inline" H 9400 -2975 50  0001 L CIN
-F 3 "http://www.onsemi.com/pub_link/Collateral/BC307-D.PDF" H 9200 -2900 50  0001 L CNN
-	1    9200 -2900
-	1    0    0    1   
-$EndComp
-$Comp
 L Device:R R32
 U 1 1 61C5671E
 P 9300 -3850
@@ -2034,4 +2012,26 @@ $EndComp
 Connection ~ 450  -3900
 Wire Wire Line
 	450  -3900 450  -3800
+$Comp
+L THT:BC639 Q1
+U 1 1 61CFB52B
+P 9200 -4300
+F 0 "Q1" H 9391 -4254 50  0000 L CNN
+F 1 "BC639" H 9391 -4345 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline_Wide" H 9400 -4375 50  0001 L CIN
+F 3 "https://www.onsemi.com/pdf/datasheet/bc637-d.pdf" H 9200 -4300 50  0001 L CNN
+	1    9200 -4300
+	1    0    0    -1  
+$EndComp
+$Comp
+L THT:BC640 Q2
+U 1 1 61D00A61
+P 9200 -2900
+F 0 "Q2" H 9391 -2946 50  0000 L CNN
+F 1 "BC640" H 9391 -2855 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline_Wide" H 9400 -2975 50  0001 L CIN
+F 3 "https://www.onsemi.com/pdf/datasheet/bc640-d.pdf" H 9200 -2900 50  0001 L CNN
+	1    9200 -2900
+	1    0    0    1   
+$EndComp
 $EndSCHEMATC
