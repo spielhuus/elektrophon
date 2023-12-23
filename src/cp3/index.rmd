@@ -1,0 +1,90 @@
+---
+author: "spielhuus"
+categories:
+- module
+date: 2023-07-24
+excerpt: "The Moog cp3 passive mixer is an interesting thing. At the first look everything is done wrong. There is this passive input mixer which will let the inputs crosstalk and then this uneven power rails. But this mixer will create a lot of distortion and add harmonics to the sound. It is said that this mixer creates the full sound of the Moog synthesizer."
+subtitle: "Moog alike discrete cp3 mixer"
+tags:
+- mixer
+title: cp3
+version: 0
+draft: True
+references: 
+  - { description: "Exploring the Moog CP3-Type Mixer",
+      title: "Learning Modular",
+      url: "https://learningmodular.com/exploring-the-moog-cp3-type-mixer/" }
+```{elektron, command="bom", input=["main"], group=TRUE, partlist="../../lib/partlist.yaml"}```
+```{elektron, command="erc", input=["main"]}```
+```{elektron, command="schema", input=["main"], border=TRUE}```
+```{elektron, command="pcb", input=["main", "panel"] layers=["F_Cu", "B_Cu", "F_Mask", "B_Mask"]}```
+```{elektron, command="drc", input=["main", "panel"]}```
+```{elektron, command="gerber", input=["main", "panel"]}```
+---
+
+# Construction
+
+```{python echo=FALSE results="hide" fig.align='center' fig.cap='Figure 1: the mixer'}
+import sys
+sys.path.append("..")
+
+from elektron import Circuit, Draw, Element, Label, Line, Dot, Simulation
+from cp3 import *
+
+draw = Draw(["/usr/share/kicad/symbols", "../../lib/symbols"])
+mixer(draw)
+
+draw.plot(scale=6, netlist=False, theme='BlackWhite')
+
+
+draw + Element("Q1", "elektrophon:THAT340", unit=5, value="340",
+                   Spice_Netlist_Enabled="Y",
+                   Spice_Primitive="X",
+                   Spice_Model="THAT340").at((40*2.54, 27*2.54))
+draw + Nc().at("Q1", "4")
+draw + Nc().at("Q1", "11")
+
+circuit = draw.circuit(["../../lib/spice"])
+circuit.voltage("1", "+12V", "GND", "DC 12V")
+circuit.voltage("2", "-6V", "GND", "DC -6V")
+circuit.voltage("3", "IN_1", "GND", "AC 5V SIN(0 2V 800)")
+circuit.control('''
+alterparam potentiometer value = 100
+alterparam potentiometer set = 0.3
+mc_source
+
+let r_act = 1V
+let r_step = 0.01V
+let r_stop = 5V
+while r_act le r_stop
+  alter @V3[sin]  [ 0 $&r_act 800 ]
+  tran 8us 4ms
+  linearize
+  let r_act = r_act + r_step
+end
+''')
+
+simulation = Simulation(circuit)
+mixer = simulation.run()
+```
+
+The circuit is so simple that not even a block diagram is necessary. The circuit is a long-tailed pair using compound (Sziklai) pairs.  
+The Resistor R15 sets the gain. With 22k the gain is one and the mixer will not distort. With +15V the best result will be with xxk.
+
+```{d3 element="filter", x="time", yRange="in_1,out_a,out_b", data="mixer.tran", width="800", height="600"}```
+
+# build
+
+{{< bom >}}
+
+{{< callout cp3 main >}}
+
+{{< report mp3 main >}}
+
+# calibration
+
+The calibration is very much up to your taste. Start with a normal signal in audio range and adjust RV3 until the compress LED start to glow. Now you can control the loudness with RV4. Apply an envelope to your audio signal and turn the mix pot fully clockwise. Then adjust the two potentiometers to your taste.
+
+# issues
+
+* Output potentiometer

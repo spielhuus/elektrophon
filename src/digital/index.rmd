@@ -1,0 +1,416 @@
+---
+author: "spielhuus"
+categories:
+- module
+date: 2021-07-01
+excerpt: ""
+description: ""
+subtitle: "digitaly controlled oscilator."
+tags:
+- grundlage
+title: digital
+version: 0
+references: 
+  - { description: "The Design of the Roland Juno oscillators.",
+      title: "thea.codes", 
+      url: "https://blog.thea.codes/the-design-of-the-juno-dco/" }
+  - { description: "Arduino controlled oscillator",
+      title: "electro-music.com",
+      url: "https://electro-music.com/forum/topic-69558.html&postorder=asc" }
+  - { description: "MIDI-controlled-oscillator",
+      title: "electro-music",
+      url: "https://github.com/petegaggs/MIDI-controlled-oscillator" } 
+  - { description: "NGF-E Waveshaper",
+      title: "haraldswerk",
+      url: "https://www.haraldswerk.de/NGF_E/NGF_E_Shape/NGF_E_Shape.html" }
+  - { description: "Op Amp Differential Amplifier",
+      title: "eCircuit",
+      url: "http://www.ecircuitcenter.com/Circuits/opdif/opdif.htm" }
+  - { description: "MCP4802/4812/4822 CODEC datasheet.",
+      title: "MCP48xx",
+      url: "https://ww1.microchip.com/downloads/en/DeviceDoc/20002249B.pdf" }
+  - { description: "Polyphonic Digitally Controlled Oscillator (DCO) controlled by Raspberry Pi Pico PIO",
+      title: "Pico-DCO",
+      url: "https://github.com/polykit/pico-dco" }
+```{elektron, command="bom", input=["main"], group=TRUE, partlist="../../lib/partlist.yaml"}```
+```{elektron, command="erc", input=["main"]}```
+```{elektron, command="schema", input=["main", "mount"], border=TRUE, theme="Kicad2000"}```
+---
+
+# Construction
+
+The heart of the VCO os a sawtooth oszillator. This type of oscillator is built with an integrator followed by a schmitt trigger. When the ramp has reached a certain threshold the schmitt trigger will flip and discharge the capacitor. In this DCO design the schmitt trigger is replaced with a digital timer that send a pulse to the integrator.
+
+```{python echo=FALSE, results="hide", fig.align='center', fig.cap='digital logic'}
+from elektron import Circuit, Draw, Element, Label, Line, Dot, Simulation
+
+import sys
+sys.path.append("..")
+sys.path.append("../../lib/python")
+
+from digital import integrator, triangle
+from elektrophon import decouple_tl072
+
+draw = Draw(["/usr/share/kicad/symbols", "../../lib/symbols"])
+integrator(draw)
+draw.plot(scale=6, theme='BlackWhite')
+
+
+draw + Element("U2", "Amplifier_Operational:TL072", value="TL072", unit=2, Spice_Primitive="X", Spice_Model="TL072c", on_schema="no").at((80.0, 100.0))
+decouple_tl072(draw, "U1", ((100.0, 100.0)), 'no')
+decouple_tl072(draw, "U2", ((120.0, 100.0)), 'no')
+
+circuit = draw.circuit(["../../lib/spice"])
+circuit.voltage("1", "+15V", "GND", "DC 15V")
+circuit.voltage("2", "-15V", "GND", "DC -15V")
+circuit.voltage("3", "CV", "GND", "DC 0.594000V")
+circuit.voltage("4", "PULSE", "GND", "5V PULSE(10 -10V 0 0 0 0.5ms 1ms)")
+circuit.voltage("5", "Vref", "GND", "-1V")
+circuit.voltage("6", "vBias", "GND", "DC 5.5V")
+circuit.control('''
+alterparam potentiometer1 set = 0.58
+alterparam potentiometer1 value = 100k
+alterparam potentiometer2 set = 0.5
+alterparam potentiometer2 value = 50k
+mc_source
+tran 20us 6ms 2ms
+''')
+
+simulation = Simulation(circuit)
+digital = simulation.run()
+
+for key, value in digital.items():
+  if key.startswith("tran"):
+    for k, v in value.items():
+      if k == "frequency":
+        filter[key][k] = v
+```
+
+```{d3 element="integrator", x="time", y="pulse,saw", data="digital.tran1", width="600", height="400"}```
+
+The blue signal is the output of the integrator. The red one the amplified one. The timer can be changed with the slides. With the original design the CV input controls the frequency. This means that the capacitor is charged until it has a defined voltage. with the digital input the capacitor will only be charged partialy. The CV voltage has to be adjusted to have the same voltage for all notes.
+
+# Waveshapers
+
+## Triangle and Sine
+
+```{python echo=FALSE, results="hide", fig.align='center', fig.cap='digital logic'}
+from elektron import Circuit, Draw, Element, Label, Line, Dot, Simulation
+from digital import triangle
+
+draw = Draw(["/usr/share/kicad/symbols", "../../lib/symbols"])
+draw = triangle(draw)
+draw.plot(scale=6, theme='BlackWhite', netlist=True)
+
+draw + Element("U2", "Amplifier_Operational:TL072", value="TL072", unit=2, Spice_Primitive="X", Spice_Model="TL072c", on_schema="no").at((80.0, 100.0))
+decouple_tl072(draw, "U1", ((100.0, 100.0)), 'true')
+decouple_tl072(draw, "U2", ((120.0, 100.0)), 'true')
+
+circuit = draw.circuit(["../../lib/spice"])
+circuit.voltage("1", "+15V", "GND", "DC 15V")
+circuit.voltage("2", "-15V", "GND", "DC -15V")
+circuit.voltage("3", "vBias", "GND", "DC 5.5V")
+circuit.voltage("4", "SAW", "GND", "5V PULSE(-5, 5, 0, 0ms, 2ms, 0.0001n, 2ms 0)")
+circuit.control('''
+alterparam potentiometer1 set = 0.58
+alterparam potentiometer1 value = 100k
+alterparam potentiometer2 set = 0.5
+alterparam potentiometer2 value = 100k
+
+alter R2 100k
+alter R3 50k
+alter R6 100k
+
+*let v_act = 90k
+*let v_step = 0.1k
+*let v_stop = 110k
+*while v_act le v_stop
+*  alter R5 v_act
+*  tran 30us 10ms
+*  let v_act = v_act + v_step
+*end
+
+mc_source
+tran 30us 10ms
+''')
+
+simulation = Simulation(circuit)
+triangle = simulation.run()
+```
+
+```{python echo=FALSE, results="nohide", fig.align='center', fig.cap='digital logic'}
+print(f"Saw max: {max(triangle['tran1']['saw'])}, min: {min(triangle['tran1']['saw'])}")
+print(f"Triangle max: {max(triangle['tran1']['triangle'])}, min: {min(triangle['tran1']['triangle'])}")
+print(f"Sine max: {max(triangle['tran1']['sine'])}, min: {min(triangle['tran1']['sine'])}")
+```
+
+```{d3 element="triangle", x="time", y="saw,triangle,sine,V(3)", data="triangle.tran1", width="600", height="400"}```
+
+## pulse
+
+# build
+
+{{< bom >}}
+
+{{< callout digital main mount >}}
+
+{{< report digital main >}}
+
+
+# flash firmware
+
+cd src/digital/firmware
+make
+st-flash --reset write build/oszi.bin 0x08000000
+
+
+# Old Content
+
+```python
+dac = 2.048 * 1 * (2048 / ( 2 ** 12) ) 
+print( dac )
+```
+
+
+```python
+dac = 1.024 / (2048 / ( 2 ** 12) ) 
+print( dac )
+```
+
+```{python echo="FALSE"}
+import numpy as np
+
+notes = [ 
+    'C', 'C#/Db ', 'D', 'D#/Eb ', 'E', 'F', 'F#/Gb ', 'G', 'G#/Ab', 'A', 'A#/Bb ', 'B', 
+    'C', 'C#/Db ', 'D', 'D#/Eb ', 'E', 'F', 'F#/Gb ', 'G', 'G#/Ab', 'A', 'A#/Bb ', 'B', 
+    'C', 'C#/Db ', 'D', 'D#/Eb ', 'E', 'F', 'F#/Gb ', 'G', 'G#/Ab', 'A', 'A#/Bb ', 'B', 
+    'C', 'C#/Db ', 'D', 'D#/Eb ', 'E', 'F', 'F#/Gb ', 'G', 'G#/Ab', 'A', 'A#/Bb ', 'B', 
+    'C', 'C#/Db ', 'D', 'D#/Eb ', 'E', 'F', 'F#/Gb ', 'G', 'G#/Ab', 'A', 'A#/Bb ', 'B', 
+    'C', 'C#/Db ', 'D', 'D#/Eb ', 'E', 'F', 'F#/Gb ', 'G', 'G#/Ab', 'A', 'A#/Bb ', 'B', 
+    'C', 'C#/Db ', 'D', 'D#/Eb ', 'E', 'F', 'F#/Gb ', 'G', 'G#/Ab', 'A', 'A#/Bb ', 'B', 
+    'C', 'C#/Db ', 'D', 'D#/Eb ', 'E', 'F', 'F#/Gb ', 'G', 'G#/Ab', 'A', 'A#/Bb ', 'B', 
+    'C', 'C#/Db ', 'D', 'D#/Eb ', 'E', 'F', 'F#/Gb ', 'G', 'G#/Ab', 'A', 'A#/Bb ', 'B', 
+    'C', 'C#/Db ', 'D', 'D#/Eb ', 'E', 'F', 'F#/Gb ', 'G', 'G#/Ab', 'A', 'A#/Bb ', 'B', 
+    'C', 'C#/Db ', 'D', 'D#/Eb ', 'E', 'F', 'F#/Gb ', 'G', 'G#/Ab', 'A', 'A#/Bb ', 'B'
+]
+
+octaves = [
+    '-5', '-5 ', '-5', '-5 ', '-5', '-5', '-5 ', '-5', '-5', '-5', '-5 ', '-5', 
+    '-4', '-4 ', '-4', '-4 ', '-4', '-4', '-4 ', '-4', '-4', '-4', '-4 ', '-4', 
+    '-3', '-3 ', '-3', '-3 ', '-3', '-3', '-3 ', '-3', '-3', '-3', '-3 ', '-3', 
+    '-2', '-2 ', '-2', '-2 ', '-2', '-2', '-2 ', '-2', '-2', '-2', '-2 ', '-2', 
+    '-1', '-1 ', '-1', '-1 ', '-1', '-1', '-1 ', '-1', '-1', '-1', '-1 ', '-1', 
+    '0', '0 ', '0', '0 ', '0', '0', '0 ', '0', '0', '0', '0 ', '0', 
+    '1', '1 ', '1', '1 ', '1', '1', '1 ', '1', '1', '1', '1 ', '1', 
+    '2', '2 ', '2', '2 ', '2', '2', '2 ', '2', '2', '2', '2 ', '2', 
+    '3', '3 ', '3', '3 ', '3', '3', '3', '3', '3', '3', '3 ', '3', 
+    '4', '4 ', '4', '4 ', '4', '4', '4 ', '4', '4', '4', '4 ', '4', 
+    '5', '5 ', '5', '5 ', '5', '5', '5 ', '5', '5', '5', '5 ', '5'
+]
+
+def calculate_dac(voltage) :
+    _dac_v_low = 2.048
+    _dac_v_high =  4.096
+    result = []
+    if voltage < _dac_v_low :
+        result.append(0)
+        result.append(0)
+        result.append(0) 
+        dac1_value = voltage / (_dac_v_low / 4095)
+        result.append(dac1_value)
+        result.append(0)
+        result.append((_dac_v_low / 4095 * dac1_value))
+
+    elif voltage <= _dac_v_high :
+        result.append(0)
+        result.append(_dac_v_low)
+        result.append(0) 
+        dac1_value = (voltage - _dac_v_low) / (_dac_v_low / 4095)
+        result.append(4095)
+        result.append(_dac_v_low)
+        result.append((_dac_v_low / 4095 * dac1_value))
+
+    elif voltage <= _dac_v_high + _dac_v_low :
+        result.append(1)
+        result.append(_dac_v_high)
+        result.append(0) 
+        dac1_value = (voltage - _dac_v_high) / (_dac_v_low / 4095)
+        result.append(4095)
+        result.append(_dac_v_high)
+        result.append((_dac_v_low / 4095 * dac1_value))
+
+    else :
+        result.append(1)
+        result.append(_dac_v_high)
+        result.append(1) 
+        dac1_value = (voltage - _dac_v_high) / (_dac_v_high / 4095)
+        result.append(4095)
+        result.append(_dac_v_high)
+        result.append((_dac_v_high / 4095 * dac1_value))
+        
+    return result
+
+a = 440
+v_step = 1 / 12
+
+
+
+
+table = '''
+|Midi Note|Octave>|Note|Frequency [Hz]|CV [V]|time [ms]|Scaling|Final Frequency [Hz]|Deviation [%]|DAC [V]| DAC1 Gain | DAC2 Gain | DAC1 value| DAC2 value | DAC1 [V] | DAC2 [V] | DAC1 real [V] | DAC2 real|
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+'''
+
+cpu_freq = 48000000
+prescaler = 48 * 2
+timer_freq = cpu_freq / prescaler
+R = 270000
+#C = 1@u_nF
+C = 1e-9
+V = 2.5
+
+for s in np.arange(0, 128) :
+    
+    _freq = a * 2 ** ((s-69) / 12 )
+    _time = 1 / _freq
+    _scaling = timer_freq / _freq
+    _round_scaling = int(_scaling)
+    _real_freq = timer_freq/_round_scaling
+    _deviation = _freq / _real_freq * 100
+    #voltage = (float(val)/4096) * 3.3
+    voltage = R * C * V / _time
+        
+    dac = voltage / (5/4095) 
+
+    table += '|'
+    table += '%s|' % s
+    table += '%s|' % octaves[s]
+    table += '%s|' % notes[s]
+    table += '%.2f|' % _freq
+    table += '%.2f|' % ((s-69) * v_step)
+    table += '%.4f|' % (_time*1000)
+    table += '%d (%.2f)|' % ( _round_scaling, _scaling )
+    table += '%.2f|' % _real_freq
+    table += '%.4f|' % (100-_deviation)
+    table += '%f|' % voltage
+    
+    result = calculate_dac(voltage)
+    table += '%d|' % result[0]
+    table += '%d|' % result[2]
+    table += '%d|'  % result[1]
+    table += '%d|' % result[3]
+    table += '%.4f|' % result[4]
+    table += '%.4f|' % result[5]
+    table += '%.4f|' % (result[4] + result[5])
+    table += '%.2f|\n' % ( (result[4] + result[5]) / voltage * 100)
+```
+
+<div class="card">
+  <header class="card-header">
+    <p class="card-header-title">
+      Table with values for all notes.
+    </p>
+    <button class="card-header-icon" aria-label="more options">
+      <span class="icon">
+        <i class="fas fa-angle-down" aria-hidden="true"></i>
+      </span>
+    </button>
+  </header>
+  <div class="card-content">
+    <div class="content">
+{{<table "table table-striped table-bordered is-narrow">}}
+${table}
+{{</table>}}
+    </div>
+  </div>
+
+</div>
+
+
+```python
+for i in np.arange( 0, 9, 1) :
+    print( -33000 * ( (i/100000 ) + (-10/100000) ) )
+```
+
+
+```python
+print( 3.3 / 4096)
+print( 0.0833 / 3)
+```
+
+
+```python
+old_val = 0
+for i in np.arange( 0, 0.9167, 0.0833 ) :
+    val = -33000 * ( (i/100000 ) + (-10/100000) );
+    print( "CV: %f -> %f " % (val, val-old_val) )
+    old_val = val
+                   
+```
+
+
+```python
+circuit = Circuit('cv buffer')
+circuit.include(spice_library['TL072'])
+
+circuit.V('1', '+3.3V', circuit.gnd, 'DC 3.3')
+circuit.V('2', '-15V', circuit.gnd, 'DC -15')
+circuit.V('3', 'vCharge', circuit.gnd, 'DC 0.594000V')
+circuit.V('5', 'vPulse', circuit.gnd, 'DC 0 PULSE ( 0 5V 0 0 0 0.001ms 1.1363636363636ms )')
+
+#pulse amplifier
+circuit.R(1, 'vPulse', 'R1', 100@u_kΩ)
+circuit.R(2, 'R1', 'xPulse', 100@u_kΩ)
+circuit.X(1, 'TL072', circuit.gnd, 'R1', '+15V', '-15V', 'xPulse')
+
+```
+
+
+```python
+kicad_netlist_path = directory_path.joinpath('main', 'main.cir')
+parser = SpiceParser(path=str(kicad_netlist_path))
+
+circuit = parser.build_circuit(ground=5)
+circuit.include(spice_library['TL072c'])
+circuit.include(spice_library['J2N5459'])
+circuit.include(spice_library['BC556B'])
+circuit.include(spice_library['D1N4148'])
+
+circuit.V('1', '+15V', circuit.gnd, 'DC 15')
+circuit.V('2', '-15V', circuit.gnd, 'DC -15')
+circuit.V('3', '/DAC_A', circuit.gnd, 'DC 0.594000V')
+circuit.V('4', '/DAC_B', circuit.gnd, 'DC 0V')
+circuit.V('5', '/pulse', circuit.gnd, 'DC 0 PULSE ( 10V -10V 0 0 0 0.6ms 1.1363636363636ms )')
+
+for c in ( VoltageDivider(R=100@u_kΩ, w=0.318, name='saw_offset'),\
+           VoltageDivider(R=100@u_kΩ, w=0.59, name='tri_offset'),\
+           VoltageDivider(R=100@u_kΩ, w=0.4, name='sine_round'),\
+           VoltageDivider(R=100@u_kΩ, w=0.5, name='sine_sim') ) :
+    circuit.subcircuit(c)
+
+simulator = circuit.simulator(temperature=25, nominal_temperature=25)
+simulator.initial_condition(outi=0.0)
+analysis  = simulator.transient(step_time=1@u_us, start_time=10@u_ms, end_time=12@u_ms)
+
+fig_buffer, ax1_buffer = plt.subplots()
+
+ax1_buffer.set_xlabel('time [ms]')
+ax1_buffer.set_ylabel('amplitude [V]')
+ax1_buffer.plot(analysis['SAW'].abscissa, analysis['SAW'], color='Red')
+ax1_buffer.plot(analysis['TRI'].abscissa, analysis['TRI'], color='Blue')
+ax1_buffer.plot(analysis['SINE'].abscissa, analysis['SINE'], color='Green')
+ax1_buffer.legend(('Vin_a [V]', 'Vin_b', 'Vout [V]'), loc=(0.75,0.8))
+
+plt.tight_layout()
+plt.show()
+
+print(f"SAW min: {min(analysis['SAW'])}, max: {max(analysis['SAW'])}")
+print(f"TRI min: {min(analysis['TRI'])}, max: {max(analysis['TRI'])}")
+print(f"SINE min: {min(analysis['SINE'])}, max: {max(analysis['SINE'])}")
+print(f"OUTi min: {min(analysis['MES'])}, max: {max(analysis['MES'])}")
+```
+
+# Firmware installation
+
+sudo pacman -Sy arm-none-eabi-gcc arm-none-eabi-newlib
+

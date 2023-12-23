@@ -1,0 +1,64 @@
+---
+date: "2019-11-30"
+author: "spielhuus"
+excerpt: "An adsr creates an envelope for describing the change of audio over time. the envelope can be used for amplitude, filters or pitch. The origin of an 555  based adsr is published in electronics by kirschmann, kacky et al. This version is directly taken from rené schmitz 'the fastest envelope in the west'. for the attack, decay and release the potentiometers are logarithmic. this gives better control over the values. this adsr is realy fast and snappy. it can be used as a normal adsr or to ping a filter."
+subtitle: "the fastest envelope in the west"
+tags:
+- adsr
+categories:
+- module
+title: "adsr"
+references: 
+  - { description: "René Schmitz",
+      title: "Fastest envelope in the west",
+      url: "https://www.schmitzbits.de/adsr.html" }
+  - { description: "Adjustable ex geerator colors synthesizer's sound",
+      title: "Randall Kirschman, Electronics",
+      url: "https://www.yusynth.net/archives/Electronics/R-Kirschman-ADSR-1980.pdf" }
+  - { description: "Two-Chip generator shapes synthesizer's sound",
+      title: "Jonathan Jacky, Electronics",
+      url: "https://www.yusynth.net/archives/Electronics/J-Jacky-ADSR-1980.pdf" }
+  - { description: "Get an ADSR waveform from a few components",
+      title: "Örley Gàbor",
+      url: "https://www.yusynth.net/archives/ElectronicDesign/O-Gabor-ADSR-1980.pdf" }
+version: 1
+draft: False
+```{elektron, command="bom", input=["main"], group=TRUE, partlist="../../lib/partlist.yaml"}```
+```{elektron, command="erc", input=["main"]}```
+```{elektron, command="drc", input=["main"]}```
+```{elektron, command="schema", input=["main"], border=TRUE, theme="Mono"}```
+```{elektron, command="pcb", input=["main", "panel"], border=TRUE}```
+```{elektron, command="gerber", input=["main", "panel"]}```
+---
+
+# build
+
+{{< image "/adsr-back.jpg" "Figure 1: Back view" >}}
+
+{{< bom >}}
+
+the gerber files are part of the release. it should be possible to directly order them from your manufacturer. but check the result on the preview when you order them. With the exception of the 4046 chip there are no special parts needed for this build.
+
+{{< callout summe main panel >}}
+
+{{< report summe main >}}
+
+# calibration
+
+no calibration needed.
+
+# usage
+
+connect a gate signal to the **IN** of the adsr and the **OUT** to an audio sink:
+
+**IN** a gate singal for the length of the ADS singal.
+
+**OUT** the final envelope.
+
+**Attack** is the time taken for initial run-up of level from nil to peak, beginning when the key is pressed.
+
+**Decay** is the time taken for the subsequent run down from the attack level to the designated sustain level.
+
+**Sustain** is the level during the main sequence of the sound's duration, until the key is released.
+
+**Release** is the time taken for the level to decay from the sustain level to zero after the key is released.

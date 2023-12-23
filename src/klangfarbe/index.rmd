@@ -1,0 +1,162 @@
+---
+author: "spielhuus"
+categories:
+- article
+date: 2023-04-23
+excerpt: ""
+description: ""
+subtitle: "buchla like wavefolder"
+tags:
+- grundlage
+title: klangfarbe
+version: 0
+references: 
+  - { description: "Re-inventing the Voltage Controlled Envelope Generator",
+      title: "Juergen Haible",
+      url: "http://jhaible.com/legacy/tonline_stuff/hj_vc_hadsr.html" }
+  - { description: "EnvyLope -- Voltage Controlled ADSR, LFO, and Glide",
+      title: "Aaron Cram",
+      url: "http://www.synthdiy.com/files/2006/EnvyLope_V3.pdf" }
+  - { description: "Dual Linear CV-ADSR",
+      title: "Marc Bareille",
+      url: "http://m.bareille.free.fr/modular1/adsr/mb_cvadsr2.htm" }
+---
+
+# theory
+
+```{python echo=FALSE, results="hide", fig.align='center', fig.cap='Figure 2: Input Driver'}
+import sys
+sys.path.append("src")
+
+from hall import *
+
+def opamp(draw, u, unit, r1, r2): 
+  from elektron import Circuit, Draw, Element, Label, Line, Dot, Simulation, R, Gnd, Power
+  return (draw
+      + R(draw.next("R"), r1).rotate(90) + Line() + (DOT_IN := Dot()) + Line().down().length(5*2.54) + Line()
+      + Element(u, "Amplifier_Operational:TL072", unit=unit, 
+                value="TL072", Spice_Primitive="X", Spice_Model="TL072c").anchor(2 if unit==1 else 6).mirror('x')
+      + R(draw.next("R"), "10k").rotate(270).at(u, "3" if unit==1 else "5").label("south") + Gnd()
+      + R(draw.next("R"), "100k").at(u, "1" if unit==1 else "7").rotate(90) + Line().toy(DOT_IN) + Dot().push() + Line().tox(DOT_IN)
+      + R(draw.next("R"), r2).at(draw.pop()).rotate(90)
+  )
+```
+
+
+```{python echo=FALSE, results="hide", fig.align='center', fig.cap='Figure 2: Input Driver'}
+import sys
+sys.path.append("src")
+
+from elektron import Circuit, Draw, Element, Label, Line, Dot, Simulation, R, Gnd, Power
+from hall import *
+
+draw = Draw(["/usr/share/kicad/symbols", "lib/symbols"])
+
+(draw + Label("IN").rotate(180))
+opamp(draw, "U1", 1, "100k", "100k")
+
+(draw 
+  + Label("OUT")
+
+  + Element("U1", "Amplifier_Operational:TL072", unit=2, 
+            value="TL072", Spice_Primitive="X", Spice_Model="TL072c").at((80.0,80.0))
+  + Element("U1", "Amplifier_Operational:TL072", unit=3, value="TL072",
+                 Spice_Netlist_Enabled="Y",
+                 Spice_Primitive="X",
+                 Spice_Model="TL072c", on_schema="no").at((100.0,100.0))
+  + Element("+15V", "power:+15V", value="+15V", on_schema="no").at("U1", "8")
+  + Element("-15V", "power:-15V", value="-15V", on_schema="no").at("U1", "4")
+)
+
+circuit = draw.circuit(["lib/spice"])
+circuit.voltage("1", "+15V", "GND", "DC 15V")
+circuit.voltage("2", "-15V", "GND", "DC -15V")
+circuit.voltage("3", "IN", "GND", "5V PULSE(5V -5V 0 10m 10m 0.01m 20m)")
+
+circuit.control('''
+option INTERP
+alterparam potentiometer value = 100k
+
+let rb_act = 0
+let r_step = 1k
+let r_stop = 91k
+while rb_act lt r_stop
+  alter R1 rb_act
+  tran 0.02ms 50ms
+  let rb_act = rb_act + r_step
+end
+''')
+simulation = Simulation(circuit)
+single_opamp = simulation.run()
+
+draw.plot(scale=6, theme='BlackWhite')
+```
+```{d3, element="opamp_single", x="time", y="in", yRange="out", data="single_opamp.tran", width="600", height="400", fig.align='center', fig.cap="Figure 4: long tailed pair simulation."}```
+
+
+```{python echo=FALSE, results="nohide", fig.align='center', fig.cap='Figure 2: Input Driver'}
+import sys
+sys.path.append("src")
+
+from elektron import Circuit, Draw, Element, Label, Line, Dot, Simulation, R, Gnd, Power
+from hall import *
+
+draw = Draw(["/usr/share/kicad/symbols", "lib/symbols"])
+
+(draw + Label("IN").rotate(180) + Line() + Dot().push() + Line())
+opamp(draw, "U1", 1, "100k", "100k")
+R_AMP_1 = draw.last("R")
+(draw + Line().down().length(12*2.54).at(draw.pop()) + Dot().push() + Line())
+opamp(draw, "U1", 2, "49.9k", "43.2k")
+R_AMP_2 = draw.last("R")
+(draw + Line().down().length(12*2.54).at(draw.pop()) + Dot().push() + Line())
+opamp(draw, "U2", 1, "91k", "18k")
+R_AMP_3 = draw.last("R")
+
+(draw
+  + Dot().at(R_AMP_3, "2") + Line().toy(R_AMP_2, "2").dot("end") + Line().toy(R_AMP_1, "2").dot("end")
+)
+
+(draw 
+  + Label("OUT")
+
+  + Element("U2", "Amplifier_Operational:TL072", unit=2, 
+            value="TL072", Spice_Primitive="X", Spice_Model="TL072c").at((140.0,80.0))
+  + Element("U1", "Amplifier_Operational:TL072", unit=3, value="TL072",
+                 Spice_Netlist_Enabled="Y",
+                 Spice_Primitive="X",
+                 Spice_Model="TL072c", on_schema="no").at((100.0,100.0))
+  + Element("+15V", "power:+15V", value="+15V", on_schema="no").at("U1", "8")
+  + Element("-15V", "power:-15V", value="-15V", on_schema="no").at("U1", "4")
+  + Element("U2", "Amplifier_Operational:TL072", unit=3, value="TL072",
+                 Spice_Netlist_Enabled="Y",
+                 Spice_Primitive="X",
+                 Spice_Model="TL072c", on_schema="no").at((100.0,100.0))
+  + Element("+15V", "power:+15V", value="+15V", on_schema="no").at("U2", "8")
+  + Element("-15V", "power:-15V", value="-15V", on_schema="no").at("U2", "4")
+)
+
+circuit = draw.circuit(["lib/spice"])
+circuit.voltage("1", "+15V", "GND", "DC 15V")
+circuit.voltage("2", "-15V", "GND", "DC -15V")
+circuit.voltage("3", "IN", "GND", "5V PULSE(5V -5V 0 10m 10m 0.01m 20m)")
+
+circuit.control('''
+option INTERP
+alterparam potentiometer value = 100k
+
+let rb_act = 0
+let r_step = 1k
+let r_stop = 91k
+while rb_act lt r_stop
+  alter R1 rb_act
+  tran 0.02ms 50ms
+  let rb_act = rb_act + r_step
+end
+''')
+simulation = Simulation(circuit)
+opamp = simulation.run()
+
+draw.plot(scale=6, theme='BlackWhite')
+```
+```{d3, element="opamp_triangle", x="time", y="in", yRange="out", data="opamp.tran", width="600", height="400", fig.align='center', fig.cap="Figure 4: long tailed pair simulation."}```

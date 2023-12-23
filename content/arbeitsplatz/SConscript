@@ -1,7 +1,0 @@
-import os
-
-Import(['env', 'FILES', 'HTML'])
-
-HTML += env.nbconvert('arbeitsplatz.html', 'arbeitsplatz.ipynb')
-
-FILES += Glob('*.jpg')

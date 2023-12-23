@@ -1,0 +1,50 @@
+******
+* Spice Model
+* Item: 2N5088
+* Date: 8/18/10
+* Revision History: A
+* ==========================================================
+* This model was developed by: 
+* Central Semiconductor Corp.
+* 145 Adams Avenue
+* Hauppauge, NY 11788
+*
+* These models are subject to change without notice.
+* Users may not directly or indirectly re-sell or 
+* re-distribute this model. This model may not 
+* be modified, or altered without the consent of Central Semiconductor Corp. 
+*
+* For more information on this model contact
+* Central Semiconductor Corp. at:
+* (631) 435-1110 or Engineering@centralsemi.com
+* http://www.centralsemi.com
+* ==========================================================
+******
+*SRC=2N5088;2N5088;BJTs NPN; Si;  35.0V  0.05A  50MHz   Central Semi Central Semi
+.MODEL 2N5088  NPN (
++ IS=38.116E-15
++ BF=599.06
++ VAF=100
++ IKF=.76234
++ ISE=38.128E-15
++ NE=1.9979
++ BR=10.364
++ VAR=100
++ IKR=1.5810
++ ISC=803.76E-15
++ NC=1.5928
++ NK=1.2265
++ RB=9.7439
++ RC=.23381
++ CJE=11.658E-12
++ VJE=1.2545
++ MJE=.46406
++ CJC=5.3208E-12
++ VJC=.42236
++ MJC=.29245
++ TF=457.31E-12
++ XTF=10.516
++ VTF=10.347
++ ITF=1.6816
++ TR=10.000E-9)
+******

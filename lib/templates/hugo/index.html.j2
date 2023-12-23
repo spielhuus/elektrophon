@@ -1,0 +1,34 @@
+{%- extends 'base.html.j2' -%}
+{% from 'mathjax.html.j2' import mathjax %}
+{% from 'jupyter_widgets.html.j2' import jupyter_widgets %}
+
+{%- block header -%}
+---
+{% for key, value in nb.metadata.FrontMatter.items() %}{{key}}: {{value}}
+{% endfor %}
+---
+{{ '\n' }}
+{%- endblock header -%}
+
+{%- block body_header -%}
+{%- endblock body_header -%}
+
+{% block body_footer %}
+{% endblock body_footer %}
+
+{% block footer %}
+{% block footer_js %}
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+	let cardToggles = document.getElementsByClassName('card-header-icon');
+	for (let i = 0; i < cardToggles.length; i++) {
+		cardToggles[i].addEventListener('click', e => {
+			e.currentTarget.parentElement.parentElement.childNodes[3].classList.toggle('is-hidden');
+		});
+	}
+});
+</script>
+{% endblock footer_js %}
+{{ super() }}
+</html>
+{% endblock footer %}

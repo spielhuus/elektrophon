@@ -1,0 +1,7 @@
+matplotlib
+numpy
+debugpy
+sympy
+scipy
+pdoc
+git+https://github.com/spielhuus/elektron.git

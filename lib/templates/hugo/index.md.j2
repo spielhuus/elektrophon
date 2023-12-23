@@ -1,0 +1,135 @@
+{% extends 'base/display_priority.j2' %}
+
+
+{%- block header -%}
+---
+{% for key, value in nb.metadata.FrontMatter.items() %}{{key}}: {{value}}
+{% endfor %}
+---
+
+{% endblock header%}
+
+{% block in_prompt %}
+{% endblock in_prompt %}
+
+{% block output_prompt %}
+{%- endblock output_prompt %}
+
+{% block input %}
+```
+{%- if 'magics_language' in cell.metadata  -%}
+    {{ cell.metadata.magics_language}}
+{%- elif 'name' in nb.metadata.get('language_info', {}) -%}
+    {{ nb.metadata.language_info.name }}
+{%- endif %}
+{{ cell.source}}
+```
+{% endblock input %}
+
+{% block error %}
+<p>error</p>
+<!-- {{ super() }} -->
+{% endblock error %}
+
+{% block traceback_line %}
+{{ line | indent | strip_ansi }}
+{% endblock traceback_line %}
+
+{% block execute_result %}
+<!-- execute result -->
+{% block data_priority scoped %}
+{{ super() }}
+{% endblock %}
+{% endblock execute_result %}
+
+{% block stream %}
+<!-- 
+{{ output.text | indent }}
+-->
+{% endblock stream %}
+
+{% block data_svg %}
+<div class="column is-full" markdown="1">
+<div class="content has-text-centered my-2" markdown="1">
+{% if "filenames" in output.metadata %}
+![svg]({{ '{{ \'/assets/' }}{{ output.metadata.filenames['image/svg+xml'] | path2url }}' | relative_url {{ ' }}' }})
+<p class="has-text-weight-bold">{{ cell.metadata.caption }}</p>
+{% else %}
+![svg](data:image/svg;base64,{{ output.data['image/svg+xml'] }})
+<p class="has-text-weight-bold">* {{ cell.metadata.caption }} *</p>
+{% endif %}
+</div>
+</div>
+{% endblock data_svg %}
+
+{% block data_png %}
+<div class="section" markdown="1">
+<div class="container has-text-centered my-2" markdown="1">
+    {% if "filenames" in output.metadata %}
+
+![png]({{ '{{ \'/assets/' }}{{ output.metadata.filenames['image/png'] | path2url }}' | relative_url {{ ' }}' }})
+
+    {% else %}
+
+![png](data:image/png;base64,{{ output.data['image/png'] }})
+
+    {% endif %}
+
+</div>
+</div>
+{% endblock data_png %}
+
+{% block data_jpg %}
+<div class="section" markdown="1">
+<div class="container has-text-centered my-2" markdown="1">
+    {% if "filenames" in output.metadata %}
+
+![jpeg]({{ '{{ \'/assets/' }}{{ output.metadata.filenames['image/jpeg'] | path2url }}' | relative_url {{ ' }}' }})
+
+    {% else %}
+
+![jpeg](data:image/jpeg;base64,{{ output.data['image/jpeg'] }})
+
+    {% endif %}
+
+</div>
+</div>
+{% endblock data_jpg %}
+
+{% block data_latex %}
+<div class="section" markdown="1">
+<div class="container has-text-centered my-4 is-size-3" markdown="1">
+{{ output.data['text/latex'] }}
+</div>
+</div>
+{% endblock data_latex %}
+
+{% block data_html scoped %}
+{{ output.data['text/html'] }}
+{% endblock data_html %}
+
+{% block data_markdown scoped %}
+<p>block data mk scoped</p>
+<div class="section" markdown="1">
+<div class="container" markdown="1">
+{{ output.data['text/markdown'] }}
+</div>
+</div>
+{% endblock data_markdown %}
+
+{% block data_text scoped %}
+<!-- text scoped -->
+{{ output.data['text/plain'] | indent }}
+{% endblock data_text %}
+
+{% block markdowncell scoped %}
+<!-- mk scoped -->
+<div class="container mb-2 mt-2" markdown="1">
+{{ cell.source }}
+</div>
+{% endblock markdowncell %}
+
+{% block unknowncell scoped %}
+<p>unknown</p>
+unknown type  {{ cell.type }}
+{% endblock unknowncell %}

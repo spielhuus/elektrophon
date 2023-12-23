@@ -1,0 +1,42 @@
+---
+date: "2019"
+author: "spielhuus"
+excerpt: "this is a very robust cmos vco from thomas henry [[1][1]]. the heart of this vco is the CD4046 phased locked loop chip. altough this module is build around the cmos 4046 phased locked loop chip, it is not comparable to other luneta vco's. the tracking is very stable and it has all the features you will expect from a standard vco. scott writes all the best about the sync function. i can not find it very special, but give it a try and decide yourself. the 4046 chip shall not be from texas instruments, because it is reported that this one is hard or impossible to tune. of course this is the easyiest to get these days. i used the phillips HEF4046. i like it to use a chip with the Phillips logo on it, i remember that logo from when i was a child. nevertheless, in my opinion it is worth the money and effort."
+subtitle: "Thomas Henry X-4046"
+tags:
+- vco
+categories:
+- module
+title: "echo"
+references: 
+  - { description: "Thomas Henry X-4046",
+      title: "Birth of a Synth",
+      url: "http://birthofasynth.com/Thomas_Henry/Pages/X-4046.html" }
+version: 0
+draft: True
+```{elektron, command="bom", input=["main", "mount"], group=TRUE, partlist="../../lib/partlist.yaml"}```
+```{elektron, command="erc", input=["main", "mount"]}```
+```{elektron, command="drc", input=["main", "mount"]}```
+```{elektron, command="schema", input=["main", "mount"], border=TRUE, theme="Mono"}```
+```{elektron, command="pcb", input=["main", "mount", "panel"], border=TRUE}```
+```{elektron, command="gerber", input=["main", "mount", "panel"]}```
+---
+
+# build
+
+{{< bom >}}
+
+the gerber files are part of the release. it should be possible to directly order them from your manufacturer. but check the result on the preview when you order them. With the exception of the 4046 chip there are no special parts needed for this build.
+
+{{< callout summe main panel >}}
+
+{{< report summe main >}}
+
+# calibration
+
+the different waveforms are combined out of different parts and you will have to combine those by calibrating the vco. i recommend doing that with an oszilloscope.
+
+connect your scope to the triangle wave output. 
+bring the oscillator to 1kHz with the coarse and fine adjustments. 
+then you can calibrate the triangle wave. as you can see in the scope there is a falling and raising slope. use the two triangle connect trimpots (TC1/2) to bring them together.
+

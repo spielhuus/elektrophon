@@ -1,9 +1,0 @@
-import os
-
-Import(['env', 'FILES', 'HTML'])
-
-HTML += env.nbconvert('vermarkung.html', 'vermarkung.ipynb')
-
-FILES += Glob('*.jpg')
-FILES += Glob('*.pdf')
-FILES += Glob('*.scad')

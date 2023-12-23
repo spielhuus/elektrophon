@@ -1,0 +1,120 @@
+---
+date: "2022-01-01T13:09:13-06:00"
+author: "spielhuus"
+excerpt: "The CD4069UB device consists of six CMOS inverter circuits. These devices are intended for all general-purpose inverter applications. It is not ideal for linear amplification, but can be used as such and will add a lot of soft-clipping. This makes this device special for musical usage and can be found in guitar distortion pedals <a href='http://www.runoffgroove.com/ubescreamer.html'>[3]</a> or the wasp filter <a href='https://www.schmitzbits.de/wasp.html'>[4]</a>."
+subtitle: "Linear amplification with the CD4069UBE."
+tags:
+- grundlage
+categories:
+- article
+title: midi
+references: 
+  - { description: "MIDI tuning standard",
+      title: "Wikipedia",
+      url: "https://en.wikipedia.org/wiki/MIDI_tuning_standard" }
+version: 0
+---
+
+
+```python
+import numpy as np
+from sympy import symbols, sqrt, exp, diff, integrate, pprint, simplify, Eq, preview, pi, solve
+```
+
+# *midi scales*
+
+### *calculate frequency from midi note*
+
+```{python echo=FALSE, results="hide"}
+f, a, n = symbols('f,a,n', real=True)
+freq = (a * 2) ** ((n-69)/12)
+print(freq)
+#Eq( freq, f)
+
+```
+
+{{<table "table table-striped table-bordered is-fullwidth">}}
+|Implementation / Note	 |A1  |A2	 |A3	|B3	 |C4	|D4	 |E4	|A4	|A5|
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | ---- |
+|Volts/octave (V)|	1.000|	2.000|	3.000|	3.167|	3.250|	3.417|	3.583|	4.000|	5.000|
+|Hertz/volt (V)|	1.000|	2.000|	4.000|	4.490|	4.757|	5.339|	5.993|	8.000|	16.000|
+{{</table>}}
+
+
+```python
+
+```
+
+The voltages are linked by the formula 
+
+
+$$
+\begin{array}{c}
+V_{hz}=2^{V_{oct}-1}
+\end{array}
+$$
+
+
+which can also be written 
+
+$$
+\begin{array}{c}
+V_{oct} = ln_{2}(V_{hz})+1
+\end{array}
+$$
+
+$$
+f = 2^{(d-69)/12} \cdot 440\ \mathrm{Hz} \, 
+$$
+
+
+```python
+notes = [ 
+    'C', 'C#/Db ', 'D', 'D#/Eb ', 'E', 'F', 'F#/Gb ', 'G', 'G#/Ab', 'A', 'A#/Bb ', 'B', 
+    'C', 'C#/Db ', 'D', 'D#/Eb ', 'E', 'F', 'F#/Gb ', 'G', 'G#/Ab', 'A', 'A#/Bb ', 'B', 
+    'C', 'C#/Db ', 'D', 'D#/Eb ', 'E', 'F', 'F#/Gb ', 'G', 'G#/Ab', 'A', 'A#/Bb ', 'B', 
+    'C', 'C#/Db ', 'D', 'D#/Eb ', 'E', 'F', 'F#/Gb ', 'G', 'G#/Ab', 'A', 'A#/Bb ', 'B', 
+    'C', 'C#/Db ', 'D', 'D#/Eb ', 'E', 'F', 'F#/Gb ', 'G', 'G#/Ab', 'A', 'A#/Bb ', 'B', 
+    'C', 'C#/Db ', 'D', 'D#/Eb ', 'E', 'F', 'F#/Gb ', 'G', 'G#/Ab', 'A', 'A#/Bb ', 'B', 
+    'C', 'C#/Db ', 'D', 'D#/Eb ', 'E', 'F', 'F#/Gb ', 'G', 'G#/Ab', 'A', 'A#/Bb ', 'B', 
+    'C', 'C#/Db ', 'D', 'D#/Eb ', 'E', 'F', 'F#/Gb ', 'G', 'G#/Ab', 'A', 'A#/Bb ', 'B', 
+    'C', 'C#/Db ', 'D', 'D#/Eb ', 'E', 'F', 'F#/Gb ', 'G', 'G#/Ab', 'A', 'A#/Bb ', 'B', 
+    'C', 'C#/Db ', 'D', 'D#/Eb ', 'E', 'F', 'F#/Gb ', 'G', 'G#/Ab', 'A', 'A#/Bb ', 'B', 
+    'C', 'C#/Db ', 'D', 'D#/Eb ', 'E', 'F', 'F#/Gb ', 'G', 'G#/Ab', 'A', 'A#/Bb ', 'B'
+]
+
+octaves = [
+    '-5', '-5 ', '-5', '-5 ', '-5', '-5', '-5 ', '-5', '-5', '-5', '-5 ', '-5', 
+    '-4', '-4 ', '-4', '-4 ', '-4', '-4', '-4 ', '-4', '-4', '-4', '-4 ', '-4', 
+    '-3', '-3 ', '-3', '-3 ', '-3', '-3', '-3 ', '-3', '-3', '-3', '-3 ', '-3', 
+    '-2', '-2 ', '-2', '-2 ', '-2', '-2', '-2 ', '-2', '-2', '-2', '-2 ', '-2', 
+    '-1', '-1 ', '-1', '-1 ', '-1', '-1', '-1 ', '-1', '-1', '-1', '-1 ', '-1', 
+    '0', '0 ', '0', '0 ', '0', '0', '0 ', '0', '0', '0', '0 ', '0', 
+    '1', '1 ', '1', '1 ', '1', '1', '1 ', '1', '1', '1', '1 ', '1', 
+    '2', '2 ', '2', '2 ', '2', '2', '2 ', '2', '2', '2', '2 ', '2', 
+    '3', '3 ', '3', '3 ', '3', '3', '3', '3', '3', '3', '3 ', '3', 
+    '4', '4 ', '4', '4 ', '4', '4', '4 ', '4', '4', '4', '4 ', '4', 
+    '5', '5 ', '5', '5 ', '5', '5', '5 ', '5', '5', '5', '5 ', '5'
+]
+```
+
+
+```python
+a = 440
+v_step = 1 / 12
+
+table = '|Midi Note|Octave|Note|Frequency|Voltage|\n'
+table += '|---|---|---|---|---|\n'
+
+for s in np.arange(0, 128) :
+    _freq = a * 2 ** ((s-69) / 12 )
+    table += '|%s|%s|%s|%.2f|' % (s, octaves[s], notes[s], _freq)
+    if s >= 69 :
+        table += '%.4f|\n' % ((s-69) * v_step)
+    else :
+        table += '||\n'
+
+```
+{{<table "table is-striped is-bordered is-hoverable is-fullwidth">}}
+${py$table}
+{{</table>}}

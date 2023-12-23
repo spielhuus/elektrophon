@@ -1,0 +1,131 @@
+---
+date: 2023-06-20
+author: "spielhuus"
+excerpt: "Echo and reverb are nice effects in a synthesizer, but they are not easy to build. There are different methods; With a cassette recorder, a bucket brigade circuit, a spring tank or digital. Many modules are made with the digital PT2399 chip. This chip produces a nice reverb, but overall the sound quality is not very good. Hall is an amplifier module to integrate a spring tank into the synthesizer. It provides only the basic functionality. Other modules have a VCA or other blocks to add more effects. This must be patched externaly."
+subtitle: "hall is a reverb module using a spring tank."
+tags:
+- grundlage
+categories:
+- module
+title: "hall"
+references: 
+  - { description: "Care and Feeding of Spring Reverb Tanks",
+      title: "Rod Elliott (ESP)",
+      url: "https://sound-au.com/articles/reverb.htm" }
+  - { description: "Spring-reverb",
+      title: "SKULL & CIRCUITS",
+      url: "https://www.skullandcircuits.com/spring-reverb/" }
+  - { description: "Learnabout Electronics",
+      title: "Tone Control",
+      url: "https://learnabout-electronics.org/Amplifiers/amplifiers42.php" }
+  - { description: "Analog Linear Coupling Datasheet",
+      title: "LCR-0202",
+      url: "http://j5d2v7d7.stackpathcdn.com/wp-content/uploads/2016/10/LCR-0202.pdf" }
+version: 1
+draft: False
+```{elektron, command="bom", input=["main", "mount"], group=TRUE, partlist="../../lib/partlist.yaml"}```
+```{elektron, command="erc", input=["main", "mount"]}```
+```{elektron, command="drc", input=["main", "mount"]}```
+```{elektron, command="schema", input=["main", "mount"], border=TRUE, theme="Mono"}```
+```{elektron, command="pcb", input=["main", "mount", "panel"], border=TRUE}```
+```{elektron, command="gerber", input=["main", "mount", "panel"]}```
+---
+
+```{latex echo=FALSE, fig.align='center', fig.cap='Figure 1: hall block diagram'}
+\documentclass[border=2mm]{standalone}
+\usepackage{tikz}
+\usepackage{circuitikz}
+
+\begin{document}
+\ctikzset{blocks/thickness=2,switches/thickness=1.5}
+\begin{circuitikz}[line width=2pt,scale=1.5,font=\sffamily,every node/.style={scale=1.5}]
+
+  \draw (0, 0) node[left] {IN} to (1,0) 
+    node[adder,anchor=west](fb) {};
+
+  \draw (fb.east)
+    to[short, -] ++(0.5,0)
+    to [amp] ++(2,0)
+    to [spring,label=spring tank] ++(2,0)
+    to[amp,label] ++(2,0) 
+    to [bandpass,label=baxandal] ++(2,0) to ++(1,0)
+    node[adder,anchor=west](mix) {};
+
+  \draw (mix.north) to[short, -] ++(0,1)
+    to [short, i<=$dry$] ++(-9.5,0)
+    to [short, -*] ++(0,-1.5);
+
+  \draw (fb.south) to[short, -] ++(0,-1)
+    node[spdt,rotate=180,anchor=out 2](Sw4){};
+    
+  \draw (Sw4.in) to [short, i<=$feedback$] ++(8,0)
+    to [short, -*] ++(0,1.8);
+
+  \draw (Sw4.out 1) node[left] {Feedback};
+
+  \draw (mix.east) to[short, -] ++(0.5,0)
+    node[right]{OUT};
+
+\end{circuitikz}
+\end{document}
+```
+
+Figure 1 shows the basic block diagram. The first amplifier is the driver for the tank, the second recovers the signal coming back from the tank. On the output, there is a dry/wet mixer and a Baxandal tone control. The wet signal is fed back to the input to allow feedback. The feedback signal is wired to the switched feedback audio jack. This gives the possibility to process the feedback signal with other modules.
+
+# Description
+
+The most important part is the correct feeding of the spring tank. The impedance of the tank is very important for selecting the right output impedance and currents of the driver. There is a very good description of the input driver and recovery circuit from [Eliot Sound System](https://sound-au.com/articles/reverb.htm#s1). The values of the resistors and capacitor are chosen for an Accutronics Large Tank (9EB2C1B). This is a type E tank, which has a coil impedance of 600 Ohms. The resistors R2 and R7 in the original schematic are R11, R12 and the capacitor is C3.
+
+
+```{python echo=FALSE, results="hide", fig.align='center', fig.cap='Figure 2: Input Driver'}
+import sys
+sys.path.append("..")
+
+from elektron import Circuit, Draw, Element, Label, Line, Dot, Simulation
+from hall import *
+
+draw = Draw(["/usr/share/kicad/symbols", "../../lib/symbols"])
+input(draw)
+compressor(draw)
+drive(draw)
+
+draw.plot(scale=6, netlist=False, theme='BlackWhite')
+```
+
+Eliot suggests adding a [compressor](https://sound-au.com/articles/reverb.htm#s5) before the driver. This compressor is a really easy build. For the vactrol a cheap Chinese one is used. The Chinese clones of the VTL vactrols are not very good. But the [LCR-0202](http://j5d2v7d7.stackpathcdn.com/wp-content/uploads/2016/10/LCR-0202.pdf) seems to be a good product. Although the lead spacing differs with each part. Also, original VTL or homemade vactrols can be used. 
+
+```{python echo=FALSE, results="hide", fig.align='center', fig.cap='Figure 3: Recovery and Tone Control'}
+import sys
+sys.path.append("src")
+
+from elektron import Circuit, Draw, Element, Label, Line, Dot, Simulation
+from hall import *
+
+draw = Draw(["/usr/share/kicad/symbols", "lib/symbols"])
+recover(draw)
+baxandal(draw)
+
+draw.plot(scale=6, netlist=False, theme='BlackWhite')
+```
+
+The [recovery](https://sound-au.com/articles/reverb.htm#s2) circuit is also taken from the Eliot Sound System article. At the output there is a Baxandal tone control. The tone control allows independent control of the bass and treble response. The filter response is configurable with the potentiometers. This is a classic and really clever setup. There is a very good [article](https://learnabout-electronics.org/Amplifiers/amplifiers42.php) that explains how it works.
+
+
+# build
+
+{{< bom >}}
+
+{{< callout summe main panel >}}
+
+{{< report summe main >}}
+
+# calibration
+
+The calibration is very much up to your taste. Start with a normal signal in audio range and adjust RV3 until the compress LED start to glow. Now you can control the loudness with RV4. Apply an envelope to your audio signal and turn the mix pot fully clockwise. Then adjust the two potentiometers to your taste.
+
+# issues
+
+* C5 wrong part for footprint
+* LED D6, D6 dont match the panel
+* Feedback is not good
+* Tone control does not do much

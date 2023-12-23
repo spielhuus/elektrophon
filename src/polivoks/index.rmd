@@ -1,0 +1,43 @@
+---
+date: "2020-01-06"
+author: "spielhuus"
+excerpt: "People seem to love the russian polivoks synthesizer. For me the most interesting thing is the filter section. It is built without any capacitors, instead it uses some weird russian opamps (KR140UD12). These are programmable opamps. With a control voltage the gain can be changed. This filter want to scream and can give percusive feedback responses, but can be well controlled. This filter is invented by Vladimir Kuzmin. It has a lowpas and bandpass sections. Instead of the original russion opamp also the western counterparts can be used (uA776, MC1776, LM4250,NTE888). Of course none of these parts is available anymore. I got some LM4250 from china. Beside the programmable opamp this filter is a very simple build. no calibration trimmers or accurate tempco stages required."
+subtitle: "polivoks filter"
+tags:
+- filter
+categories:
+- module
+title: "polivoks"
+references: 
+  - { description: "POLIVOKS Filter Clone",
+      title: "Marc Bareille",
+      url: "http://m.bareille.free.fr/modular1/vcf_polivoks/vcf_polivoks.htm" }
+  - { description: "Polivoks VCF",
+      title: "Modular Synthesis",
+      url: "https://modularsynthesis.com/kuzmin/polivoks/polivoks_vcf.htm" }
+  - { description: "Polivoks Euro Format PCB",
+      title: "electro-music",
+      url: "http://electro-music.com/forum/topic-65609.html" }
+version: 1
+draft: False
+```{elektron, command="bom", input=["main", "mount"], group=TRUE, partlist="../../lib/partlist.yaml"}```
+```{elektron, command="erc", input=["main", "mount"]}```
+```{elektron, command="drc", input=["main", "mount"]}```
+```{elektron, command="schema", input=["main", "mount"], border=TRUE, theme="Mono"}```
+```{elektron, command="pcb", input=["main", "mount", "panel"], border=TRUE}```
+```{elektron, command="gerber", input=["main", "mount", "panel"]}```
+---
+
+# build
+
+{{< bom >}}
+
+The gerber files are part of the release. It should be possible to directly order them from your manufacturer. But check the result on the preview when you order them. all of the parts are active and available. but the LM4250 is not and an alternative source has to be find.
+
+{{< callout summe main panel >}}
+
+{{< report summe main >}}
+
+# calibration
+
+

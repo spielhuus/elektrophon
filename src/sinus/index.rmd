@@ -1,0 +1,191 @@
+---
+author: "spielhuus"
+categories:
+- article
+date: 2022-12-01
+excerpt: ""
+description: ""
+subtitle: "sinusoidal wavefolder"
+tags:
+- grundlage
+title: sinus
+version: 0
+references: 
+  - { description: "sinusoidal wavefolder",
+      title: "Original article at modwiggler",
+      url: "https://modwiggler.com/forum/viewtopic.php?t=177513" }
+---
+
+```{python echo=TRUE, results="nohide", fig.align='center', fig.cap='digital logic'}
+from elektron import Circuit, Draw, Element, Label, Line, Dot, Simulation, Power, R
+
+draw = Draw(["/usr/share/kicad/symbols", "../../lib/symbols"])
+
+(draw 
+  + Power("+12V")
+  + R(draw.next("R"), "10k")
+  + Dot().push() 
+  + R(draw.next("R"), "10k")
+  + Dot()
+  + R(draw.next("R"), "10k")
+  + Power("-12V").rotate(180)
+ 
+  + Line().at(draw.pop()).right().length(3*2.54)
+  + Element("U2", "Reference_Voltage:TL431DBZ", value="TL431", unit=1, Spice_Primitive="X", Spice_Model="TL431").anchor(2).rotate(90)
+
+  + Line().at("U2", "3").toy("R2", "2") + Line().tox("R2", "2").dot("end")
+  + Line().at("U2", "1").toy("R1", "1") + Line().tox("R1", "1").dot("end")
+)
+
+circuit = draw.circuit(["lib/spice"])
+circuit.voltage("1", "+12V", "GND", "DC 12V")
+circuit.voltage("2", "-12V", "GND", "DC -12V")
+# circuit.control('''alterparam potentiometer value = 47k
+# mc_source
+# ''')
+
+# print(circuit)
+
+simulation = Simulation(circuit)
+regulator = simulation.op()
+
+print(regulator)
+
+draw.plot(scale=6, theme='BlackWhite', netlist=True)
+```
+
+
+# Construction
+
+```{python echo=TRUE, results="nohide", fig.align='center', fig.cap='digital logic'}
+from elektron import Circuit, Draw, Element, Label, Line, Dot, Simulation
+
+draw = Draw(["/usr/share/kicad/symbols", "../../lib/symbols"])
+
+(draw 
+  + Label("IN_1").rotate(180))
+
+pos = (0.0, 0.0)
+
+dots = []
+count = 1
+for n in ("Q1", "Q1", "Q2", "Q2", "Q3"):
+  pos = (pos[0] + 7*2.54, pos[1])
+  draw.pos(pos)
+  (draw + (dot1 := Dot()))
+  if count % 2:
+      draw + Element(draw.next("Q"), "elektrophon:PMP4201", unit=1, value="",
+                     Spice_Netlist_Enabled="Y",
+                     Spice_Primitive="Q",
+                     Spice_Model="BC547B").anchor(1)
+  else:
+      draw + Element(draw.last("Q"), "elektrophon:PMP4201", unit=2, value="",
+                     Spice_Netlist_Enabled="Y",
+                     Spice_Primitive="Q",
+                     Spice_Model="BC547B").anchor(2)
+  count += 1
+  (draw
+  + Line().at(dot1).down().length(4*2.54)
+  + Line().right().length(4*2.54)
+  + Element(draw.next("R"), "Device:R", value="750").rotate(90)
+  + Dot()
+  )
+  dots.append(dot1)
+
+pos = (pos[0] + 7*2.54, pos[1])
+count = 2
+for n in ("Q3", "Q4", "Q4", "Q5", "Q5", "Q6", "Q6", "Q7", "Q7"):
+  pos = (pos[0] + 7*2.54, pos[1])
+  draw.pos(pos)
+  (draw + (dot1 := Dot()))
+  if count % 2:
+    draw + Element(draw.next("Q"), "elektrophon:PMP4201", unit=1, value="PMP4201",
+                 Spice_Netlist_Enabled="Y",
+                 Spice_Primitive="Q",
+                 Spice_Model="BC547B").anchor(1).mirror('y')
+  else:
+    draw + Element(draw.last("Q"), "elektrophon:PMP4201", unit=2, value="PMP4201",
+                 Spice_Netlist_Enabled="Y",
+                 Spice_Primitive="Q",
+                 Spice_Model="BC547B").anchor(2).mirror('y')
+
+  count += 1
+  (draw
+  + Line().at(dot1).down().length(4*2.54)
+  + Line().right().length(4*2.54)
+  + Element(draw.next("R"), "Device:R", value="750").rotate(90)
+  + Dot()
+  )
+  dots.append(dot1)
+
+#connect the odd diff amps
+(draw + Line().at("Q1", "6").up().length(1*2.54) + Dot().push())
+for n in ("Q2", "Q3", "Q4", "Q5", "Q6", "Q7"):
+    (draw
+      + Line().at(draw.pop()).tox(n, "6") + Dot().push() + Line().toy(n, "6")
+    )
+(draw + Line().at(draw.pop()).right().length(12*2.54) 
+  + Element("U1", "Amplifier_Operational:TL072", value="TL072", unit=1, Spice_Primitive="X", Spice_Model="TL072c").anchor(3).mirror('x')
+)
+
+#connect the even diff amps
+(draw + Line().at("Q1", "3").up().length(3*2.54) + Dot().push())
+for n in ("Q2", "Q3", "Q4", "Q5", "Q6", "Q7"):
+    (draw
+      + Line().at(draw.pop()).tox(n, "3") + Dot().push() + Line().toy(n, "3")
+    )
+(draw + Line().at(draw.pop()).tox("U1", "2"))
+
+count = 1
+for d in dots:
+  (draw + Line().at(d).up().length(8*2.54))
+  if count % 2:
+    draw + Element(draw.next("Q"), "elektrophon:PMP5201", unit=1, value="",
+                 Spice_Netlist_Enabled="Y",
+                 Spice_Primitive="Q",
+                 Spice_Model="BC547B").anchor(6).mirror('x')
+    draw + Element(draw.next("R"), "Device:R", value="51k").at(draw.last("Q"), "5").rotate(180)
+  else:
+    draw + Element(draw.last("Q"), "elektrophon:PMP5201", unit=2, value="",
+                 Spice_Netlist_Enabled="Y",
+                 Spice_Primitive="Q",
+                 Spice_Model="BC547B").anchor(3).mirror('x')
+    draw + Element(draw.next("R"), "Device:R", value="51k").at(draw.last("Q"), "4").rotate(180)
+  count += 1
+
+#(draw
+# + Line().at("Q1", "5").dot("start").tox("Q2", "5")
+# + Line().at("Q2", "5").dot("start").tox("Q3", "5")
+# + Line().at("Q3", "5").dot("start").tox("Q4", "5")
+# + Line().at("Q4", "5").dot("start").tox("Q5", "5")
+#)
+
+# (draw
+#   + Element("U1", "Amplifier_Operational:TL072", value="TL072", unit=3, Spice_Primitive="X", Spice_Model="TL072c", on_schema="no").at((100.0, 100.0))
+#   + Element("+15V", "power:+15V", value="+15V", unit=1, on_schema="no").at("U1", "8")
+#   + Element("-15V", "power:-15V", value="-15V", unit=1, on_schema="no").at("U1", "4")
+# )
+
+print(draw.erc())
+
+# circuit = draw.circuit(["lib/spice"])
+# circuit.voltage("1", "+15V", "GND", "DC 15V")
+# circuit.voltage("2", "-15V", "GND", "DC -15V")
+# circuit.voltage("3", "+5V", "GND", "DC 5V")
+# circuit.voltage("4", "CV", "GND", "DC 0V")
+# circuit.voltage("5", "IN", "GND", "5V PULSE(5V -5V 0 0 0 0.5ms 1ms)")
+# circuit.control('''alterparam potentiometer value = 47k
+# mc_source
+# ''')
+
+# print(circuit)
+
+# simulation = Simulation(circuit)
+# filter = simulation.tran("0.02ms", "4ms", "1ms")
+
+# integrator['time'] = [x * 1000 -1 for x in integrator['time']]
+
+draw.plot(scale=6, theme='BlackWhite', netlist=True)
+```
+
+```{d3 element="filter", x="time", y="in,out", data="py$filter", width="800", height="600"}```

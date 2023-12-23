@@ -1,0 +1,44 @@
+baseURL = 'https://example.org/'
+languageCode = 'en-us'
+title = 'elektrophon'
+paginate = 9
+DefaultContentLanguage = "en"
+enableInlineShortcodes = true
+footnoteReturnLinkContents = "^"
+
+theme = "elektron-hugo"
+themesDir = "../"
+
+[author]
+  name = "spielhuus"
+  abstract = "electronic noise machine."
+
+[menu]
+
+  [[menu.main]]
+    name = "articles"
+    url = "/categories/article"
+  [[menu.main]]
+    name = "modules"
+    url = "/categories/module"
+  [[menu.main]]
+    name = "status"
+    url = "/status"
+  [[menu.main]]
+    name = "doc"
+    url = "/elektrophon"
+
+[taxonomies]
+  category = "categories"
+  tag = "tags"
+  module = "module"
+  article = "article"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+  [markup.highlight]
+    style = "paraiso-dark" # syntax highlighting style
+
+[Params]

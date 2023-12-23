@@ -1,0 +1,12 @@
+(footprint "1J24B_mounting_hole" (version 20221018) (generator pcbnew)
+  (layer "F.Cu")
+  (fp_text reference "UNK1J24B0" (at 0 2.54 90) (layer "F.SilkS") hide
+      (effects (font (size 0.941222 0.941222) (thickness 0.074778)) (justify left))
+    (tstamp b2ba25b6-40bc-4c91-adc0-4abe3c38d1b7)
+  )
+  (fp_text value "Val**" (at 2.54 0 90) (layer "F.Fab") hide
+      (effects (font (size 0.752978 0.752978) (thickness 0.059822)) (justify left))
+    (tstamp e8052383-da39-4f02-bfd3-89a93ab2c794)
+  )
+  (pad "" np_thru_hole oval (at 0 0 90) (size 34 6) (drill oval 34 6) (layers "F&B.Cu" "*.Mask") (tstamp 89ad5a77-2710-48ba-9ebf-21830b5d82d1))
+)

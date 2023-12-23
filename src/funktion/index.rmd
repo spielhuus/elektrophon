@@ -1,0 +1,481 @@
+---
+author: "spielhuus"
+categories:
+- module
+date: 2023-05-29
+excerpt: "vlalvlal"
+subtitle: "envelope generator"
+tags:
+- ADSR
+title: funktion
+version: 0
+draft: True
+references: 
+  - { description: "Re-inventing the Voltage Controlled Envelope Generator",
+      title: "Juergen Haible",
+      url: "http://jhaible.com/legacy/tonline_stuff/hj_vc_hadsr.html" }
+  - { description: "EnvyLope -- Voltage Controlled ADSR, LFO, and Glide",
+      title: "Aaron Cram",
+      url: "http://www.synthdiy.com/files/2006/EnvyLope_V3.pdf" }
+  - { description: "Dual Linear CV-ADSR",
+      title: "Marc Bareille",
+      url: "http://m.bareille.free.fr/modular1/adsr/mb_cvadsr2.htm" }
+  - { description: "Dual Linear CV-ADSR By Marc Bareille",
+      title: "electro-music.com",
+      url: "https://electro-music.com/wiki/pmwiki.php?n=Schematics.DualLinearCV-ADSRByMarcBareille" }
+```{elektron, command="erc", input=["main", "mount"]}```
+```{elektron, command="schema", input=["main", "mount"], border=TRUE, theme="Kicad2000"}```
+```{elektron, command="pcb", input=["mount", "panel"], border=TRUE}```
+```{elektron, command="drc", input=["mount"]}```
+```{elektron, command="gerber", input=["mount", "panel"]}```
+---
+
+`` 
+`{elektron, command="bom", input=["main", "mount"], group=TRUE, partlist="../../lib/partlist.yaml"}```
+# theory
+
+```{python echo=FALSE, results="hide", fig.align='center', fig.cap='Figure 2: Input Driver'}
+import sys
+sys.path.append("..")
+sys.path.append("../../lib/python")
+
+from elektron import Circuit, Draw, Element, Label, Line, Dot, Simulation, R, C, Nc, Gnd, Power
+from elektrophon import decouple_tl072
+
+draw = Draw(["/usr/share/kicad/symbols", "../../lib/symbols"])
+
+(draw
+    # core
+    + Element("Q1", "elektrophon:THAT340", unit=1, value="340").mirror('y').rotate(180)
+    + Line().at("Q1", "1").length(3*2.54) + Dot().push() + Line().length(3*2.54)
+    + Element("Q1", "elektrophon:THAT340", unit=3, value="340").anchor(7).rotate(180).mirror('x')
+    + R(draw.next("R"), "10k").at(draw.pop()) + (b_dot := Dot())
+    + Element("Q1", "elektrophon:THAT340", unit=2, value="340").anchor(12).at("Q1", "5").mirror('y')
+    + Element("Q1", "elektrophon:THAT340", unit=4, value="340").anchor(10).at("Q1", "3").rotate(180).mirror('y')
+
+    + Line().at("Q1", "8").up().length(2.54) + Line().right().length(3*2.54) + Dot().push() + Line().tox("Q1", "14") + Line().toy("Q1", "14")
+    + Line().up().length(2.45).at(draw.pop()) + (d_head := Dot()) + Line().right().length(8*2.54)
+
+    + Element("U1", "Amplifier_Operational:TL072", unit=1, value="TL072").anchor(2).mirror('x')
+    + Line().toy("Q1", "12") + R(draw.next("R"), "4.7k").rotate(270).tox("Q1", "12") + Dot()
+    + Line().tox("Q1", "10").dot("end")
+    
+    + Line().at("U1", "3").tox("Q1", "13") + Line().toy("Q1", "13") + Dot()
+    + Line().toy("Q1", "6") + Dot() + Line().down().length(2.54) + Gnd()
+
+    + Line().at(b_dot).right().length(8*2.54)
+    + Element("U1", "Amplifier_Operational:TL072", unit=2, value="TL072").anchor(6).mirror('x')
+    + Gnd().at("U1", "5")
+    
+    + Line().at(b_dot).left().length(2*2.54)
+    + R(draw.next("R"), "33k").rotate(270)
+    + Line().left().length(2.54)
+    + Line().down().length(2.54)
+    + Element("J1", "elektrophon:2N5457", "2N5457", unit=1).anchor(2)
+    + Dot().push()
+    + Line().tox(b_dot)
+    + Dot().push()
+    + Line().tox("U1", "7") + Line().toy("U1", "7")
+    + C(draw.next("C"), "10n").at(draw.pop()).toy(b_dot)
+
+    + Line().at(draw.pop()).down().length(8*2.54) + Line().right().length(2*2.54)
+    + Element("U2", "Amplifier_Operational:TL072", unit=1, value="TL072").anchor(2).mirror('x')
+    + R(draw.next("R"), "100k").rotate(90)
+    + Element("U2", "Amplifier_Operational:TL072", unit=2, value="TL072").anchor(5).mirror('x')
+    + Line().at("U2", "7").up().length(5*2.54) + Dot().push()
+    + R(draw.next("R"), "100k").rotate(270).tox("U2", "6")
+    + Dot().push()
+    + Line().toy("U2", "6")
+    + R(draw.next("R"), "1k").at(draw.pop()).tox("U2", "2").rotate(270) + Line().toy("U2", "2").dot("end")
+
+    + Line().at(draw.pop()).right().length(4*2.54)
+    + Line().up().length(20*2.54) + Dot().push() + Line().up().length(7*2.54) + R(draw.next("R"), "10k").rotate(270).tox(d_head) + Line().toy(d_head)
+
+    # SGO
+#    + Line().at(draw.pop())
+#    + Element("Q10", "Transistor_BJT:BC547", unit=1, value="BC547").anchor(2)
+#    + R(draw.next("R"), "10k").rotate(180).at("Q10", "1") + Power("+15V")
+#    + R(draw.next("R"), "10k").at("Q10", "3") + Power("-15V").rotate(180)
+#    + Line().at("Q10", "1").right().length(2*2.54).dot("start")
+#    + R(draw.next("R"), "10k").rotate(90) 
+#    + Element("U4", "Amplifier_Operational:TL072", unit=1, value="TL072").anchor(2).mirror('x')
+#    + Line().up().length(5*2.54).dot("start") + C(draw.next("C"), "10n").rotate(270).tox("U4", "2") + (s_dot := Dot())
+#    + Line().toy("U4", "2").dot("end")
+    
+
+    + Line().down().length(9*2.54).at("U2", "5").dot("start")
+    + Element("Q5", "Transistor_BJT:BC547", unit=1, value="BC547").anchor(1)
+
+    + Line().at("U2", "3").left().length(2*2.54) + (u2_3_dot := Dot())
+    + Element(draw.next("D"), "Diode:1N4148", "1N4148", unit=1).rotate(180).anchor(1)
+    + Line().left().length(4*2.54) + Dot().push()
+    + Line().left().length(4*2.54) + Dot().push()
+    + Line().left().length(6*2.54)
+    + Element("U3", "Amplifier_Operational:TL072", unit=1, value="TL072").anchor(1).mirror('x')
+    + R(draw.next("R"), "100k").at(draw.pop()).toy("Q5", "2")
+    + Line().tox(draw.peek()) + (diode_dot := Dot()) + Line().up().length(2*2.54)
+    + Element(draw.next("D"), "Diode:1N4148", "1N4148", unit=1).rotate(90) + Line().toy(draw.pop())
+
+    + Line().right().length(11*2.54).at(diode_dot)
+    + Dot().push() + Line() + R(draw.next("R"), "100k").rotate(90) + Line().tox("Q5", "2")
+    + Line().down().length(4*2.25).at(draw.pop()) + Line()
+    + C(draw.next("C"), "47n").rotate(90) + Line().tox("Q5", "3")
+    + Dot().push() + Line().toy("Q5", "3") + Gnd().at(draw.pop())
+
+    + Line().at("Q5", "1").right().length(2*2.54).dot("start")
+    + Element("Q6", "Transistor_BJT:BC557", unit=1, value="BC557").anchor(3).rotate(270)
+    + Line().at("Q6", "1") + R(draw.next("R"), "10k").rotate(90) + Label("SUSTAIN")
+
+    + Line().at(u2_3_dot).down().length(2*2.54) + Dot().push()
+    + R(draw.next("R"), "100k") + Gnd()
+    + R(draw.next("R"), "100k").at(draw.pop()).tox("U2", "1").rotate(90).label("south") + Dot().push() + Line().toy("U2", "1").dot("end")
+    + Line().at(draw.pop()).tox("Q6", "2") + Dot().push()
+    + R(draw.next("R"), "100k")
+
+    + Line().at(draw.pop()).right().length(20*2.54) + Line().up().length(40*2.54) + Line().left().length(28*2.54)
+    + Dot().push() + Line().left().length(2.54)
+    + R(draw.next("R"), "100k").rotate(270)
+    + Element("Q7", "Transistor_BJT:BC557", unit=1, value="BC557").anchor(2).rotate(180).mirror('x')
+    + Line().up().length(4*2.54).at(draw.pop())
+    + Line().left().length(8*2.54)
+    + R(draw.next("R"), "470k").rotate(270)
+    + Element("Q8", "Transistor_BJT:BC547", unit=1, value="BC547").anchor(2).rotate(180)
+    + Line().at("Q7", "3").toy("Q1", "9")
+    + Line().at("Q8", "1").toy("Q1", "9") + Dot().push()
+    + Line().tox("Q7", "3") + Dot() + Line().tox("Q1", "9")
+    + R(draw.next("R"), "2.2k").at(draw.pop()) + Gnd()
+    + Line().up().length(6*2.54).at("Q7", "1")
+    + R(draw.next("R"), "100k").rotate(270)
+    + Label("DECAY").rotate(180)
+    + Line().left().length(5*2.54).at("Q8", "3") + Dot().push()
+    + Line().left().length(2.54)
+    + R(draw.next("R"), "100k").rotate(270)
+    + Label("RELEASE").rotate(180)
+    + R(draw.next("R"), "82k").at(draw.pop()) + Power("-15V").rotate(180)
+
+    + Line().at("Q1", "2").left().length(2*2.54) + Dot().push()
+    + Line().left().length(2*2.54) + Dot().push()
+    + Line().left().length(2*2.54)
+    + R(draw.next("R"), "100k").rotate(270)
+    + Label("ATTACK").rotate(180)
+    + R(draw.next("R"), "150k").at(draw.pop()).label("west") + Power("-15V").rotate(180)
+    + R(draw.next("R"), "2.2k").at(draw.pop()) + Gnd()
+
+    #Voltage divider for comperator
+    + Line().down().at("U3", "3").length(4*2.54) + Line().left().length(2.45) + Dot().push()
+    + R(draw.next("R"), "49.9k").rotate(180).label("west") + Power("+15V")
+    + R(draw.next("R"), "10k").at(draw.pop()).label("west") + Gnd()
+
+    + R(draw.next("R"), "100k").rotate(270).at("U3", "2") + Line().left().length(2*2.54) + Dot().push()
+    + Line().left().length(2*2.54) + Label("GATE").rotate(180)
+    + R(draw.next("R"), "100k").at(draw.pop()).rotate(180) + Power("+15V")
+    + Line().up().length(5*2.54).at("U3", "2").dot("start") + Line().right().length(4*2.54)
+    + Element("Q9", "Transistor_BJT:BC547", unit=1, value="BC547").anchor(1).rotate(270).mirror('y')
+    + R(draw.next("R"), "47k").at("Q9", "3") + Power("-15V").rotate(180)
+    + R(draw.next("R"), "100k").at("Q9", "2").rotate(180).toy("J1", "3") + Dot().push()
+    + Line().right().length(2*2.54) + R(draw.next("R"), "100k").rotate(90)
+    + Line().right().length(2*2.54) + Dot().push()
+    + Line().right().length(4*2.54) + Dot().push()
+    + Line().tox("J1", "3")
+    + C(draw.next("C"), "22n").at(draw.pop()) + Gnd() #Power("-15V").rotate(180)
+    + R(draw.next("R"), "100k").at(draw.pop()) + Gnd() #Power("-15V").rotate(180)
+
+    + Line().at(draw.pop()).left().length(2*2.54)
+    + Element("U3", "Amplifier_Operational:TL072", unit=2, 
+          value="TL072", Spice_Primitive="X", Spice_Model="TL072c").anchor(7)
+
+    + Gnd().at("U3", "6")
+    + Line().at("U3", "5").left().length(3*2.54) + Dot().push()
+    + Line().left().length(3*2.54) + Dot().push()
+    + C(draw.next("C"), "47n").rotate(270)
+    + Line().left().length(1*2.54) + Dot().push()
+    + Line().left().length(1*2.54)
+    + Element(draw.next("D"), "Diode:1N4148", "1N4148", unit=1).rotate(180).anchor(1)
+    + Label("TRIGGER").rotate(180)
+    + R(draw.next("R"), "100k").at(draw.pop()) + Power("-15V").rotate(180)
+    + R(draw.next("R"), "470k").at(draw.pop()) + Power("-15V").rotate(180)
+    + R(draw.next("R"), "100k").at(draw.pop()) + Gnd()
+
+)
+
+(draw
+    #+ Element("U4", "Amplifier_Operational:TL072", unit=2, value="TL072")
+    + Element("Q1", "elektrophon:THAT340", "340", unit=5, on_schema="no")
+    + Nc().at("Q1", "4") + Nc().at("Q1", "11")
+)
+
+decouple_tl072(draw, "U1", ((10*2.54, 75*2.54)), "no")
+decouple_tl072(draw, "U2", ((21*2.54, 75*2.54)), "no")
+decouple_tl072(draw, "U3", ((29*2.54, 75*2.54)), "no")
+#decouple_tl072(draw, "U4", ((29*2.54, 75*2.54)), "no")
+
+#set the spice models
+draw.property("U[1..]", "Spice_Primitive", "X", 2); 
+draw.property("U[1..]", "Spice_Model", "TL072c", 2); 
+draw.property("Q[1..]", "Spice_Netlist_Enabled", "Y", 2); 
+draw.property("Q1", "Spice_Primitive", "X", 2); 
+draw.property("Q[2..]", "Spice_Primitive", "Q", 2); 
+draw.property("Q1", "Spice_Model", "THAT340", 2); 
+draw.property("Q[2..]", "Spice_Model", "BC556B", 2); 
+draw.property("Q2", "Spice_Model", "BC846B", 2); 
+draw.property("Q4", "Spice_Model", "BC846B", 2); 
+draw.property("Q5", "Spice_Model", "BC846B", 2); 
+draw.property("Q[8..9]", "Spice_Model", "BC846B", 2); 
+draw.property("D[1..]", "Spice_Netlist_Enabled", "Y", 2); 
+draw.property("D[1..]", "Spice_Primitive", "D", 2); 
+draw.property("D[1..]", "Spice_Model", "D1N4148", 2); 
+draw.property("D[1..]", "Spice_Node_Sequence", "2 1", 2); 
+draw.property("J1", "Spice_Primitive", "J", 2); 
+draw.property("J1", "Spice_Model", "J201", 2); 
+draw.property("J1", "Spice_Node_Sequence", "1 3 2", 2); 
+
+circuit = draw.circuit(["../../lib/spice"])
+circuit.voltage("1", "+15V", "GND", "DC 15V")
+circuit.voltage("2", "-15V", "GND", "DC -15V")
+circuit.voltage("3", "SUSTAIN", "GND", "DC 6V")
+circuit.voltage("4", "RELEASE", "GND", "DC 8V")
+circuit.voltage("5", "ATTACK", "GND", "DC 6V")
+circuit.voltage("6", "DECAY", "GND", "DC 5V")
+circuit.voltage("7", "TRIGGER", "GND", "0V") #"5V PULSE(15V -15V 0 0 0 100ms 500ms)")
+circuit.voltage("8", "GATE", "GND", "5V PULSE(0V 5V 2ms 0 0 20ms)")
+circuit.control('''
+tran 50us 0.03s
+''')
+
+print(circuit)
+print(draw.erc())
+
+simulation = Simulation(circuit)
+funktion = simulation.run()
+funktion['tran1']['time'] = [x * 1000 for x in funktion['tran1']['time']]
+
+draw.plot(scale=6, netlist=False, theme='BlackWhite')
+```
+
+```{d3, element="tanh_triangle", x="time", y="gate,V(8)", data="funktion.tran1", width="600", height="400", fig.align='center', fig.cap="Figure 2: ADSR simulation", yLabel="Amplitude [V]", xLabel="Time [ms]"}```
+
+# backup
+
+```{python echo=FALSE, results="hide", fig.align='center', fig.cap='Figure 2: Input Driver'}
+import sys
+sys.path.append("..")
+
+from elektron import Circuit, Draw, Element, Label, Line, Dot, Simulation, R, C, Nc, Gnd, Power
+
+draw = Draw(["/usr/share/kicad/symbols", "../../lib/symbols"])
+
+(draw
+    # core
+    + Element("Q1", "elektrophon:THAT340", unit=1, value="340").mirror('y').rotate(180)
+    + Line().at("Q1", "1").length(3*2.54) + Dot().push() + Line().length(3*2.54)
+    + Element("Q1", "elektrophon:THAT340", unit=3, value="340").anchor(7).rotate(180).mirror('x')
+    + R(draw.next("R"), "10k").at(draw.pop()) + (b_dot := Dot())
+    + Element("Q1", "elektrophon:THAT340", unit=2, value="340").anchor(12).at("Q1", "5").mirror('y')
+    + Element("Q1", "elektrophon:THAT340", unit=4, value="340").anchor(10).at("Q1", "3").rotate(180).mirror('y')
+
+    + Line().at("Q1", "8").up().length(2.54) + Line().right().length(3*2.54) + Dot().push() + Line().tox("Q1", "14") + Line().toy("Q1", "14")
+    + Line().up().length(2.45).at(draw.pop()) + (d_head := Dot()) + Line().right().length(8*2.54)
+
+    + Element("U1", "Amplifier_Operational:TL072", unit=1, value="TL072").anchor(2).mirror('x')
+    + Line().toy("Q1", "12") + R(draw.next("R"), "4.7k").rotate(270).tox("Q1", "12") + Dot()
+    + Line().tox("Q1", "10").dot("end")
+    
+    + Line().at("U1", "3").tox("Q1", "13") + Line().toy("Q1", "13") + Dot()
+    + Line().toy("Q1", "6") + Dot() + Line().down().length(2.54) + Gnd()
+
+    + Line().at(b_dot).right().length(8*2.54)
+    + Element("U1", "Amplifier_Operational:TL072", unit=2, value="TL072").anchor(6).mirror('x')
+    + Gnd().at("U1", "5")
+    
+    + Line().at(b_dot).left().length(2*2.54)
+    + R(draw.next("R"), "33k").rotate(270)
+    + Line().left().length(2.54)
+    + Line().down().length(2.54)
+    + Element("J1", "elektrophon:2N5457", "2N5457", unit=1).anchor(2)
+    + Dot().push()
+    + Line().tox(b_dot)
+    + Dot().push()
+    + Line().tox("U1", "7") + Line().toy("U1", "7")
+    + C(draw.next("C"), "10n").at(draw.pop()).toy(b_dot)
+
+    + Line().at(draw.pop()).down().length(8*2.54) + Line().right().length(2*2.54)
+    + Element("U2", "Amplifier_Operational:TL072", unit=1, value="TL072").anchor(2).mirror('x')
+    + R(draw.next("R"), "100k").rotate(90)
+    + Element("U2", "Amplifier_Operational:TL072", unit=2, value="TL072").anchor(5).mirror('x')
+    + Line().at("U2", "7").up().length(5*2.54) + Dot().push()
+    + R(draw.next("R"), "100k").rotate(270).tox("U2", "6")
+    + Dot().push()
+    + Line().toy("U2", "6")
+    + R(draw.next("R"), "1k").at(draw.pop()).tox("U2", "2").rotate(270) + Line().toy("U2", "2").dot("end")
+
+    + Line().at(draw.pop()).right().length(4*2.54)
+    + Line().up().length(20*2.54) + Dot().push() + Line().up().length(7*2.54) + R(draw.next("R"), "10k").rotate(270).tox(d_head) + Line().toy(d_head)
+
+    # SGO
+    + Line().at(draw.pop())
+    + Element("Q10", "Transistor_BJT:BC547", unit=1, value="BC547").anchor(2)
+    + R(draw.next("R"), "10k").rotate(180).at("Q10", "1") + Power("+15V")
+    + R(draw.next("R"), "10k").at("Q10", "3") + Power("-15V").rotate(180)
+    + Line().at("Q10", "1").right().length(2*2.54).dot("start")
+    + R(draw.next("R"), "10k").rotate(90) 
+    + Element("U4", "Amplifier_Operational:TL072", unit=1, value="TL072").anchor(2).mirror('x')
+    + Line().up().length(5*2.54).dot("start") + C(draw.next("C"), "10n").rotate(270).tox("U4", "2") + (s_dot := Dot())
+    + Line().toy("U4", "2").dot("end")
+    
+
+    + Line().down().length(9*2.54).at("U2", "5").dot("start")
+    + Element("Q5", "Transistor_BJT:BC547", unit=1, value="BC547").anchor(1)
+
+    + Line().at("U2", "3").left().length(2*2.54) + (u2_3_dot := Dot())
+    + Element(draw.next("D"), "Diode:1N4148", "1N4148", unit=1).rotate(180).anchor(1)
+    + Line().left().length(4*2.54) + Dot().push()
+    + Line().left().length(4*2.54) + Dot().push()
+    + Line().left().length(4*2.54)
+    + Element("U3", "Amplifier_Operational:TL072", unit=1, value="TL072").anchor(1).mirror('x')
+    + R(draw.next("R"), "100k").at(draw.pop()).toy("Q5", "2")
+    + Line().tox(draw.peek()) + (diode_dot := Dot()) + Line().up().length(2*2.54)
+    + Element(draw.next("D"), "Diode:1N4148", "1N4148", unit=1).rotate(90) + Line().toy(draw.pop())
+
+    + Line().right().length(11*2.54).at(diode_dot)
+    + Dot().push() + Line() + R(draw.next("R"), "100k").rotate(90) + Line().tox("Q5", "2")
+    + Line().down().length(4*2.25).at(draw.pop()) + Line()
+    + C(draw.next("C"), "47n").rotate(90) + Line().tox("Q5", "3")
+    + Dot().push() + Line().toy("Q5", "3") + Gnd().at(draw.pop())
+
+    + Line().at("Q5", "1").right().length(2*2.54).dot("start")
+    + Element("Q6", "Transistor_BJT:BC557", unit=1, value="BC557").anchor(3).rotate(270)
+    + Line().at("Q6", "1") + R(draw.next("R"), "10k").rotate(90) + Label("SUSTAIN")
+
+    + Line().at(u2_3_dot).down().length(2*2.54) + Dot().push()
+    + R(draw.next("R"), "100k") + Gnd()
+    + R(draw.next("R"), "100k").at(draw.pop()).tox("U2", "1").rotate(90).label("south") + Dot().push() + Line().toy("U2", "1").dot("end")
+    + Line().at(draw.pop()).tox("Q6", "2") + Dot().push()
+    + R(draw.next("R"), "100k")
+
+    + Line().at(draw.pop()).right().length(20*2.54) + Line().up().length(40*2.54) + Line().left().length(30*2.54)
+    + Dot().push() + Line().left().length(2.54)
+    + R(draw.next("R"), "100k").rotate(270)
+    + Element("Q7", "Transistor_BJT:BC557", unit=1, value="BC557").anchor(2).rotate(180).mirror('x')
+    + Line().up().length(4*2.54).at(draw.pop())
+    + Line().left().length(8*2.54)
+    + R(draw.next("R"), "470k").rotate(270)
+    + Element("Q8", "Transistor_BJT:BC547", unit=1, value="BC547").anchor(2).rotate(180)
+    + Line().at("Q7", "3").toy("Q1", "9")
+    + Line().at("Q8", "1").toy("Q1", "9") + Dot().push()
+    + Line().tox("Q7", "3") + Dot() + Line().tox("Q1", "9")
+    + R(draw.next("R"), "2.2k").at(draw.pop()) + Gnd()
+    + Line().up().length(6*2.54).at("Q7", "1")
+    + R(draw.next("R"), "100k").rotate(270)
+    + Label("DECAY").rotate(180)
+    + Line().left().length(5*2.54).at("Q8", "3") + Dot().push()
+    + Line().left().length(2.54)
+    + R(draw.next("R"), "100k").rotate(270)
+    + Label("RELEASE").rotate(180)
+    + R(draw.next("R"), "82k").at(draw.pop()) + Power("-15V").rotate(180)
+
+    + Line().at("Q1", "2").left().length(2*2.54) + Dot().push()
+    + Line().left().length(2*2.54) + Dot().push()
+    + Line().left().length(2*2.54)
+    + R(draw.next("R"), "100k").rotate(270)
+    + Label("ATTACK").rotate(180)
+    + R(draw.next("R"), "150k").at(draw.pop()).label("west") + Power("-15V").rotate(180)
+    + R(draw.next("R"), "2.2k").at(draw.pop()) + Gnd()
+
+    + Gnd().at("U3", "3")
+    + R(draw.next("R"), "100k").rotate(270).at("U3", "2") + Line().left().length(2*2.54) + Dot().push()
+    + Line().left().length(2*2.54) + Label("GATE").rotate(180)
+    + R(draw.next("R"), "100k").at(draw.pop()).rotate(180) + Power("+15V")
+    + Line().up().length(5*2.54).at("U3", "2").dot("start") + Line().right().length(2*2.54)
+    + Element("Q9", "Transistor_BJT:BC547", unit=1, value="BC547").anchor(1).rotate(270).mirror('y')
+    + R(draw.next("R"), "47k").at("Q9", "3") + Power("-15V").rotate(180)
+    + R(draw.next("R"), "100k").at("Q9", "2").rotate(180).toy("J1", "3") + Dot().push()
+    + Line().right().length(2*2.54) + R(draw.next("R"), "100k").rotate(90)
+    + Line().right().length(2*2.54) + Dot().push()
+    + Line().right().length(4*2.54) + Dot().push()
+    + Line().tox("J1", "3")
+    + C(draw.next("C"), "22n").at(draw.pop()) + Power("-15V").rotate(180)
+    + R(draw.next("R"), "100k").at(draw.pop()) + Power("-15V").rotate(180)
+
+    + Line().at(draw.pop()).left().length(2*2.54)
+    + Element("U3", "Amplifier_Operational:TL072", unit=2, 
+          value="TL072", Spice_Primitive="X", Spice_Model="TL072c").anchor(7)
+
+    + Gnd().at("U3", "6")
+    + Line().at("U3", "5").left().length(3*2.54) + Dot().push()
+    + Line().left().length(3*2.54) + Dot().push()
+    + C(draw.next("C"), "47n").rotate(270)
+    + Line().left().length(1*2.54) + Dot().push()
+    + Line().left().length(1*2.54)
+    + Element(draw.next("D"), "Diode:1N4148", "1N4148", unit=1).rotate(180).anchor(1)
+    + Label("TRIGGER").rotate(180)
+    + R(draw.next("R"), "100k").at(draw.pop()) + Power("-15V").rotate(180)
+    + R(draw.next("R"), "470k").at(draw.pop()) + Power("-15V").rotate(180)
+    + R(draw.next("R"), "100k").at(draw.pop()) + Gnd()
+
+)
+
+(draw
+    + Element("U4", "Amplifier_Operational:TL072", unit=2, value="TL072")
+    + Element("Q1", "elektrophon:THAT340", "340", unit=5, on_schema="no")
+    + Nc().at("Q1", "4") + Nc().at("Q1", "11")
+)
+
+decouple_tl072(draw, "U1", ((10*2.54, 75*2.54)), "no")
+decouple_tl072(draw, "U2", ((21*2.54, 75*2.54)), "no")
+decouple_tl072(draw, "U3", ((29*2.54, 75*2.54)), "no")
+decouple_tl072(draw, "U4", ((29*2.54, 75*2.54)), "no")
+
+#set the spice models
+draw.property("U[1..]", "Spice_Primitive", "X", 2); 
+draw.property("U[1..]", "Spice_Model", "TL072c", 2); 
+draw.property("Q[1..]", "Spice_Netlist_Enabled", "Y", 2); 
+draw.property("Q1", "Spice_Primitive", "X", 2); 
+draw.property("Q[2..]", "Spice_Primitive", "Q", 2); 
+draw.property("Q1", "Spice_Model", "THAT340", 2); 
+draw.property("Q[2..]", "Spice_Model", "BC556B", 2); 
+draw.property("Q2", "Spice_Model", "BC846B", 2); 
+draw.property("Q4", "Spice_Model", "BC846B", 2); 
+draw.property("Q5", "Spice_Model", "BC846B", 2); 
+draw.property("Q[8..9]", "Spice_Model", "BC846B", 2); 
+draw.property("D[1..]", "Spice_Netlist_Enabled", "Y", 2); 
+draw.property("D[1..]", "Spice_Primitive", "D", 2); 
+draw.property("D[1..]", "Spice_Model", "D1N4148", 2); 
+draw.property("D[1..]", "Spice_Node_Sequence", "2 1", 2); 
+draw.property("J1", "Spice_Primitive", "J", 2); 
+draw.property("J1", "Spice_Model", "J201", 2); 
+draw.property("J1", "Spice_Node_Sequence", "1 3 2", 2); 
+
+circuit = draw.circuit(["../../lib/spice"])
+circuit.voltage("1", "+15V", "GND", "DC 15V")
+circuit.voltage("2", "-15V", "GND", "DC -15V")
+circuit.voltage("3", "SUSTAIN", "GND", "DC 6V")
+circuit.voltage("4", "RELEASE", "GND", "DC 8V")
+circuit.voltage("5", "ATTACK", "GND", "DC 6V")
+circuit.voltage("6", "DECAY", "GND", "DC 5V")
+circuit.voltage("7", "TRIGGER", "GND", "0V") #"5V PULSE(15V -15V 0 0 0 100ms 500ms)")
+circuit.voltage("8", "GATE", "GND", "5V PULSE(0V 5V 2ms 0 0 20ms)")
+circuit.control('''
+tran 50us 0.03s
+''')
+
+print(circuit)
+print(draw.erc())
+
+simulation = Simulation(circuit)
+funktion = simulation.run()
+funktion['tran1']['time'] = [x * 1000 for x in funktion['tran1']['time']]
+
+draw.plot(scale=6, netlist=False, theme='BlackWhite')
+```
+# build
+
+{{< bom >}}
+
+{{< callout summe main panel >}}
+
+{{< report summe main >}}
+
+{{< image "/summe-failure.jpg" "Figure 4: Opamp Failure" >}}
+
+# Usage
+

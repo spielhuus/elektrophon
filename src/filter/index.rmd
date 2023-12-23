@@ -1,0 +1,355 @@
+---
+date: "2023-02-12"
+author: "spielhuus"
+excerpt: ""
+subtitle: ""
+tags:
+- grundlage
+categories:
+- article
+title: "das filter"
+references: 
+  - { description: "EFM Synthesizers SEM type VCF",
+      title: "VCF1f",
+      url: "http://www.modular.fonik.de/files/EFMforum/orgEFMfiles/vcf1f.pdf" }
+version: 0
+---
+
+```{python echo=FALSE, results="nohide", fig.align='center', fig.cap='Figure 2: digital logic'}
+from elektron import Circuit, Draw, Element, Label, Line, Dot, Simulation
+
+draw = Draw(["/usr/share/kicad/symbols"])
+draw.pos((25.4, 25.4))
+
+(draw
+    + Element("U1", "Amplifier_Operational:TL072", unit=1, 
+              value="TL072", Spice_Primitive="X", Spice_Model="TL072c").mirror('x')
+    + Element("R4", "Device:R", value="10k").rotate(90).at("U1", "1")
+    + Element("U1", "Amplifier_Operational:TL072", unit=2, 
+              value="TL072", Spice_Primitive="X", Spice_Model="TL072c").anchor(2).mirror('x')
+    + Element("R5", "Device:R", value="10k").rotate(90)
+    + Element("U2", "Amplifier_Operational:TL072", unit=1, 
+              value="TL072", Spice_Primitive="X", Spice_Model="TL072c").anchor(2).mirror('x')
+
+    + Dot().at("U1", "1")
+    + Line().up().length(5*2.54)
+    + (hp := Dot())
+    + Element("R3", "Device:R", value="10k").tox("U1", "2").rotate(270)
+    + (fb1 := Dot())
+    + Line().toy("U1", "2")
+
+    + Dot().at("U1", "7")
+    + Line().up().length(5*2.54)
+    + (bp := Dot())
+    + Element("C1", "Device:C", value="10n").tox("U1", "6").rotate(270)
+    + Line().toy("U1", "6")
+    + Dot()
+
+    + Dot().at("U2", "1")
+    + Line().up().length(5*2.54)
+    + (fb2 := Dot())
+    + Element("C2", "Device:C", value="10n").tox("U2", "2").rotate(270)
+    + Line().toy("U2", "2")
+    + Dot()
+
+    + Line().up().length(5*2.54).at(fb2)
+    + Element("R6", "Device:R", value="10k").tox(fb1).rotate(270)
+    + Line().toy(fb1)
+
+    + Element("GND", "power:GND", value="GND").at("U1", "5")
+    + Element("GND", "power:GND", value="GND").at("U2", "3")
+
+    + Line().down().length(5*2.54).at("U1", "7")
+    + Element("R2", "Device:R", value="10k").tox("U1", "3").rotate(270)
+    + Line().toy("U1", "3")
+    + Dot()
+    + Line().left().length(2.54)
+    + Element("R7", "Device:R", value="20k")
+    + Element("GND", "power:GND", value="GND")
+
+    + Dot().at("U1", "2")
+    + Element("R1", "Device:R", value="10k").rotate(270)
+    + Label("IN").rotate(180)
+
+    + Line().right().length(2.54).at("U2", "1")
+    + Label("LP")
+    + Line().right().length(2.54).at(hp)
+    + Label("HP")
+    + Line().right().length(2.54).at(bp)
+    + Label("BP")
+
+
+    + Element("U2", "Amplifier_Operational:TL072", unit=2, 
+              value="TL072", Spice_Primitive="X", Spice_Model="TL072c", on_schema="yes").at((60, 100))
+    + Element("U1", "Amplifier_Operational:TL072", unit=3, 
+              value="TL072", Spice_Primitive="X", Spice_Model="TL072c").at((80, 100))
+    + Element("-15V", "power:-15V", value="-15V", on_schema="yes").at("U1", "4").rotate(180)
+    + Element("+15V", "power:+15V", value="+15V", on_schema="yes").at("U1", "8")
+    + Element("U2", "Amplifier_Operational:TL072", unit=3, 
+              value="TL072", Spice_Primitive="X", Spice_Model="TL072c", on_schema="yes").at((100, 100))
+    + Element("-15V", "power:-15V", value="-15V", on_schema="yes").at("U2", "4").rotate(180)
+    + Element("+15V", "power:+15V", value="+15V", on_schema="yes").at("U2", "8")
+)
+
+print(draw.erc())
+
+circuit = draw.circuit(['lib/spice'])
+circuit.voltage("1", "+15V", "GND", "DC +15V")
+circuit.voltage("2", "-15V", "GND", "DC -15V")
+circuit.voltage("3", "IN", "GND", "DC 0.1V AC 0.1V")
+
+circuit.control('''
+ac dec 30 1 1meg
+''')
+
+simulation = Simulation(circuit)
+svf = simulation.run()
+
+draw.plot(scale=6, netlist=False, theme='BlackWhite')
+```
+
+```{d3 element="svf_ac", x="frequency", y="bp,hp,lp", data="svf.ac1", width="600", height="400", fig.align="center", xType="scaleLog", fig.cap="Figure 7: State variable filter simulation" yLabel="Amplitude [V]", xLabel="Frequency [Hz]"}```
+
+# SEM filter
+
+
+```{python echo=FALSE, results="nohide", fig.align='center', fig.cap='Figure 2: digital logic'}
+from elektron import Circuit, Draw, Element, Label, Line, Dot, Simulation
+
+draw = Draw(["/usr/share/kicad/symbols"])
+draw.pos((25.4, 25.4))
+
+(draw
+    + Element("U1", "Amplifier_Operational:TL072", unit=1, 
+              value="TL072", Spice_Primitive="X", Spice_Model="TL072c").mirror('x')
+
+    + Element("R8", "Device:R", value="100k").rotate(90).at("U1", "1")
+    + Line().right().length(2.54)
+    + (vd1 := Dot())
+    + Line().right().length(3*2.54)
+    + Element("U2", "Amplifier_Operational:LM13700", unit=1, 
+              value="LM13700", Spice_Primitive="X", Spice_Model="LM13700d").anchor(14).mirror('x')
+    + Line().right().length(2.54).at("U2", "12")
+    + (C1 := Dot())
+    + Line().right().length(2.54)
+    + Element("U2", "Amplifier_Operational:LM13700", unit=2, 
+              value="LM13700", Spice_Primitive="X", Spice_Model="LM13700d").anchor(10)
+
+
+    + Element("R10", "Device:R", value="100k").rotate(90).at("U2", "9")
+    + Line().right().length(2.54)
+    + (vd2 := Dot())
+    + Line().right().length(3*2.54)
+    + Element("U2", "Amplifier_Operational:LM13700", unit=3, 
+              value="LM13700", Spice_Primitive="X", Spice_Model="LM13700d").anchor(14).mirror('x')
+    + Line().right().length(2.54).at("U2", "5")
+    + (C2 := Dot())
+    + Line().right().length(2.54)
+    + Element("U2", "Amplifier_Operational:LM13700", unit=4, 
+              value="LM13700", Spice_Primitive="X", Spice_Model="LM13700d").anchor(7)
+    
+    + Element("R9", "Device:R", value="220").at(vd1)
+    + Element("GND", "power:GND", value="GND")
+    + Element("R11", "Device:R", value="220").at(vd2)
+    + Element("GND", "power:GND", value="GND")
+    + Element("C3", "Device:C", value="220p").at(C1)
+    + Element("GND", "power:GND", value="GND")
+    + Element("C4", "Device:C", value="220p").at(C2)
+    + Element("GND", "power:GND", value="GND")
+    + Element("GND", "power:GND", value="GND").at("U2", "13")
+    + Element("GND", "power:GND", value="GND").at("U2", "4")
+
+    + Dot().at("U1", "1")
+    + Line().up().length(5*2.54).at("U1", "1")
+    + Element("R6", "Device:R", value="100k").tox("U1", "2").rotate(270)
+    + (fb1 := Dot())
+    + Line().toy("U1", "2")
+    + (IN := Dot())
+
+    + Line().right().length(2.54).at("U2", "8")
+    + (OUT := Dot())
+    + Line().up().length(13*2.54)
+    + Element("R7", "Device:R", value="100k").tox("U1", "2").rotate(270).tox(fb1)
+    + Line().toy(fb1)
+    + Element("R12", "Device:R", value="10k").at(OUT)
+    + Element("-15V", "power:-15V", value="-15V")
+    
+    + (RES := Dot().at("U2", "9"))
+    + Line().down().length(14*2.54)
+    + (RES1 := Dot())
+    + Element("R17", "Device:R", value="100k").rotate(270)
+    + Line().left().length(2.54)
+    + (RES := Dot())
+    + Line().left().length(2*2.54)
+    + Element("U3", "Amplifier_Operational:LM13700", unit=1, 
+              value="LM13700", Spice_Primitive="X", Spice_Model="LM13700d").anchor(14).rotate(180)
+    + Line().left().length(2.54).at("U3", "12")
+    + (RES2 := Dot())
+    + Line().left().length(2.54)
+    + Element("U3", "Amplifier_Operational:LM13700", unit=2, 
+              value="LM13700", Spice_Primitive="X", Spice_Model="LM13700d").anchor(10).rotate(180)
+    + Line().left().length(2.54).at("U3", "9")
+    + (RES3 := Dot())
+    + Line().left().length(2.54)
+    + Element("R4", "Device:R", value="100k").rotate(270).tox("U1", "3")
+    + Line().toy("U1", "3")
+
+    + Dot().at("U1", "3")
+    + Line().left().length(3*2.54)
+    + Element("R100", "Device:R", value="100k")
+    + Element("GND", "power:GND", value="GND")
+
+    + Element("R1", "Device:R", value="100k").rotate(270).at("U1", "2")
+    + Label("IN").rotate(180)
+
+
+    + Element("R16", "Device:R", value="10k").at(RES1)
+    + Element("-15V", "power:-15V", value="-15V").rotate(180)
+
+    + Element("R18", "Device:R", value="220").at(RES)
+    + Element("GND", "power:GND", value="GND")
+    + Element("R19", "Device:R", value="33k").at(RES2)
+    + Element("GND", "power:GND", value="GND")
+    + Element("R20", "Device:R", value="10k").at(RES3)
+    + Element("-15V", "power:-15V", value="-15V").rotate(180)
+    + Element("GND", "power:GND", value="GND").at("U3", "13")
+    + Label("B").at("U2", "16")
+    + Label("B").at("U2", "1")
+    + Label("A").at("U3", "16").rotate(180)
+    # + Nc().at("U2", "15")
+    # + Nc().at("U2", "2")
+    # + Nc().at("U3", "15")
+)
+
+draw.pos((4*2.54, 40*2.54))
+(draw
+    + Element("Q1", "Transistor_BJT:BC557", unit=1, value="BC547",
+                   Spice_Netlist_Enabled="Y",
+                   Spice_Primitive="Q",
+                   Spice_Model="BC556B").anchor(3).mirror('x')
+    + Line().right().length(2*2.54).at("Q1", "3")
+    + (CV := Dot())
+    + Line().right().length(2*2.54)
+    + Element("Q2", "Transistor_BJT:BC557", unit=1, value="BC547",
+                   Spice_Netlist_Enabled="Y",
+                   Spice_Primitive="Q",
+                   Spice_Model="BC556B").anchor(3).rotate(180)
+    + Element("R24", "Device:R", value="10k").at(CV).rotate(180)
+    + Element("+15V", "power:+15V", value="+15V")
+    + Element("GND", "power:GND", value="GND").at("Q2", "2")
+    + Element("-15V", "power:-15V", value="-15V").at("Q2", "1").rotate(180)
+
+
+    + Element("R25", "Device:R", value="10k").at("Q1", "1")
+    + Label("A").rotate(270)
+
+    + Line().left().length(2.54).at("Q1", "2")
+    + (RES := Dot())
+    + Element("R21", "Device:R", value="100k").rotate(270)
+    + Label("RES").rotate(180)
+    + Element("R23", "Device:R", value="1k").at(RES)
+    + Element("GND", "power:GND", value="GND")
+
+)
+
+draw.pos((20*2.54, 40*2.54))
+(draw
+    + Element("U1", "Amplifier_Operational:TL072", unit=2, 
+              value="TL072", Spice_Primitive="X", Spice_Model="TL072c").mirror('x')
+
+    + Line().right().length(2.54).at("U1", "7")
+    + Element("R31", "Device:R", value="100k").rotate(90)
+    + Line().right().length(2.54)
+    + (RES := Dot())
+    + Line().right().length(2.54)
+    + Element("Q3", "Transistor_BJT:BC557", unit=1, value="BC547",
+                   Spice_Netlist_Enabled="Y",
+                   Spice_Primitive="Q",
+                   Spice_Model="BC556B").anchor(2).mirror('x')
+    + Line().right().length(2*2.54).at("Q3", "3")
+    + (CV := Dot())
+    + Line().right().length(2*2.54)
+    + Element("Q4", "Transistor_BJT:BC557", unit=1, value="BC547",
+                   Spice_Netlist_Enabled="Y",
+                   Spice_Primitive="Q",
+                   Spice_Model="BC556B").anchor(3).rotate(180)
+    + Element("R33", "Device:R", value="10k").at(CV).rotate(180)
+    + Element("+15V", "power:+15V", value="+15V")
+    + Element("GND", "power:GND", value="GND").at("Q4", "2")
+    + Element("GND", "power:GND", value="GND").at("Q4", "1")
+    #+ Element("-15V", "power:-15V", value="-15V").at("Q4", "1").rotate(180)
+
+    + Element("R34", "Device:R", value="10k").at("Q3", "1")
+    + Label("B").rotate(270)
+
+    + Element("R32", "Device:R", value="1k").at(RES)
+    + Element("GND", "power:GND", value="GND")
+
+    + Dot().at("U1", "7")
+    + Line().up().length(5*2.54)
+    + Element("R30", "Device:R", value="100k").rotate(270).tox("U1", "6")
+    + Line().toy("U1", "6")
+    + Dot()
+
+    + Element("R26", "Device:R", value="100k").rotate(270)
+    + Label("CV").rotate(180)
+    
+    + Element("GND", "power:GND", value="GND").at("U1", "5")
+)
+
+(draw
+  + Label("HP").at("U1", "1").rotate(270)
+  + Label("BP").at("U2", "9").rotate(90)
+  + Label("LP").at("R12", "1")
+)
+
+(draw
+  + Element("U2", "Amplifier_Operational:LM13700", value="LM13700", unit=5, Spice_Primitive="X", Spice_Model="LM13700d", on_schema="no").at((80.0, 142.74))
+  + Element("+15V", "power:+15V", value="+15V", unit=1, on_schema="no").at("U2", "11")
+  + Element("-15V", "power:-15V", value="-15V", unit=1, on_schema="no").at("U2", "6").rotate(180)
+  
+  + Element("U3", "Amplifier_Operational:LM13700", unit=3, 
+            value="LM13700", Spice_Primitive="X", Spice_Model="LM13700d", on_schema="no").at((20, 140))
+  + Element("U3", "Amplifier_Operational:LM13700", unit=4, 
+            value="LM13700", Spice_Primitive="X", Spice_Model="LM13700d", on_schema="no").at((40, 140))
+  + Element("U3", "Amplifier_Operational:LM13700", value="LM13700", unit=5, Spice_Primitive="X", Spice_Model="LM13700d", on_schema="no").at((60.0, 142.74))
+  + Element("+15V", "power:+15V", value="+15V", unit=1, on_schema="no").at("U3", "11")
+  + Element("-15V", "power:-15V", value="-15V", unit=1, on_schema="no").at("U3", "6").rotate(180)
+  
+  + Element("U1", "Amplifier_Operational:TL072", value="TL072", unit=3, Spice_Primitive="X", Spice_Model="TL072c", on_schema="no").at((100.0, 140.0))
+  + Element("+15V", "power:+15V", value="+15V", unit=1, on_schema="no").at("U1", "8")
+  + Element("-15V", "power:-15V", value="-15V", unit=1, on_schema="no").at("U1", "4").rotate(180)
+)
+print(draw.erc())
+
+circuit = draw.circuit(['lib/spice'])
+circuit.voltage("1", "+15V", "GND", "DC +15V")
+circuit.voltage("2", "-15V", "GND", "DC -15V")
+circuit.voltage("3", "IN", "GND", "AC 5V SIN(0 2.5V 1000)")
+circuit.voltage("4", "CV", "GND", "DC 5V")
+circuit.voltage("5", "RES", "GND", "DC -5V")
+
+circuit.control('''
+let r_act = -15V
+let r_step = 0.5V
+let r_stop = 15V
+while r_act le r_stop
+  alter @V4[dc] r_act
+  ac dec 30 1 1meg
+  tran 1us 2ms
+  let r_act = r_act + r_step
+end
+''')
+
+print(circuit)
+
+simulation = Simulation(circuit)
+sem = simulation.run()
+
+draw.plot(scale=6, netlist=True, theme='BlackWhite')
+```
+
+```{d3 element="sem_ac", x="frequency", yRange="bp,hp,lp", data="sem.ac", width="600", height="400", fig.align="center", xType="scaleLog", fig.cap="Figure 7: State variable filter simulation" yLabel="Amplitude [V]", xLabel="Frequency [Hz]"}```
+
+```{d3 element="sem_tran", x="time", yRange="bp,hp,lp", data="sem.tran", width="600", height="400", fig.align="center", fig.cap="Figure 7: State variable filter simulation" yLabel="Amplitude [V]", xLabel="Frequency [Hz]"}```
+

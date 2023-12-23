@@ -1,0 +1,242 @@
+---
+author: "spielhuus"
+categories:
+- article
+date: 2022-05-01
+excerpt: "sawtooth animation creates full sounds from a single oszillator"
+description: "sawtooth animation creates full sounds from a single oszillator."
+hero_image: "summe-card.jpg"
+hero_mobile: "arbeitsplatz-hero_portrait.jpg"
+image: "summe-card.jpg"
+subtitle: "fre"
+tags:
+- grundlage
+title: "animation"
+version: 0
+references: 
+  - { description: "Magnus Danielson sawtooth doubler and phase shifter",
+      title: "Magnus Synth Schematics",
+      url: "https://web.archive.org/web/20140830210313/http://home.swipnet.se/cfmd/synths/schematics/" }
+  - { description: "A SAWTOOTH-DRIVEN MULTI-PHASE WAVEFORM ANIMATOR",
+      title: "electronotes",
+      url: "https://web.archive.org/web/20190713072451/http://electronotes.netfirms.com/EN87Part.PDF" }
+---
+
+vlalalalal
+
+```{python, echo=FALSE, out="hide"}
+import numpy as np
+from scipy import signal
+
+timePoints = np.linspace(0, 1, 500)
+anim = {}
+anim['time'] = timePoints
+anim['saw'] = signal.sawtooth(2 * np.pi * 5 * timePoints)
+anim['sig'] = np.sin(2 * np.pi * timePoints)
+anim['pwm'] = signal.square(2 * np.pi * 5 * timePoints, duty=(anim['sig'] + 1)/2)
+anim['out'] = anim['saw'] * anim['pwm']
+```
+
+```{d3, element="anim", x="time", y="pwm,out", data="py$anim", width="800", height="600"}```
+
+# frequency doubler
+
+
+```{python error=FALSE, echo=FALSE, results="hide", fig.align='center', fig.cap='digital logic'}
+from elektron import Line, Dot, Label, Element, Draw, Simulation, Circuit
+import json
+
+draw = (Draw(["/usr/share/kicad/symbols", "lib/symbols"])
+  + Label("SAW").rotate(180)
+  + Line().right().length(2.54)
+  + (in_dot := Dot())
+  + Element("U1", "Amplifier_Operational:TL072", value="TL072", unit=1, Spice_Primitive="X", Spice_Model="TL072c").anchor(2).mirror('x')
+  + Element("GND", "power:GND", value="GND").at("U1", "3")
+  + Element("R2", "Device:R", value="300k").rotate(90).at("U1", "1")
+  + (u1_out := Dot())
+  + Element("U1", "Amplifier_Operational:TL072", value="TL072", unit=2, Spice_Primitive="X", Spice_Model="TL072c").anchor(3)
+  + Line().at(u1_out).up().length(5*2.54)
+  + Element("R1", "Device:R", value="49.9k").rotate(270).tox(in_dot)
+  + Line().toy(in_dot)
+  + Line().at("U1", "6").down().length(3*2.54)
+  + (dot_u2 := Dot())
+  + Element("R3", "Device:R", value="48.9k")
+  + Element("GND", "power:GND", value="GND")
+  + (u1_out := Dot().at("U1", "7"))
+  + Line().toy(dot_u2)
+  + Element("R4", "Device:R", value="100k").rotate(270).tox(dot_u2)
+  + Line().at(u1_out).right().length(2.54)
+  + Label("OUTPUT")
+
+  + Element("U1", "Amplifier_Operational:TL072", value="TL072", unit=3, Spice_Primitive="X", Spice_Model="TL072c", on_schema="no").at((100.0, 100.0))
+  + Element("+15V", "power:+15V", value="+15V", unit=1, on_schema="no").at("U1", "8")
+  + Element("-15V", "power:-15V", value="-15V", unit=1, on_schema="no").at("U1", "4"))
+
+circuit = draw.circuit(['lib/spice'])
+circuit.voltage("1", "+15V", "GND", "DC +15V")
+circuit.voltage("2", "-15V", "GND", "DC -15V")
+circuit.voltage("3", "SAW", "GND", "5V PULSE(-5 5 0 10m 0 1u 10m)")
+circuit.control('''tran 10us 20ms 
+alter @V3[sin] [ 0 5 100 ]
+tran 30us 20ms 
+''')
+
+simulation = Simulation(circuit)
+freqdoubler = simulation.run()
+
+draw.plot(scale=6, theme='BlackWhite');
+```
+
+```{d3, element="freqdoubler", x="time", y="saw,output", data="freqdoubler.tran1", width="600", height="400"}```
+
+with a sine input
+
+```{d3, element="sinfreqdoubler", x="time", y="saw,output", data="freqdoubler.tran2", width="600", height="400"}```
+
+## frequency shifter
+
+```{python error=FALSE, echo=FALSE, results="hide", fig.align='center', fig.cap='digital logic'}
+from elektron import Line, Dot, Label, Element, Draw, Simulation, Circuit
+import json
+
+draw = (Draw(["/usr/share/kicad/symbols", "lib/symbols"])
+  + Label("SAW").rotate(180)
+  + Line().right().length(2.54)
+  + (in_dot := Dot())
+  + Element("U1", "Amplifier_Operational:TL072", value="TL072", unit=1, Spice_Primitive="X", Spice_Model="TL072c").anchor(3)
+  + Line().at("U1", "2").down().length(10.16)
+  + (u1_2 := Dot())
+  + Line().left().length(2.54)
+  + Label("CV").rotate(180)
+
+  + Element("R2", "Device:R", value="300k").rotate(90).at("U1", "1")
+  + Line().right().length(2.54)
+  + (u1_out := Dot())
+  + Line().right().length(2.54)
+  + Element("U1", "Amplifier_Operational:TL072", value="TL072", unit=2, Spice_Primitive="X", Spice_Model="TL072c").anchor(5)
+  + Line().at(u1_out).up().length(6*2.54)
+  + Element("R1", "Device:R", value="100k").rotate(270).tox(in_dot)
+  + Line().toy(in_dot)
+  + (u2_out := Dot().at("U1", "7"))
+  + Line().down().length(10.16)
+  + Element("R4", "Device:R", value="100k").rotate(270).tox("U1", "5")
+  + (u2_5 := Dot())
+  + Line().toy("U1", "6")
+  + Element("R3", "Device:R", value="300k").rotate(270).tox(u1_2).at(u2_5)
+
+  + Line().right().length(2.54).at(u2_out)
+  + Label("OUTPUT")
+
+  + Element("U1", "Amplifier_Operational:TL072", value="TL072", unit=3, Spice_Primitive="X", Spice_Model="TL072c", on_schema="no").at((100.0, 100.0))
+  + Element("+15V", "power:+15V", value="+15V", unit=1, on_schema="no").at("U1", "8")
+  + Element("-15V", "power:-15V", value="-15V", unit=1, on_schema="no").at("U1", "4"))
+
+circuit = draw.circuit(['lib/spice'])
+circuit.voltage("1", "+15V", "GND", "DC +15V")
+circuit.voltage("2", "-15V", "GND", "DC -15V")
+circuit.voltage("3", "SAW", "GND", "5V PULSE(-5 5 0 10m 0 1u 10m)")
+circuit.voltage("4", "CV", "GND", "DC 5V AC 5V")
+circuit.control('''let v_act = -5V
+let v_step = 0.5V
+let v_stop = 5V
+while v_act le v_stop
+  alter @V4[dc] v_act
+  tran 30us 20ms
+  let v_act = v_act + v_step
+end
+''')
+
+simulation = Simulation(circuit)
+shifter = simulation.run()
+
+draw.plot(scale=6, theme='BlackWhite');
+```
+
+```{d3, element="shifter", x="time", y="saw", yRange="output", data="shifter.tran", width="600", height="400"}```
+
+# electro notes animator
+
+
+```{python error=FALSE, echo=FALSE, results="hide", fig.align='center', fig.cap='digital logic'}
+from elektron import Line, Dot, Label, Element, Draw, Simulation, Circuit
+import json
+
+draw = (Draw(["/usr/share/kicad/symbols", "lib/symbols"])
+  + Label("SAW").rotate(180)
+  + Line().right().length(2.54)
+  + (saw_dot := Dot())
+  + Line().down().length(10*2.54)
+  + Element("U1", "Amplifier_Operational:TL072", value="TL072", unit=1, Spice_Primitive="X", Spice_Model="TL072c").anchor(3)
+  + Line().down().length(10*2.54).at("U1", "2")
+  + (dot_cv := Dot())
+  + Line().left().length(2.54)
+  + Label("CV").rotate(180)
+
+  + Element("R3", "Device:R", value="140k").at("U1", "1").rotate(90)
+  + Element("D1", "Diode:1N4148", value="1N4148", Spice_Primitive="D", Spice_Model="D1N4148", Spice_Node_Sequence="2 1").rotate(180).anchor(2)
+  + Line().at("D1", "1").right().length(2.54)
+  + (d1_out := Dot())
+  + Line().up().length(2.54)
+  + Element("R4", "Device:R", value="100k").rotate(180)
+  + Line().up().length(2*2.54)
+  + (u2_out := Dot())
+  + Element("U1", "Amplifier_Operational:TL072", value="TL072", unit=2, Spice_Primitive="X", Spice_Model="TL072c").anchor(7).mirror('x')
+
+  + Element("GND", "power:GND", value="GND").at("U1", "5")
+  + Line().at("U1", "6").toy(saw_dot)
+  + (dot_u2_fb := Dot())
+  + Element("R1", "Device:R", value="100k").tox(saw_dot).rotate(270)
+  + Line().at(u2_out).toy(dot_u2_fb)
+  + Element("R2", "Device:R", value="100k").tox(dot_u2_fb).rotate(270)
+  + Line().at(d1_out).down().length(5.08)
+  + Line().tox(dot_u2_fb)
+  + Line().down().length(4*2.54)
+  + (u3_in := Dot())
+  + Line().toy(dot_cv)
+  + (u2_in2 := Dot())
+  + Element("U2", "Amplifier_Operational:TL072", value="TL072", unit=1, Spice_Primitive="X", Spice_Model="TL072c").anchor(2).mirror('x')
+  + Element("GND", "power:GND", value="GND").at("U2", "3")
+  + (u2_out := Dot().at("U2", "1"))
+  + Line().toy(u3_in)
+  + Element("R7", "Device:R", value="100k").rotate(270).tox(u3_in)
+  + Line().at(u2_out).right().length(2.54)
+  + Label("OUTPUT")
+
+  + Line().at(u2_in2).left().length(3*2.54)
+  + (cv_fb := Dot())
+  + Element("R5", "Device:R", value="100k").rotate(270).tox(dot_cv)
+  + Element("R6", "Device:R", value="300k").at(cv_fb)
+  + Element("GND", "power:GND", value="GND")
+
+  + Element("U1", "Amplifier_Operational:TL072", value="TL072", unit=3, Spice_Primitive="X", Spice_Model="TL072c", on_schema="no").at((100.0, 100.0))
+  + Element("+15V", "power:+15V", value="+15V", unit=1, on_schema="no").at("U1", "8")
+  + Element("-15V", "power:-15V", value="-15V", unit=1, on_schema="no").at("U1", "4")
+
+  + Element("U2", "Amplifier_Operational:TL072", value="TL072", unit=3, Spice_Primitive="X", Spice_Model="TL072c", on_schema="no").at((100.0, 100.0))
+  + Element("+15V", "power:+15V", value="+15V", unit=1, on_schema="no").at("U2", "8")
+  + Element("-15V", "power:-15V", value="-15V", unit=1, on_schema="no").at("U2", "4")
+
+  + Element("U2", "Amplifier_Operational:TL072", value="TL072", unit=2, Spice_Primitive="X", Spice_Model="TL072c", on_schema="no").at((140.0, 100.0)))
+
+circuit = draw.circuit(['lib/spice'])
+circuit.voltage("1", "+15V", "GND", "DC +15V")
+circuit.voltage("2", "-15V", "GND", "DC -15V")
+circuit.voltage("3", "SAW", "GND", "5V PULSE(-5 5 0 10m 0 1u 10m)")
+circuit.voltage("4", "CV", "GND", "DC 0V AC 5V")
+circuit.control('''let v_act = -5V
+let v_step = 0.5V
+let v_stop = 5V
+while v_act le v_stop
+  alter @V4[dc] v_act
+  tran 30us 20ms
+  let v_act = v_act + v_step
+end
+''')
+
+simulation = Simulation(circuit)
+enanim = simulation.run()
+
+draw.plot(scale=6, theme='BlackWhite');
+```
+
+```{d3, element="enanim", x="time", y="saw", yRange="output", data="enanim.tran", width="600", height="400"}```

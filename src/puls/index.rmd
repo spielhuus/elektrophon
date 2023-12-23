@@ -1,0 +1,108 @@
+---
+author: "spielhuus"
+categories:
+- article
+date: 2021-07-01
+excerpt: ""
+description: ""
+subtitle: "Double-Pulse Waveshaper"
+tags:
+- grundlage
+title: puls
+version: 0
+references: 
+  - { description: "Double-Pulse Waveform Generator (II).",
+      title: "Ian Fritz",
+      url: "http://ijfritz.byethost4.com/sy_cir18_DPWGII.htm" }
+---
+
+# theory
+
+
+```{python echo=FALSE, results="hide", fig.align='center', fig.cap='Figure 2: Input Driver'}
+import sys
+sys.path.append("src")
+
+from elektron import Circuit, Draw, Element, Label, Line, Dot, Simulation
+from hall import *
+
+draw = Draw(["/usr/share/kicad/symbols", "lib/symbols"])
+
+# 
+
+d += (op1 := elm.Opamp().at([5,0]).flip().label('$U_1$'))
+d += (op2 := elm.Opamp().at([5,-5]).label('$U_2$'))
+d += (op3 := elm.Opamp().at([5,-10]).label('$U_3$'))
+d += (op4 := elm.Opamp().at([0,-5]).flip().label('$U_4$'))
+d += (op5 := elm.Opamp().at([10,-8]).flip().label('$U_5$'))
+
+#draw saw input
+d += elm.Line(at=op1.in2).left().length(1)
+d += elm.Dot()
+d.push()
+d += elm.Line().left().length(1).label('$v_{saw}$', loc='lft')
+d.pop()
+
+d += elm.Line().down().toy(op2.in2)
+d.push()
+d += elm.Line().right().tox(op2.in2)
+d.pop()
+d += elm.Dot()
+d += elm.Line().down().toy(op3.in1)
+d += elm.Line().right().tox(op3.in1)
+
+#comperator voltages
+d += elm.Line().left().at(op1.in1).length(7)
+d += elm.Dot()
+d.push()
+d += elm.Resistor().down().toy(op4.in2).label('$R_1$\n100k')
+d += elm.Dot()
+d.push()
+d += elm.Line().right().tox(op4.in2)
+d.pop()
+d += elm.Resistor().down().length(4).label('$R_2$\n100k')
+d += elm.Line().toy(op3.in2)
+d += elm.Dot()
+d.push()
+d += elm.Line().right().tox(op3.in2)
+d.pop()
+d += elm.Line().left().length(1).label('$CV_{position}$', loc='lft')
+d.pop()
+d += elm.Line().left().length(1).label('$CV_{width}$', loc='lft')
+
+#connect U4 and U2
+d += elm.Line().left().at(op4.in1).length(1)
+d += elm.Line().down().length(1)
+d.push()
+d += elm.Resistor().right().length(4).label('$R_3$\n100k', loc='bottom')
+d += elm.Line().up().toy(op4.out)
+d += ( Dop4 := elm.Dot() )
+d.pop()
+d += elm.Dot()
+d += elm.Resistor().down().label('$R_4$\n100k', loc='bottom')
+d += elm.Ground()
+
+d += elm.Line().at(op4.out).right().tox(Dop4.end)
+d += elm.Line().up().toy(op2.in1)
+d += elm.Line().right().tox(op2.in1)
+
+#summ the second pulse
+d += elm.Line().right().at(op2.out).length(1)
+d += elm.Resistor().down().length(2.5).label('$R_5$\n100k')
+d.push()
+d += elm.Resistor().down().length(2.5).label('$R_6$\n100k')
+d += elm.Line().left().length(1)
+d.pop()
+d += elm.Dot()
+d += elm.Line().right().tox(op5.in2)
+
+d += elm.Line().left().at(op5.in1).length(0.5)
+d += elm.Ground()
+
+#and the outputs
+d += elm.Line().right().at(op1.out).length(1).label('$OUT_{1}$', loc='rgt')
+d += elm.Line().right().at(op5.out).length(1).label('$OUT_{2}$', loc='rgt')
+
+d.draw()
+```
+

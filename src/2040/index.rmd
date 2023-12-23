@@ -1,0 +1,282 @@
+---
+author: "spielhuus"
+categories:
+- article
+date: 2021-07-01
+excerpt: ""
+description: ""
+subtitle: "discrete 2040 filter"
+tags:
+- grundlage
+title: 2040
+version: 0
+references: 
+  - { description: "SSM2040 4-pole filter",
+      title: "Jürgen Haible",
+      url: "http://jhaible.com/legacy/tonline_stuff/jh2040.gif" }
+  - { description: "SMD SSM 2040 filter",
+      title: "schmitzbitz",
+      url: "https://www.schmitzbits.de/rs2040.html" }
+  - { description: "Discrete OTA Lowpass Filter",
+      title: "MOTM-440",
+      url: "https://synthtech.com/docs/MOTM-440_manual.pdf" }
+---
+
+# Construction
+
+```{python echo=FALSE, results="nohide", fig.align='center', fig.cap='digital logic'}
+from elektron import Circuit, Draw, Element, Label, Line, Dot, Simulation
+
+def cell(draw):
+  from elektron import Circuit, Draw, Element, Label, Line, Dot, Simulation
+  q1 = draw.next("Q")
+  q2 = draw.next("Q")
+  q3 = draw.next("Q")
+  q4 = draw.next("Q")
+  q5 = draw.next("Q")
+  q6 = draw.next("Q")
+
+  (draw 
+    + Line().right().length(12*2.54) + Line().down().length(3*2.54)
+    + (in_dot := Dot())
+    + Element(q2, "Transistor_BJT:BC547", unit=1, value="BC547",
+                   Spice_Netlist_Enabled="Y",
+                   Spice_Primitive="Q",
+                   Spice_Model="BC846B").anchor(2).mirror('y')
+
+    + Line().at(q2, "3").down().length(2.54)
+    + Line().left().length(3*2.54)
+    + (tail := Dot())
+    + Line().left().length(3*2.54)
+    + Line().up().length(2.54)
+    + Element(q1, "Transistor_BJT:BC547", unit=1, value="BC547",
+                   Spice_Netlist_Enabled="Y",
+                   Spice_Primitive="Q",
+                   Spice_Model="BC846B").anchor(3)
+    + Line().at(q1, "2").down().length(2.54)
+    + Element(draw.next("R"), "Device:R", value="220")
+    + Element("+5V", "power:+5V", value="+5V").rotate(180)
+    + Element(draw.next("R"), "Device:R", value="1k").at(tail)
+
+    + Line().at(q1, "1").up().length(3*2.54)
+    + Element(q3, "Transistor_BJT:BC557", unit=1, value="BC557",
+                   Spice_Netlist_Enabled="Y",
+                   Spice_Primitive="Q",
+                   Spice_Model="BC556B").anchor(1).rotate(180)
+    + Line().at(q2, "1").up().length(2*2.54)
+    + (right := Dot())
+    + Line().up().length(2.54)
+    + Element(q4, "Transistor_BJT:BC557", unit=1, value="BC557",
+                   Spice_Netlist_Enabled="Y",
+                   Spice_Primitive="Q",
+                   Spice_Model="BC556B").anchor(1).mirror('x')
+    + Line().at(q4, "2").tox(q3, "2")
+    + Dot() + Line().toy(q3, "1") + Line().tox(q3, "1") + Dot()
+
+    + Line().at(q3, "3").up().length(2.54)
+    + Line().tox(q4, "3")
+    + (head := Dot())
+    + Line().toy(q4, "3")
+    + Element("+15V", "power:+15V", value="+15V").at(head)
+
+    + Line().at(right).length(6*2.54)
+    + (vf := Dot())
+    + Line().right().length(2.54)
+    + Element(q5, "Transistor_BJT:BC547", unit=1, value="BC547",
+                   Spice_Netlist_Enabled="Y",
+                   Spice_Primitive="Q",
+                   Spice_Model="BC846B").anchor(2)
+    + Line().at(q5, "3").right().length(2*2.54)
+    + Element(q6, "Transistor_BJT:BC547", unit=1, value="BC547",
+                   Spice_Netlist_Enabled="Y",
+                   Spice_Primitive="Q",
+                   Spice_Model="BC846B").anchor(2)
+    + Line().at(q6, "1").toy("Q5", "1") + (dotq6 := Dot())
+    + Line().tox(q5, "1")
+    + Line().at(dotq6).toy(head) + Line().tox(head)
+
+    + Line().at(in_dot).down().length(2.54)
+    + Element(draw.next("R"), "Device:R", value="220")
+    + Element("+5V", "power:+5V", value="+5V").rotate(180)
+    
+    + Element(draw.next("R"), "Device:R", value="10k").rotate(90).at(in_dot).tox(q6, "3")
+    + (out := Dot())
+    + Element(draw.next("R"), "Device:R", value="10k")
+    + Element("-15V", "power:-15V", value="-15V").rotate(180)
+    
+    + Line().at(vf).down().length(5*2.54)
+    + Element(draw.next("C"), "Device:C", value="1n")
+    + Element("+5V", "power:+5V", value="+5V").rotate(180)
+  ) 
+  draw.pos(out)
+
+draw = Draw(["/usr/share/kicad/symbols", "../../lib/symbols"])
+
+(draw 
+  + Label("IN").rotate(180)
+  + Element(draw.next("R"), "Device:R", value="10k").rotate(90)
+  + Line().right().length(2.54)
+  + (in_dot := Dot())
+  + Line().right().length(2*2.54)
+  + Element(draw.next("C"), "Device:C", value="1u").rotate(90)
+)
+
+cell(draw)
+draw + Line().right().length(4*2.54)
+draw + Line().up().length(3*2.54)
+draw + Element(draw.next("R"), "Device:R", value="10k").rotate(90)
+
+cell(draw)
+draw + Line().right().length(4*2.54)
+draw + Line().up().length(3*2.54)
+draw + Element(draw.next("R"), "Device:R", value="10k").rotate(90)
+
+cell(draw)
+draw + Line().right().length(4*2.54)
+draw + Line().up().length(3*2.54)
+draw + Element(draw.next("R"), "Device:R", value="10k").rotate(90)
+
+cell(draw)
+
+(draw
+  + Line().right().length(2*2.54)
+  + Element(draw.next("C"), "Device:C", value="1u").rotate(90)
+  + Element(draw.next("R"), "Device:R", value="10k").rotate(90)
+  + Element("U1", "Amplifier_Operational:TL072", value="TL072", unit=1, Spice_Primitive="X", Spice_Model="TL072c").anchor(2).mirror('x')
+
+  + Element("GND", "power:GND", value="GND").at("U1", "3")
+  + (out_dot := Dot().at("U1", "1"))
+  + Line().right().length(2.54)
+  + Label("OUT")
+)
+
+draw.pos((80.0,80.0))
+(draw
+  + Label("CV").rotate(180)
+  + Element(draw.next("R"), "Device:R", value="27k").rotate(90)
+  + (divider := Dot())
+  + Line().right().length(9*2.54)
+  + Element((opq := draw.next("Q")), "Transistor_BJT:BC547", unit=1, value="BC547",
+                 Spice_Netlist_Enabled="Y",
+                 Spice_Primitive="Q",
+                 Spice_Model="BC846B").anchor(2)
+  
+  + Element(draw.next("R"), "Device:R", value="1k").at(divider)
+  + Element("GND", "power:GND", value="GND")
+
+  + Line().at(opq, "3").down().length(4*2.54)
+  + (iout := Dot())
+  + Element(draw.next("R"), "Device:R", value="2.2k").rotate(270)
+  + Element("U1", "Amplifier_Operational:TL072", value="TL072", unit=2, Spice_Primitive="X", Spice_Model="TL072c").anchor(7).mirror('x')
+  
+  # Feedback U1a
+  + Line().at("U1", "1").up().length(6*2.54)
+  + Element(draw.next("R"), "Device:R", value="100k").rotate(270).tox("U1", "2")
+  + Line().toy("U1", "2")
+  + Dot()
+
+  + Element("GND", "power:GND", value="GND").at("U1", "5")
+  + Line().at("U1", "6").toy(opq, "1")
+  + (vdot := Dot())
+  + Element(draw.next("R"), "Device:R", value="1000k").rotate(180)
+  + Element("+15V", "power:+15V", value="+15V")
+  + Line().at(vdot).tox(opq, "1")
+
+  + Line().right().length(4*2.54).at(iout)
+  + (q1 := Dot())
+  + Line().up().length(2.54)
+  + Element((opq1 := draw.next("Q")), "Transistor_BJT:BC547", unit=1, value="BC547",
+                 Spice_Netlist_Enabled="Y",
+                 Spice_Primitive="Q",
+                 Spice_Model="BC846B").anchor(3).mirror('y')
+  + Element("GND", "power:GND", value="GND").at(draw.last("Q"), "2")
+  + Line().right().length(8*2.54).at(q1)
+  + (q2 := Dot())
+  + Line().up().length(2.54)
+  + Element((opq2 := draw.next("Q")), "Transistor_BJT:BC547", unit=1, value="BC547",
+                 Spice_Netlist_Enabled="Y",
+                 Spice_Primitive="Q",
+                 Spice_Model="BC846B").anchor(3).mirror('y')
+  + Element("GND", "power:GND", value="GND").at(draw.last("Q"), "2")
+  + Line().right().length(8*2.54).at(q2)
+  + (q3 := Dot())
+  + Line().up().length(2.54)
+  + Element((opq3 := draw.next("Q")), "Transistor_BJT:BC547", unit=1, value="BC547",
+                 Spice_Netlist_Enabled="Y",
+                 Spice_Primitive="Q",
+                 Spice_Model="BC846B").anchor(3).mirror('y')
+  + Element("GND", "power:GND", value="GND").at(draw.last("Q"), "2")
+  + Line().right().length(8*2.54).at(q3)
+  + Line().up().length(2.54)
+  + Element((opq4 := draw.next("Q")), "Transistor_BJT:BC547", unit=1, value="BC547",
+                 Spice_Netlist_Enabled="Y",
+                 Spice_Primitive="Q",
+                 Spice_Model="BC846B").anchor(3).mirror('y')
+  + Element("GND", "power:GND", value="GND").at(draw.last("Q"), "2")
+
+  + Line().at(opq1, "1").up().length(12*2.54)
+  + Line().tox("R3", "2")
+  + Line().toy("R3", "2")
+  
+  + Line().at(opq2, "1").up().length(12*2.54)
+  + Line().tox("R9", "2")
+  + Line().toy("R9", "2")
+  
+  + Line().at(opq3, "1").up().length(12*2.54)
+  + Line().tox("R15", "2")
+  + Line().toy("R15", "2")
+
+  + Line().at(opq4, "1").up().length(10*2.54)
+  + Line().tox("R21", "2")
+  + Line().toy("R21", "2")
+)
+
+(draw 
+  + Line().at(out_dot).down().length(26*2.54)
+  + Element("RV1", "Device:R_Potentiometer", value="100k",
+                 Spice_Netlist_Enabled="Y",
+                 Spice_Primitive="X",
+                 Spice_Model="Potentiometer").anchor(1).mirror('y')
+  + Line().at("RV1", "2").tox(in_dot)
+  + Element(draw.next("R"), "Device:R", value="10k").toy(in_dot)
+  + Element("GND", "power:GND", value="GND").at("RV1", "3")
+)
+
+(draw
+  + Element("U1", "Amplifier_Operational:TL072", value="TL072", unit=3, Spice_Primitive="X", Spice_Model="TL072c", on_schema="yes").at((100.0, 100.0))
+  + Element("+15V", "power:+15V", value="+15V", unit=1, on_schema="yes").at("U1", "8")
+  + Element("-15V", "power:-15V", value="-15V", unit=1, on_schema="yes").at("U1", "4")
+)
+
+print(draw.erc())
+
+circuit = draw.circuit(["../../lib/spice"])
+circuit.voltage("1", "+15V", "GND", "DC 15V")
+circuit.voltage("2", "-15V", "GND", "DC -15V")
+circuit.voltage("3", "+5V", "GND", "DC 5V")
+circuit.voltage("4", "CV", "GND", "DC -5V")
+circuit.voltage("5", "IN", "GND", "5V PULSE(5V -5V 0 0 0 0.5ms 1ms)")
+circuit.control('''
+alterparam potentiometer value = 47k
+alterparam potentiometer set = 0.1
+mc_source
+
+let r_act = -5V
+let r_step = 0.5V
+let r_stop = 10V
+while r_act le r_stop
+  alter @V4[dc] r_act
+  tran 40us 4ms
+  let r_act = r_act + r_step
+end
+''')
+
+print(circuit)
+
+simulation = Simulation(circuit)
+filter = simulation.run()
+
+draw.plot(scale=6, netlist=False, theme='BlackWhite')
+```
+
+```{d3 element="filter", x="time", y="in", yRange="out", data="filter.tran", width="800", height="600"}```

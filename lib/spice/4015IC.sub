@@ -1,0 +1,66 @@
+
+##################  Model Data Report  ##################
+
+============= SPICE Model =================
+.MODEL 4015IC  d_chip ( behaviour= "
++;4015IC  DUAL 4-BIT STATIC SHIFT REGISTER @5V
+
++/inputs 1CLK 1D 1RST 2CLK 2D 2RST
++/outputs 1Q0 1Q1 1Q2 1Q3 2Q0 2Q1 2Q2 2Q3
+
+
++/module REGISTER00
++/inputs  CP D MR
++/outputs O0 O1 O2 O3
++/clock CP + 4 2 2
++;SYNC
++; CP  D  MR  OFLAGS NFLAGS
++   X  X  H   XXXX  L   L   L   L
++   X  X  L   XXXX  D  F0  F1  F2
++;ASYNC
++; CP  D  MR  OFLAGS NFLAGS
++   X  X  H   XXXX  L   L   L   L
++   X  X  L   XXXX  F0  F1 F2  F3
++/TABLE 1
++; CP  D  MR  FLAGS O0  O1  O2  O3
++   X  X  X   XXXX  F0  F1  F2  F3
++/delay 8
++;input  output  Rise time  Fall time
++  CP      O0     240n       260n
++  CP      O1     240n       260n
++  CP      O2     240n       260n
++  CP      O3     240n       260n
++  MR      O0      X         210n
++  MR      O1      X         210n
++  MR      O2      X         210n
++  MR      O3      X         210n
++/constraint 6
++;   Name       Event From  Event To   Min/Max  Time
++ 'PULSE WIDTH'  HL    CP    LH   CP     MIN     60n
++ 'PULSE WIDTH'  LH    MR    HL   MR     MIN     80n
++ 'SETUP'        HL    D     HL   CP     MIN     25n
++ 'SETUP'        LH    D     HL   CP     MIN     25n
++ 'HOLD'         HL    CP    HL   D      MIN     40n
++ 'HOLD'         HL    CP    LH   D      MIN     40n
++/endmodule
+
++/INSTANCE REGISTER00 1CLK 1D 1RST 1Q0 1Q1 1Q2 1Q3
++/INSTANCE REGISTER00 2CLK 2D 2RST 2Q0 2Q1 2Q2 2Q3  
++")
+============= Model template =================
+a%p [%t1CLK?%t:d%t;1CLK
++      %t1D?%t:d%t;1D
++      %t1RST?%t:d%t;1RST
++      %t2CLK?%t:d%t;2CLK
++      %t2D?%t:d%t;2D
++      %t2RST?%t:d%t;2RST]
++     [%t1Q0?%t:d%t;1Q0
++      %t1Q1?%t:d%t;1Q1
++      %t1Q2?%t:d%t;1Q2
++      %t1Q3?%t:d%t;1Q3
++      %t2Q0?%t:d%t;2Q0
++      %t2Q1?%t:d%t;2Q1
++      %t2Q2?%t:d%t;2Q2
++      %t2Q3?%t:d%t;2Q3
++      %tVSS?%t:d%t;VSS
++      %tVDD?%t:d%t;VDD] %m

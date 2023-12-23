@@ -1,0 +1,939 @@
+# electrolytic capacitors
+- "Aluminium Electrolytic Capacitor, 35V, D=5 mm, LS=2 mm":
+  - footprint: "Capacitor_THT:CP_Radial_D6.3mm_P2.50mm"
+  - value: "22u"
+  - mouser: "710-860020672011"
+- "Aluminium Electrolytic Capacitor, 50V, D=5 mm, LS=2 mm":
+  - footprint: "Capacitor_THT:CP_Radial_D5.0mm_P2.00mm"
+  - value: "1u"
+  - mouser: "710-860160672002"
+- "Aluminium Electrolytic Capacitor, 50V, D=5 mm, LS=2.5 mm":
+  - footprint: "Capacitor_THT:CP_Radial_D5.0mm_P2.50mm"
+  - value: "4.7u"
+  - mouser: "667-EEU-EB1H4R7SH"
+- "Aluminium Electrolytic Capacitor, 35V, D=5 mm, LS=2 mm":
+  - footprint: "Capacitor_THT:CP_Radial_D5.0mm_P2.50mm"
+  - value: "10u"
+  - mouser: "594-MAL211671109E3"
+- "Aluminium Electrolytic Capacitor Non Polar, 50V, D=6.3 mm, LS=2.5 mm":
+  - footprint: "Capacitor_THT:CP_Radial_D6.3mm_P2.50mm"
+  - value: "10u (NP)"
+  - mouser: "667-ECE-A1HN100U"
+- "Aluminium Electrolytic Capacitors - Radial Leaded":
+  - footprint: "Capacitor_THT:CP_Radial_D12.5mm_P5.00mm"
+  - value: "3300uf"
+  - mouser: "647-UBY1V332MHL"
+
+# THT capacitors
+- "Multilayer Ceramic Capacitors MLCC":
+  - footprint: "Capacitor_THT:C_Disc_D3.8mm_W2.6mm_P2.50mm"
+  - value: "47p"
+  - mouser: "810-FA18C0G1H47000"
+- "Multilayer Ceramic Capacitors MLCC":
+  - footprint: "Capacitor_THT:C_Disc_D3.4mm_W2.1mm_P2.50mm"
+  - value: "100p"
+  - mouser: "594-K101K15C0GF53L2"
+- "Multilayer Ceramic Capacitors MLCC":
+  - footprint: "Capacitor_THT:C_Disc_D3.4mm_W2.1mm_P2.50mm"
+  - value: "470p"
+  - mouser: "594-K471K15C0GF53L2"
+- "Multilayer Ceramic Capacitors MLCC":
+  - footprint: "Capacitor_THT:C_Disc_D3.4mm_W2.1mm_P2.50mm"
+  - value: "0.1u"
+  - mouser: "594-K104K15X7RF53K2"
+- "Multilayer Ceramic Capacitors MLCC":
+  - footprint: "Capacitor_THT:C_Disc_D3.8mm_W2.6mm_P2.50mm"
+  - value: "0.1u"
+  - mouser: "594-K104K15X7RF53K2"
+- "Multilayer Ceramic Capacitors MLCC":
+  - footprint: "Capacitor_THT:C_Rect_L4.0mm_W2.5mm_P2.50mm"
+  - value: "0.1u"
+  - mouser: "594-K104K15X7RF53K2"
+- "Multilayer Ceramic Capacitors MLCC":
+  - footprint: "Capacitor_THT:C_Rect_L4.0mm_W2.5mm_P2.50mm"
+  - value: "100n"
+  - mouser: "594-K104K15X7RF53K2"
+- "Multilayer Ceramic Capacitors MLCC":
+  - footprint: "Capacitor_THT:C_Rect_L4.0mm_W2.5mm_P2.50mm"
+  - value: "10n"
+  - mouser: "594-K103M15X7RF5TL2"
+- "Multilayer Ceramic Capacitors MLCC":
+  - footprint: "Capacitor_THT:C_Rect_L4.0mm_W2.5mm_P2.50mm"
+  - value: "1n"
+  - mouser: "594-K102K15X7RH5TH5"
+- "Multilayer Ceramic Capacitors MLCC":
+  - footprint: "Capacitor_THT:C_Disc_D3.4mm_W2.1mm_P2.50mm"
+  - value: "56p"
+  - mouser: "594-K560J15C0GF5TL2"
+- "Multilayer Ceramic Capacitors MLCC":
+  - footprint: "Capacitor_THT:C_Disc_D3.4mm_W2.1mm_P2.50mm"
+  - value: "180p"
+  - mouser: "594-K181J15C0GF53L2"
+- "Multilayer Ceramic Capacitors MLCC":
+  - footprint: "Capacitor_THT:C_Disc_D4.7mm_W2.5mm_P5.00mm"
+  - value: "0.33u"
+  - mouser: "594-K334M20X7RF"
+
+- "Polystyrene Capacitors":
+  - footprint: "Capacitor_THT:C_Axial_L12.0mm_D6.5mm_P15.00mm_Horizontal"
+  - value: "220p"
+  - mouser: "23PS122"
+- "Polystyrene Capacitors":
+  - footprint: "Capacitor_THT:C_Axial_L12.0mm_D6.5mm_P15.00mm_Horizontal"
+  - value: "470p"
+  - mouser: "23PS147"
+
+- "Film Capacitors 220 pF 100 VDC 5%":
+  - footprint: "Capacitor_THT:C_Rect_L7.2mm_W4.5mm_P5.00mm_FKS2_FKP2_MKS2_MKP2"
+  - value: "220p"
+  - mouser: "505-FKP2D002201D00JA"
+- "Film Capacitors 680pF 100 Volts 5%":
+  - footprint: "Capacitor_THT:C_Rect_L7.0mm_W4.5mm_P5.00mm"
+  - value: "680p"
+  - mouser: "505-FKP2D006801DJI00"
+- "Film Capacitors 100V 1000pF 5%":
+  - footprint: "Capacitor_THT:C_Rect_L7.2mm_W4.5mm_P5.00mm_FKS2_FKP2_MKS2_MKP2"
+  - value: "1n"
+  - mouser: "505-FKP21000/100/5"
+- "Film Capacitors 2200pF 5% 100V 4.5x6x7.2":
+  - footprint: "Capacitor_THT:C_Rect_L7.2mm_W4.5mm_P5.00mm_FKS2_FKP2_MKS2_MKP2"
+  - value: "2.2n"
+  - mouser: "505-FKP2D012201D00JO"
+- "Film Capacitors 63V 4700pF 10%":
+  - footprint: "Capacitor_THT:C_Rect_L7.2mm_W4.5mm_P5.00mm_FKS2_FKP2_MKS2_MKP2"
+  - value: "4.7n"
+  - mouser: "505-FKP24700/63/10"
+- "Film Capacitors MKP 2 0.01 uF 100 VDC 3x7.5x7.2 PCM":
+  - footprint: "Capacitor_THT:C_Rect_L7.2mm_W3.0mm_P5.00mm_FKS2_FKP2_MKS2_MKP2"
+  - value: "10n"
+  - mouser: "505-MKP2D021001B00MS"
+- "Film Capacitors 0.022 uF 100 VDC 0.2":
+  - footprint: "Capacitor_THT:C_Rect_L7.2mm_W3.0mm_P5.00mm_FKS2_FKP2_MKS2_MKP2"
+  - value: "22n"
+  - mouser: "505-MKP2D022201B00MO"
+- "Film Capacitors 0.047 uF 100 VDC 0.1":
+  - footprint: "Capacitor_THT:C_Rect_L7.2mm_W3.5mm_P5.00mm_FKS2_FKP2_MKS2_MKP2"
+  - value: "47n"
+  - mouser: "505-MKP2D024701C00KS"
+- "Film Capacitors 0.01 uF 63 VDC 10%":
+  - footprint: "Capacitor_THT:C_Rect_L4.6mm_W3.0mm_P2.50mm_MKS02_FKP02"
+  - value: "0.01u"
+  - mouser: "505-MKS0C021000BKC00"
+- "Film Capacitors 0.22 uF 63 VDC 10%":
+  - footprint: "Capacitor_THT:C_Rect_L4.6mm_W3.0mm_P2.50mm_MKS02_FKP02"
+  - value: "0.22u"
+  - mouser: "505-MKS0C032200C00KS"
+
+# SMD capacitors
+- "Capacitor C0G/NP0":
+  - footprint: "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
+  - value: "22p (C0G)"
+  - mouser: "80-C0805X220J1GACTU"
+- "Capacitor C0G/NP0":
+  - footprint: "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
+  - value: "560p (C0G)"
+  - mouser: "80-C0805C561F1G"
+- "Capacitor C0G/NP0":
+  - footprint: "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
+  - value: "3.3n"
+  - mouser: "80-C0805C332F5GECAUT"
+- "Capacitor C0G/NP0":
+  - footprint: "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
+  - value: "47n (C0G)"
+  - mouser: "80-C0805C473F3GECAUT"
+- "Multilayer Ceramic Capacitors MLCC":
+  - footprint: "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
+  - value: "0.1u"
+  - mouser: "80-C0805C104K3R"
+- "Multilayer Ceramic Capacitors MLCC":
+  - footprint: "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder"
+  - value: "0.33u"
+  - mouser: "80-C1206X334K5R"
+- "Multilayer Ceramic Capacitors MLCC":
+  - footprint: "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
+  - value: "10n"
+  - mouser: "80-C0805J103M5RAUTO"
+- "Multilayer Ceramic Capacitors MLCC":
+  - footprint: "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
+  - value: "100n"
+  - mouser: "80-C0805C104K3R"
+- "Multilayer Ceramic Capacitors MLCC":
+  - footprint: "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
+  - value: "100p"
+  - mouser: "80-C0805C101FCGACAUT"
+- "Capacitor C0G/NP0":
+  - footprint: "Capacitor_SMD:C_2220_5750Metric_Pad1.97x5.40mm_HandSolder"
+  - value: "470n (C0G)"
+  - mouser: "80-C2220C474J5G"
+- "Capacitor":
+  - footprint: "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder"
+  - value: "1.0u"
+  - mouser: "80-C1206T105J5RACTU"
+- "Capacitor":
+  - footprint: "Capacitor_SMD:C_2220_5750Metric_Pad1.97x5.40mm_HandSolder"
+  - value: "47u"
+  - mouser: "810-CGA9N1X7R1V476M2"
+
+# THT Resistor Large
+- "Metal Film Resistors - Through Hole (L=6.3 mm, D=2.5 mm, 1%)":
+  - footprint: "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+  - value: "100"
+  - mouser: "603-MFR-25FTE52-100R"
+- "Metal Film Resistors - Through Hole (L=6.3 mm, D=2.5 mm, 1%)":
+  - footprint: "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+  - value: "390"
+  - mouser: "603-MFR-25FTE52-390R"
+- "Metal Film Resistors - Through Hole (L=6.3 mm, D=2.5 mm, 1%)":
+  - footprint: "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+  - value: "470"
+  - mouser: "603-MFR-25FTE52-470R"
+- "Metal Film Resistors - Through Hole (L=6.3 mm, D=2.5 mm, 1%)":
+  - footprint: "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+  - value: "1k"
+  - mouser: "603-MFR-25FTE52-1K"
+- "Metal Film Resistors - Through Hole (L=6.3 mm, D=2.5 mm, 1%)":
+  - footprint: "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal"
+  - value: "1k"
+  - mouser: "603-MFR-25FTE52-1K"
+- "Metal Film Resistors - Through Hole (L=6.3 mm, D=2.5 mm, 1%)":
+  - footprint: "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+  - value: "1.8k"
+  - mouser: "603-MFR-25FTE52-1K8"
+- "Metal Film Resistors - Through Hole (L=6.3 mm, D=2.5 mm, 1%)":
+  - footprint: "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal"
+  - value: "1.8k"
+  - mouser: "603-MFR-25FTE52-1K8"
+- "Metal Film Resistors - Through Hole (L=6.3 mm, D=2.5 mm, 1%)":
+  - footprint: "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+  - value: "2.2k"
+  - mouser: "603-MFR-25FTE52-2K2"
+- "Metal Film Resistors - Through Hole (L=6.3 mm, D=2.5 mm, 1%)":
+  - footprint: "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+  - value: "3k"
+  - mouser: "603-MFR-25FTE52-3K"
+- "Metal Film Resistors - Through Hole (L=6.3 mm, D=2.5 mm, 1%)":
+  - footprint: "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal"
+  - value: "3k"
+  - mouser: "603-MFR-25FTE52-3K"
+- "Metal Film Resistors - Through Hole (L=6.3 mm, D=2.5 mm, 1%)":
+  - footprint: "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+  - value: "4.7k"
+  - mouser: "	603-MFR-25FTF52-4K7"
+- "Metal Film Resistors - Through Hole (L=6.3 mm, D=2.5 mm, 1%)":
+  - footprint: "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+  - value: "10k"
+  - mouser: "603-MFR-25FBF52-10K"
+- "Metal Film Resistors - Through Hole (L=6.3 mm, D=2.5 mm, 1%)":
+  - footprint: "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical"
+  - value: "10k"
+  - mouser: "603-MFR-25FBF52-10K"
+- "Metal Film Resistors - Through Hole (L=6.3 mm, D=2.5 mm, 1%)":
+  - footprint: "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+  - value: "12k"
+  - mouser: "603-MFR-25FBF52-12K"
+- "Metal Film Resistors - Through Hole (L=6.3 mm, D=2.5 mm, 1%)":
+  - footprint: "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+  - value: "18k"
+  - mouser: "603-MFR-25FBF52-18K"
+- "Metal Film Resistors - Through Hole (L=6.3 mm, D=2.5 mm, 1%)":
+  - footprint: "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+  - value: "22k"
+  - mouser: "603-MFR-25FBF52-22K"
+- "Metal Film Resistors - Through Hole (L=6.3 mm, D=2.5 mm, 1%)":
+  - footprint: "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical"
+  - value: "22k"
+  - mouser: "603-MFR-25FBF52-22K"
+- "Metal Film Resistors - Through Hole (L=6.3 mm, D=2.5 mm, 1%)":
+  - footprint: "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+  - value: "33k"
+  - mouser: "603-MFR-25FBF52-33K"
+- "Metal Film Resistors - Through Hole (L=6.3 mm, D=2.5 mm, 1%)":
+  - footprint: "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+  - value: "47k"
+  - mouser: "603-MFR-25FBF52-47K"
+- "Metal Film Resistors - Through Hole (L=6.3 mm, D=2.5 mm, 1%)":
+  - footprint: "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+  - value: "27k"
+  - mouser: "603-MFR-25FBF52-27K"
+- "Metal Film Resistors - Through Hole (L=6.3 mm, D=2.5 mm, 1%)":
+  - footprint: "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+  - value: "75k"
+  - mouser: "603-MFR-25FBF52-75K"
+- "Metal Film Resistors - Through Hole (L=6.3 mm, D=2.5 mm, 1%)":
+  - footprint: "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+  - value: "100k"
+  - mouser: "603-MFR-25FBF52-100K"
+- "Metal Film Resistors - Through Hole (L=6.3 mm, D=2.5 mm, 1%)":
+  - footprint: "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical"
+  - value: "100k"
+  - mouser: "603-MFR-25FBF52-100K"
+- "Metal Film Resistors - Through Hole (L=6.3 mm, D=2.5 mm, 1%)":
+  - footprint: "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+  - value: "120k"
+  - mouser: "603-MFR-25FBF52-120K"
+- "Metal Film Resistors - Through Hole (L=6.3 mm, D=2.5 mm, 1%)":
+  - footprint: "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical"
+  - value: "120k"
+  - mouser: "603-MFR-25FBF52-120K"
+- "Metal Film Resistors - Through Hole (L=6.3 mm, D=2.5 mm, 1%)":
+  - footprint: "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+  - value: "220k"
+  - mouser: "603-MFR-25FTE52-220K"
+- "Metal Film Resistors - Through Hole (L=6.3 mm, D=2.5 mm, 1%)":
+  - footprint: "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+  - value: "330k"
+  - mouser: "603-MFR-25FTE52-330K"
+- "Metal Film Resistors - Through Hole (L=6.3 mm, D=2.5 mm, 1%)":
+  - footprint: "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+  - value: "470k"
+  - mouser: "603-MFR-25FTE52-470K"
+- "Metal Film Resistors - Through Hole (L=6.3 mm, D=2.5 mm, 1%)":
+  - footprint: "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+  - value: "162k"
+  - mouser: "603-MFR-25FTE52-162K"
+- "Metal Film Resistors - Through Hole (L=6.3 mm, D=2.5 mm, 1%)":
+  - footprint: "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+  - value: "1M2"
+  - mouser:	"603-MFR-25FTE52-1M2"
+- "Metal Film Resistors - Through Hole (L=6.3 mm, D=2.5 mm, 1%)":
+  - footprint: "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+  - value: "1.5meg"
+  - mouser:	"603-MFR-25FTE52-1M5"
+- "Metal Film Resistors - Through Hole (L=6.3 mm, D=2.5 mm, 1%)":
+  - footprint: "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+  - value: "2.2meg"
+  - mouser:	"603-MFR-25FTE52-2M2"
+- "Metal Film Resistors - Through Hole (L=6.3 mm, D=2.5 mm, 1%)":
+  - footprint: "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical"
+  - value: "2.2meg"
+  - mouser:	"603-MFR-25FTE52-2M2"
+- "Metal Film Resistors - Through Hole (L=6.3 mm, D=2.5 mm, 1%)":
+  - footprint: "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+  - value: "3.3meg"
+  - mouser:	"603-MFR-25FTE52-3M3"
+
+    # THT Resistor
+- "Metal Film Resistors - Through Hole (L=3.6 mm, D=1.6 mm, 1%)":
+  - footprint: "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P2.54mm_Vertical"
+  - value: "10"
+  - mouser: "594-5063JD10R00F"
+- "Metal Film Resistors - Through Hole (L=3.6 mm, D=1.6 mm, 1%)":
+  - footprint: "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal"
+  - value: "10"
+  - mouser: "594-5063JD10R00F"
+- "Metal Film Resistors - Through Hole (L=3.6 mm, D=1.6 mm, 1%)":
+  - footprint: "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal"
+  - value: "100"
+  - mouser: "594-5063JD100R0F5"
+- "Metal Film Resistors - Through Hole (L=3.6 mm, D=1.6 mm, 1%)":
+  - footprint: "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal"
+  - value: "330"
+  - mouser: "594-5063JD330R0FT"
+- "Metal Film Resistors - Through Hole (L=3.6 mm, D=1.6 mm, 1%)":
+  - footprint: "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal"
+  - value: "1k"
+  - mouser: "594-5063JD1K000F"
+- "Metal Film Resistors - Through Hole (L=3.6 mm, D=1.6 mm, 1%)":
+  - footprint: "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal"
+  - value: "2k"
+  - mouser: "594-5063JD2K000F"
+- "Metal Film Resistors - Through Hole (L=3.6 mm, D=1.6 mm, 1%)":
+  - footprint: "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal"
+  - value: "2.2k"
+  - mouser: "594-5063JD2K200FT"
+- "Metal Film Resistors - Through Hole (L=3.6 mm, D=1.6 mm, 1%)":
+  - footprint: "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal"
+  - value: "3.3k"
+  - mouser: "594-5063JD3K300F"
+- "Metal Film Resistors - Through Hole (L=3.6 mm, D=1.6 mm, 1%)":
+  - footprint: "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal"
+  - value: "4.7k"
+  - mouser: "594-5063JD4K700FT"
+- "Metal Film Resistors - Through Hole (L=3.6 mm, D=1.6 mm, 1%)":
+  - footprint: "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal"
+  - value: "5.6k"
+  - mouser: "594-5063JD5K600F"
+- "Metal Film Resistors - Through Hole (L=3.6 mm, D=1.6 mm, 1%)":
+  - footprint: "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal"
+  - value: "10k"
+  - mouser: "594-MBA02040C1002FCT"
+- "Metal Film Resistors - Through Hole (L=3.6 mm, D=1.6 mm, 1%)":
+  - footprint: "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal"
+  - value: "12k"
+  - mouser: "594-5063JD12K00F"
+- "Metal Film Resistors - Through Hole (L=3.6 mm, D=1.6 mm, 1%)":
+  - footprint: "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal"
+  - value: "15.4k"
+  - mouser: "594-5063JD15K40F"
+- "Metal Film Resistors - Through Hole (L=3.6 mm, D=1.6 mm, 1%)":
+  - footprint: "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal"
+  - value: "16.5k"
+  - mouser: "594-5063JD16K50F"
+- "Metal Film Resistors - Through Hole (L=3.6 mm, D=1.6 mm, 1%)":
+  - footprint: "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal"
+  - value: "18k"
+  - mouser: "594-5063JD18K00FT"
+- "Metal Film Resistors - Through Hole (L=3.6 mm, D=1.6 mm, 1%)":
+  - footprint: "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal"
+  - value: "22k"
+  - mouser: "594-5063JD22K00F"
+- "Metal Film Resistors - Through Hole (L=3.6 mm, D=1.6 mm, 1%)":
+  - footprint: "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal"
+  - value: "24k"
+  - mouser: "594-5063JD24K00F"
+- "Metal Film Resistors - Through Hole (L=3.6 mm, D=1.6 mm, 1%)":
+  - footprint: "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal"
+  - value: "27k"
+  - mouser: "594-5063JD27K00F"
+- "Metal Film Resistors - Through Hole (L=3.6 mm, D=1.6 mm, 1%)":
+  - footprint: "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal"
+  - value: "30k"
+  - mouser: "594-5063JD30K00F"
+- "Metal Film Resistors - Through Hole (L=3.6 mm, D=1.6 mm, 1%)":
+  - footprint: "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal"
+  - value: "33k"
+  - mouser: "594-5063JD33K00FT"
+- "Metal Film Resistors - Through Hole (L=3.6 mm, D=1.6 mm, 1%)":
+  - footprint: "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal"
+  - value: "39k"
+  - mouser: "594-5063JD39K00FT"
+- "Metal Film Resistors - Through Hole (L=3.6 mm, D=1.6 mm, 1%)":
+  - footprint: "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal"
+  - value: "43.2k"
+  - mouser: "594-5063JD43K20FT"
+- "Metal Film Resistors - Through Hole (L=3.6 mm, D=1.6 mm, 1%)":
+  - footprint: "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal"
+  - value: "36k"
+  - mouser: "594-5063JD36K00F"
+- "Metal Film Resistors - Through Hole (L=3.6 mm, D=1.6 mm, 1%)":
+  - footprint: "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal"
+  - value: "43k"
+  - mouser: "594-5063JD43K00FT"
+- "Metal Film Resistors - Through Hole (L=3.6 mm, D=1.6 mm, 1%)":
+  - footprint: "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal"
+  - value: "47k"
+  - mouser: "594-5063JD47K00FT"
+- "Metal Film Resistors - Through Hole (L=3.6 mm, D=1.6 mm, 1%)":
+  - footprint: "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal"
+  - value: "51k"
+  - mouser: "594-5063JD51K00FT"
+- "Metal Film Resistors - Through Hole (L=3.6 mm, D=1.6 mm, 1%)":
+  - footprint: "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal"
+  - value: "62k"
+  - mouser: "594-5063JD62K00F1"
+- "Metal Film Resistors - Through Hole (L=3.6 mm, D=1.6 mm, 1%)":
+  - footprint: "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal"
+  - value: "68k"
+  - mouser: "594-5063JD68K00F1"
+- "Metal Film Resistors - Through Hole (L=3.6 mm, D=1.6 mm, 1%)":
+  - footprint: "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal"
+  - value: "82k"
+  - mouser: "594-5063JD82K00F"
+- "Metal Film Resistors - Through Hole (L=3.6 mm, D=1.6 mm, 1%)":
+  - footprint: "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal"
+  - value: "90.9k"
+  - mouser: "594-5063JD90K90F"
+- "Metal Film Resistors - Through Hole (L=3.6 mm, D=1.6 mm, 1%)":
+  - footprint: "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal"
+  - value: "100k"
+  - mouser: "594-5063JD100K0F5"
+- "Metal Film Resistors - Through Hole (L=3.6 mm, D=1.6 mm, 1%)":
+  - footprint: "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal"
+  - value: "120k"
+  - mouser: "594-5063JD120K0F"
+- "Metal Film Resistors - Through Hole (L=3.6 mm, D=1.6 mm, 1%)":
+  - footprint: "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal"
+  - value: "130k"
+  - mouser: "594-5063JD130K0F"
+- "Metal Film Resistors - Through Hole (L=3.6 mm, D=1.6 mm, 1%)":
+  - footprint: "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal"
+  - value: "150k"
+  - mouser: "594-5063JD150K0F5"
+- "Metal Film Resistors - Through Hole (L=3.6 mm, D=1.6 mm, 1%)":
+  - footprint: "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal"
+  - value: "220k"
+  - mouser: "594-5063JD220K0F"
+- "Metal Film Resistors - Through Hole (L=3.6 mm, D=1.6 mm, 1%)":
+  - footprint: "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal"
+  - value: "270k"
+  - mouser: "594-5063JD2K000F"
+- "Metal Film Resistors - Through Hole (L=3.6 mm, D=1.6 mm, 1%)":
+  - footprint: "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal"
+  - value: "330k"
+  - mouser: "594-5063JD330K0F"
+- "Metal Film Resistors - Through Hole (L=3.6 mm, D=1.6 mm, 1%)":
+  - footprint: "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal"
+  - value: "470k"
+  - mouser: "594-5063JD470K0F"
+- "Metal Film Resistors - Through Hole (L=3.6 mm, D=1.6 mm, 1%)":
+  - footprint: "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal"
+  - value: "510k"
+  - mouser: "594-5063JD510K0F"
+- "Metal Film Resistors - Through Hole (L=3.6 mm, D=1.6 mm, 1%)":
+  - footprint: "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P2.54mm_Vertical"
+  - value: "510k"
+  - mouser: "594-5063JD510K0F"
+- "Metal Film Resistors - Through Hole (L=3.6 mm, D=1.6 mm, 1%)":
+  - footprint: "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal"
+  - value: "560k"
+  - mouser: "594-5063JD560K0F"
+- "Metal Film Resistors - Through Hole (L=3.6 mm, D=1.6 mm, 1%)":
+  - footprint: "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P2.54mm_Vertical"
+  - value: "560k"
+  - mouser: "594-5063JD560K0F"
+- "Metal Film Resistors - Through Hole (L=3.6 mm, D=1.6 mm, 1%)":
+  - footprint: "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal"
+  - value: "620k"
+  - mouser: "603-MFR-25FTE52-620K"
+- "Metal Film Resistors - Through Hole (L=3.6 mm, D=1.6 mm, 1%)":
+  - footprint: "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical"
+  - value: "620k"
+  - mouser: "603-MFR-25FTE52-620K"
+- "Metal Film Resistors - Through Hole (L=3.6 mm, D=1.6 mm, 1%)":
+  - footprint: "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal"
+  - value: "680k"
+  - mouser: "594-5063JD680K0F"
+- "Metal Film Resistors - Through Hole (L=3.6 mm, D=1.6 mm, 1%)":
+  - footprint: "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P2.54mm_Vertical"
+  - value: "680k"
+  - mouser: "594-5063JD680K0F"
+- "Metal Film Resistors - Through Hole (L=3.6 mm, D=1.6 mm, 1%)":
+  - footprint: "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal"
+  - value: "820k"
+  - mouser: "594-5063JD820K0F"
+- "Metal Film Resistors - Through Hole (L=3.6 mm, D=1.6 mm, 1%)":
+  - footprint: "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P2.54mm_Vertical"
+  - value: "820k"
+  - mouser: "594-5063JD820K0F"
+- "Metal Film Resistors - Through Hole (L=3.6 mm, D=1.6 mm, 1%)":
+  - footprint: "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal"
+  - value: "910k"
+  - mouser: "594-MBA02040C9103FRP"
+- "Metal Film Resistors - Through Hole (L=3.6 mm, D=1.6 mm, 1%)":
+  - footprint: "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P2.54mm_Vertical"
+  - value: "910k"
+  - mouser: "594-MBA02040C9103FRP"
+- "Metal Film Resistors - Through Hole (L=3.6 mm, D=1.6 mm, 1%)":
+  - footprint: "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal"
+  - value: "1meg"
+  - mouser: "594-5063JD1M000F5"
+- "Metal Film Resistors - Through Hole (L=3.6 mm, D=1.6 mm, 1%)":
+  - footprint: "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal"
+  - value: "2.2meg"
+  - mouser: "594-5063JD2M200F"
+
+#SMD Resistors
+- "Thick Film Resistors - SMD (0805)":
+  - footprint: "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
+  - value: "10"
+  - mouser: "660-RK73H2ATTDD10R0F"
+- "Thick Film Resistors - SMD (0805)":
+  - footprint: "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
+  - value: "100"
+  - mouser: "660-RK73H2ATTD1000F"
+- "Thick Film Resistors - SMD (0805)":
+  - footprint: "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
+  - value: "200"
+  - mouser: "660-RK73H2ATTD2000F"
+- "Thick Film Resistors - SMD (0805)":
+  - footprint: "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
+  - value: "330"
+  - mouser: "660-RK73H2ATTD3300F"
+- "Thick Film Resistors - SMD (0805)":
+  - footprint: "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
+  - value: "510"
+  - mouser: "660-RK73H2ATTD5100F"
+- "Thick Film Resistors - SMD (0805)":
+  - footprint: "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
+  - value: "560"
+  - mouser: "660-RK73H2ATTD5600F"
+- "Thick Film Resistors - SMD (0805)":
+  - footprint: "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
+  - value: "1k"
+  - mouser: "660-RK73H2ATTD1001F"
+- "Thick Film Resistors - SMD (0805)":
+  - footprint: "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
+  - value: "2.2k"
+  - mouser: "660-RK73H2ATTD2201F"
+- "Thick Film Resistors - SMD (0805)":
+  - footprint: "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
+  - value: "5.1k"
+  - mouser: "660-RK73H2ATTD5101F"
+- "Thick Film Resistors - SMD (0805)":
+  - footprint: "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
+  - value: "6.8k"
+  - mouser: "660-RK73H2ATTD6801F"
+- "Thick Film Resistors - SMD (0805)":
+  - footprint: "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
+  - value: "8.2k"
+  - mouser: "660-RK73H2ATTD8201F"
+- "Thick Film Resistors - SMD (0805)":
+  - footprint: "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
+  - value: "10k"
+  - mouser: "660-RK73H2ATTD1002F"
+- "Thick Film Resistors - SMD (0805)":
+  - footprint: "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
+  - value: "15k"
+  - mouser: "660-RK73H2ATTD1502F"
+- "Thick Film Resistors - SMD (0805)":
+  - footprint: "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
+  - value: "20k"
+  - mouser: "660-RK73H2ATTD2002F"
+- "Thick Film Resistors - SMD (0805)":
+  - footprint: "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
+  - value: "22k"
+  - mouser: "660-RK73H2ATTD2202F"
+- "Thick Film Resistors - SMD (0805)":
+  - footprint: "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
+  - value: "33k"
+  - mouser: "660-RK73H2ATTD3302F"
+- "Thick Film Resistors - SMD (0805)":
+  - footprint: "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
+  - value: "47k"
+  - mouser: "660-RK73H2ATTD4702F"
+- "Thick Film Resistors - SMD (0805)":
+  - footprint: "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
+  - value: "100k"
+  - mouser: "660-RK73H2ATTD1003F"
+- "Thick Film Resistors - SMD (0805)":
+  - footprint: "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
+  - value: "220k"
+  - mouser: "660-RK73H2ATTD2203F"
+- "Thick Film Resistors - SMD (0805)":
+  - footprint: "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
+  - value: "750 (0.5W)"
+  - mouser: "71-CRCW0805750RFKEAH"
+
+#Opamps
+- "Low-Noise FET-Input Operational Amplifiers (SOIC-8 )":
+  - footprint: "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm"
+  - value: "TL072"
+  - datasheet: "http://www.ti.com/lit/ds/symlink/tl071.pdf"
+  - mouser: "595-TL072CDR"
+- "Low-Noise FET-Input Operational Amplifiers (SOIC-8 )":
+  - footprint: "Package_DIP:DIP-14_W7.62mm_Socket"
+  - value: "TL074"
+  - datasheet: "http://www.ti.com/lit/ds/symlink/tl071.pdf"
+  - mouser: "595-TL074CN"
+- "Low-Noise FET-Input Operational Amplifiers":
+  - footprint: "Package_DIP:DIP-8_W7.62mm_Socket"
+  - value: "TL072"
+  - datasheet: "http://www.ti.com/lit/ds/symlink/tl071.pdf"
+  - mouser: "595-TL072IP"
+- "Operational Amplifiers - Op Amps Dual Low Noise":
+  - footprint: "Package_DIP:DIP-8_W7.62mm_Socket"
+  - value: "NE5532"
+  - datasheet: "https://www.ti.com/lit/gpn/ne5532a"
+  - mouser: "595-NE5532P"
+- "SoundPlus™ High Performance Audio Operational Amplifiers":
+  - footprint: "Package_DIP:DIP-8_W7.62mm_Socket"
+  - value: "OPA2134"
+  - datasheet: "https://www.ti.com/lit/ds/symlink/opa2134.pdf"
+  - mouser: "595-OPA2134PA"
+- "Analog Multiplier":
+  - footprint: "Package_DIP:DIP-8_W7.62mm"
+  - value: "AD633"
+  - datasheet: "https://www.analog.com/media/en/technical-documentation/data-sheets/ad633.pdf"
+  - mouser: "584-AD633ANZ"
+- "Dual Operational Transconductance Amplifier (OTA)":
+  - footprint: "Package_DIP:DIP-16_W7.62mm_Socket"
+  - value: "AS3280"
+  - datasheet: "https://www.alfarzpp.lv/eng/sc/AS3280.pdf"
+  - mouser: ""
+- "Operational Amplifiers - Op Amps Industry-standard dual operational amplifier 8-SOIC":
+  - footprint: "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm"
+  - value: "LM358"
+  - datasheet: "https://www.ti.com/lit/gpn/lm2904v"
+  - mouser: "595-LM358BAIDR"
+- "Operational Amplifiers - Op Amps Industry-standard dual operational amplifier 8-SOIC":
+  - footprint: "Package_DIP:DIP-8_W7.62mm_Socket"
+  - value: "LM358"
+  - datasheet: "https://www.ti.com/lit/gpn/lm2904v"
+  - mouser: "595-LM358BAIDR"
+- "Wide-Bandwidth JFET-Input Dual Operational Amplifier":
+  - footprint: "Package_DIP:DIP-8_W7.62mm_Socket"
+  - value: "LF353"
+  - datasheet: "https://www.ti.com/lit/gpn/lf353"
+  - mouser: "595-LF353P"
+- "LF442-MIL Dual Low Power JFET Input Operational Amplifier":
+  - footprint: "Package_DIP:DIP-8_W7.62mm_Socket"
+  - value: "LF442"
+  - datasheet: "https://www.ti.com/lit/ds/symlink/lf442-mil.pdf?ts=1691321191356&ref_url=https%253A%252F%252Fsearch.brave.com%252F"
+
+#Transistors
+- "Bipolar Transistors - BJT":
+  - footprint: "Package_TO_SOT_THT:TO-92_Inline_Wide"
+  - value: "BC547"
+  - datasheet: "https://www.mouser.ch/datasheet/2/308/1/BC550_D-2310266.pdf"
+  - mouser: "512-BC547CTA"
+- "Bipolar Transistors - BJT":
+  - footprint: "Package_TO_SOT_THT:TO-92_Inline_Wide"
+  - value: "2N3904"
+  - datasheet: "https://www.mouser.ch/datasheet/2/308/2N3904_D-2309276.pdf"
+  - mouser: "512-2N3904TAR"
+- "Bipolar Transistors - BJT":
+  - footprint: "Package_TO_SOT_THT:TO-92_Inline_Wide"
+  - value: "2N3906"
+  - datasheet: "https://www.mouser.ch/datasheet/2/308/2N3906_D-1801672.pdf"
+  - mouser: "512-2N3906TAR"
+- "Bipolar Transistors - BJT":
+  - footprint: "Package_TO_SOT_SMD:SOT-23"
+  - value: "MMBT3904"
+  - datasheet: "https://assets.nexperia.com/documents/data-sheet/MMBT3904.pdf"
+  - mouser: "821-MMBT3904RFG"
+- "Matched PNP transistor pair":
+  - footprint: "Package_TO_SOT_THT:TO-5-8"
+  - value: "AS395"
+  - datasheet: "https://www.alfarzpp.lv/eng/sc/AS395.pdf"
+  - mouser: ""
+- "Low-Noise Matched Transistor Array ICs":
+  - footprint: "Package_DIP:DIP-14_W7.62mm_Socket"
+  - value: "THAT300"
+  - datasheet: "https://www.mouser.ch/datasheet/2/407/THAT_300-Series_Datasheet-180059.pdf"
+  - mouser: "887-300P14-U"
+- "Low-Noise Matched Transistor Array ICs":
+  - footprint: "SOIC-14_3.9x8.7mm_P1.27mm"
+  - value: "THAT340"
+  - datasheet: "https://www.mouser.ch/datasheet/2/407/THAT_300-Series_Datasheet-180059.pdf"
+  - mouser: "887-340S14-U"
+
+#Diodes
+- "SMD Switching Diode":
+  - footprint: "Diode_SMD:D_SOD-123"
+  - value: "1N4148W"
+  - datasheet: "https://www.mouser.ch/datasheet/2/80/QW-J0017_1N4148W-HF_RevA-1846955.pdf"
+  - mouser: "750-1N4148W-HF"
+- "Small Signal Diode":
+  - footprint: "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal"
+  - value: "1N4148"
+  - datasheet: "https://www.mouser.ch/datasheet/2/308/1N914_D-1801484.pdf"
+  - mouser: "512-1N4148"
+- "Small Signal Zener Diodes":
+  - footprint: "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal"
+  - value: "1N5236"
+  - datasheet: "https://www.mouser.ch/datasheet/2/427/1n5221-1767759.pdf"
+  - mouser: "78-1N5236B-TAP"
+- "Small Signal Zener Diodes":
+  - footprint: "Diode_THT:D_DO-35_SOD27_P2.54mm_Vertical_AnodeUp"
+  - value: "1N5236"
+  - datasheet: "https://www.mouser.ch/datasheet/2/427/1n5221-1767759.pdf"
+  - mouser: "78-1N5236B-TAP"
+- "Rectifiers Vr/400V Io/1A T/R":
+  - footprint: "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal"
+  - value: "1N4004"
+  - datasheet: "https://www.diodes.com/assets/Datasheets/ds28002.pdf"
+  - mouser: "621-1N4004"
+
+#Jacks and potentiometers
+- "Trimmer Resistors - Through Hole":
+  - footprint: "Potentiometer_THT:Potentiometer_Bourns_3386P_Vertical"
+  - value: "100k"
+  - mouser: "652-3386P-1-104LF"
+- "Alpha 9 mm Pots – Vertical":
+  - footprint: "elektrophon:Potentiometer_Alpha_RD901F-40-00D_Single_Vertical"
+  - value: "*"
+- "3.5mm Eurorack Jacks":
+  - footprint: "elektrophon:Jack_3.5mm_WQP-PJ398SM_Vertical"
+  - value: "*"
+- "IDC Header":
+  - footprint: "Connector_IDC:IDC-Header_2x05_P2.54mm_Vertical"
+  - value: "*"
+
+#trimpots
+- "Trimmer Resistors - Through Hole 10Kohms Standoffs Vertical Adjust 3/8":
+  - footprint: "Potentiometer_THT:Potentiometer_Bourns_3299W_Vertical"
+  - value: "100"
+  - mouser: "652-3299W-1-101LF"
+- "Trimmer Resistors - Through Hole 10Kohms Standoffs Vertical Adjust 3/8":
+  - footprint: "Potentiometer_THT:Potentiometer_Bourns_3299W_Vertical"
+  - value: "10k"
+  - mouser: "652-3299W-1-103LF"
+- "Trimmer Resistors - Through Hole 10Kohms Standoffs Vertical Adjust 3/8":
+  - footprint: "Potentiometer_THT:Potentiometer_Bourns_3299W_Vertical"
+  - value: "50k"
+  - mouser: "652-3299W-1-503LF"
+- "Trimmer Resistors - Through Hole 10Kohms Standoffs Vertical Adjust 3/8":
+  - footprint: "Potentiometer_THT:Potentiometer_Bourns_3299W_Vertical"
+  - value: "100k"
+  - mouser: "652-3299W-1-104LF"
+- "Trimmer Resistors - Through Hole 10Kohms Standoffs Vertical Adjust 3/8":
+  - footprint: "Potentiometer_THT:Potentiometer_Bourns_3299W_Vertical"
+  - value: "1meg"
+  - mouser: "652-3299W-1-105LF"
+
+- "Trimmer Resistors - Through Hole 10Kohms Standoffs Vertical Adjust 3/8":
+  - footprint: "Potentiometer_THT:Potentiometer_Bourns_3296Z_Horizontal"
+  - value: "100"
+  - mouser: "652-3296Z-1-101LF"
+- "Trimmer Resistors - Through Hole 10Kohms Standoffs Vertical Adjust 3/8":
+  - footprint: "Potentiometer_THT:Potentiometer_Bourns_3296Z_Horizontal"
+  - value: "50k"
+  - mouser: "652-3296Z-1-503LF"
+- "Trimmer Resistors - Through Hole 10Kohms Standoffs Vertical Adjust 3/8":
+  - footprint: "Potentiometer_THT:Potentiometer_Bourns_3296Z_Horizontal"
+  - value: "100k"
+  - mouser: "652-3296Z-1-104LF"
+
+#LED
+- "LED 3mm low current":
+  - footprint: "LED_THT:LED_D3.0mm"
+  - value: "LED (Green)"
+  - mouser: "604-WP710A10LZGCK"
+- "LED 3mm low current":
+  - footprint: "LED_THT:LED_D3.0mm"
+  - value: "LED (Red)"
+  - mouser: "604-WP710A10LSECKJ3"
+- "LED 3mm low current":
+  - footprint: "LED_THT:LED_D3.0mm_Horizontal_O1.27mm_Z2.0mm"
+  - value: "LED (Red)"
+  - mouser: "604-WP710A10LSECKJ3"
+- "LED 3mm bipolar":
+  - footprint: "LED_THT:LED_D3.0mm"
+  - value: "LED (Green/Yellow)"
+  - datasheet: ""
+  - mouser: "604-WP937GYW"
+- "LED 3mm bipolar":
+  - footprint: "LED_THT:LED_D3.0mm"
+  - value: "LED (Red/Yellow)"
+  - datasheet: ""
+  - mouser: "645-521-9768F"
+- "Standard LED":
+  - footprint: "LED_THT:LED_D5.0mm"
+  - value: "LED (Red)"
+  - datasheet: ""
+
+#Others
+- "General Purpose Timer":
+  - footprint: "Package_DIP:DIP-8_W7.62mm"
+  - value: "ICM7555xP"
+  - datasheet: "https://www.mouser.ch/datasheet/2/698/REN_icm7555_56_DST_20021014-1997666.pdf"
+  - mouser: "968-ICM7555IPAZ"
+- "Precision Micropower Shunt Voltage Reference":
+  - footprint: "Package_TO_SOT_SMD:SOT-23"
+  - value: "LM4040BIM3-5.0"
+  - datasheet: "http://www.ti.com/lit/ds/symlink/lm4040-n.pdf"
+  - mouser: "926-LM4040BIM350NOPB"
+- "8-Channel/Dual 4-Channel, CMOS Analog Multiplexers":
+  - footprint: "Package_DIP:DIP-16_W7.62mm_Socket"
+  - value: "DG409"
+  - datasheet: "https://datasheets.maximintegrated.com/en/ds/DG408-DG409.pdf"
+  - mouser: "781-DG409DJ-E3"
+- "DIP-4 Optocouplers":
+  - footprint: "DIP-4_W10.16mm"
+  - value: "LCR-0202"
+  - datasheet: ""
+- "Switch SPDT":
+  - footprint: "elektrophon:SPDT_KIT"
+  - value: "Switch"
+  - datasheet: ""
+- "1J24B HF pentode tube":
+  - footprint: "elektrophon:1J24B"
+  - value: "1J24B"
+  - datasheet: ""
+- "Programmable Operational Amplifier":
+  - footprint: "Package_DIP:DIP-8_W7.62mm_Socket"
+  - value: "LM4250"
+  - datasheet: ""
+- "CMOS Micropower Phase Locked Loop":
+  - footprint: "Package_DIP:DIP-16_W7.62mm_Socket"
+  - value: "4046"
+  - datasheet: ""
+- "Tempco Resistor":
+  - footprint: "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P2.54mm_Vertical"
+  - value: "2k +3500ppm/°C PTC"
+  - datasheet: ""
+- "3-TERMINAL NEGATIVE VOLTAGE REGULTOR":
+  - footprint: "Package_TO_SOT_SMD:SOT-89-3"
+  - value: "NJM79L06"
+  - datasheet: "https://www.mouser.ch/datasheet/2/294/NJM79L00S_E-1859990.pdf"
+  - mouser: "513-NJM79L06SU3-TE1"
+- "UA78L Series Positive-Voltage Linear Regulators":
+  - footprint: "Package_TO_SOT_SMD:SOT-89-3"
+  - value: "uA7812"
+  - datasheet: "https://www.ti.com/lit/ds/symlink/ua78l.pdf"
+  - mouser: "595-UA78L12ACPK"
+
+#connectors
+- "Board to Board Connectors (2.54 mm)":
+  - footprint: "Connector_PinSocket_2.54mm:PinSocket_1x02_P2.54mm_Vertical"
+  - value: "01x02 Female"
+  - mouser: "200-SSW10202TS"
+- "Board to Board Connectors (2.54 mm)":
+  - footprint: "Connector_PinSocket_2.54mm:PinSocket_1x03_P2.54mm_Vertical"
+  - value: "01x03 Female"
+  - mouser: "200-SSW10302TS"
+- "Board to Board Connectors (2.54 mm)":
+  - footprint: "Connector_PinSocket_2.54mm:PinSocket_1x04_P2.54mm_Vertical"
+  - value: "01x04 Female"
+  - mouser: "200-SSW10401TS"
+- "Board to Board Connectors (2.54 mm)":
+  - footprint: "Connector_PinSocket_2.54mm:PinSocket_1x05_P2.54mm_Vertical"
+  - value: "01x05 Female"
+  - mouser: "200-SSW10502TS"
+- "Board to Board Connectors (2.54 mm)":
+  - footprint: "Connector_PinSocket_2.54mm:PinSocket_1x06_P2.54mm_Vertical"
+  - value: "01x06 Female"
+  - mouser: "200-SSW10602TS"
+- "Board to Board Connectors (2.54 mm)":
+  - footprint: "Connector_PinSocket_2.54mm:PinSocket_1x07_P2.54mm_Vertical"
+  - value: "01x07 Female"
+  - mouser: "200-SSW10702TS"
+- "Board to Board Connectors (2.54 mm)":
+  - footprint: "Connector_PinSocket_2.54mm:PinSocket_1x08_P2.54mm_Vertical"
+  - value: "01x08 Female"
+  - mouser: "200-SSW10802TS"
+- "Board to Board Connectors (2.54 mm)":
+  - footprint: "Connector_PinSocket_2.54mm:PinSocket_1x13_P2.54mm_Vertical"
+  - value: "01x13 Female"
+  - mouser: "200-SSW11302TS"
+- "Board to Board Connectors (2.54 mm)":
+  - footprint: "Connector_PinSocket_2.54mm:PinSocket_1x14_P2.54mm_Vertical"
+  - value: "01x14 Female"
+  - mouser: "200-SSW11402TS"
+
+- "Board to Board Connectors (2.54 mm)":
+  - footprint: "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical"
+  - value: "01x02 Male"
+- "Board to Board Connectors (2.54 mm)":
+  - footprint: "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical"
+  - value: "01x03 Male"
+- "Board to Board Connectors (2.54 mm)":
+  - footprint: "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical"
+  - value: "01x04 Male"
+- "Board to Board Connectors (2.54 mm)":
+  - footprint: "Connector_PinHeader_2.54mm:PinHeader_1x05_P2.54mm_Vertical"
+  - value: "01x05 Male"
+- "Board to Board Connectors (2.54 mm)":
+  - footprint: "Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical"
+  - value: "01x06 Male"
+- "Board to Board Connectors (2.54 mm)":
+  - footprint: "Connector_PinHeader_2.54mm:PinHeader_1x07_P2.54mm_Vertical"
+  - value: "01x07 Male"
+- "Board to Board Connectors (2.54 mm)":
+  - footprint: "Connector_PinHeader_2.54mm:PinHeader_1x08_P2.54mm_Vertical"
+  - value: "01x08 Male"
+- "Board to Board Connectors (2.54 mm)":
+  - footprint: "Connector_PinHeader_2.54mm:PinHeader_1x13_P2.54mm_Vertical"
+  - value: "01x13 Male"
+- "Board to Board Connectors (2.54 mm)":
+  - footprint: "Connector_PinHeader_2.54mm:PinHeader_1x14_P2.54mm_Vertical"
+  - value: "01x14 Male"
+
+#Audio Jacks
+- "RCA Phono Connectors - Black":
+  - footprint: "elektrophon:CUI_RCJ-026"
+  - value: "RCJ-021"
+  - mouser: "490-RCJ-021"
+- "RCA Phono Connectors - Red":
+  - footprint: "elektrophon:CUI_RCJ-026"
+  - value: "RCJ-022"
+  - mouser: "490-RCJ-022"
+- "Test Plugs & Test Jacks 4mm Socket,Thru Hole UnInsulated":
+  - footprint: "MountingHole:MountingHole_6.4mm_M6_Pad_TopBottom"
+  - value: "CT2224"
+  - mouser: "510-CT2224"
+- "DC Power Connectors Power Jacks":
+  - footprint: "Connector_BarrelJack:BarrelJack_CUI_PJ-102AH_Horizontal"
+  - value: "PJ-102AH"
+  - mouser: "490-PJ-102AH"
+

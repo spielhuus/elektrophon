@@ -1,0 +1,83 @@
+---
+date: 2023-06-20
+author: "spielhuus"
+excerpt: "This tube vca was originaly designed by Ken Stone. There are various simplifications of the circuit. This version is very close to the L-1 tube VCA."
+subtitle: "VCA and distortion with a low power tube."
+tags:
+- vca
+categories:
+- module
+title: "pentode vca"
+references: 
+  - { description: "CGS tube VCA/timbral gate",
+      title: "CGS65",
+      url: "https://sdiy.info/wiki/CGS_tube_VCA/timbral_gate" }
+  - { description: "Tube vca modifications and results",
+      title: "electro-music.com",
+      url: "https://electro-music.com/forum/topic-26469.html" }
+  - { description: "L-1 Tube VCA",
+      title: "modwiggler.com",
+      url: "https://modwiggler.com/forum/viewtopic.php?t=66598" }
+  - { description: "Datasheet",
+      title: "1J24B",
+      url: "/1J24B_DB-RU.pdf" }
+version: 1
+draft: False
+```{elektron, command="bom", input=["main"], group=TRUE, partlist="../../lib/partlist.yaml"}```
+```{elektron, command="erc", input=["main"]}```
+```{elektron, command="drc", input=["main"]}```
+```{elektron, command="schema", input=["main"], border=TRUE, theme="Kicad2000"}```
+```{elektron, command="pcb", input=["main", "panel"], border=TRUE}```
+```{elektron, command="gerber", input=["main", "panel"]}```
+---
+
+# Description
+
+```{python echo=FALSE, results="hide", fig.align='center', fig.cap='Figure 1: Pentode VCA schematic'}
+import sys
+sys.path.append("..")
+
+from elektron import Circuit, Draw, Element, Label, Line, Dot, Simulation, Power
+from pentode import *
+
+draw = Draw(["/usr/share/kicad/symbols", "../../lib/symbols"])
+
+input(draw)
+draw.pos((9*2.54, 3*25.4))
+cv(draw)
+output(draw)
+
+draw.plot(scale=6, netlist=False, theme='BlackWhite')
+```
+
+The basic schematic is very simple. The tube is used like a common emmiter amplifier. There is a input and output buffer. And a control section. The selection of the opamp in the control section is on purpose. This opamp was chosen on purpose, because of its narrow bandwidth.
+
+# build
+
+{{< bom >}}
+
+{{< callout summe main panel >}}
+
+{{< report summe main >}}
+
+
+# calibration
+
+## calibrate the CV gain
+
+1) Connect an audio signal to input and turn the volume full on.
+2) Turn the feedback, CV and Gain potentiometer off.
+3) Adjust RV3 until you hear nothing at out.
+
+## calibrate clean/distortion 
+
+The clean potentiometer is setting the offset of the signal the distortion signal controls the wave folding.
+
+1) Connect an audio signal to input and turn the volume full and gain on.
+3) Turn the feedback down
+4) Switch to upper position.
+5) Adjust RV2 until the signal is centered
+4) Switch to lower position.
+5) Adjust RV1 until the signal is centered
+
+

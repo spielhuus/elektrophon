@@ -1,0 +1,35 @@
+---
+author: "spielhuus"
+categories:
+- module
+date: 2021-07-01
+excerpt: "The resonant equalizer is a very special module from the serge synthesizer. It is a very common equalizer circuit with gyrators. The sound can be changed in various ways to simulate different instruments. But the fun begins when you patch feedback with no input."
+subtitle: "Serge resonant equalizer."
+tags:
+- grundlage
+title: equalizer
+version: 2
+draft: False
+references: 
+  - { description: "Ken Stone resonant equalizer",
+      title: "CGS",
+      url: "" }
+```{elektron, command="bom", input=["main", "mount"], group=TRUE, partlist="../../lib/partlist.yaml"}```
+```{elektron, command="erc", input=["main", "mount"]}```
+```{elektron, command="drc", input=["main", "mount"]}```
+```{elektron, command="schema", input=["main", "mount"], border=TRUE, theme="Kicad2000"}```
+```{elektron, command="pcb", input=["main", "mount", "panel"], border=TRUE}```
+```{elektron, command="gerber", input=["main", "mount" "panel"]}```
+---
+
+# Construction
+
+{{< bom >}}
+
+{{< callout summe main panel >}}
+
+{{< report summe main >}}
+
+# Usage
+
+The first input jack is wired to 5 volts when nothing is connected.

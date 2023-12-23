@@ -1,0 +1,289 @@
+---
+author: "spielhuus"
+categories:
+- article
+date: 2021-07-01
+excerpt: "Digital modules are everywhere today and you can do fantastic things with it. With the ongoing chip shortage it is difficult to get the ARM processors and codecs. To be honest these chips ar also very small and difficult to solder. But there is the daisy seed from electrosmith. It has an ARM Cortex M7 MCU, 24bit/96kHz codec and 64MB SDRAM. A good base to start an digital audio project."
+description: ""
+subtitle: "getting started with the daisy seed."
+tags:
+- grundlage
+title: "Daisy Seed"
+version: 0
+draft: true
+references: 
+  - { description: "The Electrosmith Daisy Seed product page.",
+      title: "Daisy Seed",
+      url: "https://www.electro-smith.com/daisy/daisy" }
+  - { description: "The Electrosmith Daisy Seed wiki page.",
+      title: "Wiki",
+      url: "https://github.com/electro-smith/DaisyWiki/wiki" }
+---
+
+# getting started
+
+Electrosmith has a getting started page in their wiki. Here i describe how to use the daisy seed with arch linux and neovim. 
+
+Install the developper tools: 
+
+{{< highlight bash "linenos=table" >}}
+pacman -Sy base-devel arm-none-eabi-gdb arm-none-eabi-newlib arm-none-eabi-gcc dfu-util openocd bear
+{{< / highlight >}}
+
+create a new project
+
+{{< highlight bash "linenos=table" >}}
+mkdir project
+cd project
+git submodule add https://github.com/electro-smith/libDaisy
+cd libDaisy
+make 
+cd ..
+git submodule add https://github.com/electro-smith/DaisySP
+cd DaisySP
+make 
+cd ..
+{{< / highlight >}}
+
+the Makefile imports the Make in libDaisy/core, some variables must be set.
+
+{{< highlight bash "linenos=table" >}}
+# Project Name
+TARGET = PROJECT
+
+# Sources
+CPP_SOURCES = PROJECT.cpp
+
+# Library Locations
+LIBDAISY_DIR = libDaisy
+DAISYSP_DIR = DaisySP
+
+# Core location, and generic makefile.
+SYSTEM_FILES_DIR = $(LIBDAISY_DIR)/core
+include $(SYSTEM_FILES_DIR)/Makefile
+{{< / highlight >}}
+
+compile and upload the program. dont forget to push the buttons as described in the electrosmith wiki: 
+
+{{< highlight bash "linenos=table" >}}
+make
+#press buttons
+make program-dfu
+{{< / highlight >}}
+
+if you want to use clang lsp in neovim a project.json file must be created:
+
+{{< highlight bash "linenos=table" >}}
+make clean; bear -- make
+{{< / highlight >}}
+
+
+# connections
+
+{{< image "/Daisy_Seed_Pinout.png" "Figure 1: Daisy Seed pinout diagram" >}}
+
+## output audio
+
+```{python echo=FALSE, results="hide", fig.align='center', fig.cap='audio amplifier'}
+import sys
+sys.path.append("..")
+sys.path.append("../../lib/python")
+
+from elektron import Circuit, Draw, Element, Label, Line, Dot, R, C, Gnd, Power, Simulation
+from elektrophon import decouple_tl072
+
+draw = Draw(["/usr/share/kicad/symbols", "../../lib/symbols"])
+
+(draw 
+  + Label("AUDIO_OUT").rotate(180)
+  + R(draw.next("R"), "10k").rotate(90)
+  + Element(draw.next("U"), "Amplifier_Operational:TL072", value="TL072").mirror('x').anchor(2)
+  + Gnd().at(draw.last("U"), "3")
+
+  + Line().up().length(5*2.54).at(draw.last("U"), "1").dot("start") + Dot().push()
+  + R(draw.next("R"), "33k").tox(draw.last("U"), "2").rotate(270) + Dot().push()
+  + Line().toy(draw.last("U"), "2").dot("end")
+
+  + Line().up().length(4*2.54).at(draw.pop())
+  + C(draw.next("C"), "100p").rotate(90).tox(draw.peek())
+  + Line().toy(draw.pop())
+
+  + R(draw.next("R"), "1k").rotate(90).at(draw.last("U"), "1") + Label("OUT_L")
+)
+
+draw.plot(scale=6, theme='BlackWhite')
+```
+
+```{python echo=FALSE, results="hide"}
+R1 = 10000
+R2 = 33000
+
+MULT = round((R2/R1), 1)
+VOUT = 0.9 * -3.3 * (R2/R1)
+VOUT = abs(round(VOUT))
+```
+
+A simple opamp amplifier can be used to bring the audio from the DAC to modular level. The DAC outputs 0.9*DBVDD (Digital Buffer VDD). The DBVDD is 3.3V. So the output is around 3V peak to pean. the above amplifier has a multiplication factor of ${MULT}. 
+The output is the inverted ${VOUT}V peak to peak signal.
+
+## input audio
+
+```{python echo=FALSE, results="hide", fig.align='center', fig.cap='audio attenuator'}
+import sys
+sys.path.append("..")
+sys.path.append("../../lib/python")
+
+from elektron import Circuit, Draw, Element, Label, Line, Dot, R, C, Gnd, Power, Simulation
+from elektrophon import decouple_tl072
+
+draw = Draw(["/usr/share/kicad/symbols", "../../lib/symbols"])
+
+(draw 
+  + Label("AUDIO_IN").rotate(180)
+  + R(draw.next("R"), "100k").rotate(90)
+  + Element(draw.next("U"), "Amplifier_Operational:TL072", value="TL072").mirror('x').anchor(2)
+  + Gnd().at(draw.last("U"), "3")
+
+  + Line().up().length(5*2.54).at(draw.last("U"), "1").dot("start") + Dot().push()
+  + R(draw.next("R"), "10k").tox(draw.last("U"), "2").rotate(270) + Dot().push()
+  + Line().toy(draw.last("U"), "2").dot("end")
+
+  + Line().up().length(4*2.54).at(draw.pop())
+  + C(draw.next("C"), "47p").rotate(90).tox(draw.peek())
+  + Line().toy(draw.pop())
+
+
+  # + R(draw.next("R"), "100k").at(draw.last("U"), "1").rotate(90)
+  # + Element(draw.last("U"), "Amplifier_Operational:TL072", value="TL072", unit=2).mirror('x').anchor(6)
+  # + Gnd().at(draw.last("U"), "5")
+
+  # + Line().up().length(5*2.54).at(draw.last("U"), "7").dot("start") + Dot().push()
+  # + R(draw.next("R"), "100k").tox(draw.last("U"), "6").rotate(270) + Dot().push()
+  # + Line().toy(draw.last("U"), "6").dot("end")
+
+  # + Line().up().length(4*2.54).at(draw.pop())
+  # + C(draw.next("C"), "560p").rotate(90).tox(draw.peek())
+  # + Line().toy(draw.pop())
+  + Line().at(draw.last("U"), "1") + Label("IN_DAC")
+)
+
+draw.plot(scale=6, theme='BlackWhite')
+```
+
+```{python echo=FALSE, results="hide"}
+R1 = 100000
+R2 = 10000
+
+MULT = round((R2/R1), 2)
+VOUT = 10 * (R2/R1)
+VOUT = abs(round(VOUT))
+```
+
+For audio input the signal has to be bring down to 3.3V peak to peak. The input signal is biased internaly in the DAC. The obove attnuverter has a gain of ${MULT}.
+The output is the non inverted ${VOUT}V peak to peak signal with an input of 10V peak to peak.
+
+
+## input signal
+
+```{python echo=FALSE, results="hide", fig.align='center', fig.cap='audio amplifier'}
+import sys
+sys.path.append("..")
+sys.path.append("../../lib/python")
+
+from elektron import Circuit, Draw, Element, Label, Line, Dot, R, C, Gnd, Power, Simulation
+from digital import integrator, triangle
+from elektrophon import decouple_tl072
+
+draw = Draw(["/usr/share/kicad/symbols", "../../lib/symbols"])
+
+(draw 
+  + Label("-10V").rotate(180)
+  + R(draw.next("R"), "200k").rotate(90)
+  + Line().down().length(4*2.54)
+  + Dot().push() + R(draw.next("R"), "100k").rotate(270) + Label("CV").rotate(180)
+  # + Line().at(draw.pop()).down().length(4*2.54)
+  # + Dot().push() + R(draw.next("R"), "10k").rotate(270) + Label("ADJ").rotate(180)
+
+  + Line().at(draw.pop())
+  + Element(draw.next("U"), "Amplifier_Operational:MCP6004", value="MCP6004").mirror('x').anchor(2)
+  + Gnd().at(draw.last("U"), "3")
+
+  + Line().up().length(5*2.54).at(draw.last("U"), "1").dot("start") + Dot().push()
+  + R(draw.next("R"), "33k").tox(draw.last("U"), "2").rotate(270) + Dot().push()
+  + Line().toy(draw.last("U"), "2").dot("end")
+
+  + Line().up().length(4*2.54).at(draw.pop())
+  + C(draw.next("C"), "10n").rotate(90).tox(draw.peek())
+  + Line().toy(draw.pop())
+
+  + Line().at(draw.last("U"), "1") + Label("ADC")
+)
+
+draw.plot(scale=6, theme='BlackWhite')
+```
+```{python echo=FALSE, results="hide"}
+
+R1 = 200000
+R2 = 100000
+R3 = 33000
+
+Vout = -R3 * ((5 / R2) + (-10 / R1))
+```
+
+The ADC inputs must be lower or equal to 3.3V and not be negative. For this the opamp is powered by 3.3V and GND. The input is attenuated and level shifted in one opamp stage.
+
+| type | range | R1 | R2 | R3 | C1 |
+|------|-------|----|----|----|----|
+| Audio | -5V/+5V | 200k | 100k | 33k | 100p |
+| Audio | -8V/+8V | 120k | 100k | 20k | 1n |
+| Gate | -0.8V/+8V | 110k | 100k | 33k | 1n |
+| Trigger | -0.8V/+5V | 200k | 100k | 56k | 100p |
+| CV | -3V/+7V | 140k | 100k | 33k | 1n |
+
+Some values for the resistors and capactor for different signals. 
+
+# sample board
+
+
+```{python echo=FALSE, results="hide", fig.align='center', fig.cap='audio amplifier'}
+import sys
+sys.path.append("..")
+sys.path.append("../../lib/python")
+
+from elektron import Circuit, Draw, Element, Label, Line, Dot, R, C, Gnd, Power, Simulation
+from digital import integrator, triangle
+from elektrophon import decouple_tl072, DaisyAudioOut
+
+draw = Draw(["/usr/share/kicad/symbols", "../../lib/symbols"])
+
+(draw 
+  + Element("U10", "elektrophon:DaisySeed", value="daisy")
+#  + Label("AUDIO_OUT_L").at("U10", "18").rotate(180)
+#  + Gnd().at("U10", "20").rotate(270)
+)
+
+DaisyAudioOut(draw, (20*2.54, 20*2.54))
+
+#   + Label("-10V").rotate(180)
+#   + R(draw.next("R"), "200k").rotate(90)
+#   + Line().down().length(4*2.54)
+#   + Dot().push() + R(draw.next("R"), "100k").rotate(270) + Label("CV").rotate(180)
+#   # + Line().at(draw.pop()).down().length(4*2.54)
+#   # + Dot().push() + R(draw.next("R"), "10k").rotate(270) + Label("ADJ").rotate(180)
+
+#   + Line().at(draw.pop())
+#   + Element(draw.next("U"), "Amplifier_Operational:MCP6004", value="MCP6004").mirror('x').anchor(2)
+#   + Gnd().at(draw.last("U"), "3")
+
+#   + Line().up().length(5*2.54).at(draw.last("U"), "1").dot("start") + Dot().push()
+#   + R(draw.next("R"), "33k").tox(draw.last("U"), "2").rotate(270) + Dot().push()
+#   + Line().toy(draw.last("U"), "2").dot("end")
+
+#   + Line().up().length(4*2.54).at(draw.pop())
+#   + C(draw.next("C"), "10n").rotate(90).tox(draw.peek())
+#   + Line().toy(draw.pop())
+
+#   + Line().at(draw.last("U"), "1") + Label("ADC")
+
+draw.plot(scale=6, theme='BlackWhite')
+```

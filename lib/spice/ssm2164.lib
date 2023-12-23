@@ -1,0 +1,142 @@
+******************************************
+* Single VCA stage part of the V2164 VCA
+* spice model.
+**
+* Developed by signality.co.uk.
+* 200521
+**
+* This is a purely behavioural model and its use is subject to the following
+* limitations.
+**
+* Gain Constant *
+* The quoted gain constant and temperature coefficient are accurately modelled.
+**
+* Exponential Control Voltage Law *
+* The adherence of the gain vs. control voltage to an exponential law may be
+* slightly more accurate at the extremes of control range compared to the real device.
+**
+* Frequency Response and Instability *
+* There is insufficient information in the datasheets for any of the various
+* versions of the 2164 type VGA - original SSM or Analog Devices versions of the
+* SSM2164, the CoolAudio V2164 or the re-engineered SSI2164 from Sound
+* Semiconductor - from which to accurately model the frequency response vs. gain
+* and therefore to model the exact behaviour of the instability which the
+* input RC compensation network is required to stabilise.
+*
+* This model has a best guess attempt at modelling a frequency response which
+* results in instability at gains of > 1 (i.e. 0dB) and which the recommended
+* input RC compensation network does indeed stabilise.
+**
+* THD and Noise *
+* Please see the notes below on how to use the models below.
+**
+* Input bias and output offset currents *
+* Not currently modelled.
+**
+* Control voltage feedthrough *
+* Not currently modelled.
+**
+* Power Supply Rejection Ration (PSRR) *
+* Not currently modelled.
+**
+* How to use the models *
+* The V2164_amp blocks simulate and can be used separately. They do not
+* rely on the V2164_bias block being present in the simulation.
+*
+* The V2164_amp blocks do not draw any supply currents. The total
+* current drain of all four V2164_amp blocks is included in the V2164_bias
+* block as 6mA sunk from the VCC supply and 4.8mA sourced to the VEE supply.
+*
+* To model the power supply drain of a complete V2164 device, the
+* V2164_bias block must be placed in the simulation.
+*
+* Note that although the V2164_bias block models the total V2164 current drain
+* including the Class A/AB biasing quiescent current plus the additional
+* current fed into the MODE pin via the external Rbias resistor, noise and THD
+* are not modelled in the V2164_amp model therefore the MODE current fed into
+* the V2164_bias block has no effect on the linearity and therefore the THD
+* or the noise performance of the V2164_amp model.
+**
+******************************************
+*
+.subckt v2164_amp VC Iin Iout VGND
+Rvcbot vcatt VGND 500
+Rvctop VC vcatt 4.5k
+BTEMPCO 0 vcint I=V(vcatt)*(1+(TEMP-25)*tempco) Rpar=1 Cpar=1n
+Visig 0 inmirr 0 Rser=1
+Binltp inmirr 0 I=Itail*(TANH(V(Iin,VGND)*19)) Cpar={1/(2*pi*2Meg)}
+BFB Iin 0 I=I(Visig)*0.5*(TANH(V(vcint)*17.5)+1) Cpar=10p
+BOUT Iout 0 I=-I(Visig)*0.5*(TANH(-V(vcint)*17.5)+1) + (uramp(V(iout)-0.1)-uramp(-V(iout)-0.1))/1 Cpar=10p
+Cparasitic Iout Iin 3.75p
+.param Itail=1500u tempco=-3.3m
+.ends v2164_amp
+*
+******************************************
+******************************************
+* Power supply and Class A/AB biasing
+* part of the V2164 VCA spice model.
+**
+* Developed by signality.co.uk.
+* 200521
+**
+* This is a purely behavioural model and its use is subject to the following
+* limitations.
+**
+* Gain Constant *
+* The quoted gain constant and temperature coefficient are accurately modelled.
+**
+* Exponential Control Voltage Law *
+* The adherence of the gain vs. control voltage to an exponential law may be
+* slightly more accurate at the extremes of control range compared to the real device.
+**
+* Frequency Response and Instability *
+* There is insufficient information in the datasheets for any of the various
+* versions of the 2164 type VGA - original SSM or Analog Devices versions of the
+* SSM2164, the CoolAudio V2164 or the re-engineered SSI2164 from Sound
+* Semiconductor - from which to accurately model the frequency response vs. gain
+* and therefore to model the exact behaviour of the instability which the
+* input RC compensation network is required to stabilise.
+*
+* This model has a best guess attempt at modelling a frequency response which
+* results in instability at gains of > 1 (i.e. 0dB) and which the recommended
+* input RC compensation network does indeed stabilise.
+**
+* THD and Noise *
+* Please see the notes below on how to use the models below.
+**
+* Input bias and output offset currents *
+* Not currently modelled.
+**
+* Control voltage feedthrough *
+* Not currently modelled.
+**
+* Power Supply Rejection Ration (PSRR) *
+* Not currently modelled.
+**
+* How to use the models *
+* The V2164_amp blocks simulate and can be used separately. They do not
+* rely on the V2164_bias block being present in the simulation.
+*
+* The V2164_amp blocks do not draw any supply currents. The total
+* current drain of all four V2164_amp blocks is included in the V2164_bias
+* block as 6mA sunk from the VCC supply and 4.8mA sourced to the VEE supply.
+*
+* To model the power supply drain of a complete V2164 device, the
+* V2164_bias block must be placed in the simulation.
+*
+* Note that although the V2164_bias block models the total V2164 current drain
+* including the Class A/AB biasing quiescent current plus the additional
+* current fed into the MODE pin via the external Rbias resistor, noise and THD
+* are not modelled in the V2164_amp model therefore the MODE current fed into
+* the V2164_bias block has no effect on the linearity and therefore the THD
+* or the noise performance of the V2164_amp model.
+**
+******************************************
+*
+.subckt v2164_bias VCC MODE VEE VGND
+.param Iqmode=15u Itail=1.5mA
+Iqmode VCC MODE {Iqmode} load
+Q1 VEE VGND MODE 0 PNP
+Ivccamp VCC VGND {4*Itail} load
+Iveeamp VGND VEE {0.8**4*Itail} load
+.ends v2164_bias

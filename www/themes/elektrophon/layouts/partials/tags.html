@@ -1,9 +1,0 @@
-<div class="column is-12 has-text-centerd my-4">
-  <section class="section">
-    <div class="container has-text-centered">
-      {{ range $name, $taxonomy := .Site.Taxonomies.tags }}
-      <span class="tag is-light"><a href="{{ "/tags/" | relLangURL }}{{ $name | urlize }}">{{ $name }}</a></span>
-      {{ end }}
-    </div>
-  </section>
-</div>

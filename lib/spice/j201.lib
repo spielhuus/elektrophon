@@ -1,0 +1,6 @@
+*.model J201 NJF(Beta=1.07m Betatce=-0.5 Vto=-0.93 Vtotc=-2.5m Lambda=6.75m Is=1.72f Xti=0 Rd=10 Rs=12 Cgd=1p Cgs=1p Fc=0.5 M=500m Pb=0.8 Kf=0 Af=1 Mfg=Linear_Systems)
+.MODEL J201 njf
++VTO=-0.65 BETA=0.0018 LAMBDA=0.002628 RD=0.0001
++RS=0.0001 IS=1.3336e-12 CGS=3.37419e-12
++CGD=3.53422e-12 PB=2.58279 FC=0.5 KF=1e-20
++AF=0.2

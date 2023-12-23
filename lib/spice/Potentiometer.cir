@@ -1,0 +1,14 @@
+.subckt Potentiometer n1 n2 n3 PARAMS: value=100K set=0.5
+R1 n1 n2 {VALUE*(1-SET)+.001}
+R2 n2 n3 {VALUE*SET+.001}
+.ends RV
+
+.subckt Potentiometer1 n1 n2 n3 PARAMS: value=100K set=0.5
+R1 n1 n2 {VALUE*(1-SET)+.001}
+R2 n2 n3 {VALUE*SET+.001}
+.ends RV
+
+.subckt Potentiometer2 n1 n2 n3 PARAMS: value=100K set=0.5
+R1 n1 n2 {VALUE*(1-SET)+.001}
+R2 n2 n3 {VALUE*SET+.001}
+.ends RV

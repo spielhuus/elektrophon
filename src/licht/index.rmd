@@ -1,0 +1,147 @@
+---
+author: "spielhuus"
+categories:
+- article
+date: 2020-12-01
+excerpt: "Enlighten the front panels uses a lot of energy and cause glitches on the power rail. never the less an eluminated panel looks much better and the different types of connectors can be marked with different colors."
+hero_image: "arbeitsplatz-hero_landscape.jpg"
+hero_mobile: "arbeitsplatz-hero_portrait.jpg"
+image": "arbeitsplatz.jpg"
+subtitle: "All the necessary applications for developing the elektrophon."
+tags:
+- grundlage
+title: licht
+version: 0
+draft: True
+references: 
+  - { description: "",
+      title: "electro-music.com",
+      url: "https://electro-music.com/forum/viewtopic.php?highlight=led+driver&t=49449" }
+---
+
+# Color coding
+
+|color|type|[V]|
+|---  |--- |---|
+|<button class="button is-danger">red</button>| | audio signal output | +-5 |
+|<button class="button is-success">green</button>| | audio signal input | +-5 |
+|<button class="button is-warning">yellow</button>| | cv pulse or gate | +10 |
+
+# dc led driver
+
+
+
+```{python echo=FALSE, results="hide", fig.align='center', fig.cap='digital logic'}
+from elektron import Circuit, Draw, Element, Label, Line, Dot, Simulation
+
+import sys
+sys.path.append("../../lib/python")
+from elektrophon import light
+
+draw = Draw(["/usr/share/kicad/symbols", "../../lib/symbols"])
+light(draw, "IN", "Green", (0, 0))
+draw.plot(scale=6, netlist=False, theme='BlackWhite')
+```
+
+For AC signals the simgle transistor driver comes in handy. It is built around the common base transistor amplifier. The Led can be connected to the collector of the transisitor. The current for the LED can be set with Rx and calculated using simple ohms law. The LED will only light up on the positive rail is above 0.7V.
+
+
+```{python echo=TRUE, results="nohide", fig.align='center', fig.cap='digital logic'}
+V = 5 - 0.2 - 1.7
+Ie = V / 5100 * 1000 # U=R*I -> I=U/R
+print("Calculated Emitter current: %f mA" % Ie)
+
+Ib = (10 - 0.6) / 100000 * 1000
+print("Calculated Base current: %f mA" % Ib)
+print("Calculated current: %f mA" % (Ib+Ie))
+```
+
+The 0.7 mA is quite low for an LED. I use the superbright LED, these will light up with such a smal current.
+
+# bipolar led driver
+
+Sometimes we do not just want a light indicator for positive signals. For AC signals a bopolar LED could be used. The LED dirver has to produce positive and negative voltages.
+
+
+```python
+d = schemdraw.Drawing(unit=2.5, inches_per_unit=0.5, lw=0.9)
+
+O = d.add(elm.Opamp())
+d.add(elm.Line('left', l=d.unit, xy=O.in2))
+d.add(elm.Dot(lftlabel='IN', open=True))
+
+d.add(elm.Line('left', l=d.unit/4, xy=O.in1))
+d.add(elm.Line('up', l=d.unit/2))
+d.add(elm.Line('right', tox=O.out+d.unit/4))
+d.add(elm.Line('down', toy=O.out))
+D = d.add(elm.Dot())
+d.add(elm.Line('left', tox=O.out))
+
+d.add(elm.Line('right', l=d.unit/4, xy=D.end))
+d.add(elm.Resistor(label='$R_1$\n12k'))
+d.add(elm.LED(label='$D_1$'))
+d.add(elm.Line(l=d.unit/4))
+d.add(elm.Ground())
+
+d.draw()
+```
+
+
+```python
+circuit = Circuit('bipolar led driver')
+circuit.include(spice_library['TL072'])
+circuit.include(spice_library['LED1'])
+
+circuit.V('1', '+15V', circuit.gnd, 'DC 15')
+circuit.V('2', '-15V', circuit.gnd, 'DC -15')
+circuit.V('3', 'IN', circuit.gnd, 'DC 5 AC 5V SIN(0 5V 1k)')
+
+circuit.X('1', 'TL072', 'IN', 'Xo', '+15V', '-15V', 'Xo')
+circuit.R(1, 'Xo', 'R1', 500@u_Ω)
+circuit.D(1, 'R1', circuit.gnd, model="LED2")
+circuit.D(2, circuit.gnd, 'R1', model="LED2")
+
+simulator = circuit.simulator(temperature=25, nominal_temperature=25)
+simulator.options('savecurrents')
+
+analysis  = simulator.transient(step_time=1@u_us, start_time=0@u_ms, end_time=2@u_ms)
+analysis_dc  = simulator.operating_point()
+
+print(f'opamp voltage: {float(analysis_dc.Xo)}, LED: current: {float(analysis_dc["@D1[id]"]*1000)}mA')
+
+```
+
+
+```python
+fig_buffer, ax1_buffer = plt.subplots()
+
+ax1_buffer.set_xlabel('time (ms)')
+ax1_buffer.set_ylabel('IN [V]')
+#ax1_buffer.plot(u_ms(analysis['IN'].abscissa), analysis['IN'], color='Blue')
+#ax1_buffer.plot(u_ms(analysis['R1'].abscissa), analysis['R1'], color='Red')
+ax1_buffer.legend(('Vin [V]', 'Vout (R2=100 kΩ)', 'Vout (R2=125 kΩ)'), loc=(0.01,0.65))
+
+ax2 = ax1_buffer.twinx()  # instantiate a second axes that shares the same x-axis
+ax2.plot(u_ms(analysis['@D1[id]'].abscissa), analysis['@D1[id]'], color='Green')
+ax2.plot(u_ms(analysis['@D2[id]'].abscissa), analysis['@D2[id]'], color='LightGreen')
+
+plt.tight_layout()
+plt.show()
+```
+
+$$
+\begin{array}{c}
+(5V÷ 10) = RFB × 20 mA = RFB = \frac{5V)(10 mA)) = R Ω
+\end{array}
+$$
+
+
+```python
+R = (5-2.5) / 0.005
+print(R)
+
+I = (5-0.7) / 10000
+print(I)
+```
+
+Iin the simulation R2 is unchanched. For R4 the simulation is done with 100kΩ, 500kΩ, 1MΩ and 10MΩ.

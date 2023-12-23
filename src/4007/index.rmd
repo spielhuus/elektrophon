@@ -1,0 +1,352 @@
+---
+date: "2022-01-01T13:09:13-06:00"
+author: "spielhuus"
+categories:
+- article
+excerpt: ""
+subtitle: "The 4007 Logic Amplifier"
+tags:
+- grundlage
+title: "4007"
+references: 
+  - { description: "datasheet",
+      title: "CD4007UB",
+      url: "https://www.ti.com/lit/ds/symlink/cd4007ub.pdf" } 
+  - { description: "CMOS triple resonant VCF",
+      title: "electromusic-forum",
+      url: "https://electro-music.com/forum/topic-33446-50.html" } 
+version: 0
+---
+
+The basic usage and pin mapping is explained in the datasheet [[1]](https://www.ti.com/lit/ds/schs054e/schs054e.pdf). It is not very common to use this chip for linear amplification, especially in our days where opamps are very cheap to get. But there is also an application note [[2]](http://www.sdiy.org/philgallo/hfvco/AN-0088.pdf) that explains the basic usage. It will not go into too many details, we will have to figure out some details on our own.
+
+```{python error=FALSE, echo=FALSE, results="hide", fig.align='center', fig.cap='4007: Dual complementary pair plus inverter.'}
+from elektron import Line, Dot, Label, Element, Draw, Simulation, Circuit
+
+draw = Draw(["/usr/share/kicad/symbols", "lib/symbols"]) \
+ + Element("U1", "elektrophon:4007N", value="4007", unit=1, Spice_Primitive="X", Spice_Model="CMOS4007")
+
+draw.plot(scale=15.0, theme='BlackWhite')
+```
+
+The CD4007 seems to be an outdatet chip. It contains 3 complementary pairs of NMOS and PMOS transistors. The pairs are not matched
+and it is questionable to use this chip. But it can be used for linear amplification, there are even some audio amplifier circuits
+on the internet using this chip.
+
+# Linear Amplifier
+
+First i am going to build an amplifier with the chip. ....
+
+```{python error=FALSE, echo=FALSE, results="nohide", fig.align='center', fig.cap='digital logic'}
+from elektron import Line, Dot, Label, Element, Draw, Simulation, Circuit
+import json
+
+draw = (Draw(["/usr/share/kicad/symbols", "lib/symbols"])
+
+  + Element("U1", "elektrophon:4007N", value="4007", unit=1, Spice_Primitive="X", Spice_Model="CMOS4007")
+  + Element("Rin", "Device:R", value="100k", unit=1, Spice_Netlist_Enabled="Y").rotate(270)
+  + Line().at("U1", "6").length(2.54).left()
+  + (input := Dot())
+  + Line().length(2.54).left()
+  + Element("R1", "Device:R", value="100k", unit=1, Spice_Netlist_Enabled="Y").rotate(270)
+  + Element("C1", "Device:C", value="22u", unit=1, Spice_Netlist_Enabled="Y").rotate(270)
+  + Line().length(2.54).left().at("C1", "2")
+  + Label("IN").rotate(180)
+
+  + Line().length(2*2.54).at("U1", "13").up()
+  + (fb := Dot())
+  + Line().length(12*2.54).right()
+  + (out := Dot())
+  + Line().length(2.54).right()
+  + Label("OUT")
+
+  + Line().down().length(4*2.54).at("U1", "8")
+  + Line().right().tox(out)
+  + Line().up().toy(out)
+
+  + Element("R2", "Device:R", value="100k", unit=1, Spice_Netlist_Enabled="Y").at(fb).rotate(270).tox(input)
+  + Line().toy(input)
+
+  + Element("GND", "power:GND", value="GND", unit=1).at("U1", "7")
+  + Element("+5V", "power:+5V", value="+5V", unit=1).at("U1", "14"))
+
+
+print(draw.erc())
+
+circuit = draw.circuit(['lib/spice'])
+circuit.voltage("1", "+5V", "GND", "5V")
+circuit.voltage("2", "IN", "GND", "5V PULSE(-1, 1, 0, 2ms, 2ms, 1n, 4ms 0)")
+circuit.control('''
+let r_act = 100k
+let r_step = 20k
+let r_stop = 400k
+while r_act le r_stop
+  alter R2 r_act
+  tran 40us 10ms
+  let r_act = r_act + r_step
+end
+''')
+simulation = Simulation(circuit)
+buffer = simulation.run()
+
+draw.plot(scale=6, theme='BlackWhite');
+```
+
+This is the first setup with the 4069 as a voltage follower. C1 and C2 are DC blocking capacitors. When we choose R1 and R2 as 100kOhm we would expect a gain of one.
+ 
+```{d3, element="bbuffer", x="time", y="in", yRange="out", data="buffer.tran", width="600", height="400"}```
+
+# The chip as VCA
+
+```{python error=TRUE, echo=FALSE, results="nohide", fig.align='center', fig.cap='digital logic'}
+from elektron import Line, Dot, Label, Element, Draw, Simulation, Circuit
+import numpy as np
+import json
+
+draw = (Draw(["/usr/share/kicad/symbols", "lib/symbols"])
+  + Label("CV").rotate(180)
+  + Line()
+  + Element("R10", "Device:R", value="100k", unit=1, Spice_Netlist_Enabled="Y").rotate(90)
+  + Line().at("R10", "2").length(2*2.54)
+  + (megDot := Dot())
+  + Line().length(2*2.54)
+  + (input := Dot())
+  + Line()
+  + (in2 := Dot())
+  + Line()
+  + (in_dot := Dot())
+  + Line()
+
+  + Element("U1", "elektrophon:4007N", value="4007", unit=1, Spice_Primitive="X", Spice_Model="CMOS4007").anchor(6)
+  
+  + Element("R11", "Device:R", value="1000k", unit=1, Spice_Netlist_Enabled="Y").at(megDot)
+  + Element("GND", "power:GND", value="GND", unit=1)
+
+#   + Element("R2", "Device:R", value="10k", unit=1, Spice_Netlist_Enabled="Y").at(input).rotate(180)
+#   + Line().up().at("R2", "2")
+#   + Label("vBias").rotate(90)
+# #  + Element("vBias", "power:+5V", value="", unit=1).at("R2", "2")
+
+#   + Element("R3", "Device:R", value="1Meg", unit=1, Spice_Netlist_Enabled="Y").at(in2)
+#   + Element("GND", "power:GND", value="GND", unit=1).at("R3", "2")
+
+  + (dot8 := Dot().at("U1", "8"))
+  + Line().down().length(2*2.54)
+  + Line().tox(in_dot)
+  + (feedback := Dot())
+  + Element("R1", "Device:R", value="10k", unit=1, Spice_Netlist_Enabled="Y").rotate(180)
+  + Line().at("R1", "2").toy(in_dot)
+  + Line().at(dot8).tox("U1", "3")
+
+  + Line().left().length(4*2.54).at(feedback)
+  + Line().up().length(14*2.54)
+  + Line().tox("U1", "13")
+  + Line().toy("U1", "13")
+
+#   + Line().at("U1", "13").up()
+#   + Line().right().length(14*2.54)
+#   + out := Dot()
+#   + Label("INPUT")
+
+#   + Line().down().at("U1", "8")
+#   + Line().tox(out)
+#   + Line().toy(out)
+
+  + Line().up().at("U1", "2").length(6*2.54)
+  + (dot_in := Dot())
+  + Line().left().length(2.54)
+  + Label("INPUT").rotate(180)
+
+  # + Element("R22", "Device:R", value="100k", unit=1, Spice_Netlist_Enabled="Y").at(dot_in).rotate(90)
+  # + (r22 := Dot())
+  # + Line().right().length(2.54)
+  # + (vd := Dot())
+  # + Line().right().length(2*2.54)
+  # + Label("OUTPUT").rotate(90)
+
+  # + Element("R20", "Device:R", value="100k").at(vd)
+  # + Element("GND", "power:GND", value="GND", unit=1)
+
+  # + Line().at(r22).down().length(2.54)
+  # + Line().tox("U1", "1")
+  # + Line().toy("U1", "1")
+  + Line().at("U1", "1").up().length(4*2.54)
+  + Label("OUTPUT").rotate(90)
+
+  + Element("GND", "power:GND", value="GND", unit=1).at("U1", "7")
+  + Element("+5V", "power:+5V", value="+5V", unit=1).at("U1", "14"))
+ 
+print(draw.erc())
+
+circuit = draw.circuit(['lib/spice'])
+circuit.voltage("1", "+5V", "GND", "DC 15V")
+circuit.voltage("2", "CV", "GND", "DC 2.5V") # SIN(10, 2, 100)")
+# circuit.voltage("3", "INPUT", "GND", "SIN(0, 2.5, 1000)")
+circuit.voltage("3", "INPUT", "GND", "DC 2V")
+circuit.control('''
+let v_act = 0V
+let v_step = 0.1V
+let v_stop = 5V
+while v_act le v_stop
+  alter @V2[dc] v_act
+  mc update
+  *tran 0.02ms 10ms
+  op
+  let v_act = v_act + v_step
+end
+''')
+
+simulation = Simulation(circuit)
+vca_res = simulation.run()
+
+vca_data = {}
+number = 0
+number = []
+input = []
+out = []
+cv = []
+
+newdict = {}
+
+for i in range(1,52):
+  cv.append(vca_res[f'op{i}']['cv'][0])
+  input.append(vca_res[f'op{i}']['input'][0])
+  out.append(vca_res[f'op{i}']['output'][0])
+  number.append(i)
+
+vca_data = {
+  'output': out,
+  'cv': cv,
+  'time': number,
+}
+
+draw.plot(scale=6, theme='BlackWhite', netlist=True)
+```
+
+This is the first setup with the 4069 as a voltage follower. C1 and C2 are DC blocking capacitors. When we choose R1 and R2 as 100kOhm we would expect a gain of one.
+ 
+```{d3, element="vca", x="cv", y="output", data="py$vca_data", width="600", height="400"}```
+
+
+```{python error=TRUE, echo=FALSE, results="nohide", fig.align='center', fig.cap='digital logic'}
+
+circuit = draw.circuit(['lib/spice'])
+circuit.voltage("1", "+5V", "GND", "DC 15V")
+circuit.voltage("2", "CV", "GND", "DC 2V")
+circuit.voltage("3", "INPUT", "GND", "SIN(0, 2, 100)")
+circuit.control('''
+let v_act = 0V
+let v_step = 0.1V
+let v_stop = 5V
+while v_act le v_stop
+  alter @V2[dc] v_act
+  mc update
+  tran 0.02ms 10ms
+  let v_act = v_act + v_step
+end
+''')
+
+simulation = Simulation(circuit)
+vca_tran = simulation.run()
+```
+
+```{d3, element="vca_tran", x="time", yRange="input,output", data="vca_tran.tran", width="600", height="400"}```
+
+# The chip as VCA 2
+
+```{python error=TRUE, echo=FALSE, results="nohide", fig.align='center', fig.cap='digital logic'}
+from elektron import Line, Dot, Label, Element, Draw, Simulation, Circuit
+import numpy as np
+import json
+
+draw = (Draw(["/usr/share/kicad/symbols", "lib/symbols"])
+  + Label("CV").rotate(180)
+  + Line()
+  + Element("R10", "Device:R", value="100k", unit=1, Spice_Netlist_Enabled="Y").rotate(90)
+  + Line().at("R10", "2")
+  + (input := Dot())
+  + Line()
+  + (in2 := Dot())
+  + Line()
+  + (in_dot := Dot())
+  + Line()
+
+  + Element("U1", "elektrophon:4007N", value="4007", unit=1, Spice_Primitive="X", Spice_Model="CMOS4007").anchor(6)
+
+#   + Element("R2", "Device:R", value="10k", unit=1, Spice_Netlist_Enabled="Y").at(input).rotate(180)
+#   + Line().up().at("R2", "2")
+#   + Label("vBias").rotate(90)
+# #  + Element("vBias", "power:+5V", value="", unit=1).at("R2", "2")
+
+#   + Element("R3", "Device:R", value="1Meg", unit=1, Spice_Netlist_Enabled="Y").at(in2)
+#   + Element("GND", "power:GND", value="GND", unit=1).at("R3", "2")
+
+  # + (dot8 := Dot().at("U1", "8"))
+  # + Line().down().length(2*2.54)
+  # + Line().tox(in_dot)
+  # + (feedback := Dot())
+  # + Element("R1", "Device:R", value="10k", unit=1, Spice_Netlist_Enabled="Y").rotate(180)
+  # + Line().at("R1", "2").toy(in_dot)
+  # + Line().at(dot8).tox("U1", "3")
+
+  # + Line().left().length(4*2.54).at(feedback)
+  # + Line().up().length(14*2.54)
+  # + Line().tox("U1", "13")
+  # + Line().toy("U1", "13")
+
+  + Line().up().at("U1", "2").length(6*2.54)
+  + (dot_in := Dot())
+  + Line().left().length(2.54)
+  + Label("INPUT").rotate(180)
+
+  + Element("R22", "Device:R", value="5000k", unit=1, Spice_Netlist_Enabled="Y").at(dot_in).rotate(90)
+  + (r22 := Dot())
+  + Line().right().length(2.54)
+  + (vd := Dot())
+  + Line().right().length(2*2.54)
+  + Label("OUTPUT").rotate(90)
+
+  + Line().down().length(2.54).at("U1", "3")
+  + Element("R1", "Device:R", value="2200k", unit=1, Spice_Netlist_Enabled="Y").rotate(270)
+  + Label("CV").rotate(180)
+
+  + Element("R20", "Device:R", value="1000k").at(vd)
+  + Element("GND", "power:GND", value="GND", unit=1)
+
+  + Line().at(r22).down().length(2.54)
+  + Line().tox("U1", "1")
+  + Line().toy("U1", "1")
+
+  + Element("GND", "power:GND", value="GND", unit=1).at("U1", "4")
+  + Element("GND", "power:GND", value="GND", unit=1).at("U1", "7")
+  + Element("+15V", "power:+15V", value="+15V", unit=1).at("U1", "14"))
+ 
+print(draw.erc())
+
+circuit = draw.circuit(['lib/spice'])
+circuit.voltage("1", "+15V", "GND", "DC 15V")
+circuit.voltage("2", "-15V", "GND", "DC -5V")
+circuit.voltage("3", "CV", "GND", "DC 5V") # SIN(10, 2, 100)")
+circuit.voltage("4", "INPUT", "GND", "SIN(7.5, 6, 1000)")
+circuit.control('''
+let v_act = 8V
+let v_step = 0.01V
+let v_stop = 10V
+while v_act le v_stop
+  alter @V3[dc] v_act
+  tran 0.02ms 10ms
+  let v_act = v_act + v_step
+end
+''')
+
+print(circuit)
+
+simulation = Simulation(circuit)
+vca_data = simulation.run()
+
+draw.plot(scale=6, theme='BlackWhite', netlist=True)
+```
+
+This is the first setup with the 4069 as a voltage follower. C1 and C2 are DC blocking capacitors. When we choose R1 and R2 as 100kOhm we would expect a gain of one.
+ 
+```{d3, element="vca2", x="time", yRange="cv,output,input", data="vca_data.tran", width="600", height="400"}```

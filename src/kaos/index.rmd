@@ -1,0 +1,202 @@
+---
+date: "2022-01-01T13:09:13-06:00"
+author: "spielhuus"
+excerpt: "There are many chaos circuits. The classic ones are the 'real' chaos circuits build with opamps. Ian Fritz has built some of them. There is also the WoggleBug and the Rungler. What makes those circuits so special and how can they be combined?"
+subtitle: "Linear amplification with the CD4069UBE."
+tags:
+- grundlage
+categories:
+- module
+title: kaos
+references: 
+  - { description: "CMOS 8-Stage Shift-and-Store Bus Register",
+      title: "CD4094",
+      url: "https://www.ti.com/lit/ds/symlink/cd4094b.pdf" }
+  - { description: "What the $#%$ is a rungler?",
+      title: "Rungler",
+      url: "https://electro-music.com/forum/viewtopic.php?t=38081" }
+  - { description: "Grant Richter",
+      title: "#3 Standard WoggleBug Circuit (listen to the demo)",
+      url: "https://web.archive.org/web/20081224155153/http://www.musicsynthesizer.com/WoggleBug/WoggleBug.html" }
+version: 0
+draft: True
+```{elektron, command="bom", input=["main"], group=TRUE, partlist="../../lib/partlist.yaml"}```
+```{elektron, command="erc", input=["main"]}```
+```{elektron, command="schema", input=["main"], border=TRUE}```
+---
+
+```{python echo=FALSE, results="hide", fig.align='center', fig.cap='Figure 2: digital logic'}
+from elektron import Circuit, Draw, Element, Label, Line, Dot, Simulation
+```
+
+# Block Diagram
+
+The block diagram.
+
+# The Osciallator
+
+An oscillator with a wide range is needed for this module. I have tried with the CD40106 and CD4046 phase locked loop chip. The 4046 gave very cool results, but controlled
+with only with a control voltage it will provide a very small range. I have decided not add switches for range selection in this module. It must be controlleable over 
+the whole range with the controll voltages and the potientiometers. A triangle core VCO with a LM13700 provides a very huge range and very clean tringle wave forms.
+This is the same topology tht is used in the rungler, just the 2164 chip is replaced with the LM13700. The excpenential current control for the pitch had to be added.
+
+
+```{python echo=FALSE, results="hide", fig.align='center', fig.cap='Figure 2: Oscillator'}
+import sys
+sys.path.append("..")
+
+from elektron import Circuit, Draw, Element, Label, Line, Dot, Simulation
+from kaos import *
+
+draw = Draw(["/usr/share/kicad/symbols", "../../lib/symbols"])
+
+oscilator1(draw)
+(draw
+  #xtra U2, U5
+  + Element("U2", "Amplifier_Operational:TL072", value="TL072", unit=2, Spice_Primitive="X", Spice_Model="TL072c", on_schema="no").at((140.0, 140.0))
+  + Element("U5", "Amplifier_Operational:TL072", value="TL072", unit=2, Spice_Primitive="X", Spice_Model="TL072c", on_schema="no").at((150.0, 140.0))
+  
+  + Element("U1", "Amplifier_Operational:LM13700", value="LM13700", unit=5, Spice_Primitive="X", Spice_Model="LM13700d", on_schema="no", Spice_Node_Sequence="16 15 14 13 12 6 10 9 8 7 11 5 4 3 2 1").at((80.0, 142.74))
+  + Element("+15V", "power:+15V", value="+15V", unit=1, on_schema="no").at("U1", "11")
+  + Element("-15V", "power:-15V", value="-15V", unit=1, on_schema="no").at("U1", "6").rotate(180)
+  + Element("U1", "Amplifier_Operational:LM13700", value="LM13700", unit=2, Spice_Primitive="X", Spice_Model="LM13700d", Spice_Node_Sequence="16 15 14 13 12 6 10 9 8 7 11 5 4 3 2 1", on_schema="no").at((50.0, 142.74))
+  + Element("U1", "Amplifier_Operational:LM13700", value="LM13700", unit=3, Spice_Primitive="X", Spice_Model="LM13700d", Spice_Node_Sequence="16 15 14 13 12 6 10 9 8 7 11 5 4 3 2 1", on_schema="no").at((50.0, 150))
+  + Element("U1", "Amplifier_Operational:LM13700", value="LM13700", unit=4, Spice_Primitive="X", Spice_Model="LM13700d", Spice_Node_Sequence="16 15 14 13 12 6 10 9 8 7 11 5 4 3 2 1", on_schema="no").at((50.0, 170))
+)
+decouple_tl072(draw, "U2", ((120.0, 200.0)), 'true')
+decouple_tl072(draw, "U3", ((140.0, 200.0)), 'true')
+decouple_tl072(draw, "U5", ((160.0, 200.0)), 'true')
+
+circuit = draw.circuit(["../../lib/spice"])
+circuit.voltage("1", "+15V", "GND", "DC 15V")
+circuit.voltage("2", "-15V", "GND", "DC -15V")
+circuit.voltage("3", "CV1", "GND", "DC 0.594000V")
+circuit.voltage("4", "CV2", "GND", "DC 0.594000V")
+circuit.control('''
+tran 1us 20ms
+''')
+
+simulation = Simulation(circuit)
+osc = simulation.run()
+
+draw.plot(scale=6, netlist=False, theme='BlackWhite')
+```
+
+```{d3 element="oscillator", x="time", y="triangle_1,square_1,data", data="osc.tran1", width="600", height="400"}```
+
+```{python echo=FALSE, results="nohide"}
+V_min = min(osc['tran1']['data'])
+V_max = max(osc['tran1']['data'])
+print(f"DATA Voltages: {V_min}, {V_max}")
+```
+# Random CV generation
+
+The CD4094 is a 8-stage serial shift register strobing data from the serial input to the parallel ouputs. The 
+data is shifted on positive __CLOCK__ transitions. The data in the shift register is transfered to the storage register
+when the __STROBE__ input is high. The output appears on the output pins when the __OUTPUT-ENABLE__ is high. 
+
+```{python echo=FALSE, results="hide", fig.align='center', fig.cap='Figure 2: digital logic'}
+draw = Draw(["/usr/share/kicad/symbols", "../../lib/symbols"])
+cd4094(draw)
+draw.plot(scale=8,netlist=False, theme='BlackWhite')
+```
+
+The outputs are connected to a R2R ladder. This is a simple digital to analog converter (DAC). With this DAC every
+type of digital signal can be converted to analog audio. Early DAC chips were built this way. Some people believe this
+are still the best ones. The problem is that very precisely matched resistors must be used to get a good result. The 
+chips with a R2R ladder are usualy laser trimmed. 
+
+```{python echo=FALSE, results="hide", fig.align='center', fig.cap='Figure 2: digital logic'}
+draw = Draw(["/usr/share/kicad/symbols", "../../lib/symbols"])
+draw.counter("R", 29)
+r2r(draw, 0, 0)
+decouple_tl072(draw, "U6", ((120.0, 200.0)), 'true')
+
+circuit = draw.circuit(["../../lib/spice"])
+circuit.voltage("8", "+15V", "GND", "DC 15V")
+circuit.voltage("9", "-15V", "GND", "DC -15V")
+for i in range(0, 8):
+  circuit.voltage(f"{i}", f"V{i}", "GND", "DC 5V")
+
+import numpy as np
+x = np.arange(0,2*np.pi,0.1)
+y = np.sin(x)
+print(f'{min(y)} > {max(y)}')
+y_sine = []
+count = 1
+for i in y:
+  val = (i + 1.0) * 128
+  v = 0;
+  for n in range(7, -1, -1):
+    if (int(val) & (1<<n)):
+      circuit.set_value(f"{v}", "DC 5V")
+    else:
+      circuit.set_value(f"{v}", "DC 0V")
+    v += 1
+
+  simulation = Simulation(circuit)
+  op = simulation.op()
+  y_sine.append(op['cv'][0])
+  count += 1
+
+result = {}
+result['time'] = x
+result['sine'] = y_sine
+
+draw.plot(scale=8,netlist=False, theme='BlackWhite')
+```
+
+a We can also calculate a sine wave and set the voltages with the values. 
+
+```{d3 element="r2r_sine", x="time", y="sine", data="py$result", width="600", height="400"}```
+
+I guess this look much nicer then it really is. 
+
+# XOR
+
+The output of the DAC will be used as CV for the oszillators. Creating a feedback loop.
+
+```{python echo=FALSE, results="hide", fig.align='center', fig.cap='Figure 2: xor'}
+draw = Draw(["/usr/share/kicad/symbols", "../../lib/symbols"])
+xor(draw)
+
+circuit = draw.circuit(["../../lib/spice"])
+circuit.voltage("1", "+5V", "GND", "DC 5V")
+circuit.voltage("3", "V7", "GND", "DC 5V")
+circuit.voltage("4", "DATA", "GND", "DC 5V")
+circuit.control('''
+op
+
+alter @V3[dc] 0V
+op
+
+alter @V4[dc] 0V
+op
+
+alter @V3[dc] 5V
+op
+
+''')
+
+simulation = Simulation(circuit)
+res = simulation.run()
+
+table = '|A|B|C|\n'
+table += '|-|-|-|\n'
+table += f"|{res['op1']['v7'][0]}|{res['op1']['data'][0]}|{round(res['op1']['xor'][0], 1)}|\n"
+table += f"|{res['op2']['v7'][0]}|{res['op2']['data'][0]}|{round(res['op2']['xor'][0], 1)}|\n"
+table += f"|{res['op3']['v7'][0]}|{res['op3']['data'][0]}|{round(res['op3']['xor'][0], 1)}|\n"
+table += f"|{res['op4']['v7'][0]}|{res['op4']['data'][0]}|{round(res['op4']['xor'][0], 1)}|\n"
+
+draw.plot(scale=6, netlist=False, theme='BlackWhite')
+```
+
+{{<table "table is-striped is-bordered is-hoverable is-fullwidth">}}
+${py$table}
+{{</table>}}
+
+{{< bom bom_kraft >}}
+
+{{< callout >}}
+
+{{<report kraft kraft mount>}}

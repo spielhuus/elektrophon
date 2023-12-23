@@ -1,0 +1,67 @@
+---
+date: "2022-01-01T13:09:13-06:00"
+author: "spielhuus"
+excerpt: "The bass voice has a very wide range and can produce very low and long bass sounds but also high pitch bass voices. the pitch is voltage controller, but the tracking is not comparable to a vco. the voltage control for the pitch does not track very well. i never use it, maybe i build a version of this module without this part."
+subtitle: "Perecussion module designed by Thomas Henry"
+tags:
+- percussion
+categories:
+- module
+title: "bass++"
+references: 
+  - { description: "Thomas Henry: Bass++",
+      title: "Birth of a Synth",
+      url: "http://birthofasynth.com/Thomas_Henry/Pages/Bass_Plus.html" }
+version: 0
+```{elektron, command="bom", input=["main"], group=TRUE, partlist="../../lib/partlist.yaml"}```
+```{elektron, command="erc", input=["main"]}```
+```{elektron, command="drc", input=["main"]}```
+```{elektron, command="schema", input=["main"], border=TRUE, theme="Kicad2000"}```
+```{elektron, command="pcb", input=["main", "panel"], border=TRUE}```
+```{elektron, command="gerber", input=["main", "panel"]}```
+---
+
+# Description
+
+# build
+
+{{< bom >}}
+
+{{< callout basspp main panel >}}
+
+{{< report basspp main >}}
+
+## *use*
+
+connect a trigger signal to the **IN** of the bass and the **OUT** to mixer or any other output module:
+
+***Trigger Input/Envelope Generator***
+
+**Sensitivity:** adjustment of the trigger input
+
+**Status LED:**	visual feedback of operation.
+
+**Decay:** length of the drum voice envelope
+
+
+***Shell VCO Control***
+
+**Pitch:** Control	Sets the initial pitch of the Shell VCO.
+
+**Sweep:** Control	Sets how much effect the envelope generator will have on the pitch of the Shell VCO.
+
+**CV Jack:** Accepts control voltages used to modulate the pitch of the Shell VCO.
+
+**Range Control:**	Sets the level of effect the applied control voltage will have on the pitch of the VCO
+
+
+***Impact Section***
+
+**Impact Tone Control:**	Sets tone of the impact signal from bass to treble.
+
+
+***Signal Mix Section***
+
+**Shell Volume:**	Adjusts the amount of Shell signal present in the final output signal.
+
+**Impact Volume:**	Adjusts the amount of Impact signal present in the final output signal.

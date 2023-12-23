@@ -1,0 +1,14 @@
+.subckt Switch n1 n2 n3 PARAMS: val1=0, val2=999999999999meg
+R1 n1 n2 val1
+R2 n2 n3 val2
+.ends Switch
+
+.subckt Switch1 n1 n2 n3 PARAMS: val1=0, val2=999999999999meg
+R1 n1 n2 val1
+R2 n2 n3 val2
+.ends Switch1
+
+.subckt Switch2 n1 n2 n3 PARAMS: val1=0, val2=999999999999meg
+R1 n1 n2 val1
+R2 n2 n3 val2
+.ends Switch2

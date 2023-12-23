@@ -1,0 +1,804 @@
+---
+date: "2022-01-01T13:09:13-06:00"
+author: "spielhuus"
+excerpt: "For the guitar players distortion pedals are the thing. But are they also useful for synthesizers. We will see what the do and if they are also a thing for synthesizers."
+subtitle: "What is distortion and is it useful for synthesizers?"
+tags:
+- grundlage
+categories:
+- article
+title: verzerrung
+references: 
+  - { description: "Soft Clipping - Useful Or A Waste Of Time?",
+      title: "Elliott Sound Products",
+      url: "https://sound-au.com/articles/soft-clip.htm" }
+  - { description: "Schematic at beavisaudio",
+      title: "DOD-250-Overdrive",
+      url: "http://beavisaudio.com/schematics/DOD-250-Overdrive-Schematic.htm" }
+  - { description: "Way Huge Red LLama",
+      title: "llama",
+      url: "http://beavisaudio.com/schematics/Way-Huge-Red-Llama-Schematic.htm" }
+  - { description: "TS-808 workalike built around the CD4049UBE logic IC",
+      title: "UBE Screamer",
+      url: "http://www.runoffgroove.com/ubescreamer.html" }
+  - { description: "Hexinverter Battery Acid Distortion",
+      title: "Battery Acid",
+      url: "https://electro-music.com/wiki/pmwiki.php?n=Schematics.BatteryACIDV1" }
+  - { description: "at diystompboxes",
+      title: "Shin-Ey companion",
+      url: "https://www.diystompboxes.com/smfforum/index.php?topic=118397.0" }
+  - { description: "DOD FX86 schematic",
+      title: "DOD",
+      url: "https://guitarpedalbuilders.blogspot.com/2012/06/dod-fx86.html" }
+  - { description: "Boss MT-2 Metal Zone pedal analysis",
+      title: "MT-2",
+      url: "https://electricdruid.net/boss-mt-2-metal-zone-pedal-analysis/" }
+  - { description: "monotropa equalizer",
+      title: "reverselandfill",
+      url: "https://www.reverselandfill.org/diy/monotropa-v3/" }
+version: 0
+---
+
+# About
+
+Here some simple distortion circuits are analyzed. These circuits use overdrive and diodes for clipping. Clipping adds harmonics to the signal. There is soft and hard clipping. soft clipping adds the even harmonics to the signal and hard clipping the odds [xxx]. When we drive the signal too much, the result is a simple square wave. How can more interesting results be achieved.
+
+# overdrive 250
+
+
+```{python echo=FALSE, results="hide", fig.align='center', fig.cap='Figure 2: Red Llama'}
+from elektron import Circuit, Draw, Element, Label, Line, Dot, Simulation
+
+draw = (Draw(["/usr/share/kicad/symbols"])
+  + Label("IN").rotate(180)
+  + Element("C1", "Device:C", value="10n").rotate(90)
+  + Element("R1", "Device:R", value="100k").rotate(90)
+  + Line().right().length(2.54)
+  + (bias := Dot())
+  + Line().right().length(2*2.54)
+  + Element("U1", "Amplifier_Operational:TL072", value="TL072", unit=1, Spice_Primitive="X", Spice_Model="TL072c").anchor(3)
+
+  + Element("R2", "Device:R", value="470k").rotate(180).at(bias)
+  + Label("vBias").rotate(90)
+
+  + Element("C4", "Device:C", value="4.7u").rotate(90).at("U1", "1")
+  + Element("R4", "Device:R", value="10k").rotate(90)
+  + Line().right().length(2.54)
+  + (d1 := Dot())
+  + Line().right().length(4*2.54)
+  + (d2 := Dot())
+  + Line().right().length(4*2.54)
+  + (d3 := Dot())
+  + Line().right().length(2.54)
+  + Label("OUT")
+
+  + Element("D1", "Diode:1N4148", value="1N4148", Spice_Primitive="D", Spice_Model="D1N4148", Spice_Node_Sequence="2 1").rotate(90).anchor(2).at(d1)
+  + Element("GND", "power:GND", value="GND").at("D1", "1")
+
+  + Element("D2", "Diode:1N4148", value="1N4148", Spice_Primitive="D", Spice_Model="D1N4148", Spice_Node_Sequence="2 1").rotate(270).anchor(1).at(d2)
+  + Element("D3", "Diode:1N4148", value="1N4148", Spice_Primitive="D", Spice_Model="D1N4148", Spice_Node_Sequence="2 1").rotate(270).anchor(1).at("D2", "2")
+  + Element("GND", "power:GND", value="GND").at("D3", "2")
+
+  + Element("C5", "Device:C", value="1n").at(d3)
+  + Element("GND", "power:GND", value="GND")
+
+  + Line().down().length(4*2.54).at("U1", "2")
+  + (fbdot_1 := Dot())
+  + Element("C3", "Device:C", value="22p").rotate(90).tox("U1", "1")
+  + (fbdot_2 := Dot())
+  + Line().toy("U1", "1")
+  + Dot()
+
+  + Line().down().at(fbdot_1).length(4*2.54)
+  + Element("R3", "Device:R", value="1Meg").rotate(90).tox(fbdot_2)
+  + Line().toy(fbdot_2)
+
+  + Element("C2", "Device:C", value="4.7n").rotate(270).at(fbdot_1)
+  + Element("RV1", "Device:R_Potentiometer", value="500k",
+                 Spice_Netlist_Enabled="Y",
+                 Spice_Primitive="X",
+                 Spice_Model="Potentiometer").anchor(3).mirror('x')
+  + (gnd := Dot().at("RV1", "1"))
+  + Element("GND", "power:GND", value="GND").at("RV1", "1")
+  
+  + Line().at("RV1", "2").toy(gnd)
+  + Line().tox(gnd)
+
+  + Element("U1", "Amplifier_Operational:TL072", unit=3, value="TL072",
+                 Spice_Netlist_Enabled="Y",
+                 Spice_Primitive="X",
+                 Spice_Model="TL072c", on_schema="no").at((100.0,100.0))
+  + Element("+9V", "power:+9V", value="+9V", on_schema="no").at("U1", "8")
+  + Element("GND", "power:GND", value="GND", on_schema="no").rotate(180).at("U1", "4")
+  + Element("U1", "Amplifier_Operational:TL072", unit=2, value="TL072",
+                 Spice_Netlist_Enabled="Y",
+                 Spice_Primitive="X",
+                 Spice_Model="TL072c", on_schema="no").at((120.0,100.0))
+)
+
+circuit = draw.circuit(["../../lib/spice"])
+circuit.voltage("1", "+9V", "GND", "DC 9V")
+circuit.voltage("2", "vBias", "GND", "DC 4.5V")
+circuit.voltage("3", "IN", "GND", "AC 800m SIN(0 800m 200)")
+#circuit.option("INTERP")
+
+circuit.control('''
+option INTERP
+alterparam potentiometer value = 500k
+let rb_act = 1
+let r_step = 0.01
+let r_stop = 0
+while rb_act gt r_stop
+  alterparam potentiometer set = $&rb_act
+  mc_source
+  tran 0.02ms 10ms
+  ac dec 20 10 10K
+  let rb_act = rb_act - r_step
+end
+''')
+
+simulation = Simulation(circuit)
+overdrive = simulation.run()
+
+draw.plot(scale=6)
+```
+
+The DOD is a very simple circuits that uses some overdive but mainly diode clipping. Such circuits are very common. There are variations in the types and wiring of the diodes. One example is the Batter Acid.
+The DOD Overdrive 250 is a basic distortion pedal. There is an opamp as voltage buffer followed by the clipping diodes. Looking at the amount of parts used it is surprising that the cost of this pedal is around 100 bucks.
+
+```{d3 element="overdrive", x="time", y="in", yRange="out", data="overdrive.tran", width="600", height="400", fig.align='center', fig.cap="Figure 6: Ovredrive 250 simulation."}```
+
+The main part are the diodes. Diodes do not only block the current in one direction, they also start to conduct at a specific voltage. When they start to conduct the voltage is clipped at this level. The feeding resistor R4 reduces the current so that the result is a nice soft clipping. In the overdrive 250 pedal there is one diode in one direction on two into the other. The forward voltage of diodes in series is added. This is why there is 0.5V on the positive rail and -1V in the negative.
+
+# Diode clipping
+
+```{python echo=FALSE, results="nohide", fig.align='center', fig.cap='Figure 2: Red Llama'}
+from elektron import Circuit, Draw, Element, Label, Line, Dot, Simulation, Gnd, R
+
+draw = (Draw(["/usr/share/kicad/symbols"])
+  + Label("IN").rotate(180)
+  + Element("R1", "Device:R", value="100k").rotate(90)
+  + Element("U1", "Amplifier_Operational:TL072", value="TL072", unit=1, Spice_Primitive="X", Spice_Model="TL072c").anchor(2).mirror('x')
+  + R("R4", "2.2k").rotate(90).at("U1", "1")
+  + (d1 := Dot())
+  + Line().right().length(4*2.54)
+  + (d2 := Dot())
+  + Line().right().length(4*2.54)
+  + Label("OUT")
+
+  + Gnd().at("U1", "3")
+  + Element("D1", "Diode:1N4148", value="1N4148", Spice_Primitive="D", Spice_Model="LED2", Spice_Node_Sequence="2 1").rotate(90).anchor(2).at(d1)
+  + Element("D2", "Diode:1N4148", value="1N4148", Spice_Primitive="D", Spice_Model="LED2", Spice_Node_Sequence="2 1").rotate(90).anchor(2).at("D1", "1")
+  + Element("GND", "power:GND", value="GND").at("D2", "1")
+
+  + Element("D3", "Diode:1N4148", value="1N4148", Spice_Primitive="D", Spice_Model="LED2", Spice_Node_Sequence="2 1").rotate(270).anchor(1).at(d2)
+  + Element("D4", "Diode:1N4148", value="1N4148", Spice_Primitive="D", Spice_Model="LED2", Spice_Node_Sequence="2 1").rotate(270).anchor(1).at("D3", "2")
+  + Element("GND", "power:GND", value="GND").at("D4", "2")
+
+  + Line().up().length(4*2.54).at("U1", "2").dot("start")
+  + (fbdot_1 := Dot())
+  + Element("C3", "Device:C", value="22p").rotate(90).tox("U1", "1")
+  + (fbdot_2 := Dot())
+  + Line().toy("U1", "1")
+  + Dot()
+
+  + Line().up().at(fbdot_1).length(4*2.54)
+  + Element("RV1", "Device:R_Potentiometer", value="100k",
+                 Spice_Netlist_Enabled="Y",
+                 Spice_Primitive="X",
+                 Spice_Model="Potentiometer").anchor(1).mirror('x')
+  + Element("R3", "Device:R", value="1k").rotate(90).at("RV1", "3").tox(fbdot_2)
+  + Line().toy(fbdot_2)
+
+  + Line().at("RV1", "1").tox("RV1", "2").dot("start")
+  + Line().toy("RV1", "2")
+
+  + Element("U1", "Amplifier_Operational:TL072", unit=3, value="TL072",
+                 Spice_Netlist_Enabled="Y",
+                 Spice_Primitive="X",
+                 Spice_Model="TL072c", on_schema="no").at((100.0,100.0))
+  + Element("+15V", "power:+15V", value="+15V", on_schema="no").at("U1", "8")
+  + Element("-15V", "power:-15V", value="-15V", on_schema="no").at("U1", "4")
+  + Element("U1", "Amplifier_Operational:TL072", unit=2, value="TL072",
+                 Spice_Netlist_Enabled="Y",
+                 Spice_Primitive="X",
+                 Spice_Model="TL072c", on_schema="no").at((120.0,100.0))
+)
+
+circuit = draw.circuit(["../../lib/spice"])
+circuit.voltage("1", "+15V", "GND", "DC 15V")
+circuit.voltage("2", "-15V", "GND", "DC -15V")
+circuit.voltage("3", "IN", "GND", "AC 5 SIN(0 5 200)")
+
+circuit.control('''
+option INTERP
+alterparam potentiometer value = 500k
+let rb_act = 0 
+let r_step = 0.01
+let r_stop = 1
+while rb_act lt r_stop
+  alterparam potentiometer set = $&rb_act
+  mc_source
+  tran 0.02ms 10ms
+  let rb_act = rb_act + r_step
+end
+''')
+
+simulation = Simulation(circuit)
+diode = simulation.run()
+
+draw.plot(scale=6, theme='BlackWhite', netlist=True)
+```
+
+The DOD is a very simple circuits that uses some overdive but mainly diode clipping. Such circuits are very common. There are variations in the tpes and wiring of the diodes. One example is the Batter Acid.
+
+```{d3 element="diode", x="time", y="in", yRange="out,V(2)", data="diode.tran", width="600", height="400", fig.align='center', fig.cap="Figure 6: Ovredrive 250 simulation."}```
+
+
+# feedback diode
+
+```{python echo=FALSE, results="hide", fig.align='center', fig.cap='Figure 2: Red Llama'}
+from elektron import Circuit, Draw, Element, Label, Line, Dot, Simulation, R, Gnd
+
+draw = (Draw(["/usr/share/kicad/symbols"])
+  + Label("IN").rotate(180)
+  + Element("R1", "Device:R", value="100k").rotate(90)
+  + Line().right().length(2.54) + Dot()
+  + Element("U1", "Amplifier_Operational:TL072", value="TL072", unit=1, Spice_Primitive="X", Spice_Model="TL072c").anchor(2).mirror('x')
+
+  + Element("R4", "Device:R", value="100k").rotate(90).at("U1", "1")
+  + Line().right().length(2.54)
+  + Dot()
+  + Element("U1", "Amplifier_Operational:TL072", value="TL072", unit=2, Spice_Primitive="X", Spice_Model="TL072c").anchor(6).mirror('x')
+  + (d3 := Dot())
+  + Line().right().length(2.54)
+  + Label("OUT")
+
+  + Gnd().at("U1", "3")
+  + Gnd().at("U1", "5")
+
+  + Line().up().length(5*2.54).at("U1", "7") + (fba := Dot())
+  + R("R5", "100k").rotate(270).tox("U1", "6") + (fbb := Dot())
+  + Line().toy("U1", "6")
+
+  + Line().up().length(4*2.54).at(fba) + (fb1 := Dot())
+  + Element("D1", "Diode:1N4148", value="1N4148", Spice_Primitive="D", Spice_Model="LED1", Spice_Node_Sequence="2 1").rotate(0).anchor(2).tox(fbb) + (fb2 := Dot())
+  + Line().toy(fbb)
+
+  + Line().up().length(4*2.54).at(fb1)
+  + Element("D2", "Diode:1N4148", value="1N4148", Spice_Primitive="D", Spice_Model="LED1", Spice_Node_Sequence="2 1").rotate(180).anchor(2).tox(fb2)
+  + Line().toy(fb2)
+
+
+  + Line().up().length(4*2.54).at("U1", "2").dot("start")
+  + (fbdot_1 := Dot())
+  + Element("C3", "Device:C", value="22p").rotate(90).tox("U1", "1")
+  + (fbdot_2 := Dot())
+  + Line().toy("U1", "1")
+  + Dot()
+
+  + Line().up().at(fbdot_1).length(4*2.54)
+  + Element("RV1", "Device:R_Potentiometer", value="100k",
+                 Spice_Netlist_Enabled="Y",
+                 Spice_Primitive="X",
+                 Spice_Model="Potentiometer").anchor(1).mirror('x')
+  + Element("R3", "Device:R", value="1k").rotate(90).at("RV1", "3").tox(fbdot_2)
+  + Line().toy(fbdot_2)
+
+  + Line().at("RV1", "1").tox("RV1", "2").dot("start")
+  + Line().toy("RV1", "2")
+#  + Line().up().length(5*2.54).at("U1", "2")
+#  + (fbdot_1 := Dot())
+#  + Element("C3", "Device:C", value="22p").rotate(90).tox("U1", "1")
+#  + (fbdot_2 := Dot())
+#  + Line().toy("U1", "1")
+#  + Dot()
+#
+#  + Line().up().at(fbdot_1).length(4*2.54)
+#  + Element("R3", "Device:R", value="1Meg").rotate(90).tox(fbdot_2)
+#  + Line().toy(fbdot_2)
+#
+#  + Element("C2", "Device:C", value="4.7n").rotate(270).at(fbdot_1)
+#  + Element("RV1", "Device:R_Potentiometer", value="500k",
+#                 Spice_Netlist_Enabled="Y",
+#                 Spice_Primitive="X",
+#                 Spice_Model="Potentiometer").anchor(3).mirror('x')
+#  + (gnd := Dot().at("RV1", "1"))
+#  + Element("GND", "power:GND", value="GND").at("RV1", "1")
+#  
+#  + Line().at("RV1", "2").toy(gnd)
+#  + Line().tox(gnd)
+
+  + Element("U1", "Amplifier_Operational:TL072", unit=3, value="TL072",
+                 Spice_Netlist_Enabled="Y",
+                 Spice_Primitive="X",
+                 Spice_Model="TL072c", on_schema="yes").at((100.0,100.0))
+  + Element("+15V", "power:+15V", value="+15V", on_schema="yes").at("U1", "8")
+  + Element("-15V", "power:-15V", value="-15V", on_schema="yes").at("U1", "4").rotate(180)
+)
+
+circuit = draw.circuit(["../../lib/spice"])
+circuit.voltage("1", "+15V", "GND", "DC 15V")
+circuit.voltage("2", "-15V", "GND", "DC -15V")
+circuit.voltage("4", "IN", "GND", "AC 800m SIN(0 5 200)")
+
+circuit.control('''
+option INTERP
+alterparam potentiometer value = 500k
+let rb_act = 0
+let r_step = 0.01
+let r_stop = 1
+while rb_act lt r_stop
+  alterparam potentiometer set = $&rb_act
+  mc_source
+  tran 0.02ms 10ms
+  ac dec 20 10 10K
+  let rb_act = rb_act + r_step
+end
+''')
+
+print(circuit)
+
+simulation = Simulation(circuit)
+fb_diode = simulation.run()
+
+draw.plot(scale=6, theme='BlackWhite')
+```
+
+The DOD is a very simple circuits that uses some overdive but mainly diode clipping. Such circuits are very common. There are variations in the tpes and wiring of the diodes. One example is the Batter Acid.
+
+```{d3 element="fb_diode", x="time", y="in", yRange="out", data="fb_diode.tran", width="600", height="400", fig.align='center', fig.cap="Figure 6: Ovredrive 250 simulation."}```
+
+## equalizer
+
+```{python echo=FALSE, results="nohide", fig.align='center', fig.cap='Figure 2: digital logic'}
+from elektron import Circuit, Draw, Element, Label, Line, Dot, Simulation, C, R, Gnd, Power
+
+draw = (Draw(["/usr/share/kicad/symbols", "../../lib/symbols"])
+  + Label("IN").rotate(180)
+  + Element("U1", "Amplifier_Operational:TL072", value="TL072", unit=1, Spice_Primitive="X", Spice_Model="TL072c").anchor(3)
+  + Line().at("U1", "1").dot("start") + Label("OUT")
+
+  + Line().down().length(4*2.54).at("U1", "1") + (FB1 := Dot())
+  + R(draw.next("R"), "220k").tox("U1", "2").rotate(270) + (FB2 := Dot())
+  + Line().toy("U1", "2")
+
+  + Line().at(FB1).down().length(4*2.54)
+  + C(draw.next("C"), "100p").rotate(270).tox(FB2) + (FB3 := Dot())
+  + Line().toy(FB2)
+
+  + Line().down().length(2.54).at(FB3) + C(draw.next("C"), "27n").label("west") + (D1 := Dot()) + Line().down().length(2.54)
+  + C(draw.next("C"), "220p").label("west") + Line().down().length(2.54) + (DQ2 := Dot())
+  + R(draw.next("R"), "47k").label("west") + Gnd()
+
+  + Element(draw.next("Q"), "Transistor_BJT:2N3904", value="2N5088", Spice_Primitive="Q", Spice_Model="2N5088").at(DQ2).anchor(2) 
+  + R(draw.next("R"), "10k").at(draw.last("Q"), "1") + Element("-4.5V", "power:VSS", value="-4.5V").rotate(180)
+  + Element("+4.5V", "power:VDD", value="+4.5V").at(draw.last("Q"), "3")
+
+  + Line().right().at("Q1", "1").length(2*2.54) + R(draw.next("R"), "2k").rotate(90).label("south") + Line().toy(D1) + Line().tox(D1)
+  + Dot().at(draw.last("Q"), "1")
+
+  #+ C(draw.next("C"), "220p").at(draw.last("Q"), "2").rotate(180) + Line().toy(D1) + Line().tox(D1)
+
+  + Element("U1", "Amplifier_Operational:TL072", value="TL072", unit=2, Spice_Primitive="X", Spice_Model="TL072c").at((80,100))
+  + Element("U1", "Amplifier_Operational:TL072", value="TL072", unit=3, Spice_Primitive="X", Spice_Model="TL072c").at((100,100))
+  + Element("+4.5V", "power:VDD", value="+4.5V").at("U1", "8")
+  + Element("-4.5V", "power:VSS", value="-4.5V").at("U1", "4")
+)
+
+
+print(draw.erc())
+
+circuit = draw.circuit(["../../lib/spice"])
+circuit.voltage("1", "+4.5V", "GND", "DC 15V")
+circuit.voltage("2", "-4.5V", "GND", "DC -15V")
+circuit.voltage("3", "IN", "GND", "AC 6V SIN(0 6V 100)")
+
+print(circuit)
+
+simulation = Simulation(circuit)
+gyrator_ac = simulation.ac("100", "200000", 10, "dec")
+
+draw.plot(scale=6, theme='BlackWhite', netlist=True)
+```
+alterparam potentiometer value = 50k
+
+```{d3 element="gyrator", x="frequency", y="out", data="gyrator_ac", width="600", height="400", fig.align='center', fig.cap='Figure 3: Trash Metal equalizer', xType="scaleLog"}```
+
+
+# tone control
+
+```{python echo=FALSE, fig.align='center', fig.cap='Figure 2: Red Llama'}
+from elektron import Circuit, Draw, Element, Label, Line, Dot, Simulation, R, C, Power, Gnd
+
+draw = (Draw(["/usr/share/kicad/symbols"])
+    + Label("INPUT").rotate(180)
+    + R(draw.next("R"), "100k").rotate(90)
+    + Line() + Dot()
+    + Element("U1", "Amplifier_Operational:TL072", value="TL072").anchor(2).mirror('x')
+    + Line().at("U1", "1").up().length(5*2.54) + R(draw.next("R"), "100k").rotate(270).tox("U1", "2") + Line().toy("U1", "2")
+    + Gnd().at("U1", "3")
+
+    + Line().at("U1", "1").dot("start") + R(draw.next("R"), "100k").rotate(90) + Line() + Dot().push() + Line() 
+    + Element("U1", "Amplifier_Operational:TL072", value="TL072", unit=2).anchor(5).mirror('x')
+)
+
+draw.plot(scale=6, theme='BlackWhite')
+```
+
+# shin ey
+
+```{python echo=FALSE, results="nohide", fig.align='center', fig.cap='Figure 2: digital logic'}
+from elektron import Circuit, Draw, Element, Label, Line, Dot, Simulation
+
+draw = (Draw(["/usr/share/kicad/symbols"])
+  + Label("IN").rotate(180)
+  + Element("C1", "Device:C", value="10u", Spice_Netlist_Enabled="Y").rotate(90)
+  + (cdot := Dot())
+  + Line().right().length(2*2.54)
+  + (in_dot := Dot())
+  + Line().right().length(2*2.54)
+  + Element("Q1", "Transistor_BJT:BC547", unit=1, value="BC547",
+                 Spice_Netlist_Enabled="Y",
+                 Spice_Primitive="Q",
+                 Spice_Model="BC547B").anchor(2)
+  + Line().at("Q1", "1").up().length(2.54)
+  + (q11 := Dot())
+  + Element("R1", "Device:R", value="2200k", Spice_Netlist_Enabled="Y").rotate(270).tox(in_dot)
+  + (r1 := Dot())
+  + Line().toy(in_dot)
+  + Line().at(q11).up().length(4*2.54)
+  + (q12 := Dot())
+  + Element("C2", "Device:C", value="1n", Spice_Netlist_Enabled="Y").rotate(270).tox(r1)
+  + Line().toy(r1)
+  
+  + Element("R11", "Device:R", value="470k", Spice_Netlist_Enabled="Y").at(cdot)
+  + Element("GND", "power:GND", value="GND")
+
+  # + Element("R12", "Device:R", value="1k", Spice_Netlist_Enabled="Y").at("Q1", "3")
+  # + Element("GND", "power:GND", value="GND")
+  # + Dot().at("Q1", "3") + Line().right().length(4*2.54)
+  # + Element("C12", "Device:C", value="10u", Spice_Netlist_Enabled="Y")
+  + Element("GND", "power:GND", value="GND").at("Q1", "3")
+
+  + Line().at(q11).right().length(4*2.54)
+  + (cin := Dot())
+  + Line().right().length(2.54)
+  + Element("C4", "Device:C", value="47n", Spice_Netlist_Enabled="Y").rotate(90)
+  + (q22 := Dot())
+  + Line().right().length(2*2.54)
+  + Element("Q2", "Transistor_BJT:BC547", unit=1, value="BC547",
+                 Spice_Netlist_Enabled="Y",
+                 Spice_Primitive="Q",
+                 Spice_Model="BC547B").anchor(2)
+  + Line().at("Q2", "1").up().length(2.54)
+  + (q21 := Dot())
+  + Element("R3", "Device:R", value="1200k", Spice_Netlist_Enabled="Y").rotate(270).tox(q22)
+  + Line().toy(q22)
+  
+  + Element("R4", "Device:R", value="47k", Spice_Netlist_Enabled="Y").at(q21).rotate(180).length(5*2.54)
+  + Line().left().length(5*2.54)
+  + (fbin := Dot())
+  + Element("R2", "Device:R", value="100k", Spice_Netlist_Enabled="Y").rotate(270)
+  + (fbout := Dot())
+  + Line().left().tox(q11)
+  + (power := Dot())
+  + Element("R10", "Device:R", value="22k").toy(q12)
+
+  + Element("+9V", "power:+9V", value="+9V").at(power)
+  
+  + Line().at(fbin).down().length(4*2.54)
+  + Element("C3", "Device:C", value="47n", Spice_Netlist_Enabled="Y").rotate(270)
+  + Line().up().length(4*2.54)
+
+  # + Element("R13", "Device:R", value="1.5k", Spice_Netlist_Enabled="Y").at("Q2", "3")
+  # + Element("GND", "power:GND", value="GND")
+  # + Dot().at("Q2", "3") + Line().right().length(4*2.54)
+  # + Element("C13", "Device:C", value="10u", Spice_Netlist_Enabled="Y")
+  + Element("GND", "power:GND", value="GND").at("Q2", "3")
+
+  + Element("C6", "Device:C", value="3.3n").at(q21).rotate(270).length(6*2.45)
+  # + Line().right().length(6*2.54).at(q21)
+
+  + Element("RV1", "Device:R_Potentiometer", value="50k",
+                 Spice_Netlist_Enabled="Y",
+                 Spice_Primitive="X",
+                 Spice_Model="Potentiometer").anchor(1).rotate(90).mirror('x')
+  + Line().at("RV1", "3").right().length(2.54)
+  # + (out1 := Dot())
+  # + Element("C7", "Device:C", value="1n", Spice_Netlist_Enabled="Y").rotate(90)
+  # + (out2 := Dot())
+  + Line().right().length(2.54)
+  + Label("OUT")
+
+  # + Element("R5", "Device:R", value="10k", Spice_Netlist_Enabled="Y").at(out1).length(4*2.54)
+  # + Line().right().length(3*1.27)
+  # + (out_to_gnd := Dot())
+  # + Line().tox(out2)
+  # + Element("R6", "Device:R", value="15k", Spice_Netlist_Enabled="Y").rotate(180).toy(out2)
+
+  # + Element("C8", "Device:C", value="100n", Spice_Netlist_Enabled="Y").at(out_to_gnd)
+  # + Element("GND", "power:GND", value="GND")
+
+  + Line().at("RV1", "2").down().length(6*2.54)
+  + Line().left().length(25*1.27)
+  + Element("C5", "Device:C", value="2.2n", Spice_Netlist_Enabled="Y").rotate(270)
+  + Line().tox(cin)
+  + Line().toy(cin)
+)
+
+print(draw.erc())
+
+circuit = draw.circuit(["../../lib/spice"])
+circuit.voltage("1", "+9V", "GND", "DC 15V")
+circuit.voltage("2", "IN", "GND", "DC 5 AC 2.5V SIN(0 5V 100)")
+circuit.control('''
+alterparam potentiometer value = 50k
+let rb_act = 0
+let r_step = 0.01
+let r_stop = 1
+while rb_act lt r_stop
+  alterparam potentiometer set = $&rb_act
+  mc_source
+  tran 0.02ms 20ms
+  let rb_act = rb_act + r_step
+end
+''')
+
+print(circuit)
+
+simulation = Simulation(circuit)
+shiney = simulation.run()
+
+draw.plot(scale=6, theme='BlackWhite')
+```
+
+```{d3 element="shiney", x="time", y="in", yRange="out", data="shiney.tran", width="600", height="400", fig.align='center', fig.cap='Figure 3: Shin-Ey'}```
+
+This is the first setup with the 4069 as a voltage follower. C1 and C2 are DC blocking capacitors. When we choose R1 and R2 as 100kOhm we would expect a gain of one.
+
+# Unpleasant Surprise
+
+# input 
+
+```{python echo=FALSE, results="nohide", fig.align='center', fig.cap='Figure 2: digital logic'}
+from elektron import Circuit, Draw, Element, Label, Line, Dot, Simulation, C, R, Gnd, Power
+
+draw = (Draw(["/usr/share/kicad/symbols", "../../lib/symbols"])
+  + Label("IN").rotate(180)
+  + Line() + (IN := Dot()) + Line()
+  + C(draw.next("C"), "2.2n").rotate(90)
+  + R(draw.next("R"), "33k").rotate(90)
+  + Line()
+  + (cdot := Dot())
+  + Line().right().length(4*2.54)
+  + (in_dot := Dot())
+  + Line().right().length(2*2.54)
+  + Label("OUT")
+  + R(draw.next("R"), "1meg").at(IN) + Gnd()
+  + R(draw.next("R"), "2meg").at(in_dot) + Gnd()
+  + C(draw.next("C"), "100p").at(cdot) + Gnd()
+)
+
+print(draw.erc())
+
+circuit = draw.circuit(["../../lib/spice"])
+circuit.voltage("1", "+9V", "GND", "DC 9V")
+circuit.voltage("2", "IN", "GND", "AC 0.8V SIN(0 0.1V 100)")
+
+print(circuit)
+
+simulation = Simulation(circuit)
+surprise_in = simulation.ac("100", "20000", 10, "dec")
+print(surprise_in)
+
+draw.plot(scale=6, theme='BlackWhite', netlist=True)
+```
+alterparam potentiometer value = 50k
+
+```{d3 element="surprise_in", x="frequency", y="out", data="surprise_in", width="600", height="400", fig.align='center', fig.cap='Figure 3: Shin-Ey', xType="scaleLog"}```
+
+
+```{python echo=FALSE, results="nohide", fig.align='center', fig.cap='Figure 2: digital logic'}
+from elektron import Circuit, Draw, Element, Label, Line, Dot, Simulation, C, R, Gnd, Power
+
+draw = (Draw(["/usr/share/kicad/symbols", "../../lib/symbols"])
+  + Label("IN").rotate(180)
+  + Line() + (IN := Dot()) + Line()
+  + C(draw.next("C"), "2.2n").rotate(90)
+  + R(draw.next("R"), "33k").rotate(90)
+  + Line()
+  + (cdot := Dot())
+  + Line().right().length(4*2.54)
+  + (in_dot := Dot())
+  + Line().right().length(2*2.54)
+  + Element("J1", "elektrophon:J201", unit=1, value="J201",
+                 Spice_Netlist_Enabled="Y",
+                 Spice_Primitive="J",
+                 Spice_Model="J201", Spice_Node_Sequence="1 3 2").anchor(3)
+  + R(draw.next("R"), "1meg").at(IN) + Gnd()
+  + R(draw.next("R"), "2meg").at(in_dot) + Gnd()
+  + C(draw.next("C"), "100p").at(cdot) + Gnd()
+  + R(draw.next("R"), "16k").at("J1", "1").rotate(180) + Power("+9V")
+  + R(draw.next("R"), "1k").at("J1", "2") + Gnd()
+  + Line().at("J1", "1").dot("start")
+  + C(draw.next("C"), "47n").rotate(90) + Line().length(2*2.54)
+
+  + Element("RV1", "Device:R_Potentiometer", value="100k",
+                 Spice_Netlist_Enabled="Y",
+                 Spice_Primitive="X",
+                 Spice_Model="Potentiometer").anchor(3).mirror('x')
+  + Gnd().at("RV1", "1")
+  + Line().at("RV1", "2")
+  + Element("J2", "elektrophon:J201", unit=1, value="J201",
+                 Spice_Netlist_Enabled="Y",
+                 Spice_Primitive="J",
+                 Spice_Model="J201", Spice_Node_Sequence="1 3 2").anchor(3)
+  + R(draw.next("R"), "33k").at("J2", "1").rotate(180) + Power("+9V")
+  + R(draw.next("R"), "680").at("J2", "2") + Gnd()
+  + Line().at("J2", "1").length(4*2.54).dot("start")
+
+  + (CIN := Dot())
+  + C(draw.next("C"), "47n").rotate(90) + R(draw.next("R"), "100k").rotate(90)
+
+  + Element("U1", "Amplifier_Operational:TL072", value="TL072", unit=1, Spice_Primitive="X", Spice_Model="TL072c").anchor(2).mirror('x')
+
+  + Line().up().length(5*2.54).at("U1", "1").dot("start")
+  + (D1 := Dot())
+  + Element("D1", "Diode:1N4148", value="1N4148", Spice_Primitive="D", Spice_Model="D1N4148", Spice_Node_Sequence="2 1").tox("U1", "2")
+  + Line().toy("U1", "2").dot("end")
+
+  + Line().at(D1).up().length(4*2.54)
+  + R(draw.next("R"), "10meg").rotate(270).tox("U1", "2") + (D2 := Dot())
+  + R(draw.next("R"), "20meg").rotate(270) + Gnd()
+
+  + Line().at(D2).dot("start end").toy(D1)
+
+  + Line().down().length(5*2.54).at(CIN)
+  + R(draw.next("R"), "10k").rotate(90)
+  + (S1 := Dot())
+  + Line().down().length(3*2.54)
+  + Element("SW1", "Switch:SW_SPDT", value="Switch", Spice_Primitive="X", Spice_Model="Switch").rotate(90).label("west")
+
+  + R(draw.next("R"), "68k").at("SW1", "2").label("west") + Gnd()
+
+  # Switch 2
+  + Line().right().length(5*2.54).at(S1)
+  + Element("SW2", "Switch:SW_SPDT", value="Switch", Spice_Primitive="X", Spice_Model="Switch1").rotate(180).anchor(3)
+
+
+  #Reference Voltage
+  + Line().at("U1", "3").down().toy("SW1", "3")
+  + (SW2 := Dot())
+  + Line().tox("SW1", "3")
+
+  + Line().at(SW2).toy("SW1", "2") + (Vref := Dot())
+  + R(draw.next("R"), "270k") + Gnd()
+
+  + Line().at(Vref).right().length(2.54) + R(draw.next("R"), "100k").rotate(90) + Line() + (Divider := Dot())
+  + R(draw.next("R"), "680").rotate(180) + Power("+9V")
+  + Element("D3", "Diode:1N53xxB", value="5.1V", Spice_Primitive="D", Spice_Model="1N4733A", Spice_Node_Sequence="2 1").at(Divider).rotate(270) + Gnd()
+  + Line().at("SW2", "1").toy("SW1", "3") + Line().tox("SW1", "3")
+  
+  #Second opamp
+  + Line().at("U1", "1").length(2.54)
+  + Element("U1", "Amplifier_Operational:TL072", value="TL072", unit=2, Spice_Primitive="X", Spice_Model="TL072c").anchor(6).mirror('x')
+  + Line().at("U1", "7").up().length(5*2.54).dot("start")
+  + Element("D2", "Diode:1N4148", value="1N4148", Spice_Primitive="D", Spice_Model="D1N4148", Spice_Node_Sequence="2 1").rotate(180).tox("U1", "6")
+  + Line().toy("U1", "6").dot("end")
+  + Line().at("U1", "5").toy("SW2", "2") + Line().tox("SW2", "2")
+
+  #output
+  + C(draw.next("C"), "47n").at("U1", "7").rotate(90) + R(draw.next("R"), "150k").rotate(90) + Line().length(2*2.54) + (FILTER := Dot())
+  + Line() + R(draw.next("R"), "68k").rotate(90) + Line() + Line().down().length(2.54)
+  + Element("RV2", "Device:R_Potentiometer", value="100k",
+                 Spice_Netlist_Enabled="Y",
+                 Spice_Primitive="X",
+                 Spice_Model="Potentiometer1").anchor(3).mirror('x')
+  + Gnd().at("RV2", "1")
+  + C(draw.next("C"), "47n").at("RV2", "2").rotate(90) + (BIAS := Dot())
+  + Line().length(2.54)
+
+  + Element("Q1", "Transistor_BJT:BC547", unit=1, value="BC547",
+                 Spice_Netlist_Enabled="Y",
+                 Spice_Primitive="Q",
+                 Spice_Model="BC846B").anchor(2)
+
+  + Line().down().length(2.54).at(FILTER) 
+  + Element("SW3", "Switch:SW_SPDT", value="Switch", Spice_Primitive="X", Spice_Model="Switch2").rotate(90).anchor(3)
+  + C(draw.next("C"), "2.2n").at("SW3", "2") + Gnd()
+
+  + R(draw.next("R"), "1meg").rotate(180).at(BIAS) + Power("+9V")
+  + R(draw.next("R"), "1meg").at(BIAS) + Gnd()
+
+  + Line().up().length(2.54).at("Q1", "1") + Power("+9V")
+  + R(draw.next("R"), "10k").at("Q1", "3") + Gnd()
+
+  + Dot().at("Q1", "3") + Line().length(3*2.54) + R(draw.next("R"), "1k").rotate(90)
+  + C(draw.next("C"), "1u").rotate(90) + (OUT := Dot())
+  + Line() + Label("OUT")
+
+  + R(draw.next("R"), "1meg").at(OUT) + Gnd()
+
+  + Element("U1", "Amplifier_Operational:TL072", value="TL072", unit=3, Spice_Primitive="X", Spice_Model="TL072c").at((100,100))
+  + Power("+9V").at("U1", "8")
+  + Gnd().at("U1", "4")
+)
+
+circuit = draw.circuit(["../../lib/spice"])
+circuit.voltage("1", "+9V", "GND", "DC 12V")
+circuit.voltage("2", "IN", "GND", "DC 1 AC 0.8V SIN(0 2V 100)")
+circuit.control('''
+alterparam switch val2 = 99999999999999999999meg
+alterparam switch val1 = 0
+alterparam switch1 val2 = 99999999999999999999meg
+alterparam switch1 val1 = 0
+alterparam switch2 val1 = 99999999999999999999meg
+alterparam switch2 val2 = 0
+alterparam potentiometer value = 100k
+alterparam potentiometer set = 0.9
+alterparam potentiometer1 value = 100k
+alterparam potentiometer1 set = 0
+mc_source
+
+let rb_act = 0
+let r_step = 0.01
+let r_stop = 1
+while rb_act lt r_stop
+  alterparam potentiometer set = $&rb_act
+  mc_source
+  tran 0.02ms 40ms
+  let rb_act = rb_act + r_step
+end
+''')
+
+print(circuit)
+
+simulation = Simulation(circuit)
+surprise = simulation.run()
+
+draw.plot(scale=6, theme='BlackWhite', netlist=True)
+```
+alterparam potentiometer value = 50k
+
+```{d3 element="surprise", x="time", yRange="in,V(7),V(11),V(16),V(17),out", data="surprise.tran", width="600", height="400", fig.align='center', fig.cap='Figure 3: Shin-Ey'}```
+
+This is the first setup with the 4069 as a voltage follower. C1 and C2 are DC blocking capacitors. When we choose R1 and R2 as 100kOhm we would expect a gain of one.
+
+
+# Trash Metal
+
+# input 
+
+```{python echo=FALSE, results="nohide", fig.align='center', fig.cap='Figure 2: digital logic'}
+from elektron import Circuit, Draw, Element, Label, Line, Dot, Simulation, C, R, Gnd, Power
+
+draw = (Draw(["/usr/share/kicad/symbols", "../../lib/symbols"])
+  + Label("IN").rotate(180)
+  + R(draw.next("R"), "10k").rotate(90) + Line() + (D1 := Dot()) + Line() + C(draw.next("C"), "47n").rotate(90) + Line() + (D2 := Dot()) + Line()
+  + Element(draw.next("Q"), "Transistor_BJT:2N3904", value="2N5088", Spice_Primitive="Q", Spice_Model="2N5088").anchor(2)
+
+  + C(draw.next("C"), "120p").at(D1) + Element("-4.5V", "power:VSS", value="-4.5V")
+  + R(draw.next("R"), "1meg").at(D2) + Gnd()
+)
+
+
+print(draw.erc())
+
+circuit = draw.circuit(["../../lib/spice"])
+circuit.voltage("1", "+4.5V", "GND", "DC 4.5V")
+circuit.voltage("2", "-4.5V", "GND", "DC -4.5V")
+circuit.voltage("3", "IN", "GND", "AC 6V SIN(0 6V 100)")
+
+print(circuit)
+
+simulation = Simulation(circuit)
+surprise_in = simulation.ac("100", "200000", 10, "dec")
+
+draw.plot(scale=6, theme='BlackWhite', netlist=True)
+```
+
+```{d3 element="trash_metal", x="frequency", y="out", data="surprise_in", width="600", height="400", fig.align='center', fig.cap='Figure 3: Trash Metal equalizer', xType="scaleLog"}```
+
+
+This is the first setup with the 4069 as a voltage follower. C1 and C2 are DC blocking capacitors. When we choose R1 and R2 as 100kOhm we would expect a gain of one.

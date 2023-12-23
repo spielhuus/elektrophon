@@ -1,0 +1,2 @@
+.model 1N4733A D ( BV=5.1 ) 
+*.model 1N4733A D ( BV=5.1 IBV=17m ) 

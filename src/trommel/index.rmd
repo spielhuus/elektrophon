@@ -1,0 +1,96 @@
+---
+date: "2023-05-18"
+author: "spielhuus"
+excerpt: ""
+subtitle: "analog drum machine"
+tags:
+- percussion
+categories:
+- module
+title: "trommel"
+references: 
+  - { description: "Anatomy of a Drum Machine",
+      title: "Mickey Delp",
+      url: "http://mickeydelp.com/blog/anatomy-of-a-drum-machine" }
+  - { description: "Turns an ATtiny85 into a \"noise chip\" suitable for an analogue drum machine such as LDB-1.",
+      title: "Noise Chip",
+      url: "https://github.com/aleh/NoiseChip" }
+  - { description: "Boss DR-110 schematic",
+      title: "DR-110",
+      url: "/boss_dr-110_sch.gif" }
+  - { description: "An analysis of the DR-110 Cymbal, Hi-Hat and Clap, with suggested modifications and proposed clones",
+      title: "DR-110",
+      url: "http://www.sdiy.org/richardc64/new_drums/dr110/dr110a1.html" }
+  - { description: "Single transistor VCA circuit",
+      title: "electro-music.com",
+      url: "https://electro-music.com/forum/topic-33190.html&postorder=asc" }
+version: 0
+draft: True
+---
+
+# noise source
+
+The noise source of the DR-110 is rather simple, but it uses a CD4006 shift register which is not available any more. Mickey Delp was using a microprozessor to create the four voices. There is also an implementation of that using a ATiny chip [2].
+
+
+```{python echo=FALSE, results="nohide", fig.align="center", fig.cap="Figure 3: Long tailed pair"}
+from elektron import Circuit, Draw, Element, Label, Line, Dot, Simulation, R, C, Gnd
+import numpy as np
+
+draw = Draw(["/usr/share/kicad/symbols"])
+(draw
+  + Label("IN").rotate(180) + Line()
+  + C(draw.next("C"), "1n").rotate(90) + R(draw.next("R"), "22k").rotate(90)
+  + Element("U1", "Amplifier_Operational:TL072", unit=1, value="TL072",
+                 Spice_Netlist_Enabled="Y",
+                 Spice_Primitive="X",
+                 Spice_Model="TL072c").anchor(2).mirror('x')
+
+  + Line().up().length(10*2.54).at("U1", "1").dot("start")
+  + Dot().push()
+  + C(draw.next("C"), "3.3n").rotate(270) + Dot().push()
+  + C(draw.next("C"), "3.3n").rotate(270)
+  + Line().toy("U1", "2").dot("end")
+  + Gnd().at("U1", "3")
+
+  + R(draw.next("R"), "560").at(draw.pop()) + Gnd()
+  + Line().up().length(4*2.54).at(draw.peek())
+  + R(draw.next("R"), "82k").tox("U1", "3").rotate(270) + Line().toy(draw.pop()).dot("end")
+  + Line().at("U1", "1") + Label("OUT")
+
+  + Element("U1", "Amplifier_Operational:TL072", unit=2, value="TL072",
+                 Spice_Netlist_Enabled="Y",
+                 Spice_Primitive="X",
+                 Spice_Model="TL072c", on_schema="no").at((80.0,100.0))
+  + Element("U1", "Amplifier_Operational:TL072", unit=3, value="TL072",
+                 Spice_Netlist_Enabled="Y",
+                 Spice_Primitive="X",
+                 Spice_Model="TL072c", on_schema="no").at((100.0,100.0))
+  + Element("+15V", "power:+15V", value="+15V", on_schema="no").at("U1", "8")
+  + Element("-15V", "power:-15V", value="-15V", on_schema="no").at("U1", "4")
+)
+
+circuit = draw.circuit(["../../lib/spice"])
+circuit.voltage("1", "+15V", "GND", "DC 15V")
+circuit.voltage("2", "-15V", "GND", "DC -15V")
+circuit.voltage("3", "IN", "GND", "AC 5V")
+
+simulation = Simulation(circuit)
+noise_filter = simulation.ac("300", "20000", 20, "dec")
+noise_filter['out'] = np.abs(noise_filter["out"])
+
+circuit.set_value("C1", "2.2n")
+circuit.set_value("R1", "33k")
+circuit.set_value("C2", "6.8n")
+circuit.set_value("C3", "6.8n")
+simulation = Simulation(circuit)
+noise_filter2 = simulation.ac("300", "20000", 20, "dec")
+noise_filter['out2'] = np.abs(noise_filter2["out"])
+
+
+draw.plot(scale=6, theme='BlackWhite')
+```
+In this typical vca configuration, the audio signal is applied to the transistor Q1 where Q2 is grounded. The multiplication factor, or current, is set with the transistor Q3. The output is the difference of OUTa and OUTb (OUTb - OUTa). 
+
+```{d3, element="noise_filter", x="frequency", y="out,out2", data="noise_filter", width="600", height="400", fig.align='center', xType="scaleLog", fig.cap="Figure 2: noise filter frequency"}```
+

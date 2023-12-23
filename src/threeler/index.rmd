@@ -1,0 +1,73 @@
+---
+date: "2023-02-12"
+author: "spielhuus"
+excerpt: ""
+subtitle: ""
+tags:
+- filter
+categories:
+- module
+title: "threeler"
+references: 
+  - { description: "A third-order VCF with lots of character, even capable of multiphonic and chaotic oscillations.",
+      title: "Ian Fritz",
+      url: "https://ijfritz.byethost4.com/sy_cir17_threeler.htm" }
+  - { description: "Threeler Modifications and adaption to 15V",
+      title: "Modular Synthesis",
+      url: "https://modularsynthesis.com/bridechamber/threeler/threeler.htm" }
+version: 0
+draft: True
+```{elektron, command="bom", input=["main", "mount"], group=TRUE, partlist="../../lib/partlist.yaml"}```
+```{elektron, command="erc", input=["main", "mount"]}```
+```{elektron, command="drc", input=["main", "mount", "panel"]}```
+```{elektron, command="schema", input=["main", "mount"], border=TRUE, theme="Kicad2000"}```
+```{elektron, command="pcb", input=["main", "mount", "panel"]}```
+```{elektron, command="gerber", input=["main", "mount", "panel"]}```
+---
+
+```{python echo=FALSE, results="nohide", fig.align='center', fig.cap='Figure 2: digital logic'}
+from elektron import Circuit, Draw, Element, Label, Line, Dot, R, Gnd, Power, Feedback, Simulation, Nc
+import sys
+sys.path.append("../../lib/python")
+sys.path.append("..")
+
+from elektrophon import (decouple, decouple_tl072, power)
+from threeler import input, filters, cv, res, wire
+
+draw = Draw(["/usr/share/kicad/symbols", "../../lib/symbols"])
+
+#input 
+draw.pos((10*2.54, 28*2.54))
+input(draw)
+filters(draw)
+
+draw.pos((8*2.54, 36*2.54))
+cv(draw)
+
+draw.pos((48*2.54, 50*2.54))
+res(draw)
+wire(draw)
+
+print(draw.erc())
+
+# circuit = draw.circuit(['lib/spice'])
+# circuit.voltage("1", "+15V", "GND", "DC +15V")
+# circuit.voltage("2", "-15V", "GND", "DC -15V")
+# circuit.voltage("3", "IN", "GND", "DC 0.1V AC 0.1V")
+
+# circuit.control('''
+# ac dec 30 1 1meg
+# ''')
+
+# simulation = Simulation(circuit)
+# svf = simulation.run()
+draw.plot(scale=6, netlist=False, theme='BlackWhite')
+```
+
+# build
+
+{{< bom >}}
+
+{{< callout threeler main mount panel >}}
+
+{{< report summe main >}}

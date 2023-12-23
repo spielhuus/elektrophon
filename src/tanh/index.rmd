@@ -1,0 +1,217 @@
+---
+date: "2023-04-18"
+author: "spielhuus"
+excerpt: "transistor distortion, limiter and saturation"
+subtitle: ""
+tags:
+- grundlage
+categories:
+- article
+title: "tanh"
+references: 
+  - { description: "OTA VCO",
+      title: "AndrewF",
+      url: "http://www.sdiy.org/pinky/data/ota%20vco%20build%20guide.pdf" }
+version: 0
+---
+
+# transistor distortion
+
+
+
+
+```{python echo=FALSE, results="hide", fig.align="center", fig.cap="Figure 3: Long tailed pair"}
+from elektron import Circuit, Draw, Element, Label, Line, Dot, Simulation, R, Gnd
+
+draw = (Draw(["/usr/share/kicad/symbols"])
+  + Label("X").rotate(180) + Line()
+  + Element("RV1", "Device:R_Potentiometer", value="50k",
+                 Spice_Netlist_Enabled="Y",
+                 Spice_Primitive="X",
+                 Spice_Model="Potentiometer").anchor(1)
+  + Gnd().at("RV1", "3")
+  + Line().at("RV1", "2")
+
+  + R("R9", "100k").rotate(90)
+  + Element("U1", "Amplifier_Operational:TL072", unit=1, value="TL072",
+                 Spice_Netlist_Enabled="Y",
+                 Spice_Primitive="X",
+                 Spice_Model="TL072c").anchor(2).mirror('x')
+  + Line().up().length(5*2.54).at("U1", "1").dot("start")
+  + R("R10", "47k").rotate(270).tox("U1", "2")
+  + Line().toy("U1", "2").dot("end")
+  + Gnd().at("U1", "3")
+
+  + Element("Q1", "Transistor_BJT:BC547", unit=1, value="BC547",
+                 Spice_Netlist_Enabled="Y",
+                 Spice_Primitive="Q",
+                 Spice_Model="BC547B").anchor(2).at("U1", "1")
+
+  + Line().at("Q1", "1").up().length(2*2.54)
+  + (dot_out_a := Dot())
+  + Line().up().length(5.08)
+  + Element("R1", "Device:R", unit=1, value="15k").rotate(180)
+  + Line().up().length(5.08)
+  + Element("+15V", "power:+15V", value="+15V")
+
+  + Line().at("Q1", "3").down().length(5.08)
+  + (TD1 := Dot())
+  + Line().down().length(4*2.54)
+  + Line().right().length(2*2.54)
+  + Element("RV2", "Device:R_Potentiometer", value="50k",
+                 Spice_Netlist_Enabled="Y",
+                 Spice_Primitive="X",
+                 Spice_Model="Potentiometer1").rotate(90).anchor(1).mirror('x')
+  + Line().right().length(2*2.54).at("RV2", "3")
+  + Line().up().length(4*2.54)
+  + (TD2 := Dot())
+  + Line().up().length(5.08)
+  + Element("Q2", "Transistor_BJT:BC547", unit=1, value="BC547",
+                 Spice_Netlist_Enabled="Y",
+                 Spice_Primitive="Q",
+                 Spice_Model="BC547B").anchor(3).mirror('x').rotate(180)
+  + R("R6", "390").rotate(270).at(TD2).tox(TD1)
+
+  + (dot_out_b := Dot()).at("Q2", "1")
+  + Line().up().length(2*2.54)
+  + Line().up().length(2*2.54)
+  + Element("R2", "Device:R", unit=1, value="15k").rotate(180)
+  + Line().up().length(5.08)
+  + Element("+15V", "power:+15V", value="+15V")
+
+  + R("R5", "2.2k").at("Q2", "2") + Element("GND", "power:GND", value="GND")
+
+  + Element("R3", "Device:R", unit=1, value="18k").at("RV2", "2")
+  + Element("-15V", "power:-15V", value="-15V").rotate(180)
+
+  + Line().at(dot_out_a).right().length(14*2.54)
+  + Element("U1", "Amplifier_Operational:TL072", unit=2, value="TL072",
+                 Spice_Netlist_Enabled="Y",
+                 Spice_Primitive="X",
+                 Spice_Model="TL072c").anchor(6).mirror('x')
+
+  + Line().at("U1", "7") + Label("OUT")
+  + Line().at(dot_out_b).tox("U1", "6").dot("end")
+
+  + Line().at("U1", "7").up().length(5*2.54).dot("start")
+  + R("R7", "10k").rotate(270).tox("U1", "6")
+  + Line().toy("U1", "6").dot("end")
+  
+  + R("R8", "10k").at("U1", "5") + Gnd()
+
+  + Element("U1", "Amplifier_Operational:TL072", unit=3, value="TL072",
+                 Spice_Netlist_Enabled="Y",
+                 Spice_Primitive="X",
+                 Spice_Model="TL072c", on_schema="no").at((100.0,100.0))
+  + Element("+15V", "power:+15V", value="+15V", on_schema="no").at("U1", "8")
+  + Element("-15V", "power:-15V", value="-15V", on_schema="no").at("U1", "4")
+)
+
+circuit = draw.circuit(["lib/spice"])
+circuit.voltage("1", "+15V", "GND", "DC 15V")
+circuit.voltage("2", "-15V", "GND", "DC -15V")
+circuit.voltage("3", "X", "GND", "5V PULSE(5V -5V 0 10m 10m 0.01m 20m)")
+
+circuit.control('''
+option INTERP
+alterparam potentiometer value = 100k
+alterparam potentiometer1 value = 50k
+
+let rb_act = 0
+let r_step = 0.01
+let r_stop = 1
+while rb_act lt r_stop
+  alterparam potentiometer set = $&rb_act
+  mc_source
+  tran 0.02ms 50ms
+  let rb_act = rb_act + r_step
+end
+''')
+simulation = Simulation(circuit)
+tanh = simulation.run()
+
+print(circuit)
+
+draw.plot(scale=6, theme='BlackWhite')
+```
+  let voltage = @V3[DC]
+*  show voltage
+*  alter V3[sin] = rb_act
+
+In this typical vca configuration, the audio signal is applied to the transistor Q1 where Q2 is grounded. The multiplication factor, or current, is set with the transistor Q3. The output is the difference of OUTa and OUTb (OUTb - OUTa). 
+
+```{d3, element="tanh_triangle", x="time", y="x", yRange="out", data="tanh.tran", width="600", height="400", fig.align='center', fig.cap="Figure 4: long tailed pair simulation."}```
+
+
+```{python echo=FALSE, results="hide", fig.align="center", fig.cap="Figure 3: Long tailed pair"}
+circuit = draw.circuit(["lib/spice"])
+circuit.voltage("1", "+15V", "GND", "DC 15V")
+circuit.voltage("2", "-15V", "GND", "DC -15V")
+circuit.voltage("3", "X", "GND", "5V PULSE(5V -5V 0 0m 20m 0.01m 20m)")
+
+circuit.control('''
+option INTERP
+alterparam potentiometer value = 100k
+alterparam potentiometer1 value = 50k
+
+let rb_act = 0
+let r_step = 0.01
+let r_stop = 1
+while rb_act lt r_stop
+  alterparam potentiometer set = $&rb_act
+  mc_source
+  tran 0.02ms 50ms
+  let rb_act = rb_act + r_step
+end
+''')
+simulation = Simulation(circuit)
+tanh = simulation.run()
+
+print(circuit)
+
+draw.plot(scale=6, theme='BlackWhite')
+```
+  let voltage = @V3[DC]
+*  show voltage
+*  alter V3[sin] = rb_act
+
+In this typical vca configuration, the audio signal is applied to the transistor Q1 where Q2 is grounded. The multiplication factor, or current, is set with the transistor Q3. The output is the difference of OUTa and OUTb (OUTb - OUTa). 
+
+```{d3, element="tanh_saw", x="time", y="x", yRange="out", data="tanh.tran", width="600", height="400", fig.align='center', fig.cap="Figure 4: long tailed pair simulation."}```
+
+```{python echo=FALSE, results="hide", fig.align="center", fig.cap="Figure 3: Long tailed pair"}
+circuit = draw.circuit(["lib/spice"])
+circuit.voltage("1", "+15V", "GND", "DC 15V")
+circuit.voltage("2", "-15V", "GND", "DC -15V")
+circuit.voltage("3", "X", "GND", "SIN(0, 5V, 440)")
+
+circuit.control('''
+option INTERP
+alterparam potentiometer value = 100k
+alterparam potentiometer1 value = 50k
+
+let rb_act = 0
+let r_step = 0.01
+let r_stop = 1
+while rb_act lt r_stop
+  alterparam potentiometer set = $&rb_act
+  mc_source
+  tran 0.02ms 10ms
+  let rb_act = rb_act + r_step
+end
+''')
+simulation = Simulation(circuit)
+tanh = simulation.run()
+
+print(circuit)
+
+draw.plot(scale=6, theme='BlackWhite')
+```
+  let voltage = @V3[DC]
+*  show voltage
+*  alter V3[sin] = rb_act
+
+In this typical vca configuration, the audio signal is applied to the transistor Q1 where Q2 is grounded. The multiplication factor, or current, is set with the transistor Q3. The output is the difference of OUTa and OUTb (OUTb - OUTa). 
+
+```{d3, element="tanh_sin", x="time", y="x", yRange="out", data="tanh.tran", width="600", height="400", fig.align='center', fig.cap="Figure 4: long tailed pair simulation."}```
+
