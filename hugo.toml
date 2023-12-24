@@ -7,7 +7,7 @@ enableInlineShortcodes = true
 footnoteReturnLinkContents = "^"
 
 theme = "elektron-hugo"
-themesDir = "../"
+#themesDir = "../"
 
 [author]
   name = "spielhuus"

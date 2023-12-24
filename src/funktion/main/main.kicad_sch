@@ -1,0 +1,15 @@
+(kicad_sch
+  (version 20211123)
+  (generator "elektron")
+  (uuid "6aa0912e-8aae-43b8-87e5-761d1ff7722c")
+  (paper "A4")
+  (title_block
+    (title "funktion")
+    (date "01-06-2023")
+    (rev "1")
+    (comment 1 "main circuit")
+    (comment 2 "discrete adsr and function generator")
+    (comment 4 "License CC BY 4.0 - Attribution 4.0 International")
+  )
+  (lib_symbols)
+)

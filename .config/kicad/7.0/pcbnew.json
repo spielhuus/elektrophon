@@ -1,0 +1,451 @@
+{
+  "action_plugins": [],
+  "appearance": {
+    "color_theme": "user"
+  },
+  "aui": {
+    "appearance_expand_layer_display": false,
+    "appearance_expand_net_display": false,
+    "appearance_panel_tab": 0,
+    "properties_panel_width": 20,
+    "properties_splitter_proportion": 0.5,
+    "right_panel_width": 180,
+    "search_panel_dock_direction": 3,
+    "search_panel_height": 250,
+    "search_panel_width": 360,
+    "show_layer_manager": true,
+    "show_properties": false,
+    "show_search": false
+  },
+  "cleanup": {
+    "cleanup_short_circuits": true,
+    "cleanup_tracks_in_pad": false,
+    "cleanup_unconnected": true,
+    "cleanup_vias": true,
+    "delete_dangling_vias": true,
+    "merge_segments": true
+  },
+  "color_picker": {
+    "default_tab": 0
+  },
+  "cross_probing": {
+    "auto_highlight": true,
+    "center_on_items": true,
+    "on_selection": true,
+    "zoom_to_fit": true
+  },
+  "drc_dialog": {
+    "refill_zones": true,
+    "severities": 24,
+    "test_all_track_errors": false,
+    "test_footprints": false
+  },
+  "editing": {
+    "allow_free_pads": false,
+    "arc_edit_mode": 0,
+    "auto_fill_zones": false,
+    "ctrl_click_highlight": false,
+    "esc_clears_net_highlight": true,
+    "flip_left_right": true,
+    "magnetic_graphics": true,
+    "magnetic_pads": 1,
+    "magnetic_tracks": 1,
+    "pcb_use_45_degree_limit": false,
+    "polar_coords": false,
+    "rotation_angle": 900,
+    "show_courtyard_collisions": true,
+    "track_drag_action": 0,
+    "use_45_degree_graphic_segments": false
+  },
+  "export_idf": {
+    "auto_adjust": false,
+    "ref_units": 0,
+    "ref_x": 0.0,
+    "ref_y": 0.0,
+    "units_mils": false
+  },
+  "export_step": {
+    "no_virtual": false,
+    "origin_mode": 1,
+    "origin_units": 0,
+    "origin_x": 0.0,
+    "origin_y": 0.0,
+    "overwrite_file": true,
+    "replace_models": true
+  },
+  "export_svg": {
+    "black_and_white": false,
+    "layers": [],
+    "mirror": false,
+    "one_file": false,
+    "output_dir": "",
+    "page_size": 0,
+    "plot_board_edges": true
+  },
+  "export_vrml": {
+    "copy_3d_models": false,
+    "origin_mode": 0,
+    "ref_units": 0,
+    "ref_x": 0.0,
+    "ref_y": 0.0,
+    "units": 1,
+    "use_relative_paths": false
+  },
+  "find_replace": {
+    "find_history": [],
+    "find_string": "",
+    "match_case": false,
+    "match_mode": 0,
+    "replace_history": [],
+    "replace_string": "",
+    "search_and_replace": false
+  },
+  "footprint_chooser": {
+    "height": -1,
+    "sash_h": -1,
+    "sash_v": -1,
+    "width": -1
+  },
+  "footprint_viewer": {
+    "autozoom": true,
+    "cursor": {
+      "always_show_cursor": true,
+      "fullscreen_cursor": false
+    },
+    "display": 0,
+    "fp_list_width": 300,
+    "grid": {
+      "axes_enabled": false,
+      "fast_grid_1": 4,
+      "fast_grid_2": 5,
+      "last_size": 4,
+      "line_width": 1.0,
+      "min_spacing": 10.0,
+      "show": true,
+      "sizes": [
+        "1000 mil",
+        "500 mil",
+        "250 mil",
+        "200 mil",
+        "100 mil",
+        "50 mil",
+        "25 mil",
+        "20 mil",
+        "10 mil",
+        "5 mil",
+        "2 mil",
+        "1 mil",
+        "5.0 mm",
+        "2.5 mm",
+        "1.0 mm",
+        "0.5 mm",
+        "0.25 mm",
+        "0.2 mm",
+        "0.1 mm",
+        "0.05 mm",
+        "0.025 mm",
+        "0.01 mm"
+      ],
+      "snap": 0,
+      "style": 0,
+      "user_grid_x": "10 mil",
+      "user_grid_y": "10 mil"
+    },
+    "lib_list_width": 200,
+    "maximized": false,
+    "mru_path": "",
+    "perspective": "",
+    "pos_x": 0,
+    "pos_y": 0,
+    "size_x": 0,
+    "size_y": 0,
+    "zoom": 1.0,
+    "zoom_factors": []
+  },
+  "footprint_wizard": {
+    "cursor": {
+      "always_show_cursor": true,
+      "fullscreen_cursor": false
+    },
+    "display": 0,
+    "grid": {
+      "axes_enabled": false,
+      "fast_grid_1": 4,
+      "fast_grid_2": 5,
+      "last_size": 4,
+      "line_width": 1.0,
+      "min_spacing": 10.0,
+      "show": true,
+      "sizes": [
+        "1000 mil",
+        "500 mil",
+        "250 mil",
+        "200 mil",
+        "100 mil",
+        "50 mil",
+        "25 mil",
+        "20 mil",
+        "10 mil",
+        "5 mil",
+        "2 mil",
+        "1 mil",
+        "5.0 mm",
+        "2.5 mm",
+        "1.0 mm",
+        "0.5 mm",
+        "0.25 mm",
+        "0.2 mm",
+        "0.1 mm",
+        "0.05 mm",
+        "0.025 mm",
+        "0.01 mm"
+      ],
+      "snap": 0,
+      "style": 0,
+      "user_grid_x": "10 mil",
+      "user_grid_y": "10 mil"
+    },
+    "maximized": false,
+    "mru_path": "",
+    "perspective": "",
+    "pos_x": 0,
+    "pos_y": 0,
+    "size_x": 0,
+    "size_y": 0,
+    "zoom_factors": []
+  },
+  "footprint_wizard_list": {
+    "height": -1,
+    "width": -1
+  },
+  "gen_drill": {
+    "drill_file_type": 0,
+    "map_file_type": 1,
+    "merge_pth_npth": false,
+    "minimal_header": false,
+    "mirror": false,
+    "unit_drill_is_inch": true,
+    "use_route_for_oval_holes": true,
+    "zeros_format": 0
+  },
+  "graphics": {
+    "canvas_type": 2,
+    "highlight_factor": 0.5,
+    "select_factor": 0.75
+  },
+  "import_graphics": {
+    "dxf_units": 0,
+    "interactive_placement": true,
+    "layer": 40,
+    "line_width": 0.2,
+    "line_width_units": 0,
+    "origin_units": 0,
+    "origin_x": 0.0,
+    "origin_y": 0.0
+  },
+  "lib_tree": {
+    "column_widths": null,
+    "columns": []
+  },
+  "meta": {
+    "version": 5
+  },
+  "netlist": {
+    "associate_by_ref_sch": false,
+    "delete_extra_footprints": false,
+    "delete_shorting_tracks": false,
+    "report_filter": -1,
+    "update_footprints": true
+  },
+  "pcb_display": {
+    "footprint_edge_fill": true,
+    "footprint_text_fill": true,
+    "graphic_items_fill": true,
+    "graphics_fill": true,
+    "live_3d_refresh": false,
+    "max_links_shown": 3,
+    "net_names_mode": 3,
+    "origin_invert_x_axis": false,
+    "origin_invert_y_axis": false,
+    "origin_mode": 0,
+    "pad_clearance": true,
+    "pad_fill": true,
+    "pad_numbers": true,
+    "ratsnest_curved": false,
+    "ratsnest_footprint": true,
+    "ratsnest_global": true,
+    "rotation_angle": 900,
+    "show_page_borders": true,
+    "text_fill": true,
+    "track_clearance_mode": 2,
+    "track_fill": true,
+    "via_fill": true,
+    "zone_mode": 0
+  },
+  "place_file": {
+    "excludeTH": false,
+    "file_format": 0,
+    "file_options": 0,
+    "include_board_edge": false,
+    "negate_xcoord": false,
+    "onlySMD": false,
+    "output_directory": "",
+    "units": 1,
+    "use_place_file_origin": true
+  },
+  "plot": {
+    "all_layers_on_one_page": 1,
+    "check_zones_before_plotting": true,
+    "edgecut_on_all_layers": true,
+    "fine_scale_x": 0.0,
+    "fine_scale_y": 0.0,
+    "line_width": 0.1,
+    "mirror": false,
+    "pads_drill_mode": 2,
+    "ps_fine_width_adjust": 0.0
+  },
+  "printing": {
+    "background": false,
+    "color_theme": "",
+    "layers": [],
+    "monochrome": false,
+    "scale": 0.0,
+    "title_block": true,
+    "use_theme": false
+  },
+  "reannotate_dialog": {
+    "annotate_back_prefix": "",
+    "annotate_back_refdes_start": "",
+    "annotate_choice": 0,
+    "annotate_exclude_list": "",
+    "annotate_exclude_locked": false,
+    "annotate_front_prefix": "",
+    "annotate_front_refdes_start": "1",
+    "annotate_grid_index": 0,
+    "annotate_remove_back_prefix": false,
+    "annotate_remove_front_prefix": false,
+    "annotate_report_file_name": "",
+    "annotate_report_severity": 0,
+    "annotate_sort_code": 0,
+    "annotate_sort_on_modules": true
+  },
+  "system": {
+    "file_history": [
+      "/github/workspace/src/cp3/panel/panel.kicad_pcb",
+      "/github/workspace/content/equalizer/main/main.kicad_pcb"
+    ],
+    "first_run_shown": true,
+    "last_footprint3d_dir": "",
+    "last_footprint_lib_dir": "/github/workspace/lib/footprints",
+    "last_imperial_units": 0,
+    "last_metric_units": 1,
+    "max_undo_items": 0,
+    "units": 1
+  },
+  "tools": {
+    "pns": {
+      "auto_posture": true,
+      "can_violate_drc": false,
+      "corner_mode": 0,
+      "effort": 1,
+      "fix_all_segments": false,
+      "follow_mouse": true,
+      "free_angle_mode": false,
+      "jump_over_obstacles": false,
+      "meta": {
+        "filename": "pns",
+        "version": 0
+      },
+      "mode": 2,
+      "optimize_dragged_track": false,
+      "remove_loops": true,
+      "shove_iteration_limit": 250,
+      "shove_time_limit": 1000,
+      "shove_vias": true,
+      "smart_pads": true,
+      "smooth_dragged_segments": true,
+      "snap_to_pads": false,
+      "snap_to_tracks": false,
+      "start_diagonal": false,
+      "suggest_finish": false,
+      "via_force_prop_iteration_limit": 40,
+      "walkaround_hug_length_threshold": 1.5,
+      "walkaround_iteration_limit": 50
+    }
+  },
+  "window": {
+    "cursor": {
+      "always_show_cursor": true,
+      "fullscreen_cursor": false
+    },
+    "display": 0,
+    "footprint_text_shown_columns": "0 1 2 3 4 5 6",
+    "grid": {
+      "axes_enabled": false,
+      "fast_grid_1": 0,
+      "fast_grid_2": 0,
+      "last_size": 1,
+      "line_width": 1.0,
+      "min_spacing": 10.0,
+      "show": true,
+      "sizes": [
+        "1000 mil",
+        "500 mil",
+        "250 mil",
+        "200 mil",
+        "100 mil",
+        "50 mil",
+        "25 mil",
+        "20 mil",
+        "10 mil",
+        "5 mil",
+        "2 mil",
+        "1 mil",
+        "5.0 mm",
+        "2.5 mm",
+        "1.0 mm",
+        "0.5 mm",
+        "0.25 mm",
+        "0.2 mm",
+        "0.1 mm",
+        "0.05 mm",
+        "0.025 mm",
+        "0.01 mm"
+      ],
+      "snap": 0,
+      "style": 0,
+      "user_grid_x": "0.254",
+      "user_grid_y": "0.254"
+    },
+    "maximized": true,
+    "mru_path": "/github/workspace",
+    "perspective": "layout2|name=InfoBar;caption=;state=131454;dir=1;layer=1;row=0;pos=0;prop=100000;bestw=20;besth=30;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=MainToolbar;caption=;state=139632;dir=1;layer=6;row=0;pos=0;prop=100000;bestw=1208;besth=38;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=AuxToolbar;caption=;state=139644;dir=1;layer=5;row=0;pos=0;prop=100000;bestw=860;besth=38;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=MsgPanel;caption=;state=131452;dir=3;layer=6;row=0;pos=0;prop=100000;bestw=400;besth=38;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=OptToolbar;caption=;state=139596;dir=4;layer=3;row=0;pos=0;prop=100000;bestw=34;besth=638;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=ToolsToolbar;caption=;state=139596;dir=2;layer=3;row=0;pos=0;prop=100000;bestw=34;besth=675;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=LayersManager;caption=Appearance;state=1532;dir=2;layer=4;row=0;pos=0;prop=100000;bestw=180;besth=-1;minw=180;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=SelectionFilter;caption=Selection Filter;state=1532;dir=2;layer=4;row=0;pos=1;prop=0;bestw=180;besth=-1;minw=180;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=PropertiesManager;caption=Properties;state=1534;dir=4;layer=5;row=0;pos=0;prop=100000;bestw=300;besth=-1;minw=240;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=DrawFrame;caption=;state=1020;dir=5;layer=0;row=0;pos=0;prop=100000;bestw=400;besth=188;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=Search;caption=Search;state=2098686;dir=3;layer=0;row=0;pos=0;prop=100000;bestw=180;besth=-1;minw=180;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=480;floath=200|dock_size(1,6,0)=38|dock_size(1,5,0)=38|dock_size(3,6,0)=38|dock_size(4,3,0)=34|dock_size(2,3,0)=34|dock_size(2,4,0)=180|dock_size(5,0,0)=402|",
+    "pos_x": 0,
+    "pos_y": 0,
+    "size_x": 1920,
+    "size_y": 1035,
+    "zoom_factors": [
+      0.13,
+      0.22,
+      0.35,
+      0.6,
+      1.0,
+      1.5,
+      2.2,
+      3.5,
+      5.0,
+      8.0,
+      13.0,
+      20.0,
+      35.0,
+      50.0,
+      80.0,
+      130.0,
+      220.0,
+      300.0
+    ]
+  },
+  "zones": {
+    "net_sort_mode": -1
+  }
+}

@@ -1,0 +1,174 @@
+{
+  "appearance": {
+    "color_theme": "user_footprints"
+  },
+  "aui": {
+    "appearance_panel_tab": 0,
+    "right_panel_width": -1,
+    "show_layer_manager": true
+  },
+  "color_picker": {
+    "default_tab": 0
+  },
+  "cross_probing": {
+    "auto_highlight": true,
+    "center_on_items": true,
+    "on_selection": true,
+    "zoom_to_fit": true
+  },
+  "design_settings": {
+    "copper_line_width": 0.19999999999999998,
+    "copper_text_italic": false,
+    "copper_text_size_h": 1.5,
+    "copper_text_size_v": 1.5,
+    "copper_text_thickness": 0.3,
+    "courtyard_line_width": 0.049999999999999996,
+    "default_footprint_text_items": [
+      [
+        "REF**",
+        true,
+        37
+      ],
+      [
+        "",
+        true,
+        49
+      ]
+    ],
+    "edge_line_width": 0.049999999999999996,
+    "fab_line_width": 0.09999999999999999,
+    "fab_text_italic": false,
+    "fab_text_size_h": 1.0,
+    "fab_text_size_v": 1.0,
+    "fab_text_thickness": 0.15,
+    "others_line_width": 0.09999999999999999,
+    "others_text_italic": false,
+    "others_text_size_h": 1.0,
+    "others_text_size_v": 1.0,
+    "others_text_thickness": 0.15,
+    "silk_line_width": 0.09999999999999999,
+    "silk_text_italic": false,
+    "silk_text_size_h": 1.0,
+    "silk_text_size_v": 1.0,
+    "silk_text_thickness": 0.09999999999999999
+  },
+  "editing": {
+    "fp_use_45_degree_limit": false,
+    "magnetic_graphics": true,
+    "magnetic_pads": 2,
+    "polar_coords": false,
+    "rotation_angle": 900,
+    "selection_filter": {
+      "dimensions": true,
+      "footprints": true,
+      "graphics": true,
+      "keepouts": true,
+      "lockedItems": false,
+      "otherItems": true,
+      "pads": true,
+      "text": true,
+      "tracks": true,
+      "vias": true,
+      "zones": true
+    }
+  },
+  "find_replace": {
+    "find_history": [],
+    "find_string": "",
+    "match_case": false,
+    "match_mode": 0,
+    "replace_history": [],
+    "replace_string": "",
+    "search_and_replace": false
+  },
+  "graphics": {
+    "canvas_type": 2,
+    "highlight_factor": 0.5,
+    "select_factor": 0.75
+  },
+  "lib_tree": {
+    "column_widths": null,
+    "columns": []
+  },
+  "meta": {
+    "version": 2
+  },
+  "pcb_display": {
+    "active_layer_preset": "",
+    "layer_presets": []
+  },
+  "printing": {
+    "background": false,
+    "color_theme": "",
+    "layers": [],
+    "monochrome": false,
+    "scale": 0.0,
+    "title_block": true,
+    "use_theme": false
+  },
+  "system": {
+    "file_history": [
+      "/github/workspace/content/equalizer/main/main.kicad_pcb"
+    ],
+    "first_run_shown": false,
+    "last_imperial_units": 0,
+    "last_import_export_path": "",
+    "last_metric_units": 1,
+    "max_undo_items": 0,
+    "units": 1
+  },
+  "window": {
+    "cursor": {
+      "always_show_cursor": true,
+      "fullscreen_cursor": false
+    },
+    "display": 0,
+    "footprint_text_shown_columns": "0 1 2 3 4 5 6",
+    "grid": {
+      "axes_enabled": false,
+      "fast_grid_1": 4,
+      "fast_grid_2": 5,
+      "last_size": 4,
+      "line_width": 1.0,
+      "min_spacing": 10.0,
+      "show": true,
+      "sizes": [
+        "1000 mil",
+        "500 mil",
+        "250 mil",
+        "200 mil",
+        "100 mil",
+        "50 mil",
+        "25 mil",
+        "20 mil",
+        "10 mil",
+        "5 mil",
+        "2 mil",
+        "1 mil",
+        "5.0 mm",
+        "2.5 mm",
+        "1.0 mm",
+        "0.5 mm",
+        "0.25 mm",
+        "0.2 mm",
+        "0.1 mm",
+        "0.05 mm",
+        "0.025 mm",
+        "0.01 mm"
+      ],
+      "snap": 0,
+      "style": 0,
+      "user_grid_x": "10 mil",
+      "user_grid_y": "10 mil"
+    },
+    "lib_width": 250,
+    "maximized": false,
+    "mru_path": "",
+    "perspective": "",
+    "pos_x": 0,
+    "pos_y": 0,
+    "size_x": 0,
+    "size_y": 0,
+    "zoom_factors": []
+  }
+}

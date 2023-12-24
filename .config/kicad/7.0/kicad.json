@@ -1,0 +1,125 @@
+{
+  "appearance": {
+    "color_theme": "_builtin_default",
+    "left_frame_width": 250
+  },
+  "color_picker": {
+    "default_tab": 0
+  },
+  "cross_probing": {
+    "auto_highlight": true,
+    "center_on_items": true,
+    "on_selection": true,
+    "zoom_to_fit": true
+  },
+  "find_replace": {
+    "find_history": [],
+    "find_string": "",
+    "match_case": false,
+    "match_mode": 0,
+    "replace_history": [],
+    "replace_string": "",
+    "search_and_replace": false
+  },
+  "graphics": {
+    "canvas_type": 1,
+    "highlight_factor": 0.5,
+    "select_factor": 0.75
+  },
+  "lib_tree": {
+    "column_widths": null,
+    "columns": []
+  },
+  "meta": {
+    "version": 0
+  },
+  "pcm": {
+    "check_for_updates": false,
+    "last_download_dir": "",
+    "lib_auto_add": true,
+    "lib_auto_remove": true,
+    "lib_prefix": "PCM_",
+    "repositories": [
+      {
+        "name": "KiCad official repository",
+        "url": "https://repository.kicad.org/repository.json"
+      }
+    ]
+  },
+  "printing": {
+    "background": false,
+    "color_theme": "",
+    "layers": [],
+    "monochrome": true,
+    "scale": 1.0,
+    "title_block": false,
+    "use_theme": false
+  },
+  "system": {
+    "check_for_updates": 1,
+    "file_history": [
+      "/github/workspace/src/cp3/panel/panel.kicad_pro",
+      "/github/workspace/content/equalizer/main/main.pro"
+    ],
+    "first_run_shown": false,
+    "last_imperial_units": 0,
+    "last_metric_units": 1,
+    "max_undo_items": 0,
+    "open_projects": [
+      "/github/workspace/src/cp3/panel/panel.kicad_pro"
+    ],
+    "units": 1
+  },
+  "window": {
+    "cursor": {
+      "always_show_cursor": true,
+      "fullscreen_cursor": false
+    },
+    "display": 0,
+    "grid": {
+      "axes_enabled": false,
+      "fast_grid_1": 4,
+      "fast_grid_2": 5,
+      "last_size": 4,
+      "line_width": 1.0,
+      "min_spacing": 10.0,
+      "show": true,
+      "sizes": [
+        "1000 mil",
+        "500 mil",
+        "250 mil",
+        "200 mil",
+        "100 mil",
+        "50 mil",
+        "25 mil",
+        "20 mil",
+        "10 mil",
+        "5 mil",
+        "2 mil",
+        "1 mil",
+        "5.0 mm",
+        "2.5 mm",
+        "1.0 mm",
+        "0.5 mm",
+        "0.25 mm",
+        "0.2 mm",
+        "0.1 mm",
+        "0.05 mm",
+        "0.025 mm",
+        "0.01 mm"
+      ],
+      "snap": 0,
+      "style": 0,
+      "user_grid_x": "10 mil",
+      "user_grid_y": "10 mil"
+    },
+    "maximized": true,
+    "mru_path": "/github/workspace/src/cp3/panel/",
+    "perspective": "layout2|name=MainToolbar;caption=;state=139644;dir=4;layer=2;row=0;pos=0;prop=100000;bestw=34;besth=227;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=ProjectTree;caption=Project Files;state=1532;dir=4;layer=1;row=0;pos=0;prop=100000;bestw=250;besth=-1;minw=250;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=Launcher;caption=Editors;state=508;dir=5;layer=0;row=0;pos=0;prop=100000;bestw=614;besth=560;minw=614;minh=560;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|dock_size(4,2,0)=34|dock_size(4,1,0)=250|dock_size(5,0,0)=614|",
+    "pos_x": 1119,
+    "pos_y": 0,
+    "size_x": 1096,
+    "size_y": 584,
+    "zoom_factors": []
+  }
+}

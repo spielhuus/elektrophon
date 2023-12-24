@@ -30,4 +30,6 @@ endif
 clean:
 	rm -rf $(MARKDOWN_TARGET_PATH)
 
+distclean: clean
+
 $(V).SILENT:

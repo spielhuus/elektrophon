@@ -38,7 +38,6 @@ endif
 	
 clean:
 	rm -rf $(MARKDOWN_TARGET_PATH)
-	rm -rf $(PYTHON_TARGET)
 
 distclean: clean
 	rm -rf __pycache__

@@ -198,7 +198,7 @@
   (lib (name MCU_Microchip_SAMD)(type Legacy)(uri ${KICAD_SYMBOL_DIR}/MCU_Microchip_SAMD.lib)(options "")(descr "Microchip SAMD microcontrollers"))
   (lib (name MCU_Microchip_SAME)(type Legacy)(uri ${KICAD_SYMBOL_DIR}/MCU_Microchip_SAME.lib)(options "")(descr "Microchip SAME microcontrollers"))
   (lib (name MCU_Microchip_SAML)(type Legacy)(uri ${KICAD_SYMBOL_DIR}/MCU_Microchip_SAML.lib)(options "")(descr "Microchip SAML microcontrollers"))
-  (lib (name elektrophon)(type Legacy)(uri /github/workspace/lib/kicad/elektrophon.lib)(options "")(descr ""))
+  (lib (name elektrophon)(type Legacy)(uri /github/workspace/lib/symbols/elektrophon.kicad_sym)(options "")(descr ""))
   (lib (name SMD)(type Legacy)(uri /github/workspace/lib/kicad/SMD.lib)(options "")(descr ""))
   (lib (name THT)(type Legacy)(uri /github/workspace/lib/kicad/THT.lib)(options "")(descr ""))
 )

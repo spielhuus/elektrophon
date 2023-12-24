@@ -1,0 +1,3 @@
+[submodule "themes/elektron-hugo"]
+	path = themes/elektron-hugo
+	url = https://github.com/spielhuus/elektron-hugo

@@ -1,0 +1,259 @@
+{
+  "annotation": {
+    "automatic": true,
+    "messages_filter": -1,
+    "method": 0,
+    "options": 0,
+    "recursive": true,
+    "scope": 0,
+    "sort_order": 0
+  },
+  "appearance": {
+    "color_theme": "_builtin_default",
+    "default_font": "KiCad Font",
+    "edit_label_height": -1,
+    "edit_label_visible_columns": "0 1 2 3 4 5 6 7",
+    "edit_label_width": -1,
+    "edit_sheet_height": -1,
+    "edit_sheet_visible_columns": "0 1 2 3 4 5 6 7",
+    "edit_sheet_width": -1,
+    "edit_symbol_height": -1,
+    "edit_symbol_visible_columns": "0 1 2 3 4 5 6 7",
+    "edit_symbol_width": -1,
+    "erc_severities": 24,
+    "footprint_preview": true,
+    "print_sheet_reference": true,
+    "show_erc_errors": true,
+    "show_erc_exclusions": false,
+    "show_erc_warnings": true,
+    "show_hidden_fields": false,
+    "show_hidden_pins": false,
+    "show_illegal_symbol_lib_dialog": true,
+    "show_page_limits": true,
+    "show_sexpr_file_convert_warning": true,
+    "show_sheet_filename_case_sensitivity_dialog": true
+  },
+  "aui": {
+    "hierarchy_panel_docked_width": -1,
+    "hierarchy_panel_float_height": -1,
+    "hierarchy_panel_float_width": -1,
+    "schematic_hierarchy_float": false,
+    "show_schematic_hierarchy": true
+  },
+  "autoplace_fields": {
+    "align_to_grid": true,
+    "allow_rejustify": true,
+    "enable": true
+  },
+  "bom": {
+    "plugins": [
+      {
+        "command": "",
+        "name": "bom_csv_grouped_extra",
+        "path": "bom_csv_grouped_extra.py"
+      },
+      {
+        "command": "",
+        "name": "bom_csv_grouped_by_value",
+        "path": "bom_csv_grouped_by_value.py"
+      },
+      {
+        "command": "",
+        "name": "bom_csv_grouped_by_value_with_fp",
+        "path": "bom_csv_grouped_by_value_with_fp.py"
+      }
+    ],
+    "selected_plugin": ""
+  },
+  "color_picker": {
+    "default_tab": 0
+  },
+  "cross_probing": {
+    "auto_highlight": true,
+    "center_on_items": true,
+    "on_selection": true,
+    "zoom_to_fit": true
+  },
+  "drawing": {
+    "auto_start_wires": true,
+    "default_bus_thickness": 12,
+    "default_junction_size": 36,
+    "default_line_thickness": 6,
+    "default_repeat_offset_x": 0,
+    "default_repeat_offset_y": 100,
+    "default_sheet_background_color": "rgba(0, 0, 0, 0.000)",
+    "default_sheet_border_color": "rgba(0, 0, 0, 0.000)",
+    "default_text_size": 50,
+    "default_wire_thickness": 6,
+    "field_names": "",
+    "junction_size_choice": 3,
+    "junction_size_mult_list": [
+      0.0,
+      1.7,
+      4.0,
+      6.0,
+      9.0,
+      12.0
+    ],
+    "line_mode": 1,
+    "pin_symbol_size": 25,
+    "repeat_label_increment": 1,
+    "text_offset_ratio": 0.08
+  },
+  "field_editor": {
+    "column_widths": {},
+    "fields_group_by": {},
+    "fields_show": {}
+  },
+  "find_replace": {
+    "find_history": [],
+    "find_string": "",
+    "match_case": false,
+    "match_mode": 0,
+    "replace_history": [],
+    "replace_references": false,
+    "replace_string": "",
+    "search_all_fields": false,
+    "search_all_pins": false,
+    "search_and_replace": false,
+    "search_current_sheet_only": false
+  },
+  "graphics": {
+    "canvas_type": 1,
+    "highlight_factor": 0.5,
+    "select_factor": 0.75
+  },
+  "input": {
+    "drag_is_move": false,
+    "esc_clears_net_highlight": true
+  },
+  "lib_tree": {
+    "column_widths": null,
+    "columns": []
+  },
+  "lib_view": {
+    "cmp_list_width": 150,
+    "lib_list_width": 150,
+    "show_pin_electrical_type": true,
+    "window": {
+      "display": 0,
+      "maximized": false,
+      "perspective": "",
+      "pos_x": 0,
+      "pos_y": 0,
+      "size_x": 500,
+      "size_y": 400
+    }
+  },
+  "meta": {
+    "version": 3
+  },
+  "netlist": {
+    "plugins": []
+  },
+  "page_settings": {
+    "export_comment1": false,
+    "export_comment2": false,
+    "export_comment3": false,
+    "export_comment4": false,
+    "export_comment5": false,
+    "export_comment6": false,
+    "export_comment7": false,
+    "export_comment8": false,
+    "export_comment9": false,
+    "export_company": false,
+    "export_date": false,
+    "export_paper": false,
+    "export_revision": false,
+    "export_title": false
+  },
+  "plot": {
+    "background_color": false,
+    "color": true,
+    "color_theme": "user",
+    "format": 0,
+    "frame_reference": true,
+    "hpgl_origin": 0,
+    "hpgl_paper_size": 0,
+    "hpgl_pen_size": 0.5,
+    "other_open_file_after_plot": false
+  },
+  "printing": {
+    "background": false,
+    "color_theme": "",
+    "layers": [],
+    "monochrome": true,
+    "scale": 1.0,
+    "title_block": false,
+    "use_theme": false
+  },
+  "selection": {
+    "draw_selected_children": true,
+    "fill_shapes": false,
+    "highlight_thickness": 2,
+    "select_pin_selects_symbol": false,
+    "thickness": 3
+  },
+  "simulator": {
+    "cursors_panel_height": 0,
+    "plot_panel_height": 0,
+    "plot_panel_width": 0,
+    "signal_panel_height": 0,
+    "white_background": false,
+    "window": {
+      "display": 0,
+      "maximized": false,
+      "perspective": "",
+      "pos_x": 0,
+      "pos_y": 0,
+      "size_x": 500,
+      "size_y": 400
+    }
+  },
+  "symbol_chooser": {
+    "height": -1,
+    "keep_symbol": false,
+    "place_all_units": true,
+    "sash_pos_h": -1,
+    "sash_pos_v": -1,
+    "width": -1
+  },
+  "system": {
+    "file_history": [],
+    "first_run_shown": false,
+    "last_imperial_units": 0,
+    "last_metric_units": 1,
+    "last_symbol_lib_dir": "/github/workspace/lib/symbols",
+    "max_undo_items": 0,
+    "never_show_rescue_dialog": false,
+    "units": 1
+  },
+  "window": {
+    "cursor": {
+      "always_show_cursor": true,
+      "fullscreen_cursor": false
+    },
+    "display": 0,
+    "grid": {
+      "axes_enabled": false,
+      "fast_grid_1": 1,
+      "fast_grid_2": 2,
+      "last_size": 1,
+      "line_width": 1.0,
+      "min_spacing": 10.0,
+      "show": true,
+      "snap": 0,
+      "style": 0,
+      "user_grid_x": "10 mil",
+      "user_grid_y": "10 mil"
+    },
+    "maximized": false,
+    "mru_path": "",
+    "perspective": "",
+    "pos_x": 0,
+    "pos_y": 0,
+    "size_x": 0,
+    "size_y": 0,
+    "zoom_factors": []
+  }
+}
