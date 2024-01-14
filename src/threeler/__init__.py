@@ -478,8 +478,12 @@ def schema_main():
     wire(draw)
 
     draw + Element("U6", "elektrophon:CA3280", value="AS3280", unit=4).at((30*2.54, 72*2.54))
+    draw + Nc().at("U6", "5")
     draw + Element("U7", "elektrophon:CA3280", value="AS3280", unit=4).at((35*2.54, 72*2.54))
+    draw + Nc().at("U7", "5")
     draw + Element("Q1", "elektrophon:AS395", value="AS395", unit=3).at((40*2.54, 72*2.54))
+    draw + Nc().at("Q1", "5")
+    draw + Nc().at("Q1", "1")
 
     #assign footprints
     draw.property("J1", "Footprint", "Connector_IDC:IDC-Header_2x05_P2.54mm_Vertical"); 

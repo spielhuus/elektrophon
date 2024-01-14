@@ -210,24 +210,24 @@ decouple_tl072(draw, "U3", ((29*2.54, 75*2.54)), "no")
 #decouple_tl072(draw, "U4", ((29*2.54, 75*2.54)), "no")
 
 #set the spice models
-draw.property("U[1..]", "Spice_Primitive", "X", 2); 
-draw.property("U[1..]", "Spice_Model", "TL072c", 2); 
-draw.property("Q[1..]", "Spice_Netlist_Enabled", "Y", 2); 
-draw.property("Q1", "Spice_Primitive", "X", 2); 
-draw.property("Q[2..]", "Spice_Primitive", "Q", 2); 
-draw.property("Q1", "Spice_Model", "THAT340", 2); 
-draw.property("Q[2..]", "Spice_Model", "BC556B", 2); 
-draw.property("Q2", "Spice_Model", "BC846B", 2); 
-draw.property("Q4", "Spice_Model", "BC846B", 2); 
-draw.property("Q5", "Spice_Model", "BC846B", 2); 
-draw.property("Q[8..9]", "Spice_Model", "BC846B", 2); 
-draw.property("D[1..]", "Spice_Netlist_Enabled", "Y", 2); 
-draw.property("D[1..]", "Spice_Primitive", "D", 2); 
-draw.property("D[1..]", "Spice_Model", "D1N4148", 2); 
-draw.property("D[1..]", "Spice_Node_Sequence", "2 1", 2); 
-draw.property("J1", "Spice_Primitive", "J", 2); 
-draw.property("J1", "Spice_Model", "J201", 2); 
-draw.property("J1", "Spice_Node_Sequence", "1 3 2", 2); 
+draw.property("U[1..]", "Spice_Primitive", "X"); 
+draw.property("U[1..]", "Spice_Model", "TL072c"); 
+draw.property("Q[1..]", "Spice_Netlist_Enabled", "Y"); 
+draw.property("Q1", "Spice_Primitive", "X"); 
+draw.property("Q[2..]", "Spice_Primitive", "Q"); 
+draw.property("Q1", "Spice_Model", "THAT340"); 
+draw.property("Q[2..]", "Spice_Model", "BC556B"); 
+draw.property("Q2", "Spice_Model", "BC846B"); 
+draw.property("Q4", "Spice_Model", "BC846B"); 
+draw.property("Q5", "Spice_Model", "BC846B"); 
+draw.property("Q[8..9]", "Spice_Model", "BC846B"); 
+draw.property("D[1..]", "Spice_Netlist_Enabled", "Y"); 
+draw.property("D[1..]", "Spice_Primitive", "D"); 
+draw.property("D[1..]", "Spice_Model", "D1N4148"); 
+draw.property("D[1..]", "Spice_Node_Sequence", "2 1"); 
+draw.property("J1", "Spice_Primitive", "J"); 
+draw.property("J1", "Spice_Model", "J201"); 
+draw.property("J1", "Spice_Node_Sequence", "1 3 2"); 
 
 circuit = draw.circuit(["../../lib/spice"])
 circuit.voltage("1", "+15V", "GND", "DC 15V")
@@ -426,24 +426,24 @@ decouple_tl072(draw, "U3", ((29*2.54, 75*2.54)), "no")
 decouple_tl072(draw, "U4", ((29*2.54, 75*2.54)), "no")
 
 #set the spice models
-draw.property("U[1..]", "Spice_Primitive", "X", 2); 
-draw.property("U[1..]", "Spice_Model", "TL072c", 2); 
-draw.property("Q[1..]", "Spice_Netlist_Enabled", "Y", 2); 
-draw.property("Q1", "Spice_Primitive", "X", 2); 
-draw.property("Q[2..]", "Spice_Primitive", "Q", 2); 
-draw.property("Q1", "Spice_Model", "THAT340", 2); 
-draw.property("Q[2..]", "Spice_Model", "BC556B", 2); 
-draw.property("Q2", "Spice_Model", "BC846B", 2); 
-draw.property("Q4", "Spice_Model", "BC846B", 2); 
-draw.property("Q5", "Spice_Model", "BC846B", 2); 
-draw.property("Q[8..9]", "Spice_Model", "BC846B", 2); 
-draw.property("D[1..]", "Spice_Netlist_Enabled", "Y", 2); 
-draw.property("D[1..]", "Spice_Primitive", "D", 2); 
-draw.property("D[1..]", "Spice_Model", "D1N4148", 2); 
-draw.property("D[1..]", "Spice_Node_Sequence", "2 1", 2); 
-draw.property("J1", "Spice_Primitive", "J", 2); 
-draw.property("J1", "Spice_Model", "J201", 2); 
-draw.property("J1", "Spice_Node_Sequence", "1 3 2", 2); 
+draw.property("U[1..]", "Spice_Primitive", "X"); 
+draw.property("U[1..]", "Spice_Model", "TL072c"); 
+draw.property("Q[1..]", "Spice_Netlist_Enabled", "Y"); 
+draw.property("Q1", "Spice_Primitive", "X"); 
+draw.property("Q[2..]", "Spice_Primitive", "Q"); 
+draw.property("Q1", "Spice_Model", "THAT340"); 
+draw.property("Q[2..]", "Spice_Model", "BC556B"); 
+draw.property("Q2", "Spice_Model", "BC846B"); 
+draw.property("Q4", "Spice_Model", "BC846B"); 
+draw.property("Q5", "Spice_Model", "BC846B"); 
+draw.property("Q[8..9]", "Spice_Model", "BC846B"); 
+draw.property("D[1..]", "Spice_Netlist_Enabled", "Y"); 
+draw.property("D[1..]", "Spice_Primitive", "D"); 
+draw.property("D[1..]", "Spice_Model", "D1N4148"); 
+draw.property("D[1..]", "Spice_Node_Sequence", "2 1"); 
+draw.property("J1", "Spice_Primitive", "J"); 
+draw.property("J1", "Spice_Model", "J201"); 
+draw.property("J1", "Spice_Node_Sequence", "1 3 2"); 
 
 circuit = draw.circuit(["../../lib/spice"])
 circuit.voltage("1", "+15V", "GND", "DC 15V")
