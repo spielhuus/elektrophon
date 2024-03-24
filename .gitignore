@@ -60,3 +60,5 @@ content/kraft/kraft/kraft.xml
 __pycache__
 www/resources/_gen
 .hugo_build.lock
+**/*kicad_prl
+**/*-backups/

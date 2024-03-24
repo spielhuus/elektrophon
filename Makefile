@@ -10,9 +10,11 @@ PYTHON = python3
 PIP = pip
 endif
 
+RUST_DEBUG=info
 debug ?=
 ifdef debug
   DEBUG=ELEKTRON_DEBUG=true
+  RUST_DEBUG=debug
 endif
 
 MAKEFILES=$(shell find src -type f -name "Makefile" -exec dirname "{}" \; | sed 's/ /\\ /g')
