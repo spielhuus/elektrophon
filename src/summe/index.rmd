@@ -27,7 +27,7 @@ references:
 ```{elektron, command="bom", input=["main"], group=TRUE, partlist="../../lib/partlist.yaml"}```
 ```{elektron, command="erc", input=["main"]}```
 ```{elektron, command="drc", input=["main"]}```
-```{elektron, command="schema", input=["main"], border=TRUE, theme="BlackWhite"}```
+```{elektron, command="schema", input=["main"], border=TRUE, theme="Kicad2020"}```
 ```{elektron, command="pcb", input=["main", "panel"], border=TRUE}```
 ```{elektron, command="gerber", input=["main", "panel"]}```
 ---

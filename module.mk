@@ -7,15 +7,16 @@ MARKDOWN_TARGET_PATH = ../../content/post/$(NAME)
 debug ?=
 ifdef debug
   DEBUG=ELEKTRON_DEBUG=true
+  RUST_LEVEL=debug
+else
+  RUST_LEVEL=info
 endif
 
 BUILD_DEPS ?=
 ifdef debug
  	BUILD_DEPS=true
-	RUST_LEVEL=debug
 else
  	BUILD_DEPS=false
-	RUST_LEVEL=info
 endif
 
 .PHONY: all help test doc clean

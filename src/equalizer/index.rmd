@@ -19,7 +19,7 @@ references:
 ```{elektron, command="drc", input=["main", "mount"]}```
 ```{elektron, command="schema", input=["main", "mount"], border=TRUE, theme="Kicad2000"}```
 ```{elektron, command="pcb", input=["main", "mount", "panel"], border=TRUE}```
-```{elektron, command="gerber", input=["main", "mount" "panel"]}```
+```{elektron, command="gerber", input=["main", "mount", "panel"]}```
 ---
 
 # Construction
