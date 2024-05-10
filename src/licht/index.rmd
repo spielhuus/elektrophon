@@ -40,7 +40,7 @@ from elektrophon import light
 
 draw = Draw(["/usr/share/kicad/symbols", "../../lib/symbols"])
 light(draw, "IN", "Green", (0, 0))
-draw.plot(scale=6, netlist=False, theme='BlackWhite')
+draw.plot(scale=2, netlist=False, theme='BlackWhite')
 ```
 
 For AC signals the simgle transistor driver comes in handy. It is built around the common base transistor amplifier. The Led can be connected to the collector of the transisitor. The current for the LED can be set with Rx and calculated using simple ohms law. The LED will only light up on the positive rail is above 0.7V.

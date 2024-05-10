@@ -8,7 +8,7 @@ tags:
 categories:
 - module
 title: "bass++"
-references: 
+references:
   - { description: "Thomas Henry: Bass++",
       title: "Birth of a Synth",
       url: "http://birthofasynth.com/Thomas_Henry/Pages/Bass_Plus.html" }
@@ -16,7 +16,7 @@ version: 0
 ```{elektron, command="bom", input=["main"], group=TRUE, partlist="../../lib/partlist.yaml"}```
 ```{elektron, command="erc", input=["main"]}```
 ```{elektron, command="drc", input=["main"]}```
-```{elektron, command="schema", input=["main"], border=TRUE, theme="Kicad2000"}```
+```{elektron, command="schema", input=["main"], border=FALSE, theme="Kicad2000"}```
 ```{elektron, command="pcb", input=["main", "panel"], border=TRUE}```
 ```{elektron, command="gerber", input=["main", "panel"]}```
 ---

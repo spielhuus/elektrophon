@@ -28,10 +28,9 @@ references:
 ```{elektron, command="pcb", input=["mount", "panel"], border=TRUE}```
 ```{elektron, command="drc", input=["mount"]}```
 ```{elektron, command="gerber", input=["mount", "panel"]}```
+```{elektron, command="bom", input=["main", "mount"], group=TRUE, partlist="../../lib/partlist.yaml"}```
 ---
 
-`` 
-`{elektron, command="bom", input=["main", "mount"], group=TRUE, partlist="../../lib/partlist.yaml"}```
 # theory
 
 ```{python echo=FALSE, results="hide", fig.align='center', fig.cap='Figure 2: Input Driver'}
@@ -249,7 +248,7 @@ simulation = Simulation(circuit)
 funktion = simulation.run()
 funktion['tran1']['time'] = [x * 1000 for x in funktion['tran1']['time']]
 
-draw.plot(scale=6, netlist=False, theme='BlackWhite')
+draw.plot(scale=1.2, netlist=False, theme='BlackWhite')
 ```
 
 ```{d3, element="tanh_triangle", x="time", y="gate,V(8)", data="funktion.tran1", width="600", height="400", fig.align='center', fig.cap="Figure 2: ADSR simulation", yLabel="Amplitude [V]", xLabel="Time [ms]"}```
@@ -465,7 +464,7 @@ simulation = Simulation(circuit)
 funktion = simulation.run()
 funktion['tran1']['time'] = [x * 1000 for x in funktion['tran1']['time']]
 
-draw.plot(scale=6, netlist=False, theme='BlackWhite')
+draw.plot(scale=1.2, netlist=False, theme='BlackWhite')
 ```
 # build
 

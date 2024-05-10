@@ -1,7 +1,7 @@
 (kicad_sch
   (version 20211123)
   (generator "elektron")
-  (uuid "7f5edc1b-ede4-438e-9c30-57b677c7ce2d")
+  (uuid "9b1f402e-5031-426d-b160-239f607d0f1a")
   (paper "A4")
   (title_block
     (title "pentode vca")

@@ -130,7 +130,7 @@ def schema_main():
     draw + Element("Q1", "elektrophon:THAT340", unit=5, value="THAT340",
                        Spice_Netlist_Enabled="Y",
                        Spice_Primitive="X",
-                       Spice_Model="THAT340").at((50*2.54, 50*2.54))
+                       Spice_Model="THAT340").at((50*2.54, 54*2.54))
     draw + Nc().at("Q1", "4")
     draw + Nc().at("Q1", "11")
 

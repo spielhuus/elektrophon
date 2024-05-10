@@ -7,7 +7,7 @@ tags:
 - grundlage
 categories:
 - article
-title: "das filter"
+title: "filter"
 references: 
   - { description: "EFM Synthesizers SEM type VCF",
       title: "VCF1f",
@@ -77,8 +77,11 @@ draw.pos((25.4, 25.4))
     + Label("HP")
     + Line().right().length(2.54).at(bp)
     + Label("BP")
+)
 
+print(draw.erc())
 
+(draw
     + Element("U2", "Amplifier_Operational:TL072", unit=2, 
               value="TL072", Spice_Primitive="X", Spice_Model="TL072c", on_schema="yes").at((60, 100))
     + Element("U1", "Amplifier_Operational:TL072", unit=3, 
@@ -91,9 +94,8 @@ draw.pos((25.4, 25.4))
     + Element("+15V", "power:+15V", value="+15V", on_schema="yes").at("U2", "8")
 )
 
-print(draw.erc())
 
-circuit = draw.circuit(['lib/spice'])
+circuit = draw.circuit(["../../lib/spice"])
 circuit.voltage("1", "+15V", "GND", "DC +15V")
 circuit.voltage("2", "-15V", "GND", "DC -15V")
 circuit.voltage("3", "IN", "GND", "DC 0.1V AC 0.1V")
@@ -105,7 +107,7 @@ ac dec 30 1 1meg
 simulation = Simulation(circuit)
 svf = simulation.run()
 
-draw.plot(scale=6, netlist=False, theme='BlackWhite')
+draw.plot(scale=2, netlist=False, theme='BlackWhite')
 ```
 
 ```{d3 element="svf_ac", x="frequency", y="bp,hp,lp", data="svf.ac1", width="600", height="400", fig.align="center", xType="scaleLog", fig.cap="Figure 7: State variable filter simulation" yLabel="Amplitude [V]", xLabel="Frequency [Hz]"}```
@@ -322,7 +324,7 @@ draw.pos((20*2.54, 40*2.54))
 )
 print(draw.erc())
 
-circuit = draw.circuit(['lib/spice'])
+circuit = draw.circuit(["../../lib/spice"])
 circuit.voltage("1", "+15V", "GND", "DC +15V")
 circuit.voltage("2", "-15V", "GND", "DC -15V")
 circuit.voltage("3", "IN", "GND", "AC 5V SIN(0 2.5V 1000)")
@@ -346,7 +348,7 @@ print(circuit)
 simulation = Simulation(circuit)
 sem = simulation.run()
 
-draw.plot(scale=6, netlist=True, theme='BlackWhite')
+draw.plot(scale=2, netlist=True, theme='BlackWhite')
 ```
 
 ```{d3 element="sem_ac", x="frequency", yRange="bp,hp,lp", data="sem.ac", width="600", height="400", fig.align="center", xType="scaleLog", fig.cap="Figure 7: State variable filter simulation" yLabel="Amplitude [V]", xLabel="Frequency [Hz]"}```

@@ -13,7 +13,7 @@ version: 0
 ```{elektron, command="erc", input=["main"], group=TRUE}```
 ```{elektron, command="drc", input=["main"], group=TRUE}```
 ```{elektron, command="schema", input=["main"], border=TRUE}```
-```{elektron, command="pcb", input=["main"], border=TRUE}```
+```{elektron, command="pcb", input=["main"], border=FALSE}```
 ```{elektron, command="gerber", input=["main"]}```
 ---
 
@@ -89,7 +89,7 @@ d.add(elm.Line("down"))
 d.add(elm.Line("left", l=d.unit/2, xy=JO4.tipswitch))
 d.add(elm.Dot())
 d.add(elm.Line("down", l=d.unit/2))
-S = d.add(dsp.Sum())  
+S = d.add(dsp.Sum())
 
 d.add(elm.Line( "down", xy=S.E, l=d.unit/2))
 d.add(elm.Line( "right", l=d.unit/2))
@@ -108,7 +108,7 @@ O = d.add(elm.Opamp( label='$U_1$'))
 
 d.add(elm.Line( "left", xy=O.in1, l=d.unit/8))
 R1 = d.add(elm.Resistor( "left", label='$R_1$'))
-d.add(logic.Dot())    
+d.add(logic.Dot())
 R2 = d.add(elm.Resistor( "down", label='$R_3$'))
 d.add(elm.Resistor( "down", label='$R_4$'))
 d.add(elm.Ground)
@@ -157,7 +157,7 @@ all channels are mixed to the out jack. when something is connected to the chann
 * turn the pots clockwise to adjust the volume.
 
 ## _attenuverter_
-* connect all or a single channel. 
+* connect all or a single channel.
 * when you turn the pot knob counter clockwise the signal is inverted.
 
 

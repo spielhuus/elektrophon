@@ -8,7 +8,7 @@ tags:
 categories:
 - module
 title: "hall"
-references: 
+references:
   - { description: "Care and Feeding of Spring Reverb Tanks",
       title: "Rod Elliott (ESP)",
       url: "https://sound-au.com/articles/reverb.htm" }
@@ -23,12 +23,12 @@ references:
       url: "http://j5d2v7d7.stackpathcdn.com/wp-content/uploads/2016/10/LCR-0202.pdf" }
 version: 1
 draft: False
-```{elektron, command="bom", input=["main", "mount"], group=TRUE, partlist="../../lib/partlist.yaml"}```
-```{elektron, command="erc", input=["main", "mount"]}```
-```{elektron, command="drc", input=["main", "mount"]}```
-```{elektron, command="schema", input=["main", "mount"], border=TRUE, theme="Mono"}```
-```{elektron, command="pcb", input=["main", "mount", "panel"], border=TRUE}```
-```{elektron, command="gerber", input=["main", "mount", "panel"]}```
+```{elektron command="bom" input=["main", "mount"] group=TRUE partlist="../../lib/partlist.yaml"}```
+```{elektron command="erc" input=["main", "mount"]}```
+```{elektron command="drc" input=["main", "mount"]}```
+```{elektron command="schema" input=["main", "mount"] border=TRUE theme="Mono"}```
+```{elektron command="pcb" input=["main", "mount", "panel"] border=FALSE}```
+```{elektron command="gerber" input=["main", "mount", "panel"]}```
 ---
 
 ```{latex echo=FALSE, fig.align='center', fig.cap='Figure 1: hall block diagram'}
@@ -40,14 +40,14 @@ draft: False
 \ctikzset{blocks/thickness=2,switches/thickness=1.5}
 \begin{circuitikz}[line width=2pt,scale=1.5,font=\sffamily,every node/.style={scale=1.5}]
 
-  \draw (0, 0) node[left] {IN} to (1,0) 
+  \draw (0, 0) node[left] {IN} to (1,0)
     node[adder,anchor=west](fb) {};
 
   \draw (fb.east)
     to[short, -] ++(0.5,0)
     to [amp] ++(2,0)
     to [spring,label=spring tank] ++(2,0)
-    to[amp,label] ++(2,0) 
+    to[amp,label] ++(2,0)
     to [bandpass,label=baxandal] ++(2,0) to ++(1,0)
     node[adder,anchor=west](mix) {};
 
@@ -57,7 +57,7 @@ draft: False
 
   \draw (fb.south) to[short, -] ++(0,-1)
     node[spdt,rotate=180,anchor=out 2](Sw4){};
-    
+
   \draw (Sw4.in) to [short, i<=$feedback$] ++(8,0)
     to [short, -*] ++(0,1.8);
 
@@ -89,10 +89,10 @@ input(draw)
 compressor(draw)
 drive(draw)
 
-draw.plot(scale=6, netlist=False, theme='BlackWhite')
+draw.plot(scale=2, netlist=False, theme='BlackWhite')
 ```
 
-Eliot suggests adding a [compressor](https://sound-au.com/articles/reverb.htm#s5) before the driver. This compressor is a really easy build. For the vactrol a cheap Chinese one is used. The Chinese clones of the VTL vactrols are not very good. But the [LCR-0202](http://j5d2v7d7.stackpathcdn.com/wp-content/uploads/2016/10/LCR-0202.pdf) seems to be a good product. Although the lead spacing differs with each part. Also, original VTL or homemade vactrols can be used. 
+Eliot suggests adding a [compressor](https://sound-au.com/articles/reverb.htm#s5) before the driver. This compressor is a really easy build. For the vactrol a cheap Chinese one is used. The Chinese clones of the VTL vactrols are not very good. But the [LCR-0202](http://j5d2v7d7.stackpathcdn.com/wp-content/uploads/2016/10/LCR-0202.pdf) seems to be a good product. Although the lead spacing differs with each part. Also, original VTL or homemade vactrols can be used.
 
 ```{python echo=FALSE, results="hide", fig.align='center', fig.cap='Figure 3: Recovery and Tone Control'}
 import sys
@@ -105,7 +105,7 @@ draw = Draw(["/usr/share/kicad/symbols", "lib/symbols"])
 recover(draw)
 baxandal(draw)
 
-draw.plot(scale=6, netlist=False, theme='BlackWhite')
+draw.plot(scale=2, netlist=False, theme='BlackWhite')
 ```
 
 The [recovery](https://sound-au.com/articles/reverb.htm#s2) circuit is also taken from the Eliot Sound System article. At the output there is a Baxandal tone control. The tone control allows independent control of the bass and treble response. The filter response is configurable with the potentiometers. This is a classic and really clever setup. There is a very good [article](https://learnabout-electronics.org/Amplifiers/amplifiers42.php) that explains how it works.

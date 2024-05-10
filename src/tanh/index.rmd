@@ -17,9 +17,6 @@ version: 0
 
 # transistor distortion
 
-
-
-
 ```{python echo=FALSE, results="hide", fig.align="center", fig.cap="Figure 3: Long tailed pair"}
 from elektron import Circuit, Draw, Element, Label, Line, Dot, Simulation, R, Gnd
 
@@ -107,7 +104,7 @@ draw = (Draw(["/usr/share/kicad/symbols"])
   + Element("-15V", "power:-15V", value="-15V", on_schema="no").at("U1", "4")
 )
 
-circuit = draw.circuit(["lib/spice"])
+circuit = draw.circuit(["../../lib/spice"])
 circuit.voltage("1", "+15V", "GND", "DC 15V")
 circuit.voltage("2", "-15V", "GND", "DC -15V")
 circuit.voltage("3", "X", "GND", "5V PULSE(5V -5V 0 10m 10m 0.01m 20m)")
@@ -132,7 +129,7 @@ tanh = simulation.run()
 
 print(circuit)
 
-draw.plot(scale=6, theme='BlackWhite')
+draw.plot(scale=2, theme='BlackWhite')
 ```
   let voltage = @V3[DC]
 *  show voltage
@@ -144,7 +141,7 @@ In this typical vca configuration, the audio signal is applied to the transistor
 
 
 ```{python echo=FALSE, results="hide", fig.align="center", fig.cap="Figure 3: Long tailed pair"}
-circuit = draw.circuit(["lib/spice"])
+circuit = draw.circuit(["../../lib/spice"])
 circuit.voltage("1", "+15V", "GND", "DC 15V")
 circuit.voltage("2", "-15V", "GND", "DC -15V")
 circuit.voltage("3", "X", "GND", "5V PULSE(5V -5V 0 0m 20m 0.01m 20m)")
@@ -169,7 +166,7 @@ tanh = simulation.run()
 
 print(circuit)
 
-draw.plot(scale=6, theme='BlackWhite')
+draw.plot(scale=2, theme='BlackWhite')
 ```
   let voltage = @V3[DC]
 *  show voltage
@@ -180,7 +177,7 @@ In this typical vca configuration, the audio signal is applied to the transistor
 ```{d3, element="tanh_saw", x="time", y="x", yRange="out", data="tanh.tran", width="600", height="400", fig.align='center', fig.cap="Figure 4: long tailed pair simulation."}```
 
 ```{python echo=FALSE, results="hide", fig.align="center", fig.cap="Figure 3: Long tailed pair"}
-circuit = draw.circuit(["lib/spice"])
+circuit = draw.circuit(["../../lib/spice"])
 circuit.voltage("1", "+15V", "GND", "DC 15V")
 circuit.voltage("2", "-15V", "GND", "DC -15V")
 circuit.voltage("3", "X", "GND", "SIN(0, 5V, 440)")
@@ -205,7 +202,7 @@ tanh = simulation.run()
 
 print(circuit)
 
-draw.plot(scale=6, theme='BlackWhite')
+draw.plot(scale=2, theme='BlackWhite')
 ```
   let voltage = @V3[DC]
 *  show voltage

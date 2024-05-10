@@ -140,7 +140,7 @@ end
 simulation = Simulation(circuit)
 overdrive = simulation.run()
 
-draw.plot(scale=6)
+draw.plot(scale=2)
 ```
 
 The DOD is a very simple circuits that uses some overdive but mainly diode clipping. Such circuits are very common. There are variations in the types and wiring of the diodes. One example is the Batter Acid.
@@ -227,7 +227,7 @@ end
 simulation = Simulation(circuit)
 diode = simulation.run()
 
-draw.plot(scale=6, theme='BlackWhite', netlist=True)
+draw.plot(scale=2, theme='BlackWhite', netlist=True)
 ```
 
 The DOD is a very simple circuits that uses some overdive but mainly diode clipping. Such circuits are very common. There are variations in the tpes and wiring of the diodes. One example is the Batter Acid.
@@ -342,7 +342,7 @@ print(circuit)
 simulation = Simulation(circuit)
 fb_diode = simulation.run()
 
-draw.plot(scale=6, theme='BlackWhite')
+draw.plot(scale=2, theme='BlackWhite')
 ```
 
 The DOD is a very simple circuits that uses some overdive but mainly diode clipping. Such circuits are very common. There are variations in the tpes and wiring of the diodes. One example is the Batter Acid.
@@ -399,7 +399,7 @@ print(circuit)
 simulation = Simulation(circuit)
 gyrator_ac = simulation.ac("100", "200000", 10, "dec")
 
-draw.plot(scale=6, theme='BlackWhite', netlist=True)
+draw.plot(scale=2, theme='BlackWhite', netlist=True)
 ```
 alterparam potentiometer value = 50k
 
@@ -423,7 +423,7 @@ draw = (Draw(["/usr/share/kicad/symbols"])
     + Element("U1", "Amplifier_Operational:TL072", value="TL072", unit=2).anchor(5).mirror('x')
 )
 
-draw.plot(scale=6, theme='BlackWhite')
+draw.plot(scale=2, theme='BlackWhite')
 ```
 
 # shin ey
@@ -550,7 +550,7 @@ print(circuit)
 simulation = Simulation(circuit)
 shiney = simulation.run()
 
-draw.plot(scale=6, theme='BlackWhite')
+draw.plot(scale=2, theme='BlackWhite')
 ```
 
 ```{d3 element="shiney", x="time", y="in", yRange="out", data="shiney.tran", width="600", height="400", fig.align='center', fig.cap='Figure 3: Shin-Ey'}```
@@ -592,7 +592,7 @@ simulation = Simulation(circuit)
 surprise_in = simulation.ac("100", "20000", 10, "dec")
 print(surprise_in)
 
-draw.plot(scale=6, theme='BlackWhite', netlist=True)
+draw.plot(scale=2, theme='BlackWhite', netlist=True)
 ```
 alterparam potentiometer value = 50k
 
@@ -757,7 +757,7 @@ print(circuit)
 simulation = Simulation(circuit)
 surprise = simulation.run()
 
-draw.plot(scale=6, theme='BlackWhite', netlist=True)
+draw.plot(scale=2, theme='BlackWhite', netlist=True)
 ```
 alterparam potentiometer value = 50k
 
@@ -795,7 +795,7 @@ print(circuit)
 simulation = Simulation(circuit)
 surprise_in = simulation.ac("100", "200000", 10, "dec")
 
-draw.plot(scale=6, theme='BlackWhite', netlist=True)
+draw.plot(scale=2, theme='BlackWhite', netlist=True)
 ```
 
 ```{d3 element="trash_metal", x="frequency", y="out", data="surprise_in", width="600", height="400", fig.align='center', fig.cap='Figure 3: Trash Metal equalizer', xType="scaleLog"}```

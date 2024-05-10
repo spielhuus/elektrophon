@@ -8,7 +8,7 @@ tags:
 categories:
 - module
 title: "pentode vca"
-references: 
+references:
   - { description: "CGS tube VCA/timbral gate",
       title: "CGS65",
       url: "https://sdiy.info/wiki/CGS_tube_VCA/timbral_gate" }
@@ -23,12 +23,12 @@ references:
       url: "/1J24B_DB-RU.pdf" }
 version: 1
 draft: False
-```{elektron, command="bom", input=["main"], group=TRUE, partlist="../../lib/partlist.yaml"}```
-```{elektron, command="erc", input=["main"]}```
-```{elektron, command="drc", input=["main"]}```
-```{elektron, command="schema", input=["main"], border=TRUE, theme="Kicad2000"}```
-```{elektron, command="pcb", input=["main", "panel"], border=TRUE}```
-```{elektron, command="gerber", input=["main", "panel"]}```
+```{elektron command="bom" input=["main"] group=TRUE partlist="../../lib/partlist.yaml"}```
+```{elektron command="erc" input=["main"]}```
+```{elektron command="drc" input=["main"]}```
+```{elektron command="schema" input=["main"] border=TRUE theme="Kicad2000"}```
+```{elektron command="pcb" input=["main", "panel"] border=TRUE}```
+```{elektron command="gerber" input=["main", "panel"]}```
 ---
 
 # Description
@@ -47,7 +47,7 @@ draw.pos((9*2.54, 3*25.4))
 cv(draw)
 output(draw)
 
-draw.plot(scale=6, netlist=False, theme='BlackWhite')
+draw.plot(scale=1.2, netlist=False, theme='BlackWhite')
 ```
 
 The basic schematic is very simple. The tube is used like a common emmiter amplifier. There is a input and output buffer. And a control section. The selection of the opamp in the control section is on purpose. This opamp was chosen on purpose, because of its narrow bandwidth.
@@ -69,7 +69,7 @@ The basic schematic is very simple. The tube is used like a common emmiter ampli
 2) Turn the feedback, CV and Gain potentiometer off.
 3) Adjust RV3 until you hear nothing at out.
 
-## calibrate clean/distortion 
+## calibrate clean/distortion
 
 The clean potentiometer is setting the offset of the signal the distortion signal controls the wave folding.
 

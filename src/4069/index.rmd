@@ -101,7 +101,7 @@ draw = (Draw(["/usr/share/kicad/symbols"])
   + Element("+5V", "power:+5V", value="+5V", on_schema=False).at("U1", "14")
   + Element("GND", "power:GND", value="GND", on_schema=False).at("U1", "7"))
 
-circuit = draw.circuit(["lib/spice"])
+circuit = draw.circuit(["../../lib/spice"])
 circuit.voltage("1", "+5V", "GND", "DC 5V")
 circuit.voltage("2", "IN", "GND", "DC 5 AC 2.5V SIN(0 2.5V 100)")
 circuit.control('''let r_act = 100k
@@ -163,7 +163,7 @@ draw = (Draw(["/usr/share/kicad/symbols"])
   + Element("+5V", "power:+5V", value="+5V", on_schema=False).at("U1", "14")
   + Element("GND", "power:GND", value="GND", on_schema=False).at("U1", "7"))
 
-circuit = draw.circuit(["lib/spice"])
+circuit = draw.circuit(["../../lib/spice"])
 circuit.voltage("1", "+5V", "GND", "DC 5V")
 circuit.voltage("2", "IN1", "GND", "DC 5 AC 2.5V SIN(0 2.5V 500)")
 circuit.voltage("3", "IN2", "GND", "DC 5 AC 2.5V SIN(0 2.5V 1k)")
@@ -213,7 +213,7 @@ draw = (Draw(["/usr/share/kicad/symbols"])
   + Element("+5V", "power:+5V", value="+5V", on_schema=False).at("U1", "14")
   + Element("GND", "power:GND", value="GND", on_schema=False).at("U1", "7"))
 
-circuit = draw.circuit(["lib/spice"])
+circuit = draw.circuit(["../../lib/spice"])
 circuit.voltage("1", "+5V", "GND", "DC 5V")
 circuit.voltage("2", "IN", "GND", "AC 5V SIN(0 5V 500)")
 circuit.control('''
@@ -315,7 +315,7 @@ draw = (Draw(["/usr/share/kicad/symbols"])
   + Element("GND", "power:GND", value="GND", unit=1, on_schema="no").at("U4", "7")
   + Element("+5V", "power:+5V", value="+5V", unit=1, on_schema="no").at("U4", "14"))
 
-circuit = draw.circuit(["lib/spice"])
+circuit = draw.circuit(["../../lib/spice"])
 circuit.voltage("1", "+5V", "GND", "DC 15V")
 circuit.voltage("2", "IN", "GND", "AC 5V SIN(0 2V 1k)")
 circuit.control('''
@@ -433,7 +433,7 @@ draw = (Draw(["/usr/share/kicad/symbols"])
   + Element("GND", "power:GND", value="GND", unit=1, on_schema="no").at("U4", "7")
   + Element("+5V", "power:+5V", value="+5V", unit=1, on_schema="no").at("U4", "14"))
 
-circuit = draw.circuit(["lib/spice"])
+circuit = draw.circuit(["../../lib/spice"])
 circuit.voltage("1", "+5V", "GND", "DC 15V")
 circuit.voltage("2", "IN", "GND", "AC 5V SIN(0 5V 1k)")
 circuit.control('''

@@ -12,7 +12,7 @@ tags:
 - module
 title: "kraft"
 version: 0
-references: 
+references:
   - { description: "Wall Wart Power Supply (+/-9V to +/-15V)",
       title: "MFOS",
       url: "http://musicfromouterspace.com/analogsynth_new/WALLWARTSUPPLY/WALLWARTSUPPLY.php" }
@@ -20,18 +20,18 @@ references:
 ```{elektron, command="erc", input=["kraft", "mount"]}```
 ```{elektron, command="drc", input=["kraft", "mount"]}```
 ```{elektron, command="schema", input=["kraft", "mount"], border=TRUE}```
-```{elektron, command="pcb", input=["kraft", "mount", "panel"], border=TRUE} ```
+```{elektron, command="pcb", input=["kraft", "mount", "panel"], border=FALSE} ```
 ```{elektron, command="gerber", input=["kraft", "mount", "panel"]}```
 ---
 
 # construction
 
-The circuit is very simple. The 15AC input is half bridge rectified. The positive half is providing the +15V, the negative the -15V. The capacitors remove the ripple and the regulators provide a clean DC voltage. The 5V regulator circuit is taken directly from the datasheet. The 5V should not be used for audio circuits. It is meant to drive LED's and as input for regulators providing the power for a microchip. 
+The circuit is very simple. The 15AC input is half bridge rectified. The positive half is providing the +15V, the negative the -15V. The capacitors remove the ripple and the regulators provide a clean DC voltage. The 5V regulator circuit is taken directly from the datasheet. The 5V should not be used for audio circuits. It is meant to drive LED's and as input for regulators providing the power for a microchip.
 
 ```{python echo=FALSE, output="hide", fig.align="center", fig.cap="Figure 1: Kraft Schematic"}
 from elektron import Circuit, Draw, Element, Label, Line, Dot, Simulation
 
-draw = (Draw(["../../lib/symbols", "/usr/share/kicad/symbols"])  
+draw = (Draw(["../../lib/symbols", "/usr/share/kicad/symbols"])
   + Element("V1", "elektrophon:AC", value="15V")
   + Line().at("V1", "2").up().length(5*2.54)
   + Line().right().length(3*2.54)
@@ -127,10 +127,10 @@ draw = (Draw(["../../lib/symbols", "/usr/share/kicad/symbols"])
   + Line().toy("V1", "1")
 )
 
-draw.plot(scale=6, theme='BlackWhite')
+draw.plot(scale=2, theme='BlackWhite')
 ```
 
-Ribbon cables and IDC connectors are used to connect the modules. The IDC connectors are 10 pins in 2 rows and a spacing of 2.54mm. The pin configuration does not follow any standard. It is not possible to connect any other module to this power supply. 
+Ribbon cables and IDC connectors are used to connect the modules. The IDC connectors are 10 pins in 2 rows and a spacing of 2.54mm. The pin configuration does not follow any standard. It is not possible to connect any other module to this power supply.
 
 ```{latex echo=FALSE, fig.ext='svg',fig.width="3", fig.align="center", fig.cap="Figure 2: Ribbon cable connector."}
 \documentclass[border=2mm]{standalone}
@@ -144,11 +144,11 @@ Ribbon cables and IDC connectors are used to connect the modules. The IDC connec
 \begin{tikzpicture}[scale=3]
 
 \fontsize{0.4cm}{0.4cm}\selectfont \sffamily
-\draw[black,thick] (0,0) -- (0,20.32mm) -- 
+\draw[black,thick] (0,0) -- (0,20.32mm) --
 			  		 (8.7mm,20.32mm) -- (8.7mm,0) -- (0,0);
-\draw[black,thick] (1.16mm,1.16mm) -- (1.16mm,19.16mm) -- 
+\draw[black,thick] (1.16mm,1.16mm) -- (1.16mm,19.16mm) --
 			  		 (7.54mm,19.16mm) -- (7.54mm,1.16mm) -- (1.16mm,1.16mm);
-\draw[black,thick, fill = white] (0mm,7.91mm) -- (0mm,12.41mm) [black] -- 
+\draw[black,thick, fill = white] (0mm,7.91mm) -- (0mm,12.41mm) [black] --
 			  		  (1.16mm,12.41mm) -- (1.16mm,7.91mm) -- (0mm,7.91mm);
 
 \foreach \x in {0mm,2.54mm}
@@ -184,4 +184,4 @@ In the picuture above you can see how the banana plugs are mounted. Of course yo
 # usage
 
 
-Plugin the Wall-Wart connectors to the kraft barrel sockets. Be careful and don't mix the inputs up, both connectors have the same size. The modules are connected with ribbon cables, use one socket per module. 
+Plugin the Wall-Wart connectors to the kraft barrel sockets. Be careful and don't mix the inputs up, both connectors have the same size. The modules are connected with ribbon cables, use one socket per module.

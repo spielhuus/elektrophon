@@ -177,7 +177,7 @@ pan1(draw)
 
 print(draw.erc())
 
-circuit = draw.circuit(['lib/spice'])
+circuit = draw.circuit(['../../lib/spice'])
 circuit.voltage("1", "+15V", "GND", "DC +15V")
 circuit.voltage("2", "-15V", "GND", "DC -15V")
 circuit.voltage("3", "CV1", "GND", "DC 10V")
@@ -191,7 +191,7 @@ tran 1us 10ms
 simulation = Simulation(circuit)
 vco = simulation.run()
 
-draw.plot(scale=6, netlist=False, theme='BlackWhite')
+draw.plot(scale=2, netlist=False, theme='BlackWhite')
 ```
 
 ```{d3, element="vco", x="time", y="triangle_1,square_1", data="vco.tran1", width="600", height="400", fig.align='center', fig.cap="Figure 2: VCO Outputs"}```

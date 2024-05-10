@@ -7,7 +7,7 @@ tags:
 - grundlage
 categories:
 - article
-title: "LM13700 VCO"
+title: "LM13700_VCO"
 references: 
   - { description: "OTA VCO",
       title: "AndrewF",
@@ -274,7 +274,7 @@ oscilator1(draw)
 
 print(draw.erc())
 
-circuit = draw.circuit(['lib/spice'])
+circuit = draw.circuit(['../../lib/spice'])
 circuit.voltage("1", "+15V", "GND", "DC +15V")
 circuit.voltage("2", "-15V", "GND", "DC -15V")
 circuit.voltage("3", "CV1", "GND", "DC 10V")

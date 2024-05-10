@@ -8,7 +8,7 @@ tags:
 categories:
 - module
 title: "threeler"
-references: 
+references:
   - { description: "A third-order VCF with lots of character, even capable of multiphonic and chaotic oscillations.",
       title: "Ian Fritz",
       url: "https://ijfritz.byethost4.com/sy_cir17_threeler.htm" }
@@ -21,7 +21,7 @@ draft: True
 ```{elektron, command="erc", input=["main", "mount"]}```
 ```{elektron, command="drc", input=["main", "mount", "panel"]}```
 ```{elektron, command="schema", input=["main", "mount"], border=TRUE, theme="Kicad2000"}```
-```{elektron, command="pcb", input=["main", "mount", "panel"]}```
+```{elektron, command="pcb", input=["main", "mount", "panel"] border=FALSE}```
 ```{elektron, command="gerber", input=["main", "mount", "panel"]}```
 ---
 
@@ -36,7 +36,7 @@ from threeler import input, filters, cv, res, wire
 
 draw = Draw(["/usr/share/kicad/symbols", "../../lib/symbols"])
 
-#input 
+#input
 draw.pos((10*2.54, 28*2.54))
 input(draw)
 filters(draw)

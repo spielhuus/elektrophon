@@ -8,7 +8,7 @@ tags:
 categories:
 - module
 title: "tiefpass"
-references: 
+references:
   - { description: "Care and Feeding of Spring Reverb Tanks",
       title: "Rod Elliott (ESP)",
       url: "https://sound-au.com/articles/reverb.htm" }
@@ -22,11 +22,11 @@ references:
       title: "LCR-0202",
       url: "http://j5d2v7d7.stackpathcdn.com/wp-content/uploads/2016/10/LCR-0202.pdf" }
 version: 0
-```{elektron, command="bom", input=["main", "mount"], group=TRUE, partlist="lib/partlist.yaml"}```
+```{elektron, command="bom", input=["main", "mount"], group=TRUE, partlist="../../lib/partlist.yaml"}```
 ```{elektron, command="erc", input=["main", "mount"]}```
 ```{elektron, command="drc", input=["main", "mount"]}```
 ```{elektron, command="schema", input=["main", "mount"], border=TRUE, theme="Kicad2000"}```
-```{elektron, command="pcb", input=["main", "mount", "panel"], border=TRUE}```
+```{elektron, command="pcb", input=["main", "mount", "panel"], border=FALSE}```
 ```{elektron, command="gerber", input=["main", "mount", "panel"]}```
 ---
 
@@ -40,7 +40,7 @@ version: 0
 \begin{circuitikz}[line width=2pt,scale=1.5,font=\sffamily,every node/.style={scale=1.5}]
 
   \draw (0, 0) node[left] {IN} to ++(1,0)
-     to[R=$1\ k\Omega$,-*] ++(2,0) 
+     to[R=$1\ k\Omega$,-*] ++(2,0)
      to[R=$2\ k\Omega$,-] ++(2,0)
      to[short, -*] ++(1,0)
      to[C=$C1$,-*] ++(0,-1) node[ground]{};
@@ -56,7 +56,7 @@ version: 0
     to[short, -] ++(0.5,0)
     to [amp] ++(2,0)
     to [spring,label=spring tank] ++(2,0)
-    to[amp,label] ++(2,0) 
+    to[amp,label] ++(2,0)
     to [bandpass,label=baxandal] ++(2,0) to ++(1,0)
     node[adder,anchor=west](mix) {};
 
@@ -66,7 +66,7 @@ version: 0
 
   \draw (fb.south) to[short, -] ++(0,-1)
     node[spdt,rotate=180,anchor=out 2](Sw4){};
-    
+
   \draw (Sw4.in) to [short, i<=$feedback$] ++(8,0)
     to [short, -*] ++(0,1.8);
 
@@ -96,7 +96,7 @@ drive(draw)
 draw.plot(scale=6, netlist=False, theme='BlackWhite')
 ```
 
-Eliot suggests adding a [compressor](https://sound-au.com/articles/reverb.htm#s5) before the driver. This compressor is a really easy build. For the vactrol a cheap Chinese one is used. The Chinese clones of the VTL vactrols are not very good. But the [LCR-0202](http://j5d2v7d7.stackpathcdn.com/wp-content/uploads/2016/10/LCR-0202.pdf) seems to be a good product. Also, original VTL or homemade vactrols can be used. 
+Eliot suggests adding a [compressor](https://sound-au.com/articles/reverb.htm#s5) before the driver. This compressor is a really easy build. For the vactrol a cheap Chinese one is used. The Chinese clones of the VTL vactrols are not very good. But the [LCR-0202](http://j5d2v7d7.stackpathcdn.com/wp-content/uploads/2016/10/LCR-0202.pdf) seems to be a good product. Also, original VTL or homemade vactrols can be used.
 
 ```{python echo=FALSE, results="hide", fig.align='center', fig.cap='Figure 3: Recovery and Tone Control'}
 import sys

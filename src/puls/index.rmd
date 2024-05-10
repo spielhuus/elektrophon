@@ -24,7 +24,6 @@ import sys
 sys.path.append("src")
 
 from elektron import Circuit, Draw, Element, Label, Line, Dot, Simulation
-from hall import *
 
 draw = Draw(["/usr/share/kicad/symbols", "lib/symbols"])
 

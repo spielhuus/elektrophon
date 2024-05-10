@@ -10,16 +10,16 @@ tags:
 title: cp3
 version: 0
 draft: True
-references: 
+references:
   - { description: "Exploring the Moog CP3-Type Mixer",
       title: "Learning Modular",
       url: "https://learningmodular.com/exploring-the-moog-cp3-type-mixer/" }
-```{elektron, command="bom", input=["main"], group=TRUE, partlist="../../lib/partlist.yaml"}```
-```{elektron, command="erc", input=["main"]}```
-```{elektron, command="schema", input=["main"], border=TRUE}```
-```{elektron, command="pcb", input=["main", "panel"] layers=["F_Cu", "B_Cu", "F_Mask", "B_Mask"]}```
-```{elektron, command="drc", input=["main", "panel"]}```
-```{elektron, command="gerber", input=["main", "panel"]}```
+```{elektron command="bom" input=["main"] group=TRUE partlist="../../lib/partlist.yaml"}```
+```{elektron command="erc" input=["main"]}```
+```{elektron command="schema" input=["main"] border=TRUE}```
+```{elektron command="pcb" input=["main", "panel"] border=FALSE}```
+```{elektron command="drc" input=["main", "panel"]}```
+```{elektron command="gerber" input=["main", "panel"]}```
 ---
 
 # Construction
@@ -34,7 +34,7 @@ from cp3 import *
 draw = Draw(["/usr/share/kicad/symbols", "../../lib/symbols"])
 mixer(draw)
 
-draw.plot(scale=6, netlist=False, theme='BlackWhite')
+draw.plot(scale=2, netlist=False, theme='BlackWhite')
 
 
 draw + Element("Q1", "elektrophon:THAT340", unit=5, value="340",
@@ -68,7 +68,7 @@ simulation = Simulation(circuit)
 mixer = simulation.run()
 ```
 
-The circuit is so simple that not even a block diagram is necessary. The circuit is a long-tailed pair using compound (Sziklai) pairs.  
+The circuit is so simple that not even a block diagram is necessary. The circuit is a long-tailed pair using compound (Sziklai) pairs.
 The Resistor R15 sets the gain. With 22k the gain is one and the mixer will not distort. With +15V the best result will be with xxk.
 
 ```{d3 element="filter", x="time", yRange="in_1,out_a,out_b", data="mixer.tran", width="800", height="600"}```

@@ -53,8 +53,7 @@ from elektrophon import decouple_tl072
 
 draw = Draw(["/usr/share/kicad/symbols", "../../lib/symbols"])
 integrator(draw)
-draw.plot(scale=6, theme='BlackWhite')
-
+draw.plot(scale=2, theme='BlackWhite')
 
 draw + Element("U2", "Amplifier_Operational:TL072", value="TL072", unit=2, Spice_Primitive="X", Spice_Model="TL072c", on_schema="no").at((80.0, 100.0))
 decouple_tl072(draw, "U1", ((100.0, 100.0)), 'no')
@@ -100,7 +99,7 @@ from digital import triangle
 
 draw = Draw(["/usr/share/kicad/symbols", "../../lib/symbols"])
 draw = triangle(draw)
-draw.plot(scale=6, theme='BlackWhite', netlist=True)
+draw.plot(scale=2, theme='BlackWhite', netlist=True)
 
 draw + Element("U2", "Amplifier_Operational:TL072", value="TL072", unit=2, Spice_Primitive="X", Spice_Model="TL072c", on_schema="no").at((80.0, 100.0))
 decouple_tl072(draw, "U1", ((100.0, 100.0)), 'true')

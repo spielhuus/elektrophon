@@ -8,7 +8,7 @@ tags:
 categories:
 - module
 title: "adsr"
-references: 
+references:
   - { description: "René Schmitz",
       title: "Fastest envelope in the west",
       url: "https://www.schmitzbits.de/adsr.html" }
@@ -27,7 +27,7 @@ draft: False
 ```{elektron, command="erc", input=["main"]}```
 ```{elektron, command="drc", input=["main"]}```
 ```{elektron, command="schema", input=["main"], border=TRUE, theme="Mono"}```
-```{elektron, command="pcb", input=["main", "panel"], border=TRUE}```
+```{elektron, command="pcb", input=["main", "panel"], border=FALSE}```
 ```{elektron, command="gerber", input=["main", "panel"]}```
 ---
 

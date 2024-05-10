@@ -23,7 +23,7 @@ The basic usage and pin mapping is explained in the datasheet [[1]](https://www.
 ```{python error=FALSE, echo=FALSE, results="hide", fig.align='center', fig.cap='4007: Dual complementary pair plus inverter.'}
 from elektron import Line, Dot, Label, Element, Draw, Simulation, Circuit
 
-draw = Draw(["/usr/share/kicad/symbols", "lib/symbols"]) \
+draw = Draw(["/usr/share/kicad/symbols", "../../lib/symbols"]) \
  + Element("U1", "elektrophon:4007N", value="4007", unit=1, Spice_Primitive="X", Spice_Model="CMOS4007")
 
 draw.plot(scale=15.0, theme='BlackWhite')
@@ -41,7 +41,7 @@ First i am going to build an amplifier with the chip. ....
 from elektron import Line, Dot, Label, Element, Draw, Simulation, Circuit
 import json
 
-draw = (Draw(["/usr/share/kicad/symbols", "lib/symbols"])
+draw = (Draw(["/usr/share/kicad/symbols", "../../lib/symbols"])
 
   + Element("U1", "elektrophon:4007N", value="4007", unit=1, Spice_Primitive="X", Spice_Model="CMOS4007")
   + Element("Rin", "Device:R", value="100k", unit=1, Spice_Netlist_Enabled="Y").rotate(270)
@@ -73,7 +73,7 @@ draw = (Draw(["/usr/share/kicad/symbols", "lib/symbols"])
 
 print(draw.erc())
 
-circuit = draw.circuit(['lib/spice'])
+circuit = draw.circuit(['../../lib/spice'])
 circuit.voltage("1", "+5V", "GND", "5V")
 circuit.voltage("2", "IN", "GND", "5V PULSE(-1, 1, 0, 2ms, 2ms, 1n, 4ms 0)")
 circuit.control('''
@@ -103,7 +103,7 @@ from elektron import Line, Dot, Label, Element, Draw, Simulation, Circuit
 import numpy as np
 import json
 
-draw = (Draw(["/usr/share/kicad/symbols", "lib/symbols"])
+draw = (Draw(["/usr/share/kicad/symbols", "../../lib/symbols"])
   + Label("CV").rotate(180)
   + Line()
   + Element("R10", "Device:R", value="100k", unit=1, Spice_Netlist_Enabled="Y").rotate(90)
@@ -178,7 +178,7 @@ draw = (Draw(["/usr/share/kicad/symbols", "lib/symbols"])
  
 print(draw.erc())
 
-circuit = draw.circuit(['lib/spice'])
+circuit = draw.circuit(['../../lib/spice'])
 circuit.voltage("1", "+5V", "GND", "DC 15V")
 circuit.voltage("2", "CV", "GND", "DC 2.5V") # SIN(10, 2, 100)")
 # circuit.voltage("3", "INPUT", "GND", "SIN(0, 2.5, 1000)")
@@ -230,7 +230,7 @@ This is the first setup with the 4069 as a voltage follower. C1 and C2 are DC bl
 
 ```{python error=TRUE, echo=FALSE, results="nohide", fig.align='center', fig.cap='digital logic'}
 
-circuit = draw.circuit(['lib/spice'])
+circuit = draw.circuit(['../../lib/spice'])
 circuit.voltage("1", "+5V", "GND", "DC 15V")
 circuit.voltage("2", "CV", "GND", "DC 2V")
 circuit.voltage("3", "INPUT", "GND", "SIN(0, 2, 100)")
@@ -259,7 +259,7 @@ from elektron import Line, Dot, Label, Element, Draw, Simulation, Circuit
 import numpy as np
 import json
 
-draw = (Draw(["/usr/share/kicad/symbols", "lib/symbols"])
+draw = (Draw(["/usr/share/kicad/symbols", "../../lib/symbols"])
   + Label("CV").rotate(180)
   + Line()
   + Element("R10", "Device:R", value="100k", unit=1, Spice_Netlist_Enabled="Y").rotate(90)
@@ -323,7 +323,7 @@ draw = (Draw(["/usr/share/kicad/symbols", "lib/symbols"])
  
 print(draw.erc())
 
-circuit = draw.circuit(['lib/spice'])
+circuit = draw.circuit(['../../lib/spice'])
 circuit.voltage("1", "+15V", "GND", "DC 15V")
 circuit.voltage("2", "-15V", "GND", "DC -5V")
 circuit.voltage("3", "CV", "GND", "DC 5V") # SIN(10, 2, 100)")

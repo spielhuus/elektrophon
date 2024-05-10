@@ -8,7 +8,7 @@ tags:
 categories:
 - module
 title: "resonanz"
-references: 
+references:
   - { description: "Thomas Henry X-4046",
       title: "Birth of a Synth",
       url: "http://birthofasynth.com/Thomas_Henry/Pages/X-4046.html" }
@@ -17,7 +17,7 @@ version: 0
 ```{elektron, command="erc", input=["main", "mount"]}```
 ```{elektron, command="drc", input=["main", "mount"]}```
 ```{elektron, command="schema", input=["main", "mount"], border=TRUE, theme="Mono"}```
-```{elektron, command="pcb", input=["main", "mount", "panel"], border=TRUE}```
+```{elektron, command="pcb", input=["main", "mount", "panel"], border=FALSE}```
 ```{elektron, command="gerber", input=["main", "mount", "panel"]}```
 ---
 
@@ -35,7 +35,7 @@ the gerber files are part of the release. it should be possible to directly orde
 
 the different waveforms are combined out of different parts and you will have to combine those by calibrating the vco. i recommend doing that with an oszilloscope.
 
-connect your scope to the triangle wave output. 
-bring the oscillator to 1kHz with the coarse and fine adjustments. 
+connect your scope to the triangle wave output.
+bring the oscillator to 1kHz with the coarse and fine adjustments.
 then you can calibrate the triangle wave. as you can see in the scope there is a falling and raising slope. use the two triangle connect trimpots (TC1/2) to bring them together.
 

@@ -12,7 +12,7 @@ def main() -> int:
     # draw.plot(filename="decouple_tl072.svg", border=False)
 
     prefix = "static/pdoc"
-    scale = 5
+    scale = 2
 
     draw = Draw(["/usr/share/kicad/symbols", "../../lib/symbols"])
     input_jack(draw, "J1", "INPUT", (0,0))

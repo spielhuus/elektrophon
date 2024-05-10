@@ -8,7 +8,7 @@ tags:
 categories:
 - module
 title: "polivoks"
-references: 
+references:
   - { description: "POLIVOKS Filter Clone",
       title: "Marc Bareille",
       url: "http://m.bareille.free.fr/modular1/vcf_polivoks/vcf_polivoks.htm" }
@@ -24,7 +24,7 @@ draft: False
 ```{elektron, command="erc", input=["main", "mount"]}```
 ```{elektron, command="drc", input=["main", "mount"]}```
 ```{elektron, command="schema", input=["main", "mount"], border=TRUE, theme="Mono"}```
-```{elektron, command="pcb", input=["main", "mount", "panel"], border=TRUE}```
+```{elektron, command="pcb", input=["main", "mount", "panel"], border=FALSE}```
 ```{elektron, command="gerber", input=["main", "mount", "panel"]}```
 ---
 

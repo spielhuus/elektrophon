@@ -111,7 +111,7 @@ draw = Draw(["/usr/share/kicad/symbols", "../../lib/symbols"])
   + R(draw.next("R"), "1k").rotate(90).at(draw.last("U"), "1") + Label("OUT_L")
 )
 
-draw.plot(scale=6, theme='BlackWhite')
+draw.plot(scale=2, theme='BlackWhite')
 ```
 
 ```{python echo=FALSE, results="hide"}
@@ -167,7 +167,7 @@ draw = Draw(["/usr/share/kicad/symbols", "../../lib/symbols"])
   + Line().at(draw.last("U"), "1") + Label("IN_DAC")
 )
 
-draw.plot(scale=6, theme='BlackWhite')
+draw.plot(scale=2, theme='BlackWhite')
 ```
 
 ```{python echo=FALSE, results="hide"}
@@ -219,7 +219,7 @@ draw = Draw(["/usr/share/kicad/symbols", "../../lib/symbols"])
   + Line().at(draw.last("U"), "1") + Label("ADC")
 )
 
-draw.plot(scale=6, theme='BlackWhite')
+draw.plot(scale=2, theme='BlackWhite')
 ```
 ```{python echo=FALSE, results="hide"}
 
@@ -285,5 +285,5 @@ DaisyAudioOut(draw, (20*2.54, 20*2.54))
 
 #   + Line().at(draw.last("U"), "1") + Label("ADC")
 
-draw.plot(scale=6, theme='BlackWhite')
+draw.plot(scale=2, theme='BlackWhite')
 ```

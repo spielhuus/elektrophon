@@ -6,30 +6,24 @@ MARKDOWN_TARGET_PATH = ../../content/post/$(NAME)
 PYTHON_SRC = __init__.py
 PYTHON_TARGET = $(foreach dir,$(SUBMODULES),$(dir)/$(dir).kicad_sch)
 
-debug ?=
-ifdef debug
-  DEBUG=ELEKTRON_DEBUG=true
+ifdef RUST_LOG
+RUST_LEVEL := $(RUST_LOG)
+else
+RUST_LEVEL := info
 endif
 
-BUILD_DEPS ?=
-ifdef debug
- 	BUILD_DEPS=true
-	RUST_LEVEL=debug
+ifdef ELEKTRON_DEBUG
+ELEKTRON_DEBUG := $(ELEKTRON_DEBUG)
 else
- 	BUILD_DEPS=false
-	RUST_LEVEL=info
+ELEKTRON_DEBUG := false
 endif
 
 .PHONY: all help test doc clean
+
 all: $(MARKDOWN_TARGET)
 
 $(MARKDOWN_TARGET): $(MARKDOWN_FILE) $(PYTHON_TARGET)
-ifeq ($(BUILD_DEPS),true)
-	$(VENV_ACTIVATE) && $(DEBUG) RUST_LOG=$(RUST_LEVEL) MPLBACKEND=module://elektron ELEKTRON_SPICE=lib/spice ELEKTRON_SYMBOLS=/usr/share/kicad/symbols:../../lib/symbols elektron convert --input $< --output $@
-	echo $(IMAGES)
-else
-	$(DEBUG) MPLBACKEND=module://elektron RUST_LOG=$(RUST_LEVEL) elektron convert --input $< --output $@
-endif
+	ELEKTRON_DEBUG=$(ELEKTRON_DEBUG) RUST_LOG=$(RUST_LEVEL) MPLBACKEND=module://elektron elektron convert --input $< --output $@
 
 $(PYTHON_TARGET): $(PYTHON_SRC)
 ifeq ($(BUILD_DEPS),true)
@@ -46,5 +40,3 @@ distclean: clean
 	$(foreach var,$(SUBMODULES), rm -rf $(var)/$(var)-backups;)
 	$(foreach var,$(SUBMODULES), rm -rf $(var)/$(var).kicad_prl;)
 	$(foreach var,$(SUBMODULES), rm -rf $(var)/fp-info-cache;)
-
-$(V).SILENT:

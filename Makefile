@@ -10,13 +10,6 @@ PYTHON = python3
 PIP = pip
 endif
 
-RUST_DEBUG=info
-debug ?=
-ifdef debug
-  DEBUG=ELEKTRON_DEBUG=true
-  RUST_DEBUG=debug
-endif
-
 MAKEFILES=$(shell find src -type f -name "Makefile" -exec dirname "{}" \; | sed 's/ /\\ /g')
 MARKDOWN_FILES=$(shell find src -type f -name "*.md" | sed 's/ /\\ /g')
 PDF_FILES=$(shell find src -type f -name "*.pdf" | sed 's/ /\\ /g')
@@ -58,7 +51,7 @@ LibDaisy:
 
 .PHONY: $(MAKEFILES)
 $(MAKEFILES):
-	make BUILD_DEPS=$(BUILD_DEPS) -C $@
+	make BUILD_DEPS=$(BUILD_DEPS) -s -C $@
 
 site: build
 	hugo
@@ -67,7 +60,7 @@ serve: build
 	hugo serve -D
 
 clean:
-	$(foreach var,$(MAKEFILES), make -C $(var) clean;)
+	$(foreach var,$(MAKEFILES), make -s -C $(var) clean;)
 	rm -rf static/pdoc
 	rm -rf public
 	rm -rf resources
@@ -77,7 +70,7 @@ clean:
 	rm -f content/elektrophon.html
 
 distclean: clean
-	$(foreach var,$(MAKEFILES), make -C $(var) distclean;)
+	$(foreach var,$(MAKEFILES), make -s -C $(var) distclean;)
 	rm -rf $(VENV)
 
 content/elektrophon.html: lib/python/elektrophon/__init__.py lib/python/makedoc/__main__.py
@@ -85,5 +78,3 @@ content/elektrophon.html: lib/python/elektrophon/__init__.py lib/python/makedoc/
 	python lib/python/makedoc
 	PYTHONPATH=:./lib/python python -m pdoc --no-search -t lib/pdoc -o content elektrophon 
 	rm content/index.html
-
-$(V).SILENT:

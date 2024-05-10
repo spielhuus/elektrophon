@@ -10,16 +10,16 @@ tags:
 title: equalizer
 version: 2
 draft: False
-references: 
+references:
   - { description: "Ken Stone resonant equalizer",
       title: "CGS",
       url: "" }
-```{elektron, command="bom", input=["main", "mount"], group=TRUE, partlist="../../lib/partlist.yaml"}```
-```{elektron, command="erc", input=["main", "mount"]}```
-```{elektron, command="drc", input=["main", "mount"]}```
+```{elektron, command="bom" input=["main", "mount"], group=TRUE, partlist="../../lib/partlist.yaml"}```
+```{elektron, command="erc" input=["main", "mount"]}```
+```{elektron, command="drc" input=["main", "mount"]}```
 ```{elektron, command="schema", input=["main", "mount"], border=TRUE, theme="Kicad2000"}```
-```{elektron, command="pcb", input=["main", "mount", "panel"], border=TRUE}```
-```{elektron, command="gerber", input=["main", "mount", "panel"]}```
+```{elektron, command="pcb" input=["main", "mount", "panel"] border=FALSE}```
+```{elektron, command="gerber" input=["main", "mount", "panel"]}```
 ---
 
 # Construction

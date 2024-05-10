@@ -28,8 +28,6 @@ references:
 import sys
 sys.path.append("src")
 
-from hall import *
-
 def opamp(draw, u, unit, r1, r2): 
   from elektron import Circuit, Draw, Element, Label, Line, Dot, Simulation, R, Gnd, Power
   return (draw
@@ -48,9 +46,8 @@ import sys
 sys.path.append("src")
 
 from elektron import Circuit, Draw, Element, Label, Line, Dot, Simulation, R, Gnd, Power
-from hall import *
 
-draw = Draw(["/usr/share/kicad/symbols", "lib/symbols"])
+draw = Draw(["/usr/share/kicad/symbols", "../../lib/symbols"])
 
 (draw + Label("IN").rotate(180))
 opamp(draw, "U1", 1, "100k", "100k")
@@ -68,7 +65,7 @@ opamp(draw, "U1", 1, "100k", "100k")
   + Element("-15V", "power:-15V", value="-15V", on_schema="no").at("U1", "4")
 )
 
-circuit = draw.circuit(["lib/spice"])
+circuit = draw.circuit(["../../lib/spice"])
 circuit.voltage("1", "+15V", "GND", "DC 15V")
 circuit.voltage("2", "-15V", "GND", "DC -15V")
 circuit.voltage("3", "IN", "GND", "5V PULSE(5V -5V 0 10m 10m 0.01m 20m)")
@@ -89,7 +86,7 @@ end
 simulation = Simulation(circuit)
 single_opamp = simulation.run()
 
-draw.plot(scale=6, theme='BlackWhite')
+draw.plot(scale=2, theme='BlackWhite')
 ```
 ```{d3, element="opamp_single", x="time", y="in", yRange="out", data="single_opamp.tran", width="600", height="400", fig.align='center', fig.cap="Figure 4: long tailed pair simulation."}```
 
@@ -99,9 +96,8 @@ import sys
 sys.path.append("src")
 
 from elektron import Circuit, Draw, Element, Label, Line, Dot, Simulation, R, Gnd, Power
-from hall import *
 
-draw = Draw(["/usr/share/kicad/symbols", "lib/symbols"])
+draw = Draw(["/usr/share/kicad/symbols", "../../lib/symbols"])
 
 (draw + Label("IN").rotate(180) + Line() + Dot().push() + Line())
 opamp(draw, "U1", 1, "100k", "100k")
@@ -115,10 +111,12 @@ R_AMP_3 = draw.last("R")
 
 (draw
   + Dot().at(R_AMP_3, "2") + Line().toy(R_AMP_2, "2").dot("end") + Line().toy(R_AMP_1, "2").dot("end")
+  + Label("OUT")
 )
 
+draw.plot(scale=2, theme='BlackWhite')
+
 (draw 
-  + Label("OUT")
 
   + Element("U2", "Amplifier_Operational:TL072", unit=2, 
             value="TL072", Spice_Primitive="X", Spice_Model="TL072c").at((140.0,80.0))
@@ -136,7 +134,7 @@ R_AMP_3 = draw.last("R")
   + Element("-15V", "power:-15V", value="-15V", on_schema="no").at("U2", "4")
 )
 
-circuit = draw.circuit(["lib/spice"])
+circuit = draw.circuit(["../../lib/spice"])
 circuit.voltage("1", "+15V", "GND", "DC 15V")
 circuit.voltage("2", "-15V", "GND", "DC -15V")
 circuit.voltage("3", "IN", "GND", "5V PULSE(5V -5V 0 10m 10m 0.01m 20m)")
@@ -157,6 +155,6 @@ end
 simulation = Simulation(circuit)
 opamp = simulation.run()
 
-draw.plot(scale=6, theme='BlackWhite')
+draw.plot(scale=2, theme='BlackWhite')
 ```
 ```{d3, element="opamp_triangle", x="time", y="in", yRange="out", data="opamp.tran", width="600", height="400", fig.align='center', fig.cap="Figure 4: long tailed pair simulation."}```
